@@ -1,0 +1,11 @@
+uuid: da0ef0da-9ad7-4297-8129-a9a0af0327a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: site_logo
+title: 'Site logo'
+content:
+  value: '<p><a class="site-branding__logo" href="/en" rel="home"><img src="/themes/islandora_muni/platform_specific/images/logo-en.svg" alt="Home" width="167" height="68"></a></p>'
+  format: full_html

@@ -1,0 +1,22 @@
+uuid: 2fca3d47-78e5-4e1e-8596-d3fd4c84073c
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - islandora_muni
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: islandora_muni_powered
+theme: islandora_muni
+region: header
+weight: 1
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }
