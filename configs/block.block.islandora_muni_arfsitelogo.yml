@@ -6,9 +6,9 @@ dependencies:
     - simple_block.simple_block.arf_site_logo
   module:
     - block_class
+    - context
     - islandora
     - simple_block
-    - system
   theme:
     - islandora_muni
 third_party_settings:
@@ -31,7 +31,7 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
-  request_path:
-    id: request_path
+  request_domain:
+    id: request_domain
     negate: false
-    pages: "/arf\r\n/arf/*\r\n/group/arf\r\n/group/arf/*\r\n/group/11\r\n/group/11/*\r\n/compare/*/arf"
+    domains: artefact-devel.phil.muni.cz

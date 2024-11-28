@@ -1,6 +1,6 @@
 uuid: 3de2f4c1-708a-4de2-a8fc-f6de38a0251c
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - simple_block.simple_block.exm_site_logo

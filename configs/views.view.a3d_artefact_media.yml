@@ -9,7 +9,7 @@ dependencies:
     - field.storage.media.field_media_image
     - field.storage.media.field_media_video_file
     - image.style.a3d_convert_to_jpeg
-    - image.style.thumbnail
+    - image.style.a3d_to_jpeg
     - media.type.3d_model
     - media.type.document
     - media.type.file
@@ -392,6 +392,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: null
           id: 0
@@ -590,7 +591,7 @@ display:
           type: photoswipe_field_formatter
           settings:
             photoswipe_thumbnail_style_first: ''
-            photoswipe_thumbnail_style: ''
+            photoswipe_thumbnail_style: a3d_to_jpeg
             photoswipe_image_style: ''
             photoswipe_view_mode: _custom
           group_column: ''
@@ -792,7 +793,7 @@ display:
           type: image
           settings:
             image_link: ''
-            image_style: thumbnail
+            image_style: a3d_to_jpeg
             image_loading:
               attribute: lazy
           group_column: ''
@@ -1429,41 +1430,6 @@ display:
         - url.query_args
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.media.3d_model.default'
-        - 'config:core.entity_view_display.media.audio.default'
-        - 'config:core.entity_view_display.media.audio.file_download'
-        - 'config:core.entity_view_display.media.audio.source'
-        - 'config:core.entity_view_display.media.document.default'
-        - 'config:core.entity_view_display.media.document.file_download'
-        - 'config:core.entity_view_display.media.document.pdfjs'
-        - 'config:core.entity_view_display.media.document.source'
-        - 'config:core.entity_view_display.media.extracted_text.default'
-        - 'config:core.entity_view_display.media.file.default'
-        - 'config:core.entity_view_display.media.file.file_download'
-        - 'config:core.entity_view_display.media.file.open_seadragon'
-        - 'config:core.entity_view_display.media.file.pdfjs'
-        - 'config:core.entity_view_display.media.file.source'
-        - 'config:core.entity_view_display.media.fits_technical_metadata.default'
-        - 'config:core.entity_view_display.media.fits_technical_metadata.fits_technical_metadata'
-        - 'config:core.entity_view_display.media.image.a3d_arf_compare'
-        - 'config:core.entity_view_display.media.image.a3d_meta_compare'
-        - 'config:core.entity_view_display.media.image.a3d_nef_compare'
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.image.file_download'
-        - 'config:core.entity_view_display.media.image.full'
-        - 'config:core.entity_view_display.media.image.image_a3d_arf_entity_comparison'
-        - 'config:core.entity_view_display.media.image.image_a3d_image_comparison'
-        - 'config:core.entity_view_display.media.image.image_a3d_meta_entity_comparison'
-        - 'config:core.entity_view_display.media.image.image_a3d_nef_entity_comparison'
-        - 'config:core.entity_view_display.media.image.open_seadragon'
-        - 'config:core.entity_view_display.media.image.source'
-        - 'config:core.entity_view_display.media.image.thumbnail'
-        - 'config:core.entity_view_display.media.image.token'
-        - 'config:core.entity_view_display.media.remote_video.default'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.video.file_download'
-        - 'config:core.entity_view_display.media.video.source'
-        - 'config:core.entity_view_display.media.video.token'
         - 'config:field.storage.media.field_media_image'
     deleted: false
   a3d_models:
@@ -1826,6 +1792,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: null
           id: 0
@@ -2215,39 +2182,4 @@ display:
         - url.query_args
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.media.3d_model.default'
-        - 'config:core.entity_view_display.media.audio.default'
-        - 'config:core.entity_view_display.media.audio.file_download'
-        - 'config:core.entity_view_display.media.audio.source'
-        - 'config:core.entity_view_display.media.document.default'
-        - 'config:core.entity_view_display.media.document.file_download'
-        - 'config:core.entity_view_display.media.document.pdfjs'
-        - 'config:core.entity_view_display.media.document.source'
-        - 'config:core.entity_view_display.media.extracted_text.default'
-        - 'config:core.entity_view_display.media.file.default'
-        - 'config:core.entity_view_display.media.file.file_download'
-        - 'config:core.entity_view_display.media.file.open_seadragon'
-        - 'config:core.entity_view_display.media.file.pdfjs'
-        - 'config:core.entity_view_display.media.file.source'
-        - 'config:core.entity_view_display.media.fits_technical_metadata.default'
-        - 'config:core.entity_view_display.media.fits_technical_metadata.fits_technical_metadata'
-        - 'config:core.entity_view_display.media.image.a3d_arf_compare'
-        - 'config:core.entity_view_display.media.image.a3d_meta_compare'
-        - 'config:core.entity_view_display.media.image.a3d_nef_compare'
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.image.file_download'
-        - 'config:core.entity_view_display.media.image.full'
-        - 'config:core.entity_view_display.media.image.image_a3d_arf_entity_comparison'
-        - 'config:core.entity_view_display.media.image.image_a3d_image_comparison'
-        - 'config:core.entity_view_display.media.image.image_a3d_meta_entity_comparison'
-        - 'config:core.entity_view_display.media.image.image_a3d_nef_entity_comparison'
-        - 'config:core.entity_view_display.media.image.open_seadragon'
-        - 'config:core.entity_view_display.media.image.source'
-        - 'config:core.entity_view_display.media.image.thumbnail'
-        - 'config:core.entity_view_display.media.image.token'
-        - 'config:core.entity_view_display.media.remote_video.default'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.video.file_download'
-        - 'config:core.entity_view_display.media.video.source'
-        - 'config:core.entity_view_display.media.video.token'
         - 'config:field.storage.media.field_media_video_file'

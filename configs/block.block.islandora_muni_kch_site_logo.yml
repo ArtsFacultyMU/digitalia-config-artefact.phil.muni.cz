@@ -6,6 +6,7 @@ dependencies:
     - simple_block.simple_block.kch_site_logo
   module:
     - block_class
+    - context
     - islandora
     - simple_block
     - system
@@ -35,3 +36,7 @@ visibility:
     id: request_path
     negate: false
     pages: "/kch\r\n/kch/*\r\n/group/kch\r\n/group/kch/*\r\n/group/13\r\n/group/13/*\r\n/compare/*/kch\r\n/cs/kch\r\n/cs/kch/*\r\n/cs/group/kch\r\n/cs/group/kch/*\r\n/cs/group/13\r\n/cs/group/13/*\r\n/cs/compare/*/kch"
+  request_domain:
+    id: request_domain
+    negate: false
+    domains: pottery-analyses-devel.phil.muni.cz

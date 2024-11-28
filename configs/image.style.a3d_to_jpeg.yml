@@ -1,0 +1,13 @@
+uuid: 78c55a81-ed2d-4005-a417-ff0a6fcf964f
+langcode: en
+status: true
+dependencies: {  }
+name: a3d_to_jpeg
+label: a3d_to_jpeg
+effects:
+  7899b684-878a-4deb-963d-d91ab0aa6e4f:
+    uuid: 7899b684-878a-4deb-963d-d91ab0aa6e4f
+    id: image_convert
+    weight: 1
+    data:
+      extension: jpeg

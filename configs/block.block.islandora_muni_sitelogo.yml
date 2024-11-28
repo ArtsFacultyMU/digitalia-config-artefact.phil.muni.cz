@@ -6,9 +6,9 @@ dependencies:
     - simple_block.simple_block.site_logo
   module:
     - block_class
+    - context
     - islandora
     - simple_block
-    - system
   theme:
     - islandora_muni
 third_party_settings:
@@ -31,7 +31,7 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
-  request_path:
-    id: request_path
-    negate: true
-    pages: "/nef\r\n/nef/*\r\n/arf\r\n/arf/*\r\n/exm\r\n/exm/*\r\n/kch\r\n/kch/*\r\n/group/*\r\n/compare/*/*\r\n!/compare/*/a3d"
+  request_domain:
+    id: request_domain
+    negate: false
+    domains: archeo3data-devel.phil.muni.cz
