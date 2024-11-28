@@ -1,0 +1,8 @@
+uuid: 2bdc71da-944f-4a91-82ed-91d5e30c7062
+langcode: en
+status: true
+dependencies: {  }
+name: 'Feature type'
+vid: feature_type
+description: ''
+weight: 0

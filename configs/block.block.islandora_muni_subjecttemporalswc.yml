@@ -1,6 +1,6 @@
 uuid: 1782ef6b-bb97-44db-8817-10c2dedf6a83
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.subject_temporal_swc
@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_subjecttemporalswc
 theme: islandora_muni
 region: header
-weight: 0
+weight: -17
 provider: null
 plugin: 'facet_block:subject_temporal_swc'
 settings:

@@ -1,0 +1,29 @@
+uuid: 17dcd3a7-5cc5-49db-9578-dd9793ea7fe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_wgs84_geolocation_accuracy
+    - node.type.a3d_object
+    - taxonomy.vocabulary.loc_coord_cadastre_accuracy
+id: node.a3d_object.field_wgs84_geolocation_accuracy
+field_name: field_wgs84_geolocation_accuracy
+entity_type: node
+bundle: a3d_object
+label: 'WGS84 Geolocation Accuracy'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      loc_coord_cadastre_accuracy: loc_coord_cadastre_accuracy
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

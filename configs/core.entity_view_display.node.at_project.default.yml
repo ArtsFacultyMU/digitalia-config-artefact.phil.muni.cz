@@ -1,0 +1,54 @@
+uuid: 706aea2b-8ef3-4239-9763-6dd0c87c6b60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.at_project.field_at_banner_text
+    - field.field.node.at_project.field_at_citation_text
+    - field.field.node.at_project.field_at_copyright_text
+    - field.field.node.at_project.field_at_intro_text
+    - node.type.at_project
+  module:
+    - text
+    - user
+id: node.at_project.default
+targetEntityType: node
+bundle: at_project
+mode: default
+content:
+  field_at_banner_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_at_citation_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_at_copyright_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_at_intro_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: 72b571e9-35a9-4749-b97a-1ebb07185668
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fract_preservation_struct
+    - node.type.a3d_object
+    - taxonomy.vocabulary.fract_preservation
+id: node.a3d_object.field_fract_preservation_struct
+field_name: field_fract_preservation_struct
+entity_type: node
+bundle: a3d_object
+label: "Fracture preservation\_(structured)"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      fract_preservation: fract_preservation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: bda3227d-2bc0-4502-82a8-cfdaee30f362
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.spatial_ref_system
+  module:
+    - text
+id: taxonomy_term.spatial_ref_system.default
+targetEntityType: taxonomy_term
+bundle: spatial_ref_system
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

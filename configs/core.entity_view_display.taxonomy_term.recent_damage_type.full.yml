@@ -1,0 +1,30 @@
+uuid: f485938f-e40c-4774-b73e-448d246ac4c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - taxonomy.vocabulary.recent_damage_type
+  module:
+    - text
+id: taxonomy_term.recent_damage_type.full
+targetEntityType: taxonomy_term
+bundle: recent_damage_type
+mode: full
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

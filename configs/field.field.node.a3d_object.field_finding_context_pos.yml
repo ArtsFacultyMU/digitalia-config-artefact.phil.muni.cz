@@ -1,0 +1,19 @@
+uuid: a95c3b46-ddab-4e6b-b5d8-dc305d178553
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_finding_context_pos
+    - node.type.a3d_object
+id: node.a3d_object.field_finding_context_pos
+field_name: field_finding_context_pos
+entity_type: node
+bundle: a3d_object
+label: 'Finding context (position)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

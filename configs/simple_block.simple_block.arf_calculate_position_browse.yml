@@ -1,0 +1,11 @@
+uuid: f4e01cf6-ad03-4fca-8a17-af51179f160e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: arf_calculate_position_browse
+title: 'ARF calculate position browse'
+content:
+  value: '<script id="calculate-position-grid" var-pages="40" type="module" src="/modules/custom/digitalia_muni_a3d_javascript/js/a3d_calculate_position_grid.js"></script>'
+  format: full_html

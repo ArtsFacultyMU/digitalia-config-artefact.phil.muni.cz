@@ -1,0 +1,29 @@
+uuid: d5d623bb-a93e-46ed-a8f4-51a69a62f2fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legal_status
+    - node.type.a3d_object
+    - taxonomy.vocabulary.legal_status
+id: node.a3d_object.field_legal_status
+field_name: field_legal_status
+entity_type: node
+bundle: a3d_object
+label: 'Legal status'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      legal_status: legal_status
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

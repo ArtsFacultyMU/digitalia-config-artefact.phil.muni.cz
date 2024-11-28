@@ -1,0 +1,18 @@
+uuid: 8d1cb7b5-d487-498b-946e-b114bc949dba
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.country_a3d
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.country_a3d
+target_entity_type_id: taxonomy_term
+target_bundle: country_a3d
+default_langcode: site_default
+language_alterable: true

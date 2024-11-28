@@ -1,0 +1,14 @@
+uuid: c04f4a44-9a3e-415f-943b-860f40b4e630
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.can_edit_taxonomy
+  module:
+    - user
+id: user_add_role_action.can_edit_taxonomy
+label: 'Add the Can edit taxonomy role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: can_edit_taxonomy

@@ -1,0 +1,18 @@
+uuid: ce9a7256-29ed-40c9-9fb6-701200aed810
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.a3d_object
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.a3d_object
+target_entity_type_id: node
+target_bundle: a3d_object
+default_langcode: site_default
+language_alterable: false

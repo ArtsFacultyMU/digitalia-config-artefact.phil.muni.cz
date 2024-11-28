@@ -1,0 +1,29 @@
+uuid: bf807898-d196-44ff-a413-c919ca4bbdb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_auth_3d_models
+    - node.type.a3d_object
+    - taxonomy.vocabulary.author
+id: node.a3d_object.field_auth_3d_models
+field_name: field_auth_3d_models
+entity_type: node
+bundle: a3d_object
+label: 'Author of 3D models'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      author: author
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

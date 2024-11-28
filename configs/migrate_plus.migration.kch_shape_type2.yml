@@ -1,0 +1,20 @@
+uuid: 850EC69B-F9BA-451D-91F9-3860374EAACB
+langcode: en
+id: kch_shape_type2
+migration_group: kch
+label: 'Import shape type 2'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/stove_tile_shape_type2.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: stove_tile_shape_type_2

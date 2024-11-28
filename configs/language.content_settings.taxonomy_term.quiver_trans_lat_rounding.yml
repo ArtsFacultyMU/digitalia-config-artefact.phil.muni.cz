@@ -1,0 +1,18 @@
+uuid: 3cb86f85-a079-4c22-9540-6481ed88eb97
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.quiver_trans_lat_rounding
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.quiver_trans_lat_rounding
+target_entity_type_id: taxonomy_term
+target_bundle: quiver_trans_lat_rounding
+default_langcode: site_default
+language_alterable: true

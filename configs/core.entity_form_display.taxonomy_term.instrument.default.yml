@@ -1,0 +1,160 @@
+uuid: d67dc6c3-7924-4e31-bc9d-34f5eb1be202
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.instrument.field_alternate_identifier
+    - field.field.taxonomy_term.instrument.field_date_commissioned
+    - field.field.taxonomy_term.instrument.field_date_decommissioned
+    - field.field.taxonomy_term.instrument.field_instrument_model
+    - field.field.taxonomy_term.instrument.field_instrument_type
+    - field.field.taxonomy_term.instrument.field_manufacturer
+    - field.field.taxonomy_term.instrument.field_measured_variable
+    - field.field.taxonomy_term.instrument.field_model_identifier
+    - field.field.taxonomy_term.instrument.field_model_identifier_type
+    - field.field.taxonomy_term.instrument.field_owner
+    - field.field.taxonomy_term.instrument.field_related_identifier
+    - taxonomy.vocabulary.instrument
+  module:
+    - datafield
+    - datetime
+    - path
+    - text
+id: taxonomy_term.instrument.default
+targetEntityType: taxonomy_term
+bundle: instrument
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_alternate_identifier:
+    type: data_field_table_widget
+    weight: 12
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings: {  }
+    third_party_settings: {  }
+  field_date_commissioned:
+    type: datetime_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_decommissioned:
+    type: datetime_default
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_instrument_model:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_instrument_type:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_manufacturer:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_measured_variable:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_model_identifier:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_model_identifier_type:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_owner:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_related_identifier:
+    type: data_field_table_widget
+    weight: 13
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 14
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }

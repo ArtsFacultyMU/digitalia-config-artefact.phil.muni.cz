@@ -1,0 +1,8 @@
+uuid: 7f56b5be-964c-47e9-a3af-e35c90493991
+langcode: en
+status: true
+dependencies: {  }
+name: 'Binder type'
+vid: binder_type
+description: ''
+weight: 0

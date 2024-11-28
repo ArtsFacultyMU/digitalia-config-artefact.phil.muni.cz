@@ -1,0 +1,23 @@
+uuid: 8C52C32D-07CE-488B-8C3B-A78F1422A05C
+langcode: en
+status: true
+dependencies: {  }
+id: kch_aquamanile_type
+migration_group: kch
+label: 'Import aquamanile type'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/aquamanile_type.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: aquamanile_type
+migration_dependencies: null

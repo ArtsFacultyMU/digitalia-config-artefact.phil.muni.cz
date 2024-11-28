@@ -25,3 +25,4 @@ original: true
 dedupe_original: false
 mime_types: {  }
 autohash: true
+suppress_warnings: false

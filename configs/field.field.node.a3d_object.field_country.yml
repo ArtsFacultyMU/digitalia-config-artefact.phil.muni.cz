@@ -1,0 +1,33 @@
+uuid: fcada176-2031-4bad-a4c8-36444bfc2fe8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.a3d_object
+    - taxonomy.vocabulary.country_a3d
+  content:
+    - 'taxonomy_term:country_a3d:253bf024-7017-4da2-8c8f-56ab46f08819'
+id: node.a3d_object.field_country
+field_name: field_country
+entity_type: node
+bundle: a3d_object
+label: Country
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 253bf024-7017-4da2-8c8f-56ab46f08819
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      country_a3d: country_a3d
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

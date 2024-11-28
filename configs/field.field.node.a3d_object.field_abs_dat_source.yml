@@ -1,0 +1,19 @@
+uuid: ab9530b4-9277-4d44-8397-eda125774333
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abs_dat_source
+    - node.type.a3d_object
+id: node.a3d_object.field_abs_dat_source
+field_name: field_abs_dat_source
+entity_type: node
+bundle: a3d_object
+label: 'Absolute datation source'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

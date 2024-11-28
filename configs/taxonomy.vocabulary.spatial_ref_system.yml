@@ -1,0 +1,8 @@
+uuid: d83d7ae4-f08f-47dc-9137-59b9a6971b15
+langcode: en
+status: true
+dependencies: {  }
+name: 'Spatial reference system'
+vid: spatial_ref_system
+description: ''
+weight: 0

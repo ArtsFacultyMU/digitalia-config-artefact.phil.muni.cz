@@ -1,0 +1,18 @@
+uuid: 0ed88447-5df4-409e-b5a2-54f2b5670f21
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.3d_traces
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.3d_traces
+target_entity_type_id: taxonomy_term
+target_bundle: 3d_traces
+default_langcode: site_default
+language_alterable: true

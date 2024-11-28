@@ -1,0 +1,18 @@
+uuid: 598f17f6-bca0-4562-9917-1bc6f9d69280
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.aquamanile_type
+id: taxonomy_term.aquamanile_type.name
+field_name: name
+entity_type: taxonomy_term
+bundle: aquamanile_type
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

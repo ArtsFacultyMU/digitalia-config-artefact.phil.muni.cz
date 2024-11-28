@@ -1,0 +1,11 @@
+uuid: 293c1da8-728f-4a5a-b4f0-e0c3c14e0070
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_a3d_image_comparison
+label: 'A3D image comparison'
+description: ''
+targetEntityType: media
+cache: true

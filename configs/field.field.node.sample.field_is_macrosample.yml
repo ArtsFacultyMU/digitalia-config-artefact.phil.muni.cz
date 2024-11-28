@@ -1,0 +1,21 @@
+uuid: 12d6a588-27ee-4dcb-8625-0ea5fc63925b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_macrosample
+    - node.type.sample
+id: node.sample.field_is_macrosample
+field_name: field_is_macrosample
+entity_type: node
+bundle: sample
+label: 'Is macrosample'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

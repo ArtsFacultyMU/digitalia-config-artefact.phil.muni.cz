@@ -1,0 +1,20 @@
+uuid: 1461C62A-673C-405B-8E3F-F4C6B897D8B4
+langcode: en
+id: kch_term_rock_fragments
+migration_group: kch
+label: 'Import rocks'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/rocks.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: rock_fragments

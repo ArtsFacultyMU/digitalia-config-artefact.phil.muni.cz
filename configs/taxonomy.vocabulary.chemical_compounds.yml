@@ -1,0 +1,8 @@
+uuid: bf67e4d5-a193-4d65-95d1-82b2280c3037
+langcode: und
+status: true
+dependencies: {  }
+name: 'Chemical compounds'
+vid: chemical_compounds
+description: KCH
+weight: 0

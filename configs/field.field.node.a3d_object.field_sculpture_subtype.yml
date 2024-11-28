@@ -1,0 +1,31 @@
+uuid: 9a473b4c-2c77-452e-807e-96d004cc444f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sculpture_subtype
+    - node.type.a3d_object
+    - taxonomy.vocabulary.small_sculpture_subtype
+    - taxonomy.vocabulary.unknown_values
+id: node.a3d_object.field_sculpture_subtype
+field_name: field_sculpture_subtype
+entity_type: node
+bundle: a3d_object
+label: 'Small sculpture subtype'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      small_sculpture_subtype: small_sculpture_subtype
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: small_sculpture_subtype
+field_type: entity_reference

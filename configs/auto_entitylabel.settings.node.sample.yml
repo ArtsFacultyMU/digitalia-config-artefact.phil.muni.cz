@@ -1,0 +1,10 @@
+status: 1
+pattern: 'Sample [node:field_sample_id] from [node:field_object_reference]'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - node.type.sample
+new_content_behavior: 0

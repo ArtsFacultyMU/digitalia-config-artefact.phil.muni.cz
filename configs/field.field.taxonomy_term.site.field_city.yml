@@ -1,0 +1,29 @@
+uuid: ffe3ba1b-1e7e-4a53-9e73-af5bb916b367
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_city
+    - taxonomy.vocabulary.city
+    - taxonomy.vocabulary.site
+id: taxonomy_term.site.field_city
+field_name: field_city
+entity_type: taxonomy_term
+bundle: site
+label: City
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      city: city
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

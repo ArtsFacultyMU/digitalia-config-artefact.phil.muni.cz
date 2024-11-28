@@ -1,0 +1,17 @@
+uuid: d4e6ebaf-d851-4f4d-ae88-6114df211b88
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.pigment
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-f529349a61dc96b0
+group_type: test_group_type
+content_plugin: 'group_term:pigment'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

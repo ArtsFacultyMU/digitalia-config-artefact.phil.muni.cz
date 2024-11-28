@@ -1,0 +1,23 @@
+uuid: 3037db27-2235-47ea-827e-d7adb43979cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_porosity
+    - node.type.analysis
+id: node.analysis.field_porosity
+field_name: field_porosity
+entity_type: node
+bundle: analysis
+label: Porosity
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: '%'
+field_type: integer

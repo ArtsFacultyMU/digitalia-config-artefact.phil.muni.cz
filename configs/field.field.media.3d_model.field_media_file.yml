@@ -1,0 +1,32 @@
+uuid: c33ae2ba-6357-4cc0-9396-5d965be93742
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_file
+    - media.type.3d_model
+  module:
+    - file
+    - filehash
+third_party_settings:
+  filehash:
+    dedupe: 0
+    dedupe_original: false
+id: media.3d_model.field_media_file
+field_name: field_media_file
+entity_type: media
+bundle: 3d_model
+label: File
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'ply obj glb gltf stl fbx'
+  max_filesize: ''
+  description_field: false
+field_type: file

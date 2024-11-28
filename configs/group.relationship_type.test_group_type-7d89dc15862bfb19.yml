@@ -1,0 +1,17 @@
+uuid: d6487fa1-6d8c-406d-aa8e-a1d524f2d77d
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.loc_coord_cadastre_accuracy
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-7d89dc15862bfb19
+group_type: test_group_type
+content_plugin: 'group_term:loc_coord_cadastre_accuracy'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

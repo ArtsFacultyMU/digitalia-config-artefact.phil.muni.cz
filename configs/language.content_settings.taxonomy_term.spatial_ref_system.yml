@@ -1,0 +1,18 @@
+uuid: 2bd26993-1403-4fad-8ec2-7d3b21822e0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.spatial_ref_system
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.spatial_ref_system
+target_entity_type_id: taxonomy_term
+target_bundle: spatial_ref_system
+default_langcode: site_default
+language_alterable: true

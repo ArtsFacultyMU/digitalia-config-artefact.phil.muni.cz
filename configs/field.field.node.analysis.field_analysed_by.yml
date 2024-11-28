@@ -1,0 +1,31 @@
+uuid: 4222b238-a590-44a1-8010-9cadac687deb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_analysed_by
+    - node.type.analysis
+    - taxonomy.vocabulary.actor
+    - taxonomy.vocabulary.unknown_values
+id: node.analysis.field_analysed_by
+field_name: field_analysed_by
+entity_type: node
+bundle: analysis
+label: 'Analysed by'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      actor: actor
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: actor
+field_type: entity_reference

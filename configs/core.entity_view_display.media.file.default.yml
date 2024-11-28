@@ -28,12 +28,12 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_gemini_uri:
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 8
     region: content
   field_height:
     type: number_integer
@@ -42,7 +42,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 5
+    weight: 7
     region: content
   field_media_file:
     type: file_default
@@ -81,7 +81,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 9
     region: content
   field_width:
     type: number_integer
@@ -90,7 +90,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   name:
     type: string
@@ -101,6 +101,7 @@ content:
     weight: 0
     region: content
 hidden:
+  a3d_comparison_image_entity_view_1: true
   created: true
   langcode: true
   search_api_excerpt: true

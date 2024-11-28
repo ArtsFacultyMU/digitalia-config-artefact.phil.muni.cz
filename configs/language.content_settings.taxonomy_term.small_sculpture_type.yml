@@ -1,0 +1,18 @@
+uuid: 02ffbacb-b115-4241-aaea-4cf57cf3b6fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.small_sculpture_type
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.small_sculpture_type
+target_entity_type_id: taxonomy_term
+target_bundle: small_sculpture_type
+default_langcode: site_default
+language_alterable: true

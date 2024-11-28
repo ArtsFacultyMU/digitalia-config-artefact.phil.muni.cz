@@ -1,0 +1,149 @@
+display:
+  default:
+    display_options:
+      fields:
+        nid:
+          fallback_options:
+            format_plural_string: !!binary MQNAY291bnQD
+      filters:
+        field_artefact_category_name:
+          expose:
+            description: ''
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+  browse_analyses:
+    display_options:
+      fields:
+        nid:
+          fallback_options:
+            format_plural_string: !!binary MQNAY291bnQD
+      menu:
+        title: Analýzy
+  kch_browse:
+    display_options:
+      fields:
+        nid:
+          fallback_options:
+            format_plural_string: !!binary MQNAY291bnQD
+        field_timespan_from:
+          format_plural_string: !!binary MQNAY291bnQD
+        field_timespan_to:
+          format_plural_string: !!binary MQNAY291bnQD
+      filters:
+        field_artefact_category:
+          expose:
+            label: 'Kategorie artefaktu'
+      menu:
+        title: 'Keramické výrobky'
+  kch_search:
+    display_options:
+      fields:
+        field_artefact_category:
+          label: 'Kategorie artefaktu'
+        nid:
+          fallback_options:
+            format_plural_string: !!binary MQNAY291bnQD
+        field_artefact_id:
+          label: 'ID artefaktu'
+        field_site:
+          label: Lokalita
+        field_ownership:
+          label: Vlastník
+        field_timespan:
+          label: Datace
+        field_abs_dat_range:
+          label: 'Absolutní rozsah datace'
+      exposed_form:
+        options:
+          submit_button: Vyhledat
+          reset_button_label: Resetovat
+          exposed_sorts_label: 'Řadit podle'
+          sort_asc_label: vzestupně
+          sort_desc_label: sestupně
+          bef:
+            sort:
+              advanced:
+                collapsible_label: 'Možnosti řazení'
+          text_input_required: 'Vyberte filtr, až kliknete na vyhledat, zobrazí se výsledky'
+      empty:
+        area:
+          content:
+            value: '<p>Žádné výsledky</p>'
+            format: basic_html
+      sorts:
+        field_artefact_id:
+          expose:
+            label: 'ID artefaktu'
+        field_artefact_category_name:
+          expose:
+            label: 'Kategorie artefaktu'
+        field_timespan_from:
+          expose:
+            label: 'Spodní odhad datace'
+        field_timespan_to:
+          expose:
+            label: 'Horní odhad datace'
+      filters:
+        field_artefact_id:
+          expose:
+            label: 'ID artefaktu'
+        field_ownership:
+          expose:
+            label: Vlastník
+        field_site:
+          expose:
+            label: Lokalita
+        field_timespan_from:
+          expose:
+            label: 'Spodní odhad datace'
+        field_timespan_to:
+          expose:
+            label: 'Horní odhad datace'
+        field_artefact_category:
+          expose:
+            label: 'Kategorie artefaktu'
+      header:
+        result:
+          content: 'Zobrazují se položky @start - @end z @total'
+      menu:
+        title: Vyhledávání
+  kch_search_top:
+    display_options:
+      title: Vyhledávání
+      exposed_form:
+        options:
+          reset_button_label: Resetovat
+          exposed_sorts_label: 'Řadit podle'
+          sort_asc_label: vzestupně
+          sort_desc_label: sestupně
+      empty:
+        area:
+          content:
+            value: '<p>Žádné výsledky</p>'
+            format: basic_html
+      sorts:
+        field_artefact_id:
+          expose:
+            label: 'ID artefaktu'
+        field_site:
+          expose:
+            label: Lokalita
+        field_relative_datation:
+          expose:
+            label: 'Relativní datace'
+      header:
+        result:
+          content: 'Zobrazují se výsledky @start - @end z @total'
+      menu:
+        title: Vyhledávání
+  sites:
+    display_title: Lokality
+    display_options:
+      title: Lokality
+      fields:
+        term_id:
+          fallback_options:
+            format_plural_string: !!binary MQNAY291bnQD
+      menu:
+        title: Lokality

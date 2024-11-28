@@ -1,0 +1,17 @@
+uuid: 13dba61a-04d2-4374-893d-56ee2b53b224
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.feature_id
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-bd9d05cc9ea3addc
+group_type: test_group_type
+content_plugin: 'group_term:feature_id'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

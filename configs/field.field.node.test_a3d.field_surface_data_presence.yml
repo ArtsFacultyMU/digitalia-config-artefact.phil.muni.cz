@@ -1,0 +1,38 @@
+uuid: ee2ed30e-bb11-4637-8886-0b5c4b9dad96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_surface_data_presence
+    - node.type.test_a3d
+  module:
+    - datafield
+id: node.test_a3d.field_surface_data_presence
+field_name: field_surface_data_presence
+entity_type: node
+bundle: test_a3d
+label: 'Surface data presence'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    sdp_value:
+      label: Sdp_value
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: surface_data_presence_value
+    sdp_method:
+      label: Sdp_method
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: surface_data_presence_method
+    sdp_spec:
+      label: Sdp_spec
+      required: false
+    sdp_note:
+      label: Sdp_note
+      required: false
+field_type: data_field

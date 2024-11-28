@@ -1,0 +1,19 @@
+uuid: fe2185d2-1ad3-4ecc-a803-f3a053c1718a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artefact_id
+    - node.type.test_a3d
+id: node.test_a3d.field_artefact_id
+field_name: field_artefact_id
+entity_type: node
+bundle: test_a3d
+label: 'Artefact ID'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

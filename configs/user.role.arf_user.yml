@@ -1,0 +1,9 @@
+uuid: eee3e3df-feeb-42cb-9337-c2af6480f090
+langcode: en
+status: true
+dependencies: {  }
+id: arf_user
+label: 'ARF user'
+weight: -1
+is_admin: null
+permissions: {  }

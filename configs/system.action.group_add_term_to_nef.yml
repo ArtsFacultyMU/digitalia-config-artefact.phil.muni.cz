@@ -1,0 +1,17 @@
+uuid: f49980a0-8c26-40ff-be7a-6753e8e4a319
+langcode: en
+status: true
+dependencies:
+  module:
+    - group_action
+id: group_add_term_to_nef
+label: 'Group: add term to NEF'
+type: taxonomy_term
+plugin: 'group_add_content:taxonomy_term'
+configuration:
+  operation: create
+  content_plugin: group_term
+  group_id: null
+  entity_id: ''
+  values: {  }
+  add_method: update_existing

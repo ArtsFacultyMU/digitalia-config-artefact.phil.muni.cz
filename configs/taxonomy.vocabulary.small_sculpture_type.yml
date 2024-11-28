@@ -1,0 +1,8 @@
+uuid: 00ccae76-29ed-4901-a0fb-5fcc95002d91
+langcode: en
+status: true
+dependencies: {  }
+name: 'Small sculpture type'
+vid: small_sculpture_type
+description: KCH
+weight: 0

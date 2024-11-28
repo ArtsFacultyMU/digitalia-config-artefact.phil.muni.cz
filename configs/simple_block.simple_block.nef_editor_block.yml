@@ -1,0 +1,11 @@
+uuid: b2c4bfb1-e203-42f1-b599-7a1573b95e9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: nef_editor_block
+title: 'NEF editor block'
+content:
+  value: '<p><a class="button" href="/nef/node/[current-page:url:args:value:2]">View</a></p><p><a class="button" href="/node/[current-page:url:args:value:2]/edit?destination=/nef/node/[current-page:url:args:value:2]">Edit</a></p><p><a class="button" href="/node/[current-page:url:args:value:2]/media/upload?destination=/nef/node/[current-page:url:args:value:2]">Add media</a></p><p><a class="button" href="/nef/node/[current-page:url:args:value:2]/media">Manage media</a></p>'
+  format: full_html

@@ -1,0 +1,19 @@
+uuid: dc4bd9e6-15fe-4b55-ad47-6c29a75d326b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_machine_name
+    - taxonomy.vocabulary.measured_variable
+id: taxonomy_term.measured_variable.field_machine_name
+field_name: field_machine_name
+entity_type: taxonomy_term
+bundle: measured_variable
+label: 'Machine name'
+description: 'The machine name of the field in the Analysis content type.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

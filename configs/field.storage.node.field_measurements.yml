@@ -1,0 +1,123 @@
+uuid: 0de658b8-7e79-4fe1-911e-c787366565d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - datafield
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_measurements
+field_name: field_measurements
+entity_type: node
+type: data_field
+settings:
+  columns:
+    dimensions_type:
+      name: dimensions_type
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    dimensions_value:
+      name: dimensions_value
+      type: numeric
+      max_length: 255
+      size: normal
+      precision: 16
+      unsigned: true
+      scale: 4
+      datetime_type: date
+    dimensions_unit:
+      name: dimensions_unit
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    dimensions_extent:
+      name: dimensions_extent
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    scale_type:
+      name: scale_type
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    dimensions_qualifier:
+      name: dimensions_qualifier
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    measurement_date:
+      name: measurement_date
+      type: string
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    shape:
+      name: shape
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    format_size:
+      name: format_size
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    remarks:
+      name: remarks
+      type: text
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    citations:
+      name: citations
+      type: text
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+module: datafield
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

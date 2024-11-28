@@ -1,0 +1,73 @@
+uuid: fc2b8f3c-eea4-4ea9-8a9e-6d8bb7e3f6d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+id: test_group_type-better_user
+label: 'better user'
+weight: -3
+admin: false
+scope: individual
+global_role: null
+group_type: test_group_type
+permissions:
+  - 'access group_node overview'
+  - 'create group_node:a3d_object entity'
+  - 'create group_node:a3d_object relationship'
+  - 'create group_node:analysis entity'
+  - 'create group_node:analysis relationship'
+  - 'create group_node:page entity'
+  - 'create group_node:page relationship'
+  - 'create group_node:sample entity'
+  - 'create group_node:sample relationship'
+  - 'create group_node:test_a3d entity'
+  - 'create group_node:test_a3d relationship'
+  - 'delete any group_node:a3d_object relationship'
+  - 'delete any group_node:analysis relationship'
+  - 'delete any group_node:sample relationship'
+  - 'delete own group_node:a3d_object relationship'
+  - 'delete own group_node:analysis relationship'
+  - 'delete own group_node:page entity'
+  - 'delete own group_node:sample relationship'
+  - 'update any group_node:a3d_object entity'
+  - 'update any group_node:a3d_platform_homepage entity'
+  - 'update any group_node:analysis entity'
+  - 'update any group_node:at_project entity'
+  - 'update any group_node:page entity'
+  - 'update any group_node:sample entity'
+  - 'update any group_node:test_a3d entity'
+  - 'update own group_node:a3d_object entity'
+  - 'update own group_node:analysis entity'
+  - 'update own group_node:page entity'
+  - 'update own group_node:sample entity'
+  - 'update own group_node:test_a3d entity'
+  - 'view all group_node:a3d_object entity revisions'
+  - 'view all group_node:a3d_platform_homepage entity revisions'
+  - 'view all group_node:analysis entity revisions'
+  - 'view all group_node:page entity revisions'
+  - 'view all group_node:sample entity revisions'
+  - 'view all group_node:test_a3d entity revisions'
+  - 'view group'
+  - 'view group_node:a3d_object entity'
+  - 'view group_node:a3d_object entity revisions'
+  - 'view group_node:a3d_platform_homepage entity'
+  - 'view group_node:analysis entity'
+  - 'view group_node:analysis entity revisions'
+  - 'view group_node:at_project entity'
+  - 'view group_node:page entity'
+  - 'view group_node:page entity revisions'
+  - 'view group_node:sample entity'
+  - 'view group_node:sample entity revisions'
+  - 'view group_node:test_a3d entity'
+  - 'view group_node:test_a3d entity revisions'
+  - 'view own unpublished group_node:a3d_object entity'
+  - 'view own unpublished group_node:analysis entity'
+  - 'view own unpublished group_node:page entity'
+  - 'view own unpublished group_node:sample entity'
+  - 'view own unpublished group_node:test_a3d entity'
+  - 'view unpublished group_node:a3d_object entity'
+  - 'view unpublished group_node:analysis entity'
+  - 'view unpublished group_node:page entity'
+  - 'view unpublished group_node:sample entity'
+  - 'view unpublished group_node:test_a3d entity'

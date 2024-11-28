@@ -1,0 +1,36 @@
+uuid: 3f5d3810-d64c-4152-a075-8b53575dd8aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_minerals
+    - node.type.analysis
+  module:
+    - datafield
+id: node.analysis.field_minerals
+field_name: field_minerals
+entity_type: node
+bundle: analysis
+label: 'Mineral fragments'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    mineral:
+      label: Mineral
+      required: true
+      entity_reference_type: taxonomy_term
+      target_bundles: mineral_fragments
+    ppm:
+      label: PPM
+      list: false
+      allowed_values: ''
+      max: null
+      min: null
+      required: false
+      prefix: ''
+      suffix: ''
+field_type: data_field

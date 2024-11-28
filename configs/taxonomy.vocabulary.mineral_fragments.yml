@@ -1,0 +1,8 @@
+uuid: d803d4bb-4bd2-40a6-8474-70dea3664aec
+langcode: en
+status: true
+dependencies: {  }
+name: Minerals
+vid: mineral_fragments
+description: KCH
+weight: 0

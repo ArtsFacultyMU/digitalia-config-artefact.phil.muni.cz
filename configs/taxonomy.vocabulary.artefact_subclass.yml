@@ -1,0 +1,8 @@
+uuid: bd874f6e-3089-42a4-b7e0-40ce93a77d71
+langcode: en
+status: true
+dependencies: {  }
+name: 'Artefact subclass'
+vid: artefact_subclass
+description: ''
+weight: 0

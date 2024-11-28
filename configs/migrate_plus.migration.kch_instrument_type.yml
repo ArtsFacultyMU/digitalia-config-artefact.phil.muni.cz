@@ -1,0 +1,22 @@
+uuid: 1F8EB7D3-6E0B-42D4-8B50-533B369A0604
+langcode: en
+status: true
+id: kch_instrument_type
+migration_group: kch
+label: 'Import instrument types'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/instrument_type.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: instrument_type
+migration_dependencies: null

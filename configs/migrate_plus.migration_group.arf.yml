@@ -1,0 +1,10 @@
+uuid: 2463443c-7114-4bbc-96ed-8c601d3a41a1
+langcode: en
+status: true
+dependencies: {  }
+id: arf
+label: Artefact
+description: ''
+source_type: ''
+module: null
+shared_configuration: null

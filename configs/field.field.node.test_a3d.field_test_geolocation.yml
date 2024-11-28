@@ -1,0 +1,21 @@
+uuid: 8cd04330-ce47-4d7e-86fa-2c1c380a192e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test_geolocation
+    - node.type.test_a3d
+  module:
+    - geolocation
+id: node.test_a3d.field_test_geolocation
+field_name: field_test_geolocation
+entity_type: node
+bundle: test_a3d
+label: 'Test geolocation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

@@ -1,0 +1,361 @@
+uuid: 574f8c83-23c0-4b5f-ac83-287ae07e8eb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.analysis.field_analysed_by
+    - field.field.node.analysis.field_analysis_date
+    - field.field.node.analysis.field_analysis_of
+    - field.field.node.analysis.field_analysis_type
+    - field.field.node.analysis.field_binder_ratio
+    - field.field.node.analysis.field_binder_type
+    - field.field.node.analysis.field_cavity_pores
+    - field.field.node.analysis.field_chemical_analysis
+    - field.field.node.analysis.field_colour_inward
+    - field.field.node.analysis.field_colour_of_core
+    - field.field.node.analysis.field_colour_outward
+    - field.field.node.analysis.field_date_analysed
+    - field.field.node.analysis.field_elements
+    - field.field.node.analysis.field_firing_characteristic
+    - field.field.node.analysis.field_firing_temperature
+    - field.field.node.analysis.field_fractured_pores
+    - field.field.node.analysis.field_grain_type
+    - field.field.node.analysis.field_instrument
+    - field.field.node.analysis.field_matrix
+    - field.field.node.analysis.field_matrix_vitrification
+    - field.field.node.analysis.field_microstructure
+    - field.field.node.analysis.field_minerals
+    - field.field.node.analysis.field_non_plastic_inclusions
+    - field.field.node.analysis.field_nonplastic_sort
+    - field.field.node.analysis.field_note
+    - field.field.node.analysis.field_note_on_method
+    - field.field.node.analysis.field_planar_pores
+    - field.field.node.analysis.field_pore_channels
+    - field.field.node.analysis.field_porosity
+    - field.field.node.analysis.field_private_note
+    - field.field.node.analysis.field_publications
+    - field.field.node.analysis.field_reduction_core
+    - field.field.node.analysis.field_reduction_inward
+    - field.field.node.analysis.field_reduction_outward
+    - field.field.node.analysis.field_rock_fragments
+    - field.field.node.analysis.field_vesicular_pores
+    - node.type.analysis
+  module:
+    - datafield
+    - range
+    - text
+id: node.analysis.default
+targetEntityType: node
+bundle: analysis
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_analysed_by:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_analysis_of:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_analysis_type:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_binder_ratio:
+    type: string_textfield
+    weight: 32
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_binder_type:
+    type: options_select
+    weight: 31
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cavity_pores:
+    type: options_buttons
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_chemical_analysis:
+    type: data_field_table_widget
+    weight: 38
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings: {  }
+    third_party_settings: {  }
+  field_colour_inward:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_colour_of_core:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_colour_outward:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_date_analysed:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_elements:
+    type: data_field_table_widget
+    weight: 39
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings: {  }
+    third_party_settings: {  }
+  field_firing_characteristic:
+    type: options_select
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_firing_temperature:
+    type: range
+    weight: 17
+    region: content
+    settings:
+      label:
+        from: From
+        to: to
+      placeholder:
+        from: ''
+        to: ''
+    third_party_settings: {  }
+  field_fractured_pores:
+    type: options_buttons
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_grain_type:
+    type: entity_reference_autocomplete
+    weight: 24
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_instrument:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_matrix:
+    type: number
+    weight: 19
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_matrix_vitrification:
+    type: options_buttons
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_microstructure:
+    type: entity_reference_autocomplete
+    weight: 23
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_minerals:
+    type: data_field_table_widget
+    weight: 37
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings: {  }
+    third_party_settings: {  }
+  field_non_plastic_inclusions:
+    type: number
+    weight: 29
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_nonplastic_sort:
+    type: boolean_checkbox
+    weight: 30
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_note:
+    type: text_textarea
+    weight: 35
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_note_on_method:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_planar_pores:
+    type: options_buttons
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_pore_channels:
+    type: options_buttons
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_porosity:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_private_note:
+    type: text_textarea
+    weight: 34
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_publications:
+    type: text_textarea
+    weight: 33
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_reduction_core:
+    type: options_buttons
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_reduction_inward:
+    type: options_buttons
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_reduction_outward:
+    type: options_buttons
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_rock_fragments:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_vesicular_pores:
+    type: options_buttons
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 22
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 36
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_analysis_date: true
+  path: true
+  promote: true
+  sticky: true

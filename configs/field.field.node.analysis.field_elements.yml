@@ -1,0 +1,36 @@
+uuid: e278f7eb-071d-436a-a50b-d08ae472218a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_elements
+    - node.type.analysis
+  module:
+    - datafield
+id: node.analysis.field_elements
+field_name: field_elements
+entity_type: node
+bundle: analysis
+label: Elements
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    element:
+      label: Element
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: elements
+    value:
+      label: Value
+      list: false
+      allowed_values: ''
+      max: null
+      min: null
+      required: false
+      prefix: ''
+      suffix: ''
+field_type: data_field

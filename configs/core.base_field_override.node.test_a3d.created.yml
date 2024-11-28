@@ -1,0 +1,18 @@
+uuid: 750ecbfb-7792-45e0-a50b-827db01ba220
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.test_a3d
+id: node.test_a3d.created
+field_name: created
+entity_type: node
+bundle: test_a3d
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

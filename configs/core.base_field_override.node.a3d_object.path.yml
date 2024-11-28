@@ -1,0 +1,20 @@
+uuid: 9f21c759-5313-479a-a290-db8cbd5031e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.a3d_object
+  module:
+    - path
+id: node.a3d_object.path
+field_name: path
+entity_type: node
+bundle: a3d_object
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

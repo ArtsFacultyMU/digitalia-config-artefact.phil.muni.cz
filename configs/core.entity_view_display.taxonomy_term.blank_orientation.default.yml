@@ -1,0 +1,29 @@
+uuid: 217f07ae-2b04-4f72-b84e-53dfa95755bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blank_orientation
+  module:
+    - text
+id: taxonomy_term.blank_orientation.default
+targetEntityType: taxonomy_term
+bundle: blank_orientation
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

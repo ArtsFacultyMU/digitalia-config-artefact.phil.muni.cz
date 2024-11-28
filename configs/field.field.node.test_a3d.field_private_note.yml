@@ -1,0 +1,22 @@
+uuid: 011d737c-b576-4c27-85b0-ccb0063d918f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_private_note
+    - node.type.test_a3d
+  module:
+    - text
+id: node.test_a3d.field_private_note
+field_name: field_private_note
+entity_type: node
+bundle: test_a3d
+label: 'Private note'
+description: 'A note visible only to logged-in users'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,8 @@
+uuid: f4a2667a-0122-45ff-8952-1cdae6b26c3e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Scale Type'
+vid: scale_type
+description: 'Expresses the ratio between the size of the representation of something and that thing itself'
+weight: 0

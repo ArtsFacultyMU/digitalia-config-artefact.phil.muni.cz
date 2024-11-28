@@ -1,0 +1,8 @@
+uuid: 18d45d1e-bae2-43bf-82c4-31193f4adc6b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Surface data presence method'
+vid: sdp_method
+description: ''
+weight: 0

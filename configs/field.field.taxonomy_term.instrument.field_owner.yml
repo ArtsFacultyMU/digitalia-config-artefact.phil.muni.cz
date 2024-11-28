@@ -1,0 +1,31 @@
+uuid: 050f3883-4d96-4631-bd68-6a45fac333c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_owner
+    - taxonomy.vocabulary.actor
+    - taxonomy.vocabulary.instrument
+    - taxonomy.vocabulary.unknown_values
+id: taxonomy_term.instrument.field_owner
+field_name: field_owner
+entity_type: taxonomy_term
+bundle: instrument
+label: Owner
+description: 'Institution(s) responsible for the management of the instrument. This may include the legal owner, the operator, or an institute providing access to the instrument.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      actor: actor
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: actor
+field_type: entity_reference

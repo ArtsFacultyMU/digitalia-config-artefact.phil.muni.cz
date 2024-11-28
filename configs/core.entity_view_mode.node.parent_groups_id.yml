@@ -1,0 +1,11 @@
+uuid: 835c00c3-3a5d-4e6d-9382-b97e5b2f9968
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.parent_groups_id
+label: 'Parent groups ID'
+description: ''
+targetEntityType: node
+cache: true

@@ -1,0 +1,29 @@
+uuid: d4d1ded7-ccaf-45f9-9ea6-935832fd9d29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_clay_colour
+    - node.type.a3d_object
+    - taxonomy.vocabulary.colour
+id: node.a3d_object.field_clay_colour
+field_name: field_clay_colour
+entity_type: node
+bundle: a3d_object
+label: 'Clay colour'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      colour: colour
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

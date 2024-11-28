@@ -1,0 +1,29 @@
+uuid: 1d111825-910f-4cd2-826e-3e7b0235265a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pigment
+    - node.type.a3d_object
+    - taxonomy.vocabulary.pigment
+id: node.a3d_object.field_pigment
+field_name: field_pigment
+entity_type: node
+bundle: a3d_object
+label: 'Pigment determination'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pigment: pigment
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

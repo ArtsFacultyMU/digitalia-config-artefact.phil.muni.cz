@@ -1,0 +1,8 @@
+uuid: 5a5b1196-2560-4897-918b-ddb87985b670
+langcode: en
+status: true
+dependencies: {  }
+name: 'Measurement type'
+vid: measurement_type
+description: ''
+weight: 0

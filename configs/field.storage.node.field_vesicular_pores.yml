@@ -1,0 +1,22 @@
+uuid: 874d304b-0830-46d5-a945-001a19e78998
+langcode: cs
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_vesicular_pores
+field_name: field_vesicular_pores
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

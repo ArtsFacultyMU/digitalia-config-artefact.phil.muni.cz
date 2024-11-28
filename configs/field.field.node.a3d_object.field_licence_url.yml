@@ -1,0 +1,29 @@
+uuid: 17a8cc89-b8b0-497b-90ee-a45dd5151d1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_licence_url
+    - node.type.a3d_object
+    - taxonomy.vocabulary.licence_url
+id: node.a3d_object.field_licence_url
+field_name: field_licence_url
+entity_type: node
+bundle: a3d_object
+label: 'Licence URL'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      licence_url: licence_url
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

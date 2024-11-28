@@ -1,0 +1,17 @@
+uuid: 76f56dda-70e1-4d41-9590-d8221bfd2d82
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.quiver_trans_bright_spots
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-6ecf41f7aaf8c062
+group_type: test_group_type
+content_plugin: 'group_term:quiver_trans_bright_spots'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

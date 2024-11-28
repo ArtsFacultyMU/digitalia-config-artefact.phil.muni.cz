@@ -1,0 +1,23 @@
+display:
+  default:
+    display_options:
+      title: 'Keramické výrobky na mapě'
+      exposed_form:
+        options:
+          submit_button: Odeslat
+          reset_button_label: Resetovat
+          exposed_sorts_label: 'Řadit podle'
+          sort_asc_label: vzestupně
+          sort_desc_label: sestupně
+      filters:
+        field_artefact_category_target_id:
+          expose:
+            label: 'Kategorie artefaktu'
+      header:
+        result:
+          content: "<h1>Keramické výrobky na mapě</h1>\r\n\r\nPočet výsledků @total "
+  page_1:
+    display_title: 'Keramické výrobky na mapě'
+    display_options:
+      menu:
+        title: 'Keramické výrobky na mapě'

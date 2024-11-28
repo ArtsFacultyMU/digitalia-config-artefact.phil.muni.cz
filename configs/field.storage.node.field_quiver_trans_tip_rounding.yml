@@ -1,0 +1,24 @@
+uuid: 2d13aed2-d469-4b5b-9a81-1f02839a9535
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_quiver_trans_tip_rounding
+field_name: field_quiver_trans_tip_rounding
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

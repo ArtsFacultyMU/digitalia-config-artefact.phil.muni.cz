@@ -1,0 +1,11 @@
+uuid: 490e14e7-52b1-4611-b929-a251582509be
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.nef_browse
+label: 'NEF Browse'
+description: ''
+targetEntityType: node
+cache: true

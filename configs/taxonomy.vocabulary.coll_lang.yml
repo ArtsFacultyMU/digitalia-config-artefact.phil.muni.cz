@@ -1,0 +1,8 @@
+uuid: 54a228f3-6f54-4877-970e-4ea72ed3dea1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Collection metadata language'
+vid: coll_lang
+description: ''
+weight: 0

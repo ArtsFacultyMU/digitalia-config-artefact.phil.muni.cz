@@ -1,0 +1,8 @@
+uuid: e35df310-e755-44ba-9289-90af91c90a18
+langcode: en
+status: true
+dependencies: {  }
+name: 'Stove tile placement type 1'
+vid: stove_tile_placement_type_1
+description: KCH
+weight: 0

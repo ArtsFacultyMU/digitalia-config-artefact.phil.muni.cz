@@ -1,0 +1,22 @@
+uuid: 18724401-20b0-4be2-ad30-52f3cbc233a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_private_note
+    - node.type.a3d_object
+  module:
+    - text
+id: node.a3d_object.field_private_note
+field_name: field_private_note
+entity_type: node
+bundle: a3d_object
+label: 'Private note'
+description: 'A note visible only to logged-in users'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

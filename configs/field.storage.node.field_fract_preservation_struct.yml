@@ -1,0 +1,24 @@
+uuid: 83f05b7d-d58b-4acb-82f0-5acd96ed315f
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_fract_preservation_struct
+field_name: field_fract_preservation_struct
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

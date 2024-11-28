@@ -1,0 +1,8 @@
+uuid: 1783f18b-7083-4716-b967-4fb9e69a5f9f
+langcode: en
+status: true
+dependencies: {  }
+name: Posture
+vid: posture
+description: ''
+weight: 0

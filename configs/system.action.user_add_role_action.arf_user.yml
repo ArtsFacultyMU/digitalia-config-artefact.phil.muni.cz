@@ -1,0 +1,14 @@
+uuid: ec4bd6ce-b15d-443b-9697-188a4e4f57db
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.arf_user
+  module:
+    - user
+id: user_add_role_action.arf_user
+label: 'Add the ARF user role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: arf_user

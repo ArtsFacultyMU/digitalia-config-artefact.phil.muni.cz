@@ -1,0 +1,29 @@
+uuid: afd7875b-4daa-4161-8e9d-0e96ed8f02d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coll_org
+    - node.type.a3d_object
+    - taxonomy.vocabulary.coll_org
+id: node.a3d_object.field_coll_org
+field_name: field_coll_org
+entity_type: node
+bundle: a3d_object
+label: Organisation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      coll_org: coll_org
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

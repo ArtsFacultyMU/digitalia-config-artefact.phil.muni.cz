@@ -1,0 +1,19 @@
+uuid: 57c2b0f4-96ab-49ea-95b7-9b3c190ef928
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abs_dat_range
+    - node.type.a3d_object
+id: node.a3d_object.field_abs_dat_range
+field_name: field_abs_dat_range
+entity_type: node
+bundle: a3d_object
+label: 'Absolute datation range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

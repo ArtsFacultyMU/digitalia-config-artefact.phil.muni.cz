@@ -1,0 +1,18 @@
+uuid: 17209cfe-cb22-4f87-922f-e36b548cf504
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contract
+id: node.contract.created
+field_name: created
+entity_type: node
+bundle: contract
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

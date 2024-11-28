@@ -1,0 +1,21 @@
+uuid: 5584a189-b045-4bd1-92c3-745e91ebe451
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vesicular_pores
+    - node.type.analysis
+id: node.analysis.field_vesicular_pores
+field_name: field_vesicular_pores
+entity_type: node
+bundle: analysis
+label: 'Vezikulární póry'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Ano
+  off_label: Ne
+field_type: boolean

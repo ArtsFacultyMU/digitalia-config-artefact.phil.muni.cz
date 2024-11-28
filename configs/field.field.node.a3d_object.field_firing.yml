@@ -1,0 +1,35 @@
+uuid: fcfa80ca-a0ea-43c4-a071-7a7be95d5303
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_firing
+    - node.type.a3d_object
+  module:
+    - range
+id: node.a3d_object.field_firing
+field_name: field_firing
+entity_type: node
+bundle: a3d_object
+label: Firing
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  field:
+    prefix: ''
+    suffix: °C
+  from:
+    prefix: ''
+    suffix: ''
+  to:
+    prefix: ''
+    suffix: ''
+  combined:
+    prefix: ''
+    suffix: ''
+field_type: range_integer

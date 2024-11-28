@@ -1,0 +1,11 @@
+uuid: 250b719e-6279-4bfe-8fb7-4f15c301846f
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: a3d_threejs_test
+title: 'a3d threejs test'
+content:
+  value: "<script type=\"importmap\">\r\n  {\r\n    \"imports\": {\r\n      \"three\": \"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js\",\r\n      \"three/addons/\": \"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/\"\r\n    }\r\n  }\r\n</script><script type=\"module\" src=\"/sites/default/files/threejs_test.js\"></script>"
+  format: full_html

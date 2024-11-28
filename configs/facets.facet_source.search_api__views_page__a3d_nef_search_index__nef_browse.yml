@@ -1,0 +1,9 @@
+uuid: c38b64c4-3b23-4210-a5a3-55cfe1fbdfe2
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__a3d_nef_search_index__nef_browse
+name: 'search_api:views_page__a3d_nef_search_index__nef_browse'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

@@ -1,0 +1,29 @@
+uuid: da480175-c58c-4c76-a829-ef96071c8596
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_firing_characteristic
+    - node.type.analysis
+    - taxonomy.vocabulary.firing_characteristic
+id: node.analysis.field_firing_characteristic
+field_name: field_firing_characteristic
+entity_type: node
+bundle: analysis
+label: 'Firing characteristic'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      firing_characteristic: firing_characteristic
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

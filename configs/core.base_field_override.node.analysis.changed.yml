@@ -1,0 +1,18 @@
+uuid: 79ec2f47-febb-44a3-a102-61257266df17
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.analysis
+id: node.analysis.changed
+field_name: changed
+entity_type: node
+bundle: analysis
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

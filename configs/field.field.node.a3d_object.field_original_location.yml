@@ -1,0 +1,29 @@
+uuid: cd82604f-43d8-4cf8-bc81-e87c9d57e92f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_original_location
+    - node.type.a3d_object
+    - taxonomy.vocabulary.original_location
+id: node.a3d_object.field_original_location
+field_name: field_original_location
+entity_type: node
+bundle: a3d_object
+label: 'Original location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      original_location: original_location
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.thumbnail
+    - field.field.media.image.field_description
+    - field.field.media.image.field_featured
     - field.field.media.image.field_file_size
     - field.field.media.image.field_height
     - field.field.media.image.field_media_image
@@ -12,8 +14,10 @@ dependencies:
     - field.field.media.image.field_mime_type
     - field.field.media.image.field_original_name
     - field.field.media.image.field_width
+    - image.style.medium
     - media.type.image
   module:
+    - entity_comparison
     - islandora
 _core:
   default_config_hash: mH-3GLriL2Vx34DOnmHTqPxMCEmqJLtesug6_H_6piM
@@ -26,15 +30,41 @@ content:
     type: islandora_image
     label: visually_hidden
     settings:
-      image_link: content
-      image_style: ''
+      image_link: ''
+      image_style: medium
       image_loading:
         attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
+  link_for_entity_comparison_a3d_arf_entity_comparison:
+    type: entity_comparison_link
+    label: above
+    settings:
+      enitity_comparison: ''
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  link_for_entity_comparison_a3d_meta_entity_comparison:
+    type: entity_comparison_link
+    label: above
+    settings:
+      enitity_comparison: ''
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  link_for_entity_comparison_a3d_nef_entity_comparison:
+    type: entity_comparison_link
+    label: above
+    settings:
+      enitity_comparison: ''
+    third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   created: true
+  field_description: true
+  field_featured: true
   field_file_size: true
   field_gemini_uri: true
   field_height: true
@@ -44,6 +74,7 @@ hidden:
   field_original_name: true
   field_width: true
   langcode: true
+  link_for_entity_comparison_a3d_image_comparison: true
   name: true
   search_api_excerpt: true
   thumbnail: true

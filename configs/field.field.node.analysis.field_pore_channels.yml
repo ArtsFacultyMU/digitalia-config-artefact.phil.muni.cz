@@ -1,0 +1,21 @@
+uuid: 54728417-ffe6-434e-a473-c89627386c60
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pore_channels
+    - node.type.analysis
+id: node.analysis.field_pore_channels
+field_name: field_pore_channels
+entity_type: node
+bundle: analysis
+label: 'Kanálkovité póry'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Ano
+  off_label: Ne
+field_type: boolean

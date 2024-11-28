@@ -1,6 +1,6 @@
 uuid: 5e876e0c-6b7a-45b1-87bc-5370d115f8bf
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.subject_name
@@ -15,7 +15,7 @@ _core:
 id: islandora_muni_subjectname
 theme: islandora_muni
 region: header
-weight: -3
+weight: -20
 provider: null
 plugin: 'facet_block:subject_name'
 settings:

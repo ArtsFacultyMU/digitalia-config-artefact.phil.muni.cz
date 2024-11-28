@@ -1,0 +1,11 @@
+uuid: 7ac9e4d2-0bf3-4008-8487-9bcd492a8504
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: meta_calculate_position_taxonomy
+title: 'META calculate position taxonomy'
+content:
+  value: '<script id="calculate-position-grid" var-pages="40" type="module" src="/modules/custom/digitalia_muni_a3d_javascript/js/a3d_calculate_position_grid.js"></script>'
+  format: full_html

@@ -1,0 +1,21 @@
+uuid: 2a4e1b03-b6b8-4b70-9983-3d0c8c408aa9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_st_placement_certainty
+    - node.type.test_a3d
+id: node.test_a3d.field_st_placement_certainty
+field_name: field_st_placement_certainty
+entity_type: node
+bundle: test_a3d
+label: 'Stove tile placement certainty'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Certain
+  off_label: Uncertain
+field_type: boolean

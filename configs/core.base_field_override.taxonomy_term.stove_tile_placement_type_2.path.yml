@@ -1,0 +1,20 @@
+uuid: 4e2f4575-64fc-47f2-97d4-f340f891f360
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.stove_tile_placement_type_2
+  module:
+    - path
+id: taxonomy_term.stove_tile_placement_type_2.path
+field_name: path
+entity_type: taxonomy_term
+bundle: stove_tile_placement_type_2
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

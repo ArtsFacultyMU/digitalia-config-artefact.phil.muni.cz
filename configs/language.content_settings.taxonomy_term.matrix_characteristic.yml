@@ -1,0 +1,18 @@
+uuid: 1d4daf04-60c3-40b1-b79d-09cc1e9bc9cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.matrix_characteristic
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.matrix_characteristic
+target_entity_type_id: taxonomy_term
+target_bundle: matrix_characteristic
+default_langcode: site_default
+language_alterable: true

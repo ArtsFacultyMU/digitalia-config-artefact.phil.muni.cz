@@ -1,0 +1,18 @@
+uuid: d26d0ae0-a06e-4064-a41b-c4d9dcad50b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.dimensions_extent
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.dimensions_extent
+target_entity_type_id: taxonomy_term
+target_bundle: dimensions_extent
+default_langcode: site_default
+language_alterable: true

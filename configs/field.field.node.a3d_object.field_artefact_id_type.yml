@@ -1,0 +1,31 @@
+uuid: 2a62f592-00a9-44fe-8ec2-cfa9064d036e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artefact_id_type
+    - node.type.a3d_object
+    - taxonomy.vocabulary.identifier_type
+    - taxonomy.vocabulary.unknown_values
+id: node.a3d_object.field_artefact_id_type
+field_name: field_artefact_id_type
+entity_type: node
+bundle: a3d_object
+label: 'Artefact ID type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      identifier_type: identifier_type
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: identifier_type
+field_type: entity_reference

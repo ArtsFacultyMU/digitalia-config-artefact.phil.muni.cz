@@ -1,0 +1,180 @@
+display:
+  default:
+    display_options:
+      empty:
+        area:
+          content:
+            value: '<p>Page not found.</p>'
+            format: basic_html
+  kch_analysis_to_object:
+    display_options:
+      title: 'Analýzy tohoto objektu'
+      fields:
+        field_analysis_of:
+          label: Analyzuje
+        field_analysed_by:
+          label: Výzkumník
+        field_instrument:
+          label: Přístroj
+        field_note_on_method:
+          label: 'Poznámka k metodologii'
+        field_chemical_analysis:
+          label: 'Chemická analýza'
+        field_rock_fragments:
+          label: 'Fragmenty hornin'
+        field_minerals:
+          label: 'Fragmenty minerálů'
+        field_binder_type:
+          label: Pojivo
+        field_nonplastic_sort:
+          label: 'Vytřídění neplastické složky'
+        field_colour_of_core:
+          label: Barva-jádro
+        field_colour_inward:
+          label: 'Barva-vnitřní strana'
+        field_colour_outward:
+          label: 'Barva-vnější strana'
+        field_elements:
+          label: Prvky
+        field_firing_characteristic:
+          label: 'Charakteristika výpalu'
+        field_firing_temperature:
+          label: 'Teplota výpalu'
+        field_grain_type:
+          label: Zrnitost
+        field_binder_ratio:
+          label: 'Ostřivo : Pojivo'
+        field_matrix_vitrification:
+          label: 'Vitrifikace matrix'
+        field_microstructure:
+          label: Mikrostruktura
+        field_non_plastic_inclusions_value:
+          label: 'Neplastická složka'
+        field_reduction_core:
+          label: Redukce-jádro
+        field_reduction_inward:
+          label: 'Redukce-vnitřní okraj'
+        field_reduction_outward:
+          label: 'Redukce-vnější okraj'
+        field_porosity_value:
+          label: Porozita
+        field_cavity_pores:
+          label: 'Dutinkovité póry'
+        field_fractured_pores:
+          label: 'Puklinovité póry'
+        field_planar_pores:
+          label: 'Planární póry'
+        field_pore_channels:
+          label: 'Kanálkovité póry'
+        field_vesicular_pores:
+          label: 'Vezikulární póry'
+        field_publications:
+          label: Publikace
+        field_note:
+          label: Poznámka
+        field_private_note:
+          label: 'Soukromá poznámka'
+  kch_analysis:
+    display_options:
+      fields:
+        field_analysis_of:
+          label: Vzorek
+        title_1:
+          label: 'Objekt ze kterého byl vzorek odebrán'
+        field_instrument:
+          label: Přístroj
+        field_analysed_by:
+          label: Výzkumník
+        field_date_analysed:
+          label: 'Datum analýzy'
+        field_note_on_method:
+          label: 'Poznámka k metodologii'
+        field_rock_fragments:
+          label: 'Fragmenty hornin'
+        field_minerals:
+          label: 'Fragmenty minerálů'
+        field_chemical_analysis:
+          label: 'Chemická analýza'
+        field_elements:
+          label: Prvky
+        field_firing_temperature:
+          label: 'Teplota výpalu'
+        field_binder_type:
+          label: 'Typ pojiva'
+        field_cavity_pores:
+          label: 'Dutinkovité póry'
+          settings:
+            format_custom_false: Ne
+            format_custom_true: Ano
+        field_colour_of_core:
+          label: 'Barva - jádro'
+        field_colour_inward:
+          label: 'Barva - vnitřní okraj'
+        field_colour_outward:
+          label: 'Barva - vnější okraj'
+        field_firing_characteristic:
+          label: 'Charakteristika výpalu'
+        field_fractured_pores:
+          label: 'Puklinovité póry'
+          settings:
+            format_custom_false: Ne
+            format_custom_true: Ano
+        field_grain_type:
+          label: Zrnitost
+        field_binder_ratio:
+          label: 'Ostřivo : Pojivo'
+        field_matrix_vitrification:
+          label: 'Vitrifikace matrix'
+          settings:
+            format_custom_false: Ne
+            format_custom_true: Ano
+        field_microstructure:
+          label: Mikrostruktura
+        field_non_plastic_inclusions_value:
+          label: 'Neplastická složka'
+        field_planar_pores:
+          label: 'Planární póry'
+          settings:
+            format_custom_false: Ne
+            format_custom_true: Ano
+        field_pore_channels:
+          label: 'Kanálkovité póry'
+          settings:
+            format_custom_false: Ne
+            format_custom_true: Ano
+        field_porosity_value:
+          label: Pórovitost
+        field_reduction_core:
+          label: 'Redukce - jádro'
+          settings:
+            format_custom_false: Ne
+            format_custom_true: Ano
+        field_reduction_inward:
+          label: 'Redukce - vnitřní strana'
+          settings:
+            format_custom_false: Ne
+            format_custom_true: Ano
+        field_reduction_outward:
+          label: 'Redukce - vnější okraj'
+          settings:
+            format_custom_false: Ne
+            format_custom_true: Ano
+        field_vesicular_pores:
+          label: 'Vezikulární póry'
+          settings:
+            format_custom_false: Ne
+            format_custom_true: Ano
+        field_nonplastic_sort:
+          label: 'Vytřídění neplastické složky'
+          settings:
+            format_custom_false: Ne
+            format_custom_true: Ano
+        field_publications:
+          label: Publikace
+        field_note:
+          label: Poznámka
+  kch_taxonomy:
+    display_options:
+      header:
+        result:
+          content: 'Zobrazuje se @start - @end z @total souvisejících keramických výrobků'

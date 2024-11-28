@@ -1,0 +1,29 @@
+uuid: b15dd2bc-1118-4411-967d-efe42ce79dfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grain_type
+    - node.type.a3d_object
+    - taxonomy.vocabulary.grain_type
+id: node.a3d_object.field_grain_type
+field_name: field_grain_type
+entity_type: node
+bundle: a3d_object
+label: 'Grain type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      grain_type: grain_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

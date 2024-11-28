@@ -1,0 +1,18 @@
+uuid: 35dcac11-9726-439f-9ecc-c7d6618b1bcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sdp_value
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.sdp_value
+target_entity_type_id: taxonomy_term
+target_bundle: sdp_value
+default_langcode: site_default
+language_alterable: true

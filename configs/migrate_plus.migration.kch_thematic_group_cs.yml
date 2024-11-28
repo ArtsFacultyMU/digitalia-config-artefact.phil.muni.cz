@@ -1,0 +1,37 @@
+uuid: 42DAA780-D491-40D0-96F8-880CB1489CD0
+langcode: cs
+status: true
+dependencies: {  }
+id: kch_thematic_group_cs
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: kch
+label: 'Import thematic groups (okruh) cs'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/thematic_group.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  tid:
+    plugin: migration_lookup
+    source: en
+    migration: kch_thematic_group
+  name: cs
+  langcode:
+    plugin: default_value
+    default_value: cs
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: thematic_group
+  translations: true
+migration_dependencies:
+  required:
+    - kch_thematic_group

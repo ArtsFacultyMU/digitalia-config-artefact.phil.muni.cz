@@ -1,0 +1,21 @@
+uuid: B00F721A-C047-4DEA-A607-5226E914A613
+langcode: en
+id: kch_ledge_type
+migration_group: kch
+label: 'Import ledge types'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/ledge_type.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: ledge_type
+migration_dependencies: null

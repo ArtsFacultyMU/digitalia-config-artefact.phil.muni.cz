@@ -1,0 +1,24 @@
+uuid: 9ac4e04e-69ef-4d22-8e66-63e85d7b122e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_at_intro_text
+    - filter.format.full_html
+    - node.type.at_project
+  module:
+    - text
+id: node.at_project.field_at_intro_text
+field_name: field_at_intro_text
+entity_type: node
+bundle: at_project
+label: 'at intro text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -1,0 +1,11 @@
+uuid: 1356053b-3a2e-4bb7-b843-ed1d37909eb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: exm_site_logo
+title: 'EXM site logo'
+content:
+  value: '<p><a class="site-branding__logo" href="/group/exm" rel="home"><img src="/themes/custom/islandora_muni/platform_specific/images/logo-en.svg" alt="Home" width="167" height="68"></a></p>'
+  format: full_html

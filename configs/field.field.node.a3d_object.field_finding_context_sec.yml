@@ -1,0 +1,23 @@
+uuid: 960c3878-9b9f-4ce9-8ef2-6b03203d92d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_finding_context_sec
+    - node.type.a3d_object
+id: node.a3d_object.field_finding_context_sec
+field_name: field_finding_context_sec
+entity_type: node
+bundle: a3d_object
+label: 'Finding context (sector)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,11 @@
+uuid: e493c4e3-d7e8-451d-8a5f-ff083af07cdf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.meta_browse
+label: 'META Browse'
+description: ''
+targetEntityType: node
+cache: true

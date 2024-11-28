@@ -1,0 +1,18 @@
+uuid: bc450b0b-11a8-4a47-8f0b-b41b71b68124
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.rock_fragments
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.rock_fragments
+target_entity_type_id: taxonomy_term
+target_bundle: rock_fragments
+default_langcode: site_default
+language_alterable: true

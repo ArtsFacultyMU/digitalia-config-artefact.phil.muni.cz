@@ -8,6 +8,7 @@ dependencies:
   module:
     - comment
     - contact
+    - entity_comparison
     - filter
     - media
     - rest
@@ -16,12 +17,15 @@ _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
 label: 'Anonymous user'
-weight: 0
+weight: -10
 is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
   - 'restful get oai_pmh'
+  - 'use a3d_arf_entity_comparison entity comparison'
+  - 'use a3d_meta_entity_comparison entity comparison'
+  - 'use a3d_nef_entity_comparison entity comparison'
   - 'use text format restricted_html'
   - 'view media'

@@ -1,0 +1,10 @@
+status: 1
+pattern: 'Analysis of [node:field_analysis_of] using [node:field_instrument]'
+escape: false
+preserve_titles: false
+save: true
+chunk: 50
+dependencies:
+  config:
+    - node.type.analysis
+new_content_behavior: 0

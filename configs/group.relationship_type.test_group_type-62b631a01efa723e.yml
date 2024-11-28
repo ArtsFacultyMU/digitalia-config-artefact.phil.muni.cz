@@ -1,0 +1,17 @@
+uuid: e4363030-9f85-4de5-aea9-f3189a6a003a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.licence_url
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-62b631a01efa723e
+group_type: test_group_type
+content_plugin: 'group_term:licence_url'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

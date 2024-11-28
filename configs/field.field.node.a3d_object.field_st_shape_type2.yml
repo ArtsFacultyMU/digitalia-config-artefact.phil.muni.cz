@@ -1,0 +1,31 @@
+uuid: 63762a73-bfb7-46d4-9be7-8ef7803acf3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_st_shape_type2
+    - node.type.a3d_object
+    - taxonomy.vocabulary.stove_tile_shape_type_2
+    - taxonomy.vocabulary.unknown_values
+id: node.a3d_object.field_st_shape_type2
+field_name: field_st_shape_type2
+entity_type: node
+bundle: a3d_object
+label: 'Stove tile shape type 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      unknown_values: unknown_values
+      stove_tile_shape_type_2: stove_tile_shape_type_2
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: unknown_values
+field_type: entity_reference

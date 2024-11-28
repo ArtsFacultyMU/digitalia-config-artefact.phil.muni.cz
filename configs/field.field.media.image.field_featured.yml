@@ -1,0 +1,21 @@
+uuid: d9cbeeba-751f-45c0-b231-8969f719210a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_featured
+    - media.type.image
+id: media.image.field_featured
+field_name: field_featured
+entity_type: media
+bundle: image
+label: Featured
+description: 'If selected, this image will be used for the thumbnail in search. If more than one images are marked as featured, the first of them will be used. If none, the first of all images will be used.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

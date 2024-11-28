@@ -1,0 +1,35 @@
+uuid: e357ed4e-eb34-4d4c-95ad-ecc48d036638
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.a3d_nef_taxonomy
+  module:
+    - islandora
+    - system
+    - views
+  theme:
+    - islandora_muni
+id: islandora_muni_views_block__a3d_nef_taxonomy_statistics_site
+theme: islandora_muni
+region: content
+weight: -39
+provider: null
+plugin: 'views_block:a3d_nef_taxonomy-statistics_site'
+settings:
+  id: 'views_block:a3d_nef_taxonomy-statistics_site'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: /nef/documentation

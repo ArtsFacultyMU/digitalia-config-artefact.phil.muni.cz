@@ -1,0 +1,42 @@
+uuid: cacc6a48-e091-4a43-99fb-edbf707fab00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.author.field_name
+    - taxonomy.vocabulary.author
+  module:
+    - name
+    - text
+id: taxonomy_term.author.default
+targetEntityType: taxonomy_term
+bundle: author
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_name:
+    type: name_default
+    label: above
+    settings:
+      format: default
+      markup: none
+      list_format: ''
+      link_target: ''
+      preferred_field_reference: ''
+      preferred_field_reference_separator: ', '
+      alternative_field_reference: ''
+      alternative_field_reference_separator: ', '
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  a3d_eva_taxonomy_title_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

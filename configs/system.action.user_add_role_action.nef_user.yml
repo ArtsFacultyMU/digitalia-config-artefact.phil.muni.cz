@@ -1,0 +1,14 @@
+uuid: 747a4076-bb11-489f-bcfb-5e5297d2af26
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.nef_user
+  module:
+    - user
+id: user_add_role_action.nef_user
+label: 'Add the NEF user role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: nef_user

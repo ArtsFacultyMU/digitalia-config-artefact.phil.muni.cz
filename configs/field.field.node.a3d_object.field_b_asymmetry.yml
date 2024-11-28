@@ -1,0 +1,29 @@
+uuid: 8934b72a-dc85-4c90-be1a-a0a756cedd46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_b_asymmetry
+    - node.type.a3d_object
+    - taxonomy.vocabulary.cross_section_asymmetry
+id: node.a3d_object.field_b_asymmetry
+field_name: field_b_asymmetry
+entity_type: node
+bundle: a3d_object
+label: 'Cross-section B asymmetry'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cross_section_asymmetry: cross_section_asymmetry
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 92b916e5-b27e-4b07-bfed-614f73216f63
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contract
+id: node.contract.promote
+field_name: promote
+entity_type: node
+bundle: contract
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

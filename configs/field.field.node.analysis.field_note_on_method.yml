@@ -1,0 +1,22 @@
+uuid: 838f9d49-5619-4708-a646-21534ef31944
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_note_on_method
+    - node.type.analysis
+  module:
+    - text
+id: node.analysis.field_note_on_method
+field_name: field_note_on_method
+entity_type: node
+bundle: analysis
+label: 'Poznámka k metodologii'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

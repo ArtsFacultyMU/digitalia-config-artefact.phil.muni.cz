@@ -1,0 +1,14 @@
+uuid: 6ac6c735-be04-444c-a204-632be7f724d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.kch_user
+  module:
+    - user
+id: user_add_role_action.kch_user
+label: 'Add the KCH user role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: kch_user

@@ -1,0 +1,31 @@
+uuid: 860aa521-9c4f-44ac-870f-d5b21052b299
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_identifier_type
+    - taxonomy.vocabulary.identifier_type
+    - taxonomy.vocabulary.instrument_type
+    - taxonomy.vocabulary.unknown_values
+id: taxonomy_term.instrument_type.field_identifier_type
+field_name: field_identifier_type
+entity_type: taxonomy_term
+bundle: instrument_type
+label: 'Identifier Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      identifier_type: identifier_type
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: identifier_type
+field_type: entity_reference

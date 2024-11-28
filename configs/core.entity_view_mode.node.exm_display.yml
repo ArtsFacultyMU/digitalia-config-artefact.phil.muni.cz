@@ -1,0 +1,11 @@
+uuid: 69f21a88-20c7-4a51-bdd6-997a695e7787
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.exm_display
+label: 'EXM Display'
+description: ''
+targetEntityType: node
+cache: true

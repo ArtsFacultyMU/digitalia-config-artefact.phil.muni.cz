@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_description
+    - field.field.media.image.field_featured
     - field.field.media.image.field_file_size
     - field.field.media.image.field_height
     - field.field.media.image.field_media_image
@@ -16,6 +18,7 @@ dependencies:
   module:
     - image
     - path
+    - text
 _core:
   default_config_hash: 0m1---KA1hTxMlNoqo1kI1ZG5TBbGQy4sQ1rOMy9Ovg
 id: media.image.default
@@ -28,6 +31,21 @@ content:
     weight: 6
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_featured:
+    type: boolean_checkbox
+    weight: 27
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_media_image:
     type: image_image

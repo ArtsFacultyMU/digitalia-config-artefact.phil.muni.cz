@@ -1,0 +1,29 @@
+uuid: 25c8c8df-545a-4e25-b0f9-677e90086c53
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.subord_dataset
+  module:
+    - text
+id: taxonomy_term.subord_dataset.default
+targetEntityType: taxonomy_term
+bundle: subord_dataset
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

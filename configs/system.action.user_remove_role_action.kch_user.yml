@@ -1,0 +1,14 @@
+uuid: cd4a6ce0-bbf7-491d-92bd-c86bb55e6b9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.kch_user
+  module:
+    - user
+id: user_remove_role_action.kch_user
+label: 'Remove the KCH user role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: kch_user

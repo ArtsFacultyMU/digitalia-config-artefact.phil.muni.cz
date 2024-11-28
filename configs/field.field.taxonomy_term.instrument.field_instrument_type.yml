@@ -1,0 +1,31 @@
+uuid: 448baed1-c17b-4e20-839c-7d669969b966
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_instrument_type
+    - taxonomy.vocabulary.instrument
+    - taxonomy.vocabulary.instrument_type
+    - taxonomy.vocabulary.unknown_values
+id: taxonomy_term.instrument.field_instrument_type
+field_name: field_instrument_type
+entity_type: taxonomy_term
+bundle: instrument
+label: 'Instrument Type'
+description: 'Classification of the type of the instrument'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      instrument_type: instrument_type
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: instrument_type
+field_type: entity_reference

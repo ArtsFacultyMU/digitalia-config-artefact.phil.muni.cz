@@ -1,0 +1,17 @@
+uuid: 7c6b0a9a-f62b-418b-b1a1-46894c90811f
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.rights_reproduction
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-3661e2c2b8bea6bf
+group_type: test_group_type
+content_plugin: 'group_term:rights_reproduction'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

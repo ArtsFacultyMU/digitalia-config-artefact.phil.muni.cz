@@ -1,0 +1,19 @@
+uuid: 4f3f7f78-fcb4-4d34-90e1-2cc546a759d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_painting_eye
+    - node.type.a3d_object
+id: node.a3d_object.field_painting_eye
+field_name: field_painting_eye
+entity_type: node
+bundle: a3d_object
+label: 'Painting (identified by naked eye)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

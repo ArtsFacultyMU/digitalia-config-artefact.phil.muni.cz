@@ -1,0 +1,8 @@
+uuid: e4ca6c69-4c1d-4139-9a16-1322ae9d20a1
+langcode: en
+status: true
+dependencies: {  }
+name: '3D specifics of traces'
+vid: 3d_traces
+description: ''
+weight: 0

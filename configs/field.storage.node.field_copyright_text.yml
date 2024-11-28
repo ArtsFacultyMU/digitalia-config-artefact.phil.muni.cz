@@ -1,0 +1,23 @@
+uuid: b0377e3d-6540-4152-9cc8-7079a6c37081
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_copyright_text
+field_name: field_copyright_text
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: e1a002ed-246c-415d-9331-cd04d51bb787
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contract
+id: node.contract.uid
+field_name: uid
+entity_type: node
+bundle: contract
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

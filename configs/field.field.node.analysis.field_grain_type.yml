@@ -1,0 +1,31 @@
+uuid: 9392ea58-8f64-4154-a9ba-8a0eba3f0df9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grain_type
+    - node.type.analysis
+    - taxonomy.vocabulary.grain_type
+    - taxonomy.vocabulary.unknown_values
+id: node.analysis.field_grain_type
+field_name: field_grain_type
+entity_type: node
+bundle: analysis
+label: 'Grain type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      grain_type: grain_type
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: grain_type
+field_type: entity_reference

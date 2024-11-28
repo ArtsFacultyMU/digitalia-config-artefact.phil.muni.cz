@@ -1,0 +1,45 @@
+uuid: EBA4BAF3-8503-4AF6-A667-A1CE55D3B975
+langcode: en
+id: kch_term_site
+migration_group: kch
+label: 'Import sites'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/sites.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  name: en
+  field_city:
+    -
+      plugin: entity_generate
+      source: field_city
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: city
+  field_street: field_street
+  field_street_number: field_street_number
+  field_country:
+    -
+      plugin: entity_generate
+      source: field_country
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: country_a3d
+  field_plot_number: field_plot_number
+  field_site_type:
+    plugin: migration_lookup
+    migration: kch_site_type
+    source: site_type
+  field_geo_geolocation/lng: long
+  field_geo_geolocation/lat: lat
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: site

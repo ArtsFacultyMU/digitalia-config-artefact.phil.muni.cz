@@ -1,0 +1,14 @@
+uuid: 6d27916b-0e70-4b99-bc36-29104fd7e74d
+langcode: en
+status: true
+dependencies:
+  config:
+    - key.key.arf_group_id
+    - system.action.group_add_content_to_arf_group
+id: action_group_add_arf
+label: 'Action group add ARF'
+config_type: action
+config_prefix: system.action
+config_name: group_add_content_to_arf_group
+config_item: configuration.group_id
+key_id: arf_group_id

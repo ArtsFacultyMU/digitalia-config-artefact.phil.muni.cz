@@ -1,0 +1,27 @@
+uuid: 5c227ebd-5d04-4406-a525-8216ca3f4975
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.3d_model
+    - media.type.document
+    - media.type.file
+    - media.type.image
+    - media.type.video
+  module:
+    - media
+    - node
+    - persistent_identifiers
+id: standard_user
+label: 'standard user'
+weight: -3
+is_admin: null
+permissions:
+  - 'create 3d_model media'
+  - 'create document media'
+  - 'create file media'
+  - 'create image media'
+  - 'create video media'
+  - 'mint persistent identifiers'
+  - 'view own unpublished content'
+  - 'view own unpublished media'

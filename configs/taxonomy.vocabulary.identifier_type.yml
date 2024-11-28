@@ -1,0 +1,8 @@
+uuid: c8ad07e2-6fcd-4947-9b4f-38b45a1fb0b1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Identifier type'
+vid: identifier_type
+description: ''
+weight: 0

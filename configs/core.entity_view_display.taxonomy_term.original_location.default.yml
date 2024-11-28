@@ -1,0 +1,29 @@
+uuid: 278dbd83-221f-413e-b53d-37124bb6b930
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.original_location
+  module:
+    - text
+id: taxonomy_term.original_location.default
+targetEntityType: taxonomy_term
+bundle: original_location
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,20 @@
+uuid: BE574E88-EA0A-42EE-80D0-530366042F78
+langcode: en
+id: kch_motifs
+migration_group: kch
+label: 'Import motifs'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/motif.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: motif

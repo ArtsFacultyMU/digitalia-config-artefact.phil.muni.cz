@@ -1,0 +1,8 @@
+uuid: b10de3ff-7ae1-42c5-b5d5-ec84e9599bad
+langcode: en
+status: true
+dependencies: {  }
+name: 'Relief type'
+vid: relief_type
+description: KCH
+weight: 0

@@ -1,0 +1,20 @@
+uuid: 75955378-69fe-44c7-816b-595bef5deb12
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.test_a3d
+  module:
+    - path
+id: node.test_a3d.path
+field_name: path
+entity_type: node
+bundle: test_a3d
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

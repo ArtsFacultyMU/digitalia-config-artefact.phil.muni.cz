@@ -1,0 +1,21 @@
+uuid: 1fe86b63-16e3-4c00-aff3-eed10d7abf71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_date_commissioned
+    - taxonomy.vocabulary.instrument
+  module:
+    - datetime
+id: taxonomy_term.instrument.field_date_commissioned
+field_name: field_date_commissioned
+entity_type: taxonomy_term
+bundle: instrument
+label: 'Date Commissioned'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

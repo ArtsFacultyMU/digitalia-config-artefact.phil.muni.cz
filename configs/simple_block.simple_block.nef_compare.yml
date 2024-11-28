@@ -1,0 +1,11 @@
+uuid: 98e18123-8d2e-442e-9af7-5e7b8f1aeb1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: nef_compare
+title: 'NEF compare'
+content:
+  value: '<script id="compare-script" var-platform="nef" type="module" src="/sites/default/files/nef_compare.js"></script>'
+  format: full_html

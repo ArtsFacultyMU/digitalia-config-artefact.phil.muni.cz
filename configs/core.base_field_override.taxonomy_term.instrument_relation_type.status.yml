@@ -1,0 +1,22 @@
+uuid: 39b9ce8a-3650-47a8-9145-12c76f4e0ea8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.instrument_relation_type
+id: taxonomy_term.instrument_relation_type.status
+field_name: status
+entity_type: taxonomy_term
+bundle: instrument_relation_type
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

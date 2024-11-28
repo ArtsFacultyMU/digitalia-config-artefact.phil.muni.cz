@@ -1,0 +1,13 @@
+uuid: 83f7030d-ade0-494b-938f-fed194c2dde3
+langcode: en
+status: true
+dependencies:
+  module:
+    - hdl
+_core:
+  default_config_hash: GWmlg8aJ38uRReV2QW9XQehEYe20nOVi-taaSsSrLkc
+id: hdl_mint_handle
+label: 'Create Handle'
+type: node
+plugin: hdl_mint_handle
+configuration: {  }

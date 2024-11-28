@@ -1,0 +1,22 @@
+uuid: 513ef81e-4682-4909-9f68-1a69457dbebf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contract
+id: node.contract.status
+field_name: status
+entity_type: node
+bundle: contract
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: e748a0ea-d699-444b-89cb-f120a97942ae
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_matrix_vitrification
+    - node.type.analysis
+id: node.analysis.field_matrix_vitrification
+field_name: field_matrix_vitrification
+entity_type: node
+bundle: analysis
+label: 'Vitrifikace matrix'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Ano
+  off_label: Ne
+field_type: boolean

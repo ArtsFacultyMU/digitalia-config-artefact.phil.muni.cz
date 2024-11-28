@@ -1,0 +1,9 @@
+uuid: 784af262-cbb4-41e1-a538-c898783ac404
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__a3d_nef_search_index_search__nef
+name: 'search_api:views_page__a3d_nef_search_index_search__nef'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

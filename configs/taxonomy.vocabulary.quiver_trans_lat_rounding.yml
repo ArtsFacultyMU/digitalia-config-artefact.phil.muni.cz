@@ -1,0 +1,8 @@
+uuid: 97f4c55b-abce-44e0-b795-c01eb8315a32
+langcode: en
+status: true
+dependencies: {  }
+name: 'Quiver transport - lateral rounding (and striations)'
+vid: quiver_trans_lat_rounding
+description: ''
+weight: 0

@@ -1,0 +1,60 @@
+uuid: 47a6d94b-82e0-4ce6-8f82-c8622c5ecf65
+langcode: en
+status: true
+dependencies:
+  module:
+    - datafield
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_geolocation
+field_name: field_geolocation
+entity_type: node
+type: data_field
+settings:
+  columns:
+    spatial_ref_system:
+      name: spatial_ref_system
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    loc_coord_cadastre_x:
+      name: loc_coord_cadastre_x
+      type: string
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    loc_coord_cadastre_y:
+      name: loc_coord_cadastre_y
+      type: string
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    loc_coord_cadastre_accuracy:
+      name: loc_coord_cadastre_accuracy
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+module: datafield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

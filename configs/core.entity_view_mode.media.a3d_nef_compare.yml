@@ -1,0 +1,11 @@
+uuid: ee49269e-a384-49ca-9d9d-6f3975eefe1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.a3d_nef_compare
+label: 'A3D NEF compare'
+description: ''
+targetEntityType: media
+cache: true

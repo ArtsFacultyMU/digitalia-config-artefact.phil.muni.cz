@@ -1,0 +1,15 @@
+uuid: 7f2b18bd-529e-484b-8000-1782c11c24b3
+langcode: en
+status: true
+dependencies: {  }
+name: a3d_square
+label: 'A3D square'
+effects:
+  c44ea650-f74c-4f48-b223-b8aa9820b917:
+    uuid: c44ea650-f74c-4f48-b223-b8aa9820b917
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      upscale: false

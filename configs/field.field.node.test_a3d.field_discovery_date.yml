@@ -1,0 +1,21 @@
+uuid: 65083b1a-4973-490d-bbfd-658120552d94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_discovery_date
+    - node.type.test_a3d
+  module:
+    - datetime
+id: node.test_a3d.field_discovery_date
+field_name: field_discovery_date
+entity_type: node
+bundle: test_a3d
+label: 'Discovery date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

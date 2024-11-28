@@ -1,0 +1,29 @@
+uuid: dafbb3ae-ee29-4d41-b85d-e5d729204c1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.recent_damage
+  module:
+    - text
+id: taxonomy_term.recent_damage.default
+targetEntityType: taxonomy_term
+bundle: recent_damage
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

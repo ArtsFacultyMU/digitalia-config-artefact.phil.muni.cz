@@ -1,0 +1,11 @@
+uuid: 6f8148e4-5dba-4e5f-a0b6-053f7b007136
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_a3d_meta_entity_comparison
+label: 'A3D META entity comparison'
+description: ''
+targetEntityType: media
+cache: true

@@ -1,0 +1,545 @@
+uuid: ea980aca-92b1-4112-b0f6-55e03060f5ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.test_a3d.field_2d_asymmetry
+    - field.field.node.test_a3d.field_a_asymmetry
+    - field.field.node.test_a3d.field_alteration
+    - field.field.node.test_a3d.field_alternative_ids
+    - field.field.node.test_a3d.field_aquamanile_subtype
+    - field.field.node.test_a3d.field_aquamanile_type
+    - field.field.node.test_a3d.field_artefact_category
+    - field.field.node.test_a3d.field_artefact_class
+    - field.field.node.test_a3d.field_artefact_id
+    - field.field.node.test_a3d.field_artefact_id_type
+    - field.field.node.test_a3d.field_artefact_subclass
+    - field.field.node.test_a3d.field_assess_cond_date
+    - field.field.node.test_a3d.field_coll_id
+    - field.field.node.test_a3d.field_collection_title
+    - field.field.node.test_a3d.field_comparison
+    - field.field.node.test_a3d.field_dimensions
+    - field.field.node.test_a3d.field_discovery_date
+    - field.field.node.test_a3d.field_doc_date
+    - field.field.node.test_a3d.field_feature_id
+    - field.field.node.test_a3d.field_fhp_shape
+    - field.field.node.test_a3d.field_fhp_shape_certainty
+    - field.field.node.test_a3d.field_fhp_type
+    - field.field.node.test_a3d.field_field_description_a3d_cs
+    - field.field.node.test_a3d.field_field_st_placement_certain
+    - field.field.node.test_a3d.field_geolocation
+    - field.field.node.test_a3d.field_has_a_construction_opening
+    - field.field.node.test_a3d.field_link_to_3d_model
+    - field.field.node.test_a3d.field_mass_structure_data_pres
+    - field.field.node.test_a3d.field_member_of
+    - field.field.node.test_a3d.field_number_of_instances
+    - field.field.node.test_a3d.field_ownership
+    - field.field.node.test_a3d.field_porosity
+    - field.field.node.test_a3d.field_private_note
+    - field.field.node.test_a3d.field_rock_fragments
+    - field.field.node.test_a3d.field_st_placement_certainty
+    - field.field.node.test_a3d.field_st_placement_type1
+    - field.field.node.test_a3d.field_surf_data_pres
+    - field.field.node.test_a3d.field_surface_data_presence
+    - field.field.node.test_a3d.field_surface_finishing
+    - field.field.node.test_a3d.field_test_geolocation
+    - field.field.node.test_a3d.field_timespan
+    - field.field.node.test_a3d.field_vessel_body_shape_certaint
+    - field.field.node.test_a3d.field_wgs84_geolocation
+    - node.type.test_a3d
+  module:
+    - datafield
+    - datetime
+    - geolocation
+    - link
+    - path
+    - range
+    - text
+    - viewfield
+id: node.test_a3d.default
+targetEntityType: node
+bundle: test_a3d
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_2d_asymmetry:
+    type: entity_reference_autocomplete
+    weight: 27
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_a_asymmetry:
+    type: entity_reference_autocomplete
+    weight: 28
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_alteration:
+    type: entity_reference_autocomplete
+    weight: 53
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_alternative_ids:
+    type: data_field_table_widget
+    weight: 39
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings: {  }
+    third_party_settings: {  }
+  field_aquamanile_subtype:
+    type: entity_reference_autocomplete
+    weight: 54
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_aquamanile_type:
+    type: entity_reference_autocomplete
+    weight: 53
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artefact_category:
+    type: entity_reference_autocomplete
+    weight: 124
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artefact_class:
+    type: entity_reference_autocomplete
+    weight: 125
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artefact_id:
+    type: string_textfield
+    weight: 123
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artefact_id_type:
+    type: entity_reference_autocomplete
+    weight: 23
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_artefact_subclass:
+    type: entity_reference_autocomplete
+    weight: 126
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_assess_cond_date:
+    type: datetime_default
+    weight: 75
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_coll_id:
+    type: string_textfield
+    weight: 121
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_collection_title:
+    type: entity_reference_autocomplete
+    weight: 122
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_comparison:
+    type: viewfield_select
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dimensions:
+    type: data_field_widget
+    weight: 25
+    region: content
+    settings:
+      inline: false
+      widget_settings: {  }
+    third_party_settings: {  }
+  field_discovery_date:
+    type: datetime_default
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_doc_date:
+    type: datetime_default
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_feature_id:
+    type: entity_reference_autocomplete
+    weight: 25
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_fhp_shape:
+    type: entity_reference_autocomplete
+    weight: 29
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_fhp_shape_certainty:
+    type: boolean_checkbox
+    weight: 30
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_fhp_type:
+    type: entity_reference_autocomplete
+    weight: 31
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_field_description_a3d_cs:
+    type: string_textarea
+    weight: 38
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_field_st_placement_certain:
+    type: boolean_checkbox
+    weight: 55
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_geolocation:
+    type: data_field_widget
+    weight: 23
+    region: content
+    settings:
+      inline: false
+      widget_settings:
+        spatial_ref_system:
+          type: entity_reference_autocomplete
+          label_display: block
+          field_display: '1'
+          weight: 0
+          autocreate: '1'
+          col: ''
+        loc_coord_cadastre_x:
+          type: textfield
+          label_display: block
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          col: ''
+        loc_coord_cadastre_y:
+          type: textfield
+          label_display: block
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          col: ''
+        loc_coord_cadastre_accuracy:
+          type: entity_reference_autocomplete
+          label_display: block
+          field_display: '1'
+          weight: 0
+          autocreate: '1'
+          col: ''
+    third_party_settings: {  }
+  field_has_a_construction_opening:
+    type: boolean_checkbox
+    weight: 32
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_link_to_3d_model:
+    type: link_default
+    weight: 36
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_mass_structure_data_pres:
+    type: data_field_table_widget
+    weight: 48
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings:
+        msdp_value:
+          type: entity_reference_autocomplete
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          col: ''
+          autocreate: 0
+        msdp_method:
+          type: entity_reference_autocomplete
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          col: ''
+          autocreate: 0
+        msdp_note:
+          type: textarea
+          label_display: ''
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          cols: 10
+          rows: 5
+          col: ''
+    third_party_settings: {  }
+  field_member_of:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_number_of_instances:
+    type: data_field_table_widget
+    weight: 25
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings: {  }
+    third_party_settings: {  }
+  field_ownership:
+    type: entity_reference_autocomplete
+    weight: 22
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_porosity:
+    type: number
+    weight: 59
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_private_note:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_rock_fragments:
+    type: entity_reference_autocomplete
+    weight: 62
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_st_placement_certainty:
+    type: boolean_checkbox
+    weight: 47
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_st_placement_type1:
+    type: entity_reference_autocomplete
+    weight: 44
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_surf_data_pres:
+    type: data_field_table_widget
+    weight: 47
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings: {  }
+    third_party_settings: {  }
+  field_surface_data_presence:
+    type: data_field_table_widget
+    weight: 127
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings: {  }
+    third_party_settings: {  }
+  field_surface_finishing:
+    type: data_field_table_widget
+    weight: 35
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings: {  }
+    third_party_settings: {  }
+  field_test_geolocation:
+    type: geolocation_latlng
+    weight: 128
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_timespan:
+    type: range
+    weight: 92
+    region: content
+    settings:
+      label:
+        from: From
+        to: to
+      placeholder:
+        from: ''
+        to: ''
+    third_party_settings: {  }
+  field_vessel_body_shape_certaint:
+    type: boolean_checkbox
+    weight: 27
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_wgs84_geolocation:
+    type: geolocation_latlng
+    weight: 40
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,14 @@
+uuid: 6fadd0e2-c752-493a-8b95-fa6f4503a66c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.arf_user
+  module:
+    - user
+id: user_remove_role_action.arf_user
+label: 'Remove the ARF user role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: arf_user

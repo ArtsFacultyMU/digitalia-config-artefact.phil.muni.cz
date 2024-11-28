@@ -1,0 +1,8 @@
+uuid: 9925d410-f8a1-4cf6-b11e-75ef3f3eab49
+langcode: en
+status: true
+dependencies: {  }
+name: 'Mass & structure data presence method'
+vid: msdp_method
+description: ''
+weight: 0

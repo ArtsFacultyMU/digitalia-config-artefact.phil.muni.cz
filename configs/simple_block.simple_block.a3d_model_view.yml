@@ -1,0 +1,11 @@
+uuid: 56862fbb-dac9-445e-a8d0-1b84aa3fdc8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: a3d_model_view
+title: 'A3D model view'
+content:
+  value: "<script type=\"importmap\">\r\n  {\r\n    \"imports\": {\r\n      \"three\": \"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js\",\r\n      \"three/addons/\": \"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/\"\r\n    }\r\n  }\r\n</script>"
+  format: full_html

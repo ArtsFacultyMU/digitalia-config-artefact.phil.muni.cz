@@ -1,0 +1,46 @@
+uuid: d7826455-27d7-4492-b54a-b60962b88008
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.instrument_type.field_identifier
+    - field.field.taxonomy_term.instrument_type.field_identifier_type
+    - taxonomy.vocabulary.instrument_type
+  module:
+    - text
+id: taxonomy_term.instrument_type.default
+targetEntityType: taxonomy_term
+bundle: instrument_type
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_identifier:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_identifier_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

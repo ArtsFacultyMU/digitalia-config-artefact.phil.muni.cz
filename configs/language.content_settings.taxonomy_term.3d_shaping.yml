@@ -1,0 +1,18 @@
+uuid: 8335d2d3-9cfd-4d8f-b92a-60312949d041
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.3d_shaping
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.3d_shaping
+target_entity_type_id: taxonomy_term
+target_bundle: 3d_shaping
+default_langcode: site_default
+language_alterable: true

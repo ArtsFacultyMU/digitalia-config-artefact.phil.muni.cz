@@ -1,0 +1,17 @@
+uuid: 10178427-097c-4ca9-a638-3b3c09c24d5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.fract_preservation
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-d166a9afebc05d1d
+group_type: test_group_type
+content_plugin: 'group_term:fract_preservation'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

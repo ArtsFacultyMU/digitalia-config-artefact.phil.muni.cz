@@ -1,0 +1,8 @@
+uuid: 6658f6ea-973e-4878-aef4-62dbf82f0818
+langcode: en
+status: true
+dependencies: {  }
+name: 'Reparation features'
+vid: reparation_features
+description: ''
+weight: 0

@@ -1,0 +1,11 @@
+uuid: 1a55054d-7539-4677-a5c7-65d2ca91b0b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: meta_calculate_position_search
+title: 'META calculate position search'
+content:
+  value: '<script id="calculate-position-table" var-pages="40" type="module" src="/modules/custom/digitalia_muni_a3d_javascript/js/a3d_calculate_position_table.js"></script>'
+  format: full_html

@@ -1,0 +1,14 @@
+uuid: ec05cce5-2233-4e0f-a587-b04f31b30f3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lindat_editor
+  module:
+    - user
+id: user_remove_role_action.lindat_editor
+label: 'Remove the Lindat Editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: lindat_editor

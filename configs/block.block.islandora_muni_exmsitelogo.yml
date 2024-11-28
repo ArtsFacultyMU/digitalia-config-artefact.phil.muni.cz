@@ -1,0 +1,37 @@
+uuid: 3de2f4c1-708a-4de2-a8fc-f6de38a0251c
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.exm_site_logo
+  module:
+    - block_class
+    - islandora
+    - simple_block
+    - system
+  theme:
+    - islandora_muni
+third_party_settings:
+  block_class:
+    classes: block-sitelogo
+id: islandora_muni_exmsitelogo
+theme: islandora_muni
+region: header
+weight: -36
+provider: null
+plugin: 'simple_block:exm_site_logo'
+settings:
+  id: 'simple_block:exm_site_logo'
+  label: 'EXM site logo'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/exm\r\n/exm/*\r\n/group/exm\r\n/group/exm/*\r\n/group/15\r\n/group/15/*\r\n/compare/*/exm"

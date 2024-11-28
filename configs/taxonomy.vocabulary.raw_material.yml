@@ -1,0 +1,8 @@
+uuid: 0b3badf4-510e-4044-a4fd-707d385cc009
+langcode: en
+status: true
+dependencies: {  }
+name: 'Raw material'
+vid: raw_material
+description: ''
+weight: 0

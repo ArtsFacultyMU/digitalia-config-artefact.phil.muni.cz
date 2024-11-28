@@ -1,0 +1,19 @@
+uuid: a5d5852e-7af2-4d46-80b8-8dd22cf0405e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relations
+    - node.type.a3d_object
+id: node.a3d_object.field_relations
+field_name: field_relations
+entity_type: node
+bundle: a3d_object
+label: Relations
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

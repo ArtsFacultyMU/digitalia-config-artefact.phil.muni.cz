@@ -1,0 +1,8 @@
+uuid: 800093f2-64ac-41ee-93c8-02a118005b7f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Stove tile shape type 1'
+vid: stove_tile_shape_type_1
+description: KCH
+weight: 0

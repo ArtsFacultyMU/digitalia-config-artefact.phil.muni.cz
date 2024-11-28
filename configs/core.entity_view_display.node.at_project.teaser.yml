@@ -1,0 +1,30 @@
+uuid: 52582132-42ad-47d7-9065-8c7bcb8907ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.at_project.field_at_banner_text
+    - field.field.node.at_project.field_at_citation_text
+    - field.field.node.at_project.field_at_copyright_text
+    - field.field.node.at_project.field_at_intro_text
+    - node.type.at_project
+  module:
+    - user
+id: node.at_project.teaser
+targetEntityType: node
+bundle: at_project
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_at_banner_text: true
+  field_at_citation_text: true
+  field_at_copyright_text: true
+  field_at_intro_text: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,21 @@
+uuid: c4480f67-efbc-41f0-ba07-2fc0270cc73e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_date_decommissioned
+    - taxonomy.vocabulary.instrument
+  module:
+    - datetime
+id: taxonomy_term.instrument.field_date_decommissioned
+field_name: field_date_decommissioned
+entity_type: taxonomy_term
+bundle: instrument
+label: 'Date Decommissioned'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

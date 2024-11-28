@@ -1,0 +1,21 @@
+uuid: 5DFEB3DC-9B03-45FC-AB15-BAF5CBF430BF
+langcode: en
+id: kch_measured_variable
+migration_group: kch
+label: 'Import measured variables'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/measured_variable.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - field
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  name: label
+  field_machine_name: field
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: measured_variable

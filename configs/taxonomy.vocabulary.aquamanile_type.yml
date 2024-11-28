@@ -1,0 +1,8 @@
+uuid: 458b440b-f4b4-41bc-bdd7-df9bd7e734cd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Aquamanile type'
+vid: aquamanile_type
+description: KCH
+weight: 0

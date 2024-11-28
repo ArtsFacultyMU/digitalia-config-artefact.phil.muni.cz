@@ -1,0 +1,29 @@
+uuid: dd533891-6648-4215-8ec5-92a1819e3c0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_longitudinal_profile
+    - node.type.a3d_object
+    - taxonomy.vocabulary.longitudinal_profile
+id: node.a3d_object.field_longitudinal_profile
+field_name: field_longitudinal_profile
+entity_type: node
+bundle: a3d_object
+label: 'Longitudinal profile'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      longitudinal_profile: longitudinal_profile
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

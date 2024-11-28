@@ -1,0 +1,11 @@
+uuid: cb54d5d7-ccb4-4bec-a9a8-b46cebab068d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: arf_site_logo
+title: 'ARF site logo'
+content:
+  value: '<p><a class="site-branding__logo" href="/group/arf" rel="home"><img src="/themes/custom/islandora_muni/platform_specific/images/logo-en.svg" alt="Home" width="167" height="68"></a></p>'
+  format: full_html

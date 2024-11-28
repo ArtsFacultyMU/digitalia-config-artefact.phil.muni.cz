@@ -1,0 +1,20 @@
+uuid: F1C07F42-95EC-45A1-890F-D66819A42355
+langcode: en
+id: kch_raw_material
+migration_group: kch
+label: 'Raw materials'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/raw_material.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: raw_material

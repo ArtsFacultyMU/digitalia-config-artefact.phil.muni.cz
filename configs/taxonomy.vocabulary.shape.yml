@@ -1,0 +1,8 @@
+uuid: 06974cb5-e5e3-4c9c-a984-23b9c5614dc5
+langcode: en
+status: true
+dependencies: {  }
+name: Shape
+vid: shape
+description: 'KCH - e.g. shape of the frontal heating panel or of the vessel body'
+weight: 0

@@ -1,0 +1,7 @@
+label: 'Úprava povrchu'
+settings:
+  field_settings:
+    finishing:
+      label: 'Typ povrchové úpravy'
+    colour:
+      label: Barva

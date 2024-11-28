@@ -1,0 +1,20 @@
+uuid: aff150fe-1f74-4a6f-8ba2-23ed9049c41d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.chemical_compounds
+  module:
+    - metatag
+id: taxonomy_term.chemical_compounds.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: chemical_compounds
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

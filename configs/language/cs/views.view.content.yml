@@ -1,0 +1,16 @@
+display:
+  default:
+    display_title: Výchozí
+    display_options:
+      fields:
+        title:
+          label: Nadpis
+        operations:
+          label: Operace
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Řadit dle'
+      filters:
+        title:
+          expose:
+            label: Nadpis

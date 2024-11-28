@@ -1,0 +1,14 @@
+uuid: 5be59147-8306-4d3f-9ead-a12327da37bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+id: test_group_type-admin
+label: Admin
+weight: -7
+admin: true
+scope: individual
+global_role: null
+group_type: test_group_type
+permissions: {  }

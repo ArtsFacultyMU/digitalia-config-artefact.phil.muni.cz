@@ -1,0 +1,21 @@
+uuid: bf68a848-3977-4c09-8ee9-436ac9270de6
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cavity_pores
+    - node.type.analysis
+id: node.analysis.field_cavity_pores
+field_name: field_cavity_pores
+entity_type: node
+bundle: analysis
+label: 'Dutinkovité póry'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Ano
+  off_label: Ne
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: e017f295-4136-44dd-8df1-937cc7e3f50f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_porosity
+    - node.type.a3d_object
+id: node.a3d_object.field_porosity
+field_name: field_porosity
+entity_type: node
+bundle: a3d_object
+label: Porosity
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: '%'
+field_type: integer

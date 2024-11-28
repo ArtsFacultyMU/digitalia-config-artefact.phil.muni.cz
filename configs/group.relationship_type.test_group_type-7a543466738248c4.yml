@@ -1,0 +1,17 @@
+uuid: 975c3b54-f501-4448-afe5-4c9b47acd40c
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.coll_lang
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-7a543466738248c4
+group_type: test_group_type
+content_plugin: 'group_term:coll_lang'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

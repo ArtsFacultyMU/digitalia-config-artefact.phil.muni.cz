@@ -1,0 +1,31 @@
+uuid: 72390f91-53ce-47e4-92b4-f74064908946
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_instrument
+    - node.type.analysis
+    - taxonomy.vocabulary.instrument
+    - taxonomy.vocabulary.unknown_values
+id: node.analysis.field_instrument
+field_name: field_instrument
+entity_type: node
+bundle: analysis
+label: 'Instrument used'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      instrument: instrument
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: instrument
+field_type: entity_reference

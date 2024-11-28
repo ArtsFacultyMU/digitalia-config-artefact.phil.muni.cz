@@ -1,0 +1,21 @@
+uuid: 9908c295-9554-4d78-8cc5-26b8380f9897
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.aquamanile_type
+  module:
+    - text
+id: taxonomy_term.aquamanile_type.description
+field_name: description
+entity_type: taxonomy_term
+bundle: aquamanile_type
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

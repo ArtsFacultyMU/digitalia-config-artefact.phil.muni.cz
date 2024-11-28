@@ -1,0 +1,35 @@
+uuid: eca515d6-7f50-4e3f-b07d-804f69a6212f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_firing_temperature
+    - node.type.analysis
+  module:
+    - range
+id: node.analysis.field_firing_temperature
+field_name: field_firing_temperature
+entity_type: node
+bundle: analysis
+label: 'Firing temperature'
+description: 'Enter the estimated value in °c. If the lower or upper bound is not set, -/+ infinity is considered in filters. For exact value, set the lower and upper values to the same number.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  field:
+    prefix: ''
+    suffix: °c
+  from:
+    prefix: ''
+    suffix: ''
+  to:
+    prefix: ''
+    suffix: ''
+  combined:
+    prefix: ''
+    suffix: ''
+field_type: range_integer

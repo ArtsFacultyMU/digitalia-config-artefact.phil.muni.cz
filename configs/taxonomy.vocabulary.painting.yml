@@ -1,0 +1,8 @@
+uuid: 31f1bdbe-a832-4e4f-8819-1bae70c49e44
+langcode: en
+status: true
+dependencies: {  }
+name: Painting
+vid: painting
+description: ''
+weight: 0

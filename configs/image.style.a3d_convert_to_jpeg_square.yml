@@ -1,0 +1,21 @@
+uuid: b779f6b1-f90d-4999-a927-c5ae7095b19d
+langcode: en
+status: true
+dependencies: {  }
+name: a3d_convert_to_jpeg_square
+label: 'A3D convert to JPEG square'
+effects:
+  2c37cf1e-e183-4971-b8aa-c5317a385efc:
+    uuid: 2c37cf1e-e183-4971-b8aa-c5317a385efc
+    id: image_convert
+    weight: 1
+    data:
+      extension: jpg
+  677dc15b-f909-4b42-9116-53087293ad6a:
+    uuid: 677dc15b-f909-4b42-9116-53087293ad6a
+    id: image_scale
+    weight: 2
+    data:
+      width: 300
+      height: 300
+      upscale: false

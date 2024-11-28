@@ -1,0 +1,42 @@
+uuid: 2590af8d-d237-493d-af96-8b4f23bb9460
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geolocation
+    - node.type.test_a3d
+  module:
+    - datafield
+id: node.test_a3d.field_geolocation
+field_name: field_geolocation
+entity_type: node
+bundle: test_a3d
+label: Geolocation
+description: 'This field is used for storing data in formats other than WGS84 (such as the Czech standard S-JTSK). The data will be public and will not be displayed on the map.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    spatial_ref_system:
+      label: 'Spatial reference system'
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: spatial_ref_system
+    loc_coord_cadastre_x:
+      label: 'Location coordinates 1'
+      list: false
+      allowed_values: ''
+      required: false
+    loc_coord_cadastre_y:
+      label: 'Location coordinates 2'
+      list: false
+      allowed_values: ''
+      required: false
+    loc_coord_cadastre_accuracy:
+      label: 'Location coordinates accuracy'
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: loc_coord_cadastre_accuracy
+field_type: data_field

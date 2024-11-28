@@ -1,0 +1,8 @@
+uuid: 363d2a93-ec83-408d-9de9-81b5985d1343
+langcode: en
+status: true
+dependencies: {  }
+name: 'Glue residues'
+vid: glue_residues
+description: ''
+weight: 0

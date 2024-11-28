@@ -1,0 +1,15 @@
+uuid: ffc6a593-cbc6-408c-9226-c3a81ce2793a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.media.image.image_a3d_nef_entity_comparison
+    - core.entity_view_mode.media.image_a3d_nef_entity_comparison
+id: a3d_nef_entity_comparison
+label: 'A3D NEF entity comparison'
+add_link_text: 'Add to comparison'
+remove_link_text: 'Remove from comparison'
+limit: 0
+entity_type: media
+bundle_type: image
+group_name: nef

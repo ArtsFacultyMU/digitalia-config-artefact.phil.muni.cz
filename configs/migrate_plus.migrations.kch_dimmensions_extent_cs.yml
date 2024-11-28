@@ -1,0 +1,31 @@
+uuid: 4B63326D-7E3B-4105-9BBD-BFA26F11E2DB
+langcode: cs
+id: kch_dimensions_extent_cs
+migration_group: kch
+label: 'Import dimensions extent cs'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/dimensions_extent.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  tid:
+    plugin: migration_lookup
+    source: en
+    migration: kch_dimensions_extent
+  name: cs
+  langcode:
+    plugin: default_value
+    default_value: cs
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: dimensions_extent
+  translations: true
+migration_dependencies:
+  required:
+    - kch_dimensions_extent

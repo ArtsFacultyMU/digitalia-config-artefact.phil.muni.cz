@@ -1,0 +1,33 @@
+uuid: a7b0fe78-7fb8-46a5-9822-40e753862556
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_general_type
+    - node.type.a3d_object
+    - taxonomy.vocabulary.general_type
+  content:
+    - 'taxonomy_term:general_type:734abeea-d499-46bd-974e-db42d4d14555'
+id: node.a3d_object.field_general_type
+field_name: field_general_type
+entity_type: node
+bundle: a3d_object
+label: 'General type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 734abeea-d499-46bd-974e-db42d4d14555
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      general_type: general_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

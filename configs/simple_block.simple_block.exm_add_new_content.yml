@@ -1,0 +1,11 @@
+uuid: 527b48bc-f2af-4ff7-9baa-d86fc07adee1
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: exm_add_new_content
+title: 'EXM add new content'
+content:
+  value: '<p><a class="button" href="/group/15/content/create/group_node%3Aa3d_object?destination=/group/15/nodes_ordinary">Add new content</a></p>'
+  format: full_html

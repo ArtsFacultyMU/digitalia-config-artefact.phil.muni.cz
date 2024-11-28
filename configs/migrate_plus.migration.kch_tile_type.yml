@@ -1,0 +1,20 @@
+uuid: 0B6A5A66-397A-42CB-97E6-76BC676BD201
+langcode: en
+id: kch_tile_type
+migration_group: kch
+label: 'tile type'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/tile_type.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: tile_type

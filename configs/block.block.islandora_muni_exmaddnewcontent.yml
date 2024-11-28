@@ -1,0 +1,33 @@
+uuid: ad4915c7-4f86-408c-a741-890f4088a500
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.exm_add_new_content
+  module:
+    - islandora
+    - simple_block
+    - system
+  theme:
+    - islandora_muni
+id: islandora_muni_exmaddnewcontent
+theme: islandora_muni
+region: sidebar_second
+weight: -28
+provider: null
+plugin: 'simple_block:exm_add_new_content'
+settings:
+  id: 'simple_block:exm_add_new_content'
+  label: 'EXM add new content'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/group/15/nodes\r\n/group/15/nodes_ordinary"

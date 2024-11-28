@@ -1,0 +1,8 @@
+uuid: b11daab0-2d43-48a0-93be-c5d34d29698f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Location coordinates accuracy'
+vid: loc_coord_cadastre_accuracy
+description: ''
+weight: 0

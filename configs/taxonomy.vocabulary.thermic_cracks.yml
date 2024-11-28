@@ -1,0 +1,8 @@
+uuid: 28077170-8405-43a9-9c87-77e461e31ddf
+langcode: en
+status: true
+dependencies: {  }
+name: 'Thermic cracks'
+vid: thermic_cracks
+description: ''
+weight: 0

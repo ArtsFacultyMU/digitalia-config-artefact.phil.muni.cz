@@ -1,0 +1,8 @@
+uuid: 8551d2d0-ebe5-4021-b626-fb7d56c72cdf
+langcode: en
+status: true
+dependencies: {  }
+name: 'Fracture nature'
+vid: fract_nature
+description: ''
+weight: 0

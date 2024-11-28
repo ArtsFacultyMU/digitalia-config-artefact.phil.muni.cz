@@ -1,0 +1,31 @@
+uuid: f7ab5b33-2118-4bae-bac0-b58d6ccccdc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ownership
+    - node.type.test_a3d
+    - taxonomy.vocabulary.actor
+    - taxonomy.vocabulary.unknown_values
+id: node.test_a3d.field_ownership
+field_name: field_ownership
+entity_type: node
+bundle: test_a3d
+label: Ownership
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      actor: actor
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: actor
+field_type: entity_reference

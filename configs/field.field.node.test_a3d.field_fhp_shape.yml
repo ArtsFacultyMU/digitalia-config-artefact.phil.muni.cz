@@ -1,0 +1,31 @@
+uuid: b20f95a6-420a-4e7c-89e1-c766239712d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fhp_shape
+    - node.type.test_a3d
+    - taxonomy.vocabulary.shape
+    - taxonomy.vocabulary.unknown_values
+id: node.test_a3d.field_fhp_shape
+field_name: field_fhp_shape
+entity_type: node
+bundle: test_a3d
+label: 'Shape of frontal heating panel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      shape: shape
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: shape
+field_type: entity_reference

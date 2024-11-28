@@ -1,0 +1,24 @@
+uuid: bb99ab3f-ce42-4d77-86a2-e5cea2efca61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_at_citation_text
+    - filter.format.full_html
+    - node.type.at_project
+  module:
+    - text
+id: node.at_project.field_at_citation_text
+field_name: field_at_citation_text
+entity_type: node
+bundle: at_project
+label: 'at citation text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

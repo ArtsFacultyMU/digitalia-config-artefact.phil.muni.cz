@@ -1,0 +1,20 @@
+uuid: 17785fdb-d071-498c-9b38-d44b80de4237
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contract
+  module:
+    - path
+id: node.contract.path
+field_name: path
+entity_type: node
+bundle: contract
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

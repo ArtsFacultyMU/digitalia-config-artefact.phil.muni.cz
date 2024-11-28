@@ -1,0 +1,18 @@
+uuid: 2fc59dad-1537-4201-8541-2beac13d06aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.at_project
+id: node.at_project.changed
+field_name: changed
+entity_type: node
+bundle: at_project
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

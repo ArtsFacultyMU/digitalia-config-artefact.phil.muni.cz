@@ -1,0 +1,29 @@
+uuid: ca10987f-007c-4304-b1e2-e24a2e6ffe27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_model_identifier_type
+    - taxonomy.vocabulary.identifier_type
+    - taxonomy.vocabulary.instrument
+id: taxonomy_term.instrument.field_model_identifier_type
+field_name: field_model_identifier_type
+entity_type: taxonomy_term
+bundle: instrument
+label: 'Model Identifier Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      identifier_type: identifier_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: ec39fd80-2b22-4142-a8c3-0e5b3fd643ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_group_code
+    - group.type.test_group_type
+id: group.test_group_type.field_group_code
+field_name: field_group_code
+entity_type: group
+bundle: test_group_type
+label: 'group code'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

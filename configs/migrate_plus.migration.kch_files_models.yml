@@ -1,0 +1,45 @@
+uuid: C8D07449-4852-43D0-93E7-9384C009B8CC
+langcode: en
+status: true
+dependencies: {  }
+id: kch_files_models
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: kch
+label: ''
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/models.csv
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  ids:
+    - mypath
+  constants:
+    FEDORA_URI: 'fedora://kch/models'
+    IMAGE_URI: /data/platform_data/kch
+process:
+  image_source_path:
+    plugin: concat
+    delimiter: /
+    source:
+      - constants/IMAGE_URI
+      - mypath
+  image_destination_path:
+    plugin: concat
+    delimiter: /
+    source:
+      - constants/FEDORA_URI
+      - mypath
+  uri:
+    plugin: file_copy
+    source:
+      - '@image_source_path'
+      - '@image_destination_path'
+    file_exists: replace
+    move: false
+destination:
+  plugin: 'entity:file'
+migration_dependencies: null

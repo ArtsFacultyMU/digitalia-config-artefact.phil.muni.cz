@@ -1,0 +1,12 @@
+label: 'Termín taxonomie'
+display:
+  default:
+    display_title: Výchozí
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Vše -'
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Řadit dle'

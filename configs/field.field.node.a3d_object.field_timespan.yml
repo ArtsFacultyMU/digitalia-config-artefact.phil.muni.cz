@@ -1,0 +1,35 @@
+uuid: 05ae9724-1d87-4a8e-ab80-8204046746e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_timespan
+    - node.type.a3d_object
+  module:
+    - range
+id: node.a3d_object.field_timespan
+field_name: field_timespan
+entity_type: node
+bundle: a3d_object
+label: Timespan
+description: 'A machine readable field for upper and lower estimates of datation. Enter values in years, if AD, mark the value as negative. If creation year is known, both values will be the same. If lower of upper value is empty, -/+ infinity will be considered when searching and sorting.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  field:
+    prefix: ''
+    suffix: ''
+  from:
+    prefix: ''
+    suffix: ''
+  to:
+    prefix: ''
+    suffix: ''
+  combined:
+    prefix: ''
+    suffix: ''
+field_type: range_integer

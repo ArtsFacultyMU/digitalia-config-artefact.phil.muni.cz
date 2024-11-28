@@ -1,0 +1,8 @@
+uuid: 3ceb302a-99eb-44aa-9c40-e65a76265ee6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Pigment determination'
+vid: pigment
+description: ''
+weight: 0

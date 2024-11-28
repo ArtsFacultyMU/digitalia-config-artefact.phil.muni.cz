@@ -1,0 +1,19 @@
+uuid: 07723bf6-baf0-4662-9583-177d67ca7850
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_datacite_code
+    - taxonomy.vocabulary.unknown_values
+id: taxonomy_term.unknown_values.field_datacite_code
+field_name: field_datacite_code
+entity_type: taxonomy_term
+bundle: unknown_values
+label: 'DataCite code'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

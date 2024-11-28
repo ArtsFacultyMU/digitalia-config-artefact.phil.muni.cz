@@ -1,0 +1,1472 @@
+uuid: 9e5c21c0-03db-4e64-9228-15bb5fd23f90
+langcode: en
+status: false
+dependencies:
+  config:
+    - field.storage.node.field_artefact_category
+    - field.storage.node.field_artefact_class
+    - field.storage.node.field_artefact_id
+    - search_api.index.a3d_object_index
+    - system.menu.main
+    - taxonomy.vocabulary.site
+  module:
+    - better_exposed_filters
+    - search_api
+id: a3d_global_search
+label: 'A3D global search'
+module: views
+description: ''
+tag: ''
+base_table: search_api_index_a3d_object_index
+base_field: search_api_id
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      fields:
+        nid:
+          id: nid
+          table: search_api_index_a3d_object_index
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: false
+          fallback_handler: search_api_numeric
+          fallback_options:
+            set_precision: false
+            precision: 0
+            decimal: .
+            separator: ''
+            format_plural: false
+            format_plural_string: !!binary MQNAY291bnQ=
+            prefix: ''
+            suffix: ''
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            format_plural_values:
+              - '1'
+              - '@count'
+        field_artefact_category:
+          id: field_artefact_category
+          table: search_api_index_a3d_object_index
+          field: field_artefact_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: false
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              2d_asymetry:
+                display_method: label
+              a_asymmetry:
+                display_method: label
+              alteration:
+                display_method: label
+              artefact_category:
+                display_method: label
+              artefact_class:
+                display_method: label
+              artefact_subclass:
+                display_method: label
+              auth_3d_models:
+                display_method: label
+              auth_res_data:
+                display_method: label
+              b_asymmetry:
+                display_method: label
+              ballistic_profile:
+                display_method: label
+              base_curve:
+                display_method: label
+              binder_type:
+                display_method: label
+              blank_orientation:
+                display_method: label
+              circle:
+                display_method: label
+              city:
+                display_method: label
+              city_code:
+                display_method: label
+              coll_keyword:
+                display_method: label
+              coll_lang:
+                display_method: label
+              coll_org:
+                display_method: label
+              collection_title:
+                display_method: label
+              corporate_body:
+                display_method: label
+                view_mode: default
+              country_a3d:
+                display_method: label
+              cov_spat:
+                display_method: label
+              creation:
+                display_method: label
+              cross_section_asymmetry:
+                display_method: label
+              culture:
+                display_method: label
+              current_location:
+                display_method: label
+              deposition_cond:
+                display_method: label
+              discoverer:
+                display_method: label
+              doc_creator:
+                display_method: label
+              family:
+                display_method: label
+                view_mode: default
+              feature_id:
+                display_method: label
+              feature_type:
+                display_method: label
+              finding_context_subtype:
+                display_method: label
+              finding_context_type:
+                display_method: label
+              fract_nature:
+                display_method: label
+              fract_preservation:
+                display_method: label
+              frequencies:
+                display_method: label
+                view_mode: default
+              g_w_practice:
+                display_method: label
+              general_lateral_wear:
+                display_method: label
+              general_type:
+                display_method: label
+              genre:
+                display_method: label
+                view_mode: default
+              geo_location:
+                display_method: label
+                view_mode: default
+              glue_residues:
+                display_method: label
+              grain_type:
+                display_method: label
+              holder_type:
+                display_method: label
+              islandora_display:
+                display_method: label
+              islandora_media_use:
+                display_method: label
+                view_mode: default
+              islandora_models:
+                display_method: label
+                view_mode: default
+              issuance_modes:
+                display_method: label
+                view_mode: default
+              language:
+                display_method: label
+                view_mode: default
+              legal_status:
+                display_method: label
+              licence_url:
+                display_method: label
+              loc_coord_cadastre_accuracy:
+                display_method: label
+              longitudinal_profile:
+                display_method: label
+              measurement_type:
+                display_method: label
+              metadata_rights:
+                display_method: label
+              microstructure:
+                display_method: label
+              mineral_fragments:
+                display_method: label
+              msdp_method:
+                display_method: label
+              msdp_value:
+                display_method: label
+              orig_state_pres:
+                display_method: label
+              original_location:
+                display_method: label
+              ownership:
+                display_method: label
+              painting:
+                display_method: label
+              person:
+                display_method: label
+                view_mode: default
+              physical_form:
+                display_method: label
+                view_mode: default
+              pigment:
+                display_method: label
+              preserved_parts:
+                display_method: label
+              proj_dedication:
+                display_method: label
+              proj_id:
+                display_method: label
+              quality:
+                display_method: label
+              quiver_trans_bright_spots:
+                display_method: label
+              quiver_trans_lat_rounding:
+                display_method: label
+              quiver_trans_tip_rounding:
+                display_method: label
+              raw_material:
+                display_method: label
+              rec_creator:
+                display_method: label
+              rec_language:
+                display_method: label
+              rec_updater:
+                display_method: label
+              recent_damage:
+                display_method: label
+              recent_damage_type:
+                display_method: label
+              record_source:
+                display_method: label
+              relative_datation:
+                display_method: label
+              reparation_features:
+                display_method: label
+              resource_types:
+                display_method: label
+                view_mode: default
+              retouch:
+                display_method: label
+              rights_access:
+                display_method: label
+              rights_reproduction:
+                display_method: label
+              rock_fragments:
+                display_method: label
+              sdp_method:
+                display_method: label
+              sdp_value:
+                display_method: label
+              serration:
+                display_method: label
+              site:
+                display_method: label
+              spatial_ref_system:
+                display_method: label
+              state:
+                display_method: label
+              subject:
+                display_method: label
+                view_mode: default
+              subord_dataset:
+                display_method: label
+              surface_alt:
+                display_method: label
+              tags:
+                display_method: label
+              temporal_subjects:
+                display_method: label
+                view_mode: default
+              test_level_0:
+                display_method: label
+              thermic_cracks:
+                display_method: label
+              tip_fracture:
+                display_method: label
+              units:
+                display_method: label
+        field_artefact_class:
+          id: field_artefact_class
+          table: search_api_index_a3d_object_index
+          field: field_artefact_class
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: ': {{ field_artefact_class }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: false
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              2d_asymetry:
+                display_method: label
+              a_asymmetry:
+                display_method: label
+              alteration:
+                display_method: label
+              artefact_category:
+                display_method: label
+              artefact_class:
+                display_method: label
+              artefact_subclass:
+                display_method: label
+              auth_3d_models:
+                display_method: label
+              auth_res_data:
+                display_method: label
+              b_asymmetry:
+                display_method: label
+              ballistic_profile:
+                display_method: label
+              base_curve:
+                display_method: label
+              binder_type:
+                display_method: label
+              blank_orientation:
+                display_method: label
+              circle:
+                display_method: label
+              city:
+                display_method: label
+              city_code:
+                display_method: label
+              coll_keyword:
+                display_method: label
+              coll_lang:
+                display_method: label
+              coll_org:
+                display_method: label
+              collection_title:
+                display_method: label
+              corporate_body:
+                display_method: label
+                view_mode: default
+              country_a3d:
+                display_method: label
+              cov_spat:
+                display_method: label
+              creation:
+                display_method: label
+              cross_section_asymmetry:
+                display_method: label
+              culture:
+                display_method: label
+              current_location:
+                display_method: label
+              deposition_cond:
+                display_method: label
+              discoverer:
+                display_method: label
+              doc_creator:
+                display_method: label
+              family:
+                display_method: label
+                view_mode: default
+              feature_id:
+                display_method: label
+              feature_type:
+                display_method: label
+              finding_context_subtype:
+                display_method: label
+              finding_context_type:
+                display_method: label
+              fract_nature:
+                display_method: label
+              fract_preservation:
+                display_method: label
+              frequencies:
+                display_method: label
+                view_mode: default
+              g_w_practice:
+                display_method: label
+              general_lateral_wear:
+                display_method: label
+              general_type:
+                display_method: label
+              genre:
+                display_method: label
+                view_mode: default
+              geo_location:
+                display_method: label
+                view_mode: default
+              glue_residues:
+                display_method: label
+              grain_type:
+                display_method: label
+              holder_type:
+                display_method: label
+              islandora_display:
+                display_method: label
+              islandora_media_use:
+                display_method: label
+                view_mode: default
+              islandora_models:
+                display_method: label
+                view_mode: default
+              issuance_modes:
+                display_method: label
+                view_mode: default
+              language:
+                display_method: label
+                view_mode: default
+              legal_status:
+                display_method: label
+              licence_url:
+                display_method: label
+              loc_coord_cadastre_accuracy:
+                display_method: label
+              longitudinal_profile:
+                display_method: label
+              measurement_type:
+                display_method: label
+              metadata_rights:
+                display_method: label
+              microstructure:
+                display_method: label
+              mineral_fragments:
+                display_method: label
+              msdp_method:
+                display_method: label
+              msdp_value:
+                display_method: label
+              orig_state_pres:
+                display_method: label
+              original_location:
+                display_method: label
+              ownership:
+                display_method: label
+              painting:
+                display_method: label
+              person:
+                display_method: label
+                view_mode: default
+              physical_form:
+                display_method: label
+                view_mode: default
+              pigment:
+                display_method: label
+              preserved_parts:
+                display_method: label
+              proj_dedication:
+                display_method: label
+              proj_id:
+                display_method: label
+              quality:
+                display_method: label
+              quiver_trans_bright_spots:
+                display_method: label
+              quiver_trans_lat_rounding:
+                display_method: label
+              quiver_trans_tip_rounding:
+                display_method: label
+              raw_material:
+                display_method: label
+              rec_creator:
+                display_method: label
+              rec_language:
+                display_method: label
+              rec_updater:
+                display_method: label
+              recent_damage:
+                display_method: label
+              recent_damage_type:
+                display_method: label
+              record_source:
+                display_method: label
+              relative_datation:
+                display_method: label
+              reparation_features:
+                display_method: label
+              resource_types:
+                display_method: label
+                view_mode: default
+              retouch:
+                display_method: label
+              rights_access:
+                display_method: label
+              rights_reproduction:
+                display_method: label
+              rock_fragments:
+                display_method: label
+              sdp_method:
+                display_method: label
+              sdp_value:
+                display_method: label
+              serration:
+                display_method: label
+              site:
+                display_method: label
+              spatial_ref_system:
+                display_method: label
+              state:
+                display_method: label
+              subject:
+                display_method: label
+                view_mode: default
+              subord_dataset:
+                display_method: label
+              surface_alt:
+                display_method: label
+              tags:
+                display_method: label
+              temporal_subjects:
+                display_method: label
+                view_mode: default
+              test_level_0:
+                display_method: label
+              thermic_cracks:
+                display_method: label
+              tip_fracture:
+                display_method: label
+              units:
+                display_method: label
+        field_artefact_id:
+          id: field_artefact_id
+          table: search_api_index_a3d_object_index
+          field: field_artefact_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_artefact_category }}{{ field_artefact_class }} ({{ field_artefact_id }})'
+            make_link: true
+            path: '/a3d/node/{{ nid }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 50
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Search
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: basic_html
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: false
+              input_required: true
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+              reset_button_always_show: false
+            filter:
+              search_api_fulltext:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              a3d_object_parent_groups_1:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_site:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: search_api_none
+        options: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: 'No results found.'
+            format: basic_html
+          tokenize: false
+      sorts: {  }
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: search_api_index_a3d_object_index
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        type:
+          id: type
+          table: search_api_index_a3d_object_index
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_options
+          operator: or
+          value:
+            a3d_object: a3d_object
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_a3d_object_index
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_fulltext
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: 'Fulltext search'
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: search_api_fulltext
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              standard_user: '0'
+            expose_fields: false
+            placeholder: ''
+            searched_fields_id: search_api_fulltext_searched_fields
+            value_maxlength: 128
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields:
+            - a3d_default_display
+        a3d_object_parent_groups_1:
+          id: a3d_object_parent_groups_1
+          table: search_api_index_a3d_object_index
+          field: a3d_object_parent_groups
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_text
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: a3d_object_parent_groups_1_op
+            label: 'A3D object parent groups'
+            description: null
+            use_operator: false
+            operator: a3d_object_parent_groups_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: a3d_object_parent_groups_1
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: Platform
+            description: ''
+            identifier: a3d_object_parent_groups_1
+            optional: true
+            widget: select
+            multiple: true
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Neofig
+                operator: '='
+                value:
+                  value: nef
+              2:
+                title: Artefact
+                operator: '='
+                value:
+                  value: arf
+              3:
+                title: Example
+                operator: '='
+                value:
+                  value: exm
+        field_site:
+          id: field_site
+          table: search_api_index_a3d_object_index
+          field: field_site
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_term
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_site_op
+            label: Site
+            description: ''
+            use_operator: false
+            operator: field_site_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_site
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              standard_user: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: site
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      query:
+        type: search_api_query
+        options:
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
+          query_tags: {  }
+      relationships: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: 'Displaying @start - @end of @total'
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_artefact_category'
+        - 'config:field.storage.node.field_artefact_class'
+        - 'config:field.storage.node.field_artefact_id'
+        - 'config:search_api.index.a3d_object_index'
+        - 'search_api_list:a3d_object_index'
+  page_1:
+    id: page_1
+    display_title: Search
+    display_plugin: page
+    position: 1
+    display_options:
+      display_description: ''
+      exposed_block: true
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+      path: search
+      menu:
+        type: normal
+        title: Search
+        description: ''
+        weight: -47
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_artefact_category'
+        - 'config:field.storage.node.field_artefact_class'
+        - 'config:field.storage.node.field_artefact_id'
+        - 'config:search_api.index.a3d_object_index'
+        - 'search_api_list:a3d_object_index'
+  search_fulltext_top:
+    id: search_fulltext_top
+    display_title: 'Search fulltext top'
+    display_plugin: page
+    position: 1
+    display_options:
+      exposed_form:
+        type: bef
+        options:
+          submit_button: .
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: basic_html
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: false
+              input_required: true
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+              reset_button_always_show: false
+            filter:
+              search_api_fulltext:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+      filters:
+        status:
+          id: status
+          table: search_api_index_a3d_object_index
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        type:
+          id: type
+          table: search_api_index_a3d_object_index
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_options
+          operator: or
+          value:
+            a3d_object: a3d_object
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_a3d_object_index
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_fulltext
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: search_api_fulltext
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              standard_user: '0'
+            expose_fields: false
+            placeholder: ''
+            searched_fields_id: search_api_fulltext_searched_fields
+            value_maxlength: 128
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields:
+            - a3d_default_display
+        a3d_object_parent_groups_1:
+          id: a3d_object_parent_groups_1
+          table: search_api_index_a3d_object_index
+          field: a3d_object_parent_groups
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_text
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: a3d_object_parent_groups_1_op
+            label: 'A3D object parent groups'
+            description: null
+            use_operator: false
+            operator: a3d_object_parent_groups_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: a3d_object_parent_groups_1
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: null
+            max_placeholder: null
+            placeholder: null
+          is_grouped: true
+          group_info:
+            label: Platform
+            description: ''
+            identifier: a3d_object_parent_groups_1
+            optional: true
+            widget: select
+            multiple: true
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Neofig
+                operator: '='
+                value:
+                  value: nef
+              2:
+                title: Artefact
+                operator: '='
+                value:
+                  value: arf
+              3:
+                title: Example
+                operator: '='
+                value:
+                  value: exm
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        exposed_form: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      exposed_block: true
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+      path: search
+      menu:
+        type: none
+        title: Search
+        description: ''
+        weight: -47
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_artefact_category'
+        - 'config:field.storage.node.field_artefact_class'
+        - 'config:field.storage.node.field_artefact_id'
+        - 'config:search_api.index.a3d_object_index'
+        - 'search_api_list:a3d_object_index'

@@ -1,0 +1,19 @@
+uuid: 9eef14ad-d336-4b95-9636-76040bd83147
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_literature
+    - node.type.a3d_object
+id: node.a3d_object.field_literature
+field_name: field_literature
+entity_type: node
+bundle: a3d_object
+label: Literature
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

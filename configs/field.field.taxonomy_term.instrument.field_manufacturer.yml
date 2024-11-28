@@ -1,0 +1,31 @@
+uuid: 4c2ac079-7bd1-4099-9225-90776705519d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_manufacturer
+    - taxonomy.vocabulary.actor
+    - taxonomy.vocabulary.instrument
+    - taxonomy.vocabulary.unknown_values
+id: taxonomy_term.instrument.field_manufacturer
+field_name: field_manufacturer
+entity_type: taxonomy_term
+bundle: instrument
+label: Manufacturer
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      actor: actor
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: actor
+field_type: entity_reference

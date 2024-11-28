@@ -1,0 +1,17 @@
+uuid: 8e407b8d-be01-4bd1-9fba-4893277c7534
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - node.type.analysis
+  module:
+    - gnode
+    - node
+id: test_group_type-4d13ca0a32068892
+group_type: test_group_type
+content_plugin: 'group_node:analysis'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: true

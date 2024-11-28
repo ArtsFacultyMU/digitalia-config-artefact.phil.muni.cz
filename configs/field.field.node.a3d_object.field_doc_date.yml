@@ -1,0 +1,21 @@
+uuid: 6c9154d5-b030-4239-b9f6-fe0d169dcba7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_date
+    - node.type.a3d_object
+  module:
+    - datetime
+id: node.a3d_object.field_doc_date
+field_name: field_doc_date
+entity_type: node
+bundle: a3d_object
+label: 'Documentation Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

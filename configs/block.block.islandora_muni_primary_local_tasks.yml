@@ -2,6 +2,9 @@ uuid: 6dd8dd8f-5116-452e-b295-89b02395a00e
 langcode: en
 status: true
 dependencies:
+  module:
+    - islandora
+    - user
   theme:
     - islandora_muni
 _core:
@@ -9,7 +12,7 @@ _core:
 id: islandora_muni_primary_local_tasks
 theme: islandora_muni
 region: highlighted
-weight: -4
+weight: -29
 provider: null
 plugin: local_tasks_block
 settings:
@@ -19,4 +22,16 @@ settings:
   provider: core
   primary: true
   secondary: false
-visibility: {  }
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

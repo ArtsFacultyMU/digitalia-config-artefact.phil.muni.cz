@@ -1,0 +1,18 @@
+uuid: 88c96018-cbee-4ca6-b179-19565a683a80
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.surface_alt
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.surface_alt
+target_entity_type_id: taxonomy_term
+target_bundle: surface_alt
+default_langcode: site_default
+language_alterable: true

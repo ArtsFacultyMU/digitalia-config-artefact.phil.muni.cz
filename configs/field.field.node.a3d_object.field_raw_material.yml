@@ -1,0 +1,29 @@
+uuid: b4c4ffc2-c64c-4b38-abe9-e87a0f8bac13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_raw_material
+    - node.type.a3d_object
+    - taxonomy.vocabulary.raw_material
+id: node.a3d_object.field_raw_material
+field_name: field_raw_material
+entity_type: node
+bundle: a3d_object
+label: 'Raw material'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      raw_material: raw_material
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

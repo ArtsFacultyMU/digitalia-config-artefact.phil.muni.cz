@@ -1,0 +1,18 @@
+uuid: a9d973cb-9541-485e-9c0f-df5db84c9973
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.analysis
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.analysis
+target_entity_type_id: node
+target_bundle: analysis
+default_langcode: site_default
+language_alterable: false

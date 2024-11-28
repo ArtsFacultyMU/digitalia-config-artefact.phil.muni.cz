@@ -1,0 +1,30 @@
+uuid: 7e130363-996c-4084-a19e-e6b04869d243
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - taxonomy.vocabulary.relative_datation
+  module:
+    - text
+id: taxonomy_term.relative_datation.teaser
+targetEntityType: taxonomy_term
+bundle: relative_datation
+mode: teaser
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

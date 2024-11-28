@@ -1,0 +1,21 @@
+uuid: bd0370e3-79fd-4239-82c8-1e313538114b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fhp_shape_certainty
+    - node.type.test_a3d
+id: node.test_a3d.field_fhp_shape_certainty
+field_name: field_fhp_shape_certainty
+entity_type: node
+bundle: test_a3d
+label: 'Shape of frontal heating panel - certainty'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Certain
+  off_label: Uncertain
+field_type: boolean

@@ -1,0 +1,11 @@
+uuid: 638456c8-e3ac-4e1d-ae95-2700866273ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.a3d_arf_compare
+label: 'A3D ARF compare'
+description: ''
+targetEntityType: media
+cache: true

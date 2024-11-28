@@ -1,0 +1,29 @@
+uuid: 73b6aac0-60c8-410c-a217-0a8f90e1d003
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_surface_alt
+    - node.type.a3d_object
+    - taxonomy.vocabulary.surface_alt
+id: node.a3d_object.field_surface_alt
+field_name: field_surface_alt
+entity_type: node
+bundle: a3d_object
+label: 'Surface alteration'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      surface_alt: surface_alt
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

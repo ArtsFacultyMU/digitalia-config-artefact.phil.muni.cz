@@ -1,0 +1,29 @@
+uuid: 26315a6c-26cb-45ae-8089-2802c6a35d73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_serration
+    - node.type.a3d_object
+    - taxonomy.vocabulary.serration
+id: node.a3d_object.field_serration
+field_name: field_serration
+entity_type: node
+bundle: a3d_object
+label: Serration
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      serration: serration
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

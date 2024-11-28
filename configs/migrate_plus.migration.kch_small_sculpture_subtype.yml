@@ -1,0 +1,20 @@
+uuid: 4894B1EA-EF01-4556-9714-6321AC1134EF
+langcode: en
+id: kch_small_sculpture_subtype
+migration_group: kch
+label: 'Import small sculpture subtypes'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/small_sculpture_subtype.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: small_sculpture_subtype

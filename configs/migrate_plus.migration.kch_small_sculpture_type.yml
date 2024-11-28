@@ -1,0 +1,20 @@
+uuid: 3E024D8D-412D-469F-965C-5624E1BBD3B6
+langcode: en
+id: kch_small_sculpture_type
+migration_group: kch
+label: 'Import small sculpture types'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/small_sculpture_type.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: small_sculpture_type

@@ -1,0 +1,29 @@
+uuid: 32a7f94c-f4c5-40a6-b5ed-6f1110c802eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_current_location
+    - node.type.a3d_object
+    - taxonomy.vocabulary.current_location
+id: node.a3d_object.field_current_location
+field_name: field_current_location
+entity_type: node
+bundle: a3d_object
+label: 'Current location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      current_location: current_location
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

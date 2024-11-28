@@ -1,0 +1,19 @@
+uuid: d2d74b16-322a-4210-bebb-7ac56df18ed3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_statement
+    - node.type.a3d_object
+id: node.a3d_object.field_statement
+field_name: field_statement
+entity_type: node
+bundle: a3d_object
+label: Statement
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

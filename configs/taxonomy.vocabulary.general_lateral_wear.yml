@@ -1,0 +1,8 @@
+uuid: c9d8a997-f995-47b1-a840-2093643d170d
+langcode: en
+status: true
+dependencies: {  }
+name: 'General lateral wear'
+vid: general_lateral_wear
+description: ''
+weight: 0

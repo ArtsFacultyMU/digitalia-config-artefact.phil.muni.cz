@@ -1,0 +1,29 @@
+uuid: e0d5e529-acf9-4c13-94ac-3f43160e380b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rock_fragments
+    - node.type.test_a3d
+    - taxonomy.vocabulary.rock_fragments
+id: node.test_a3d.field_rock_fragments
+field_name: field_rock_fragments
+entity_type: node
+bundle: test_a3d
+label: 'Rock fragments'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      rock_fragments: rock_fragments
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: 70157337-2C64-417C-B6B4-C1DE3738CB4A
+langcode: en
+id: kch_site_type
+migration_group: kch
+label: 'Import site types'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/site_type.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: site_type

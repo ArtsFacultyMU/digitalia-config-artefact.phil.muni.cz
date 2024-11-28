@@ -1,0 +1,19 @@
+uuid: 8d415bc8-3686-4f1d-9fc5-53b310abbb03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_field_description_a3d_cs
+    - node.type.test_a3d
+id: node.test_a3d.field_field_description_a3d_cs
+field_name: field_field_description_a3d_cs
+entity_type: node
+bundle: test_a3d
+label: Popis
+description: 'Popis v češtině'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

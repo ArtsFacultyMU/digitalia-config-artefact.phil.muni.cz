@@ -1,0 +1,20 @@
+uuid: F1C25CBE-EF92-4DEC-BA2F-8F8E62109292
+langcode: en
+id: kch_actor_type
+migration_group: kch
+label: 'Actor types'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/actor_type.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: actor_type

@@ -45,6 +45,7 @@ content:
       date_order: big_endian
       month_format: mm
       day_format: dd
+      year_format: 'y'
     third_party_settings: {  }
     weight: 8
     region: content
@@ -56,6 +57,7 @@ content:
       date_order: big_endian
       month_format: mm
       day_format: dd
+      year_format: 'y'
     third_party_settings: {  }
     weight: 9
     region: content

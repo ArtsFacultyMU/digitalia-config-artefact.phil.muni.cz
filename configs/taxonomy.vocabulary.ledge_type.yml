@@ -1,0 +1,8 @@
+uuid: 15e0a5af-d3cc-4c47-aaac-3f88e2e98beb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Ledge type'
+vid: ledge_type
+description: KCH
+weight: 0

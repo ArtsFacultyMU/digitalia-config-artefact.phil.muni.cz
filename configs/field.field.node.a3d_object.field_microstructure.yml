@@ -1,0 +1,29 @@
+uuid: ef3c01ba-4537-4bba-a493-01752a45678a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_microstructure
+    - node.type.a3d_object
+    - taxonomy.vocabulary.microstructure
+id: node.a3d_object.field_microstructure
+field_name: field_microstructure
+entity_type: node
+bundle: a3d_object
+label: Microstructure
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      microstructure: microstructure
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

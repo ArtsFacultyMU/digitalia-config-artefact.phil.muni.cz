@@ -1,6 +1,6 @@
 uuid: 147db1e4-aebd-4beb-82cb-b39ca1c69830
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - help
@@ -11,7 +11,7 @@ _core:
 id: islandora_muni_help
 theme: islandora_muni
 region: header
-weight: -5
+weight: -22
 provider: null
 plugin: help_block
 settings:

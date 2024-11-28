@@ -1,0 +1,20 @@
+uuid: 80A86B0C-77DC-4B76-A13B-66F0429FC738
+langcode: en
+id: kch_surface_finishing
+migration_group: kch
+label: 'Surface finishing'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/surface_finishing.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: surface_finishing

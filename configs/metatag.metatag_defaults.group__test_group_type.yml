@@ -1,0 +1,8 @@
+uuid: 430dd6ca-5075-4e52-9869-c43cd1d4cdb4
+langcode: en
+status: true
+dependencies: {  }
+id: group__test_group_type
+label: 'Group: A3D group'
+tags:
+  title: '[group:title]'

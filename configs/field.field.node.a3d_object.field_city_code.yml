@@ -1,0 +1,29 @@
+uuid: eb90b70d-a471-4eb0-b1b9-b66edcac5206
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_city_code
+    - node.type.a3d_object
+    - taxonomy.vocabulary.city_code
+id: node.a3d_object.field_city_code
+field_name: field_city_code
+entity_type: node
+bundle: a3d_object
+label: 'City code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      city_code: city_code
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

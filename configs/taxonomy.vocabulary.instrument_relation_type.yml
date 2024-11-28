@@ -1,0 +1,8 @@
+uuid: 242dbee2-578e-44ea-89c0-989d361caac9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Instrument Relation Type'
+vid: instrument_relation_type
+description: ''
+weight: 0

@@ -1,0 +1,8 @@
+uuid: 7958b609-8154-47ac-849b-b1585dd18211
+langcode: en
+status: true
+dependencies: {  }
+name: Format/Size
+vid: format_size
+description: 'The configuration of a work, including technical formats, or the conventional designation for the dimensions or proportions'
+weight: 0

@@ -1,0 +1,22 @@
+uuid: ca1fcfeb-962f-4b6d-bac2-3222ac84d8db
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_field_st_placement_certain
+field_name: field_field_st_placement_certain
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

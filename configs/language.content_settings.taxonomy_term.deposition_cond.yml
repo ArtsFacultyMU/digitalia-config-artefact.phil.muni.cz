@@ -1,0 +1,18 @@
+uuid: 8c93c4f7-f1bd-46af-b618-32d4a22a7450
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.deposition_cond
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.deposition_cond
+target_entity_type_id: taxonomy_term
+target_bundle: deposition_cond
+default_langcode: site_default
+language_alterable: true

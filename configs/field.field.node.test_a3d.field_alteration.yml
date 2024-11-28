@@ -1,0 +1,29 @@
+uuid: bd96a117-14c5-4cc5-9dd0-306c99176c56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alteration
+    - node.type.test_a3d
+    - taxonomy.vocabulary.alteration
+id: node.test_a3d.field_alteration
+field_name: field_alteration
+entity_type: node
+bundle: test_a3d
+label: Alteration
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      alteration: alteration
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

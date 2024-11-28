@@ -1,0 +1,8 @@
+uuid: ccc0f440-107c-4c07-9507-5aaaec7f5b01
+langcode: en
+status: true
+dependencies: {  }
+name: 'Tile type'
+vid: tile_type
+description: KCH
+weight: 0

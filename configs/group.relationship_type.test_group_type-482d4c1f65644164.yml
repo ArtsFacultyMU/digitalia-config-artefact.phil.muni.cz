@@ -1,0 +1,17 @@
+uuid: fa062bba-48a5-4175-9f10-1b7fb0fc669d
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.fract_nature
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-482d4c1f65644164
+group_type: test_group_type
+content_plugin: 'group_term:fract_nature'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

@@ -1,0 +1,29 @@
+uuid: 28bf47f9-334d-435e-9273-ac6c70e0062b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tip_fracture
+    - node.type.a3d_object
+    - taxonomy.vocabulary.tip_fracture
+id: node.a3d_object.field_tip_fracture
+field_name: field_tip_fracture
+entity_type: node
+bundle: a3d_object
+label: 'Tip fracture'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tip_fracture: tip_fracture
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

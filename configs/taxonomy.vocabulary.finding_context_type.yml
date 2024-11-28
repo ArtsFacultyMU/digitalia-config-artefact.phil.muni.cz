@@ -1,0 +1,8 @@
+uuid: 35c09e1b-f682-4b89-a43c-7a0956fafa71
+langcode: en
+status: true
+dependencies: {  }
+name: 'Finding context (type)'
+vid: finding_context_type
+description: ''
+weight: 0

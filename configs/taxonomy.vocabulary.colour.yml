@@ -1,0 +1,8 @@
+uuid: 22b72635-ebf3-4a3f-aa26-ef8956dcbd4f
+langcode: en
+status: true
+dependencies: {  }
+name: Colour
+vid: colour
+description: 'KCH: taxonomy for clay colours'
+weight: 0

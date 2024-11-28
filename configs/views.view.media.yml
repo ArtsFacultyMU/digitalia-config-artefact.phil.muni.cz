@@ -794,9 +794,9 @@ display:
             first: '« First'
             last: 'Last »'
           expose:
-            items_per_page: false
+            items_per_page: true
             items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options: '5, 10, 25, 50, 100, 250, 500, 1000'
             items_per_page_options_all: false
             items_per_page_options_all_label: '- All -'
             offset: false
@@ -2027,6 +2027,9 @@ display:
             encoding: utf8
             utf8_bom: '0'
             use_serializer_encode_only: false
+      row:
+        type: data_entity
+        options: {  }
       defaults:
         fields: false
       display_extenders:

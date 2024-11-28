@@ -1,0 +1,29 @@
+uuid: 7274139f-b6ea-4ec1-a302-1667ab020274
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_retouch
+    - node.type.a3d_object
+    - taxonomy.vocabulary.retouch
+id: node.a3d_object.field_retouch
+field_name: field_retouch
+entity_type: node
+bundle: a3d_object
+label: Retouch
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      retouch: retouch
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

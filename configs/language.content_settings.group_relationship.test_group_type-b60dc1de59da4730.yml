@@ -1,0 +1,18 @@
+uuid: e7cacb3a-97dd-4cd8-8db0-4f2255cd0e56
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.relationship_type.test_group_type-b60dc1de59da4730
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: group_relationship.test_group_type-b60dc1de59da4730
+target_entity_type_id: group_relationship
+target_bundle: test_group_type-b60dc1de59da4730
+default_langcode: site_default
+language_alterable: false

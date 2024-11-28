@@ -1,0 +1,11 @@
+uuid: 23b6c756-6dfe-4047-bcae-dbe6a9ada85a
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: arf_calculate_position_taxonomy
+title: 'ARF calculate position taxonomy'
+content:
+  value: '<script id="calculate-position-grid" var-pages="40" type="module" src="/modules/custom/digitalia_muni_a3d_javascript/js/a3d_calculate_position_grid.js"></script>'
+  format: full_html

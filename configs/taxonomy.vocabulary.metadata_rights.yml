@@ -1,0 +1,8 @@
+uuid: 9b560d34-d679-4ade-a6e6-9b2c5359cf1f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Metadata rights'
+vid: metadata_rights
+description: ''
+weight: 0

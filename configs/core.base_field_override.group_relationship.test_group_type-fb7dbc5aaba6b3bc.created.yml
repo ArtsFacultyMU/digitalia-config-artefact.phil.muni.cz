@@ -1,0 +1,18 @@
+uuid: 77fe6373-5613-4108-a7fa-def4c1d8372c
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.relationship_type.test_group_type-fb7dbc5aaba6b3bc
+id: group_relationship.test_group_type-fb7dbc5aaba6b3bc.created
+field_name: created
+entity_type: group_relationship
+bundle: test_group_type-fb7dbc5aaba6b3bc
+label: 'Created on'
+description: 'The time that the group relationship was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

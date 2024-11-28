@@ -1,0 +1,21 @@
+uuid: a99c66dc-61ce-4aef-bd1a-7389ff5c92aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_field_st_placement_certain
+    - node.type.test_a3d
+id: node.test_a3d.field_field_st_placement_certain
+field_name: field_field_st_placement_certain
+entity_type: node
+bundle: test_a3d
+label: 'Stove tile shape certainty'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Certain
+  off_label: Uncertain
+field_type: boolean

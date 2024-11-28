@@ -1,0 +1,18 @@
+uuid: 556a6b00-dd25-433a-9c8d-04b2cf945c04
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.2d_asymetry
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.2d_asymetry
+target_entity_type_id: taxonomy_term
+target_bundle: 2d_asymetry
+default_langcode: site_default
+language_alterable: true

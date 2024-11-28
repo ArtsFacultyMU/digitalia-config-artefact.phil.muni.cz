@@ -1,0 +1,14 @@
+uuid: 250425e3-cd40-46f2-8481-76f9bbf2608c
+langcode: en
+status: true
+dependencies:
+  config:
+    - key.key.nef_group_id
+    - system.action.group_add_content_to_nef_group
+id: action_group_add_nef
+label: 'Action group add NEF'
+config_type: action
+config_prefix: system.action
+config_name: group_add_content_to_nef_group
+config_item: configuration.group_id
+key_id: nef_group_id

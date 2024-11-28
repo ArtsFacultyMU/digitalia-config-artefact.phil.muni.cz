@@ -1,0 +1,212 @@
+uuid: 3e7205ec-dcd3-406b-93a6-8d8498aed95d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - field.field.taxonomy_term.instrument.field_alternate_identifier
+    - field.field.taxonomy_term.instrument.field_date_commissioned
+    - field.field.taxonomy_term.instrument.field_date_decommissioned
+    - field.field.taxonomy_term.instrument.field_instrument_model
+    - field.field.taxonomy_term.instrument.field_instrument_type
+    - field.field.taxonomy_term.instrument.field_manufacturer
+    - field.field.taxonomy_term.instrument.field_measured_variable
+    - field.field.taxonomy_term.instrument.field_model_identifier
+    - field.field.taxonomy_term.instrument.field_model_identifier_type
+    - field.field.taxonomy_term.instrument.field_owner
+    - field.field.taxonomy_term.instrument.field_related_identifier
+    - taxonomy.vocabulary.instrument
+  module:
+    - datafield
+    - datetime
+    - text
+id: taxonomy_term.instrument.full
+targetEntityType: taxonomy_term
+bundle: instrument
+mode: full
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_alternate_identifier:
+    type: data_field_table_formatter
+    label: inline
+    settings:
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
+      number_column: false
+      number_column_label: №
+      direction: horizontal
+      mode: table
+      caption: ''
+      footer_text: ''
+      datatables_options:
+        bExpandable: true
+        bInfo: true
+        scrollX: true
+        bStateSave: false
+        paging: true
+        ordering: true
+        searching: true
+        show-export: true
+        bMultiFilter: false
+      bootstrap_table_options:
+        sticky-header: true
+        search: true
+        show-search-clear-button: true
+        show-refresh: true
+        show-toggle: true
+        show-fullscreen: true
+        show-columns: true
+        data-detail-view: true
+        show-columns-toggle-all: true
+        mobile-responsive: true
+        show-print: true
+        show-copy-rows: true
+        show-export: true
+        sortable: true
+        click-to-select: true
+        show-pagination-switch: true
+        pagination: true
+        cookie: true
+        show-footer: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_date_commissioned:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_date_decommissioned:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_instrument_model:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_instrument_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_manufacturer:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_measured_variable:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_model_identifier:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_model_identifier_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_owner:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_related_identifier:
+    type: data_field_table_formatter
+    label: inline
+    settings:
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
+      number_column: false
+      number_column_label: №
+      direction: horizontal
+      mode: table
+      caption: ''
+      footer_text: ''
+      datatables_options:
+        bExpandable: true
+        bInfo: true
+        scrollX: true
+        bStateSave: false
+        paging: true
+        ordering: true
+        searching: true
+        show-export: true
+        bMultiFilter: false
+      bootstrap_table_options:
+        sticky-header: true
+        search: true
+        show-search-clear-button: true
+        show-refresh: true
+        show-toggle: true
+        show-fullscreen: true
+        show-columns: true
+        data-detail-view: true
+        show-columns-toggle-all: true
+        mobile-responsive: true
+        show-print: true
+        show-copy-rows: true
+        show-export: true
+        sortable: true
+        click-to-select: true
+        show-pagination-switch: true
+        pagination: true
+        cookie: true
+        show-footer: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

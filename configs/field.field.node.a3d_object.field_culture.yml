@@ -1,0 +1,29 @@
+uuid: e38c3d06-079c-4a39-93c8-b251dfe2578b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_culture
+    - node.type.a3d_object
+    - taxonomy.vocabulary.culture
+id: node.a3d_object.field_culture
+field_name: field_culture
+entity_type: node
+bundle: a3d_object
+label: Culture
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      culture: culture
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

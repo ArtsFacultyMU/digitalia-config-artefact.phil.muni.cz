@@ -71,6 +71,7 @@ content:
     settings:
       prefix: '<strong>'
       suffix: '</strong>'
+      strict: false
     third_party_settings: {  }
     weight: 5
     region: content

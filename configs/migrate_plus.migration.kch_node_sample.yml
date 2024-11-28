@@ -1,0 +1,29 @@
+uuid: C7A01ABC-E482-487D-8809-787E6252CA84
+langcode: en
+status: true
+dependencies: {  }
+id: kch_node_sample
+migration_group: kch
+label: 'Import samples'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/analysis.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - uri
+  constants:
+    uid: 5
+    id: 1
+process:
+  uid: constants/uid
+  title: constants/id
+  field_sample_id: constants/id
+  field_object_reference:
+    plugin: migration_lookup
+    migration: kch_node_a3d_object
+    source: uri
+destination:
+  plugin: 'entity:node'
+  default_bundle: sample
+migration_dependencies: null

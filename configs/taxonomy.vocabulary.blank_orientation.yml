@@ -1,0 +1,8 @@
+uuid: b0822df7-7ca8-4e25-b1ae-a66cb34220e2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Blank orientation (blank axis)'
+vid: blank_orientation
+description: ''
+weight: 0

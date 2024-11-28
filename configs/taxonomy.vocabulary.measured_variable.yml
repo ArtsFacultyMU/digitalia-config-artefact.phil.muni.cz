@@ -1,0 +1,8 @@
+uuid: cddb3e4e-df51-4c23-ba2b-c85b2b18c791
+langcode: en
+status: true
+dependencies: {  }
+name: 'Measured Variable'
+vid: measured_variable
+description: 'The variable(s) that this instrument measures or observes'
+weight: 0

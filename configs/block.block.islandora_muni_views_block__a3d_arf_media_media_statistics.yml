@@ -1,0 +1,35 @@
+uuid: 2ee81470-8f15-4737-8dc3-9b62fe1f12eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.a3d_arf_media
+  module:
+    - islandora
+    - system
+    - views
+  theme:
+    - islandora_muni
+id: islandora_muni_views_block__a3d_arf_media_media_statistics
+theme: islandora_muni
+region: content
+weight: -35
+provider: null
+plugin: 'views_block:a3d_arf_media-media_statistics'
+settings:
+  id: 'views_block:a3d_arf_media-media_statistics'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: /arf/documentation

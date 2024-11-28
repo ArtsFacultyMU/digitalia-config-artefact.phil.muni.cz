@@ -2,6 +2,10 @@ uuid: a5560c22-947e-44d3-9707-5938710cb5f2
 langcode: en
 status: true
 dependencies:
+  module:
+    - islandora
+    - system
+    - user
   theme:
     - islandora_muni
 _core:
@@ -9,7 +13,7 @@ _core:
 id: islandora_muni_primary_admin_actions
 theme: islandora_muni
 region: highlighted
-weight: -6
+weight: -27
 provider: null
 plugin: local_actions_block
 settings:
@@ -17,4 +21,20 @@ settings:
   label: 'Primary admin actions'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/group/*/nodes\r\n"

@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_place_published_country
     - node.type.islandora_object
-    - taxonomy.vocabulary.country
 _core:
   default_config_hash: NpwizIZgL-Ui19aqXM6UnOvfG8GtRGFdUP11fwUvxYM
 id: node.islandora_object.field_place_published_country
@@ -21,8 +20,7 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
-    target_bundles:
-      country: country
+    target_bundles: {  }
     sort:
       field: name
       direction: asc

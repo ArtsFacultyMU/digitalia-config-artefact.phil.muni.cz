@@ -9,7 +9,7 @@ _core:
 id: islandora_muni_secondary_local_tasks
 theme: islandora_muni
 region: highlighted
-weight: -3
+weight: -28
 provider: null
 plugin: local_tasks_block
 settings:

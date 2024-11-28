@@ -1,0 +1,22 @@
+_core:
+  default_config_hash: exRaKE0s6uZbfQrl_2WFEcTlc_1t81xEqCLuCCteUSk
+minimum_single: 0
+minimum_multiple: 0
+disable_search_threshold: 0
+minimum_width: 100
+max_shown_results: null
+use_relative_width: true
+jquery_selector: 'select#edit-field-site--2,select#edit-field-site,select#edit-field-preserved-parts,select#edit-field-recent-damage-type-struct,select#edit-field-posture,select#edit-field-preserved-parts-struct--2,select#edit-field-artefact-category--2,select#edit-field-deposition-cond--2,select#edit-field-feature-type--2,select#edit-field-g-w-practice--2,select#edit-field-orig-state-pres--2,select#edit-field-raw-material--2,select#edit-field-recent-damage--2,select#edit-field-surface-alt--2,select#edit-field-ownership--2,select#edit-a3d-object-parent-groups--2,select#edit-field-relative-datation--2,select#edit-vid--2,select#edit-vid,select#edit-field-3d-shaping-struct--2,select#edit-field-3d-traces-struct--2,select#edit-field-colour-paint--2,select#edit-field-fract-preservation-struct--2,select#edit-field-recent-damage-type-struct--2,select#edit-field-posture--2,select.js-facets-dropdown,select#edit-field-preserved-parts-struct-facet--3,.form--inline select.form-select'
+search_contains: false
+disable_search: false
+allow_single_deselect: false
+add_helper_buttons: false
+disabled_themes:
+  claro: '0'
+  olivero: '0'
+  bartik: '0'
+  islandora_muni: '0'
+chosen_include: 1
+placeholder_text_multiple: '- All -'
+placeholder_text_single: '- All -'
+no_results_text: 'No results match'

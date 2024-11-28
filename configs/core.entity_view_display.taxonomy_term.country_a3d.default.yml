@@ -1,0 +1,29 @@
+uuid: 84262ea4-1e72-42c5-9f41-92fafc3037c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.country_a3d
+  module:
+    - text
+id: taxonomy_term.country_a3d.default
+targetEntityType: taxonomy_term
+bundle: country_a3d
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

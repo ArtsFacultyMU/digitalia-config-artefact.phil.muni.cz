@@ -1,0 +1,20 @@
+uuid: a5c0eb3b-5175-448e-ba0e-f8c03fde2e0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.stove_tile_placement_type_2
+  module:
+    - metatag
+id: taxonomy_term.stove_tile_placement_type_2.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: stove_tile_placement_type_2
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

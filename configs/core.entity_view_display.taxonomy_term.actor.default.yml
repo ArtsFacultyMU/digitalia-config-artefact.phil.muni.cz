@@ -1,0 +1,111 @@
+uuid: 30877677-06a3-428f-8278-02a4a1ae45ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.actor.field_actor_type
+    - field.field.taxonomy_term.actor.field_alternate_identifier
+    - field.field.taxonomy_term.actor.field_contact_email
+    - taxonomy.vocabulary.actor
+  module:
+    - datafield
+    - text
+id: taxonomy_term.actor.default
+targetEntityType: taxonomy_term
+bundle: actor
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_actor_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_alternate_identifier:
+    type: data_field_table_formatter
+    label: above
+    settings:
+      formatter_settings:
+        id:
+          format_type: text_default
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        id_type:
+          format_type: entity_reference_label
+          weight: '0'
+          hidden: 0
+          show_label: 0
+          link: 0
+        note:
+          format_type: string
+          weight: '0'
+          hidden: 0
+          show_label: 0
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
+      number_column: false
+      number_column_label: №
+      direction: horizontal
+      mode: table
+      caption: ''
+      footer_text: ''
+      datatables_options:
+        bExpandable: true
+        bInfo: true
+        scrollX: true
+        bStateSave: false
+        paging: true
+        ordering: true
+        searching: true
+        show-export: true
+        bMultiFilter: false
+      bootstrap_table_options:
+        sticky-header: true
+        search: true
+        show-search-clear-button: true
+        show-refresh: true
+        show-toggle: true
+        show-fullscreen: true
+        show-columns: true
+        data-detail-view: true
+        show-columns-toggle-all: true
+        mobile-responsive: true
+        show-print: true
+        show-copy-rows: true
+        show-export: true
+        sortable: true
+        click-to-select: true
+        show-pagination-switch: true
+        pagination: true
+        cookie: true
+        show-footer: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_contact_email:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

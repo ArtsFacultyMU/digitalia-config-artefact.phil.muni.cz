@@ -1,0 +1,34 @@
+uuid: a95a452f-5862-4f32-a06e-e5432bf6b342
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.a3d_kch_search_index
+  module:
+    - islandora
+    - system
+    - views
+  theme:
+    - islandora_muni
+id: islandora_muni_exposedforma3d_kch_search_indexkch_search_top
+theme: islandora_muni
+region: header
+weight: -34
+provider: null
+plugin: 'views_exposed_filter_block:a3d_kch_search_index-kch_search_top'
+settings:
+  id: 'views_exposed_filter_block:a3d_kch_search_index-kch_search_top'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/kch\r\n/kch/*\r\n/group/kch\r\n/group/kch/*\r\n/group/13\r\n/group/13/*\r\n/compare/*/kch"

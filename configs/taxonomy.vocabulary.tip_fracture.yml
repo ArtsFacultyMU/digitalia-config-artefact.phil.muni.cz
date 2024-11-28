@@ -1,0 +1,8 @@
+uuid: 824837e4-8c68-42ea-a437-4a2801118103
+langcode: en
+status: true
+dependencies: {  }
+name: 'Tip fracture'
+vid: tip_fracture
+description: ''
+weight: 0

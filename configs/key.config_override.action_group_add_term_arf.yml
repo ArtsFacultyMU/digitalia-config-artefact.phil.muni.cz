@@ -1,0 +1,14 @@
+uuid: d6f3501a-17e8-40de-9c13-950dff4afb13
+langcode: en
+status: true
+dependencies:
+  config:
+    - key.key.arf_group_id
+    - system.action.group_add_term_to_arf
+id: action_group_add_term_arf
+label: 'Action group add term ARF'
+config_type: action
+config_prefix: system.action
+config_name: group_add_term_to_arf
+config_item: configuration.group_id
+key_id: arf_group_id

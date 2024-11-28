@@ -1,0 +1,8 @@
+uuid: 801bd5b6-9bd8-4371-a23a-15bc960e696e
+langcode: en
+status: true
+dependencies: {  }
+id: nef-main-menu
+label: 'NEF main menu'
+description: ''
+locked: false

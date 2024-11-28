@@ -1,0 +1,19 @@
+uuid: 9d9cf126-5bfc-41c7-a6ba-af7954d6071e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_instrument_model
+    - taxonomy.vocabulary.instrument
+id: taxonomy_term.instrument.field_instrument_model
+field_name: field_instrument_model
+entity_type: taxonomy_term
+bundle: instrument
+label: Model
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

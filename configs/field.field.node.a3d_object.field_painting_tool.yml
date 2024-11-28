@@ -1,0 +1,19 @@
+uuid: 67abe4f3-af88-4d12-9c5c-a094cecfcf40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_painting_tool
+    - node.type.a3d_object
+id: node.a3d_object.field_painting_tool
+field_name: field_painting_tool
+entity_type: node
+bundle: a3d_object
+label: 'Painting (identified in DStretch tool - mode)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

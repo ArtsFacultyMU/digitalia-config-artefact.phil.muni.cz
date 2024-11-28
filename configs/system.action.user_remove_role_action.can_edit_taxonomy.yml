@@ -1,0 +1,14 @@
+uuid: fd9f1473-2fde-4343-a0d6-8e34fe1929ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.can_edit_taxonomy
+  module:
+    - user
+id: user_remove_role_action.can_edit_taxonomy
+label: 'Remove the Can edit taxonomy role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: can_edit_taxonomy

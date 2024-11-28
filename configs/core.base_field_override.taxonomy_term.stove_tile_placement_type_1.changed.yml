@@ -1,0 +1,18 @@
+uuid: 8cad652b-89c8-4ca8-8e8e-c11d90a8f366
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.stove_tile_placement_type_1
+id: taxonomy_term.stove_tile_placement_type_1.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: stove_tile_placement_type_1
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

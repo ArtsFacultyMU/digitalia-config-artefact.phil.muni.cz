@@ -1,0 +1,29 @@
+uuid: e4a1fb45-f79d-4ade-8710-02c143c246b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artefact_subclass
+    - node.type.test_a3d
+    - taxonomy.vocabulary.artefact_subclass
+id: node.test_a3d.field_artefact_subclass
+field_name: field_artefact_subclass
+entity_type: node
+bundle: test_a3d
+label: 'Artefact subclass'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      artefact_subclass: artefact_subclass
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

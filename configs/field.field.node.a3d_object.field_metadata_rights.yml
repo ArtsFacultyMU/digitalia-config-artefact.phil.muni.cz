@@ -1,0 +1,29 @@
+uuid: d0170b8d-b592-4bc9-861b-6601056e43b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metadata_rights
+    - node.type.a3d_object
+    - taxonomy.vocabulary.metadata_rights
+id: node.a3d_object.field_metadata_rights
+field_name: field_metadata_rights
+entity_type: node
+bundle: a3d_object
+label: 'Metadata rights'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      metadata_rights: metadata_rights
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

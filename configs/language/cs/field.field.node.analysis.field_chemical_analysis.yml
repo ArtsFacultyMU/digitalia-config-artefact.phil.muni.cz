@@ -1,0 +1,7 @@
+label: 'Chemická analýza'
+settings:
+  field_settings:
+    chemical:
+      label: 'Chemická sloučenina'
+    value:
+      label: Hodnota

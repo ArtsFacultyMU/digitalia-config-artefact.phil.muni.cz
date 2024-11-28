@@ -1,0 +1,22 @@
+uuid: ef7db04f-7fe0-422f-bb2f-99d90ee895b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.test_level_0
+id: taxonomy_term.test_level_0.status
+field_name: status
+entity_type: taxonomy_term
+bundle: test_level_0
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

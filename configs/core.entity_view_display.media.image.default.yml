@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_description
+    - field.field.media.image.field_featured
     - field.field.media.image.field_file_size
     - field.field.media.image.field_height
     - field.field.media.image.field_media_image
@@ -14,7 +16,9 @@ dependencies:
     - image.style.max_1300x1300
     - media.type.image
   module:
+    - entity_comparison
     - image
+    - text
 _core:
   default_config_hash: mH-3GLriL2Vx34DOnmHTqPxMCEmqJLtesug6_H_6piM
 id: media.image.default
@@ -22,6 +26,23 @@ targetEntityType: media
 bundle: image
 mode: default
 content:
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_featured:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
   field_file_size:
     type: number_integer
     label: above
@@ -96,6 +117,38 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
+  link_for_entity_comparison_a3d_arf_entity_comparison:
+    type: entity_comparison_link
+    label: above
+    settings:
+      enitity_comparison: ''
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  link_for_entity_comparison_a3d_image_comparison:
+    type: entity_comparison_link
+    label: above
+    settings:
+      enitity_comparison: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  link_for_entity_comparison_a3d_meta_entity_comparison:
+    type: entity_comparison_link
+    label: above
+    settings:
+      enitity_comparison: ''
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  link_for_entity_comparison_a3d_nef_entity_comparison:
+    type: entity_comparison_link
+    label: above
+    settings:
+      enitity_comparison: ''
+    third_party_settings: {  }
+    weight: 100
+    region: content
   name:
     type: string
     label: above
@@ -105,6 +158,7 @@ content:
     weight: 0
     region: content
 hidden:
+  a3d_comparison_image_entity_view_1: true
   created: true
   langcode: true
   search_api_excerpt: true

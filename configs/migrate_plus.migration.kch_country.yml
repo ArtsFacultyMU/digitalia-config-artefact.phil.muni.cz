@@ -1,0 +1,27 @@
+uuid: 8DBB9024-F231-43E4-9AF9-64815F343B63
+langcode: en
+status: true
+dependencies: {  }
+id: kch_country
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: kch
+label: 'Import countries'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/country.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: country_a3d
+migration_dependencies: null

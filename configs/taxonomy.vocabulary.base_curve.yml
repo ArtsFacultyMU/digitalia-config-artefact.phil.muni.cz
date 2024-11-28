@@ -1,0 +1,8 @@
+uuid: b01e44c0-526b-4509-9627-b68f90030dfa
+langcode: en
+status: true
+dependencies: {  }
+name: 'Base curve'
+vid: base_curve
+description: ''
+weight: 0

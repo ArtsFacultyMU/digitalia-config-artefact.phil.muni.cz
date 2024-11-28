@@ -1,0 +1,18 @@
+uuid: ef27f598-a0ea-4dd1-98bb-94503ec8a2c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.analysis
+id: node.analysis.title
+field_name: title
+entity_type: node
+bundle: analysis
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

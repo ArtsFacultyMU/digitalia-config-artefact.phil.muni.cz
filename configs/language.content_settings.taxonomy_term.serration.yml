@@ -1,0 +1,18 @@
+uuid: 9bfb13d6-6f8e-4a86-8617-35ef1a6de369
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.serration
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.serration
+target_entity_type_id: taxonomy_term
+target_bundle: serration
+default_langcode: site_default
+language_alterable: true

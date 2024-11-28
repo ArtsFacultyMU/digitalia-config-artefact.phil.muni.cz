@@ -1,0 +1,35 @@
+uuid: 3a8688e4-6e84-4b02-b5ae-67d7abaf5a2b
+langcode: en
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.a3d_move_result_summary
+  module:
+    - context
+    - islandora
+    - simple_block
+  theme:
+    - islandora_muni
+id: islandora_muni_a3dmoveresultsummary
+theme: islandora_muni
+region: footer_first
+weight: -43
+provider: null
+plugin: 'simple_block:a3d_move_result_summary'
+settings:
+  id: 'simple_block:a3d_move_result_summary'
+  label: 'A3D move result summary'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-a3d_meta_search_index-a3d_search: view-a3d_meta_search_index-a3d_search
+      view-a3d_nef_search_index-nef_search: view-a3d_nef_search_index-nef_search
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

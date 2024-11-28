@@ -1,0 +1,22 @@
+uuid: 3178a40a-7ed0-4a43-82a6-6e8edfcd7c13
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.test_a3d
+id: node.test_a3d.status
+field_name: status
+entity_type: node
+bundle: test_a3d
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

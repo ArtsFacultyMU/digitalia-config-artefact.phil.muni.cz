@@ -1,0 +1,21 @@
+uuid: 3f5c8618-ddc3-4a06-8b1d-c5ec8cf06903
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.format_size
+  module:
+    - text
+id: taxonomy_term.format_size.description
+field_name: description
+entity_type: taxonomy_term
+bundle: format_size
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

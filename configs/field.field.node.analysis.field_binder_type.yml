@@ -1,0 +1,31 @@
+uuid: ebf00e33-dbb9-402c-8fb7-6944396e3a16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_binder_type
+    - node.type.analysis
+    - taxonomy.vocabulary.binder_type
+    - taxonomy.vocabulary.unknown_values
+id: node.analysis.field_binder_type
+field_name: field_binder_type
+entity_type: node
+bundle: analysis
+label: 'Binder type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      binder_type: binder_type
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: binder_type
+field_type: entity_reference

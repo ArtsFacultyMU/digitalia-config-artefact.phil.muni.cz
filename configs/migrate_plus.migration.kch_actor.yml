@@ -1,0 +1,35 @@
+uuid: 53DBAC64-E85F-4C03-9B75-30721B45291B
+langcode: en
+id: kch_actor
+migration_group: kch
+label: 'Import actors (institutions)'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/actors.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - Instituce
+  constants:
+    uid: 5
+    id_type: URL
+process:
+  uid: constants/uid
+  name: Instituce
+  field_actor_type:
+    plugin: migration_lookup
+    migration: kch_actor_type
+    source: Typ
+  field_alternate_identifier/id: Odkaz
+  field_alternate_identifier/id_type:
+    -
+      plugin: migration_lookup
+      migration: kch_identifier_type
+      source: constants/id_type
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: actor
+migration_dependencies:
+  required:
+    - kch_actor_type
+    - kch_identifier_type

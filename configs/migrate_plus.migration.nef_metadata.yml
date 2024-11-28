@@ -1,0 +1,339 @@
+uuid: 77f9bf14-0e79-4840-9463-db85a47cf090
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: TSmzvdb0Ez0oyUVnrGfjmvCBZvKiddOpLiHJjJyvmYE
+id: nef_metadata
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: nef
+label: ''
+source:
+  plugin: csv
+  path: /data/platform_data/nef/nef_metadata.csv
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  ids:
+    - field_alternative_id
+  constants:
+    SPATIAL_REF_SYSTEM: WSG84
+    LOC_COORD_CADASTRE_ACCURACY: cadastre
+    RECORD_SOURCE: 'Faculty of Arts, Masaryk University'
+    COUNTRY: Czechia
+    GENERAL_TYPE: artefact
+    AUTHOR: 'Ludmila Kaňáková'
+    AUTHOR_MODELS: 'Vojtěch Nosek'
+    DELIMITER: '|'
+    ARTEFACT_CATEGORY: figurine
+process:
+  title: field_artefact_id
+  field_auth_3d_models:
+    -
+      plugin: entity_generate
+      source: constants/AUTHOR_MODELS
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: author
+  field_auth_res_data:
+    -
+      plugin: entity_generate
+      source: constants/AUTHOR
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: author
+  field_artefact_id: field_artefact_id
+  field_artefact_category:
+    -
+      plugin: entity_generate
+      source: constants/ARTEFACT_CATEGORY
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: artefact_category
+  field_alternative_id: field_alternative_id
+  field_site:
+    -
+      plugin: entity_generate
+      source: field_site
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: site
+  field_wgs84_geolocation/lat:
+    -
+      plugin: explode
+      source: field_geolocation
+      delimiter: ','
+    -
+      plugin: extract
+      index:
+        - 0
+    -
+      plugin: str_replace
+      regex: true
+      search: '/[a-zA-Z]/'
+      replace: ''
+  field_wgs84_geolocation/lng:
+    -
+      plugin: explode
+      source: field_geolocation
+      delimiter: ','
+    -
+      plugin: extract
+      index:
+        - 1
+    -
+      plugin: str_replace
+      regex: true
+      search: '/[a-zA-Z]/'
+      replace: ''
+  field_wgs84_geolocation_accuracy:
+    -
+      plugin: entity_generate
+      source: constants/LOC_COORD_CADASTRE_ACCURACY
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: loc_coord_cadastre_accuracy
+  field_finding_context_loc: field_finding_context_loc
+  field_description_a3d: field_description_a3d
+  field_posture:
+    -
+      plugin: entity_generate
+      source: field_posture
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: posture
+  field_preserved_parts: field_preserved_parts
+  field_preserved_parts_struct:
+    -
+      plugin: skip_on_empty
+      source: field_preserved_parts_struct
+      method: process
+    -
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: single_value
+    -
+      plugin: callback
+      callable: sortReturnSorted
+    -
+      plugin: multiple_values
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: preserved_parts
+  field_3d_shaping: field_3d_shaping
+  field_3d_shaping_struct:
+    -
+      plugin: skip_on_empty
+      source: field_3d_shaping_struct
+      method: process
+    -
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: single_value
+    -
+      plugin: callback
+      callable: sortReturnSorted
+    -
+      plugin: multiple_values
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: 3d_shaping
+  field_3d_traces: field_3d_traces
+  field_3d_traces_struct:
+    -
+      plugin: skip_on_empty
+      source: field_3d_traces_struct
+      method: process
+    -
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: single_value
+    -
+      plugin: callback
+      callable: sortReturnSorted
+    -
+      plugin: multiple_values
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: 3d_traces
+  field_recent_damage_type: field_recent_damage_type
+  field_recent_damage_type_struct:
+    -
+      plugin: skip_on_empty
+      source: field_recent_damage_type_struct
+      method: process
+    -
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: single_value
+    -
+      plugin: callback
+      callable: sortReturnSorted
+    -
+      plugin: multiple_values
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: recent_damage_type
+  field_micro_ct: field_micro_ct
+  field_thermic_cracks:
+    -
+      plugin: entity_generate
+      source: field_thermic_cracks
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: thermic_cracks
+  field_polished_sec_petrography: field_polished_sec_petrography
+  field_mineralogy: field_mineralogy
+  field_wear: field_wear
+  field_colour_paint:
+    -
+      plugin: skip_on_empty
+      source: field_colour_paint
+      method: process
+    -
+      plugin: explode
+      source: field_colour_paint
+      delimiter: '|'
+    -
+      plugin: single_value
+    -
+      plugin: callback
+      callable: sortReturnSorted
+    -
+      plugin: multiple_values
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: colour
+  field_painting_eye: field_painting_eye
+  field_painting_microscope: field_painting_microscope
+  field_painting_tool: field_painting_tool
+  field_pigment:
+    -
+      plugin: skip_on_empty
+      source: field_pigment
+      method: process
+    -
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: single_value
+    -
+      plugin: callback
+      callable: sortReturnSorted
+    -
+      plugin: multiple_values
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: pigment
+  field_fract_preservation: field_fract_preservation
+  field_fract_preservation_struct:
+    -
+      plugin: skip_on_empty
+      source: field_fract_preservation_struct
+      method: process
+    -
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: callback
+      callable: trim
+    -
+      plugin: single_value
+    -
+      plugin: callback
+      callable: sortReturnSorted
+    -
+      plugin: multiple_values
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: fract_preservation
+  field_fract_nature: field_fract_nature
+  field_relative_datation:
+    -
+      plugin: entity_generate
+      source: field_relative_datation
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: relative_datation
+  field_record_source:
+    -
+      plugin: entity_generate
+      source: constants/RECORD_SOURCE
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: record_source
+  field_country:
+    -
+      plugin: entity_generate
+      source: constants/COUNTRY
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: country_a3d
+  field_general_type:
+    -
+      plugin: entity_generate
+      source: constants/GENERAL_TYPE
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: general_type
+  field_private_note: field_private_note
+destination:
+  plugin: 'entity:node'
+  default_bundle: a3d_object
+migration_dependencies:
+  required: {  }
+  optional: {  }

@@ -1,6 +1,6 @@
 uuid: a95bc811-9f01-403e-abaa-da18bdc08dae
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.resource_type_swc
@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_resource_type_swc
 theme: islandora_muni
 region: header
-weight: -14
+weight: -29
 provider: null
 plugin: 'facet_block:resource_type_swc'
 settings:

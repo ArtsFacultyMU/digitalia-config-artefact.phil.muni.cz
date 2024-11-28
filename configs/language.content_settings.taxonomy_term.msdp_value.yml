@@ -1,0 +1,18 @@
+uuid: 58e95c1a-727b-4feb-9b1a-7e9c99f4d032
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.msdp_value
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.msdp_value
+target_entity_type_id: taxonomy_term
+target_bundle: msdp_value
+default_langcode: site_default
+language_alterable: true

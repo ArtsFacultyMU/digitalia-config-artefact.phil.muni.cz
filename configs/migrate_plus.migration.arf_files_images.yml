@@ -1,0 +1,51 @@
+uuid: b001c383-3604-42d3-a632-7fa388dca92f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: TSmzvdb0Ez0oyUVnrGfjmvCBZvKiddOpLiHJjJyvmYE
+id: arf_files_images
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: arf
+label: ''
+source:
+  plugin: csv
+  path: /data/platform_data/arf/arf_images.csv
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    FEDORA_URI: 'fedora://arf/images'
+    IMAGE_URI: /data/platform_data/arf
+process:
+  image_source_path:
+    plugin: concat
+    delimiter: /
+    source:
+      - constants/IMAGE_URI
+      - field_alternative_id
+      - filename
+  image_destination_path:
+    plugin: concat
+    delimiter: /
+    source:
+      - constants/FEDORA_URI
+      - field_alternative_id
+      - filename
+  uri:
+    plugin: file_copy
+    source:
+      - '@image_source_path'
+      - '@image_destination_path'
+    file_exists: replace
+    move: false
+destination:
+  plugin: 'entity:file'
+migration_dependencies:
+  required: {  }
+  optional: {  }

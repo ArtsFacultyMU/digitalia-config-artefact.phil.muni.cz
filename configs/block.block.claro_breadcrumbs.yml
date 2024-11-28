@@ -3,7 +3,10 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_class
+    - islandora
     - system
+    - user
   theme:
     - claro
 _core:
@@ -19,4 +22,16 @@ settings:
   label: Breadcrumbs
   label_display: '0'
   provider: system
-visibility: {  }
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator

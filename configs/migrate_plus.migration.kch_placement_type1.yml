@@ -1,0 +1,20 @@
+uuid: A22E83CD-A571-4A3B-959C-DFAE6128E044
+langcode: en
+id: kch_placement_type1
+migration_group: kch
+label: 'Import placement type 1'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/stove_tile_placement_type1.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: stove_tile_placement_type_1

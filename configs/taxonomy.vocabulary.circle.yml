@@ -1,0 +1,8 @@
+uuid: 7150c591-821e-459a-b763-dfcfc519d7cd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Thematic group'
+vid: circle
+description: 'KCH (okruh)'
+weight: 0

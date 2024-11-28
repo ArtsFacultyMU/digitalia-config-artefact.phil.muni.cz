@@ -1,0 +1,29 @@
+uuid: 0db2d998-3495-40ae-9998-29159f2c4f7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recent_damage
+    - node.type.a3d_object
+    - taxonomy.vocabulary.recent_damage
+id: node.a3d_object.field_recent_damage
+field_name: field_recent_damage
+entity_type: node
+bundle: a3d_object
+label: 'Recent damage & alteration'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      recent_damage: recent_damage
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 996ecaec-e515-4241-bcae-6df6ecc42721
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.a3d_object
+id: node.a3d_object.sticky
+field_name: sticky
+entity_type: node
+bundle: a3d_object
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

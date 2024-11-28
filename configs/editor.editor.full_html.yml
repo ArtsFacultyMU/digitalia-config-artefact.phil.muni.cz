@@ -13,7 +13,6 @@ settings:
     items:
       - bold
       - italic
-      - strikethrough
       - superscript
       - subscript
       - removeFormat
@@ -32,7 +31,23 @@ settings:
       - codeBlock
       - '|'
       - sourceEditing
+      - '|'
+      - specialCharacters
+      - underline
+      - code
+      - fontColor
+      - fontBackgroundColor
+      - alignment
+      - showBlocks
+      - strikethrough
+      - style
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
     ckeditor5_codeBlock:
       languages:
         -
@@ -77,8 +92,11 @@ settings:
         -
           label: XML
           language: xml
+    ckeditor5_font_colors:
+      colors: '[{"color":"#000000","label":"black"},{"color":"#ffffff","label":"white"},{"color":"#4e9006","label":"green"}]'
     ckeditor5_heading:
       enabled_headings:
+        - heading1
         - heading2
         - heading3
         - heading4
@@ -93,6 +111,14 @@ settings:
       multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
+    ckeditor5_style:
+      styles:
+        -
+          label: 'RED TEXT'
+          element: '<span class="text_red">'
+        -
+          label: 'WHITE TEXT'
+          element: '<span class="text_white">'
 image_upload:
   status: true
   scheme: public

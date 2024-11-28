@@ -1,0 +1,8 @@
+uuid: 43403792-16d1-4089-bba8-57827d2037f1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Surface data presence value'
+vid: sdp_value
+description: ''
+weight: 0

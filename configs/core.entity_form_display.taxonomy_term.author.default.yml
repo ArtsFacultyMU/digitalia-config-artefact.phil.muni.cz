@@ -1,0 +1,85 @@
+uuid: 32b30af6-225d-4259-8387-cd014743ee44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.author.field_name
+    - taxonomy.vocabulary.author
+  module:
+    - name
+    - path
+    - text
+id: taxonomy_term.author.default
+targetEntityType: taxonomy_term
+bundle: author
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_name:
+    type: name_default
+    weight: 1
+    region: content
+    settings:
+      override_field_settings: false
+      labels:
+        title: Title
+        given: Given
+        middle: 'Middle name(s)'
+        family: Family
+        generational: Generational
+        credentials: Credentials
+      widget_layout: stacked
+      show_component_required_marker: false
+      credentials_inline: false
+      size:
+        title: 6
+        given: 20
+        middle: 20
+        family: 20
+        generational: 5
+        credentials: 35
+      title_display:
+        title: description
+        given: description
+        middle: description
+        family: description
+        generational: description
+        credentials: description
+      field_title_display: before
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }

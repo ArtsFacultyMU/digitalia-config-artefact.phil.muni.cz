@@ -1,0 +1,20 @@
+uuid: 55303675-39d4-46e8-a205-68d65ef7b39f
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.relationship_type.test_group_type-fb35ccdde2916293
+  module:
+    - path
+id: group_relationship.test_group_type-fb35ccdde2916293.path
+field_name: path
+entity_type: group_relationship
+bundle: test_group_type-fb35ccdde2916293
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

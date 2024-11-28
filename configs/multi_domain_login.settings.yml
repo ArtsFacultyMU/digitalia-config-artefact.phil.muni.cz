@@ -1,0 +1,10 @@
+timeout: 30
+domains:
+  - 'https://artefact-devel.phil.muni.cz'
+  - 'https://neofig-devel.phil.muni.cz'
+  - 'https://pottery-analyses-devel.phil.muni.cz'
+  - 'https://archeo3data-devel.phil.muni.cz'
+redirect_success: ''
+redirect_error: ''
+force_logout: false
+enable_extra_logging: 0

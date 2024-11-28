@@ -1,0 +1,29 @@
+uuid: c926ce1e-45a7-40ea-9132-2ff0949f5fea
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.rock_fragments
+  module:
+    - text
+id: taxonomy_term.rock_fragments.default
+targetEntityType: taxonomy_term
+bundle: rock_fragments
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

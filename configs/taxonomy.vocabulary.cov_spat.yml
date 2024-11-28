@@ -1,0 +1,8 @@
+uuid: ea489954-729a-448d-82dd-2d90fa733cdc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Coverage spatial'
+vid: cov_spat
+description: ''
+weight: 0

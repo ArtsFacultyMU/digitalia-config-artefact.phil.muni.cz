@@ -1,0 +1,29 @@
+uuid: 49827401-4e6c-47e0-8159-58720a431935
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_finding_context_type
+    - node.type.a3d_object
+    - taxonomy.vocabulary.finding_context_type
+id: node.a3d_object.field_finding_context_type
+field_name: field_finding_context_type
+entity_type: node
+bundle: a3d_object
+label: 'Finding context (type)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      finding_context_type: finding_context_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

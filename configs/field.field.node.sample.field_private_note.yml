@@ -1,0 +1,22 @@
+uuid: db2faf08-e6e2-490f-9106-f2eb36a2f1f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_private_note
+    - node.type.sample
+  module:
+    - text
+id: node.sample.field_private_note
+field_name: field_private_note
+entity_type: node
+bundle: sample
+label: 'Private note'
+description: 'A note visible only to logged-in users'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,51 @@
+uuid: f62670c6-5e3a-4644-865b-a5999d7a3a08
+langcode: en
+status: true
+dependencies:
+  module:
+    - datafield
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_mass_structure_data_pres
+field_name: field_mass_structure_data_pres
+entity_type: node
+type: data_field
+settings:
+  columns:
+    msdp_value:
+      name: msdp_value
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    msdp_method:
+      name: msdp_method
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    msdp_note:
+      name: msdp_note
+      type: text
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+module: datafield
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,10 @@
+uuid: 5616f34c-e4fe-4c88-8ea5-09758b8c4414
+langcode: en
+status: true
+dependencies: {  }
+id: nef
+label: NEOFIG
+description: ''
+source_type: ''
+module: null
+shared_configuration: null

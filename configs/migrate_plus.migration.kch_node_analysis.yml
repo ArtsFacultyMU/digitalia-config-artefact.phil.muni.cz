@@ -1,0 +1,145 @@
+uuid: 53048807-2734-45F2-B3EA-3E8F86990035
+status: true
+id: kch_node_analysis
+migration_group: kch
+label: 'Import scientific analyses'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/analysis.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - uri
+  constants:
+    uid: 5
+    INSTRUMENT: 'Olympus BX51 polarizing microscope'
+    RESEARCHER: 'Martin Hložek'
+    TYPE: 'Optic microscopy'
+process:
+  uid: constants/uid
+  title: field_artefact_id
+  field_analysis_of:
+    plugin: migration_lookup
+    migration: kch_node_sample
+    source: uri
+  field_analysis_type:
+    plugin: entity_generate
+    source: constants/TYPE
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: analysis_type
+  field_binder_type:
+    plugin: entity_generate
+    source: field_binder_type
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: binder_type
+  field_rock_fragments:
+    -
+      plugin: explode
+      delimiter: ' | '
+      source: field_rock_fragments
+    -
+      plugin: migration_lookup
+      migration: kch_term_rock_fragments
+  list_minerals:
+    -
+      source: field_minerals
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: explode
+      delimiter: ' | '
+    -
+      plugin: str_to_assoc
+      key: mineral
+  field_minerals:
+    -
+      plugin: sub_process
+      source: '@list_minerals'
+      process:
+        mineral:
+          -
+            plugin: entity_lookup
+            source: mineral
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: mineral_fragments
+  list_chemical_analysis:
+    -
+      source: field_chemical_analysis
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: explode
+      delimiter: ' | '
+    -
+      plugin: str_to_assoc
+      key: analysis
+  field_chemical_analysis:
+    -
+      plugin: sub_process
+      source: '@list_chemical_analysis'
+      process:
+        exploded:
+          plugin: explode
+          delimiter: ':'
+          source: analysis
+        chemical:
+          -
+            plugin: extract
+            index:
+              - 0
+            source: '@exploded'
+          -
+            plugin: entity_generate
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: chemical_compounds
+        value:
+          -
+            plugin: extract
+            index:
+              - 1
+            source: '@exploded'
+  field_grain_type:
+    plugin: entity_generate
+    source: field_grain_type
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: grain_type
+  field_microstructure:
+    plugin: entity_generate
+    source: field_microstructure
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: microstructure
+  field_binder_ratio: field_binder_ratio
+  field_firing_temperature/from: field_firing_temperature_lower
+  field_firing_temperature/to: field_firing_temperature_upper
+  field_porosity: field_porosity
+  field_analysed_by:
+    plugin: entity_lookup
+    source: constants/RESEARCHER
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: author
+  field_instrument:
+    plugin: entity_lookup
+    source: constants/INSTRUMENT
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: instrument
+  field_note: field_note
+destination:
+  plugin: 'entity:node'
+  default_bundle: analysis
+migration_dependencies: null

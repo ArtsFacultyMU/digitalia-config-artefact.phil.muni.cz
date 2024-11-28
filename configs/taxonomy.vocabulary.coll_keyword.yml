@@ -1,0 +1,8 @@
+uuid: d40281fb-bef4-4eb1-9624-0b924a1b90c7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Collection keyword'
+vid: coll_keyword
+description: ''
+weight: 0

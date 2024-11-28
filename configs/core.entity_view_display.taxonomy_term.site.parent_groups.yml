@@ -1,0 +1,51 @@
+uuid: 683be69f-060f-41d1-a239-1e36524fd73a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.parent_groups
+    - field.field.taxonomy_term.site.field_city
+    - field.field.taxonomy_term.site.field_country
+    - field.field.taxonomy_term.site.field_geo_geolocation
+    - field.field.taxonomy_term.site.field_plot_number
+    - field.field.taxonomy_term.site.field_site_type
+    - field.field.taxonomy_term.site.field_street
+    - field.field.taxonomy_term.site.field_street_number
+    - taxonomy.vocabulary.site
+id: taxonomy_term.site.parent_groups
+targetEntityType: taxonomy_term
+bundle: site
+mode: parent_groups
+content:
+  a3d_eva_entity_group_relation_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  a3d_eva_groups_solr_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  a3d_eva_groups_solr_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_groups_site_entity_view_1: true
+  a3d_eva_groups_solr_arf: true
+  a3d_eva_groups_solr_nef: true
+  a3d_eva_taxonomy_title_entity_view_1: true
+  a3d_eva_term_groups_entity_view_1: true
+  description: true
+  field_city: true
+  field_country: true
+  field_geo_geolocation: true
+  field_plot_number: true
+  field_site_type: true
+  field_street: true
+  field_street_number: true
+  langcode: true
+  search_api_excerpt: true
+  site_on_map_a3d_site_map: true

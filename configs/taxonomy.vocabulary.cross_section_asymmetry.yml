@@ -1,0 +1,8 @@
+uuid: a04b8996-c81e-43b8-a5e9-12faf6c5911a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Cross-section asymmetry'
+vid: cross_section_asymmetry
+description: ''
+weight: 0

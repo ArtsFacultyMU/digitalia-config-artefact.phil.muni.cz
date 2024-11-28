@@ -1,0 +1,29 @@
+uuid: dfe33c34-f5f3-4228-81a2-2f3cf8890e8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_glue_residues
+    - node.type.a3d_object
+    - taxonomy.vocabulary.glue_residues
+id: node.a3d_object.field_glue_residues
+field_name: field_glue_residues
+entity_type: node
+bundle: a3d_object
+label: 'Glue residues'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      glue_residues: glue_residues
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

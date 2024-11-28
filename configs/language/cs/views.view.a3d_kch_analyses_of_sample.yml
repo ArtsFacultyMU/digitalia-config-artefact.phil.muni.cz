@@ -1,0 +1,12 @@
+display:
+  default:
+    display_options:
+      fields:
+        field_analysis_type:
+          label: Analýza
+        field_instrument:
+          label: Přístroj
+        field_analysed_by:
+          label: Výzkumník
+        field_date_analysed:
+          label: 'Datum analýzy'

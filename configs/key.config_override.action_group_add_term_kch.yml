@@ -1,0 +1,14 @@
+uuid: ddc35153-9f52-4640-9c1d-4e184824d426
+langcode: en
+status: true
+dependencies:
+  config:
+    - key.key.kch_group_id
+    - system.action.group_add_term_to_kch
+id: action_group_add_term_kch
+label: 'Action group add term KCH'
+config_type: action
+config_prefix: system.action
+config_name: group_add_term_to_kch
+config_item: configuration.group_id
+key_id: kch_group_id

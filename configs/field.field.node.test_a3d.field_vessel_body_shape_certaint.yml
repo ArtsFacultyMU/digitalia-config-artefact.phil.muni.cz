@@ -1,0 +1,21 @@
+uuid: 52cbc2e1-1527-49c2-a7cf-fc54ef54ed8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vessel_body_shape_certaint
+    - node.type.test_a3d
+id: node.test_a3d.field_vessel_body_shape_certaint
+field_name: field_vessel_body_shape_certaint
+entity_type: node
+bundle: test_a3d
+label: 'Vessel body shape certainty'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Certain
+  off_label: Uncertain
+field_type: boolean

@@ -1,0 +1,8 @@
+uuid: 87c2ff8d-6ce0-426c-8777-b6681a2c5752
+langcode: en
+status: true
+dependencies: {  }
+name: Organisation
+vid: coll_org
+description: ''
+weight: 0

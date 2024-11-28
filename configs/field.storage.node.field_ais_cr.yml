@@ -1,0 +1,23 @@
+uuid: e7ef2690-f889-4a31-a5f6-10c6fd1b1bc6
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_ais_cr
+field_name: field_ais_cr
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

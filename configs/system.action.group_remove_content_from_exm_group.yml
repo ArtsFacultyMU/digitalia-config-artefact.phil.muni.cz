@@ -1,0 +1,16 @@
+uuid: b144fb00-7e71-464f-bc25-74465c77e170
+langcode: en
+status: true
+dependencies:
+  module:
+    - group_action
+id: group_remove_content_from_exm_group
+label: 'Group: remove content from EXM'
+type: node
+plugin: 'group_remove_content:node'
+configuration:
+  operation: delete
+  content_plugin: 'group_node:a3d_object'
+  group_id: '15'
+  entity_id: ''
+  values: ''

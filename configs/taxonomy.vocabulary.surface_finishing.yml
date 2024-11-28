@@ -1,0 +1,8 @@
+uuid: 5b59c524-b827-441b-b587-84209d874301
+langcode: en
+status: true
+dependencies: {  }
+name: 'Surface finishing'
+vid: surface_finishing
+description: KCH
+weight: 0

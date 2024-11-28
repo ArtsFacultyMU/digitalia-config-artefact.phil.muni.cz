@@ -1,0 +1,29 @@
+uuid: 4a54ac6b-a04d-4258-94b3-6cf700f4ff5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doc_creator
+    - node.type.a3d_object
+    - taxonomy.vocabulary.author
+id: node.a3d_object.field_doc_creator
+field_name: field_doc_creator
+entity_type: node
+bundle: a3d_object
+label: 'Documentation creator'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      author: author
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: author
+field_type: entity_reference

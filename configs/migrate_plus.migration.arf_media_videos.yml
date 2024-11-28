@@ -1,0 +1,40 @@
+uuid: 49915f0c-d416-462c-a355-a93915376c7c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: TSmzvdb0Ez0oyUVnrGfjmvCBZvKiddOpLiHJjJyvmYE
+id: arf_media_videos
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: arf
+label: ''
+source:
+  plugin: csv
+  path: /data/platform_data/arf/arf_videos.csv
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    UID: 1
+process:
+  field_media_video_file:
+    plugin: migration_lookup
+    migration: arf_files_videos
+    source: id
+  field_media_of:
+    plugin: migration_lookup
+    migration: arf_metadata
+    source: field_alternative_id
+  name: filename
+  uid: constants/UID
+destination:
+  plugin: 'entity:media'
+  default_bundle: video
+migration_dependencies:
+  required: {  }
+  optional: {  }

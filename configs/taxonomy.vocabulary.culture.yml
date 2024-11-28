@@ -1,0 +1,8 @@
+uuid: ac421674-3a7b-43e1-8a5f-79b1a8c5691c
+langcode: en
+status: true
+dependencies: {  }
+name: Culture
+vid: culture
+description: ''
+weight: 0

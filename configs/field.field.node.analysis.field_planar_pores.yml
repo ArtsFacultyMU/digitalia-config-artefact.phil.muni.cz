@@ -1,0 +1,21 @@
+uuid: 0cdfc53e-a907-49b4-afe6-d78b498feaf5
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_planar_pores
+    - node.type.analysis
+id: node.analysis.field_planar_pores
+field_name: field_planar_pores
+entity_type: node
+bundle: analysis
+label: 'Planární póry'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Ano
+  off_label: Ne
+field_type: boolean

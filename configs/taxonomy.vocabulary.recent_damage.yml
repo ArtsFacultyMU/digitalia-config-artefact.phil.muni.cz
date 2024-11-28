@@ -1,0 +1,8 @@
+uuid: 6d19029e-4b19-4bcd-9656-ec25c8dc7d7b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Recent damage & alteration'
+vid: recent_damage
+description: ''
+weight: 0

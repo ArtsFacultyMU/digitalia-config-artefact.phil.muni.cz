@@ -1,0 +1,35 @@
+uuid: f1996bb5-b687-4a7f-9463-697f04532072
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_related_identifier
+    - taxonomy.vocabulary.instrument
+  module:
+    - datafield
+id: taxonomy_term.instrument.field_related_identifier
+field_name: field_related_identifier
+entity_type: taxonomy_term
+bundle: instrument
+label: 'Related Identifier'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    id:
+      label: Id
+      required: false
+    id_type:
+      label: 'Id type'
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: identifier_type
+    relation_type:
+      label: 'Relation type'
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: instrument_relation_type
+field_type: data_field

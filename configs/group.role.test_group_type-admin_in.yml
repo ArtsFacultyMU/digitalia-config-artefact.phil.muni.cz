@@ -1,0 +1,15 @@
+uuid: d8f9a685-3c87-40f0-922e-92bd5f874b69
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - user.role.administrator
+id: test_group_type-admin_in
+label: Administrator
+weight: 0
+admin: true
+scope: insider
+global_role: administrator
+group_type: test_group_type
+permissions: {  }

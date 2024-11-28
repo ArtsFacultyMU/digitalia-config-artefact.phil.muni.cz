@@ -1,0 +1,20 @@
+uuid: 0D97CE2A-67A3-43F8-A624-4E74C8F6404C
+langcode: en
+id: kch_term_mineral_fragments
+migration_group: kch
+label: 'Import minerals'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/minerals.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: mineral_fragments

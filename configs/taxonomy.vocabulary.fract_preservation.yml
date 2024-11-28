@@ -1,0 +1,8 @@
+uuid: 9d49bb70-c342-493e-bed1-031c72600461
+langcode: en
+status: true
+dependencies: {  }
+name: 'Fracture preservation'
+vid: fract_preservation
+description: ''
+weight: 0

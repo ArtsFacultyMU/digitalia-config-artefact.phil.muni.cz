@@ -1,0 +1,8 @@
+uuid: 7a213298-b0d7-4ba6-a57c-da40e3a2a9c1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Licence URL'
+vid: licence_url
+description: ''
+weight: 0

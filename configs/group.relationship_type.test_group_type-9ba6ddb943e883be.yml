@@ -1,0 +1,17 @@
+uuid: a1225afd-ee64-4de4-9818-39b20d9053ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.posture
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-9ba6ddb943e883be
+group_type: test_group_type
+content_plugin: 'group_term:posture'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

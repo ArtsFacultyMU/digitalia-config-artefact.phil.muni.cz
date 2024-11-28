@@ -1,0 +1,8 @@
+uuid: 8c58d457-690f-43d3-b486-5a6ef602119d
+langcode: en
+status: true
+dependencies: {  }
+name: Quality
+vid: quality
+description: ''
+weight: 0

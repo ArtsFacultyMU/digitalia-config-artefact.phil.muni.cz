@@ -1,0 +1,29 @@
+uuid: 1ff69914-209a-4bc5-b607-17bb8a285d03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_general_lateral_wear
+    - node.type.a3d_object
+    - taxonomy.vocabulary.general_lateral_wear
+id: node.a3d_object.field_general_lateral_wear
+field_name: field_general_lateral_wear
+entity_type: node
+bundle: a3d_object
+label: 'General lateral wear'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      general_lateral_wear: general_lateral_wear
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,57 @@
+uuid: e635c533-b27e-415d-8e8b-6f9739331e0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - media.type.3d_model
+    - media.type.document
+    - media.type.file
+    - media.type.image
+    - media.type.video
+    - node.type.a3d_platform_homepage
+    - node.type.at_project
+    - node.type.page
+  module:
+    - contextual
+    - filter
+    - islandora
+    - media
+    - node
+    - persistent_identifiers
+id: can_publish
+label: 'Can publish'
+weight: -5
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'administer nodes'
+  - 'create 3d_model media'
+  - 'create document media'
+  - 'create file media'
+  - 'create image media'
+  - 'create video media'
+  - 'edit any 3d_model media'
+  - 'edit any a3d_platform_homepage content'
+  - 'edit any at_project content'
+  - 'edit any document media'
+  - 'edit any file media'
+  - 'edit any image media'
+  - 'edit any page content'
+  - 'edit any video media'
+  - 'edit own 3d_model media'
+  - 'edit own a3d_platform_homepage content'
+  - 'edit own at_project content'
+  - 'edit own document media'
+  - 'edit own file media'
+  - 'edit own image media'
+  - 'edit own page content'
+  - 'edit own video media'
+  - 'manage media'
+  - 'mint persistent identifiers'
+  - 'use text format full_html'
+  - 'view a3d_platform_homepage revisions'
+  - 'view at_project revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view page revisions'

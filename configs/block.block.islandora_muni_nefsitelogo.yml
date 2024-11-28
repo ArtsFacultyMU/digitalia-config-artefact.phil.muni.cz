@@ -1,0 +1,37 @@
+uuid: bfc84f4a-7a4d-4b54-a3c8-04bb10979c39
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.nef_site_logo
+  module:
+    - block_class
+    - islandora
+    - simple_block
+    - system
+  theme:
+    - islandora_muni
+third_party_settings:
+  block_class:
+    classes: block-sitelogo
+id: islandora_muni_nefsitelogo
+theme: islandora_muni
+region: header
+weight: -37
+provider: null
+plugin: 'simple_block:nef_site_logo'
+settings:
+  id: 'simple_block:nef_site_logo'
+  label: 'NEF site logo'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/nef\r\n/nef/*\r\n/group/nef\r\n/group/nef/*\r\n/group/9\r\n/group/9/*\r\n/compare/*/nef"

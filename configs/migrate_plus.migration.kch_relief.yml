@@ -1,0 +1,20 @@
+uuid: 2E356D0F-1B5F-4856-B05D-7FFBF4DDEFE0
+langcode: en
+id: kch_relief
+migration_group: kch
+label: 'Import reliefs'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/relief.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 13
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: relief_type

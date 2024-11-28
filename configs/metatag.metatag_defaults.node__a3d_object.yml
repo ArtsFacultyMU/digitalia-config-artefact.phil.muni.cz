@@ -1,0 +1,10 @@
+uuid: a490117e-5040-4c87-8d03-d21ac7e0e099
+langcode: en
+status: true
+dependencies: {  }
+id: node__a3d_object
+label: 'Content: A3D object'
+tags:
+  dcterms_creator: '[node:author]'
+  dcterms_relation: '￼￼￼￼[digitalia_muni:media_urls]'
+  dcterms_title: '[node:title]'

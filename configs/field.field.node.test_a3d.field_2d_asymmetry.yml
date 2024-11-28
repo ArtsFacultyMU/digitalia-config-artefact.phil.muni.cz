@@ -1,0 +1,29 @@
+uuid: c93572e3-aab1-4d46-9467-485c5b461d84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2d_asymmetry
+    - node.type.test_a3d
+    - taxonomy.vocabulary.2d_asymetry
+id: node.test_a3d.field_2d_asymmetry
+field_name: field_2d_asymmetry
+entity_type: node
+bundle: test_a3d
+label: '2D asymmetry (smaller barb)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      2d_asymetry: 2d_asymetry
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

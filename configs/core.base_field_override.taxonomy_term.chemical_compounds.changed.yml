@@ -1,0 +1,18 @@
+uuid: 078b02e4-00c7-4021-acda-31cd3429b06b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.chemical_compounds
+id: taxonomy_term.chemical_compounds.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: chemical_compounds
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,8 @@
+uuid: 04fa37a8-21a3-423a-a196-41c2c0abb593
+langcode: en
+status: true
+dependencies: {  }
+name: 'Matrix characteristic'
+vid: matrix_characteristic
+description: ''
+weight: 0

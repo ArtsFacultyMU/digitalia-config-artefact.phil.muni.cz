@@ -1,0 +1,21 @@
+uuid: 56ac5a56-3f7d-475f-ac9c-9fd423e2d4b3
+langcode: en
+id: term_unknown_value
+migration_group: kch
+label: 'Import terms: DataCite Unknown Values'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/unknown.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: en
+  field_datacite_code: id
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: unknown_values

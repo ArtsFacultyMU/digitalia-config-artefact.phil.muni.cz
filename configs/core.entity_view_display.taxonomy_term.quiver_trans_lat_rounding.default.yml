@@ -1,0 +1,29 @@
+uuid: 869e3ea6-d078-4967-b3b9-6d615a83391a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.quiver_trans_lat_rounding
+  module:
+    - text
+id: taxonomy_term.quiver_trans_lat_rounding.default
+targetEntityType: taxonomy_term
+bundle: quiver_trans_lat_rounding
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

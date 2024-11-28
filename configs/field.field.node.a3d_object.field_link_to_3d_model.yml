@@ -1,0 +1,23 @@
+uuid: aacc6e6c-0dd1-44b8-8df2-1184c10060fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_to_3d_model
+    - node.type.a3d_object
+  module:
+    - link
+id: node.a3d_object.field_link_to_3d_model
+field_name: field_link_to_3d_model
+entity_type: node
+bundle: a3d_object
+label: 'Link to 3D model'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 16
+field_type: link

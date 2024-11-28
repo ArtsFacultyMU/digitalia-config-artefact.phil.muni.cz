@@ -1,0 +1,8 @@
+uuid: 98b1ede0-33b5-4acf-b10f-5794ac9940c9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Artefact class'
+vid: artefact_class
+description: ''
+weight: 0

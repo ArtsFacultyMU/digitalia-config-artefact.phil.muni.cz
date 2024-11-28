@@ -1,0 +1,29 @@
+uuid: d2f82aa5-7e40-4407-bc02-cd8766129c7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deposition_cond
+    - node.type.a3d_object
+    - taxonomy.vocabulary.deposition_cond
+id: node.a3d_object.field_deposition_cond
+field_name: field_deposition_cond
+entity_type: node
+bundle: a3d_object
+label: 'Deposition condition'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      deposition_cond: deposition_cond
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

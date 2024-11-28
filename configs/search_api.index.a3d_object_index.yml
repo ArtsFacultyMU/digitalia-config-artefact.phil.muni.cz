@@ -1,0 +1,2474 @@
+uuid: 073bf1d5-47ec-4f4f-bec9-71d2686c5151
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2d_asymmetry
+    - field.storage.node.field_3d_shaping
+    - field.storage.node.field_3d_shaping_struct
+    - field.storage.node.field_3d_traces
+    - field.storage.node.field_3d_traces_struct
+    - field.storage.node.field_a_asymmetry
+    - field.storage.node.field_abs_dat_range
+    - field.storage.node.field_abs_dat_source
+    - field.storage.node.field_ais_cr
+    - field.storage.node.field_alteration
+    - field.storage.node.field_alternative_id
+    - field.storage.node.field_artefact_category
+    - field.storage.node.field_artefact_class
+    - field.storage.node.field_artefact_id
+    - field.storage.node.field_artefact_subclass
+    - field.storage.node.field_assess_cond_date
+    - field.storage.node.field_auth_3d_models
+    - field.storage.node.field_auth_res_data
+    - field.storage.node.field_b_asymmetry
+    - field.storage.node.field_ballistic_profile
+    - field.storage.node.field_base_curve
+    - field.storage.node.field_binder_type
+    - field.storage.node.field_blank_orientation
+    - field.storage.node.field_circle
+    - field.storage.node.field_city
+    - field.storage.node.field_city_code
+    - field.storage.node.field_coll_contacts
+    - field.storage.node.field_coll_id
+    - field.storage.node.field_coll_keyword
+    - field.storage.node.field_coll_lang
+    - field.storage.node.field_coll_org
+    - field.storage.node.field_coll_rights
+    - field.storage.node.field_coll_title
+    - field.storage.node.field_colour_paint
+    - field.storage.node.field_country
+    - field.storage.node.field_cov_spat
+    - field.storage.node.field_cov_temp
+    - field.storage.node.field_creation
+    - field.storage.node.field_culture
+    - field.storage.node.field_current_location
+    - field.storage.node.field_deposition_cond
+    - field.storage.node.field_description_a3d
+    - field.storage.node.field_discoverer
+    - field.storage.node.field_discovery_date
+    - field.storage.node.field_doc_creator
+    - field.storage.node.field_doc_date
+    - field.storage.node.field_feature_id
+    - field.storage.node.field_feature_type
+    - field.storage.node.field_finding_context_loc
+    - field.storage.node.field_finding_context_note
+    - field.storage.node.field_finding_context_pos
+    - field.storage.node.field_finding_context_sec
+    - field.storage.node.field_finding_context_subtype
+    - field.storage.node.field_finding_context_type
+    - field.storage.node.field_fract_preservation
+    - field.storage.node.field_fract_preservation_struct
+    - field.storage.node.field_g_w_practice
+    - field.storage.node.field_gb_scale
+    - field.storage.node.field_general_lateral_wear
+    - field.storage.node.field_general_type
+    - field.storage.node.field_glue_residues
+    - field.storage.node.field_grain_type
+    - field.storage.node.field_holder_type
+    - field.storage.node.field_legal_status
+    - field.storage.node.field_licence_url
+    - field.storage.node.field_literature
+    - field.storage.node.field_longitudinal_profile
+    - field.storage.node.field_measurements
+    - field.storage.node.field_member_of
+    - field.storage.node.field_met_note_cz
+    - field.storage.node.field_metadata_rights
+    - field.storage.node.field_micro_ct
+    - field.storage.node.field_microstructure
+    - field.storage.node.field_mineral_fragments
+    - field.storage.node.field_mineralogy
+    - field.storage.node.field_orig_state_pres
+    - field.storage.node.field_original_location
+    - field.storage.node.field_ownership
+    - field.storage.node.field_painting_eye
+    - field.storage.node.field_painting_microscope
+    - field.storage.node.field_painting_tool
+    - field.storage.node.field_pigment
+    - field.storage.node.field_polished_sec_petrography
+    - field.storage.node.field_porosity
+    - field.storage.node.field_posture
+    - field.storage.node.field_preserved_parts
+    - field.storage.node.field_preserved_parts_struct
+    - field.storage.node.field_proj_dedication
+    - field.storage.node.field_provenance
+    - field.storage.node.field_quality
+    - field.storage.node.field_quiver_trans_bright_spots
+    - field.storage.node.field_quiver_trans_lat_rounding
+    - field.storage.node.field_quiver_trans_tip_rounding
+    - field.storage.node.field_raw_material
+    - field.storage.node.field_recent_damage
+    - field.storage.node.field_recent_damage_note
+    - field.storage.node.field_recent_damage_type
+    - field.storage.node.field_recent_damage_type_struct
+    - field.storage.node.field_record_source
+    - field.storage.node.field_reg_number
+    - field.storage.node.field_relations
+    - field.storage.node.field_relative_datation
+    - field.storage.node.field_reparation_features
+    - field.storage.node.field_retouch
+    - field.storage.node.field_rights_access
+    - field.storage.node.field_rights_reproduction
+    - field.storage.node.field_rock_fragments
+    - field.storage.node.field_serration
+    - field.storage.node.field_site
+    - field.storage.node.field_state
+    - field.storage.node.field_statement
+    - field.storage.node.field_subord_dataset
+    - field.storage.node.field_subord_dataset_link
+    - field.storage.node.field_surface_alt
+    - field.storage.node.field_thermic_cracks
+    - field.storage.node.field_timespan
+    - field.storage.node.field_tip_fracture
+    - field.storage.node.field_wear
+    - field.storage.node.field_wgs84_geolocation
+    - field.storage.node.field_firing
+    - field.storage.node.field_geolocation
+    - field.storage.node.field_mass_structure_data_pres
+    - search_api.server.default_solr_server
+    - core.entity_view_mode.node.arf_display
+    - core.entity_view_mode.node.exm_display
+    - core.entity_view_mode.node.meta_display
+    - core.entity_view_mode.node.nef_display
+    - core.entity_view_mode.node.parent_group_names
+    - core.entity_view_mode.node.parent_groups
+    - core.entity_view_mode.taxonomy_term.parent_groups
+  module:
+    - search_api_solr
+    - node
+    - taxonomy
+    - search_api_location
+    - token
+    - search_api
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+      fuzzy_analyzer: true
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+        cs: '0'
+      use_universal_collation: false
+id: a3d_object_index
+name: 'A3D object index'
+description: ''
+read_only: false
+field_settings:
+  a3d_arf_display:
+    label: 'A3D ARF display'
+    property_path: rendered_item
+    type: 'solr_text_custom:ngram'
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          a3d_object: arf_display
+        'entity:taxonomy_term':
+          2d_asymetry: ''
+          a_asymmetry: ''
+          alteration: ''
+          artefact_category: ''
+          artefact_class: ''
+          artefact_subclass: ''
+          auth_3d_models: ''
+          auth_res_data: ''
+          b_asymmetry: ''
+          ballistic_profile: ''
+          base_curve: ''
+          binder_type: ''
+          blank_orientation: ''
+          circle: ''
+          city: ''
+          city_code: ''
+          coll_keyword: ''
+          coll_lang: ''
+          coll_org: ''
+          collection_title: ''
+          corporate_body: ''
+          country_a3d: ''
+          cov_spat: ''
+          creation: ''
+          cross_section_asymmetry: ''
+          culture: ''
+          current_location: ''
+          deposition_cond: ''
+          discoverer: ''
+          doc_creator: ''
+          family: ''
+          feature_id: ''
+          feature_type: ''
+          finding_context_subtype: ''
+          finding_context_type: ''
+          fract_nature: ''
+          fract_preservation: ''
+          frequencies: ''
+          g_w_practice: ''
+          general_lateral_wear: ''
+          general_type: ''
+          genre: ''
+          geo_location: ''
+          glue_residues: ''
+          grain_type: ''
+          holder_type: ''
+          islandora_display: ''
+          islandora_media_use: ''
+          islandora_models: ''
+          issuance_modes: ''
+          language: ''
+          legal_status: ''
+          licence_url: ''
+          loc_coord_cadastre_accuracy: ''
+          longitudinal_profile: ''
+          measurement_type: ''
+          metadata_rights: ''
+          microstructure: ''
+          mineral_fragments: ''
+          msdp_method: ''
+          msdp_value: ''
+          orig_state_pres: ''
+          original_location: ''
+          ownership: ''
+          painting: ''
+          person: ''
+          physical_form: ''
+          pigment: ''
+          preserved_parts: ''
+          proj_dedication: ''
+          proj_id: ''
+          quality: ''
+          quiver_trans_bright_spots: ''
+          quiver_trans_lat_rounding: ''
+          quiver_trans_tip_rounding: ''
+          raw_material: ''
+          rec_creator: ''
+          rec_language: ''
+          rec_updater: ''
+          recent_damage: ''
+          recent_damage_type: ''
+          record_source: ''
+          relative_datation: ''
+          reparation_features: ''
+          resource_types: ''
+          retouch: ''
+          rights_access: ''
+          rights_reproduction: ''
+          rock_fragments: ''
+          sdp_method: ''
+          sdp_value: ''
+          serration: ''
+          site: ''
+          spatial_ref_system: ''
+          state: ''
+          subject: ''
+          subord_dataset: ''
+          surface_alt: ''
+          tags: ''
+          temporal_subjects: ''
+          test_level_0: ''
+          thermic_cracks: ''
+          tip_fracture: ''
+          units: ''
+  a3d_exm_display:
+    label: 'A3D EXM display'
+    property_path: rendered_item
+    type: 'solr_text_custom:ngram'
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          a3d_object: exm_display
+        'entity:taxonomy_term':
+          2d_asymetry: ''
+          a_asymmetry: ''
+          alteration: ''
+          artefact_category: ''
+          artefact_class: ''
+          artefact_subclass: ''
+          auth_3d_models: ''
+          auth_res_data: ''
+          b_asymmetry: ''
+          ballistic_profile: ''
+          base_curve: ''
+          binder_type: ''
+          blank_orientation: ''
+          circle: ''
+          city: ''
+          city_code: ''
+          coll_keyword: ''
+          coll_lang: ''
+          coll_org: ''
+          collection_title: ''
+          corporate_body: ''
+          country_a3d: ''
+          cov_spat: ''
+          creation: ''
+          cross_section_asymmetry: ''
+          culture: ''
+          current_location: ''
+          deposition_cond: ''
+          discoverer: ''
+          doc_creator: ''
+          family: ''
+          feature_id: ''
+          feature_type: ''
+          finding_context_subtype: ''
+          finding_context_type: ''
+          fract_nature: ''
+          fract_preservation: ''
+          frequencies: ''
+          g_w_practice: ''
+          general_lateral_wear: ''
+          general_type: ''
+          genre: ''
+          geo_location: ''
+          glue_residues: ''
+          grain_type: ''
+          holder_type: ''
+          islandora_display: ''
+          islandora_media_use: ''
+          islandora_models: ''
+          issuance_modes: ''
+          language: ''
+          legal_status: ''
+          licence_url: ''
+          loc_coord_cadastre_accuracy: ''
+          longitudinal_profile: ''
+          measurement_type: ''
+          metadata_rights: ''
+          microstructure: ''
+          mineral_fragments: ''
+          msdp_method: ''
+          msdp_value: ''
+          orig_state_pres: ''
+          original_location: ''
+          ownership: ''
+          painting: ''
+          person: ''
+          physical_form: ''
+          pigment: ''
+          preserved_parts: ''
+          proj_dedication: ''
+          proj_id: ''
+          quality: ''
+          quiver_trans_bright_spots: ''
+          quiver_trans_lat_rounding: ''
+          quiver_trans_tip_rounding: ''
+          raw_material: ''
+          rec_creator: ''
+          rec_language: ''
+          rec_updater: ''
+          recent_damage: ''
+          recent_damage_type: ''
+          record_source: ''
+          relative_datation: ''
+          reparation_features: ''
+          resource_types: ''
+          retouch: ''
+          rights_access: ''
+          rights_reproduction: ''
+          rock_fragments: ''
+          sdp_method: ''
+          sdp_value: ''
+          serration: ''
+          site: ''
+          spatial_ref_system: ''
+          state: ''
+          subject: ''
+          subord_dataset: ''
+          surface_alt: ''
+          tags: ''
+          temporal_subjects: ''
+          test_level_0: ''
+          thermic_cracks: ''
+          tip_fracture: ''
+          units: ''
+  a3d_meta_display:
+    label: 'A3D META display'
+    property_path: rendered_item
+    type: 'solr_text_custom:ngram'
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          a3d_object: meta_display
+        'entity:taxonomy_term':
+          2d_asymetry: ''
+          acquisition_type: ''
+          actor: ''
+          actor_type: ''
+          alteration: ''
+          analysis_type: ''
+          aquamanile_subtype: ''
+          aquamanile_type: ''
+          artefact_category: ''
+          artefact_class: ''
+          artefact_subclass: ''
+          author: ''
+          ballistic_profile: ''
+          base_curve: ''
+          binder_type: ''
+          blank_orientation: ''
+          chemical_compounds: ''
+          circle: ''
+          city: ''
+          city_code: ''
+          coll_keyword: ''
+          coll_lang: ''
+          coll_org: ''
+          collection_title: ''
+          colour: ''
+          corporate_body: ''
+          country_a3d: ''
+          cov_spat: ''
+          creation: ''
+          cross_section_asymmetry: ''
+          culture: ''
+          current_location: ''
+          deposition_cond: ''
+          dimensions_extent: ''
+          dimensions_qualifier: ''
+          elements: ''
+          family: ''
+          feature_id: ''
+          feature_type: ''
+          fhp_type: ''
+          finding_context_subtype: ''
+          finding_context_type: ''
+          firing_characteristic: ''
+          format_size: ''
+          fract_nature: ''
+          fract_preservation: ''
+          frequencies: ''
+          g_w_practice: ''
+          general_lateral_wear: ''
+          general_type: ''
+          genre: ''
+          geo_location: ''
+          glue_residues: ''
+          grain_type: ''
+          holder_type: ''
+          identifier_type: ''
+          instrument: ''
+          instrument_relation_type: ''
+          instrument_type: ''
+          islandora_display: ''
+          islandora_media_use: ''
+          islandora_models: ''
+          issuance_modes: ''
+          language: ''
+          ledge_type: ''
+          legal_status: ''
+          licence_url: ''
+          loc_coord_cadastre_accuracy: ''
+          longitudinal_profile: ''
+          matrix_characteristic: ''
+          measured_variable: ''
+          measurement_type: ''
+          metadata_rights: ''
+          microstructure: ''
+          mineral_fragments: ''
+          motif: ''
+          msdp_method: ''
+          msdp_value: ''
+          orig_state_pres: ''
+          original_location: ''
+          ownership: ''
+          painting: ''
+          person: ''
+          physical_form: ''
+          pigment: ''
+          posture: ''
+          preserved_parts: ''
+          proj_dedication: ''
+          proj_id: ''
+          quality: ''
+          quiver_trans_bright_spots: ''
+          quiver_trans_lat_rounding: ''
+          quiver_trans_tip_rounding: ''
+          raw_material: ''
+          recent_damage: ''
+          recent_damage_type: ''
+          record_source: ''
+          relative_datation: ''
+          relief_type: ''
+          reparation_features: ''
+          resource_types: ''
+          retouch: ''
+          rights_access: ''
+          rights_reproduction: ''
+          rock_fragments: ''
+          sdp_method: ''
+          sdp_value: ''
+          serration: ''
+          shape: ''
+          site: ''
+          site_type: ''
+          small_sculpture_subtype: ''
+          small_sculpture_type: ''
+          spatial_ref_system: ''
+          state: ''
+          stove_tile_placement_type_1: ''
+          stove_tile_placement_type_2: ''
+          stove_tile_placement_type_3: ''
+          stove_tile_shape_type_1: ''
+          stove_tile_shape_type_2: ''
+          subject: ''
+          subord_dataset: ''
+          surface_alt: ''
+          surface_finishing: ''
+          tags: ''
+          temporal_subjects: ''
+          test_level_0: ''
+          thermic_cracks: ''
+          tile_type: ''
+          tip_fracture: ''
+          units: ''
+          unknown_values: ''
+  a3d_nef_display:
+    label: 'A3D NEF display'
+    property_path: rendered_item
+    type: 'solr_text_custom:ngram'
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          a3d_object: nef_display
+        'entity:taxonomy_term':
+          2d_asymetry: ''
+          a_asymmetry: ''
+          alteration: ''
+          artefact_category: ''
+          artefact_class: ''
+          artefact_subclass: ''
+          auth_3d_models: ''
+          auth_res_data: ''
+          b_asymmetry: ''
+          ballistic_profile: ''
+          base_curve: ''
+          binder_type: ''
+          blank_orientation: ''
+          circle: ''
+          city: ''
+          city_code: ''
+          coll_keyword: ''
+          coll_lang: ''
+          coll_org: ''
+          collection_title: ''
+          corporate_body: ''
+          country_a3d: ''
+          cov_spat: ''
+          creation: ''
+          cross_section_asymmetry: ''
+          culture: ''
+          current_location: ''
+          deposition_cond: ''
+          discoverer: ''
+          doc_creator: ''
+          family: ''
+          feature_id: ''
+          feature_type: ''
+          finding_context_subtype: ''
+          finding_context_type: ''
+          fract_nature: ''
+          fract_preservation: ''
+          frequencies: ''
+          g_w_practice: ''
+          general_lateral_wear: ''
+          general_type: ''
+          genre: ''
+          geo_location: ''
+          glue_residues: ''
+          grain_type: ''
+          holder_type: ''
+          islandora_display: ''
+          islandora_media_use: ''
+          islandora_models: ''
+          issuance_modes: ''
+          language: ''
+          legal_status: ''
+          licence_url: ''
+          loc_coord_cadastre_accuracy: ''
+          longitudinal_profile: ''
+          measurement_type: ''
+          metadata_rights: ''
+          microstructure: ''
+          mineral_fragments: ''
+          msdp_method: ''
+          msdp_value: ''
+          orig_state_pres: ''
+          original_location: ''
+          ownership: ''
+          painting: ''
+          person: ''
+          physical_form: ''
+          pigment: ''
+          preserved_parts: ''
+          proj_dedication: ''
+          proj_id: ''
+          quality: ''
+          quiver_trans_bright_spots: ''
+          quiver_trans_lat_rounding: ''
+          quiver_trans_tip_rounding: ''
+          raw_material: ''
+          rec_creator: ''
+          rec_language: ''
+          rec_updater: ''
+          recent_damage: ''
+          recent_damage_type: ''
+          record_source: ''
+          relative_datation: ''
+          reparation_features: ''
+          resource_types: ''
+          retouch: ''
+          rights_access: ''
+          rights_reproduction: ''
+          rock_fragments: ''
+          sdp_method: ''
+          sdp_value: ''
+          serration: ''
+          site: ''
+          spatial_ref_system: ''
+          state: ''
+          subject: ''
+          subord_dataset: ''
+          surface_alt: ''
+          tags: ''
+          temporal_subjects: ''
+          test_level_0: ''
+          thermic_cracks: ''
+          tip_fracture: ''
+          units: ''
+  a3d_object_parent_group_names:
+    label: 'A3D object parent group names'
+    property_path: rendered_item
+    type: solr_string_storage
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          a3d_object: parent_group_names
+        'entity:taxonomy_term':
+          2d_asymetry: ''
+          acquisition_type: ''
+          actor: ''
+          actor_type: ''
+          alteration: ''
+          analysis_type: ''
+          aquamanile_subtype: ''
+          aquamanile_type: ''
+          artefact_category: ''
+          artefact_class: ''
+          artefact_subclass: ''
+          author: ''
+          ballistic_profile: ''
+          base_curve: ''
+          binder_type: ''
+          blank_orientation: ''
+          chemical_compounds: ''
+          circle: ''
+          city: ''
+          city_code: ''
+          coll_keyword: ''
+          coll_lang: ''
+          coll_org: ''
+          collection_title: ''
+          colour: ''
+          corporate_body: ''
+          country_a3d: ''
+          cov_spat: ''
+          creation: ''
+          cross_section_asymmetry: ''
+          culture: ''
+          current_location: ''
+          deposition_cond: ''
+          dimensions_extent: ''
+          dimensions_qualifier: ''
+          elements: ''
+          family: ''
+          feature_id: ''
+          feature_type: ''
+          fhp_type: ''
+          finding_context_subtype: ''
+          finding_context_type: ''
+          firing_characteristic: ''
+          format_size: ''
+          fract_nature: ''
+          fract_preservation: ''
+          frequencies: ''
+          g_w_practice: ''
+          general_lateral_wear: ''
+          general_type: ''
+          genre: ''
+          geo_location: ''
+          glue_residues: ''
+          grain_type: ''
+          holder_type: ''
+          identifier_type: ''
+          instrument: ''
+          instrument_relation_type: ''
+          instrument_type: ''
+          islandora_display: ''
+          islandora_media_use: ''
+          islandora_models: ''
+          issuance_modes: ''
+          language: ''
+          ledge_type: ''
+          legal_status: ''
+          licence_url: ''
+          loc_coord_cadastre_accuracy: ''
+          longitudinal_profile: ''
+          matrix_characteristic: ''
+          measured_variable: ''
+          measurement_type: ''
+          metadata_rights: ''
+          microstructure: ''
+          mineral_fragments: ''
+          motif: ''
+          msdp_method: ''
+          msdp_value: ''
+          orig_state_pres: ''
+          original_location: ''
+          ownership: ''
+          painting: ''
+          person: ''
+          physical_form: ''
+          pigment: ''
+          posture: ''
+          preserved_parts: ''
+          proj_dedication: ''
+          proj_id: ''
+          quality: ''
+          quiver_trans_bright_spots: ''
+          quiver_trans_lat_rounding: ''
+          quiver_trans_tip_rounding: ''
+          raw_material: ''
+          recent_damage: ''
+          recent_damage_type: ''
+          record_source: ''
+          relative_datation: ''
+          relief_type: ''
+          reparation_features: ''
+          resource_types: ''
+          retouch: ''
+          rights_access: ''
+          rights_reproduction: ''
+          rock_fragments: ''
+          sdp_method: ''
+          sdp_value: ''
+          serration: ''
+          shape: ''
+          site: ''
+          site_type: ''
+          small_sculpture_subtype: ''
+          small_sculpture_type: ''
+          spatial_ref_system: ''
+          state: ''
+          stove_tile_placement_type_1: ''
+          stove_tile_placement_type_2: ''
+          stove_tile_placement_type_3: ''
+          stove_tile_shape_type_1: ''
+          stove_tile_shape_type_2: ''
+          subject: ''
+          subord_dataset: ''
+          surface_alt: ''
+          surface_finishing: ''
+          tags: ''
+          temporal_subjects: ''
+          test_level_0: ''
+          thermic_cracks: ''
+          tile_type: ''
+          tip_fracture: ''
+          units: ''
+          unknown_values: ''
+  a3d_object_parent_groups:
+    label: 'A3D object parent groups'
+    property_path: rendered_item
+    type: 'solr_text_custom:edge'
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          a3d_object: parent_groups
+  a3d_object_terms:
+    label: 'A3D object terms'
+    property_path: aggregated_field
+    type: 'solr_text_custom:edge'
+    configuration:
+      type: union
+      fields:
+        - 'entity:node/field_2d_asymmetry'
+        - 'entity:node/field_3d_shaping_struct'
+        - 'entity:node/field_3d_traces_struct'
+        - 'entity:node/field_a_asymmetry'
+        - 'entity:node/field_alteration'
+        - 'entity:node/field_artefact_category'
+        - 'entity:node/field_artefact_class'
+        - 'entity:node/field_artefact_id_type'
+        - 'entity:node/field_artefact_subclass'
+        - 'entity:node/field_auth_3d_models'
+        - 'entity:node/field_auth_res_data'
+        - 'entity:node/field_b_asymmetry'
+        - 'entity:node/field_ballistic_profile'
+        - 'entity:node/field_base_curve'
+        - 'entity:node/field_binder_type'
+        - 'entity:node/field_blank_orientation'
+        - 'entity:node/field_circle'
+        - 'entity:node/field_city'
+        - 'entity:node/field_coll_keyword'
+        - 'entity:node/field_coll_lang'
+        - 'entity:node/field_coll_org'
+        - 'entity:node/field_coll_title'
+        - 'entity:node/field_colour_paint'
+        - 'entity:node/field_cov_spat'
+        - 'entity:node/field_creation'
+        - 'entity:node/field_culture'
+        - 'entity:node/field_current_location'
+        - 'entity:node/field_deposition_cond'
+        - 'entity:node/field_discoverer'
+        - 'entity:node/field_doc_creator'
+        - 'entity:node/field_feature_id'
+        - 'entity:node/field_feature_type'
+        - 'entity:node/field_fhp_type'
+        - 'entity:node/field_finding_context_subtype'
+        - 'entity:node/field_finding_context_type'
+        - 'entity:node/field_fract_preservation_struct'
+        - 'entity:node/field_g_w_practice'
+        - 'entity:node/field_general_lateral_wear'
+        - 'entity:node/field_glue_residues'
+        - 'entity:node/field_grain_type'
+        - 'entity:node/field_has_a_construction_opening'
+        - 'entity:node/field_holder_type'
+        - 'entity:node/field_ledge_type'
+        - 'entity:node/field_legal_status'
+        - 'entity:node/field_licence_url'
+        - 'entity:node/field_longitudinal_profile'
+        - 'entity:node/field_material_colour'
+        - 'entity:node/field_microstructure'
+        - 'entity:node/field_mineral_fragments'
+        - 'entity:node/field_minerals'
+        - 'entity:node/field_orig_state_pres'
+        - 'entity:node/field_original_location'
+        - 'entity:node/field_ownership'
+        - 'entity:node/field_pigment'
+        - 'entity:node/field_posture'
+        - 'entity:node/field_preserved_parts_struct'
+        - 'entity:node/field_proj_dedication'
+        - 'entity:node/field_proj_id'
+        - 'entity:node/field_quality'
+        - 'entity:node/field_quiver_trans_bright_spots'
+        - 'entity:node/field_quiver_trans_lat_rounding'
+        - 'entity:node/field_quiver_trans_tip_rounding'
+        - 'entity:node/field_raw_material'
+        - 'entity:node/field_recent_damage'
+        - 'entity:node/field_recent_damage_type_struct'
+        - 'entity:node/field_relative_datation'
+        - 'entity:node/field_reparation_features'
+        - 'entity:node/field_retouch'
+        - 'entity:node/field_rights_access'
+        - 'entity:node/field_rights_reproduction'
+        - 'entity:node/field_rock_fragments'
+        - 'entity:node/field_serration'
+        - 'entity:node/field_site'
+        - 'entity:node/field_state'
+        - 'entity:node/field_subord_dataset'
+        - 'entity:node/field_surface_alt'
+        - 'entity:node/field_surface_finishing'
+        - 'entity:node/field_thermic_cracks'
+        - 'entity:node/field_tip_fracture'
+  a3d_term_groups:
+    label: 'A3D term groups'
+    property_path: rendered_item
+    type: 'solr_text_custom:edge'
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          a3d_object: ''
+        'entity:taxonomy_term':
+          2d_asymetry: ''
+          a_asymmetry: ''
+          alteration: ''
+          artefact_category: ''
+          artefact_class: ''
+          artefact_subclass: ''
+          auth_3d_models: ''
+          auth_res_data: ''
+          b_asymmetry: ''
+          ballistic_profile: ''
+          base_curve: ''
+          binder_type: ''
+          blank_orientation: ''
+          circle: ''
+          city: ''
+          city_code: ''
+          coll_keyword: ''
+          coll_lang: ''
+          coll_org: ''
+          collection_title: ''
+          corporate_body: ''
+          country_a3d: ''
+          cov_spat: ''
+          creation: ''
+          cross_section_asymmetry: ''
+          culture: ''
+          current_location: ''
+          deposition_cond: ''
+          discoverer: ''
+          doc_creator: ''
+          family: ''
+          feature_id: ''
+          feature_type: ''
+          finding_context_subtype: ''
+          finding_context_type: ''
+          fract_nature: ''
+          fract_preservation: ''
+          frequencies: ''
+          g_w_practice: ''
+          general_lateral_wear: ''
+          general_type: ''
+          genre: ''
+          geo_location: ''
+          glue_residues: ''
+          grain_type: ''
+          holder_type: ''
+          islandora_display: ''
+          islandora_media_use: ''
+          islandora_models: ''
+          issuance_modes: ''
+          language: ''
+          legal_status: ''
+          licence_url: ''
+          loc_coord_cadastre_accuracy: ''
+          longitudinal_profile: ''
+          measurement_type: ''
+          metadata_rights: ''
+          microstructure: ''
+          mineral_fragments: ''
+          msdp_method: ''
+          msdp_value: ''
+          orig_state_pres: ''
+          original_location: ''
+          ownership: ''
+          painting: ''
+          person: ''
+          physical_form: ''
+          pigment: ''
+          preserved_parts: ''
+          proj_dedication: ''
+          proj_id: ''
+          quality: ''
+          quiver_trans_bright_spots: ''
+          quiver_trans_lat_rounding: ''
+          quiver_trans_tip_rounding: ''
+          raw_material: ''
+          rec_creator: ''
+          rec_language: ''
+          rec_updater: ''
+          recent_damage: ''
+          recent_damage_type: ''
+          record_source: ''
+          relative_datation: ''
+          reparation_features: ''
+          resource_types: ''
+          retouch: ''
+          rights_access: ''
+          rights_reproduction: ''
+          rock_fragments: ''
+          sdp_method: ''
+          sdp_value: ''
+          serration: ''
+          site: parent_groups
+          spatial_ref_system: ''
+          state: ''
+          subject: ''
+          subord_dataset: ''
+          surface_alt: ''
+          tags: ''
+          temporal_subjects: ''
+          test_level_0: ''
+          thermic_cracks: ''
+          tip_fracture: ''
+          units: ''
+  aggregated_field_artefact_category:
+    label: 'A3D Aggregated Artefact category'
+    property_path: aggregated_field
+    type: string
+    configuration:
+      type: concat
+      separator: |+
+
+
+      fields:
+        - 'entity:node/field_artefact_category:entity:name'
+  aggregated_field_preserved_parts:
+    label: 'A3D Aggregated Preserved body parts'
+    property_path: aggregated_field
+    type: string
+    configuration:
+      type: concat
+      separator: |+
+
+
+      fields:
+        - 'entity:node/field_preserved_parts_struct:entity:name'
+  aggregated_field_recent_damage_type:
+    label: 'A3D Aggregated Recent damage type'
+    property_path: aggregated_field
+    type: string
+    configuration:
+      type: concat
+      separator: |+
+
+
+      fields:
+        - 'entity:node/field_recent_damage_type_struct:entity:name'
+  artefact_appell:
+    label: 'Artefact appellation'
+    property_path: aggregated_field
+    type: text
+    configuration:
+      type: concat
+      separator: ' '
+      fields:
+        - 'entity:node/field_artefact_category'
+        - 'entity:node/field_artefact_class'
+        - 'entity:node/field_artefact_id'
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  entity_type:
+    label: 'Entity type'
+    property_path: search_api_entity_type
+    type: string
+  field_2d_asymmetry:
+    label: '2D asymmetry (smaller barb)'
+    datasource_id: 'entity:node'
+    property_path: field_2d_asymmetry
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_2d_asymmetry
+  field_3d_shaping:
+    label: '3D specifics of shaping'
+    datasource_id: 'entity:node'
+    property_path: field_3d_shaping
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_3d_shaping
+  field_3d_shaping_struct:
+    label: '3D specifics of shaping (structured)'
+    datasource_id: 'entity:node'
+    property_path: field_3d_shaping_struct
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_3d_shaping_struct
+  field_3d_shaping_struct_name:
+    label: '3D specifics of shaping (structured) » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_3d_shaping_struct:entity:name'
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_3d_shaping_struct
+      module:
+        - taxonomy
+  field_3d_traces:
+    label: '3D specifics of traces'
+    datasource_id: 'entity:node'
+    property_path: field_3d_traces
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_3d_traces
+  field_3d_traces_struct:
+    label: '3D specifics of traces (structured)'
+    datasource_id: 'entity:node'
+    property_path: field_3d_traces_struct
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_3d_traces_struct
+  field_3d_traces_struct_name:
+    label: '3D specifics of traces (structured) » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_3d_traces_struct:entity:name'
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_3d_traces_struct
+      module:
+        - taxonomy
+  field_a_asymmetry:
+    label: 'Cross-section A asymmetry'
+    datasource_id: 'entity:node'
+    property_path: field_a_asymmetry
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_a_asymmetry
+  field_abs_dat_range:
+    label: 'Absolute datation range'
+    datasource_id: 'entity:node'
+    property_path: field_abs_dat_range
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_abs_dat_range
+  field_abs_dat_source:
+    label: 'Absolute datation source'
+    datasource_id: 'entity:node'
+    property_path: field_abs_dat_source
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_abs_dat_source
+  field_ais_cr:
+    label: 'AIS CR'
+    datasource_id: 'entity:node'
+    property_path: field_ais_cr
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_ais_cr
+  field_alteration:
+    label: Alteration
+    datasource_id: 'entity:node'
+    property_path: field_alteration
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_alteration
+  field_alternative_id:
+    label: 'Alternative ID'
+    datasource_id: 'entity:node'
+    property_path: field_alternative_id
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_alternative_id
+  field_artefact_category:
+    label: 'Artefact category'
+    datasource_id: 'entity:node'
+    property_path: field_artefact_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_artefact_category
+  field_artefact_category_name:
+    label: 'Artefact category » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_artefact_category:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_artefact_category
+      module:
+        - taxonomy
+  field_artefact_class:
+    label: 'Artefact class'
+    datasource_id: 'entity:node'
+    property_path: field_artefact_class
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_artefact_class
+  field_artefact_class_name:
+    label: 'Artefact class » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_artefact_class:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_artefact_class
+      module:
+        - taxonomy
+  field_artefact_id:
+    label: 'Artefact ID'
+    datasource_id: 'entity:node'
+    property_path: field_artefact_id
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_artefact_id
+  field_artefact_subclass:
+    label: 'Artefact subclass'
+    datasource_id: 'entity:node'
+    property_path: field_artefact_subclass
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_artefact_subclass
+  field_assess_cond_date:
+    label: 'Assessment of condition date'
+    datasource_id: 'entity:node'
+    property_path: field_assess_cond_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_assess_cond_date
+  field_auth_3d_models:
+    label: 'Author of 3D models'
+    datasource_id: 'entity:node'
+    property_path: field_auth_3d_models
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_auth_3d_models
+  field_auth_res_data:
+    label: 'Author of research data'
+    datasource_id: 'entity:node'
+    property_path: field_auth_res_data
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_auth_res_data
+  field_b_asymmetry:
+    label: 'Cross-section B asymmetry'
+    datasource_id: 'entity:node'
+    property_path: field_b_asymmetry
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_b_asymmetry
+  field_ballistic_profile:
+    label: 'Ballistic profile'
+    datasource_id: 'entity:node'
+    property_path: field_ballistic_profile
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_ballistic_profile
+  field_base_curve:
+    label: 'Base curve'
+    datasource_id: 'entity:node'
+    property_path: field_base_curve
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_base_curve
+  field_binder_type:
+    label: 'Binder type'
+    datasource_id: 'entity:node'
+    property_path: field_binder_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_binder_type
+  field_blank_orientation:
+    label: 'Blank orientation (blank axis)'
+    datasource_id: 'entity:node'
+    property_path: field_blank_orientation
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_blank_orientation
+  field_circle:
+    label: Circle
+    datasource_id: 'entity:node'
+    property_path: field_circle
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_circle
+  field_city:
+    label: City
+    datasource_id: 'entity:node'
+    property_path: field_city
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_city
+  field_city_code:
+    label: 'City code'
+    datasource_id: 'entity:node'
+    property_path: field_city_code
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_city_code
+  field_coll_contacts:
+    label: Contacts
+    datasource_id: 'entity:node'
+    property_path: field_coll_contacts
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_coll_contacts
+  field_coll_id:
+    label: 'Collection ID'
+    datasource_id: 'entity:node'
+    property_path: field_coll_id
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_coll_id
+  field_coll_keyword:
+    label: 'Collection keywords'
+    datasource_id: 'entity:node'
+    property_path: field_coll_keyword
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_coll_keyword
+  field_coll_lang:
+    label: 'Collection metadata language'
+    datasource_id: 'entity:node'
+    property_path: field_coll_lang
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_coll_lang
+  field_coll_org:
+    label: Organisation
+    datasource_id: 'entity:node'
+    property_path: field_coll_org
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_coll_org
+  field_coll_rights:
+    label: 'Collection rights'
+    datasource_id: 'entity:node'
+    property_path: field_coll_rights
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_coll_rights
+  field_coll_title:
+    label: 'Collection title'
+    datasource_id: 'entity:node'
+    property_path: field_coll_title
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_coll_title
+  field_colour_paint:
+    label: 'Painting colour'
+    datasource_id: 'entity:node'
+    property_path: field_colour_paint
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_colour_paint
+  field_colour_paint_name:
+    label: 'Painting colour » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_colour_paint:entity:name'
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_colour_paint
+      module:
+        - taxonomy
+  field_country:
+    label: Country
+    datasource_id: 'entity:node'
+    property_path: field_country
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_country
+  field_cov_spat:
+    label: 'Coverage spatial'
+    datasource_id: 'entity:node'
+    property_path: field_cov_spat
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_cov_spat
+  field_cov_temp:
+    label: 'Coverage temporal'
+    datasource_id: 'entity:node'
+    property_path: field_cov_temp
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_cov_temp
+  field_creation:
+    label: Creation
+    datasource_id: 'entity:node'
+    property_path: field_creation
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_creation
+  field_culture:
+    label: Culture
+    datasource_id: 'entity:node'
+    property_path: field_culture
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_culture
+  field_culture_name:
+    label: 'Culture » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_culture:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_culture
+      module:
+        - taxonomy
+  field_current_location:
+    label: 'Current location'
+    datasource_id: 'entity:node'
+    property_path: field_current_location
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_current_location
+  field_deposition_cond:
+    label: 'Deposition condition'
+    datasource_id: 'entity:node'
+    property_path: field_deposition_cond
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_deposition_cond
+  field_deposition_cond_name:
+    label: 'Deposition condition » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_deposition_cond:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_deposition_cond
+      module:
+        - taxonomy
+  field_description_a3d:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_description_a3d
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_description_a3d
+  field_discoverer:
+    label: Discoverer
+    datasource_id: 'entity:node'
+    property_path: field_discoverer
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_discoverer
+  field_discovery_date:
+    label: 'Discovery date'
+    datasource_id: 'entity:node'
+    property_path: field_discovery_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_discovery_date
+  field_doc_creator:
+    label: 'Documentation creator'
+    datasource_id: 'entity:node'
+    property_path: field_doc_creator
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_doc_creator
+  field_doc_date:
+    label: 'Documentation Date'
+    datasource_id: 'entity:node'
+    property_path: field_doc_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_doc_date
+  field_feature_id:
+    label: 'Feature ID'
+    datasource_id: 'entity:node'
+    property_path: field_feature_id
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_feature_id
+  field_feature_type:
+    label: 'Feature type'
+    datasource_id: 'entity:node'
+    property_path: field_feature_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_feature_type
+  field_feature_type_name:
+    label: 'Feature type » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_feature_type:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_feature_type
+      module:
+        - taxonomy
+  field_finding_context_loc:
+    label: 'Finding context (localization)'
+    datasource_id: 'entity:node'
+    property_path: field_finding_context_loc
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_finding_context_loc
+  field_finding_context_note:
+    label: 'Finding context (note)'
+    datasource_id: 'entity:node'
+    property_path: field_finding_context_note
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_finding_context_note
+  field_finding_context_pos:
+    label: 'Finding context (position)'
+    datasource_id: 'entity:node'
+    property_path: field_finding_context_pos
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_finding_context_pos
+  field_finding_context_sec:
+    label: 'Finding context (sector)'
+    datasource_id: 'entity:node'
+    property_path: field_finding_context_sec
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_finding_context_sec
+  field_finding_context_subtype:
+    label: 'Finding context (subtype)'
+    datasource_id: 'entity:node'
+    property_path: field_finding_context_subtype
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_finding_context_subtype
+  field_finding_context_type:
+    label: 'Finding context (type)'
+    datasource_id: 'entity:node'
+    property_path: field_finding_context_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_finding_context_type
+  field_finding_context_type_1:
+    label: 'Finding context (type)'
+    datasource_id: 'entity:node'
+    property_path: field_finding_context_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_finding_context_type
+  field_fract_preservation:
+    label: 'Fracture preservation'
+    datasource_id: 'entity:node'
+    property_path: field_fract_preservation
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_fract_preservation
+  field_fract_preservation_struct:
+    label: "Fracture preservation\_(structured)"
+    datasource_id: 'entity:node'
+    property_path: field_fract_preservation_struct
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_fract_preservation_struct
+  field_fract_preservation_struct_name:
+    label: "Fracture preservation\_(structured) » Taxonomy term » Name"
+    datasource_id: 'entity:node'
+    property_path: 'field_fract_preservation_struct:entity:name'
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_fract_preservation_struct
+      module:
+        - taxonomy
+  field_g_w_practice:
+    label: 'Good/wrong practice'
+    datasource_id: 'entity:node'
+    property_path: field_g_w_practice
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_g_w_practice
+  field_gb_scale:
+    label: 'Grog/binder scale'
+    datasource_id: 'entity:node'
+    property_path: field_gb_scale
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_gb_scale
+  field_general_lateral_wear:
+    label: 'General lateral wear'
+    datasource_id: 'entity:node'
+    property_path: field_general_lateral_wear
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_general_lateral_wear
+  field_general_type:
+    label: 'General type'
+    datasource_id: 'entity:node'
+    property_path: field_general_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_general_type
+  field_glue_residues:
+    label: 'Glue residues'
+    datasource_id: 'entity:node'
+    property_path: field_glue_residues
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_glue_residues
+  field_grain_type:
+    label: 'Grain type'
+    datasource_id: 'entity:node'
+    property_path: field_grain_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_grain_type
+  field_holder_type:
+    label: 'Holder type'
+    datasource_id: 'entity:node'
+    property_path: field_holder_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_holder_type
+  field_legal_status:
+    label: 'Legal status'
+    datasource_id: 'entity:node'
+    property_path: field_legal_status
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_legal_status
+  field_licence_url:
+    label: 'Licence URL'
+    datasource_id: 'entity:node'
+    property_path: field_licence_url
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_licence_url
+  field_literature:
+    label: Literature
+    datasource_id: 'entity:node'
+    property_path: field_literature
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_literature
+  field_longitudinal_profile:
+    label: 'Longitudinal profile'
+    datasource_id: 'entity:node'
+    property_path: field_longitudinal_profile
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_longitudinal_profile
+  field_measurements_dimensions_value:
+    label: 'Measurements » <em class="placeholder">dimensions_value</em> value'
+    datasource_id: 'entity:node'
+    property_path: 'field_measurements:dimensions_value'
+    type: decimal
+    dependencies:
+      config:
+        - field.storage.node.field_measurements
+  field_member_of:
+    label: 'Member of'
+    datasource_id: 'entity:node'
+    property_path: field_member_of
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_member_of
+  field_met_note_cz:
+    label: 'Methodic note (CZ)'
+    datasource_id: 'entity:node'
+    property_path: field_met_note_cz
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_met_note_cz
+  field_metadata_rights:
+    label: 'Metadata rights'
+    datasource_id: 'entity:node'
+    property_path: field_metadata_rights
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_metadata_rights
+  field_micro_ct:
+    label: 'MicroCT specifics'
+    datasource_id: 'entity:node'
+    property_path: field_micro_ct
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_micro_ct
+  field_microstructure:
+    label: Microstructure
+    datasource_id: 'entity:node'
+    property_path: field_microstructure
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_microstructure
+  field_mineral_fragments:
+    label: 'Mineral fragments'
+    datasource_id: 'entity:node'
+    property_path: field_mineral_fragments
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_mineral_fragments
+  field_mineralogy:
+    label: Mineralogy
+    datasource_id: 'entity:node'
+    property_path: field_mineralogy
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_mineralogy
+  field_orig_state_pres:
+    label: 'Original state of preservation'
+    datasource_id: 'entity:node'
+    property_path: field_orig_state_pres
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_orig_state_pres
+  field_original_location:
+    label: 'Original location'
+    datasource_id: 'entity:node'
+    property_path: field_original_location
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_original_location
+  field_ownership:
+    label: Ownership
+    datasource_id: 'entity:node'
+    property_path: field_ownership
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_ownership
+  field_painting_eye:
+    label: 'Painting (identified by naked eye)'
+    datasource_id: 'entity:node'
+    property_path: field_painting_eye
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_painting_eye
+  field_painting_microscope:
+    label: 'Painting (identified by microscopy)'
+    datasource_id: 'entity:node'
+    property_path: field_painting_microscope
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_painting_microscope
+  field_painting_tool:
+    label: 'Painting (identified in DStretch tool - mode)'
+    datasource_id: 'entity:node'
+    property_path: field_painting_tool
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_painting_tool
+  field_pigment:
+    label: 'Pigment determination'
+    datasource_id: 'entity:node'
+    property_path: field_pigment
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_pigment
+  field_pigment_name:
+    label: 'Pigment determination » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_pigment:entity:name'
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_pigment
+      module:
+        - taxonomy
+  field_polished_sec_petrography:
+    label: 'Polished-section petrography'
+    datasource_id: 'entity:node'
+    property_path: field_polished_sec_petrography
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_polished_sec_petrography
+  field_porosity:
+    label: Porosity
+    datasource_id: 'entity:node'
+    property_path: field_porosity
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_porosity
+  field_posture:
+    label: Posture
+    datasource_id: 'entity:node'
+    property_path: field_posture
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_posture
+  field_posture_name:
+    label: 'Posture » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_posture:entity:name'
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_posture
+      module:
+        - taxonomy
+  field_preserved_parts:
+    label: 'Preserved body parts'
+    datasource_id: 'entity:node'
+    property_path: field_preserved_parts
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_preserved_parts
+  field_preserved_parts_struct:
+    label: 'Preserved body parts (structured)'
+    datasource_id: 'entity:node'
+    property_path: field_preserved_parts_struct
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_preserved_parts_struct
+  field_preserved_parts_struct_name:
+    label: 'Preserved body parts (structured) Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_preserved_parts_struct:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_preserved_parts_struct
+      module:
+        - taxonomy
+  field_proj_dedication:
+    label: 'Project dedication'
+    datasource_id: 'entity:node'
+    property_path: field_proj_dedication
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_proj_dedication
+  field_provenance:
+    label: Provenance
+    datasource_id: 'entity:node'
+    property_path: field_provenance
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_provenance
+  field_quality:
+    label: Quality
+    datasource_id: 'entity:node'
+    property_path: field_quality
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_quality
+  field_quiver_trans_bright_spots:
+    label: 'Quiver transport - bright spots'
+    datasource_id: 'entity:node'
+    property_path: field_quiver_trans_bright_spots
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_quiver_trans_bright_spots
+  field_quiver_trans_lat_rounding:
+    label: 'Quiver transport - lateral rounding (and striations)'
+    datasource_id: 'entity:node'
+    property_path: field_quiver_trans_lat_rounding
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_quiver_trans_lat_rounding
+  field_quiver_trans_tip_rounding:
+    label: 'Quiver transport - tip rounding'
+    datasource_id: 'entity:node'
+    property_path: field_quiver_trans_tip_rounding
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_quiver_trans_tip_rounding
+  field_raw_material:
+    label: 'Raw material'
+    datasource_id: 'entity:node'
+    property_path: field_raw_material
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_raw_material
+  field_raw_material_name:
+    label: 'Raw material » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_raw_material:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_raw_material
+      module:
+        - taxonomy
+  field_recent_damage:
+    label: 'Recent damage & alteration'
+    datasource_id: 'entity:node'
+    property_path: field_recent_damage
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_recent_damage
+  field_recent_damage_name:
+    label: 'Recent damage & alteration » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_recent_damage:entity:name'
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_recent_damage
+      module:
+        - taxonomy
+  field_recent_damage_note:
+    label: 'Contamination and recent damage'
+    datasource_id: 'entity:node'
+    property_path: field_recent_damage_note
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_recent_damage_note
+  field_recent_damage_tid:
+    label: 'Recent damage & alteration » Taxonomy term » Term ID'
+    datasource_id: 'entity:node'
+    property_path: 'field_recent_damage:entity:tid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_recent_damage
+      module:
+        - taxonomy
+  field_recent_damage_type:
+    label: 'Recent damage type'
+    datasource_id: 'entity:node'
+    property_path: field_recent_damage_type
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_recent_damage_type
+  field_recent_damage_type_struct:
+    label: 'Recent damage type (structured)'
+    datasource_id: 'entity:node'
+    property_path: field_recent_damage_type_struct
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_recent_damage_type_struct
+  field_recent_damage_type_struct_name:
+    label: 'Recent damage type (structured) » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_recent_damage_type_struct:entity:name'
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_recent_damage_type_struct
+      module:
+        - taxonomy
+  field_record_source:
+    label: 'Record source'
+    datasource_id: 'entity:node'
+    property_path: field_record_source
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_record_source
+  field_reg_number:
+    label: 'Registration number'
+    datasource_id: 'entity:node'
+    property_path: field_reg_number
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_reg_number
+  field_relations:
+    label: Relations
+    datasource_id: 'entity:node'
+    property_path: field_relations
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_relations
+  field_relative_datation:
+    label: 'Relative datation'
+    datasource_id: 'entity:node'
+    property_path: field_relative_datation
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_relative_datation
+  field_relative_datation_name:
+    label: 'Relative datation » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_relative_datation:entity:name'
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_relative_datation
+      module:
+        - taxonomy
+  field_relative_datation_tid:
+    label: 'Relative datation » Taxonomy term » Term ID'
+    datasource_id: 'entity:node'
+    property_path: 'field_relative_datation:entity:tid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_relative_datation
+      module:
+        - taxonomy
+  field_reparation_features:
+    label: 'Reparation features'
+    datasource_id: 'entity:node'
+    property_path: field_reparation_features
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_reparation_features
+  field_retouch:
+    label: Retouch
+    datasource_id: 'entity:node'
+    property_path: field_retouch
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_retouch
+  field_rights_access:
+    label: 'Access rights'
+    datasource_id: 'entity:node'
+    property_path: field_rights_access
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_rights_access
+  field_rights_reproduction:
+    label: 'Reproduction rights'
+    datasource_id: 'entity:node'
+    property_path: field_rights_reproduction
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_rights_reproduction
+  field_rock_fragments:
+    label: 'Rock fragments'
+    datasource_id: 'entity:node'
+    property_path: field_rock_fragments
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_rock_fragments
+  field_serration:
+    label: Serration
+    datasource_id: 'entity:node'
+    property_path: field_serration
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_serration
+  field_site:
+    label: Site
+    datasource_id: 'entity:node'
+    property_path: field_site
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_site
+  field_site_name:
+    label: 'Site » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_site:entity:name'
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_site
+      module:
+        - taxonomy
+  field_site_tid:
+    label: 'Site » Taxonomy term » Term ID'
+    datasource_id: 'entity:node'
+    property_path: 'field_site:entity:tid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_site
+      module:
+        - taxonomy
+  field_state:
+    label: State
+    datasource_id: 'entity:node'
+    property_path: field_state
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_state
+  field_statement:
+    label: Statement
+    datasource_id: 'entity:node'
+    property_path: field_statement
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_statement
+  field_subord_dataset:
+    label: 'Subordinate dataset'
+    datasource_id: 'entity:node'
+    property_path: field_subord_dataset
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_subord_dataset
+  field_subord_dataset_link:
+    label: 'Subordinate dataset link'
+    datasource_id: 'entity:node'
+    property_path: field_subord_dataset_link
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      config:
+        - field.storage.node.field_subord_dataset_link
+  field_surface_alt:
+    label: 'Surface alteration'
+    datasource_id: 'entity:node'
+    property_path: field_surface_alt
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_surface_alt
+  field_thermic_cracks:
+    label: 'Thermic cracks'
+    datasource_id: 'entity:node'
+    property_path: field_thermic_cracks
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_thermic_cracks
+  field_thermic_cracks_name:
+    label: 'Thermic cracks » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_thermic_cracks:entity:name'
+    type: 'solr_text_custom:ngramstring'
+    dependencies:
+      config:
+        - field.storage.node.field_thermic_cracks
+      module:
+        - taxonomy
+  field_timespan_from:
+    label: 'Timespan » From value'
+    datasource_id: 'entity:node'
+    property_path: 'field_timespan:from'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_timespan
+  field_timespan_to:
+    label: 'Timespan » To value'
+    datasource_id: 'entity:node'
+    property_path: 'field_timespan:to'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_timespan
+  field_tip_fracture:
+    label: 'Tip fracture'
+    datasource_id: 'entity:node'
+    property_path: field_tip_fracture
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_tip_fracture
+  field_wear:
+    label: Wear
+    datasource_id: 'entity:node'
+    property_path: field_wear
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_wear
+  field_wgs84_geolocation:
+    label: 'WGS84 Geolocation'
+    datasource_id: 'entity:node'
+    property_path: field_wgs84_geolocation
+    type: location
+    dependencies:
+      config:
+        - field.storage.node.field_wgs84_geolocation
+  from:
+    label: 'Firing » From value'
+    datasource_id: 'entity:node'
+    property_path: 'field_firing:from'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_firing
+  langcode:
+    label: Language
+    datasource_id: 'entity:node'
+    property_path: langcode
+    type: string
+    dependencies:
+      module:
+        - node
+  loc_coord_cadastre_x:
+    label: 'Geolocation » <em class="placeholder">loc_coord_cadastre_x</em> value'
+    datasource_id: 'entity:node'
+    property_path: 'field_geolocation:loc_coord_cadastre_x'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_geolocation
+  loc_coord_cadastre_y:
+    label: 'Geolocation » <em class="placeholder">loc_coord_cadastre_y</em> value'
+    datasource_id: 'entity:node'
+    property_path: 'field_geolocation:loc_coord_cadastre_y'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_geolocation
+  menu_link:
+    label: 'Menu link'
+    datasource_id: 'entity:node'
+    property_path: menu_link
+    type: integer
+    dependencies:
+      module:
+        - token
+  msdp_note:
+    label: 'Mass & structure data presence » <em class="placeholder">msdp_note</em> value'
+    datasource_id: 'entity:node'
+    property_path: 'field_mass_structure_data_pres:msdp_note'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_mass_structure_data_pres
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  revision_log:
+    label: 'Revision log message'
+    datasource_id: 'entity:node'
+    property_path: revision_log
+    type: 'solr_text_custom:ngram'
+    dependencies:
+      module:
+        - node
+  revision_timestamp:
+    label: 'Revision create time'
+    datasource_id: 'entity:node'
+    property_path: revision_timestamp
+    type: date
+    dependencies:
+      module:
+        - node
+  revision_uid:
+    label: 'Revision user'
+    datasource_id: 'entity:node'
+    property_path: revision_uid
+    type: integer
+    dependencies:
+      module:
+        - node
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  status_1:
+    label: Published
+    datasource_id: 'entity:taxonomy_term'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - taxonomy
+  term_id:
+    label: 'Term ID'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: tid
+    type: integer
+    dependencies:
+      module:
+        - taxonomy
+  term_name:
+    label: Name
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: string
+    dependencies:
+      module:
+        - taxonomy
+  term_vid:
+    label: Vocabulary
+    datasource_id: 'entity:taxonomy_term'
+    property_path: vid
+    type: string
+    dependencies:
+      module:
+        - taxonomy
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+  to:
+    label: 'Firing » To value'
+    datasource_id: 'entity:node'
+    property_path: 'field_firing:to'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_firing
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  uid:
+    label: 'Authored by'
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - a3d_object
+        - analysis
+        - sample
+    languages:
+      default: true
+      selected: {  }
+  'entity:taxonomy_term':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  hierarchy:
+    weights:
+      preprocess_index: -45
+    fields:
+      field_site: taxonomy_term-parent
+  language_with_fallback: {  }
+  rendered_item: {  }
+  reverse_entity_references: {  }
+  solr_date_range:
+    weights:
+      preprocess_index: 0
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: default_solr_server

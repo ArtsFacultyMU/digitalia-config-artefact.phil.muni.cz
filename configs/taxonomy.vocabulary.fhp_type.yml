@@ -1,0 +1,8 @@
+uuid: 350a0bcd-4014-4087-bc4f-7f5c9b1e2978
+langcode: en
+status: true
+dependencies: {  }
+name: 'Type of frontal heating panel'
+vid: fhp_type
+description: 'KCH - plná/prořezávaná'
+weight: 0

@@ -1,0 +1,57 @@
+uuid: 309deec0-6008-4270-b276-269c4fb4cd95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.a3d_platform_homepage.field_banner_text
+    - field.field.node.a3d_platform_homepage.field_citation_text
+    - field.field.node.a3d_platform_homepage.field_copyright_text
+    - field.field.node.a3d_platform_homepage.field_intro_text
+    - node.type.a3d_platform_homepage
+  module:
+    - text
+    - user
+id: node.a3d_platform_homepage.default
+targetEntityType: node
+bundle: a3d_platform_homepage
+mode: default
+content:
+  field_banner_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_citation_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_copyright_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_intro_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_2: true
+  a3d_eva_homepage_link_entity_view_1: true
+  display_media_entity_view_1: true
+  display_media_entity_view_3: true
+  display_media_original_download: true
+  display_media_service_file: true
+  display_media_thumbnail: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

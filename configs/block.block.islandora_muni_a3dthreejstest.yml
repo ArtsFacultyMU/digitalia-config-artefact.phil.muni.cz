@@ -1,0 +1,37 @@
+uuid: c4d34817-6c87-4fc9-8332-c7297c3c47f1
+langcode: en
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.a3d_threejs_test
+  module:
+    - context
+    - islandora
+    - simple_block
+  theme:
+    - islandora_muni
+id: islandora_muni_a3dthreejstest
+theme: islandora_muni
+region: content
+weight: -30
+provider: null
+plugin: 'simple_block:a3d_threejs_test'
+settings:
+  id: 'simple_block:a3d_threejs_test'
+  label: 'a3d threejs test'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-a3d_nef_content-nef: view-a3d_nef_content-nef
+      view-a3d_nef_content-nef_taxonomy_paged: view-a3d_nef_content-nef_taxonomy_paged
+      view-a3d_nef_search_index-nef_browse_paged: view-a3d_nef_search_index-nef_browse_paged
+      view-a3d_nef_search_index-nef_search_paged: view-a3d_nef_search_index-nef_search_paged
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

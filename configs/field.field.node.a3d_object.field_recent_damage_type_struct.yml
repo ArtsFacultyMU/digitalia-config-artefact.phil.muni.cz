@@ -1,0 +1,31 @@
+uuid: 9e21d165-7dec-4298-b3b6-a901a0649c0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recent_damage_type_struct
+    - node.type.a3d_object
+    - taxonomy.vocabulary.recent_damage_type
+    - taxonomy.vocabulary.unknown_values
+id: node.a3d_object.field_recent_damage_type_struct
+field_name: field_recent_damage_type_struct
+entity_type: node
+bundle: a3d_object
+label: 'Recent damage type (structured)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      recent_damage_type: recent_damage_type
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: recent_damage_type
+field_type: entity_reference

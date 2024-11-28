@@ -1,0 +1,19 @@
+uuid: 3454bbf4-84ea-4de7-b595-e2d24e2f7f90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternative_id
+    - node.type.a3d_object
+id: node.a3d_object.field_alternative_id
+field_name: field_alternative_id
+entity_type: node
+bundle: a3d_object
+label: 'Alternative ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

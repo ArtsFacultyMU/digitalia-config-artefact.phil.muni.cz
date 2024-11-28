@@ -1,0 +1,42 @@
+uuid: 28953ed3-6037-4157-ae4b-81373ef381eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - datafield
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_chemical_analysis
+field_name: field_chemical_analysis
+entity_type: node
+type: data_field
+settings:
+  columns:
+    chemical:
+      name: chemical
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    value:
+      name: value
+      type: numeric
+      max_length: 255
+      size: normal
+      precision: 11
+      unsigned: true
+      scale: 4
+      datetime_type: date
+module: datafield
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

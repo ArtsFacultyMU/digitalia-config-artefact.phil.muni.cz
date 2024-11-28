@@ -1,0 +1,24 @@
+uuid: 20b2338c-d45c-4cd9-a646-073d98f76c3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_at_copyright_text
+    - filter.format.full_html
+    - node.type.at_project
+  module:
+    - text
+id: node.at_project.field_at_copyright_text
+field_name: field_at_copyright_text
+entity_type: node
+bundle: at_project
+label: 'at copyright text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

@@ -1,0 +1,20 @@
+uuid: 650503AE-A2DB-4A97-8B58-4B71C50FF8CB
+langcode: en
+id: kch_identifier_type
+migration_group: kch
+label: 'Identifier types'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/identifier_type.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - type
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  name: type
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: identifier_type

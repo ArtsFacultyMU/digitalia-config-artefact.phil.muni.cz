@@ -1,0 +1,20 @@
+uuid: c586b108-5f64-4a73-9f9b-57463f15067f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.chemical_compounds
+  module:
+    - path
+id: taxonomy_term.chemical_compounds.path
+field_name: path
+entity_type: taxonomy_term
+bundle: chemical_compounds
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

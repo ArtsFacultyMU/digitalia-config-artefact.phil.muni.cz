@@ -1,0 +1,21 @@
+uuid: 5a22b3b6-0024-4e36-9800-7e08356887ef
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nonplastic_sort
+    - node.type.analysis
+id: node.analysis.field_nonplastic_sort
+field_name: field_nonplastic_sort
+entity_type: node
+bundle: analysis
+label: 'Vytřídění neplastické složky'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Ano
+  off_label: Ne
+field_type: boolean

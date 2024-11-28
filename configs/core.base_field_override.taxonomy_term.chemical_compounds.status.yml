@@ -1,0 +1,22 @@
+uuid: d0c87508-7208-41b5-9e56-ee2e2a587de7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.chemical_compounds
+id: taxonomy_term.chemical_compounds.status
+field_name: status
+entity_type: taxonomy_term
+bundle: chemical_compounds
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

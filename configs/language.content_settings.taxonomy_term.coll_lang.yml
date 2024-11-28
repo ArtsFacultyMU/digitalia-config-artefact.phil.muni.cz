@@ -1,0 +1,18 @@
+uuid: c4dbd4c7-82f2-434e-8a86-3c61aed82195
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.coll_lang
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.coll_lang
+target_entity_type_id: taxonomy_term
+target_bundle: coll_lang
+default_langcode: site_default
+language_alterable: true

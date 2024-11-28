@@ -1,0 +1,13 @@
+display:
+  default:
+    display_options:
+      fields:
+        title:
+          label: Nadpis
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Vše -'
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Řadit dle'

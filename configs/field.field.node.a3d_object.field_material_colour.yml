@@ -1,0 +1,31 @@
+uuid: 00461b5f-73d4-4c3c-b6b7-3310041b489f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_material_colour
+    - node.type.a3d_object
+    - taxonomy.vocabulary.colour
+    - taxonomy.vocabulary.unknown_values
+id: node.a3d_object.field_material_colour
+field_name: field_material_colour
+entity_type: node
+bundle: a3d_object
+label: 'Material colour'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      colour: colour
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: colour
+field_type: entity_reference

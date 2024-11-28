@@ -1,0 +1,8 @@
+uuid: b79dda61-d89b-44a1-8992-8c0e0d5b2ea1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Instrument Type'
+vid: instrument_type
+description: 'Classification of the type of the instrument'
+weight: 0

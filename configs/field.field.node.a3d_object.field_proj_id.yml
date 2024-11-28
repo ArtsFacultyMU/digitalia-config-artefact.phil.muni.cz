@@ -1,0 +1,29 @@
+uuid: c9ee8d5b-50ca-46d6-8b12-e8b458d69a4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_proj_id
+    - node.type.a3d_object
+    - taxonomy.vocabulary.proj_id
+id: node.a3d_object.field_proj_id
+field_name: field_proj_id
+entity_type: node
+bundle: a3d_object
+label: 'Project identification'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      proj_id: proj_id
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

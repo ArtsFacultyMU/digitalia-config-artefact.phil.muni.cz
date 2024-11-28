@@ -1,0 +1,35 @@
+uuid: c4438641-ffb4-4b42-bbcc-44ee4e7cf2a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_alternate_identifier
+    - taxonomy.vocabulary.actor
+  module:
+    - datafield
+id: taxonomy_term.actor.field_alternate_identifier
+field_name: field_alternate_identifier
+entity_type: taxonomy_term
+bundle: actor
+label: 'Alternate identifier'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    id:
+      label: Id
+      required: false
+    id_type:
+      label: 'Id type'
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: identifier_type
+    note:
+      label: Note
+      list: false
+      allowed_values: ''
+      required: false
+field_type: data_field

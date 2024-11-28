@@ -1,0 +1,116 @@
+display:
+  kch_content:
+    display_options:
+      title: 'Keramické výrobky'
+      fields:
+        field_artefact_id_1:
+          label: 'ID artefaktu'
+        field_artefact_id_type:
+          label: 'Typ ID artefaktu'
+        field_alternative_ids:
+          label: 'Alternativní ID'
+        field_artefact_category:
+          label: 'Kategorie artefaktu'
+        field_circle:
+          label: Okruh
+        field_sculpture_type:
+          label: Typ
+        field_sculpture_subtype:
+          label: Podtyp
+        field_aquamanile_type:
+          label: Typ
+        field_aquamanile_subtype:
+          label: Podtyp
+        field_st_placement_type1:
+          label: 'Typ dle umístění 1'
+        field_st_placement_type2:
+          label: 'Typ dle umístění 2'
+        field_st_placement_type3:
+          label: 'Typ dle umístění 3'
+        field_st_placement_certainty:
+          label: 'Jistota typu dle umístění'
+        field_st_shape_type1:
+          label: 'Typ dle morfologie 1 '
+        field_st_shape_type2:
+          label: 'Typ dle morfologie 2'
+        field_field_st_placement_certain:
+          label: 'Jistota typu dle morfologie'
+        field_description_a3d:
+          label: 'Popis (anglicky) '
+        field_field_description_a3d_cs:
+          label: Popis
+        field_site:
+          label: Lokalita
+        field_finding_context_type:
+          label: 'Typ nálezového kontextu'
+        field_actor_type:
+          label: 'Typ vlastníka'
+        field_ownership:
+          label: Vlastník
+        field_acquisition_type:
+          label: 'Způsob akvizice'
+        field_abs_dat_range:
+          label: 'Datace (absolutní rozsah)'
+        field_measurements:
+          label: Rozměry
+        field_wgs84_geolocation_accuracy:
+          label: 'Přesnost geolokace'
+        field_wgs84_geolocation:
+          label: Geolokace
+        field_motif:
+          label: Motiv
+        field_relief:
+          label: Reliéf
+        field_raw_material:
+          label: Materiál
+        field_surface_finishing:
+          label: 'Úprava povrchu'
+        field_has_a_construction_opening:
+          label: 'Má konstrukční otvor'
+          settings:
+            format_custom_false: Ne
+            format_custom_true: Ano
+        field_fhp_type:
+          label: 'Zpracování čelní vyhřívací stěny'
+        field_ledge_type:
+          label: 'Typ lišty'
+        field_edging:
+          label: 'Poznámka k rámování'
+        field_link_to_3d_model:
+          label: 'Odkaz na 3D model'
+        nothing_1:
+          label: 'Počet exemplářů'
+          alter:
+            text: "{% if field_number_of_instances_quantity and field_number_of_instances_is_exact == \"Yes\"%}\r\n{{ field_number_of_instances_quantity }}\r\n{% elseif  field_number_of_instances_quantity %}\r\nnejméně {{ field_number_of_instances_quantity }}\r\n{% endif %}"
+        field_note:
+          label: Poznámka
+        field_literature:
+          label: Literatura
+        field_material_colour:
+          label: 'Barva materiálu'
+  kch_sample:
+    display_options:
+      title: Vzorek
+      fields:
+        field_description_a3d:
+          label: Popis
+        field_object_reference:
+          label: 'Vzorek z'
+        field_sample_id:
+          label: 'ID vzorku'
+        field_is_macrosample:
+          label: Makrozvorek
+          settings:
+            format_custom_false: Ne
+            format_custom_true: Ano
+        field_is_thin_section:
+          label: Výbrus
+          settings:
+            format_custom_false: Ne
+            format_custom_true: Ano
+        field_note:
+          label: Poznámka
+        view_1:
+          admin_label: Analýza
+        view:
+          admin_label: Obrázky

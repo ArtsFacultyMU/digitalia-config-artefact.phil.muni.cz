@@ -1,0 +1,17 @@
+uuid: 5f87e130-b8e8-44d3-8004-adb0cfa5f2e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.cov_spat
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-532d8f5eb30f1cf4
+group_type: test_group_type
+content_plugin: 'group_term:cov_spat'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

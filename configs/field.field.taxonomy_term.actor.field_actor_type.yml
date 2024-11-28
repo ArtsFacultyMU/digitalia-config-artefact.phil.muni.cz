@@ -1,0 +1,29 @@
+uuid: 2980cd66-2aab-4059-82f0-e43bce332ad7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_actor_type
+    - taxonomy.vocabulary.actor
+    - taxonomy.vocabulary.actor_type
+id: taxonomy_term.actor.field_actor_type
+field_name: field_actor_type
+entity_type: taxonomy_term
+bundle: actor
+label: 'Actor type'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      actor_type: actor_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -2,6 +2,10 @@ uuid: 97185aca-ce5e-4054-80dc-811dfe907cb2
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_class
+    - islandora
+    - user
   theme:
     - claro
 _core:
@@ -19,4 +23,16 @@ settings:
   provider: core
   primary: true
   secondary: false
-visibility: {  }
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator

@@ -1,0 +1,18 @@
+uuid: 4ce6db43-bf49-4981-8324-2fae8eb6294f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.glue_residues
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.glue_residues
+target_entity_type_id: taxonomy_term
+target_bundle: glue_residues
+default_langcode: site_default
+language_alterable: true

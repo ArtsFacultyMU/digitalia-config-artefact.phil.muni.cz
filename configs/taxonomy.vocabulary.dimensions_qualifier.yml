@@ -1,0 +1,8 @@
+uuid: 6ec657d3-f7b0-4009-a75e-c3536730e182
+langcode: en
+status: true
+dependencies: {  }
+name: 'Dimensions Qualifier'
+vid: dimensions_qualifier
+description: 'A word or phrase that elaborates on the nature of the measurements of the work when necessary, as when the measurements are appr'
+weight: 0

@@ -1,0 +1,8 @@
+uuid: 7be17d78-cd12-4a9b-9b3a-bd362402f9a1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Access rights'
+vid: rights_access
+description: ''
+weight: 0

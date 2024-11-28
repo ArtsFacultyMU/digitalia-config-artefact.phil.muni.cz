@@ -1,0 +1,15 @@
+uuid: 49f0d3a6-bdca-40da-aac1-9acd5208154b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - user.role.administrator
+id: test_group_type-admin_out
+label: Administrator
+weight: -1
+admin: true
+scope: outsider
+global_role: administrator
+group_type: test_group_type
+permissions: {  }

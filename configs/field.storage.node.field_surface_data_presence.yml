@@ -1,0 +1,60 @@
+uuid: 61efa381-e6a8-4cd3-92b0-49c66edc86a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - datafield
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_surface_data_presence
+field_name: field_surface_data_presence
+entity_type: node
+type: data_field
+settings:
+  columns:
+    sdp_value:
+      name: sdp_value
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    sdp_method:
+      name: sdp_method
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    sdp_spec:
+      name: sdp_spec
+      type: text
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    sdp_note:
+      name: sdp_note
+      type: text
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+module: datafield
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

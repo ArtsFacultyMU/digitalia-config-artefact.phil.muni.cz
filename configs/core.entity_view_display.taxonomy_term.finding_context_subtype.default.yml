@@ -1,0 +1,29 @@
+uuid: e5325ffd-a4db-439b-9f4b-e8b65cccef19
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.finding_context_subtype
+  module:
+    - text
+id: taxonomy_term.finding_context_subtype.default
+targetEntityType: taxonomy_term
+bundle: finding_context_subtype
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

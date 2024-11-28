@@ -1,0 +1,21 @@
+uuid: b08b17e2-2efe-4a2a-84af-9cc03b312003
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_assess_cond_date
+    - node.type.a3d_object
+  module:
+    - datetime
+id: node.a3d_object.field_assess_cond_date
+field_name: field_assess_cond_date
+entity_type: node
+bundle: a3d_object
+label: 'Assessment of condition date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

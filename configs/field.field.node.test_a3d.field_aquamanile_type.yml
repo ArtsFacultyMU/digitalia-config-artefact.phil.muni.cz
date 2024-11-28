@@ -1,0 +1,31 @@
+uuid: e91e4116-fc37-4772-a173-6bdfff78abee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_aquamanile_type
+    - node.type.test_a3d
+    - taxonomy.vocabulary.aquamanile_type
+    - taxonomy.vocabulary.unknown_values
+id: node.test_a3d.field_aquamanile_type
+field_name: field_aquamanile_type
+entity_type: node
+bundle: test_a3d
+label: 'Aquamanile type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      aquamanile_type: aquamanile_type
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: aquamanile_type
+field_type: entity_reference

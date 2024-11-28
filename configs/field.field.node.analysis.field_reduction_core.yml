@@ -1,0 +1,21 @@
+uuid: bbd1129b-8661-48ef-8cae-2c747eeb3c22
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reduction_core
+    - node.type.analysis
+id: node.analysis.field_reduction_core
+field_name: field_reduction_core
+entity_type: node
+bundle: analysis
+label: 'Redukce - jádro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Ano
+  off_label: Ne
+field_type: boolean

@@ -1,0 +1,29 @@
+uuid: a16b8687-e484-4875-b7da-67ac4e5a1af9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_proj_dedication
+    - node.type.a3d_object
+    - taxonomy.vocabulary.proj_dedication
+id: node.a3d_object.field_proj_dedication
+field_name: field_proj_dedication
+entity_type: node
+bundle: a3d_object
+label: 'Project dedication'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      proj_dedication: proj_dedication
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

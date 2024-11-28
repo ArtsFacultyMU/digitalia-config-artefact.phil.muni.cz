@@ -1,0 +1,18 @@
+uuid: 0ad9cd24-aaaa-415e-9d1f-463abea8453c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.artefact_subclass
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.artefact_subclass
+target_entity_type_id: taxonomy_term
+target_bundle: artefact_subclass
+default_langcode: current_interface
+language_alterable: true

@@ -1,0 +1,8 @@
+uuid: 017dd371-0de7-40e7-b7db-57bc885c0297
+langcode: en
+status: true
+dependencies: {  }
+name: Agent
+vid: actor
+description: 'An institution or person'
+weight: 0

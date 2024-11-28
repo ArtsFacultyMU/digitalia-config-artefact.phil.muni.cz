@@ -1,0 +1,40 @@
+uuid: 4f8a3f46-fd07-4a83-b800-d5548d617bc7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: TSmzvdb0Ez0oyUVnrGfjmvCBZvKiddOpLiHJjJyvmYE
+id: arf_media_images
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: arf
+label: ''
+source:
+  plugin: csv
+  path: /data/platform_data/arf/arf_images.csv
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    UID: 1
+process:
+  field_media_image:
+    plugin: migration_lookup
+    migration: arf_files_images
+    source: id
+  field_media_of:
+    plugin: migration_lookup
+    migration: arf_metadata
+    source: field_alternative_id
+  name: filename
+  uid: constants/UID
+destination:
+  plugin: 'entity:media'
+  default_bundle: image
+migration_dependencies:
+  required: {  }
+  optional: {  }

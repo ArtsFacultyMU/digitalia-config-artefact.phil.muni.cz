@@ -1,0 +1,31 @@
+uuid: d63fae45-e294-401c-ac0a-53467d59e7b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_analysis_of
+    - node.type.a3d_object
+    - node.type.analysis
+    - node.type.sample
+id: node.analysis.field_analysis_of
+field_name: field_analysis_of
+entity_type: node
+bundle: analysis
+label: 'Analysis of'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      a3d_object: a3d_object
+      sample: sample
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: a3d_object
+field_type: entity_reference

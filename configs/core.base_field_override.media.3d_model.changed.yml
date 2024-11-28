@@ -1,0 +1,18 @@
+uuid: ed3133a9-9c63-40e8-911b-d976a23ded8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.3d_model
+id: media.3d_model.changed
+field_name: changed
+entity_type: media
+bundle: 3d_model
+label: Changed
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

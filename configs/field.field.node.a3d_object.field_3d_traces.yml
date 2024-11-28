@@ -1,0 +1,19 @@
+uuid: ae11c694-cfbd-42e5-881b-3a0132c78980
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_3d_traces
+    - node.type.a3d_object
+id: node.a3d_object.field_3d_traces
+field_name: field_3d_traces
+entity_type: node
+bundle: a3d_object
+label: '3D specifics of traces'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,8 @@
+uuid: 00aaf46e-3655-4d23-b244-de0af413fc3b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Legal status'
+vid: legal_status
+description: ''
+weight: 0

@@ -1,0 +1,11 @@
+uuid: 08a07cbd-fb43-42cc-9a98-9f6a57ca69b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.parent_groups
+label: 'Parent groups'
+description: ''
+targetEntityType: taxonomy_term
+cache: true

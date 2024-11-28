@@ -1,0 +1,8 @@
+uuid: 23de0e6c-6e1d-4884-8a83-b387154e3204
+langcode: en
+status: true
+dependencies: {  }
+name: 'Quiver transport - bright spots'
+vid: quiver_trans_bright_spots
+description: ''
+weight: 0

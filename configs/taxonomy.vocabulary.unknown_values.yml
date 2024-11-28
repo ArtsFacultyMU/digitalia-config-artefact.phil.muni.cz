@@ -1,0 +1,8 @@
+uuid: 308702af-a57e-4eac-ad62-50a3a647f1bd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Standard values for unknown information'
+vid: unknown_values
+description: 'DataCite codes for unknown information'
+weight: 0

@@ -1,0 +1,29 @@
+uuid: 5c31d382-1b00-49fa-8519-712c1a3db15a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.grain_type
+  module:
+    - text
+id: taxonomy_term.grain_type.default
+targetEntityType: taxonomy_term
+bundle: grain_type
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

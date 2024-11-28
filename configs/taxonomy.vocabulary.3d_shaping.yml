@@ -1,0 +1,8 @@
+uuid: 7d8a9384-0e99-4598-a29a-86773520f34b
+langcode: en
+status: true
+dependencies: {  }
+name: '3D specifics of shaping'
+vid: 3d_shaping
+description: ''
+weight: 0

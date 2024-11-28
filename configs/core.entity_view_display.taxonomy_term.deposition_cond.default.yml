@@ -1,0 +1,29 @@
+uuid: a2776eeb-623d-4cf7-98a0-9114d5ab03ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.deposition_cond
+  module:
+    - text
+id: taxonomy_term.deposition_cond.default
+targetEntityType: taxonomy_term
+bundle: deposition_cond
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

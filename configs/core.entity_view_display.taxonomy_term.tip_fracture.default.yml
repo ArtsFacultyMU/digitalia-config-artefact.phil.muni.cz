@@ -1,0 +1,29 @@
+uuid: dc16443e-71e6-4ee5-91d9-2ad3254ff5ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tip_fracture
+  module:
+    - text
+id: taxonomy_term.tip_fracture.default
+targetEntityType: taxonomy_term
+bundle: tip_fracture
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: 34c0b32b-1c73-462b-88fe-aa4aae9a3ff3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_polished_sec_petrography
+    - node.type.a3d_object
+id: node.a3d_object.field_polished_sec_petrography
+field_name: field_polished_sec_petrography
+entity_type: node
+bundle: a3d_object
+label: 'Polished-section petrography'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

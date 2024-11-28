@@ -1,0 +1,18 @@
+uuid: af02e46a-db62-4b65-9027-2eea17609acc
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.preserved_parts
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.preserved_parts
+target_entity_type_id: taxonomy_term
+target_bundle: preserved_parts
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,37 @@
+uuid: 8119CB2E-9A30-452B-83E8-A2D7540FF737
+langcode: cs
+status: true
+dependencies: {  }
+id: kch_fhp_type_cs
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: kch
+label: 'Types of frontal heating panels cs'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/fhp_type.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  tid:
+    plugin: migration_lookup
+    source: en
+    migration: kch_fhp_type
+  name: cs
+  langcode:
+    plugin: default_value
+    default_value: cs
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: fhp_type
+  translations: true
+migration_dependencies:
+  required:
+    - kch_fhp_type

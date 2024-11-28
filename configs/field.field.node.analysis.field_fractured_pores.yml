@@ -1,0 +1,21 @@
+uuid: 44762d22-4598-4dce-8720-894b8da912c0
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fractured_pores
+    - node.type.analysis
+id: node.analysis.field_fractured_pores
+field_name: field_fractured_pores
+entity_type: node
+bundle: analysis
+label: 'Puklinovité póry'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Ano
+  off_label: Ne
+field_type: boolean

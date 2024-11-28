@@ -1,0 +1,29 @@
+uuid: b6db28c0-05d6-4b44-9074-b6adf0e04e21
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.city_code
+  module:
+    - text
+id: taxonomy_term.city_code.default
+targetEntityType: taxonomy_term
+bundle: city_code
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

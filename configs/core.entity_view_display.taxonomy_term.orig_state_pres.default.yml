@@ -1,0 +1,29 @@
+uuid: 43ae4895-e944-44d9-9695-450210b7e4b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.orig_state_pres
+  module:
+    - text
+id: taxonomy_term.orig_state_pres.default
+targetEntityType: taxonomy_term
+bundle: orig_state_pres
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

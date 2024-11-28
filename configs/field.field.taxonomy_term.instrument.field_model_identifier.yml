@@ -1,0 +1,19 @@
+uuid: bb17dba4-11a3-41c0-91a8-549200f499e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_model_identifier
+    - taxonomy.vocabulary.instrument
+id: taxonomy_term.instrument.field_model_identifier
+field_name: field_model_identifier
+entity_type: taxonomy_term
+bundle: instrument
+label: 'Model Identifier'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

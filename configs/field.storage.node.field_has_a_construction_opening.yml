@@ -1,0 +1,22 @@
+uuid: 451cfae3-ece2-4b22-85fa-09d4b7f69c6a
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_has_a_construction_opening
+field_name: field_has_a_construction_opening
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

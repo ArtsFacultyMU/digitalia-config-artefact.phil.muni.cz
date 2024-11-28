@@ -1,0 +1,13 @@
+uuid: ef061b68-c5af-4049-9139-c261994bfbcd
+langcode: en
+status: true
+dependencies: {  }
+name: a3d_convert_to_jpeg
+label: 'A3D convert to JPEG'
+effects:
+  94f3524d-40d6-42ec-8cad-81cd3152db6b:
+    uuid: 94f3524d-40d6-42ec-8cad-81cd3152db6b
+    id: image_convert
+    weight: 1
+    data:
+      extension: jpg

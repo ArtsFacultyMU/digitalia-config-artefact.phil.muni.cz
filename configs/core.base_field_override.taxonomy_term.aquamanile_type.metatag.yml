@@ -1,0 +1,20 @@
+uuid: b0d28018-5adc-4a62-bc24-d0cea2565f83
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.aquamanile_type
+  module:
+    - metatag
+id: taxonomy_term.aquamanile_type.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: aquamanile_type
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

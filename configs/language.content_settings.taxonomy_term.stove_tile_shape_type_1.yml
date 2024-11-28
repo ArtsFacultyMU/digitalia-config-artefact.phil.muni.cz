@@ -1,0 +1,18 @@
+uuid: 58bb14be-a224-4d32-8e96-d4fec138fd2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.stove_tile_shape_type_1
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.stove_tile_shape_type_1
+target_entity_type_id: taxonomy_term
+target_bundle: stove_tile_shape_type_1
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,17 @@
+uuid: 4cbba46d-d3c9-4887-ba60-2abeee0f9135
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.2d_asymetry
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-fb35ccdde2916293
+group_type: test_group_type
+content_plugin: 'group_term:2d_asymetry'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

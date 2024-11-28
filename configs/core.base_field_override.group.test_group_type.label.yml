@@ -1,0 +1,18 @@
+uuid: dbcc687a-b769-4bad-bbf0-0529ba298286
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+id: group.test_group_type.label
+field_name: label
+entity_type: group
+bundle: test_group_type
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

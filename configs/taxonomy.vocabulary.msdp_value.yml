@@ -1,0 +1,8 @@
+uuid: c851ac4d-2e9e-4550-88ef-bcfb5be6a9eb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Mass & structure data presence value'
+vid: msdp_value
+description: ''
+weight: 0

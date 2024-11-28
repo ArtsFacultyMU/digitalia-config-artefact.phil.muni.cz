@@ -1,0 +1,20 @@
+uuid: 0e76bf52-6748-497a-af5f-9bf5e519cb16
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.analysis
+  module:
+    - path
+id: node.analysis.path
+field_name: path
+entity_type: node
+bundle: analysis
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

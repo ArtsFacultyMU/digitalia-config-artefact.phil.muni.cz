@@ -1,0 +1,29 @@
+uuid: 06bea7bf-c700-4e7e-91b8-3e691a5736ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quiver_trans_bright_spots
+    - node.type.a3d_object
+    - taxonomy.vocabulary.quiver_trans_bright_spots
+id: node.a3d_object.field_quiver_trans_bright_spots
+field_name: field_quiver_trans_bright_spots
+entity_type: node
+bundle: a3d_object
+label: 'Quiver transport - bright spots'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      quiver_trans_bright_spots: quiver_trans_bright_spots
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

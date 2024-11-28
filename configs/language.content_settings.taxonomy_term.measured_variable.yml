@@ -1,0 +1,18 @@
+uuid: 09da1efe-7092-41cf-80c3-53e04cad06c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.measured_variable
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.measured_variable
+target_entity_type_id: taxonomy_term
+target_bundle: measured_variable
+default_langcode: site_default
+language_alterable: true

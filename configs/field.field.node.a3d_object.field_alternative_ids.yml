@@ -1,0 +1,35 @@
+uuid: 54326ad3-09e8-47ed-9ef2-daf331f784fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternative_ids
+    - node.type.a3d_object
+  module:
+    - datafield
+id: node.a3d_object.field_alternative_ids
+field_name: field_alternative_ids
+entity_type: node
+bundle: a3d_object
+label: 'Alternative IDs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    id:
+      label: Id
+      list: false
+      allowed_values: ''
+      required: false
+    type:
+      label: Type
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: identifier_type
+    note:
+      label: Note
+      required: false
+field_type: data_field

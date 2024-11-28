@@ -1,6 +1,6 @@
 uuid: 53a36d16-abc5-4f74-80eb-400a4f0a7d70
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.creators_and_contributors
@@ -15,7 +15,7 @@ _core:
 id: islandora_muni_creatorsandcontributors
 theme: islandora_muni
 region: header
-weight: -11
+weight: -27
 provider: null
 plugin: 'facet_block:creators_and_contributors'
 settings:

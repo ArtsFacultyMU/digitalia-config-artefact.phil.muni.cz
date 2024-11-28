@@ -1,0 +1,21 @@
+uuid: 5582c68e-eb7a-45d0-8b7f-57c86dcc5f28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_wgs84_geolocation_private
+    - node.type.a3d_object
+  module:
+    - geolocation
+id: node.a3d_object.field_wgs84_geolocation_private
+field_name: field_wgs84_geolocation_private
+entity_type: node
+bundle: a3d_object
+label: 'WGS84 Geolocation (private)'
+description: 'Geolocation that will only be visible to logged-in authorized users'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

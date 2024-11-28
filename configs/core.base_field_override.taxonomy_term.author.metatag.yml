@@ -1,0 +1,20 @@
+uuid: 03e4113b-d438-40fc-bad3-0cda882de907
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.author
+  module:
+    - metatag
+id: taxonomy_term.author.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: author
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

@@ -1,0 +1,23 @@
+uuid: 7c0f3505-7dd6-4321-89a1-abb4a9dfcc16
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_non_plastic_inclusions
+    - node.type.analysis
+id: node.analysis.field_non_plastic_inclusions
+field_name: field_non_plastic_inclusions
+entity_type: node
+bundle: analysis
+label: 'Neplastická složka'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: '%'
+field_type: integer

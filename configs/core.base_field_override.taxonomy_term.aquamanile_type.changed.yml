@@ -1,0 +1,18 @@
+uuid: c06f305b-c846-438d-a6a7-38c6a9972d57
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.aquamanile_type
+id: taxonomy_term.aquamanile_type.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: aquamanile_type
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

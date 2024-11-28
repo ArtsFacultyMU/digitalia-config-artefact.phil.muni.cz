@@ -1,0 +1,19 @@
+uuid: 5d57f5ef-d982-4c55-b365-636d234b87f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_contact_email
+    - taxonomy.vocabulary.actor
+id: taxonomy_term.actor.field_contact_email
+field_name: field_contact_email
+entity_type: taxonomy_term
+bundle: actor
+label: 'Contact email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,11 @@
+uuid: c7e93a52-29a4-4fce-8679-85ef98d8b21a
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: arf_add_new_content
+title: 'ARF add new content'
+content:
+  value: '<p><a class="button" href="/group/11/content/create/group_node%3Aa3d_object?destination=/group/11/nodes_ordinary">Add new content</a></p>'
+  format: full_html

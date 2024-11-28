@@ -1,0 +1,77 @@
+uuid: 65364b0d-7477-4da3-8505-d5c6a837cd09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_measurements
+    - node.type.a3d_object
+  module:
+    - datafield
+id: node.a3d_object.field_measurements
+field_name: field_measurements
+entity_type: node
+bundle: a3d_object
+label: Measurements
+description: 'Information about the size, shape, scale, and dimensions of an object. Follows the CDWA standard (see https://www.getty.edu/research/publications/electronic_publications/cdwa/7measurements.html ) '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    dimensions_type:
+      label: 'Dimensions type'
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: measurement_type
+    dimensions_value:
+      label: 'Dimensions value'
+      list: false
+      allowed_values: ''
+      max: null
+      min: null
+      required: false
+      prefix: ''
+      suffix: ''
+    dimensions_unit:
+      label: 'Dimensions unit'
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: units
+    dimensions_extent:
+      label: 'Dimensions extent'
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: dimensions_extent
+    scale_type:
+      label: 'Scale type'
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: scale_type
+    dimensions_qualifier:
+      label: 'Dimensions qualifier'
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: dimensions_qualifier
+    measurement_date:
+      label: 'Measurement date'
+      list: false
+      allowed_values: ''
+      required: false
+    shape:
+      label: Shape
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: shape
+    format_size:
+      label: 'Format size'
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: format_size
+    remarks:
+      label: Remarks
+      required: false
+    citations:
+      label: Citations
+      required: false
+field_type: data_field

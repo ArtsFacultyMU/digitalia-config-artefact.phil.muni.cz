@@ -1,0 +1,29 @@
+uuid: 6c0bdbca-373f-4fcd-9df6-ff5d9567f7bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orig_state_pres
+    - node.type.a3d_object
+    - taxonomy.vocabulary.orig_state_pres
+id: node.a3d_object.field_orig_state_pres
+field_name: field_orig_state_pres
+entity_type: node
+bundle: a3d_object
+label: 'Original state of preservation'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      orig_state_pres: orig_state_pres
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

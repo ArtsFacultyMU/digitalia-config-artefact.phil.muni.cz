@@ -1,0 +1,11 @@
+uuid: 29797747-202b-414f-96d9-2d964bc066a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.arf_browse
+label: 'ARF Browse'
+description: ''
+targetEntityType: node
+cache: true

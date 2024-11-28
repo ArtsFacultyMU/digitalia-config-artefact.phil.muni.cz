@@ -1,0 +1,17 @@
+uuid: be2a94c9-114d-4d9e-9642-33a5bf2d3f32
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.city
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-group_term-city
+group_type: test_group_type
+content_plugin: 'group_term:city'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

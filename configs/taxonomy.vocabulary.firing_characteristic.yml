@@ -1,0 +1,8 @@
+uuid: 418fde00-a0b3-496f-93b6-18eed001e3ab
+langcode: en
+status: true
+dependencies: {  }
+name: 'Firing characteristic'
+vid: firing_characteristic
+description: ''
+weight: 0

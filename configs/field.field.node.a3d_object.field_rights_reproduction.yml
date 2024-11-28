@@ -1,0 +1,29 @@
+uuid: dc2ca404-c0bd-46be-9d89-a6c41c2d35e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rights_reproduction
+    - node.type.a3d_object
+    - taxonomy.vocabulary.rights_reproduction
+id: node.a3d_object.field_rights_reproduction
+field_name: field_rights_reproduction
+entity_type: node
+bundle: a3d_object
+label: 'Reproduction rights'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      rights_reproduction: rights_reproduction
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

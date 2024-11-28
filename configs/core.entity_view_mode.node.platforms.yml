@@ -1,0 +1,11 @@
+uuid: 22b589fe-6ad3-4383-ba22-9b5f5c591b4b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.platforms
+label: Platforms
+description: ''
+targetEntityType: node
+cache: true

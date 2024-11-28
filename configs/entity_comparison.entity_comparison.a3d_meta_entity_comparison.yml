@@ -1,0 +1,15 @@
+uuid: d71c2304-5129-4a60-adf8-3c894b264cf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.media.image.image_a3d_meta_entity_comparison
+    - core.entity_view_mode.media.image_a3d_meta_entity_comparison
+id: a3d_meta_entity_comparison
+label: 'A3D META entity comparison'
+add_link_text: 'Add to comparison list'
+remove_link_text: 'Remove from the comparison'
+limit: 0
+entity_type: media
+bundle_type: image
+group_name: a3d

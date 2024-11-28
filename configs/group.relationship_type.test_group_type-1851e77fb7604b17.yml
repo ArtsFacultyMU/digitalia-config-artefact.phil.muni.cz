@@ -1,0 +1,17 @@
+uuid: 0a3b97b1-91d8-4189-a2d9-09f631c037c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.microstructure
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-1851e77fb7604b17
+group_type: test_group_type
+content_plugin: 'group_term:microstructure'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

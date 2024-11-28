@@ -1,0 +1,29 @@
+uuid: 6b604030-4977-43c8-8adc-8c2d114e3f98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_motif
+    - node.type.a3d_object
+    - taxonomy.vocabulary.motif
+id: node.a3d_object.field_motif
+field_name: field_motif
+entity_type: node
+bundle: a3d_object
+label: Motif
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      motif: motif
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

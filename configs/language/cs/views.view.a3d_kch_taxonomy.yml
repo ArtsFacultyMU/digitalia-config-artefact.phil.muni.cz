@@ -1,0 +1,46 @@
+display:
+  kch_taxonomy_fields:
+    display_options:
+      fields:
+        field_instrument_type:
+          label: 'Typ přístroje'
+        field_actor_type:
+          label: 'Typ aktéra'
+        field_site_type:
+          label: 'Typ lokality'
+        field_identifier:
+          label: Identifikátor
+        field_identifier_type:
+          label: 'Typ identifikátoru'
+        field_alternate_identifier:
+          label: 'Alternativní identifikátor'
+        field_street:
+          label: Ulice
+        field_street_number:
+          label: 'Číslo popisné a orientační'
+        field_city:
+          label: Město
+        field_country:
+          label: Stát
+        field_contact_email:
+          label: Email
+        field_date_commissioned:
+          label: 'Datum pořízení'
+        field_date_decommissioned:
+          label: 'Datum vyřazení'
+        field_manufacturer:
+          label: Výrobce
+        field_measured_variable:
+          label: 'Měřená proměnná'
+        field_model_identifier:
+          label: 'Identifikátor modelu'
+        field_model_identifier_type:
+          label: 'Typ identifikátoru modelu'
+        field_owner:
+          label: Vlastník
+        field_plot_number:
+          label: 'Číslo parcely'
+        field_related_identifier:
+          label: 'Související identifikátory'
+  statistics_site:
+    display_title: 'Statistiky Lokalit'

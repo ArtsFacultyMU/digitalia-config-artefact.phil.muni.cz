@@ -1,0 +1,36 @@
+uuid: afcf514c-a213-4e66-92e2-979d535cba03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_of_instances
+    - node.type.test_a3d
+  module:
+    - datafield
+id: node.test_a3d.field_number_of_instances
+field_name: field_number_of_instances
+entity_type: node
+bundle: test_a3d
+label: 'Number of Instances'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    is_exact:
+      label: 'Is exact'
+      required: false
+      on_label: exactly
+      off_label: 'at least'
+    quantity:
+      label: Quantity
+      list: false
+      allowed_values: ''
+      max: null
+      min: null
+      required: false
+      prefix: ''
+      suffix: ''
+field_type: data_field

@@ -1,0 +1,37 @@
+uuid: 4403E6C1-3D6B-4BED-A633-3D88B89CB511
+langcode: cs
+status: true
+dependencies: {  }
+id: kch_term_artefact_category_cs
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: kch
+label: 'Import terms: KCH Artefact categories CS'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/artefact_category.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  tid:
+    plugin: migration_lookup
+    source: en
+    migration: kch_term_artefact_category
+  name: cs
+  langcode:
+    plugin: default_value
+    default_value: cs
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: artefact_category
+  translations: true
+migration_dependencies:
+  required:
+    - kch_term_artefact_category

@@ -1,0 +1,20 @@
+uuid: 56ac5a56-3f7d-475f-ac9c-9fd423e2d4b2
+langcode: en
+id: kch_term_colour
+migration_group: kch
+label: 'Import terms: Colour'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/colour.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: colour

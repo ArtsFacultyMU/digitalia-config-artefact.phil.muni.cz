@@ -1,0 +1,8 @@
+uuid: 78bf11ca-9f04-4be9-bb0a-1ad12f1ce18b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Artefact category'
+vid: artefact_category
+description: ''
+weight: 0

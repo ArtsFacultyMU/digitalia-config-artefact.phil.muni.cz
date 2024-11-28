@@ -1,0 +1,17 @@
+uuid: 33a92668-eff1-4c8b-a98f-8590c25c54fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - group_action
+id: group_add_content_to_arf_group
+label: 'Group: add content to ARF'
+type: node
+plugin: 'group_add_content:node'
+configuration:
+  operation: create
+  content_plugin: 'group_node:a3d_object'
+  group_id: null
+  entity_id: ''
+  values: {  }
+  add_method: update_existing

@@ -1,0 +1,31 @@
+uuid: fff60b07-9072-4b53-97c7-432f505619ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tile_type
+    - node.type.a3d_object
+    - taxonomy.vocabulary.tile_type
+    - taxonomy.vocabulary.unknown_values
+id: node.a3d_object.field_tile_type
+field_name: field_tile_type
+entity_type: node
+bundle: a3d_object
+label: 'Tile type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      unknown_values: unknown_values
+      tile_type: tile_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: unknown_values
+field_type: entity_reference

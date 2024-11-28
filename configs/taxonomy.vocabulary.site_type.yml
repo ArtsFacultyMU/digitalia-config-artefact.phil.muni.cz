@@ -1,0 +1,8 @@
+uuid: 7300bddd-dbd1-479c-99ac-ab90815c11ae
+langcode: en
+status: true
+dependencies: {  }
+name: 'Site type'
+vid: site_type
+description: KCH
+weight: 0

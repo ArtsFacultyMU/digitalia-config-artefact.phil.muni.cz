@@ -1,0 +1,29 @@
+uuid: 81d05791-8923-4e6f-ae5b-42d5a334d70b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.mineral_fragments
+  module:
+    - text
+id: taxonomy_term.mineral_fragments.default
+targetEntityType: taxonomy_term
+bundle: mineral_fragments
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

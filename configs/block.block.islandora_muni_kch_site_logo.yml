@@ -1,0 +1,37 @@
+uuid: 66083b48-9a83-4591-9d92-b208c8a00899
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.kch_site_logo
+  module:
+    - block_class
+    - islandora
+    - simple_block
+    - system
+  theme:
+    - islandora_muni
+third_party_settings:
+  block_class:
+    classes: block-sitelogo
+id: islandora_muni_kch_site_logo
+theme: islandora_muni
+region: header
+weight: -35
+provider: null
+plugin: 'simple_block:kch_site_logo'
+settings:
+  id: 'simple_block:kch_site_logo'
+  label: 'KCH site logo'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/kch\r\n/kch/*\r\n/group/kch\r\n/group/kch/*\r\n/group/13\r\n/group/13/*\r\n/compare/*/kch\r\n/cs/kch\r\n/cs/kch/*\r\n/cs/group/kch\r\n/cs/group/kch/*\r\n/cs/group/13\r\n/cs/group/13/*\r\n/cs/compare/*/kch"

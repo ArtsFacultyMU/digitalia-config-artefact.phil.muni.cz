@@ -1,0 +1,18 @@
+uuid: 5542fc75-1f0b-4c6b-9d72-ca56329a6229
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.fract_preservation
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.fract_preservation
+target_entity_type_id: taxonomy_term
+target_bundle: fract_preservation
+default_langcode: site_default
+language_alterable: true

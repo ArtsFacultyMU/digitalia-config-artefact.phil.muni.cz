@@ -1,0 +1,31 @@
+uuid: 059a11b6-96e0-447f-b392-5510f5286789
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_microstructure
+    - node.type.analysis
+    - taxonomy.vocabulary.microstructure
+    - taxonomy.vocabulary.unknown_values
+id: node.analysis.field_microstructure
+field_name: field_microstructure
+entity_type: node
+bundle: analysis
+label: Microstructure
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      microstructure: microstructure
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: microstructure
+field_type: entity_reference

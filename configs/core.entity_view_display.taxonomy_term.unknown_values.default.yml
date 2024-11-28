@@ -1,0 +1,37 @@
+uuid: 8e619644-3a5b-4788-9da5-21d4757af8ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.unknown_values.field_datacite_code
+    - taxonomy.vocabulary.unknown_values
+  module:
+    - text
+id: taxonomy_term.unknown_values.default
+targetEntityType: taxonomy_term
+bundle: unknown_values
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_datacite_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

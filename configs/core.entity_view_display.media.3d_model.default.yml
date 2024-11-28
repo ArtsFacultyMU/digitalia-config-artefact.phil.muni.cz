@@ -1,0 +1,66 @@
+uuid: 68d35886-0fee-4d26-b111-e0bd4cd7daf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.3d_model.field_file_size
+    - field.field.media.3d_model.field_media_file
+    - field.field.media.3d_model.field_media_of
+    - field.field.media.3d_model.field_media_use
+    - field.field.media.3d_model.field_mime_type
+    - media.type.3d_model
+  module:
+    - file
+id: media.3d_model.default
+targetEntityType: media
+bundle: 3d_model
+mode: default
+content:
+  field_file_size:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_media_file:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media_of:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_media_use:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_mime_type:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,20 @@
+uuid: 31fe9049-0c17-418d-9b64-9402b7207c99
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.a3d_object
+  module:
+    - metatag
+id: node.a3d_object.metatag
+field_name: metatag
+entity_type: node
+bundle: a3d_object
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

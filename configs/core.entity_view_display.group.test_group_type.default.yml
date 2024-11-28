@@ -1,0 +1,40 @@
+uuid: 209de2c8-87f8-4c20-b9cf-b4d110b56cf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.test_group_type.field_group_code
+    - group.type.test_group_type
+id: group.test_group_type.default
+targetEntityType: group
+bundle: test_group_type
+mode: default
+content:
+  a3d_eva_group_homepage_arf:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  a3d_eva_group_homepage_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  a3d_eva_group_homepage_exm:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  a3d_eva_group_homepage_nef:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  changed: true
+  created: true
+  field_group_code: true
+  label: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

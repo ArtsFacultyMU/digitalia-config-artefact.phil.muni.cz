@@ -1,0 +1,29 @@
+uuid: 7e19d8f7-5a20-4de9-95ae-38e64c9aae3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quiver_trans_tip_rounding
+    - node.type.a3d_object
+    - taxonomy.vocabulary.quiver_trans_tip_rounding
+id: node.a3d_object.field_quiver_trans_tip_rounding
+field_name: field_quiver_trans_tip_rounding
+entity_type: node
+bundle: a3d_object
+label: 'Quiver transport - tip rounding'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      quiver_trans_tip_rounding: quiver_trans_tip_rounding
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

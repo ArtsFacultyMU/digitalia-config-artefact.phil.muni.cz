@@ -1,0 +1,29 @@
+uuid: 4878d484-bb72-43c0-ae54-8b182b96ccac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subord_dataset
+    - node.type.a3d_object
+    - taxonomy.vocabulary.subord_dataset
+id: node.a3d_object.field_subord_dataset
+field_name: field_subord_dataset
+entity_type: node
+bundle: a3d_object
+label: 'Subordinate dataset'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      subord_dataset: subord_dataset
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

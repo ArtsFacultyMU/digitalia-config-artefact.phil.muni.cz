@@ -1,6 +1,6 @@
 uuid: 008e8919-a896-4897-ae41-51ece6493e01
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.physical_form
@@ -15,7 +15,7 @@ _core:
 id: islandora_muni_physicalform
 theme: islandora_muni
 region: header
-weight: -9
+weight: -25
 provider: null
 plugin: 'facet_block:physical_form'
 settings:

@@ -1,0 +1,478 @@
+uuid: ba37167e-3240-41f3-aee8-303d9ee3a8c5
+langcode: en
+id: kch_node_a3d_object
+migration_group: kch
+label: Objects
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/a3d_object.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - uri
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  title: field_artefact_id
+  field_auth_res_data:
+    -
+      plugin: default_value
+      default_value: 'Irena Loskotová'
+    -
+      plugin: entity_lookup
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: author
+  field_wgs84_geolocation/lng: field_wgs84_geolocation_long
+  field_wgs84_geolocation/lat: field_wgs84_geolocation_lat
+  field_artefact_id: field_artefact_id
+  field_artefact_id_type:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_artefact_id_type
+    -
+      plugin: migration_lookup
+      migration: kch_identifier_type
+  field_ownership:
+    -
+      plugin: migration_lookup
+      migration: kch_actor
+      source: field_ownership
+  field_artefact_category:
+    -
+      plugin: migration_lookup
+      migration: kch_term_artefact_category
+      source: field_artefact_category
+  field_st_placement_type1:
+    -
+      plugin: migration_lookup
+      migration: kch_placement_type1
+      source: field_st_placement_type1
+  field_st_placement_type2:
+    -
+      plugin: migration_lookup
+      migration: kch_placement_type2
+      source: field_st_placement_type2
+  field_st_placement_type3:
+    -
+      plugin: migration_lookup
+      migration: kch_placement_type3
+      source: field_st_placement_type3
+  field_st_placement_certainty:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_st_placement_certainty
+    -
+      plugin: str_replace
+      search: 'yes'
+      replace: '1'
+    -
+      plugin: str_replace
+      search: 'no'
+      replace: '0'
+  field_st_shape_type1:
+    -
+      plugin: migration_lookup
+      migration: kch_shape_type1
+      source: field_st_shape_type1
+  field_stove_tile_shape_certainty:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_stove_tile_shape_certainty
+    -
+      plugin: str_replace
+      search: 'yes'
+      replace: '1'
+    -
+      plugin: str_replace
+      search: 'no'
+      replace: '0'
+  field_sculpture_type:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_sculpture_type
+    -
+      plugin: migration_lookup
+      migration: kch_small_sculpture_type
+  field_sculpture_subtype:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_sculpture_subtype
+    -
+      plugin: migration_lookup
+      migration: kch_small_sculpture_subtype
+  field_aquamanile_type:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_aquamanile_type
+    -
+      plugin: migration_lookup
+      migration: kch_aquamanile_type
+  field_aquamanile_subtype:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_aquamanile_subtype
+    -
+      plugin: migration_lookup
+      migration: kch_small_sculpture_subtype
+  field_motif:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_motif
+    -
+      plugin: entity_lookup
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: motif
+  field_relief:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_motif
+    -
+      plugin: entity_lookup
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: relief
+  field_relative_datation:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_relative_datation
+    -
+      plugin: entity_lookup
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: relative_datation
+  field_abs_dat_range: field_abs_dat_range
+  field_timespan/from: field_timespan_from
+  field_timespan/to: field_timespan_to
+  field_alternative_ids/id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_alternative_id
+    -
+      plugin: explode
+      delimiter: ':'
+    -
+      plugin: extract
+      index:
+        - 1
+  field_alternative_ids/type:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_alternative_id
+    -
+      plugin: explode
+      delimiter: ':'
+    -
+      plugin: extract
+      index:
+        - 0
+    -
+      plugin: migration_lookup
+      migration: kch_identifier_type
+  field_site:
+    -
+      plugin: migration_lookup
+      migration: kch_term_site
+      source: field_site
+  field_finding_context_type:
+    -
+      plugin: entity_generate
+      source: site_type
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: finding_context_type
+  field_circle:
+    -
+      plugin: migration_lookup
+      migration: kch_thematic_group
+      source: field_circle
+  field_description_a3d: field_description_a3d
+  field_field_description_a3d_cs: field_description_a3d_cs
+  field_edging: field_edging
+  field_number_of_instances/is_exact:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_number_of_instances
+    -
+      plugin: explode
+      delimiter: ':'
+    -
+      plugin: extract
+      index:
+        - 0
+  field_number_of_instances/quantity:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_number_of_instances
+    -
+      plugin: explode
+      delimiter: ':'
+    -
+      plugin: extract
+      index:
+        - 1
+  field_provenance: field_provenance
+  field_literature: field_literature
+  field_link_to_3d_model/uri: field_link_to_3d_model
+  list_surface_finishing:
+    -
+      source: field_surface_finishing
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: explode
+      delimiter: ' | '
+    -
+      plugin: str_to_assoc
+      key: finishing
+  field_surface_finishing:
+    -
+      plugin: sub_process
+      source: '@list_surface_finishing'
+      process:
+        exploded:
+          plugin: explode
+          delimiter: ':'
+          source: finishing
+        finishing:
+          -
+            plugin: extract
+            index:
+              - 0
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: migration_lookup
+            migration: kch_surface_finishing
+        colour:
+          -
+            plugin: extract
+            index:
+              - 1
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: entity_lookup
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: colour
+  field_acquisition_type:
+    -
+      plugin: entity_lookup
+      source: field_finding_context_type
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: acquisition_type
+  field_3d_traces: trasology_type
+  field_general_note: field_general_note
+  field_has_a_construction_opening:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_has_a_construction_opening
+    -
+      plugin: str_replace
+      search: 'yes'
+      replace: '1'
+    -
+      plugin: str_replace
+      search: 'no'
+      replace: '0'
+  field_material_colour:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_clay_colour
+    -
+      plugin: entity_lookup
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: colour
+  field_private_note: field_private_note
+  field_ledge_type:
+    -
+      plugin: migration_lookup
+      migration: kch_ledge_type
+      source: field_ledge_type
+  field_raw_material:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_raw_material
+    -
+      plugin: explode
+      delimiter: ' | '
+    -
+      plugin: migration_lookup
+      migration: kch_raw_material
+  field_fhp_type:
+    -
+      plugin: migration_lookup
+      migration: kch_fhp_type
+      source: field_fhp_type
+  list_measurements:
+    -
+      source: field_measurements
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: explode
+      delimiter: ' | '
+    -
+      plugin: str_to_assoc
+      key: measurement
+  field_measurements:
+    -
+      plugin: sub_process
+      source: '@list_measurements'
+      process:
+        exploded:
+          plugin: explode
+          delimiter: ':'
+          source: measurement
+        dimensions_type:
+          -
+            plugin: extract
+            index:
+              - 0
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: entity_lookup
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: measurement_type
+        dimensions_value:
+          -
+            plugin: extract
+            index:
+              - 1
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+        dimensions_unit:
+          -
+            plugin: extract
+            index:
+              - 2
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: entity_lookup
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: units
+        dimensions_extent:
+          -
+            plugin: extract
+            index:
+              - 3
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: entity_lookup
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: dimensions_extent
+        dimensions_qualifier:
+          -
+            plugin: extract
+            index:
+              - 5
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: entity_lookup
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: dimensions_qualifier
+        shape:
+          -
+            plugin: extract
+            index:
+              - 7
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: entity_lookup
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: shape
+        remarks:
+          -
+            plugin: extract
+            index:
+              - 9
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+destination:
+  plugin: 'entity:node'
+  default_bundle: a3d_object
+migration_dependencies:
+  required:
+    - kch_identifier_type
+    - kch_aquamanile_subtype
+    - kch_aquamanile_type
+    - kch_ledge_type
+    - kch_motifs
+    - kch_placement_type1
+    - kch_placement_type2
+    - kch_relief
+    - kch_shape
+    - kch_shape_type1
+    - kch_small_sculpture_subtype
+    - kch_small_sculpture_type
+    - kch_term_colour
+    - term_unknown_value
+    - kch_term_artefact_category
+    - kch_thematic_group
+    - kch_raw_material
+    - kch_placement_type3
+    - kch_surface_finishing
+    - kch_fhp_type

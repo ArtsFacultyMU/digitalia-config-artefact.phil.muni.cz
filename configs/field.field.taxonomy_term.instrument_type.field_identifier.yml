@@ -1,0 +1,19 @@
+uuid: 1402a131-24ab-4c0e-90d1-939a9dc2f748
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_identifier
+    - taxonomy.vocabulary.instrument_type
+id: taxonomy_term.instrument_type.field_identifier
+field_name: field_identifier
+entity_type: taxonomy_term
+bundle: instrument_type
+label: Identifier
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,12 @@
+display:
+  default:
+    display_options:
+      fields:
+        field_provenance:
+          label: Provenience
+        field_wgs84_geolocation_private:
+          label: 'WGS84 Geolokace (neveřejné)'
+        field_wgs84_accuracy_private:
+          label: 'WGS84 přesnost geolokace (neveřejné)'
+        field_private_note:
+          label: 'Neveřejná poznámka'

@@ -1,0 +1,17 @@
+uuid: fea89106-2087-44b2-ae0b-a3ee49dfc152
+langcode: en
+status: true
+dependencies:
+  module:
+    - group_action
+id: group_add_content_to_kch
+label: 'Group add content to KCH'
+type: node
+plugin: 'group_add_content:node'
+configuration:
+  operation: create
+  content_plugin: 'group_node:a3d_object'
+  group_id: null
+  entity_id: ''
+  values: {  }
+  add_method: update_existing

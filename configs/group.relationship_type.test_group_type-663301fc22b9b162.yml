@@ -1,0 +1,17 @@
+uuid: bc281e7f-bf09-4792-ab34-6e0e509bafda
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.alteration
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-663301fc22b9b162
+group_type: test_group_type
+content_plugin: 'group_term:alteration'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

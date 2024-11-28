@@ -1,0 +1,413 @@
+uuid: 52797964-0c93-4e30-a7c7-ecbe08cdb7ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.2d_asymetry
+    - taxonomy.vocabulary.3d_shaping
+    - taxonomy.vocabulary.3d_traces
+    - taxonomy.vocabulary.acquisition_type
+    - taxonomy.vocabulary.actor
+    - taxonomy.vocabulary.actor_type
+    - taxonomy.vocabulary.alteration
+    - taxonomy.vocabulary.analysis_type
+    - taxonomy.vocabulary.aquamanile_subtype
+    - taxonomy.vocabulary.aquamanile_type
+    - taxonomy.vocabulary.artefact_category
+    - taxonomy.vocabulary.artefact_class
+    - taxonomy.vocabulary.artefact_subclass
+    - taxonomy.vocabulary.author
+    - taxonomy.vocabulary.ballistic_profile
+    - taxonomy.vocabulary.base_curve
+    - taxonomy.vocabulary.binder_type
+    - taxonomy.vocabulary.blank_orientation
+    - taxonomy.vocabulary.chemical_compounds
+    - taxonomy.vocabulary.circle
+    - taxonomy.vocabulary.city
+    - taxonomy.vocabulary.city_code
+    - taxonomy.vocabulary.coll_keyword
+    - taxonomy.vocabulary.coll_lang
+    - taxonomy.vocabulary.coll_org
+    - taxonomy.vocabulary.collection_title
+    - taxonomy.vocabulary.colour
+    - taxonomy.vocabulary.corporate_body
+    - taxonomy.vocabulary.country_a3d
+    - taxonomy.vocabulary.cov_spat
+    - taxonomy.vocabulary.creation
+    - taxonomy.vocabulary.cross_section_asymmetry
+    - taxonomy.vocabulary.culture
+    - taxonomy.vocabulary.current_location
+    - taxonomy.vocabulary.deposition_cond
+    - taxonomy.vocabulary.dimensions_extent
+    - taxonomy.vocabulary.dimensions_qualifier
+    - taxonomy.vocabulary.elements
+    - taxonomy.vocabulary.family
+    - taxonomy.vocabulary.feature_id
+    - taxonomy.vocabulary.feature_type
+    - taxonomy.vocabulary.fhp_type
+    - taxonomy.vocabulary.finding_context_subtype
+    - taxonomy.vocabulary.finding_context_type
+    - taxonomy.vocabulary.firing_characteristic
+    - taxonomy.vocabulary.format_size
+    - taxonomy.vocabulary.fract_nature
+    - taxonomy.vocabulary.fract_preservation
+    - taxonomy.vocabulary.frequencies
+    - taxonomy.vocabulary.g_w_practice
+    - taxonomy.vocabulary.general_lateral_wear
+    - taxonomy.vocabulary.general_type
+    - taxonomy.vocabulary.genre
+    - taxonomy.vocabulary.geo_location
+    - taxonomy.vocabulary.glue_residues
+    - taxonomy.vocabulary.grain_type
+    - taxonomy.vocabulary.holder_type
+    - taxonomy.vocabulary.identifier_type
+    - taxonomy.vocabulary.instrument
+    - taxonomy.vocabulary.instrument_relation_type
+    - taxonomy.vocabulary.instrument_type
+    - taxonomy.vocabulary.islandora_display
+    - taxonomy.vocabulary.islandora_media_use
+    - taxonomy.vocabulary.islandora_models
+    - taxonomy.vocabulary.issuance_modes
+    - taxonomy.vocabulary.language
+    - taxonomy.vocabulary.ledge_type
+    - taxonomy.vocabulary.legal_status
+    - taxonomy.vocabulary.licence_url
+    - taxonomy.vocabulary.loc_coord_cadastre_accuracy
+    - taxonomy.vocabulary.longitudinal_profile
+    - taxonomy.vocabulary.matrix_characteristic
+    - taxonomy.vocabulary.measured_variable
+    - taxonomy.vocabulary.measurement_type
+    - taxonomy.vocabulary.metadata_rights
+    - taxonomy.vocabulary.microstructure
+    - taxonomy.vocabulary.mineral_fragments
+    - taxonomy.vocabulary.motif
+    - taxonomy.vocabulary.msdp_method
+    - taxonomy.vocabulary.msdp_value
+    - taxonomy.vocabulary.orig_state_pres
+    - taxonomy.vocabulary.original_location
+    - taxonomy.vocabulary.painting
+    - taxonomy.vocabulary.person
+    - taxonomy.vocabulary.physical_form
+    - taxonomy.vocabulary.pigment
+    - taxonomy.vocabulary.posture
+    - taxonomy.vocabulary.preserved_parts
+    - taxonomy.vocabulary.proj_dedication
+    - taxonomy.vocabulary.proj_id
+    - taxonomy.vocabulary.quality
+    - taxonomy.vocabulary.quiver_trans_bright_spots
+    - taxonomy.vocabulary.quiver_trans_lat_rounding
+    - taxonomy.vocabulary.quiver_trans_tip_rounding
+    - taxonomy.vocabulary.raw_material
+    - taxonomy.vocabulary.recent_damage
+    - taxonomy.vocabulary.recent_damage_type
+    - taxonomy.vocabulary.record_source
+    - taxonomy.vocabulary.relative_datation
+    - taxonomy.vocabulary.relief_type
+    - taxonomy.vocabulary.reparation_features
+    - taxonomy.vocabulary.resource_types
+    - taxonomy.vocabulary.retouch
+    - taxonomy.vocabulary.rights_access
+    - taxonomy.vocabulary.rights_reproduction
+    - taxonomy.vocabulary.rock_fragments
+    - taxonomy.vocabulary.sdp_method
+    - taxonomy.vocabulary.sdp_value
+    - taxonomy.vocabulary.serration
+    - taxonomy.vocabulary.shape
+    - taxonomy.vocabulary.site
+    - taxonomy.vocabulary.site_type
+    - taxonomy.vocabulary.small_sculpture_subtype
+    - taxonomy.vocabulary.small_sculpture_type
+    - taxonomy.vocabulary.spatial_ref_system
+    - taxonomy.vocabulary.state
+    - taxonomy.vocabulary.stove_tile_placement_type_1
+    - taxonomy.vocabulary.stove_tile_placement_type_2
+    - taxonomy.vocabulary.stove_tile_placement_type_3
+    - taxonomy.vocabulary.stove_tile_shape_type_1
+    - taxonomy.vocabulary.stove_tile_shape_type_2
+    - taxonomy.vocabulary.subject
+    - taxonomy.vocabulary.subord_dataset
+    - taxonomy.vocabulary.surface_alt
+    - taxonomy.vocabulary.surface_finishing
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.temporal_subjects
+    - taxonomy.vocabulary.test_level_0
+    - taxonomy.vocabulary.thermic_cracks
+    - taxonomy.vocabulary.tile_type
+    - taxonomy.vocabulary.tip_fracture
+    - taxonomy.vocabulary.units
+    - taxonomy.vocabulary.unknown_values
+  module:
+    - content_translation
+    - taxonomy
+id: can_edit_taxonomy
+label: 'Can edit taxonomy'
+weight: -4
+is_admin: null
+permissions:
+  - 'access taxonomy overview'
+  - 'create terms in 2d_asymetry'
+  - 'create terms in 3d_shaping'
+  - 'create terms in 3d_traces'
+  - 'create terms in acquisition_type'
+  - 'create terms in actor'
+  - 'create terms in actor_type'
+  - 'create terms in alteration'
+  - 'create terms in analysis_type'
+  - 'create terms in aquamanile_subtype'
+  - 'create terms in aquamanile_type'
+  - 'create terms in artefact_category'
+  - 'create terms in artefact_class'
+  - 'create terms in artefact_subclass'
+  - 'create terms in author'
+  - 'create terms in ballistic_profile'
+  - 'create terms in base_curve'
+  - 'create terms in binder_type'
+  - 'create terms in blank_orientation'
+  - 'create terms in chemical_compounds'
+  - 'create terms in circle'
+  - 'create terms in city'
+  - 'create terms in city_code'
+  - 'create terms in coll_keyword'
+  - 'create terms in coll_lang'
+  - 'create terms in coll_org'
+  - 'create terms in collection_title'
+  - 'create terms in colour'
+  - 'create terms in corporate_body'
+  - 'create terms in country_a3d'
+  - 'create terms in cov_spat'
+  - 'create terms in creation'
+  - 'create terms in cross_section_asymmetry'
+  - 'create terms in culture'
+  - 'create terms in current_location'
+  - 'create terms in deposition_cond'
+  - 'create terms in dimensions_extent'
+  - 'create terms in dimensions_qualifier'
+  - 'create terms in elements'
+  - 'create terms in family'
+  - 'create terms in feature_id'
+  - 'create terms in feature_type'
+  - 'create terms in fhp_type'
+  - 'create terms in finding_context_subtype'
+  - 'create terms in finding_context_type'
+  - 'create terms in firing_characteristic'
+  - 'create terms in format_size'
+  - 'create terms in fract_nature'
+  - 'create terms in fract_preservation'
+  - 'create terms in frequencies'
+  - 'create terms in g_w_practice'
+  - 'create terms in general_lateral_wear'
+  - 'create terms in general_type'
+  - 'create terms in genre'
+  - 'create terms in geo_location'
+  - 'create terms in glue_residues'
+  - 'create terms in grain_type'
+  - 'create terms in holder_type'
+  - 'create terms in identifier_type'
+  - 'create terms in instrument'
+  - 'create terms in instrument_relation_type'
+  - 'create terms in instrument_type'
+  - 'create terms in islandora_display'
+  - 'create terms in islandora_media_use'
+  - 'create terms in islandora_models'
+  - 'create terms in issuance_modes'
+  - 'create terms in language'
+  - 'create terms in ledge_type'
+  - 'create terms in legal_status'
+  - 'create terms in licence_url'
+  - 'create terms in loc_coord_cadastre_accuracy'
+  - 'create terms in longitudinal_profile'
+  - 'create terms in matrix_characteristic'
+  - 'create terms in measured_variable'
+  - 'create terms in measurement_type'
+  - 'create terms in metadata_rights'
+  - 'create terms in microstructure'
+  - 'create terms in mineral_fragments'
+  - 'create terms in motif'
+  - 'create terms in msdp_method'
+  - 'create terms in msdp_value'
+  - 'create terms in orig_state_pres'
+  - 'create terms in original_location'
+  - 'create terms in painting'
+  - 'create terms in person'
+  - 'create terms in physical_form'
+  - 'create terms in pigment'
+  - 'create terms in posture'
+  - 'create terms in preserved_parts'
+  - 'create terms in proj_dedication'
+  - 'create terms in proj_id'
+  - 'create terms in quality'
+  - 'create terms in quiver_trans_bright_spots'
+  - 'create terms in quiver_trans_lat_rounding'
+  - 'create terms in quiver_trans_tip_rounding'
+  - 'create terms in raw_material'
+  - 'create terms in recent_damage'
+  - 'create terms in recent_damage_type'
+  - 'create terms in record_source'
+  - 'create terms in relative_datation'
+  - 'create terms in relief_type'
+  - 'create terms in reparation_features'
+  - 'create terms in resource_types'
+  - 'create terms in retouch'
+  - 'create terms in rights_access'
+  - 'create terms in rights_reproduction'
+  - 'create terms in rock_fragments'
+  - 'create terms in sdp_method'
+  - 'create terms in sdp_value'
+  - 'create terms in serration'
+  - 'create terms in shape'
+  - 'create terms in site'
+  - 'create terms in site_type'
+  - 'create terms in small_sculpture_subtype'
+  - 'create terms in small_sculpture_type'
+  - 'create terms in spatial_ref_system'
+  - 'create terms in state'
+  - 'create terms in stove_tile_placement_type_1'
+  - 'create terms in stove_tile_placement_type_2'
+  - 'create terms in stove_tile_placement_type_3'
+  - 'create terms in stove_tile_shape_type_1'
+  - 'create terms in stove_tile_shape_type_2'
+  - 'create terms in subject'
+  - 'create terms in subord_dataset'
+  - 'create terms in surface_alt'
+  - 'create terms in surface_finishing'
+  - 'create terms in tags'
+  - 'create terms in temporal_subjects'
+  - 'create terms in test_level_0'
+  - 'create terms in thermic_cracks'
+  - 'create terms in tile_type'
+  - 'create terms in tip_fracture'
+  - 'create terms in units'
+  - 'edit terms in 2d_asymetry'
+  - 'edit terms in 3d_shaping'
+  - 'edit terms in 3d_traces'
+  - 'edit terms in acquisition_type'
+  - 'edit terms in actor'
+  - 'edit terms in actor_type'
+  - 'edit terms in alteration'
+  - 'edit terms in analysis_type'
+  - 'edit terms in aquamanile_subtype'
+  - 'edit terms in aquamanile_type'
+  - 'edit terms in artefact_category'
+  - 'edit terms in artefact_class'
+  - 'edit terms in artefact_subclass'
+  - 'edit terms in author'
+  - 'edit terms in ballistic_profile'
+  - 'edit terms in base_curve'
+  - 'edit terms in binder_type'
+  - 'edit terms in blank_orientation'
+  - 'edit terms in chemical_compounds'
+  - 'edit terms in circle'
+  - 'edit terms in city'
+  - 'edit terms in city_code'
+  - 'edit terms in coll_keyword'
+  - 'edit terms in coll_lang'
+  - 'edit terms in coll_org'
+  - 'edit terms in collection_title'
+  - 'edit terms in colour'
+  - 'edit terms in corporate_body'
+  - 'edit terms in country_a3d'
+  - 'edit terms in cov_spat'
+  - 'edit terms in creation'
+  - 'edit terms in cross_section_asymmetry'
+  - 'edit terms in culture'
+  - 'edit terms in current_location'
+  - 'edit terms in deposition_cond'
+  - 'edit terms in dimensions_extent'
+  - 'edit terms in dimensions_qualifier'
+  - 'edit terms in elements'
+  - 'edit terms in family'
+  - 'edit terms in feature_id'
+  - 'edit terms in feature_type'
+  - 'edit terms in fhp_type'
+  - 'edit terms in finding_context_subtype'
+  - 'edit terms in finding_context_type'
+  - 'edit terms in firing_characteristic'
+  - 'edit terms in format_size'
+  - 'edit terms in fract_nature'
+  - 'edit terms in fract_preservation'
+  - 'edit terms in frequencies'
+  - 'edit terms in g_w_practice'
+  - 'edit terms in general_lateral_wear'
+  - 'edit terms in general_type'
+  - 'edit terms in genre'
+  - 'edit terms in geo_location'
+  - 'edit terms in glue_residues'
+  - 'edit terms in grain_type'
+  - 'edit terms in holder_type'
+  - 'edit terms in identifier_type'
+  - 'edit terms in instrument'
+  - 'edit terms in instrument_relation_type'
+  - 'edit terms in instrument_type'
+  - 'edit terms in islandora_display'
+  - 'edit terms in islandora_media_use'
+  - 'edit terms in islandora_models'
+  - 'edit terms in issuance_modes'
+  - 'edit terms in language'
+  - 'edit terms in ledge_type'
+  - 'edit terms in legal_status'
+  - 'edit terms in licence_url'
+  - 'edit terms in loc_coord_cadastre_accuracy'
+  - 'edit terms in longitudinal_profile'
+  - 'edit terms in matrix_characteristic'
+  - 'edit terms in measured_variable'
+  - 'edit terms in measurement_type'
+  - 'edit terms in metadata_rights'
+  - 'edit terms in microstructure'
+  - 'edit terms in mineral_fragments'
+  - 'edit terms in motif'
+  - 'edit terms in msdp_method'
+  - 'edit terms in msdp_value'
+  - 'edit terms in orig_state_pres'
+  - 'edit terms in original_location'
+  - 'edit terms in painting'
+  - 'edit terms in person'
+  - 'edit terms in physical_form'
+  - 'edit terms in pigment'
+  - 'edit terms in posture'
+  - 'edit terms in preserved_parts'
+  - 'edit terms in proj_dedication'
+  - 'edit terms in proj_id'
+  - 'edit terms in quality'
+  - 'edit terms in quiver_trans_bright_spots'
+  - 'edit terms in quiver_trans_lat_rounding'
+  - 'edit terms in quiver_trans_tip_rounding'
+  - 'edit terms in raw_material'
+  - 'edit terms in recent_damage'
+  - 'edit terms in recent_damage_type'
+  - 'edit terms in record_source'
+  - 'edit terms in relative_datation'
+  - 'edit terms in relief_type'
+  - 'edit terms in reparation_features'
+  - 'edit terms in resource_types'
+  - 'edit terms in retouch'
+  - 'edit terms in rights_access'
+  - 'edit terms in rights_reproduction'
+  - 'edit terms in rock_fragments'
+  - 'edit terms in sdp_method'
+  - 'edit terms in sdp_value'
+  - 'edit terms in serration'
+  - 'edit terms in shape'
+  - 'edit terms in site'
+  - 'edit terms in site_type'
+  - 'edit terms in small_sculpture_subtype'
+  - 'edit terms in small_sculpture_type'
+  - 'edit terms in spatial_ref_system'
+  - 'edit terms in state'
+  - 'edit terms in stove_tile_placement_type_1'
+  - 'edit terms in stove_tile_placement_type_2'
+  - 'edit terms in stove_tile_placement_type_3'
+  - 'edit terms in stove_tile_shape_type_1'
+  - 'edit terms in stove_tile_shape_type_2'
+  - 'edit terms in subject'
+  - 'edit terms in subord_dataset'
+  - 'edit terms in surface_alt'
+  - 'edit terms in surface_finishing'
+  - 'edit terms in tags'
+  - 'edit terms in temporal_subjects'
+  - 'edit terms in test_level_0'
+  - 'edit terms in thermic_cracks'
+  - 'edit terms in tile_type'
+  - 'edit terms in tip_fracture'
+  - 'edit terms in units'
+  - 'edit terms in unknown_values'
+  - 'translate aquamanile_type taxonomy_term'

@@ -1,0 +1,11 @@
+uuid: cd0fee38-5468-441b-b0e3-57bd8a7fd392
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.meta_media
+label: 'META Media'
+description: ''
+targetEntityType: node
+cache: true

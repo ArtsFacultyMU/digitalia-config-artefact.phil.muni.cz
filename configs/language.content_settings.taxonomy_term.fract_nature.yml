@@ -1,0 +1,18 @@
+uuid: 4c790c98-0275-41c3-a12e-4dedebffe39b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.fract_nature
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.fract_nature
+target_entity_type_id: taxonomy_term
+target_bundle: fract_nature
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,5 @@
+label: 'Fragmenty minerálů'
+settings:
+  field_settings:
+    mineral:
+      label: Minerál

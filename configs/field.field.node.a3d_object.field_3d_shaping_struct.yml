@@ -1,0 +1,31 @@
+uuid: 0c7271d5-65af-4f1a-a13a-f66ff6684826
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_3d_shaping_struct
+    - node.type.a3d_object
+    - taxonomy.vocabulary.3d_shaping
+    - taxonomy.vocabulary.unknown_values
+id: node.a3d_object.field_3d_shaping_struct
+field_name: field_3d_shaping_struct
+entity_type: node
+bundle: a3d_object
+label: '3D specifics of shaping (structured)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      3d_shaping: 3d_shaping
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: 3d_shaping
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 53a04d6c-02fc-40e0-996f-04be0985d26f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.aquamanile_type
+id: taxonomy_term.aquamanile_type.status
+field_name: status
+entity_type: taxonomy_term
+bundle: aquamanile_type
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

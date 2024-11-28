@@ -1,0 +1,30 @@
+uuid: 80946886-4db6-4e98-8f18-e7d318e53352
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sample
+    - taxonomy.vocabulary.actor
+    - taxonomy.vocabulary.actor_type
+    - taxonomy.vocabulary.aquamanile_type
+  module:
+    - content_translation
+    - node
+    - taxonomy
+id: kch_user
+label: 'KCH user'
+weight: 0
+is_admin: null
+permissions:
+  - 'create sample content'
+  - 'create terms in actor'
+  - 'create terms in aquamanile_type'
+  - 'delete own sample content'
+  - 'edit any sample content'
+  - 'edit own sample content'
+  - 'edit terms in actor'
+  - 'edit terms in aquamanile_type'
+  - 'translate actor taxonomy_term'
+  - 'translate actor_type taxonomy_term'
+  - 'translate aquamanile_type taxonomy_term'
+  - 'view sample revisions'

@@ -1,0 +1,8 @@
+uuid: 42d5c8a3-cb0b-418d-bf24-b8c168ca0960
+langcode: en
+status: true
+dependencies: {  }
+name: 'Analysis Type'
+vid: analysis_type
+description: ''
+weight: 0

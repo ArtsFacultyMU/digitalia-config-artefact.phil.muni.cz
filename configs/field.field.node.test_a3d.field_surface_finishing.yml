@@ -1,0 +1,32 @@
+uuid: 1055a007-7390-463f-9feb-b39d6810ab63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_surface_finishing
+    - node.type.test_a3d
+  module:
+    - datafield
+id: node.test_a3d.field_surface_finishing
+field_name: field_surface_finishing
+entity_type: node
+bundle: test_a3d
+label: 'Surface finishing'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    finishing:
+      label: 'Surface finishing type'
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: surface_finishing
+    colour:
+      label: Colour
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: colour
+field_type: data_field

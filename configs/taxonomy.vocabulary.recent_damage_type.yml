@@ -1,0 +1,8 @@
+uuid: e4a76d64-932f-4856-a54c-0ad5aeda96c8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Recent damage type'
+vid: recent_damage_type
+description: ''
+weight: 0

@@ -1,0 +1,29 @@
+uuid: 73d6fe7f-5291-416d-a524-55cc6ebc154a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coll_lang
+    - node.type.a3d_object
+    - taxonomy.vocabulary.coll_lang
+id: node.a3d_object.field_coll_lang
+field_name: field_coll_lang
+entity_type: node
+bundle: a3d_object
+label: 'Collection metadata language'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      coll_lang: coll_lang
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: 5c4da236-9d7e-451c-808a-400e5dd37fbf
+langcode: en
+status: true
+dependencies: {  }
+name: 'Ballistic profile'
+vid: ballistic_profile
+description: ''
+weight: 0

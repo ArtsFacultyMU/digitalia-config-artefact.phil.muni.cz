@@ -1,0 +1,17 @@
+uuid: 26e07399-e35e-423a-9519-56f5ba7f8218
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.artefact_category
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-7776c025780b046a
+group_type: test_group_type
+content_plugin: 'group_term:artefact_category'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

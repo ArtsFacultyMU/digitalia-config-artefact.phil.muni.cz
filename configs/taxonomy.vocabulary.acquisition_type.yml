@@ -1,0 +1,8 @@
+uuid: 0b2c6f19-af19-440c-beda-5d901a0db424
+langcode: en
+status: true
+dependencies: {  }
+name: 'Acquisition type'
+vid: acquisition_type
+description: KCH
+weight: 0

@@ -1,0 +1,18 @@
+uuid: b3cddbfd-2bf1-4c10-90bd-0f5b65e990b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.artefact_category
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.artefact_category
+target_entity_type_id: taxonomy_term
+target_bundle: artefact_category
+default_langcode: current_interface
+language_alterable: true

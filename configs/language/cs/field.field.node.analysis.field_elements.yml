@@ -1,0 +1,7 @@
+label: Prvky
+settings:
+  field_settings:
+    element:
+      label: Prvek
+    value:
+      label: Hodnota

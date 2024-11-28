@@ -1,0 +1,29 @@
+uuid: 94d6e267-9c5e-4792-8b75-4364501a9b4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_holder_type
+    - node.type.a3d_object
+    - taxonomy.vocabulary.holder_type
+id: node.a3d_object.field_holder_type
+field_name: field_holder_type
+entity_type: node
+bundle: a3d_object
+label: 'Holder type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      holder_type: holder_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: 73176089-30d4-4d68-b6f2-26bccf9d8a6b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Record source'
+vid: record_source
+description: ''
+weight: 0

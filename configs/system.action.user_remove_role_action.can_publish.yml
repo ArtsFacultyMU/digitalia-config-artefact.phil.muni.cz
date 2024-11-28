@@ -1,0 +1,14 @@
+uuid: b4676c92-fa97-49c2-8967-f227686ec67b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.can_publish
+  module:
+    - user
+id: user_remove_role_action.can_publish
+label: 'Remove the Can publish role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: can_publish

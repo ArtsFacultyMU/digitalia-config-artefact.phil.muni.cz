@@ -1,0 +1,18 @@
+uuid: 43eebd70-ca2f-477e-9e70-e0f36e4344a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contract
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.contract
+target_entity_type_id: node
+target_bundle: contract
+default_langcode: site_default
+language_alterable: false

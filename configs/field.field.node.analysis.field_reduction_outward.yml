@@ -1,0 +1,21 @@
+uuid: a79847e7-7774-4b43-bee9-da612b01d903
+langcode: cs
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reduction_outward
+    - node.type.analysis
+id: node.analysis.field_reduction_outward
+field_name: field_reduction_outward
+entity_type: node
+bundle: analysis
+label: 'Redukce - vnější okraj'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Ano
+  off_label: Ne
+field_type: boolean

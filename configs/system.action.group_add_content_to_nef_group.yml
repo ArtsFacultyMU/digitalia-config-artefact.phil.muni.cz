@@ -1,0 +1,17 @@
+uuid: 2c4446a4-f114-4bb1-8128-f8d838380181
+langcode: en
+status: true
+dependencies:
+  module:
+    - group_action
+id: group_add_content_to_nef_group
+label: 'Group: add content to NEF'
+type: node
+plugin: group_add_content
+configuration:
+  operation: create
+  content_plugin: 'group_node:a3d_object'
+  group_id: null
+  entity_id: ''
+  values: {  }
+  add_method: update_existing

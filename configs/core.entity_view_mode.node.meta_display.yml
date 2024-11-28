@@ -1,0 +1,11 @@
+uuid: 92191cdc-f52d-4db7-9b87-1a8502b1b4b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.meta_display
+label: 'META Display'
+description: ''
+targetEntityType: node
+cache: true

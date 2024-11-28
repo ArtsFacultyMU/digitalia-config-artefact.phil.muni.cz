@@ -1,6 +1,6 @@
 uuid: 678d38ef-57b5-4005-8c9d-c3611372b84f
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.creators_and_contributors_swc
@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_creatorsandcontributors_swc
 theme: islandora_muni
 region: header
-weight: -10
+weight: -26
 provider: null
 plugin: 'facet_block:creators_and_contributors_swc'
 settings:

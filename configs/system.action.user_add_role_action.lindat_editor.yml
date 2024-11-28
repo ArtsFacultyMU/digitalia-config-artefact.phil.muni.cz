@@ -1,0 +1,14 @@
+uuid: db1d27b4-01be-4587-a958-4c9d32c3a98d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lindat_editor
+  module:
+    - user
+id: user_add_role_action.lindat_editor
+label: 'Add the Lindat Editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: lindat_editor

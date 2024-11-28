@@ -1,0 +1,18 @@
+uuid: 6491814b-ea4f-4381-9765-82fcffcb4175
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.test_a3d
+id: node.test_a3d.changed
+field_name: changed
+entity_type: node
+bundle: test_a3d
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

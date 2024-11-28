@@ -1,0 +1,31 @@
+uuid: bf201a78-0520-40b9-8db7-ed010b1197fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relief
+    - node.type.a3d_object
+    - taxonomy.vocabulary.relief_type
+    - taxonomy.vocabulary.unknown_values
+id: node.a3d_object.field_relief
+field_name: field_relief
+entity_type: node
+bundle: a3d_object
+label: Relief
+description: 'Type of the relief of the floor tile'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      relief_type: relief_type
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: relief_type
+field_type: entity_reference

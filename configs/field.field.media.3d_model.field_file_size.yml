@@ -1,0 +1,23 @@
+uuid: 36640e63-406d-43cb-8501-3696a0d0ce65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_file_size
+    - media.type.3d_model
+id: media.3d_model.field_file_size
+field_name: field_file_size
+entity_type: media
+bundle: 3d_model
+label: 'File size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

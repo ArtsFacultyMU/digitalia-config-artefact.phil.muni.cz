@@ -1,0 +1,29 @@
+uuid: 0a2e65e4-51b9-4e2c-8035-57b9b54e6a62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_discoverer
+    - node.type.a3d_object
+    - taxonomy.vocabulary.author
+id: node.a3d_object.field_discoverer
+field_name: field_discoverer
+entity_type: node
+bundle: a3d_object
+label: Discoverer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      author: author
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: author
+field_type: entity_reference

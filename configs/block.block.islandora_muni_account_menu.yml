@@ -13,7 +13,7 @@ _core:
 id: islandora_muni_account_menu
 theme: islandora_muni
 region: secondary_menu
-weight: -4
+weight: -31
 provider: null
 plugin: 'system_menu_block:account'
 settings:

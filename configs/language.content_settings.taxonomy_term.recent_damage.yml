@@ -1,0 +1,18 @@
+uuid: 205d588e-587f-49a6-8ec5-4540bb0c32a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.recent_damage
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.recent_damage
+target_entity_type_id: taxonomy_term
+target_bundle: recent_damage
+default_langcode: site_default
+language_alterable: true

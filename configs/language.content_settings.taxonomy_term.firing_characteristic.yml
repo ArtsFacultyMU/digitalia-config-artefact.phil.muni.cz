@@ -1,0 +1,18 @@
+uuid: 498b846a-a55c-478a-b089-c303e5368760
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.firing_characteristic
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.firing_characteristic
+target_entity_type_id: taxonomy_term
+target_bundle: firing_characteristic
+default_langcode: site_default
+language_alterable: true

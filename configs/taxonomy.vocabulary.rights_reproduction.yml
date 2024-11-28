@@ -1,0 +1,8 @@
+uuid: e0cd7849-d052-4d2d-bdc8-55d8673847fb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Reproduction rights'
+vid: rights_reproduction
+description: ''
+weight: 0

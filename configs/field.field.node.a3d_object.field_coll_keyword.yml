@@ -1,0 +1,29 @@
+uuid: c2c6d820-cab6-4304-96a1-6dcc29ab3a61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coll_keyword
+    - node.type.a3d_object
+    - taxonomy.vocabulary.coll_keyword
+id: node.a3d_object.field_coll_keyword
+field_name: field_coll_keyword
+entity_type: node
+bundle: a3d_object
+label: 'Collection keywords'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      coll_keyword: coll_keyword
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

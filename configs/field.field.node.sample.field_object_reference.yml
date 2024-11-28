@@ -1,0 +1,29 @@
+uuid: 208edb98-155a-47ed-bf2c-17496606fd7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_object_reference
+    - node.type.a3d_object
+    - node.type.sample
+id: node.sample.field_object_reference
+field_name: field_object_reference
+entity_type: node
+bundle: sample
+label: 'Sample of'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      a3d_object: a3d_object
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

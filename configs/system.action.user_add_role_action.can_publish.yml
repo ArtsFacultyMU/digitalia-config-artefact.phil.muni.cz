@@ -1,0 +1,14 @@
+uuid: 7bf407de-9057-46e5-b0cd-447ca23cc8d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.can_publish
+  module:
+    - user
+id: user_add_role_action.can_publish
+label: 'Add the Can publish role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: can_publish

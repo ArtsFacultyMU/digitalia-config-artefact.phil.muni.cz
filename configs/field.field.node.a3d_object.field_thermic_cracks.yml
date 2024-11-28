@@ -1,0 +1,29 @@
+uuid: f972f5a5-2e64-4654-a106-4c10df9c608b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_thermic_cracks
+    - node.type.a3d_object
+    - taxonomy.vocabulary.thermic_cracks
+id: node.a3d_object.field_thermic_cracks
+field_name: field_thermic_cracks
+entity_type: node
+bundle: a3d_object
+label: 'Thermic cracks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      thermic_cracks: thermic_cracks
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

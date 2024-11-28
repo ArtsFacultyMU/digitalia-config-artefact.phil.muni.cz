@@ -1,0 +1,29 @@
+uuid: 132cdde2-3d4a-4b66-b4e2-bbd411abc5b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.a3d_object
+    - node.type.a3d_platform_homepage
+    - node.type.analysis
+    - node.type.contract
+    - node.type.page
+    - node.type.sample
+  module:
+    - field_permissions
+    - node
+id: lindat_editor
+label: 'Lindat Editor'
+weight: 1
+is_admin: null
+permissions:
+  - 'create field_private_note'
+  - 'edit any a3d_object content'
+  - 'edit any a3d_platform_homepage content'
+  - 'edit any analysis content'
+  - 'edit any contract content'
+  - 'edit any page content'
+  - 'edit any sample content'
+  - 'edit own field_private_note'
+  - 'view field_private_note'
+  - 'view own field_private_note'

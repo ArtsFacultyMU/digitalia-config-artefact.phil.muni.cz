@@ -1,0 +1,37 @@
+uuid: 7397e353-1f28-4b61-8dad-db780e5b2b39
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.arf_site_logo
+  module:
+    - block_class
+    - islandora
+    - simple_block
+    - system
+  theme:
+    - islandora_muni
+third_party_settings:
+  block_class:
+    classes: block-sitelogo
+id: islandora_muni_arfsitelogo
+theme: islandora_muni
+region: header
+weight: -38
+provider: null
+plugin: 'simple_block:arf_site_logo'
+settings:
+  id: 'simple_block:arf_site_logo'
+  label: 'ARF site logo'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/arf\r\n/arf/*\r\n/group/arf\r\n/group/arf/*\r\n/group/11\r\n/group/11/*\r\n/compare/*/arf"

@@ -1,0 +1,19 @@
+uuid: 8f312514-70c2-4030-b1b6-563b54fdf3c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coll_id
+    - node.type.a3d_object
+id: node.a3d_object.field_coll_id
+field_name: field_coll_id
+entity_type: node
+bundle: a3d_object
+label: 'Collection ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+uuid: 7e40a6f3-4902-41e3-a399-ad18b81a7367
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.retouch
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.retouch
+target_entity_type_id: taxonomy_term
+target_bundle: retouch
+default_langcode: site_default
+language_alterable: true

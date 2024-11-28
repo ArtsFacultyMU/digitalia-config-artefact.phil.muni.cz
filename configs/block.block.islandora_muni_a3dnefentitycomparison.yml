@@ -1,0 +1,38 @@
+uuid: d6437cc3-ef32-4f52-a998-b41f21531aef
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_comparison.entity_comparison.a3d_nef_entity_comparison
+  module:
+    - block_class
+    - entity_comparison
+    - islandora
+    - system
+  theme:
+    - islandora_muni
+third_party_settings:
+  block_class:
+    classes: hidden
+id: islandora_muni_a3dnefentitycomparison
+theme: islandora_muni
+region: featured_bottom_third
+weight: 0
+provider: null
+plugin: 'entity_comparison_block:a3d_nef_entity_comparison'
+settings:
+  id: 'entity_comparison_block:a3d_nef_entity_comparison'
+  label: 'A3D NEF entity comparison'
+  label_display: '0'
+  provider: entity_comparison
+  link_text: 'Compare (@count)'
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/nef\r\n/group/nef\r\n/nef/*\r\n/*/nef"

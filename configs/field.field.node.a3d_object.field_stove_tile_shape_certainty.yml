@@ -1,0 +1,21 @@
+uuid: f715502e-98c3-4e1a-86e8-9c64feb24f83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stove_tile_shape_certainty
+    - node.type.a3d_object
+id: node.a3d_object.field_stove_tile_shape_certainty
+field_name: field_stove_tile_shape_certainty
+entity_type: node
+bundle: a3d_object
+label: 'Stove tile shape certainty'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Certain
+  off_label: Uncertain
+field_type: boolean

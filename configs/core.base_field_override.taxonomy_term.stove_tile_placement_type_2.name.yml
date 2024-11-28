@@ -1,0 +1,18 @@
+uuid: e2c4ad4c-b169-4e75-bd76-bbe0dc33cfd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.stove_tile_placement_type_2
+id: taxonomy_term.stove_tile_placement_type_2.name
+field_name: name
+entity_type: taxonomy_term
+bundle: stove_tile_placement_type_2
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

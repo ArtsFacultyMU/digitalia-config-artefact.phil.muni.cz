@@ -1,0 +1,8 @@
+uuid: 2a5ec6f7-a8bd-4953-9b69-c6f297f620f8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Project dedication'
+vid: proj_dedication
+description: ''
+weight: 0

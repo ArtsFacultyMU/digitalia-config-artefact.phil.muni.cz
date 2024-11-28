@@ -1,0 +1,28 @@
+uuid: 222fc022-f3c5-4978-bb19-26c36ad020d7
+langcode: en
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.footer_logos
+  module:
+    - islandora
+    - simple_block
+  theme:
+    - islandora_muni
+id: islandora_muni_footerlogos
+theme: islandora_muni
+region: footer_first
+weight: -37
+provider: null
+plugin: 'simple_block:footer_logos'
+settings:
+  id: 'simple_block:footer_logos'
+  label: 'footer logos'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

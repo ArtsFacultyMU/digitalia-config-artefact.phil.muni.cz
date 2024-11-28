@@ -1,0 +1,31 @@
+uuid: c8c6e80e-4fc1-4564-9afb-9c9fe8cae919
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acquisition_type
+    - node.type.a3d_object
+    - taxonomy.vocabulary.acquisition_type
+    - taxonomy.vocabulary.unknown_values
+id: node.a3d_object.field_acquisition_type
+field_name: field_acquisition_type
+entity_type: node
+bundle: a3d_object
+label: 'Acquisition type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      acquisition_type: acquisition_type
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: acquisition_type
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: fd03f796-04e5-4984-9465-a313fe194869
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coll_id
+    - node.type.test_a3d
+id: node.test_a3d.field_coll_id
+field_name: field_coll_id
+entity_type: node
+bundle: test_a3d
+label: 'Collection ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

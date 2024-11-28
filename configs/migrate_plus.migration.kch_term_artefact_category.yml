@@ -1,0 +1,20 @@
+uuid: b624e83c-6828-4dd6-bbbc-e4bd97ab0b8d
+langcode: en
+id: kch_term_artefact_category
+migration_group: kch
+label: 'Import terms: KCH Artefact categories'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/artefact_category.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: artefact_category

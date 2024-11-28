@@ -1,6 +1,6 @@
 uuid: b7d9d5ce-1e38-4b13-bd9a-96edb41ff985
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.year
@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_year
 theme: islandora_muni
 region: header
-weight: 3
+weight: -16
 provider: null
 plugin: 'facet_block:year'
 settings:

@@ -1,0 +1,8 @@
+uuid: 6f2eeb5c-9c44-43ef-9ca6-7498d131d073
+langcode: en
+status: true
+dependencies: {  }
+name: Instrument
+vid: instrument
+description: 'Devices used to analyse objects and their samples. Implements PIDINST metadata schema'
+weight: 0

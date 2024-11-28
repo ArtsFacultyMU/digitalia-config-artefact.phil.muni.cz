@@ -7,6 +7,8 @@ dependencies:
     - field.field.taxonomy_term.person.field_authority_link
     - field.field.taxonomy_term.person.field_cat_date_begin
     - field.field.taxonomy_term.person.field_cat_date_end
+    - field.field.taxonomy_term.person.field_person_alternate_names
+    - field.field.taxonomy_term.person.field_person_preferred_name
     - field.field.taxonomy_term.person.field_relationships
     - taxonomy.vocabulary.person
   module:
@@ -105,4 +107,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_person_alternate_names: true
+  field_person_preferred_name: true

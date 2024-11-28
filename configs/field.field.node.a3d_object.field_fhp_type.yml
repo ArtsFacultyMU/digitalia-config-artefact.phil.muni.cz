@@ -1,0 +1,31 @@
+uuid: cbd60a2e-390b-4735-955e-d31a555be780
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fhp_type
+    - node.type.a3d_object
+    - taxonomy.vocabulary.fhp_type
+    - taxonomy.vocabulary.unknown_values
+id: node.a3d_object.field_fhp_type
+field_name: field_fhp_type
+entity_type: node
+bundle: a3d_object
+label: 'Type of frontal heating panel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      unknown_values: unknown_values
+      fhp_type: fhp_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: unknown_values
+field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: 4ab76396-421c-427b-94ed-807867867dcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.reparation_features
+  module:
+    - text
+id: taxonomy_term.reparation_features.default
+targetEntityType: taxonomy_term
+bundle: reparation_features
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

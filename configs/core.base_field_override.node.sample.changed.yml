@@ -1,0 +1,18 @@
+uuid: fe1cfd91-021b-4970-bacd-579d0aa47f53
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sample
+id: node.sample.changed
+field_name: changed
+entity_type: node
+bundle: sample
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

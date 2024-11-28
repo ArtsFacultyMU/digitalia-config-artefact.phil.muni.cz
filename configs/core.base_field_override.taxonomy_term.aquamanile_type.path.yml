@@ -1,0 +1,20 @@
+uuid: a7d4626b-27d6-4ff3-8ec5-9c965d0b9972
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.aquamanile_type
+  module:
+    - path
+id: taxonomy_term.aquamanile_type.path
+field_name: path
+entity_type: taxonomy_term
+bundle: aquamanile_type
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

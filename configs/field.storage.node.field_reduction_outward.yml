@@ -1,0 +1,22 @@
+uuid: e22a8e2f-b9a0-4fac-b163-3565dcb4d039
+langcode: cs
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_reduction_outward
+field_name: field_reduction_outward
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

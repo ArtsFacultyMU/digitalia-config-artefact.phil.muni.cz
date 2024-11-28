@@ -1,0 +1,14 @@
+uuid: 6ab0bc06-2b53-4e47-aabe-637be72f481b
+langcode: en
+status: true
+dependencies:
+  config:
+    - key.key.kch_group_id
+    - system.action.group_add_content_to_kch
+id: action_group_add_kch
+label: 'Action group add KCH'
+config_type: action
+config_prefix: system.action
+config_name: group_add_content_to_kch
+config_item: configuration.group_id
+key_id: kch_group_id

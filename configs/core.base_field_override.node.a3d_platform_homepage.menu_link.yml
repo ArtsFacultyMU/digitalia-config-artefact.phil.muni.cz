@@ -1,0 +1,20 @@
+uuid: b3168dcc-5f5b-4d0a-9ad2-bb004c71d9cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.a3d_platform_homepage
+id: node.a3d_platform_homepage.menu_link
+field_name: menu_link
+entity_type: node
+bundle: a3d_platform_homepage
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

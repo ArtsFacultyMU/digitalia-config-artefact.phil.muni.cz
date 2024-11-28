@@ -1,0 +1,20 @@
+uuid: 6B866F68-275C-4576-B6C8-FBC664F9AE17
+langcode: en
+id: kch_placement_type3
+migration_group: kch
+label: 'stove tile placement type 3'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/stove_tile_placement_type3.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - en
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  name: en
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: stove_tile_placement_type_3

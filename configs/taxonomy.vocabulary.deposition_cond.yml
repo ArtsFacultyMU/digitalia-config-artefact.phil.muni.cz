@@ -1,0 +1,8 @@
+uuid: ccb51ff1-6ddb-4050-a744-8ac81ce09f10
+langcode: en
+status: true
+dependencies: {  }
+name: 'Deposition condition'
+vid: deposition_cond
+description: ''
+weight: 0

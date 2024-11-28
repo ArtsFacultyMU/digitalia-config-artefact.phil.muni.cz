@@ -1,0 +1,31 @@
+uuid: 65be8943-0ede-4696-9956-37ee3a664aea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_st_placement_type1
+    - node.type.test_a3d
+    - taxonomy.vocabulary.stove_tile_placement_type_1
+    - taxonomy.vocabulary.unknown_values
+id: node.test_a3d.field_st_placement_type1
+field_name: field_st_placement_type1
+entity_type: node
+bundle: test_a3d
+label: 'Stove tile placement type 1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      unknown_values: unknown_values
+      stove_tile_placement_type_1: stove_tile_placement_type_1
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: unknown_values
+field_type: entity_reference

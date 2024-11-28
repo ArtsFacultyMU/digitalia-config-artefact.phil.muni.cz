@@ -1,0 +1,9 @@
+uuid: 9045391c-37c0-48a8-8507-64ef8a954684
+langcode: en
+status: true
+dependencies: {  }
+id: nef_user
+label: 'NEF user'
+weight: -2
+is_admin: null
+permissions: {  }

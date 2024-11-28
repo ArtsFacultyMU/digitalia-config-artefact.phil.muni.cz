@@ -1,0 +1,29 @@
+uuid: c59821fe-38b2-492b-84af-0f3b5ed9a0ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.msdp_method
+  module:
+    - text
+id: taxonomy_term.msdp_method.default
+targetEntityType: taxonomy_term
+bundle: msdp_method
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_1: true
+  langcode: true
+  search_api_excerpt: true

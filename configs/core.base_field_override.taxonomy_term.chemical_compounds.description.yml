@@ -1,0 +1,21 @@
+uuid: a26317c5-405f-4bd0-8f9d-1add66aabe59
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.chemical_compounds
+  module:
+    - text
+id: taxonomy_term.chemical_compounds.description
+field_name: description
+entity_type: taxonomy_term
+bundle: chemical_compounds
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

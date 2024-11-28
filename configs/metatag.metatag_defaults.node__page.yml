@@ -1,0 +1,8 @@
+uuid: 59c93638-5c09-4892-9cb7-9c661c3c5806
+langcode: en
+status: true
+dependencies: {  }
+id: node__page
+label: 'Content: Basic page'
+tags:
+  title: '[node:field_title] | [site:url-brief]'

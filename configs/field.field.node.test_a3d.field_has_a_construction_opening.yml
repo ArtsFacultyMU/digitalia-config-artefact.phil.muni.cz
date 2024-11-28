@@ -1,0 +1,21 @@
+uuid: 9e175a8e-70ab-4276-8de8-d5b9331cb482
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_a_construction_opening
+    - node.type.test_a3d
+id: node.test_a3d.field_has_a_construction_opening
+field_name: field_has_a_construction_opening
+entity_type: node
+bundle: test_a3d
+label: 'Has a construction opening'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

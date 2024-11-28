@@ -1,0 +1,11 @@
+uuid: 7f37ad8d-2b52-434b-9e47-12f24537c35b
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: kch_site_logo
+title: 'KCH site logo'
+content:
+  value: '<p><a href="/group/kch"><img src="/themes/custom/islandora_muni/platform_specific/images/pottery_analyses.svg" alt="Home" width="167" height="67"></a></p>'
+  format: full_html
