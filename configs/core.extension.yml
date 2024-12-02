@@ -93,6 +93,7 @@ module:
   image: 0
   imagemagick: 0
   imce: 0
+  inline_entity_form: 0
   islandora: 0
   islandora_audio: 0
   islandora_breadcrumbs: 0
@@ -145,6 +146,7 @@ module:
   pgsql: 0
   photoswipe: 0
   phpass: 0
+  pluginformalter: 0
   prepopulate: 0
   range: 0
   rdf: 0
@@ -182,7 +184,6 @@ module:
   twig_tweak: 0
   update: 0
   user: 0
-  variationcache: 0
   viewfield: 0
   views_argument_token: 0
   views_bulk_edit: 0

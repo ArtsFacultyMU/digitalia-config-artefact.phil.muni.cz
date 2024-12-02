@@ -1,0 +1,70 @@
+uuid: 4c28ebd3-6883-4f99-b2d2-9a1ba406c071
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.arf_surf_data_pres.field_sdp_method
+    - field.field.node.arf_surf_data_pres.field_sdp_note
+    - field.field.node.arf_surf_data_pres.field_sdp_spec
+    - field.field.node.arf_surf_data_pres.field_sdp_value
+    - node.type.arf_surf_data_pres
+  module:
+    - user
+id: node.arf_surf_data_pres.teaser
+targetEntityType: node
+bundle: arf_surf_data_pres
+mode: teaser
+content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_service_file:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_sdp_method: true
+  field_sdp_note: true
+  field_sdp_spec: true
+  field_sdp_value: true
+  langcode: true
+  search_api_excerpt: true

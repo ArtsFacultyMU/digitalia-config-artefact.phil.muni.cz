@@ -6,3 +6,4 @@ name: 'Tile type'
 vid: tile_type
 description: KCH
 weight: 0
+new_revision: false

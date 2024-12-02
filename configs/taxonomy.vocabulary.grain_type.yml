@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Grain type'
 vid: grain_type
-description: ''
+description: null
 weight: 0
+new_revision: false

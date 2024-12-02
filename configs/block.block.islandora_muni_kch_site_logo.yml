@@ -9,7 +9,6 @@ dependencies:
     - context
     - islandora
     - simple_block
-    - system
   theme:
     - islandora_muni
 third_party_settings:
@@ -32,10 +31,6 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
-  request_path:
-    id: request_path
-    negate: false
-    pages: "/kch\r\n/kch/*\r\n/group/kch\r\n/group/kch/*\r\n/group/13\r\n/group/13/*\r\n/compare/*/kch\r\n/cs/kch\r\n/cs/kch/*\r\n/cs/group/kch\r\n/cs/group/kch/*\r\n/cs/group/13\r\n/cs/group/13/*\r\n/cs/compare/*/kch"
   request_domain:
     id: request_domain
     negate: false

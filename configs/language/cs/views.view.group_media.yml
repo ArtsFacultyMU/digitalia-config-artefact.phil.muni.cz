@@ -2,6 +2,8 @@ display:
   default:
     display_options:
       fields:
+        status:
+          label: Stav
         dropbutton:
           label: Operace
       pager:
@@ -11,3 +13,14 @@ display:
       exposed_form:
         options:
           exposed_sorts_label: 'Řadit dle'
+      filters:
+        status:
+          expose:
+            label: Stav
+          group_info:
+            label: Stav
+            group_items:
+              1:
+                title: Zveřejněno
+              2:
+                title: Skryto

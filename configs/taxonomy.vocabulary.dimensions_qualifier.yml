@@ -6,3 +6,4 @@ name: 'Dimensions Qualifier'
 vid: dimensions_qualifier
 description: 'A word or phrase that elaborates on the nature of the measurements of the work when necessary, as when the measurements are appr'
 weight: 0
+new_revision: false

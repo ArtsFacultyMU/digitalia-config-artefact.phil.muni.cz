@@ -5,9 +5,9 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - context
     - islandora
     - superfish
-    - system
   theme:
     - islandora_muni
 id: islandora_muni_mainnavigation
@@ -76,7 +76,7 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
-  request_path:
-    id: request_path
-    negate: true
-    pages: "/group/*\r\n/arf\r\n/arf/*\r\n/nef\r\n/nef/*\r\n/exm\r\n/exm/*\r\n/kch\r\n/kch/*\r\n/compare/*/*\r\n!/compare/*/a3d"
+  request_domain:
+    id: request_domain
+    negate: false
+    domains: archeo3data-devel.phil.muni.cz

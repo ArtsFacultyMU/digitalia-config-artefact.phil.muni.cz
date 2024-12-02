@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Pigment determination'
 vid: pigment
-description: ''
+description: null
 weight: 0
+new_revision: false

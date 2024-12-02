@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Mass & structure data presence method'
 vid: msdp_method
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -5,6 +5,8 @@ display:
       fields:
         filename:
           label: Jméno
+        status:
+          label: Stav
       pager:
         options:
           expose:
@@ -12,6 +14,10 @@ display:
       exposed_form:
         options:
           exposed_sorts_label: 'Řadit dle'
+      filters:
+        status:
+          expose:
+            label: Stav
   page_2:
     display_options:
       pager:

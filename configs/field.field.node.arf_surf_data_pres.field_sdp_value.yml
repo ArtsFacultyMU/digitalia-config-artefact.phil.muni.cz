@@ -1,0 +1,29 @@
+uuid: 9a8c89d0-0824-49eb-8915-2bf7e7db6ca1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sdp_value
+    - node.type.arf_surf_data_pres
+    - taxonomy.vocabulary.sdp_value
+id: node.arf_surf_data_pres.field_sdp_value
+field_name: field_sdp_value
+entity_type: node
+bundle: arf_surf_data_pres
+label: 'Surface data presence value'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      sdp_value: sdp_value
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

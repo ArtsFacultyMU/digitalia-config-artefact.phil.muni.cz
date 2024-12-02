@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Glue residues'
 vid: glue_residues
-description: ''
+description: null
 weight: 0
+new_revision: false

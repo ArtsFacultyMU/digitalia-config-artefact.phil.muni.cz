@@ -6,3 +6,4 @@ name: 'Type of frontal heating panel'
 vid: fhp_type
 description: 'KCH - plná/prořezávaná'
 weight: 0
+new_revision: false

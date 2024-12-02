@@ -6,3 +6,4 @@ name: Agent
 vid: actor
 description: 'An institution or person'
 weight: 0
+new_revision: false

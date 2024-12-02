@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Raw material'
 vid: raw_material
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -4,6 +4,11 @@ display:
       fields:
         title:
           label: Nadpis
+        status:
+          label: Stav
+          settings:
+            format_custom_false: Skryto
+            format_custom_true: Zveřejněno
         dropbutton:
           label: Operace
       pager:
@@ -14,6 +19,13 @@ display:
         options:
           exposed_sorts_label: 'Řadit dle'
       filters:
+        status:
+          group_info:
+            group_items:
+              1:
+                title: Zveřejněno
+              2:
+                title: Skryto
         type:
           expose:
             label: Typ

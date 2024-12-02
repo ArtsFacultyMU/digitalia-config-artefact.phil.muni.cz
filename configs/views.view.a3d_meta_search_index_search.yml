@@ -7,10 +7,6 @@ dependencies:
     - field.storage.node.field_artefact_id
     - search_api.index.a3d_object_index
     - system.menu.main
-    - taxonomy.vocabulary.actor
-    - taxonomy.vocabulary.artefact_category
-    - taxonomy.vocabulary.relative_datation
-    - taxonomy.vocabulary.site
   module:
     - better_exposed_filters
     - facets_exposed_filters
@@ -729,6 +725,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 40
           total_pages: null
           id: 0
@@ -786,7 +783,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               a3d_object_parent_groups:
                 plugin_id: default
@@ -794,62 +793,92 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
-              field_artefact_category:
-                plugin_id: default
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_site:
-                plugin_id: default
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_relative_datation:
-                plugin_id: default
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_wgs84_geolocation:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
-                  is_secondary: false
-              field_wgs84_geolocation_boundary:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                  collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               field_measurements_dimensions_value:
                 plugin_id: default
                 advanced:
                   collapsible: false
-                  is_secondary: false
-              field_timespan_to:
-                plugin_id: default
-                advanced:
-                  placeholder_text: ''
-                  collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               field_timespan_from:
                 plugin_id: default
                 advanced:
                   placeholder_text: ''
                   collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              field_timespan_to:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              field_wgs84_geolocation:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              field_wgs84_geolocation_boundary:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              facets_field_site:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              facets_field_city:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              facets_field_artefact_category:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              facets_field_ownership:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              facets_field_relative_datation:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
       access:
         type: none
@@ -913,6 +942,47 @@ display:
           exposed: false
       arguments: {  }
       filters:
+        type:
+          id: type
+          table: search_api_index_a3d_object_index
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_options
+          operator: or
+          value:
+            a3d_object: a3d_object
+          group: 2
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
         status:
           id: status
           table: search_api_index_a3d_object_index
@@ -957,7 +1027,7 @@ display:
           field: search_api_fulltext
           relationship: none
           group_type: group
-          admin_label: Keyword
+          admin_label: ''
           plugin_id: search_api_fulltext
           operator: and
           value: ''
@@ -965,13 +1035,13 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: Keyword
-            description: 'Finding any string in the database.'
+            label: 'Any term'
+            description: 'Searching the entire database.'
             use_operator: false
             operator: search_api_fulltext_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: search_keyword
+            identifier: search_api_fulltext
             required: false
             remember: false
             multiple: false
@@ -1034,7 +1104,7 @@ display:
             identifier: a3d_object_parent_groups
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
             min_placeholder: null
@@ -1071,376 +1141,12 @@ display:
                 title: ' '
                 operator: '='
                 value:
-                  value: 'PLACEHOLDER dropdown is available'
+                  value: 'PLACEHOLDER must have at least'
               5:
                 title: ' '
                 operator: '='
                 value:
-                  value: 'PLACEHOLDER only with 5 or more groupings'
-        field_artefact_category:
-          id: field_artefact_category
-          table: search_api_index_a3d_object_index
-          field: field_artefact_category
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_term
-          operator: or
-          value: {  }
-          group: 4
-          exposed: true
-          expose:
-            operator_id: field_artefact_category_op
-            label: 'Artefact category'
-            description: ''
-            use_operator: false
-            operator: field_artefact_category_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_artefact_category
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: artefact_category
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
-        field_site:
-          id: field_site
-          table: search_api_index_a3d_object_index
-          field: field_site
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_term
-          operator: or
-          value: {  }
-          group: 4
-          exposed: true
-          expose:
-            operator_id: field_site_op
-            label: Site
-            description: ''
-            use_operator: false
-            operator: field_site_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_site
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: site
-          type: select
-          hierarchy: true
-          limit: true
-          error_message: true
-        field_relative_datation:
-          id: field_relative_datation
-          table: search_api_index_a3d_object_index
-          field: field_relative_datation
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_term
-          operator: or
-          value: {  }
-          group: 4
-          exposed: true
-          expose:
-            operator_id: field_relative_datation_op
-            label: 'Relative datation'
-            description: ''
-            use_operator: false
-            operator: field_relative_datation_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_relative_datation
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: relative_datation
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
-        field_ownership:
-          id: field_ownership
-          table: search_api_index_a3d_object_index
-          field: field_ownership
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_term
-          operator: or
-          value: {  }
-          group: 4
-          exposed: true
-          expose:
-            operator_id: field_ownership_op
-            label: Ownership
-            description: ''
-            use_operator: false
-            operator: field_ownership_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_ownership
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: actor
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
-        field_wgs84_geolocation:
-          id: field_wgs84_geolocation
-          table: search_api_index_a3d_object_index
-          field: field_wgs84_geolocation
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_location
-          operator: '<'
-          value:
-            value: ''
-            distance:
-              from: '-'
-              to: ''
-          group: 4
-          exposed: true
-          expose:
-            operator_id: field_wgs84_geolocation_op
-            label: 'Geolocation distance'
-            description: 'Enter coordinates, e.g. "48.8985908,16.1340411"'
-            use_operator: false
-            operator: field_wgs84_geolocation_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_wgs84_geolocation
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin: raw
-          plugin-geocode:
-            plugins:
-              nominatim:
-                checked: '0'
-                weight: '0'
-              openstreetmap:
-                checked: '0'
-                weight: '0'
-            radius_type: select
-            radius_options: "- -\r\n5 5 km\r\n10 10 km\r\n16.09 10 mi"
-            radius_units: km
-          plugin-geocode_map:
-            radius_border_color: ''
-            radius_border_weight: ''
-            radius_background_color: ''
-            radius_background_transparency: ''
-            marker_image: ''
-          plugin-raw:
-            radius_type: textfield
-            radius_options: "- -\r\n5 5 km\r\n10 10 km\r\n16.09 10 mi"
-            radius_units: km
-          require: 0
-        field_wgs84_geolocation_boundary:
-          id: field_wgs84_geolocation_boundary
-          table: search_api_index_a3d_object_index
-          field: field_wgs84_geolocation_boundary
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: geolocation_search_api_filter_boundary
-          operator: '='
-          value:
-            lat_north_east: ''
-            lng_north_east: ''
-            lat_south_west: ''
-            lng_south_west: ''
-          group: 4
-          exposed: true
-          expose:
-            operator_id: ''
-            label: 'Boundary (field_wgs84_geolocation)'
-            description: ''
-            use_operator: false
-            operator: field_wgs84_geolocation_boundary_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_wgs84_geolocation_boundary
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            input_by_geocoding_widget: 0
-            geocoder_plugin_settings:
-              plugin_id: photon
-              settings:
-                label: Address
-                description: 'Enter an address to be localized.'
-                autocomplete_min_length: 1
-                location_priority:
-                  lat: null
-                  lng: null
-                remove_duplicates: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
+                  value: 'PLACEHOLDER 5 options to display correctly'
         field_measurements_dimensions_value:
           id: field_measurements_dimensions_value
           table: search_api_index_a3d_object_index
@@ -1616,6 +1322,426 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_wgs84_geolocation:
+          id: field_wgs84_geolocation
+          table: search_api_index_a3d_object_index
+          field: field_wgs84_geolocation
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_location
+          operator: '<'
+          value:
+            value: ''
+            distance:
+              from: ''
+              to: ''
+          group: 4
+          exposed: true
+          expose:
+            operator_id: field_wgs84_geolocation_op
+            label: 'Geolocation Radius'
+            description: 'Enter coordinates, e.g. "48.8985908,16.1340411"'
+            use_operator: false
+            operator: field_wgs84_geolocation_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_wgs84_geolocation
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin: raw
+          plugin-geocode:
+            plugins:
+              nominatim:
+                checked: '0'
+                weight: '0'
+              openstreetmap:
+                checked: '0'
+                weight: '0'
+            radius_type: select
+            radius_options: "- -\r\n5 5 km\r\n10 10 km\r\n16.09 10 mi"
+            radius_units: km
+          plugin-geocode_map:
+            radius_border_color: ''
+            radius_border_weight: ''
+            radius_background_color: ''
+            radius_background_transparency: ''
+            marker_image: ''
+          plugin-raw:
+            radius_type: textfield
+            radius_options: "- -\r\n5 5 km\r\n10 10 km\r\n16.09 10 mi"
+            radius_units: km
+          require: 0
+        field_wgs84_geolocation_boundary:
+          id: field_wgs84_geolocation_boundary
+          table: search_api_index_a3d_object_index
+          field: field_wgs84_geolocation_boundary
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: geolocation_search_api_filter_boundary
+          operator: '='
+          value:
+            lat_north_east: ''
+            lng_north_east: ''
+            lat_south_west: ''
+            lng_south_west: ''
+          group: 4
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Geolocation Boundary'
+            description: ''
+            use_operator: false
+            operator: field_wgs84_geolocation_boundary_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_wgs84_geolocation_boundary
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            input_by_geocoding_widget: 0
+            geocoder_plugin_settings:
+              plugin_id: photon
+              settings:
+                label: Address
+                description: 'Enter an address to be localized.'
+                autocomplete_min_length: 1
+                location_priority:
+                  lat: null
+                  lng: null
+                remove_duplicates: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        facets_field_artefact_category:
+          id: facets_field_artefact_category
+          table: search_api_index_a3d_object_index
+          field: facets_field_artefact_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Artefact category'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_artefact_category_facet
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              count_widget_order:
+                weights:
+                  sort: -8
+                settings:
+                  sort: DESC
+              display_value_widget_order:
+                weights:
+                  sort: -9
+                settings:
+                  sort: ASC
+        facets_field_ownership:
+          id: facets_field_ownership
+          table: search_api_index_a3d_object_index
+          field: facets_field_ownership
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: Ownership
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_ownership_facet
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              count_widget_order:
+                weights:
+                  sort: -8
+                settings:
+                  sort: DESC
+              display_value_widget_order:
+                weights:
+                  sort: -9
+                settings:
+                  sort: ASC
+        facets_field_relative_datation:
+          id: facets_field_relative_datation
+          table: search_api_index_a3d_object_index
+          field: facets_field_relative_datation
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Relative datation'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_relative_datation_facet
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              count_widget_order:
+                weights:
+                  sort: -8
+                settings:
+                  sort: DESC
+              display_value_widget_order:
+                weights:
+                  sort: -9
+                settings:
+                  sort: ASC
+        facets_field_city:
+          id: facets_field_city
+          table: search_api_index_a3d_object_index
+          field: facets_field_city
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: City
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_city
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              count_widget_order:
+                weights:
+                  sort: -8
+                settings:
+                  sort: DESC
+              display_value_widget_order:
+                weights:
+                  sort: -9
+                settings:
+                  sort: ASC
         facets_field_site:
           id: facets_field_site
           table: search_api_index_a3d_object_index
@@ -1630,7 +1756,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Site FACET'
+            label: Site
             description: ''
             use_operator: false
             operator: ''
@@ -1642,6 +1768,7 @@ display:
             multiple: true
             remember_roles:
               authenticated: authenticated
+              0: '0'
               anonymous: '0'
               content_editor: '0'
               administrator: '0'
@@ -2027,6 +2154,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 1
           total_pages: null
           id: 1
@@ -2084,7 +2212,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               a3d_object_parent_groups:
                 plugin_id: default
@@ -2092,7 +2222,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               field_artefact_category:
                 plugin_id: default
@@ -2100,7 +2232,9 @@ display:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               field_site:
                 plugin_id: default
@@ -2108,7 +2242,9 @@ display:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
       empty:
         area:
@@ -2225,7 +2361,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
       empty:
         area:

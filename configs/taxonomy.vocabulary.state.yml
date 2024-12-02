@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: State
 vid: state
-description: ''
+description: null
 weight: 0
+new_revision: false

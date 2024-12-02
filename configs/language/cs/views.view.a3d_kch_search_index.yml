@@ -5,13 +5,6 @@ display:
         nid:
           fallback_options:
             format_plural_string: !!binary MQNAY291bnQD
-      filters:
-        field_artefact_category_name:
-          expose:
-            description: ''
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
   browse_analyses:
     display_options:
       fields:

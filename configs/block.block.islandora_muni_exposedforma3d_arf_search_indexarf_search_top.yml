@@ -1,13 +1,11 @@
 uuid: a94d557f-03c9-4f89-a509-48b50dcb1c41
 langcode: en
-status: true
+status: false
 dependencies:
-  config:
-    - views.view.a3d_arf_search_index
   module:
+    - context
     - islandora
     - system
-    - views
   theme:
     - islandora_muni
 id: islandora_muni_exposedforma3d_arf_search_indexarf_search_top
@@ -30,5 +28,9 @@ visibility:
     mimetype: ''
   request_path:
     id: request_path
+    negate: true
+    pages: /arf/search
+  request_domain:
+    id: request_domain
     negate: false
-    pages: "!/arf/search\r\n/arf\r\n/arf/*\r\n/group/arf\r\n/group/arf/*\r\n/group/15\r\n/group/15/*\r\n/compare/*/arf"
+    domains: artefact-devel.phil.muni.cz

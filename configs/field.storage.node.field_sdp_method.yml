@@ -1,0 +1,20 @@
+uuid: a14e20a7-8c25-4b17-9910-1ec8b95a2dd7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_sdp_method
+field_name: field_sdp_method
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

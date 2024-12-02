@@ -89,7 +89,6 @@ dependencies:
     - field.field.node.a3d_object.field_link_to_3d_model
     - field.field.node.a3d_object.field_literature
     - field.field.node.a3d_object.field_longitudinal_profile
-    - field.field.node.a3d_object.field_mass_structure_data_pres
     - field.field.node.a3d_object.field_material_colour
     - field.field.node.a3d_object.field_measurements
     - field.field.node.a3d_object.field_member_of
@@ -152,8 +151,10 @@ dependencies:
     - field.field.node.a3d_object.field_subord_dataset
     - field.field.node.a3d_object.field_subord_dataset_link
     - field.field.node.a3d_object.field_surf_data_pres
+    - field.field.node.a3d_object.field_surf_data_pres2
     - field.field.node.a3d_object.field_surface_alt
     - field.field.node.a3d_object.field_surface_finishing
+    - field.field.node.a3d_object.field_test_custom_field
     - field.field.node.a3d_object.field_thermic_cracks
     - field.field.node.a3d_object.field_tile_type
     - field.field.node.a3d_object.field_timespan
@@ -430,7 +431,6 @@ hidden:
   field_link_to_3d_model: true
   field_literature: true
   field_longitudinal_profile: true
-  field_mass_structure_data_pres: true
   field_material_colour: true
   field_measurements: true
   field_met_note_cz: true
@@ -492,8 +492,10 @@ hidden:
   field_subord_dataset: true
   field_subord_dataset_link: true
   field_surf_data_pres: true
+  field_surf_data_pres2: true
   field_surface_alt: true
   field_surface_finishing: true
+  field_test_custom_field: true
   field_thermic_cracks: true
   field_tile_type: true
   field_timespan: true

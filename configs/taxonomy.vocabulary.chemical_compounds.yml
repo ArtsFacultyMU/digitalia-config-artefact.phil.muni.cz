@@ -6,3 +6,4 @@ name: 'Chemical compounds'
 vid: chemical_compounds
 description: KCH
 weight: 0
+new_revision: false

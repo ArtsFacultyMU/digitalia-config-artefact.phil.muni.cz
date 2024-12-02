@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Original location'
 vid: original_location
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -6,3 +6,4 @@ name: 'Measured Variable'
 vid: measured_variable
 description: 'The variable(s) that this instrument measures or observes'
 weight: 0
+new_revision: false

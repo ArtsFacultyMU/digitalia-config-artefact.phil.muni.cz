@@ -1,0 +1,29 @@
+uuid: 69f1774b-ea10-4e71-9e87-d0f51453c672
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_surf_data_pres2
+    - node.type.a3d_object
+    - node.type.arf_surf_data_pres
+id: node.a3d_object.field_surf_data_pres2
+field_name: field_surf_data_pres2
+entity_type: node
+bundle: a3d_object
+label: 'Surface data presence 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      arf_surf_data_pres: arf_surf_data_pres
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

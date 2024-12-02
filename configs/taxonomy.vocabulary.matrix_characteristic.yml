@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Matrix characteristic'
 vid: matrix_characteristic
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -1,0 +1,68 @@
+uuid: 112d51e8-62ed-4253-88f8-a0817c2bf5f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.arf_surf_data_pres.field_sdp_method
+    - field.field.node.arf_surf_data_pres.field_sdp_note
+    - field.field.node.arf_surf_data_pres.field_sdp_spec
+    - field.field.node.arf_surf_data_pres.field_sdp_value
+    - node.type.arf_surf_data_pres
+  module:
+    - cshs
+id: node.arf_surf_data_pres.default
+targetEntityType: node
+bundle: arf_surf_data_pres
+mode: default
+content:
+  field_sdp_method:
+    type: cshs
+    weight: 1
+    region: content
+    settings:
+      save_lineage: false
+      force_deepest: false
+      parent: ''
+      level_labels: ''
+      hierarchy_depth: 0
+      required_depth: 0
+      none_label: '- Please select -'
+    third_party_settings: {  }
+  field_sdp_note:
+    type: string_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_sdp_spec:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_sdp_value:
+    type: cshs
+    weight: 0
+    region: content
+    settings:
+      save_lineage: false
+      force_deepest: false
+      parent: ''
+      level_labels: ''
+      hierarchy_depth: 0
+      required_depth: 0
+      none_label: '- Please select -'
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  title: true
+  uid: true

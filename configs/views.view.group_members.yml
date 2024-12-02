@@ -2,6 +2,8 @@ uuid: 8d9271b5-6931-4e41-b5ef-b7a5a909bc26
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.storage.group_relationship.group_roles
   module:
     - group
     - user
@@ -537,6 +539,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:

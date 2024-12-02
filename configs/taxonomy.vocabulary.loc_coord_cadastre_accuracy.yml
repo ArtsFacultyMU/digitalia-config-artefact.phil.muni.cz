@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Location coordinates accuracy'
 vid: loc_coord_cadastre_accuracy
-description: ''
+description: null
 weight: 0
+new_revision: false

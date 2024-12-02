@@ -961,6 +961,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       empty: {  }
       sorts:
         field_artefact_category_target_id:
@@ -1277,6 +1278,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       sorts:
         field_artefact_category_target_id:
           id: field_artefact_category_target_id

@@ -6,3 +6,4 @@ name: 'Acquisition type'
 vid: acquisition_type
 description: KCH
 weight: 0
+new_revision: false

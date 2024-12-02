@@ -1,13 +1,13 @@
 uuid: c5e6961a-7035-45e2-ae76-ae6802ff82dc
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - simple_block.simple_block.arf_add_new_content
   module:
+    - context
     - islandora
     - simple_block
-    - system
     - user
   theme:
     - islandora_muni
@@ -28,10 +28,6 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
-  request_path:
-    id: request_path
-    negate: false
-    pages: "/group/11/nodes\r\n/group/11/nodes_ordinary"
   user_role:
     id: user_role
     negate: false
@@ -41,3 +37,13 @@ visibility:
       administrator: administrator
       can_publish: can_publish
       standard_user: standard_user
+  request_domain:
+    id: request_domain
+    negate: false
+    domains: artefact-devel.phil.muni.cz
+  view_inclusion:
+    id: view_inclusion
+    negate: false
+    view_inclusion:
+      view-group_nodes-nodes: view-group_nodes-nodes
+      view-group_nodes-nodes_ordinary: view-group_nodes-nodes_ordinary

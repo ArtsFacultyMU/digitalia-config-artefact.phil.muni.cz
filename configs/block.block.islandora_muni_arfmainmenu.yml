@@ -5,9 +5,9 @@ dependencies:
   config:
     - system.menu.arf-main-menu
   module:
+    - context
     - islandora
     - superfish
-    - system
   theme:
     - islandora_muni
 id: islandora_muni_arfmainmenu
@@ -76,7 +76,7 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
-  request_path:
-    id: request_path
+  request_domain:
+    id: request_domain
     negate: false
-    pages: "/arf\r\n/arf/*\r\n/group/arf\r\n/group/arf/*\r\n/group/11\r\n/group/11/*\r\n/compare/*/arf"
+    domains: artefact-devel.phil.muni.cz

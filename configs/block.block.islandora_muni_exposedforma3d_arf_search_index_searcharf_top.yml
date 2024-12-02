@@ -1,0 +1,39 @@
+uuid: d21e3859-c820-49ec-8ad5-007a418781ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.a3d_arf_search_index_search
+  module:
+    - context
+    - islandora
+    - system
+    - views
+  theme:
+    - islandora_muni
+id: islandora_muni_exposedforma3d_arf_search_index_searcharf_top
+theme: islandora_muni
+region: header
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:a3d_arf_search_index_search-arf_top'
+settings:
+  id: 'views_exposed_filter_block:a3d_arf_search_index_search-arf_top'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_domain:
+    id: request_domain
+    negate: false
+    domains: artefact-devel.phil.muni.cz
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: true
+    pages: /arf/search

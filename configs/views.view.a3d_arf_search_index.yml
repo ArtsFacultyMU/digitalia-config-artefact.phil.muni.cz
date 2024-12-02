@@ -1,6 +1,6 @@
 uuid: 4abf79ab-f4db-4d13-a6f8-2d2ba8022044
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.field_artefact_id
@@ -24,7 +24,7 @@ dependencies:
 id: a3d_arf_search_index
 label: 'A3D ARF Search Index'
 module: views
-description: 'All NEF views built atop "Index A3D object index"'
+description: 'DEPRECATED. All ARF views built atop "Index A3D object index"'
 tag: ''
 base_table: search_api_index_a3d_object_index
 base_field: search_api_id
@@ -1026,6 +1026,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 40
           total_pages: null
           id: 0
@@ -1442,6 +1443,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      enabled: false
       title: Browse
       fields:
         nid:
@@ -2030,7 +2032,7 @@ display:
             alter_text: true
             text: '{{ field_artefact_category_name }} | {{ field_artefact_id }} | {{ field_feature_type_name }}'
             make_link: true
-            path: '/nef/node/{{ nid }}'
+            path: '/arf/node/{{ nid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -2372,6 +2374,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      enabled: false
       title: Browse
       fields:
         nid:
@@ -2512,6 +2515,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 1
           total_pages: null
           id: 1
@@ -2685,6 +2689,7 @@ display:
     display_plugin: page
     position: 2
     display_options:
+      enabled: false
       title: Search
       fields:
         nid:
@@ -3330,7 +3335,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               field_posture:
                 plugin_id: default
@@ -3338,7 +3345,9 @@ display:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_1:
                 plugin_id: default
@@ -3346,7 +3355,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_2:
                 plugin_id: default
@@ -3354,7 +3365,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_3:
                 plugin_id: default
@@ -3362,7 +3375,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_4:
                 plugin_id: default
@@ -3370,7 +3385,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_5:
                 plugin_id: default
@@ -3378,7 +3395,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_6:
                 plugin_id: default
@@ -3386,7 +3405,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_7:
                 plugin_id: default
@@ -3394,7 +3415,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
       cache:
         type: search_api_none
@@ -4105,6 +4128,7 @@ display:
     display_plugin: page
     position: 2
     display_options:
+      enabled: false
       title: Search
       fields:
         nid:
@@ -4245,6 +4269,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 1
           total_pages: null
           id: 1
@@ -4302,7 +4327,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               field_posture:
                 plugin_id: default
@@ -4310,7 +4337,9 @@ display:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_1:
                 plugin_id: default
@@ -4318,7 +4347,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_2:
                 plugin_id: default
@@ -4326,7 +4357,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_3:
                 plugin_id: default
@@ -4334,7 +4367,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_4:
                 plugin_id: default
@@ -4342,7 +4377,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_5:
                 plugin_id: default
@@ -4350,7 +4387,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_6:
                 plugin_id: default
@@ -4358,7 +4397,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               search_api_fulltext_7:
                 plugin_id: default
@@ -4366,7 +4407,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
       empty: {  }
       filters:
@@ -5020,6 +5063,7 @@ display:
     display_plugin: page
     position: 2
     display_options:
+      enabled: false
       title: Search
       exposed_form:
         type: bef
@@ -5061,7 +5105,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
       empty:
         area:

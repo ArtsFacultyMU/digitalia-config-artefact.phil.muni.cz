@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Recent damage & alteration'
 vid: recent_damage
-description: ''
+description: null
 weight: 0
+new_revision: false

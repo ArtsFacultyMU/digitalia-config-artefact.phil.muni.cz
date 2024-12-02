@@ -1,38 +1,29 @@
-uuid: dd1eb82d-7a53-4111-b384-adbddba9cd4d
+uuid: 1f2b90d4-f537-4b91-a23c-378150cbe204
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_surf_data_pres
     - node.type.a3d_object
-  module:
-    - datafield
+    - node.type.analysis
 id: node.a3d_object.field_surf_data_pres
 field_name: field_surf_data_pres
 entity_type: node
 bundle: a3d_object
 label: 'Surface data presence'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  field_settings:
-    sdp_value:
-      label: 'Surface data presence value'
-      required: true
-      entity_reference_type: taxonomy_term
-      target_bundles: sdp_value
-    sdp_method:
-      label: 'Surface data presence method'
-      required: true
-      entity_reference_type: taxonomy_term
-      target_bundles: sdp_method
-    sdp_spec:
-      label: 'Surface data presence specification'
-      required: true
-    sdp_note:
-      label: 'Surface data presence note'
-      required: true
-field_type: data_field
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      analysis: analysis
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Record source'
 vid: record_source
-description: ''
+description: null
 weight: 0
+new_revision: false

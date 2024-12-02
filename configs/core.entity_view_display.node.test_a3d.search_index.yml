@@ -31,7 +31,6 @@ dependencies:
     - field.field.node.test_a3d.field_geolocation
     - field.field.node.test_a3d.field_has_a_construction_opening
     - field.field.node.test_a3d.field_link_to_3d_model
-    - field.field.node.test_a3d.field_mass_structure_data_pres
     - field.field.node.test_a3d.field_member_of
     - field.field.node.test_a3d.field_number_of_instances
     - field.field.node.test_a3d.field_ownership
@@ -40,7 +39,6 @@ dependencies:
     - field.field.node.test_a3d.field_rock_fragments
     - field.field.node.test_a3d.field_st_placement_certainty
     - field.field.node.test_a3d.field_st_placement_type1
-    - field.field.node.test_a3d.field_surf_data_pres
     - field.field.node.test_a3d.field_surface_data_presence
     - field.field.node.test_a3d.field_surface_finishing
     - field.field.node.test_a3d.field_test_geolocation
@@ -55,6 +53,21 @@ targetEntityType: node
 bundle: test_a3d
 mode: search_index
 content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   a3d_eva_handle_entity_view_1:
     settings: {  }
     third_party_settings: {  }
@@ -126,7 +139,6 @@ hidden:
   field_geolocation: true
   field_has_a_construction_opening: true
   field_link_to_3d_model: true
-  field_mass_structure_data_pres: true
   field_number_of_instances: true
   field_ownership: true
   field_porosity: true
@@ -134,7 +146,6 @@ hidden:
   field_rock_fragments: true
   field_st_placement_certainty: true
   field_st_placement_type1: true
-  field_surf_data_pres: true
   field_surface_data_presence: true
   field_surface_finishing: true
   field_test_geolocation: true

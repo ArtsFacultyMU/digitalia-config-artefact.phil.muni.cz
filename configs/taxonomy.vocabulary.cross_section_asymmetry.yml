@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Cross-section asymmetry'
 vid: cross_section_asymmetry
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Project identification'
 vid: proj_id
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -1,0 +1,13 @@
+uuid: ccdcf849-cc2c-4942-a4cf-a7b4ac040af5
+langcode: en
+status: true
+dependencies: {  }
+name: a3d_to_jpeg_full_resolution
+label: 'A3D to JPEG full resolution'
+effects:
+  c3ce60b1-b201-40fe-b14b-4ba9ded955e0:
+    uuid: c3ce60b1-b201-40fe-b14b-4ba9ded955e0
+    id: image_convert
+    weight: 1
+    data:
+      extension: jpeg

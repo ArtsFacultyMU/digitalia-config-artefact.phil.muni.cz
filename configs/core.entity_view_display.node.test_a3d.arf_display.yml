@@ -31,7 +31,6 @@ dependencies:
     - field.field.node.test_a3d.field_geolocation
     - field.field.node.test_a3d.field_has_a_construction_opening
     - field.field.node.test_a3d.field_link_to_3d_model
-    - field.field.node.test_a3d.field_mass_structure_data_pres
     - field.field.node.test_a3d.field_member_of
     - field.field.node.test_a3d.field_number_of_instances
     - field.field.node.test_a3d.field_ownership
@@ -40,7 +39,6 @@ dependencies:
     - field.field.node.test_a3d.field_rock_fragments
     - field.field.node.test_a3d.field_st_placement_certainty
     - field.field.node.test_a3d.field_st_placement_type1
-    - field.field.node.test_a3d.field_surf_data_pres
     - field.field.node.test_a3d.field_surface_data_presence
     - field.field.node.test_a3d.field_surface_finishing
     - field.field.node.test_a3d.field_test_geolocation
@@ -57,6 +55,21 @@ targetEntityType: node
 bundle: test_a3d
 mode: arf_display
 content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   a3d_eva_handle_entity_view_1:
     settings: {  }
     third_party_settings: {  }
@@ -149,102 +162,6 @@ content:
         show-footer: false
     third_party_settings: {  }
     weight: 4
-    region: content
-  field_mass_structure_data_pres:
-    type: data_field_table_formatter
-    label: hidden
-    settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
-      number_column: false
-      number_column_label: №
-      direction: horizontal
-      mode: table
-      caption: ''
-      footer_text: ''
-      datatables_options:
-        bExpandable: true
-        bInfo: true
-        scrollX: true
-        bStateSave: false
-        paging: true
-        ordering: true
-        searching: true
-        show-export: true
-        bMultiFilter: false
-      bootstrap_table_options:
-        sticky-header: true
-        search: true
-        show-search-clear-button: true
-        show-refresh: true
-        show-toggle: true
-        show-fullscreen: true
-        show-columns: true
-        data-detail-view: true
-        show-columns-toggle-all: true
-        mobile-responsive: true
-        show-print: true
-        show-copy-rows: true
-        show-export: true
-        sortable: true
-        click-to-select: true
-        show-pagination-switch: true
-        pagination: true
-        cookie: true
-        show-footer: false
-    third_party_settings: {  }
-    weight: 13
-    region: content
-  field_surf_data_pres:
-    type: data_field_table_formatter
-    label: hidden
-    settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
-      number_column: false
-      number_column_label: №
-      direction: horizontal
-      mode: table
-      caption: ''
-      footer_text: ''
-      datatables_options:
-        bExpandable: true
-        bInfo: true
-        scrollX: true
-        bStateSave: false
-        paging: true
-        ordering: true
-        searching: true
-        show-export: true
-        bMultiFilter: false
-      bootstrap_table_options:
-        sticky-header: true
-        search: true
-        show-search-clear-button: true
-        show-refresh: true
-        show-toggle: true
-        show-fullscreen: true
-        show-columns: true
-        data-detail-view: true
-        show-columns-toggle-all: true
-        mobile-responsive: true
-        show-print: true
-        show-copy-rows: true
-        show-export: true
-        sortable: true
-        click-to-select: true
-        show-pagination-switch: true
-        pagination: true
-        cookie: true
-        show-footer: false
-    third_party_settings: {  }
-    weight: 12
     region: content
   links:
     settings: {  }

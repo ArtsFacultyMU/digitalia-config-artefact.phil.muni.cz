@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: '2D asymetry (smaller barb)'
 vid: 2d_asymetry
-description: ''
+description: null
 weight: 0
+new_revision: false

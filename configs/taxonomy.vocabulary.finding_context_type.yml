@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Finding context (type)'
 vid: finding_context_type
-description: ''
+description: null
 weight: 0
+new_revision: false

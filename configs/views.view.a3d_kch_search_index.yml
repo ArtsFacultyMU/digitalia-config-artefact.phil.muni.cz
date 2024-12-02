@@ -12,6 +12,7 @@ dependencies:
     - search_api.index.a3d_object_index
     - system.menu.kch-main-menu
     - taxonomy.vocabulary.actor
+    - taxonomy.vocabulary.aquamanile_type
     - taxonomy.vocabulary.artefact_category
     - taxonomy.vocabulary.site
   content:
@@ -22,6 +23,7 @@ dependencies:
     - 'taxonomy_term:artefact_category:c9d690a9-0600-4adc-afc4-e3c5832bd98c'
   module:
     - better_exposed_filters
+    - facets_exposed_filters
     - range
     - search_api
     - views_field_view
@@ -1638,6 +1640,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 60
           total_pages: null
           id: 0
@@ -5225,6 +5228,119 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+        facets_field_raw_material_name:
+          id: facets_field_raw_material_name
+          table: search_api_index_a3d_object_index
+          field: facets_field_raw_material_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Raw material'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_raw_material_name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              0: '0'
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: false
+            processor_configs: {  }
+        field_aquamanile_type:
+          id: field_aquamanile_type
+          table: search_api_index_a3d_object_index
+          field: field_aquamanile_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_term
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_aquamanile_type_op
+            label: 'Aquamanile type'
+            description: ''
+            use_operator: false
+            operator: field_aquamanile_type_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_aquamanile_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: aquamanile_type
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -5390,7 +5506,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
       empty:
         area:

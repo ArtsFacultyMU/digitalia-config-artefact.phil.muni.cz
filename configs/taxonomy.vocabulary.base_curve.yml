@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Base curve'
 vid: base_curve
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -5,6 +5,8 @@ display:
       fields:
         name:
           label: 'Uživatelské jméno'
+        status:
+          label: Stav
         operations:
           label: Operace
       pager:
@@ -14,3 +16,7 @@ display:
       exposed_form:
         options:
           exposed_sorts_label: 'Řadit dle'
+      filters:
+        status:
+          group_info:
+            label: Stav

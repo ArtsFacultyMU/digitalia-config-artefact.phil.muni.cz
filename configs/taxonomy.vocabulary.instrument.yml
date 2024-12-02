@@ -6,3 +6,4 @@ name: Instrument
 vid: instrument
 description: 'Devices used to analyse objects and their samples. Implements PIDINST metadata schema'
 weight: 0
+new_revision: false

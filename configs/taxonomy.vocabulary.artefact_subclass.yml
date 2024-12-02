@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Artefact subclass'
 vid: artefact_subclass
-description: ''
+description: null
 weight: 0
+new_revision: false

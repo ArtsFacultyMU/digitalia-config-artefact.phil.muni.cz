@@ -25,6 +25,55 @@ display:
     display_options:
       title: 'Manage Samples'
       fields:
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'platform code'
+          plugin_id: custom
+          label: 'Custom text'
+          exclude: true
+          alter:
+            alter_text: true
+            text: kch
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
         nid:
           id: nid
           table: node_field_data
@@ -290,7 +339,7 @@ display:
             alter_text: true
             text: 'Add analysis'
             make_link: true
-            path: '/node/add/analysis?edit[field_analysis_of][widget][0][target_id]={{ nid }}'
+            path: '/node/add/analysis?edit[field_analysis_of][widget][0][target_id]={{ nid }}&destination=/{{ nothing_1 }}/analysis/node/{{ raw_arguments.nid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -381,6 +430,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: null
           id: 0
@@ -487,9 +537,21 @@ display:
           row_class: ''
           default_row_class: true
           columns:
+            nid: nid
             title: title
+            status: status
+            edit_node: edit_node
+            nothing: nothing
+            view: view
           default: '-1'
           info:
+            nid:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             title:
               sortable: false
               default_sort_order: asc
@@ -497,10 +559,34 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
+            status:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            edit_node:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            nothing:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            view:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
           override: true
           sticky: false
           summary: ''
-          empty_table: false
+          empty_table: true
           caption: ''
           description: ''
       row:
@@ -547,9 +633,9 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: text
-          empty: false
+          empty: true
           content:
-            value: "<h1> Manage samples and analyses of {{ arguments.nid }}</h1>\r\n<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/node/add/sample?edit[field_object_reference][widget][0][target_id]={{ raw_arguments.nid }}\">Add sample</a>\r\n</p>\r\n</div>"
+            value: "<h1> Manage samples and analyses of {{ arguments.nid }}</h1>\r\n<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/kch/node/{{ raw_arguments.nid }}\">Back to object</a>\r\n    <a class=\"button\" href=\"/node/add/sample?edit[field_object_reference][widget][0][target_id]={{ raw_arguments.nid }}&destination=/{{ nothing_1 }}/samples/node/{{ raw_arguments.nid }}\">Add sample</a>\r\n</p>\r\n</div>"
             format: full_html
           tokenize: true
       footer: {  }

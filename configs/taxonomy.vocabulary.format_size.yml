@@ -6,3 +6,4 @@ name: Format/Size
 vid: format_size
 description: 'The configuration of a work, including technical formats, or the conventional designation for the dimensions or proportions'
 weight: 0
+new_revision: false

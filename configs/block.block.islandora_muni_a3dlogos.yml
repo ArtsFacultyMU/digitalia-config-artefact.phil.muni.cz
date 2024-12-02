@@ -1,0 +1,28 @@
+uuid: d9f8c34a-fdef-4cca-ad62-70b57fce9ec1
+langcode: en
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.a3d_logos
+  module:
+    - islandora
+    - simple_block
+  theme:
+    - islandora_muni
+id: islandora_muni_a3dlogos
+theme: islandora_muni
+region: footer_first
+weight: 0
+provider: null
+plugin: 'simple_block:a3d_logos'
+settings:
+  id: 'simple_block:a3d_logos'
+  label: 'A3D logos'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

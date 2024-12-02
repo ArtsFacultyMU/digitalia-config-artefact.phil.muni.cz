@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.3d_model.field_description
     - field.field.media.3d_model.field_file_size
     - field.field.media.3d_model.field_media_file
     - field.field.media.3d_model.field_media_of
@@ -12,6 +13,7 @@ dependencies:
   module:
     - file
     - path
+    - text
 id: media.3d_model.default
 targetEntityType: media
 bundle: 3d_model
@@ -22,6 +24,14 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   field_file_size:
     type: number

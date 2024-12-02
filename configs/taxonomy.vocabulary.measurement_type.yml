@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Measurement type'
 vid: measurement_type
-description: ''
+description: null
 weight: 0
+new_revision: false

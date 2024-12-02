@@ -5,9 +5,9 @@ dependencies:
   config:
     - system.menu.nef-main-menu
   module:
+    - context
     - islandora
     - superfish
-    - system
   theme:
     - islandora_muni
 id: islandora_muni_nefmainmenu
@@ -76,7 +76,7 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
-  request_path:
-    id: request_path
+  request_domain:
+    id: request_domain
     negate: false
-    pages: "/nef\r\n/nef/*\r\n/group/nef\r\n/group/nef/*\r\n/group/9\r\n/group/9/*\r\n/compare/*/nef"
+    domains: neofig-devel.phil.muni.cz

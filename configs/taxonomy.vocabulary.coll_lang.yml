@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Collection metadata language'
 vid: coll_lang
-description: ''
+description: null
 weight: 0
+new_revision: false

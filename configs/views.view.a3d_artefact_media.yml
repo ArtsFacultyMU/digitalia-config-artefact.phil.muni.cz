@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.token
+    - field.storage.media.field_description
     - field.storage.media.field_media_document
     - field.storage.media.field_media_file
     - field.storage.media.field_media_image
     - field.storage.media.field_media_video_file
-    - image.style.a3d_convert_to_jpeg
     - image.style.a3d_to_jpeg
+    - image.style.a3d_to_jpeg_full_resolution
+    - image.style.a3d_to_jpeg_square_thumbnail
     - media.type.3d_model
     - media.type.document
     - media.type.file
@@ -22,6 +24,7 @@ dependencies:
     - image
     - media
     - photoswipe
+    - text
     - user
     - views_infinite_scroll
 id: a3d_artefact_media
@@ -175,7 +178,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: default
           exception:
             value: all
@@ -201,6 +204,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+          target_entity_type_id: node
       filters:
         status:
           id: status
@@ -592,7 +596,7 @@ display:
           settings:
             photoswipe_thumbnail_style_first: ''
             photoswipe_thumbnail_style: a3d_to_jpeg
-            photoswipe_image_style: ''
+            photoswipe_image_style: a3d_to_jpeg_full_resolution
             photoswipe_view_mode: _custom
           group_column: ''
           group_columns: {  }
@@ -793,7 +797,7 @@ display:
           type: image
           settings:
             image_link: ''
-            image_style: a3d_to_jpeg
+            image_style: a3d_to_jpeg_square_thumbnail
             image_loading:
               attribute: lazy
           group_column: ''
@@ -886,9 +890,9 @@ display:
       style:
         type: default
         options:
+          grouping: {  }
           row_class: ''
-          default_row_class: true
-          uses_fields: false
+          default_row_class: false
       row:
         type: fields
         options:
@@ -1044,10 +1048,72 @@ display:
           type: photoswipe_field_formatter
           settings:
             photoswipe_thumbnail_style_first: ''
-            photoswipe_thumbnail_style: ''
-            photoswipe_image_style: a3d_convert_to_jpeg
+            photoswipe_thumbnail_style: a3d_to_jpeg
+            photoswipe_image_style: a3d_to_jpeg_full_resolution
             photoswipe_view_mode: _custom
           group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_description:
+          id: field_description
+          table: media__field_description
+          field: field_description
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -1430,6 +1496,7 @@ display:
         - url.query_args
         - user.permissions
       tags:
+        - 'config:field.storage.media.field_description'
         - 'config:field.storage.media.field_media_image'
     deleted: false
   a3d_models:

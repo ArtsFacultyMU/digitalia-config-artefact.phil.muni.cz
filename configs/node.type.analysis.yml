@@ -12,7 +12,7 @@ third_party_settings:
 name: Analysis
 type: analysis
 description: 'A measurement or formalized observation of an object or its sample'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

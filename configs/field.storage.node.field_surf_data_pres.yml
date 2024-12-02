@@ -1,57 +1,16 @@
-uuid: 705efab3-6001-4284-ad45-ce91da68a884
+uuid: 3206e666-be97-4946-a7f4-b09bc4cf035e
 langcode: en
 status: true
 dependencies:
   module:
-    - datafield
-    - field_permissions
     - node
-third_party_settings:
-  field_permissions:
-    permission_type: public
 id: node.field_surf_data_pres
 field_name: field_surf_data_pres
 entity_type: node
-type: data_field
+type: entity_reference
 settings:
-  columns:
-    sdp_value:
-      name: sdp_value
-      type: entity_reference
-      max_length: 255
-      size: normal
-      precision: 10
-      unsigned: false
-      scale: 2
-      datetime_type: date
-    sdp_method:
-      name: sdp_method
-      type: entity_reference
-      max_length: 255
-      size: normal
-      precision: 10
-      unsigned: false
-      scale: 2
-      datetime_type: date
-    sdp_spec:
-      name: sdp_spec
-      type: text
-      max_length: 255
-      size: normal
-      precision: 10
-      unsigned: false
-      scale: 2
-      datetime_type: date
-    sdp_note:
-      name: sdp_note
-      type: text
-      max_length: 255
-      size: normal
-      precision: 10
-      unsigned: false
-      scale: 2
-      datetime_type: date
-module: datafield
+  target_type: node
+module: core
 locked: false
 cardinality: -1
 translatable: true

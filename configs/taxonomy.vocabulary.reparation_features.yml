@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Reparation features'
 vid: reparation_features
-description: ''
+description: null
 weight: 0
+new_revision: false

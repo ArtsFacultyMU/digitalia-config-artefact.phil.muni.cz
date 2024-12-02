@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Quiver transport - bright spots'
 vid: quiver_trans_bright_spots
-description: ''
+description: null
 weight: 0
+new_revision: false

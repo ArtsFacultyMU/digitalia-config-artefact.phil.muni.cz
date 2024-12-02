@@ -6,6 +6,7 @@ dependencies:
     - field.storage.group.field_group_code
     - field.storage.node.field_artefact_id
     - node.type.a3d_object
+    - node.type.a3d_platform_homepage
     - node.type.analysis
     - node.type.sample
     - taxonomy.vocabulary.artefact_category
@@ -1132,6 +1133,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0
@@ -1178,6 +1180,7 @@ display:
                 advanced:
                   placeholder_text: ''
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               uid:
                 plugin_id: default
@@ -1185,7 +1188,9 @@ display:
                   placeholder_text: ''
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
               status:
                 plugin_id: default
@@ -1193,7 +1198,9 @@ display:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
+                  collapsible_disable_automatic_open: false
                   is_secondary: false
       access:
         type: group_permission
@@ -1261,7 +1268,7 @@ display:
           admin_label: ''
           entity_type: node
           entity_field: uid
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: default
           exception:
             value: all
@@ -1287,6 +1294,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+          target_entity_type_id: user
       filters:
         type:
           id: type
@@ -1955,7 +1963,7 @@ display:
           admin_label: ''
           entity_type: node
           entity_field: uid
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: default
           exception:
             value: all
@@ -1981,6 +1989,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+          target_entity_type_id: user
       filters:
         type:
           id: type
@@ -1995,6 +2004,9 @@ display:
           operator: in
           value:
             a3d_object: a3d_object
+            a3d_platform_homepage: a3d_platform_homepage
+            analysis: analysis
+            sample: sample
           group: 1
           exposed: false
           expose:

@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Surface data presence method'
 vid: sdp_method
-description: ''
+description: null
 weight: 0
+new_revision: false

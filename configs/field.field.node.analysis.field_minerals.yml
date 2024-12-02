@@ -21,7 +21,7 @@ settings:
   field_settings:
     mineral:
       label: Mineral
-      required: true
+      required: false
       entity_reference_type: taxonomy_term
       target_bundles: mineral_fragments
     ppm:

@@ -21,7 +21,7 @@ settings:
   field_settings:
     chemical:
       label: 'Chemical compound'
-      required: true
+      required: false
       entity_reference_type: taxonomy_term
       target_bundles: chemical_compounds
     value:

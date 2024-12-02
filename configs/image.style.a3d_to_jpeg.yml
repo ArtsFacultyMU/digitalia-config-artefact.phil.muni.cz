@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: a3d_to_jpeg
-label: a3d_to_jpeg
+label: 'A3D to JPEG height 400px'
 effects:
   7899b684-878a-4deb-963d-d91ab0aa6e4f:
     uuid: 7899b684-878a-4deb-963d-d91ab0aa6e4f
@@ -11,3 +11,11 @@ effects:
     weight: 1
     data:
       extension: jpeg
+  706b084f-b6f5-44e1-ab44-42c529d3a00a:
+    uuid: 706b084f-b6f5-44e1-ab44-42c529d3a00a
+    id: image_scale
+    weight: 2
+    data:
+      width: null
+      height: 400
+      upscale: false

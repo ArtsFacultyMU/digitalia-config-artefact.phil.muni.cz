@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Surface data presence value'
 vid: sdp_value
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -1,6 +1,6 @@
 uuid: 6d150e15-6755-4544-b807-3b520b127546
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - simple_block.simple_block.nef_add_new_content

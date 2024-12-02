@@ -6,3 +6,4 @@ name: 'Thematic group'
 vid: circle
 description: 'KCH (okruh)'
 weight: 0
+new_revision: false

@@ -1,0 +1,19 @@
+uuid: 0c04697a-e7b4-4280-a2fb-b8da660592bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sdp_spec
+    - node.type.arf_surf_data_pres
+id: node.arf_surf_data_pres.field_sdp_spec
+field_name: field_sdp_spec
+entity_type: node
+bundle: arf_surf_data_pres
+label: 'Surface data presence specification'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

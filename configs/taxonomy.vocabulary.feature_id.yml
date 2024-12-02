@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Feature ID'
 vid: feature_id
-description: ''
+description: null
 weight: 0
+new_revision: false

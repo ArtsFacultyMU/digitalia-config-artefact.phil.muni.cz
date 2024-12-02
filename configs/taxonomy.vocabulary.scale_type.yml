@@ -6,3 +6,4 @@ name: 'Scale Type'
 vid: scale_type
 description: 'Expresses the ratio between the size of the representation of something and that thing itself'
 weight: 0
+new_revision: false

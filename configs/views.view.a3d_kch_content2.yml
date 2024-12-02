@@ -6594,6 +6594,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 5
+          pagination_heading_level: h4
       empty: {  }
       sorts:
         field_artefact_category_target_id:
@@ -15120,6 +15121,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          pagination_heading_level: h4
       sorts: {  }
       arguments: {  }
       filters:
@@ -15485,6 +15487,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       sorts:
         field_artefact_category_target_id:
           id: field_artefact_category_target_id

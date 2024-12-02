@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Collection title'
 vid: collection_title
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -89,7 +89,6 @@ dependencies:
     - field.field.node.a3d_object.field_link_to_3d_model
     - field.field.node.a3d_object.field_literature
     - field.field.node.a3d_object.field_longitudinal_profile
-    - field.field.node.a3d_object.field_mass_structure_data_pres
     - field.field.node.a3d_object.field_material_colour
     - field.field.node.a3d_object.field_measurements
     - field.field.node.a3d_object.field_member_of
@@ -152,8 +151,10 @@ dependencies:
     - field.field.node.a3d_object.field_subord_dataset
     - field.field.node.a3d_object.field_subord_dataset_link
     - field.field.node.a3d_object.field_surf_data_pres
+    - field.field.node.a3d_object.field_surf_data_pres2
     - field.field.node.a3d_object.field_surface_alt
     - field.field.node.a3d_object.field_surface_finishing
+    - field.field.node.a3d_object.field_test_custom_field
     - field.field.node.a3d_object.field_thermic_cracks
     - field.field.node.a3d_object.field_tile_type
     - field.field.node.a3d_object.field_timespan
@@ -304,54 +305,6 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
-  field_mass_structure_data_pres:
-    type: data_field_table_formatter
-    label: hidden
-    settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
-      number_column: false
-      number_column_label: №
-      direction: horizontal
-      mode: table
-      caption: ''
-      footer_text: ''
-      datatables_options:
-        bExpandable: true
-        bInfo: true
-        scrollX: true
-        bStateSave: false
-        paging: true
-        ordering: true
-        searching: true
-        show-export: true
-        bMultiFilter: false
-      bootstrap_table_options:
-        sticky-header: true
-        search: true
-        show-search-clear-button: true
-        show-refresh: true
-        show-toggle: true
-        show-fullscreen: true
-        show-columns: true
-        data-detail-view: true
-        show-columns-toggle-all: true
-        mobile-responsive: true
-        show-print: true
-        show-copy-rows: true
-        show-export: true
-        sortable: true
-        click-to-select: true
-        show-pagination-switch: true
-        pagination: true
-        cookie: true
-        show-footer: false
-    third_party_settings: {  }
-    weight: 13
-    region: content
   field_met_note_cz:
     type: basic_string
     label: hidden
@@ -428,54 +381,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 22
-    region: content
-  field_surf_data_pres:
-    type: data_field_table_formatter
-    label: hidden
-    settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
-      number_column: false
-      number_column_label: №
-      direction: horizontal
-      mode: table
-      caption: ''
-      footer_text: ''
-      datatables_options:
-        bExpandable: true
-        bInfo: true
-        scrollX: true
-        bStateSave: false
-        paging: true
-        ordering: true
-        searching: true
-        show-export: true
-        bMultiFilter: false
-      bootstrap_table_options:
-        sticky-header: true
-        search: true
-        show-search-clear-button: true
-        show-refresh: true
-        show-toggle: true
-        show-fullscreen: true
-        show-columns: true
-        data-detail-view: true
-        show-columns-toggle-all: true
-        mobile-responsive: true
-        show-print: true
-        show-copy-rows: true
-        show-export: true
-        sortable: true
-        click-to-select: true
-        show-pagination-switch: true
-        pagination: true
-        cookie: true
-        show-footer: false
-    third_party_settings: {  }
-    weight: 12
     region: content
   field_surface_alt:
     type: entity_reference_label
@@ -642,7 +547,10 @@ hidden:
   field_state: true
   field_statement: true
   field_stove_tile_shape_certainty: true
+  field_surf_data_pres: true
+  field_surf_data_pres2: true
   field_surface_finishing: true
+  field_test_custom_field: true
   field_thermic_cracks: true
   field_tile_type: true
   field_timespan: true

@@ -1018,6 +1018,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 40
           total_pages: null
           id: 0
@@ -2132,7 +2133,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "{% if drupal_token('current-page:query:sort_by') == 'aggregated_field_preserved_parts' or drupal_token('current-page:query:sort_by') == '[current-page:query:sort_by]' %}\r\n{{ field_preserved_parts_struct_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'aggregated_field_recent_damage_type' %}\r\n{{ field_recent_damage_type_struct_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_posture_name' %}\r\n{{ field_posture_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_relative_datation_name' %}\r\n{{ field_relative_datation_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_site_name' %}\r\n{{ field_site_name }}\r\n{% endif %}"
+            text: "{% if drupal_token('current-page:query:sort_by') == 'aggregated_field_preserved_parts' or drupal_token('current-page:query:sort_by') == '[current-page:query:sort_by]' %}\r\n<h3>Preserved body parts: {{ field_preserved_parts_struct_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'aggregated_field_recent_damage_type' %}\r\n<h3>Recent damage type: {{ field_recent_damage_type_struct_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_posture_name' %}\r\n<h3>Posture: {{ field_posture_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_relative_datation_name' %}\r\n<h3>Relative datation: {{ field_relative_datation_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_site_name' %}\r\n<h3>Site: {{ field_site_name }}</h3>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -2393,6 +2394,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 1
           total_pages: null
           id: 1

@@ -1,8 +1,10 @@
 _core:
   default_config_hash: QCkPar1UfJP2ysHMvFGnWNg_MhgNO8sxUCRoXvatg0Q
+langcode: en
 photoswipe_always_load_non_admin: false
 enable_cdn: false
 options:
+  showHideAnimationType: zoom
   showAnimationDuration: 333
   hideAnimationDuration: 333
   zoomAnimationDuration: 333

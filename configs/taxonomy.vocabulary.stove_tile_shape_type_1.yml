@@ -6,3 +6,4 @@ name: 'Stove tile shape type 1'
 vid: stove_tile_shape_type_1
 description: KCH
 weight: 0
+new_revision: false

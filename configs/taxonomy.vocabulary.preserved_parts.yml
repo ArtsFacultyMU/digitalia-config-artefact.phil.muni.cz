@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Preserved body parts'
 vid: preserved_parts
-description: ''
+description: null
 weight: 0
+new_revision: false

@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Coverage spatial'
 vid: cov_spat
-description: ''
+description: null
 weight: 0
+new_revision: false

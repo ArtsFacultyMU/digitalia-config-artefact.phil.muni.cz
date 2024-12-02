@@ -17,6 +17,7 @@ dependencies:
     - rest
     - shortcut
     - system
+    - taxonomy
     - toolbar
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
@@ -43,3 +44,4 @@ permissions:
   - 'view media'
   - 'view own field_private_note'
   - 'view the administration theme'
+  - 'view vocabulary labels'

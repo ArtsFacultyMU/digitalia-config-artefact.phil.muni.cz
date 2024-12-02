@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Good/wrong practice'
 vid: g_w_practice
-description: ''
+description: null
 weight: 0
+new_revision: false

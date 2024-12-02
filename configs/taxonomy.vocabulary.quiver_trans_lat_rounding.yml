@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Quiver transport - lateral rounding (and striations)'
 vid: quiver_trans_lat_rounding
-description: ''
+description: null
 weight: 0
+new_revision: false

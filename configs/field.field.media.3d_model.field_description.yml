@@ -1,0 +1,24 @@
+uuid: b643ee37-6cba-4615-a914-72790fc2e1df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_description
+    - filter.format.basic_html
+    - media.type.3d_model
+  module:
+    - text
+id: media.3d_model.field_description
+field_name: field_description
+entity_type: media
+bundle: 3d_model
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: d94b0ac4-ae69-433c-8de1-bb51f01f5ace
+langcode: en
+status: true
+dependencies: {  }
+name: a3d_to_jpeg_square_thumbnail
+label: 'A3D to JPEG square thumbnail'
+effects:
+  52588446-95d5-4a21-804f-9a896d49d611:
+    uuid: 52588446-95d5-4a21-804f-9a896d49d611
+    id: image_convert
+    weight: 1
+    data:
+      extension: jpeg
+  a204dc08-8eb9-4efb-8c6d-366aa8f8b34d:
+    uuid: a204dc08-8eb9-4efb-8c6d-366aa8f8b34d
+    id: image_scale
+    weight: 2
+    data:
+      width: null
+      height: 300
+      upscale: true

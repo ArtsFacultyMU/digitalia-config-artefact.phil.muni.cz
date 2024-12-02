@@ -6,3 +6,4 @@ name: 'Instrument Type'
 vid: instrument_type
 description: 'Classification of the type of the instrument'
 weight: 0
+new_revision: false

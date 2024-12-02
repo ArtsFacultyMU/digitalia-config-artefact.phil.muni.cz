@@ -1,6 +1,6 @@
 uuid: 222fc022-f3c5-4978-bb19-26c36ad020d7
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - simple_block.simple_block.footer_logos

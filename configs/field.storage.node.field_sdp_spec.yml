@@ -1,0 +1,19 @@
+uuid: 7ed27ff0-a4c4-44c0-a194-f69e7a2fcc07
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sdp_spec
+field_name: field_sdp_spec
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

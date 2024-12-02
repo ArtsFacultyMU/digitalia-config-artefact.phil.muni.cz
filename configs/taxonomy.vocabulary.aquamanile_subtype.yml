@@ -6,3 +6,4 @@ name: 'Aquamanile subtype'
 vid: aquamanile_subtype
 description: KCH
 weight: 0
+new_revision: false

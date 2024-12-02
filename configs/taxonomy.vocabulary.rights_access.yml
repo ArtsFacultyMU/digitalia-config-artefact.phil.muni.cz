@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Access rights'
 vid: rights_access
-description: ''
+description: null
 weight: 0
+new_revision: false

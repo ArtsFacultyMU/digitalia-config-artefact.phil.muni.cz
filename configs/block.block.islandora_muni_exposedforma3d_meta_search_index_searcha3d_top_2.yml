@@ -5,7 +5,6 @@ dependencies:
   config:
     - views.view.a3d_meta_search_index_search
   module:
-    - block_class
     - context
     - islandora
     - system

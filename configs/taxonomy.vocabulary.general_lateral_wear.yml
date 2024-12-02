@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'General lateral wear'
 vid: general_lateral_wear
-description: ''
+description: null
 weight: 0
+new_revision: false

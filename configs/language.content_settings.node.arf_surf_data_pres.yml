@@ -1,0 +1,11 @@
+uuid: 94217ed7-e712-449d-acd8-2db6f5603fab
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.arf_surf_data_pres
+id: node.arf_surf_data_pres
+target_entity_type_id: node
+target_bundle: arf_surf_data_pres
+default_langcode: site_default
+language_alterable: false

@@ -6,3 +6,4 @@ name: Shape
 vid: shape
 description: 'KCH - e.g. shape of the frontal heating panel or of the vessel body'
 weight: 0
+new_revision: false

@@ -6,3 +6,4 @@ name: 'Stove tile placement type 3'
 vid: stove_tile_placement_type_3
 description: KCH
 weight: 0
+new_revision: false

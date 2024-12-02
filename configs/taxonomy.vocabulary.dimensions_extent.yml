@@ -6,3 +6,4 @@ name: 'Dimensions Extent'
 vid: dimensions_extent
 description: 'An explanation of the part of the work being measured, included when necessary for clarity.'
 weight: 0
+new_revision: false
