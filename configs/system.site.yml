@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 86955ff9-1be3-40ad-84ae-414c65ae901c
 name: Archeo3Data
-mail: admin@example.com
+mail: kic_admins@ics.muni.cz
 slogan: ''
 page:
   403: ''

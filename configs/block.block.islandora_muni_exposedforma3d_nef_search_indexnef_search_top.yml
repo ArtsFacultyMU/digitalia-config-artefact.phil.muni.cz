@@ -10,7 +10,7 @@ dependencies:
 id: islandora_muni_exposedforma3d_nef_search_indexnef_search_top
 theme: islandora_muni
 region: header
-weight: -30
+weight: -28
 provider: null
 plugin: 'views_exposed_filter_block:a3d_nef_search_index-nef_search_top'
 settings:

@@ -15,7 +15,7 @@ _core:
 id: islandora_muni_temporalsubject
 theme: islandora_muni
 region: header
-weight: -18
+weight: -16
 provider: null
 plugin: 'facet_block:temporal_subject'
 settings:

@@ -12,7 +12,6 @@ dependencies:
     - search_api.index.a3d_object_index
     - system.menu.kch-main-menu
     - taxonomy.vocabulary.actor
-    - taxonomy.vocabulary.aquamanile_type
     - taxonomy.vocabulary.artefact_category
     - taxonomy.vocabulary.site
   content:
@@ -4672,6 +4671,146 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
+        name:
+          id: name
+          table: search_api_index_a3d_object_index
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: 'Aquamanile type » Taxonomy term » Name (indexed field)'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        name_1:
+          id: name_1
+          table: search_api_index_a3d_object_index
+          field: name_1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: 'Aquamanile subtype » Taxonomy term » Name (indexed field)'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
       exposed_form:
         type: bef
         options:
@@ -5248,7 +5387,7 @@ display:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_raw_material_name
+            identifier: field_raw_material
             required: false
             remember: false
             multiple: false
@@ -5285,24 +5424,24 @@ display:
             min_count: 1
             show_numbers: false
             processor_configs: {  }
-        field_aquamanile_type:
-          id: field_aquamanile_type
+        facets_field_aquamanile_type:
+          id: facets_field_aquamanile_type
           table: search_api_index_a3d_object_index
-          field: field_aquamanile_type
+          field: facets_field_aquamanile_type
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: search_api_term
-          operator: or
-          value: {  }
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: field_aquamanile_type_op
+            operator_id: ''
             label: 'Aquamanile type'
             description: ''
             use_operator: false
-            operator: field_aquamanile_type_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
             identifier: field_aquamanile_type
@@ -5311,6 +5450,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+              0: '0'
               anonymous: '0'
               content_editor: '0'
               administrator: '0'
@@ -5322,7 +5462,6 @@ display:
               arf_user: '0'
               kch_user: '0'
               lindat_editor: '0'
-            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -5335,12 +5474,78 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          vid: aquamanile_type
-          type: select
           hierarchy: false
-          limit: true
-          error_message: true
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: false
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+        facets_field_aquamanile_subtype:
+          id: facets_field_aquamanile_subtype
+          table: search_api_index_a3d_object_index
+          field: facets_field_aquamanile_subtype
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Aquamanile subtype'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_aquamanile_subtype
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              0: '0'
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: false
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
       filter_groups:
         operator: AND
         groups:
