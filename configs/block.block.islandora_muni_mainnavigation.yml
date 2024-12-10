@@ -5,6 +5,7 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - block_class
     - context
     - islandora
     - superfish
@@ -79,4 +80,4 @@ visibility:
   request_domain:
     id: request_domain
     negate: false
-    domains: archeo3data-devel.phil.muni.cz
+    domains: "archeo3data-devel.phil.muni.cz\r\narcheo3data.phil.muni.cz"

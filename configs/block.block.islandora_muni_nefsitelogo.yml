@@ -34,4 +34,4 @@ visibility:
   request_domain:
     id: request_domain
     negate: false
-    domains: neofig-devel.phil.muni.cz
+    domains: "neofig-devel.phil.muni.cz\r\nneofig.phil.muni.cz"

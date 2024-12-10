@@ -5,6 +5,7 @@ dependencies:
   config:
     - system.menu.arf-main-menu
   module:
+    - block_class
     - context
     - islandora
     - superfish
@@ -79,4 +80,4 @@ visibility:
   request_domain:
     id: request_domain
     negate: false
-    domains: artefact-devel.phil.muni.cz
+    domains: "artefact-devel.phil.muni.cz\r\nartefact.phil.muni.cz"

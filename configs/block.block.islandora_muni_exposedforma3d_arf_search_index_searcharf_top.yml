@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.a3d_arf_search_index_search
   module:
+    - block_class
     - context
     - islandora
     - system
@@ -27,7 +28,7 @@ visibility:
   request_domain:
     id: request_domain
     negate: false
-    domains: artefact-devel.phil.muni.cz
+    domains: "artefact-devel.phil.muni.cz\r\nartefact.phil.muni.cz"
   media_source_mimetype:
     id: media_source_mimetype
     negate: false

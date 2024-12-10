@@ -5,6 +5,8 @@ dependencies:
   config:
     - views.view.a3d_kch_search_index
   module:
+    - block_class
+    - context
     - islandora
     - system
     - views
@@ -32,3 +34,7 @@ visibility:
     id: request_path
     negate: false
     pages: "!/kch/search\r\n/kch\r\n/kch/*\r\n/group/kch\r\n/group/kch/*\r\n/group/13\r\n/group/13/*\r\n/compare/*/kch"
+  request_domain:
+    id: request_domain
+    negate: false
+    domains: "pottery-analyses-devel.phil.muni.cz\r\npottery-analyses.phil.muni.cz"
