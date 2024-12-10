@@ -44,7 +44,6 @@ dependencies:
     - field.field.node.a3d_object.field_coll_rights
     - field.field.node.a3d_object.field_coll_title
     - field.field.node.a3d_object.field_colour_paint
-    - field.field.node.a3d_object.field_comparison
     - field.field.node.a3d_object.field_country
     - field.field.node.a3d_object.field_cov_spat
     - field.field.node.a3d_object.field_cov_temp
@@ -78,6 +77,8 @@ dependencies:
     - field.field.node.a3d_object.field_general_note
     - field.field.node.a3d_object.field_general_type
     - field.field.node.a3d_object.field_geolocation
+    - field.field.node.a3d_object.field_geolocation_original
+    - field.field.node.a3d_object.field_geolocation_original_priv
     - field.field.node.a3d_object.field_glue_residues
     - field.field.node.a3d_object.field_grain_type
     - field.field.node.a3d_object.field_handle
@@ -89,6 +90,7 @@ dependencies:
     - field.field.node.a3d_object.field_link_to_3d_model
     - field.field.node.a3d_object.field_literature
     - field.field.node.a3d_object.field_longitudinal_profile
+    - field.field.node.a3d_object.field_mass_structure_data_pres
     - field.field.node.a3d_object.field_material_colour
     - field.field.node.a3d_object.field_measurements
     - field.field.node.a3d_object.field_member_of
@@ -151,10 +153,8 @@ dependencies:
     - field.field.node.a3d_object.field_subord_dataset
     - field.field.node.a3d_object.field_subord_dataset_link
     - field.field.node.a3d_object.field_surf_data_pres
-    - field.field.node.a3d_object.field_surf_data_pres2
     - field.field.node.a3d_object.field_surface_alt
     - field.field.node.a3d_object.field_surface_finishing
-    - field.field.node.a3d_object.field_test_custom_field
     - field.field.node.a3d_object.field_thermic_cracks
     - field.field.node.a3d_object.field_tile_type
     - field.field.node.a3d_object.field_timespan
@@ -181,7 +181,7 @@ third_party_settings:
       label: Biblatex
       parent_name: ''
       region: hidden
-      weight: 177
+      weight: 189
       format_type: details
       format_settings:
         classes: ''
@@ -196,7 +196,7 @@ third_party_settings:
       label: 'Harvard citation style'
       parent_name: ''
       region: hidden
-      weight: 178
+      weight: 190
       format_type: details
       format_settings:
         classes: ''
@@ -211,7 +211,7 @@ third_party_settings:
       label: Platforms
       parent_name: ''
       region: hidden
-      weight: 179
+      weight: 191
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -236,10 +236,15 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
+  a3d_kch_index_related_samples_and_analyses_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
   a3d_nef_media_nef_images:
     settings: {  }
     third_party_settings: {  }
-    weight: 143
+    weight: 140
     region: content
   field_2d_asymmetry:
     type: entity_reference_label
@@ -247,21 +252,21 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 31
+    weight: 32
     region: content
   field_3d_shaping:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 32
+    weight: 33
     region: content
   field_3d_traces:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 33
+    weight: 34
     region: content
   field_a_asymmetry:
     type: entity_reference_label
@@ -269,21 +274,21 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 34
+    weight: 35
     region: content
   field_abs_dat_range:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 35
+    weight: 36
     region: content
   field_abs_dat_source:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 36
+    weight: 37
     region: content
   field_acquisition_type:
     type: entity_reference_label
@@ -291,14 +296,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 57
+    weight: 58
     region: content
   field_ais_cr:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 37
+    weight: 38
     region: content
   field_alteration:
     type: entity_reference_label
@@ -306,7 +311,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 38
+    weight: 39
     region: content
   field_alternative_id:
     type: string
@@ -314,7 +319,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 39
+    weight: 40
     region: content
   field_alternative_ids:
     type: data_field_table_formatter
@@ -362,7 +367,7 @@ content:
         cookie: true
         show-footer: false
     third_party_settings: {  }
-    weight: 14
+    weight: 15
     region: content
   field_aquamanile_subtype:
     type: entity_reference_label
@@ -370,7 +375,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 27
+    weight: 28
     region: content
   field_aquamanile_type:
     type: entity_reference_label
@@ -378,7 +383,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 26
+    weight: 27
     region: content
   field_artefact_category:
     type: entity_reference_label
@@ -386,7 +391,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 41
+    weight: 42
     region: content
   field_artefact_class:
     type: entity_reference_label
@@ -394,7 +399,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 40
+    weight: 41
     region: content
   field_artefact_id:
     type: string
@@ -402,7 +407,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 42
+    weight: 43
     region: content
   field_artefact_id_type:
     type: entity_reference_label
@@ -418,7 +423,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 43
+    weight: 44
     region: content
   field_assess_cond_date:
     type: datetime_default
@@ -427,7 +432,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 44
+    weight: 45
     region: content
   field_auth_3d_models:
     type: entity_reference_label
@@ -435,7 +440,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 45
+    weight: 46
     region: content
   field_auth_res_data:
     type: entity_reference_label
@@ -443,7 +448,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 46
+    weight: 47
     region: content
   field_b_asymmetry:
     type: entity_reference_label
@@ -451,7 +456,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 47
+    weight: 48
     region: content
   field_ballistic_profile:
     type: entity_reference_label
@@ -459,7 +464,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 48
+    weight: 49
     region: content
   field_base_curve:
     type: entity_reference_label
@@ -467,7 +472,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 49
+    weight: 50
     region: content
   field_binder_type:
     type: entity_reference_label
@@ -475,7 +480,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 50
+    weight: 51
     region: content
   field_blank_orientation:
     type: entity_reference_label
@@ -483,7 +488,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 51
+    weight: 52
     region: content
   field_circle:
     type: entity_reference_label
@@ -491,7 +496,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 52
+    weight: 53
     region: content
   field_city:
     type: entity_reference_label
@@ -499,7 +504,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 53
+    weight: 54
     region: content
   field_city_code:
     type: entity_reference_label
@@ -507,7 +512,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 54
+    weight: 55
     region: content
   field_clay_colour:
     type: entity_reference_label
@@ -522,7 +527,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 55
+    weight: 56
     region: content
   field_coll_id:
     type: string
@@ -538,7 +543,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 58
+    weight: 59
     region: content
   field_coll_lang:
     type: entity_reference_label
@@ -546,7 +551,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 59
+    weight: 60
     region: content
   field_coll_org:
     type: entity_reference_label
@@ -554,14 +559,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 60
+    weight: 61
     region: content
   field_coll_rights:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 61
+    weight: 62
     region: content
   field_coll_title:
     type: entity_reference_label
@@ -577,14 +582,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 62
+    weight: 63
     region: content
   field_cov_temp:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 63
+    weight: 64
     region: content
   field_creation:
     type: entity_reference_label
@@ -592,7 +597,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 64
+    weight: 65
     region: content
   field_culture:
     type: entity_reference_label
@@ -600,7 +605,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 65
+    weight: 66
     region: content
   field_current_location:
     type: entity_reference_label
@@ -608,7 +613,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 66
+    weight: 67
     region: content
   field_deposition_cond:
     type: entity_reference_label
@@ -616,14 +621,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 67
+    weight: 68
     region: content
   field_description_a3d:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 68
+    weight: 69
     region: content
   field_discoverer:
     type: entity_reference_label
@@ -631,7 +636,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 69
+    weight: 70
     region: content
   field_discovery_date:
     type: datetime_default
@@ -640,7 +645,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 70
+    weight: 71
     region: content
   field_doc_creator:
     type: entity_reference_label
@@ -648,7 +653,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 71
+    weight: 72
     region: content
   field_doc_date:
     type: datetime_default
@@ -657,7 +662,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 72
+    weight: 73
     region: content
   field_edging:
     type: string
@@ -673,7 +678,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 73
+    weight: 74
     region: content
   field_feature_type:
     type: entity_reference_label
@@ -681,7 +686,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 74
+    weight: 75
     region: content
   field_fhp_type:
     type: entity_reference_label
@@ -696,7 +701,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 13
+    weight: 14
     region: content
   field_finding_context_loc:
     type: string
@@ -704,21 +709,21 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 75
+    weight: 76
     region: content
   field_finding_context_note:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 76
+    weight: 77
     region: content
   field_finding_context_pos:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 77
+    weight: 78
     region: content
   field_finding_context_sec:
     type: number_integer
@@ -727,7 +732,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 78
+    weight: 79
     region: content
   field_finding_context_subtype:
     type: entity_reference_label
@@ -735,7 +740,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 79
+    weight: 80
     region: content
   field_finding_context_type:
     type: entity_reference_label
@@ -743,7 +748,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 80
+    weight: 81
     region: content
   field_firing:
     type: range_integer
@@ -757,21 +762,21 @@ content:
       to_prefix_suffix: false
       combined_prefix_suffix: false
     third_party_settings: {  }
-    weight: 81
+    weight: 82
     region: content
   field_fract_nature:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 82
+    weight: 83
     region: content
   field_fract_preservation:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 83
+    weight: 84
     region: content
   field_g_w_practice:
     type: entity_reference_label
@@ -779,7 +784,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 84
+    weight: 85
     region: content
   field_gb_scale:
     type: string
@@ -787,7 +792,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 85
+    weight: 86
     region: content
   field_general_lateral_wear:
     type: entity_reference_label
@@ -795,14 +800,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 86
+    weight: 87
     region: content
   field_general_note:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 87
+    weight: 88
     region: content
   field_general_type:
     type: entity_reference_label
@@ -810,7 +815,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 88
+    weight: 89
     region: content
   field_geolocation:
     type: data_field_table_formatter
@@ -858,7 +863,7 @@ content:
         cookie: true
         show-footer: false
     third_party_settings: {  }
-    weight: 89
+    weight: 90
     region: content
   field_glue_residues:
     type: entity_reference_label
@@ -866,7 +871,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 90
+    weight: 91
     region: content
   field_grain_type:
     type: entity_reference_label
@@ -874,7 +879,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 91
+    weight: 92
     region: content
   field_has_a_construction_opening:
     type: boolean
@@ -892,7 +897,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 92
+    weight: 93
     region: content
   field_ledge_type:
     type: entity_reference_label
@@ -908,7 +913,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 93
+    weight: 94
     region: content
   field_licence_url:
     type: entity_reference_label
@@ -916,7 +921,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 94
+    weight: 95
     region: content
   field_link_to_3d_model:
     type: link
@@ -928,14 +933,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 11
+    weight: 12
     region: content
   field_literature:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 95
+    weight: 96
     region: content
   field_longitudinal_profile:
     type: entity_reference_label
@@ -943,7 +948,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 96
+    weight: 97
     region: content
   field_measurements:
     type: data_field_table_formatter
@@ -991,7 +996,7 @@ content:
         cookie: true
         show-footer: false
     third_party_settings: {  }
-    weight: 30
+    weight: 31
     region: content
   field_met_note_cz:
     type: basic_string
@@ -1036,7 +1041,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 28
+    weight: 29
     region: content
   field_number_of_instances:
     type: data_field_table_formatter
@@ -1170,7 +1175,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 113
+    weight: 112
     region: content
   field_proj_id:
     type: entity_reference_label
@@ -1178,14 +1183,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 114
+    weight: 113
     region: content
   field_provenance:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 115
+    weight: 114
     region: content
   field_quality:
     type: entity_reference_label
@@ -1193,7 +1198,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 116
+    weight: 115
     region: content
   field_quiver_trans_bright_spots:
     type: entity_reference_label
@@ -1201,7 +1206,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 117
+    weight: 116
     region: content
   field_quiver_trans_lat_rounding:
     type: entity_reference_label
@@ -1209,7 +1214,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 118
+    weight: 117
     region: content
   field_quiver_trans_tip_rounding:
     type: entity_reference_label
@@ -1217,7 +1222,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 119
+    weight: 118
     region: content
   field_raw_material:
     type: entity_reference_label
@@ -1225,7 +1230,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 120
+    weight: 119
     region: content
   field_recent_damage:
     type: entity_reference_label
@@ -1233,14 +1238,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 121
+    weight: 120
     region: content
   field_recent_damage_note:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 122
+    weight: 121
     region: content
   field_reg_number:
     type: string
@@ -1248,14 +1253,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 124
+    weight: 122
     region: content
   field_relations:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 125
+    weight: 123
     region: content
   field_relative_datation:
     type: entity_reference_label
@@ -1263,7 +1268,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 126
+    weight: 124
     region: content
   field_relief:
     type: entity_reference_label
@@ -1271,7 +1276,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 56
+    weight: 57
     region: content
   field_reparation_features:
     type: entity_reference_label
@@ -1279,7 +1284,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 127
+    weight: 125
     region: content
   field_retouch:
     type: entity_reference_label
@@ -1287,7 +1292,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 128
+    weight: 126
     region: content
   field_rights_access:
     type: entity_reference_label
@@ -1295,7 +1300,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 130
+    weight: 128
     region: content
   field_rights_reproduction:
     type: entity_reference_label
@@ -1303,7 +1308,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 129
+    weight: 127
     region: content
   field_rock_fragments:
     type: entity_reference_label
@@ -1311,7 +1316,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 131
+    weight: 129
     region: content
   field_sculpture_subtype:
     type: entity_reference_label
@@ -1319,7 +1324,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 25
+    weight: 26
     region: content
   field_sculpture_type:
     type: entity_reference_label
@@ -1327,7 +1332,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 24
+    weight: 25
     region: content
   field_serration:
     type: entity_reference_label
@@ -1335,7 +1340,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 132
+    weight: 130
     region: content
   field_site:
     type: entity_reference_label
@@ -1343,7 +1348,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 133
+    weight: 131
     region: content
   field_st_placement_certainty:
     type: boolean
@@ -1353,7 +1358,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 20
+    weight: 21
     region: content
   field_st_placement_type1:
     type: entity_reference_label
@@ -1361,7 +1366,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 17
+    weight: 18
     region: content
   field_st_placement_type2:
     type: entity_reference_label
@@ -1369,7 +1374,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 18
+    weight: 19
     region: content
   field_st_placement_type3:
     type: entity_reference_label
@@ -1377,7 +1382,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 19
+    weight: 20
     region: content
   field_st_shape_type1:
     type: entity_reference_label
@@ -1385,7 +1390,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 21
+    weight: 22
     region: content
   field_st_shape_type2:
     type: entity_reference_label
@@ -1393,7 +1398,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 22
+    weight: 23
     region: content
   field_state:
     type: entity_reference_label
@@ -1401,14 +1406,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 134
+    weight: 132
     region: content
   field_statement:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 135
+    weight: 133
     region: content
   field_stove_tile_shape_certainty:
     type: boolean
@@ -1418,7 +1423,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 29
+    weight: 30
     region: content
   field_subord_dataset:
     type: entity_reference_label
@@ -1426,14 +1431,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 136
+    weight: 134
     region: content
   field_subord_dataset_link:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 137
+    weight: 135
     region: content
   field_surface_alt:
     type: entity_reference_label
@@ -1441,7 +1446,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 139
+    weight: 136
     region: content
   field_surface_finishing:
     type: data_field_table_formatter
@@ -1497,7 +1502,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 140
+    weight: 137
     region: content
   field_tile_type:
     type: entity_reference_label
@@ -1505,7 +1510,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 23
+    weight: 24
     region: content
   field_timespan:
     type: range_integer
@@ -1519,7 +1524,7 @@ content:
       to_prefix_suffix: false
       combined_prefix_suffix: false
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   field_tip_fracture:
     type: entity_reference_label
@@ -1527,21 +1532,21 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 141
+    weight: 138
     region: content
   field_wear:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 142
+    weight: 139
     region: content
   field_wgs84_geolocation:
     type: geolocation_latlng
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 15
+    weight: 16
     region: content
   field_wgs84_geolocation_accuracy:
     type: entity_reference_label
@@ -1549,7 +1554,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 16
+    weight: 17
     region: content
 hidden:
   a3d_arf_content_browse_title: true
@@ -1573,6 +1578,8 @@ hidden:
   a3d_eva_handle_entity_view_1: true
   a3d_kch_content2_browse_title: true
   a3d_kch_content2_kch_analysis_to_object: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_1: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_5: true
   a3d_kch_media_nef_images: true
   a3d_meta_content_browse_title: true
   a3d_meta_object_on_map_a3d_object_map: true
@@ -1585,10 +1592,12 @@ hidden:
   field_3d_shaping_struct: true
   field_3d_traces_struct: true
   field_colour_paint: true
-  field_comparison: true
   field_country: true
   field_fract_preservation_struct: true
+  field_geolocation_original: true
+  field_geolocation_original_priv: true
   field_handle: true
+  field_mass_structure_data_pres: true
   field_material_colour: true
   field_member_of: true
   field_metadata_rights: true
@@ -1599,8 +1608,6 @@ hidden:
   field_recent_damage_type_struct: true
   field_record_source: true
   field_surf_data_pres: true
-  field_surf_data_pres2: true
-  field_test_custom_field: true
   field_wgs84_accuracy_private: true
   field_wgs84_geolocation_private: true
   langcode: true

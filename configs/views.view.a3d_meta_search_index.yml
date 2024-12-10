@@ -22,7 +22,7 @@ dependencies:
 id: a3d_meta_search_index
 label: 'A3D META Search Index'
 module: views
-description: 'All META views built atop "Index A3D object index"'
+description: 'DEPRECATED. All META views built atop "Index A3D object index"'
 tag: ''
 base_table: search_api_index_a3d_object_index
 base_field: search_api_id
@@ -984,6 +984,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 40
           total_pages: null
           id: 0
@@ -1001,7 +1002,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: bef
         options:
@@ -2911,6 +2911,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 1
           total_pages: null
           id: 1
@@ -2928,7 +2929,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       cache:
         type: search_api_none
       filters:
@@ -4672,8 +4672,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               a3d_object_parent_groups:
                 plugin_id: default
                 advanced:
@@ -4682,8 +4682,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_artefact_category:
                 plugin_id: default
                 advanced:
@@ -4692,8 +4692,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_ownership:
                 plugin_id: default
                 advanced:
@@ -4702,8 +4702,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_site:
                 plugin_id: default
                 advanced:
@@ -4712,8 +4712,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
       empty:
         area:
           id: area
@@ -5586,6 +5586,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 1
           total_pages: null
           id: 1
@@ -5603,7 +5604,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: bef
         options:
@@ -5646,8 +5646,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               a3d_object_parent_groups:
                 plugin_id: default
                 advanced:
@@ -5656,8 +5656,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_artefact_category:
                 plugin_id: default
                 advanced:
@@ -5666,8 +5666,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_site:
                 plugin_id: default
                 advanced:
@@ -5676,8 +5676,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
       empty:
         area:
           id: area
@@ -6376,6 +6376,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 1
           total_pages: null
           id: 1
@@ -6393,7 +6394,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: bef
         options:
@@ -6436,8 +6436,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               a3d_object_parent_groups:
                 plugin_id: default
                 advanced:
@@ -6446,8 +6446,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
       empty:
         area:
           id: area
@@ -6727,8 +6727,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
       empty:
         area:
           id: area

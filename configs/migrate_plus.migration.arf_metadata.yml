@@ -24,6 +24,7 @@ source:
     LOC_COORD_CADASTRE_ACCURACY: cadastre
     RECORD_SOURCE: 'Faculty of Arts, Masaryk University'
     GENERAL_TYPE: artefact
+    TEST_SDP: value|type|note
 process:
   title: field_artefact_id
   field_artefact_id: field_artefact_id
@@ -79,6 +80,7 @@ process:
       plugin: extract
       index:
         - 0
+      default: ''
     -
       plugin: str_replace
       regex: true
@@ -93,6 +95,7 @@ process:
       plugin: extract
       index:
         - 1
+      default: ''
     -
       plugin: str_replace
       regex: true
@@ -106,6 +109,37 @@ process:
       value_key: name
       bundle_key: vid
       bundle: loc_coord_cadastre_accuracy
+  field_wgs84_geolocation_private/lat:
+    -
+      plugin: explode
+      source: field_geolocation_private
+      delimiter: ','
+    -
+      plugin: extract
+      index:
+        - 0
+      default: ''
+    -
+      plugin: str_replace
+      regex: true
+      search: '/[a-zA-Z]/'
+      replace: ''
+  field_wgs84_geolocation_private/lng:
+    -
+      plugin: explode
+      source: field_geolocation_private
+      delimiter: ','
+    -
+      plugin: extract
+      index:
+        - 1
+      default: ''
+    -
+      plugin: str_replace
+      regex: true
+      search: '/[a-zA-Z]/'
+      replace: ''
+  field_geolocation_original_priv: field_geolocation_original_priv
   field_relative_datation:
     -
       plugin: entity_generate
@@ -231,89 +265,178 @@ process:
       bundle_key: vid
       bundle: surface_alt
   field_recent_damage_note: field_recent_damage_note
-  field_sdp_tmp:
+  list_sdp:
     -
       plugin: explode
-      source: field_surf_data_pres
       delimiter: ;
+      source: field_surf_data_pres
     -
       plugin: str_to_assoc
-      key: sdp
-  field_surf_data_pres:
+      key: analysis
+  tmp_field_surf_data_pres:
     -
       plugin: sub_process
-      source: '@field_sdp_tmp'
+      source: '@list_sdp'
       process:
         exploded:
           plugin: explode
           delimiter: '|'
-          source: sdp
-        length:
+          source: analysis
+        exploded_method:
+          -
+            plugin: extract
+            index:
+              - 1
+            source: '@exploded'
+            default: ''
+          -
+            plugin: explode
+            delimiter: +
           -
             plugin: single_value
-            source: '@exploded'
-          -
-            plugin: callback
-            callable: debugTestMigration
-        sdp_value:
+        field_value:
           -
             plugin: extract
             index:
               - 0
             source: '@exploded'
           -
-            plugin: callback
-            callable: trim
-          -
             plugin: entity_generate
             entity_type: taxonomy_term
             value_key: name
             bundle_key: vid
             bundle: sdp_value
-        sdp_method:
+        field_method:
           -
             plugin: extract
             index:
               - 1
             source: '@exploded'
+            default: ''
           -
-            plugin: explode
-            delimiter: +
-          -
-            plugin: callback
-            callable: trim
+            plugin: str_replace
+            regex: true
+            search: /\+/
+            replace: ', '
           -
             plugin: entity_generate
             entity_type: taxonomy_term
             value_key: name
             bundle_key: vid
-            bundle: sdp_method
-        sdp_spec:
-          -
-            plugin: skip_on_condition
-            source: '@length'
-            condition:
-              plugin: less_than
-              value: 3
-            method: process
+            bundle: analysis_type
+        field_note_on_method:
           -
             plugin: extract
             index:
               - 2
             source: '@exploded'
-        sdp_note:
-          -
-            plugin: skip_on_condition
-            source: '@length'
-            condition:
-              plugin: less_than
-              value: 4
-            method: process
+            default: ''
+        field_note:
           -
             plugin: extract
             index:
               - 3
             source: '@exploded'
+            default: ''
+        entity:
+          plugin: entity_generate
+          source: analysis
+          entity_type: node
+          value_key: title
+          bundle_key: type
+          bundle: analysis
+          values:
+            field_data_pres_value: '@field_value'
+            field_analysis_type: '@field_method'
+            field_note_on_method: '@field_note_on_method'
+            field_note: '@field_note'
+  field_surf_data_pres:
+    -
+      plugin: callback
+      callable: arrayExtractEntity
+      source: '@tmp_field_surf_data_pres'
+  list_msdp:
+    -
+      plugin: explode
+      delimiter: ;
+      source: field_mass_structure_data_pres
+    -
+      plugin: str_to_assoc
+      key: analysis
+  tmp_field_mass_structure_data_pres:
+    -
+      plugin: sub_process
+      source: '@list_msdp'
+      process:
+        exploded:
+          plugin: explode
+          delimiter: '|'
+          source: analysis
+        exploded_method:
+          -
+            plugin: extract
+            index:
+              - 1
+            source: '@exploded'
+            default: ''
+          -
+            plugin: explode
+            delimiter: +
+          -
+            plugin: single_value
+        field_value:
+          -
+            plugin: extract
+            index:
+              - 0
+            source: '@exploded'
+          -
+            plugin: entity_generate
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: msdp_value
+        field_method:
+          -
+            plugin: extract
+            index:
+              - 1
+            source: '@exploded'
+            default: ''
+          -
+            plugin: str_replace
+            regex: true
+            search: /\+/
+            replace: ', '
+          -
+            plugin: entity_generate
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: analysis_type
+        field_note:
+          -
+            plugin: extract
+            index:
+              - 2
+            source: '@exploded'
+            default: ''
+        entity:
+          plugin: entity_generate
+          source: analysis
+          entity_type: node
+          value_key: title
+          bundle_key: type
+          bundle: analysis
+          values:
+            field_data_pres_value: '@field_value'
+            field_analysis_type: '@field_method'
+            field_note: '@field_note'
+  field_mass_structure_data_pres:
+    -
+      plugin: callback
+      callable: arrayExtractEntity
+      source: '@tmp_field_mass_structure_data_pres'
   field_subord_dataset:
     -
       plugin: explode

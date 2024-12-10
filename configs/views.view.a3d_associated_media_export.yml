@@ -3,13 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - media.type.3d_model
     - media.type.file
     - media.type.image
     - media.type.video
   module:
     - csv_serialization
     - file
-    - jsonld
     - media
     - node
     - rest
@@ -42,7 +42,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: 'https://neofig-devel.phil.muni.cz'
+            text: "{{ drupal_token('site:base-url') }}"
             make_link: false
             path: ''
             absolute: false
@@ -333,6 +333,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: null
           id: 0
@@ -347,7 +348,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -427,6 +427,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
+            3d_model: 3d_model
             file: file
             image: image
             video: video
@@ -470,8 +471,9 @@ display:
         type: fields
         options:
           default_field_elements: true
-          inline: {  }
-          separator: ''
+          inline:
+            nothing_1: nothing_1
+          separator: ', '
           hide_empty: false
       query:
         type: views_query
@@ -531,10 +533,10 @@ display:
         - url.query_args
         - user.permissions
       tags: {  }
-  nef:
-    id: nef
-    display_title: 'NEF REST export'
-    display_plugin: rest_export
+  embed_1:
+    id: embed_1
+    display_title: Embed
+    display_plugin: embed
     position: 1
     display_options:
       pager:
@@ -546,9 +548,6 @@ display:
         options:
           formats:
             csv: csv
-            jsonld: jsonld
-            json: json
-            xml: xml
       row:
         type: data_field
         options:
@@ -569,7 +568,96 @@ display:
           category_fallback: ''
           category_facets: {  }
           category_facets_concat_separator: ', '
-      path: nef/node/%node/export/media
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  nef_csv:
+    id: nef_csv
+    display_title: 'NEF REST export CSV'
+    display_plugin: rest_export
+    position: 1
+    display_options:
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: serializer
+        options:
+          formats:
+            csv: csv
+      row:
+        type: data_field
+        options:
+          field_options:
+            nothing_1:
+              alias: file
+              raw_output: false
+      display_description: ''
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+      path: nef/node/%node/export/media_csv
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - url
+        - user.permissions
+      tags: {  }
+  nef_json:
+    id: nef_json
+    display_title: 'NEF REST export JSON'
+    display_plugin: rest_export
+    position: 1
+    display_options:
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: serializer
+        options:
+          formats:
+            json: json
+      row:
+        type: data_field
+        options:
+          field_options:
+            nothing_1:
+              alias: file
+              raw_output: false
+      display_description: ''
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+      path: nef/node/%node/export/media_json
     cache_metadata:
       max-age: -1
       contexts:

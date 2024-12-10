@@ -8,13 +8,12 @@ dependencies:
     - context
     - islandora
     - superfish
-    - system
   theme:
     - islandora_muni
 id: islandora_muni_kchmainmenu
 theme: islandora_muni
 region: primary_menu
-weight: -39
+weight: -38
 provider: null
 plugin: 'superfish:kch-main-menu'
 settings:
@@ -77,10 +76,6 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
-  request_path:
-    id: request_path
-    negate: false
-    pages: "/kch\r\n/kch/*\r\n/group/kch\r\n/group/kch/*\r\n/group/13\r\n/group/13/*\r\n/compare/*/kch"
   request_domain:
     id: request_domain
     negate: false

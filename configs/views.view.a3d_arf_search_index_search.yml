@@ -11,7 +11,9 @@ dependencies:
   module:
     - better_exposed_filters
     - facets_exposed_filters
+    - geolocation_search_api
     - search_api
+    - search_api_location_views
     - views_field_view
 id: a3d_arf_search_index_search
 label: 'A3D ARF Search Index Search'
@@ -1144,19 +1146,6 @@ display:
             label: 'Deposition condition'
             field_identifier: field_deposition_cond_name
           exposed: true
-        field_raw_material_name:
-          id: field_raw_material_name
-          table: search_api_index_a3d_object_index
-          field: field_raw_material_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: ASC
-          expose:
-            label: 'Raw material'
-            field_identifier: field_raw_material_name
-          exposed: true
         field_artefact_id:
           id: field_artefact_id
           table: search_api_index_a3d_object_index
@@ -1451,6 +1440,76 @@ display:
                   sort: -9
                 settings:
                   sort: ASC
+        facets_field_city:
+          id: facets_field_city
+          table: search_api_index_a3d_object_index
+          field: facets_field_city
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: City
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_city
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              count_widget_order:
+                weights:
+                  sort: -8
+                settings:
+                  sort: DESC
+              display_value_widget_order:
+                weights:
+                  sort: -9
+                settings:
+                  sort: ASC
         facets_field_site:
           id: facets_field_site
           table: search_api_index_a3d_object_index
@@ -1591,10 +1650,10 @@ display:
                   sort: -9
                 settings:
                   sort: ASC
-        facets_field_feature_id:
-          id: facets_field_feature_id
+        facets_field_raw_material:
+          id: facets_field_raw_material
           table: search_api_index_a3d_object_index
-          field: facets_field_feature_id
+          field: facets_field_raw_material
           relationship: none
           group_type: group
           admin_label: ''
@@ -1605,13 +1664,13 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Feature ID'
+            label: 'Raw material'
             description: ''
             use_operator: false
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_feature_id
+            identifier: field_raw_material
             required: false
             remember: false
             multiple: true
@@ -1731,76 +1790,6 @@ display:
                   sort: -9
                 settings:
                   sort: ASC
-        facets_field_g_w_practice:
-          id: facets_field_g_w_practice
-          table: search_api_index_a3d_object_index
-          field: facets_field_g_w_practice
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: facets_filter
-          operator: '='
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: 'Good/wrong practice'
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_g_w_practice
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          hierarchy: false
-          label_display: visible
-          facet:
-            query_operator: or
-            min_count: 1
-            show_numbers: true
-            processor_configs:
-              translate_entity:
-                weights:
-                  build: 5
-                settings: {  }
-              count_widget_order:
-                weights:
-                  sort: -8
-                settings:
-                  sort: DESC
-              display_value_widget_order:
-                weights:
-                  sort: -9
-                settings:
-                  sort: ASC
         facets_field_orig_state_pres:
           id: facets_field_orig_state_pres
           table: search_api_index_a3d_object_index
@@ -1822,76 +1811,6 @@ display:
             operator_limit_selection: false
             operator_list: {  }
             identifier: field_orig_state_pres
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          hierarchy: false
-          label_display: visible
-          facet:
-            query_operator: or
-            min_count: 1
-            show_numbers: true
-            processor_configs:
-              translate_entity:
-                weights:
-                  build: 5
-                settings: {  }
-              count_widget_order:
-                weights:
-                  sort: -8
-                settings:
-                  sort: DESC
-              display_value_widget_order:
-                weights:
-                  sort: -9
-                settings:
-                  sort: ASC
-        facets_field_raw_material:
-          id: facets_field_raw_material
-          table: search_api_index_a3d_object_index
-          field: facets_field_raw_material
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: facets_filter
-          operator: '='
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: 'Raw material'
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_raw_material
             required: false
             remember: false
             multiple: true
@@ -2138,6 +2057,146 @@ display:
           min_length: null
           fields:
             - field_met_note_cz
+        field_wgs84_geolocation:
+          id: field_wgs84_geolocation
+          table: search_api_index_a3d_object_index
+          field: field_wgs84_geolocation
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_location
+          operator: '<'
+          value:
+            value: ''
+            distance:
+              from: ''
+              to: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_wgs84_geolocation_op
+            label: 'Geolocation radius'
+            description: 'Enter coordinates, e.g. "48.8985908,16.1340411"'
+            use_operator: false
+            operator: field_wgs84_geolocation_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_wgs84_geolocation
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin: raw
+          plugin-geocode:
+            plugins:
+              nominatim:
+                checked: '0'
+                weight: '0'
+              openstreetmap:
+                checked: '0'
+                weight: '0'
+            radius_type: select
+            radius_options: "- -\r\n5 5 km\r\n10 10 km\r\n16.09 10 mi"
+            radius_units: km
+          plugin-geocode_map:
+            radius_border_color: ''
+            radius_border_weight: ''
+            radius_background_color: ''
+            radius_background_transparency: ''
+            marker_image: ''
+          plugin-raw:
+            radius_type: textfield
+            radius_options: "- -\r\n5 5 km\r\n10 10 km\r\n16.09 10 mi"
+            radius_units: km
+          require: 0
+        field_wgs84_geolocation_boundary:
+          id: field_wgs84_geolocation_boundary
+          table: search_api_index_a3d_object_index
+          field: field_wgs84_geolocation_boundary
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: geolocation_search_api_filter_boundary
+          operator: '='
+          value:
+            lat_north_east: ''
+            lng_north_east: ''
+            lat_south_west: ''
+            lng_south_west: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Geolocation boundary'
+            description: ''
+            use_operator: false
+            operator: field_wgs84_geolocation_boundary_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_wgs84_geolocation_boundary
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            input_by_geocoding_widget: 0
+            geocoder_plugin_settings:
+              plugin_id: photon
+              settings:
+                label: Address
+                description: 'Enter an address to be localized.'
+                autocomplete_min_length: 1
+                location_priority:
+                  lat: null
+                  lng: null
+                remove_duplicates: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -2906,7 +2965,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "{% if drupal_token('current-page:query:sort_by') == 'aggregated_field_artefact_category' or drupal_token('current-page:query:sort_by') == '[current-page:query:sort_by]' %}\r\n<h3>Artefact category:\_{{ field_artefact_category_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_site_name' %}\r\n<h3>Site: {{ field_site_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_relative_datation_name' %}\r\n<h3>Relative datation: {{ field_relative_datation_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_feature_type_name' %}\r\n<h3>Feature type:\_{{ field_feature_type_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_depositon_cond_name' %}\r\n<h3>Deposition condition: {{ field_deposition_cond_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_raw_material_name' %}\r\n<h3>Raw material: {{ field_raw_material_name }}</h3>\r\n{% endif %}\r\n\r\n\r\n"
+            text: "{% if drupal_token('current-page:query:sort_by') == 'aggregated_field_artefact_category' or drupal_token('current-page:query:sort_by') == '[current-page:query:sort_by]' %}\r\n<h3>Artefact category:\_{{ field_artefact_category_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_site_name' %}\r\n<h3>Site: {{ field_site_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_relative_datation_name' %}\r\n<h3>Relative datation: {{ field_relative_datation_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_feature_type_name' %}\r\n<h3>Feature type:\_{{ field_feature_type_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_deposition_cond_name' %}\r\n<h3>Deposition condition: {{ field_deposition_cond_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_raw_material_name' %}\r\n<h3>Raw material: {{ field_raw_material_name }}</h3>\r\n{% endif %}\r\n\r\n\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -3141,7 +3200,7 @@ display:
         type: normal
         title: Search
         description: ''
-        weight: -48
+        weight: -47
         expanded: false
         menu_name: arf-main-menu
         parent: ''

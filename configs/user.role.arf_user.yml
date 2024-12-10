@@ -1,9 +1,12 @@
 uuid: eee3e3df-feeb-42cb-9337-c2af6480f090
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - entity_comparison
 id: arf_user
 label: 'ARF user'
 weight: -1
 is_admin: null
-permissions: {  }
+permissions:
+  - 'use a3d_kch_entity_comparison entity comparison'

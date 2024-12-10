@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.a3d_platform_homepage.field_banner_text
     - field.field.node.a3d_platform_homepage.field_citation_text
     - field.field.node.a3d_platform_homepage.field_copyright_text
+    - field.field.node.a3d_platform_homepage.field_homepage_statistics
     - field.field.node.a3d_platform_homepage.field_intro_text
     - node.type.a3d_platform_homepage
   module:
@@ -16,10 +17,30 @@ targetEntityType: node
 bundle: a3d_platform_homepage
 mode: link_to_homepage
 content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   a3d_eva_homepage_link_entity_view_1:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  a3d_meta_content_eva_statistics_object:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
 hidden:
   display_media_entity_view_1: true
@@ -30,6 +51,7 @@ hidden:
   field_banner_text: true
   field_citation_text: true
   field_copyright_text: true
+  field_homepage_statistics: true
   field_intro_text: true
   langcode: true
   links: true

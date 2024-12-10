@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.sample
     - user.role.administrator
     - user.role.kch_user
   module:
@@ -10,7 +11,7 @@ dependencies:
     - user
     - views_field_view
 id: manage_samples
-label: 'A3D Manage Samples'
+label: 'A3D Manage Samples and Analyses'
 module: views
 description: 'list all samples of object with edit and add analysis link'
 tag: ''
@@ -74,6 +75,58 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
+        view_1:
+          id: view_1
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: 'next sample ID'
+          plugin_id: view
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: '1'
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: a3
+          display: default
+          arguments: '{{ raw_arguments.nid }}'
         nid:
           id: nid
           table: node_field_data
@@ -339,7 +392,7 @@ display:
             alter_text: true
             text: 'Add analysis'
             make_link: true
-            path: '/node/add/analysis?edit[field_analysis_of][widget][0][target_id]={{ nid }}&destination=/{{ nothing_1 }}/analysis/node/{{ raw_arguments.nid }}'
+            path: '/group/13/content/create/group_node%3Aanalysis?edit[field_analysis_of][widget][0][target_id]={{ nid }}&destination=/{{ nothing_1 }}/samples/node/{{ raw_arguments.nid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -466,6 +519,19 @@ display:
         options: {  }
       empty: {  }
       sorts:
+        field_sample_id_value:
+          id: field_sample_id_value
+          table: node__field_sample_id
+          field: field_sample_id_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
         created:
           id: created
           table: node_field_data
@@ -519,17 +585,48 @@ display:
           break_phrase: false
           not: false
       filters:
-        status:
-          id: status
+        type:
+          id: type
           table: node_field_data
-          field: status
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
           entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          value: '1'
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            sample: sample
           group: 1
+          exposed: false
           expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: table
         options:
@@ -635,7 +732,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<h1> Manage samples and analyses of {{ arguments.nid }}</h1>\r\n<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/kch/node/{{ raw_arguments.nid }}\">Back to object</a>\r\n    <a class=\"button\" href=\"/node/add/sample?edit[field_object_reference][widget][0][target_id]={{ raw_arguments.nid }}&destination=/{{ nothing_1 }}/samples/node/{{ raw_arguments.nid }}\">Add sample</a>\r\n</p>\r\n</div>"
+            value: "{% set new_sample_id = [view:total-rows] + 1 %}\r\n<h1> Manage samples and analyses of {{ arguments.nid }}</h1>\r\n<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/kch/node/{{ raw_arguments.nid }}\">Back to object</a>\r\n    <a class=\"button\" href=\"/group/13/content/create/group_node%3Asample?edit[field_object_reference][widget][0][target_id]={{ raw_arguments.nid }}&[field_sample_id]={{ new_sample_id }}&destination=/{{ nothing_1 }}/samples/node/{{ raw_arguments.nid }}\">Add sample</a>\r\n</p>\r\n</div>"
             format: full_html
           tokenize: true
       footer: {  }

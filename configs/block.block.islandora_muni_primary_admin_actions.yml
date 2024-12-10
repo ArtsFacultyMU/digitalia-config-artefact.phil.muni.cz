@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_class
     - islandora
     - user
   theme:
@@ -33,6 +34,4 @@ visibility:
       user: '@user.current_user_context:current_user'
     roles:
       authenticated: authenticated
-      administrator: administrator
-      can_publish: can_publish
-      can_edit_taxonomy: can_edit_taxonomy
+      standard_user: standard_user

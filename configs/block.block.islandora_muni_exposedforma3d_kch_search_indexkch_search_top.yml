@@ -31,4 +31,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/kch\r\n/kch/*\r\n/group/kch\r\n/group/kch/*\r\n/group/13\r\n/group/13/*\r\n/compare/*/kch"
+    pages: "!/kch/search\r\n/kch\r\n/kch/*\r\n/group/kch\r\n/group/kch/*\r\n/group/13\r\n/group/13/*\r\n/compare/*/kch"

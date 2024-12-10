@@ -1,0 +1,11 @@
+uuid: b415c12c-6539-4126-be9a-176c35ab3d98
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.a3d_msdp_form
+label: 'A3D MSDP form'
+description: ''
+targetEntityType: node
+cache: true

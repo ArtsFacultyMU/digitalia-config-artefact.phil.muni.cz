@@ -1019,6 +1019,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 40
           total_pages: null
           id: 0
@@ -1036,7 +1037,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: bef
         options:
@@ -1162,18 +1162,31 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        aggregated_field_preserved_parts:
-          id: aggregated_field_preserved_parts
+        field_artefact_id:
+          id: field_artefact_id
           table: search_api_index_a3d_object_index
-          field: aggregated_field_preserved_parts
+          field: field_artefact_id
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: search_api
           order: ASC
           expose:
-            label: 'Preserved body parts'
-            field_identifier: aggregated_field_preserved_parts
+            label: 'Artefact ID'
+            field_identifier: field_artefact_id
+          exposed: true
+        field_alternative_id:
+          id: field_alternative_id
+          table: search_api_index_a3d_object_index
+          field: field_alternative_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: 'Alternative ID'
+            field_identifier: field_alternative_id
           exposed: true
         field_posture_name:
           id: field_posture_name
@@ -1188,32 +1201,6 @@ display:
             label: Posture
             field_identifier: field_posture_name
           exposed: true
-        aggregated_field_recent_damage_type:
-          id: aggregated_field_recent_damage_type
-          table: search_api_index_a3d_object_index
-          field: aggregated_field_recent_damage_type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: ASC
-          expose:
-            label: 'Recent damage type'
-            field_identifier: aggregated_field_recent_damage_type
-          exposed: true
-        field_relative_datation_name:
-          id: field_relative_datation_name
-          table: search_api_index_a3d_object_index
-          field: field_relative_datation_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: ASC
-          expose:
-            label: 'Relative datation'
-            field_identifier: field_relative_datation_name
-          exposed: true
         field_site_name:
           id: field_site_name
           table: search_api_index_a3d_object_index
@@ -1227,19 +1214,6 @@ display:
             label: Site
             field_identifier: field_site_name
           exposed: true
-        field_artefact_id:
-          id: field_artefact_id
-          table: search_api_index_a3d_object_index
-          field: field_artefact_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: ASC
-          expose:
-            label: 'Artefact ID'
-            field_identifier: field_artefact_id
-          exposed: false
       arguments: {  }
       filters:
         status:
@@ -2762,7 +2736,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "{% if drupal_token('current-page:query:sort_by') == 'aggregated_field_preserved_parts' or drupal_token('current-page:query:sort_by') == '[current-page:query:sort_by]' %}\r\n<h3>Preserved body parts: {{ field_preserved_parts_struct_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'aggregated_field_recent_damage_type' %}\r\n<h3>Recent damage type:\_{{ field_recent_damage_type_struct_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_posture_name' %}\r\n<h3>Posture: {{ field_posture_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_relative_datation_name' %}\r\n<h3>Relative datation: {{ field_relative_datation_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_site_name' %}\r\n<h3>Site: {{ field_site_name }}</h3>\r\n{% endif %}"
+            text: "{% if drupal_token('current-page:query:sort_by') == 'field_posture_name' %}\r\n<h3>Posture: {{ field_posture_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_site_name' %}\r\n<h3>Site: {{ field_site_name }}</h3>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -3027,6 +3001,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 1
           total_pages: null
           id: 1
@@ -3044,7 +3019,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: bef
         options:
@@ -3087,8 +3061,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               field_posture:
                 plugin_id: default
                 advanced:
@@ -3097,8 +3071,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               search_api_fulltext_1:
                 plugin_id: default
                 advanced:
@@ -3107,8 +3081,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               search_api_fulltext_2:
                 plugin_id: default
                 advanced:
@@ -3117,8 +3091,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               search_api_fulltext_3:
                 plugin_id: default
                 advanced:
@@ -3127,8 +3101,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               search_api_fulltext_4:
                 plugin_id: default
                 advanced:
@@ -3137,8 +3111,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               search_api_fulltext_5:
                 plugin_id: default
                 advanced:
@@ -3147,8 +3121,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               search_api_fulltext_6:
                 plugin_id: default
                 advanced:
@@ -3157,8 +3131,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
               search_api_fulltext_7:
                 plugin_id: default
                 advanced:
@@ -3167,8 +3141,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
       empty: {  }
       style:
         type: default
@@ -3281,8 +3255,8 @@ display:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
-                  is_secondary: false
                   collapsible_disable_automatic_open: false
+                  is_secondary: false
       empty:
         area:
           id: area
@@ -3468,6 +3442,8 @@ display:
               standard_user: '0'
               nef_user: '0'
               arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
             expose_fields: false
             placeholder: ''
             searched_fields_id: search_api_fulltext_searched_fields

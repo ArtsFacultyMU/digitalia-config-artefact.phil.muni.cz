@@ -7,8 +7,8 @@ dependencies:
     - core.entity_view_mode.media.image_a3d_arf_entity_comparison
 id: a3d_arf_entity_comparison
 label: 'A3D ARF entity comparison'
-add_link_text: 'Add to comparison list'
-remove_link_text: 'Remove from the comparison'
+add_link_text: 'ARF Add to comparison'
+remove_link_text: 'Remove from comparison'
 limit: 0
 entity_type: media
 bundle_type: image

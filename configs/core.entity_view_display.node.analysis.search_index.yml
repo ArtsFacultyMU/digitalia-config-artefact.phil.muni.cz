@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.analysis.field_colour_inward
     - field.field.node.analysis.field_colour_of_core
     - field.field.node.analysis.field_colour_outward
+    - field.field.node.analysis.field_data_pres_value
     - field.field.node.analysis.field_date_analysed
     - field.field.node.analysis.field_elements
     - field.field.node.analysis.field_firing_characteristic
@@ -42,7 +43,6 @@ dependencies:
     - field.field.node.analysis.field_vesicular_pores
     - node.type.analysis
   module:
-    - text
     - user
 id: node.analysis.search_index
 targetEntityType: node
@@ -52,54 +52,57 @@ content:
   a3d_eva_entity_group_relation_entity_view_2:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 0
     region: content
   a3d_eva_entity_group_relation_entity_view_4:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 1
     region: content
   a3d_eva_entity_group_relation_entity_view_5:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 2
+    region: content
+  a3d_kch_index_related_samples_and_analyses_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  a3d_kch_index_related_samples_and_analyses_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  a3d_kch_index_related_samples_and_analyses_entity_view_6:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
     region: content
   display_media_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 6
     region: content
   display_media_entity_view_3:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 7
     region: content
   display_media_original_download:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 8
     region: content
   display_media_service_file:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 9
     region: content
   display_media_thumbnail:
     settings: {  }
     third_party_settings: {  }
     weight: 10
-    region: content
-  field_note:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 19
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
     region: content
 hidden:
   field_analysed_by: true
@@ -113,6 +116,7 @@ hidden:
   field_colour_inward: true
   field_colour_of_core: true
   field_colour_outward: true
+  field_data_pres_value: true
   field_date_analysed: true
   field_elements: true
   field_firing_characteristic: true
@@ -126,6 +130,7 @@ hidden:
   field_minerals: true
   field_non_plastic_inclusions: true
   field_nonplastic_sort: true
+  field_note: true
   field_note_on_method: true
   field_planar_pores: true
   field_pore_channels: true
@@ -138,4 +143,5 @@ hidden:
   field_rock_fragments: true
   field_vesicular_pores: true
   langcode: true
+  links: true
   search_api_excerpt: true

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - taxonomy.vocabulary.colour
     - taxonomy.vocabulary.site
   module:
     - group
@@ -34,11 +35,11 @@ display:
           entity_type: taxonomy_term
           entity_field: tid
           plugin_id: field
-          label: 'Number of sites'
+          label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{% if tid == 1 %}\r\n<span class=\"views-label\">{{ tid }}</span> {{ vid }}\r\n{% else %}\r\n<span class=\"views-label\">{{ tid }}</span> {{ vid }}s\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -67,7 +68,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -96,24 +97,10 @@ display:
           prefix: ''
           suffix: ''
       pager:
-        type: mini
+        type: some
         options:
           offset: 0
-          pagination_heading_level: h4
           items_per_page: 10
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
       exposed_form:
         type: basic
         options:
@@ -129,8 +116,12 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
-        options: {  }
+        type: time
+        options:
+          results_lifespan: 21600
+          results_lifespan_custom: 86400
+          output_lifespan: 21600
+          output_lifespan_custom: 0
       empty: {  }
       sorts: {  }
       arguments: {  }
@@ -197,7 +188,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            site: site
+            colour: colour
           group: 1
           exposed: false
           expose:
@@ -300,15 +291,187 @@ display:
       max-age: -1
       contexts:
         - 'languages:language_interface'
-        - url.query_args
         - user.permissions
       tags: {  }
-  statistics_site:
-    id: statistics_site
-    display_title: 'Site statistics'
-    display_plugin: block
+  nef_colour:
+    id: nef_colour
+    display_title: 'Statistics - Number colours'
+    display_plugin: embed
     position: 1
     display_options:
+      fields:
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: none
+          group_type: count_distinct
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% if tid == 1 %}\r\n<span class=\"views-label\">{{ tid }}</span> colour\r\n{% else %}\r\n<span class=\"views-label\">{{ tid }}</span> colours\r\n{% endif %}"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ''
+          field_api_classes: false
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        field_group_code_value:
+          id: field_group_code_value
+          table: group__field_group_code
+          field: field_group_code_value
+          relationship: gid
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: contains
+          value: nef
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+          operator: in
+          value:
+            colour: colour
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        fields: false
+        filters: false
+        filter_groups: false
       display_description: ''
       display_extenders:
         matomo:
@@ -326,6 +489,203 @@ display:
       max-age: -1
       contexts:
         - 'languages:language_interface'
-        - url.query_args
+        - user.permissions
+      tags: {  }
+  nef_sites:
+    id: nef_sites
+    display_title: 'Statistics - Number of sites'
+    display_plugin: embed
+    position: 1
+    display_options:
+      fields:
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: none
+          group_type: count_distinct
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% if tid == 1 %}\r\n<span class=\"views-label\">{{ tid }}</span> site\r\n{% else %}\r\n<span class=\"views-label\">{{ tid }}</span> sites\r\n{% endif %}"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ''
+          field_api_classes: false
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        field_group_code_value:
+          id: field_group_code_value
+          table: group__field_group_code
+          field: field_group_code_value
+          relationship: gid
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: contains
+          value: nef
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+          operator: in
+          value:
+            site: site
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        fields: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
         - user.permissions
       tags: {  }

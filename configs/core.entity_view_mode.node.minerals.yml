@@ -1,0 +1,11 @@
+uuid: d5c32170-eeb6-4406-8224-ecd3c2b821b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.minerals
+label: Minerals
+description: 'minerals identified in this analysis, used for searching on the analysis index'
+targetEntityType: node
+cache: true

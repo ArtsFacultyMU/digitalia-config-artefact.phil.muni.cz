@@ -177,146 +177,6 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-        field_posture_name:
-          id: field_posture_name
-          table: search_api_index_a3d_object_index
-          field: field_posture_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-        field_preserved_parts_struct_name:
-          id: field_preserved_parts_struct_name
-          table: search_api_index_a3d_object_index
-          field: field_preserved_parts_struct_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
         field_relative_datation_name:
           id: field_relative_datation_name
           table: search_api_index_a3d_object_index
@@ -457,6 +317,286 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
+        field_feature_type_name:
+          id: field_feature_type_name
+          table: search_api_index_a3d_object_index
+          field: field_feature_type_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        field_artefact_category_name:
+          id: field_artefact_category_name
+          table: search_api_index_a3d_object_index
+          field: field_artefact_category_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        field_deposition_cond_name:
+          id: field_deposition_cond_name
+          table: search_api_index_a3d_object_index
+          field: field_deposition_cond_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        field_raw_material_name:
+          id: field_raw_material_name
+          table: search_api_index_a3d_object_index
+          field: field_raw_material_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
         nothing_1:
           id: nothing_1
           table: views
@@ -469,7 +609,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_artefact_id }} | {{ field_posture_name }} | {{ field_preserved_parts_struct_name }}'
+            text: '{{ field_artefact_category_name }} | {{ field_artefact_id }} | {{ field_feature_type_name }}'
             make_link: true
             path: '/arf/node/{{ nid }}'
             absolute: false
@@ -570,7 +710,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "{% if drupal_token('current-page:query:sort_by') == 'aggregated_field_preserved_parts' or drupal_token('current-page:query:sort_by') == '[current-page:query:sort_by]' %}\r\n<h3>Preserved body parts: {{ field_preserved_parts_struct_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'aggregated_field_recent_damage_type' %}\r\n<h3>Recent damage type: {{ field_recent_damage_type_struct_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_posture_name' %}\r\n<h3>Posture: {{ field_posture_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_relative_datation_name' %}\r\n<h3>Relative datation: {{ field_relative_datation_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_site_name' %}\r\n<h3>Site: {{ field_site_name }}</h3>\r\n{% endif %}"
+            text: "{% if drupal_token('current-page:query:sort_by') == 'aggregated_field_artefact_category' or drupal_token('current-page:query:sort_by') == '[current-page:query:sort_by]' %}\r\n<h3>Artefact category:\_{{ field_artefact_category_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_site_name' %}\r\n<h3>Site: {{ field_site_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_relative_datation_name' %}\r\n<h3>Relative datation: {{ field_relative_datation_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_feature_type_name' %}\r\n<h3>Feature type:\_{{ field_feature_type_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_deposition_cond_name' %}\r\n<h3>Deposition condition: {{ field_deposition_cond_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_raw_material_name' %}\r\n<h3>Raw material: {{ field_raw_material_name }}</h3>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -671,44 +811,31 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        aggregated_field_preserved_parts:
-          id: aggregated_field_preserved_parts
+        aggregated_field_artefact_category:
+          id: aggregated_field_artefact_category
           table: search_api_index_a3d_object_index
-          field: aggregated_field_preserved_parts
+          field: aggregated_field_artefact_category
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: search_api
           order: ASC
           expose:
-            label: 'Preserved body parts'
-            field_identifier: aggregated_field_preserved_parts
+            label: 'Artefact category'
+            field_identifier: aggregated_field_artefact_category
           exposed: true
-        field_posture_name:
-          id: field_posture_name
+        field_site_name:
+          id: field_site_name
           table: search_api_index_a3d_object_index
-          field: field_posture_name
+          field: field_site_name
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: search_api
           order: ASC
           expose:
-            label: Posture
-            field_identifier: field_posture_name
-          exposed: true
-        aggregated_field_recent_damage_type:
-          id: aggregated_field_recent_damage_type
-          table: search_api_index_a3d_object_index
-          field: aggregated_field_recent_damage_type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: ASC
-          expose:
-            label: 'Recent damage type'
-            field_identifier: aggregated_field_recent_damage_type
+            label: Site
+            field_identifier: field_site_name
           exposed: true
         field_relative_datation_name:
           id: field_relative_datation_name
@@ -723,18 +850,31 @@ display:
             label: 'Relative datation'
             field_identifier: field_relative_datation_name
           exposed: true
-        field_site_name:
-          id: field_site_name
+        field_feature_type_name:
+          id: field_feature_type_name
           table: search_api_index_a3d_object_index
-          field: field_site_name
+          field: field_feature_type_name
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: search_api
           order: ASC
           expose:
-            label: Site
-            field_identifier: field_site_name
+            label: 'Feature type'
+            field_identifier: field_feature_type_name
+          exposed: true
+        field_deposition_cond_name:
+          id: field_deposition_cond_name
+          table: search_api_index_a3d_object_index
+          field: field_deposition_cond_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: 'Deposition condition'
+            field_identifier: field_deposition_cond_name
           exposed: true
         field_artefact_id:
           id: field_artefact_id

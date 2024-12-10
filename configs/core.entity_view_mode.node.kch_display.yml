@@ -1,0 +1,11 @@
+uuid: cc3decd9-f7bb-4002-b333-20dc18150323
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.kch_display
+label: 'KCH display'
+description: 'used for search indexing'
+targetEntityType: node
+cache: true

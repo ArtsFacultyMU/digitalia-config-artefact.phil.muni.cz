@@ -14,6 +14,7 @@ dependencies:
     - node.type.page
   module:
     - contextual
+    - entity_comparison
     - filter
     - islandora
     - media
@@ -49,6 +50,7 @@ permissions:
   - 'edit own video media'
   - 'manage media'
   - 'mint persistent identifiers'
+  - 'use a3d_kch_entity_comparison entity comparison'
   - 'use text format full_html'
   - 'view a3d_platform_homepage revisions'
   - 'view at_project revisions'

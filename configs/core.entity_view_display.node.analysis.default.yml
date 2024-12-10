@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.analysis.field_colour_inward
     - field.field.node.analysis.field_colour_of_core
     - field.field.node.analysis.field_colour_outward
+    - field.field.node.analysis.field_data_pres_value
     - field.field.node.analysis.field_date_analysed
     - field.field.node.analysis.field_elements
     - field.field.node.analysis.field_firing_characteristic
@@ -54,17 +55,17 @@ content:
   a3d_eva_entity_group_relation_entity_view_2:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 12
     region: content
   a3d_eva_entity_group_relation_entity_view_4:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 40
     region: content
   a3d_eva_entity_group_relation_entity_view_5:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 0
     region: content
   field_analysed_by:
     type: entity_reference_label
@@ -72,7 +73,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_analysis_date:
     type: datetime_default
@@ -81,7 +82,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_analysis_of:
     type: entity_reference_label
@@ -89,7 +90,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_analysis_type:
     type: entity_reference_label
@@ -97,7 +98,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 35
+    weight: 37
     region: content
   field_binder_ratio:
     type: string
@@ -105,7 +106,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 28
+    weight: 30
     region: content
   field_binder_type:
     type: entity_reference_label
@@ -113,7 +114,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 27
+    weight: 29
     region: content
   field_cavity_pores:
     type: boolean
@@ -123,7 +124,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 22
+    weight: 24
     region: content
   field_chemical_analysis:
     type: data_field_table_formatter
@@ -171,7 +172,7 @@ content:
         cookie: true
         show-footer: false
     third_party_settings: {  }
-    weight: 33
+    weight: 35
     region: content
   field_colour_inward:
     type: string
@@ -179,7 +180,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   field_colour_of_core:
     type: string
@@ -187,7 +188,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_colour_outward:
     type: string
@@ -195,7 +196,15 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 8
+    weight: 9
+    region: content
+  field_data_pres_value:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 39
     region: content
   field_date_analysed:
     type: string
@@ -203,7 +212,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 36
+    weight: 38
     region: content
   field_elements:
     type: data_field_table_formatter
@@ -251,7 +260,7 @@ content:
         cookie: true
         show-footer: false
     third_party_settings: {  }
-    weight: 34
+    weight: 36
     region: content
   field_firing_characteristic:
     type: entity_reference_label
@@ -259,7 +268,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 11
+    weight: 13
     region: content
   field_firing_temperature:
     type: range_integer
@@ -273,7 +282,7 @@ content:
       to_prefix_suffix: false
       combined_prefix_suffix: false
     third_party_settings: {  }
-    weight: 10
+    weight: 11
     region: content
   field_fractured_pores:
     type: boolean
@@ -283,7 +292,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 25
+    weight: 27
     region: content
   field_grain_type:
     type: entity_reference_label
@@ -291,7 +300,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 14
+    weight: 16
     region: content
   field_instrument:
     type: entity_reference_label
@@ -299,7 +308,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_matrix:
     type: number_integer
@@ -308,7 +317,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 12
+    weight: 14
     region: content
   field_matrix_vitrification:
     type: boolean
@@ -318,7 +327,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 23
+    weight: 25
     region: content
   field_microstructure:
     type: entity_reference_label
@@ -326,7 +335,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 16
+    weight: 18
     region: content
   field_minerals:
     type: data_field_table_formatter
@@ -374,7 +383,7 @@ content:
         cookie: true
         show-footer: false
     third_party_settings: {  }
-    weight: 32
+    weight: 34
     region: content
   field_non_plastic_inclusions:
     type: number_integer
@@ -383,7 +392,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 24
+    weight: 26
     region: content
   field_nonplastic_sort:
     type: boolean
@@ -393,21 +402,21 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 26
+    weight: 28
     region: content
   field_note:
     type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 30
+    weight: 32
     region: content
   field_note_on_method:
     type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_planar_pores:
     type: boolean
@@ -417,7 +426,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 17
+    weight: 19
     region: content
   field_pore_channels:
     type: boolean
@@ -427,7 +436,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 15
+    weight: 17
     region: content
   field_porosity:
     type: number_integer
@@ -436,21 +445,21 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 13
+    weight: 15
     region: content
   field_private_note:
     type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 31
+    weight: 33
     region: content
   field_publications:
     type: text_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 29
+    weight: 31
     region: content
   field_reduction_core:
     type: boolean
@@ -460,7 +469,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 18
+    weight: 20
     region: content
   field_reduction_inward:
     type: boolean
@@ -470,7 +479,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 19
+    weight: 21
     region: content
   field_reduction_outward:
     type: boolean
@@ -480,7 +489,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 20
+    weight: 22
     region: content
   field_rock_fragments:
     type: entity_reference_label
@@ -488,7 +497,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_vesicular_pores:
     type: boolean
@@ -498,15 +507,19 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 21
+    weight: 23
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden:
   a3d_kch_content_sample_to_analysis: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_2: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_3: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_6: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_7: true
   display_media_entity_view_1: true
   display_media_entity_view_3: true
   display_media_original_download: true

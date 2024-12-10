@@ -1,0 +1,22 @@
+uuid: 48256540-5799-440e-b7a0-a4dd1f6f5b20
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.arf_surf_data_pres
+id: node.arf_surf_data_pres.status
+field_name: status
+entity_type: node
+bundle: arf_surf_data_pres
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_nefmainmenu
 theme: islandora_muni
 region: primary_menu
-weight: -40
+weight: -39
 provider: null
 plugin: 'superfish:nef-main-menu'
 settings:

@@ -1,0 +1,20 @@
+uuid: e63b472d-cfb2-4691-801e-a9f515d059d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.arf_surf_data_pres
+id: node.arf_surf_data_pres.uid
+field_name: uid
+entity_type: node
+bundle: arf_surf_data_pres
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

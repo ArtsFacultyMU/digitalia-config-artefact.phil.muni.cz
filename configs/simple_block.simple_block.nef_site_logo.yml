@@ -7,5 +7,5 @@ dependencies:
 id: nef_site_logo
 title: 'NEF site logo'
 content:
-  value: '<p><a class="site-branding__logo" href="/group/nef" rel="home"><img src="/themes/custom/islandora_muni/platform_specific/images/nef-logo-en.svg" alt="Home" width="167" height="68"></a></p>'
+  value: '<p><a href="/group/nef" rel="home"><img src="/themes/custom/islandora_muni/platform_specific/images/nef-logo-en.svg" alt="Home" width="167" height="68"></a></p>'
   format: full_html

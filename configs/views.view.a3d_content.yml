@@ -134,7 +134,7 @@ dependencies:
 id: a3d_content
 label: 'A3D content'
 module: views
-description: 'TODO: split into platform "Content" views'
+description: 'DEPRECATED. TODO: split into platform "Content" views'
 tag: ''
 base_table: node_field_data
 base_field: nid

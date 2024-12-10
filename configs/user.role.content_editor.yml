@@ -9,6 +9,7 @@ dependencies:
   module:
     - comment
     - contextual
+    - entity_comparison
     - field_permissions
     - file
     - help
@@ -51,6 +52,7 @@ permissions:
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'use a3d_kch_entity_comparison entity comparison'
   - 'view all revisions'
   - 'view field_contact_email'
   - 'view field_private_note'

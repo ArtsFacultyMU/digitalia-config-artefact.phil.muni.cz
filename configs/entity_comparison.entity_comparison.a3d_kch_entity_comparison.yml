@@ -1,0 +1,15 @@
+uuid: 6ab085f0-da2a-4b61-89c4-99b1a852ac71
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.media.image.image_a3d_kch_entity_comparison
+    - core.entity_view_mode.media.image_a3d_kch_entity_comparison
+id: a3d_kch_entity_comparison
+label: 'A3D KCH entity comparison'
+add_link_text: 'Add to comparison list'
+remove_link_text: 'Remove from the comparison'
+limit: 0
+entity_type: media
+bundle_type: image
+group_name: kch

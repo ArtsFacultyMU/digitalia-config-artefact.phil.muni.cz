@@ -1117,45 +1117,6 @@ display:
             label: 'Relative datation'
             field_identifier: field_relative_datation_name
           exposed: true
-        field_feature_type_name:
-          id: field_feature_type_name
-          table: search_api_index_a3d_object_index
-          field: field_feature_type_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: ASC
-          expose:
-            label: 'Feature type'
-            field_identifier: field_feature_type_name
-          exposed: true
-        field_deposition_cond_name:
-          id: field_deposition_cond_name
-          table: search_api_index_a3d_object_index
-          field: field_deposition_cond_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: ASC
-          expose:
-            label: 'Deposition condition'
-            field_identifier: field_deposition_cond_name
-          exposed: true
-        field_raw_material_name:
-          id: field_raw_material_name
-          table: search_api_index_a3d_object_index
-          field: field_raw_material_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: ASC
-          expose:
-            label: 'Raw material'
-            field_identifier: field_raw_material_name
-          exposed: true
         field_artefact_id:
           id: field_artefact_id
           table: search_api_index_a3d_object_index
@@ -2122,7 +2083,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "{% if drupal_token('current-page:query:sort_by') == 'field_artefact_category_name' or drupal_token('current-page:query:sort_by') == '[current-page:query:sort-by]' %}\r\nArtefact category:\_{{ field_artefact_category_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_deposition_cond_name' %}\r\nDeposition condition: {{ field_deposition_cond_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_feature_type_name' %}\r\nFeature/site type: {{ field_feature_typep_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_raw_material_name' %}\r\nRaw material: {{ field_raw_material_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_relative_datation_name' %}\r\nRelative datation: {{ field_relative_datation_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_site_name' %}\r\nSite: {{ field_site_name }}\r\n{% endif %}"
+            text: "{% if drupal_token('current-page:query:sort_by') == 'field_artefact_category_name' or drupal_token('current-page:query:sort_by') == '[current-page:query:sort_by]' %}\r\nArtefact category:\_{{ field_artefact_category_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_deposition_cond_name' %}\r\nDeposition condition: {{ field_deposition_cond_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_feature_type_name' %}\r\nFeature/site type: {{ field_feature_typep_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_raw_material_name' %}\r\nRaw material: {{ field_raw_material_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_relative_datation_name' %}\r\nRelative datation: {{ field_relative_datation_name }}\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_site_name' %}\r\nSite: {{ field_site_name }}\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -2336,15 +2297,15 @@ display:
           category_fallback: ''
           category_facets: {  }
           category_facets_concat_separator: ', '
-      path: arf/browse
+      path: arf/browse/all
       menu:
         type: normal
-        title: Browse
+        title: All
         description: ''
-        weight: -49
+        weight: -50
         expanded: false
         menu_name: arf-main-menu
-        parent: ''
+        parent: 'menu_link_content:5814288a-398c-4561-93a2-0e52efb1437b'
         context: '0'
     cache_metadata:
       max-age: -1

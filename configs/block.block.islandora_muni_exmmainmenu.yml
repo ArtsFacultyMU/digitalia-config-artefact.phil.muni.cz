@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_exmmainmenu
 theme: islandora_muni
 region: primary_menu
-weight: -41
+weight: -37
 provider: null
 plugin: 'superfish:exm-main-menu'
 settings:

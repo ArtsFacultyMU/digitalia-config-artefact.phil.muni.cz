@@ -1,0 +1,114 @@
+display:
+  default:
+    display_options:
+      fields:
+        nid:
+          fallback_options:
+            format_plural_string: !!binary MQNAY291bnQD
+        nid_2:
+          fallback_options:
+            format_plural_string: !!binary MQNAY291bnQD
+        view:
+          label: Obrázek
+        name:
+          label: Analýza
+        nothing:
+          label: 'Analyzovaná keramika'
+        name_7:
+          label: Lokalita
+        from_1:
+          format_plural_string: !!binary AwM=
+        to_1:
+          format_plural_string: !!binary AwM=
+        nothing_1:
+          label: Datace
+      exposed_form:
+        options:
+          submit_button: Odeslat
+          reset_button_label: Resetovat
+          exposed_sorts_label: 'Řadit podle'
+          sort_asc_label: vzestupně
+          sort_desc_label: sestupně
+      filters:
+        facets_field_artefact_category:
+          expose:
+            label: 'Kategorie artefaktu'
+        from_1:
+          expose:
+            label: 'Spodní odhad datace'
+        to_1:
+          expose:
+            label: 'Horní odhad datace'
+        facets_field_analysis_type:
+          expose:
+            label: 'Typ analýzy'
+        facets_field_instrument:
+          expose:
+            label: Přístroj
+        facets_field_rock_fragments:
+          expose:
+            label: Horniny
+        rendered_item:
+          expose:
+            label: 'Chemické sloučeniny'
+        rendered_item_1:
+          expose:
+            label: Minerály
+        rendered_item_2:
+          expose:
+            label: Prvky
+        field_grain_type:
+          expose:
+            label: Zrnitost
+        field_binder_type:
+          expose:
+            label: 'Typ pojiva'
+        field_microstructure:
+          expose:
+            label: Mikrostruktura
+        to:
+          expose:
+            label: 'Horní odhad teploty výpalu'
+        from:
+          expose:
+            label: 'Spodní odhad teploty výpalu'
+        field_porosity:
+          expose:
+            label: 'Spodní odhad pórovitosti [%]'
+        field_porosity_1:
+          expose:
+            label: 'Horní odhad pórovitosti [%]'
+      header:
+        result:
+          content: 'Zobrazují se položky @start - @end z @total'
+      sorts:
+        name:
+          expose:
+            label: 'Typ analýzy'
+        name_5:
+          expose:
+            label: 'Kategorie artefaktu'
+        field_artefact_id:
+          expose:
+            label: 'ID artefaktu'
+        from:
+          expose:
+            label: 'Teplota výpalu » spodní odhad'
+        to:
+          expose:
+            label: 'Teplota výpalu » horní odhad'
+        from_1:
+          expose:
+            label: 'Datace » spodní odhad'
+        to_1:
+          expose:
+            label: 'Datace » horní odhad'
+      pager:
+        options:
+          tags:
+            first: '« První'
+            last: 'Poslední »'
+  page_1:
+    display_options:
+      menu:
+        title: Analýzy

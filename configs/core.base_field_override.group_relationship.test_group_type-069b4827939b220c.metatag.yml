@@ -1,0 +1,20 @@
+uuid: 2dd44d02-ed5b-44f8-9795-5d35ce3c83c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.relationship_type.test_group_type-069b4827939b220c
+  module:
+    - metatag
+id: group_relationship.test_group_type-069b4827939b220c.metatag
+field_name: metatag
+entity_type: group_relationship
+bundle: test_group_type-069b4827939b220c
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

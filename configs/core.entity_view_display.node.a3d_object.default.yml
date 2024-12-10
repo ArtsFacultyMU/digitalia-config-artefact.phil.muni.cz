@@ -43,7 +43,6 @@ dependencies:
     - field.field.node.a3d_object.field_coll_rights
     - field.field.node.a3d_object.field_coll_title
     - field.field.node.a3d_object.field_colour_paint
-    - field.field.node.a3d_object.field_comparison
     - field.field.node.a3d_object.field_country
     - field.field.node.a3d_object.field_cov_spat
     - field.field.node.a3d_object.field_cov_temp
@@ -77,6 +76,8 @@ dependencies:
     - field.field.node.a3d_object.field_general_note
     - field.field.node.a3d_object.field_general_type
     - field.field.node.a3d_object.field_geolocation
+    - field.field.node.a3d_object.field_geolocation_original
+    - field.field.node.a3d_object.field_geolocation_original_priv
     - field.field.node.a3d_object.field_glue_residues
     - field.field.node.a3d_object.field_grain_type
     - field.field.node.a3d_object.field_handle
@@ -88,6 +89,7 @@ dependencies:
     - field.field.node.a3d_object.field_link_to_3d_model
     - field.field.node.a3d_object.field_literature
     - field.field.node.a3d_object.field_longitudinal_profile
+    - field.field.node.a3d_object.field_mass_structure_data_pres
     - field.field.node.a3d_object.field_material_colour
     - field.field.node.a3d_object.field_measurements
     - field.field.node.a3d_object.field_member_of
@@ -150,10 +152,8 @@ dependencies:
     - field.field.node.a3d_object.field_subord_dataset
     - field.field.node.a3d_object.field_subord_dataset_link
     - field.field.node.a3d_object.field_surf_data_pres
-    - field.field.node.a3d_object.field_surf_data_pres2
     - field.field.node.a3d_object.field_surface_alt
     - field.field.node.a3d_object.field_surface_finishing
-    - field.field.node.a3d_object.field_test_custom_field
     - field.field.node.a3d_object.field_thermic_cracks
     - field.field.node.a3d_object.field_tile_type
     - field.field.node.a3d_object.field_timespan
@@ -165,7 +165,6 @@ dependencies:
     - field.field.node.a3d_object.field_wgs84_geolocation_private
     - node.type.a3d_object
   module:
-    - custom_field
     - field_group
     - user
 third_party_settings:
@@ -176,7 +175,7 @@ third_party_settings:
       label: Biblatex
       parent_name: ''
       region: hidden
-      weight: 177
+      weight: 186
       format_type: details
       format_settings:
         classes: ''
@@ -191,7 +190,7 @@ third_party_settings:
       label: 'Harvard citation style'
       parent_name: ''
       region: hidden
-      weight: 178
+      weight: 187
       format_type: details
       format_settings:
         classes: ''
@@ -206,7 +205,7 @@ third_party_settings:
       label: Platforms
       parent_name: ''
       region: hidden
-      weight: 179
+      weight: 188
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -231,13 +230,23 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
+  a3d_kch_index_related_samples_and_analyses_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_kch_index_related_samples_and_analyses_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   field_3d_shaping_struct:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 181
+    weight: 1
     region: content
   field_3d_traces_struct:
     type: entity_reference_label
@@ -245,7 +254,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 182
+    weight: 2
     region: content
   field_colour_paint:
     type: entity_reference_label
@@ -253,7 +262,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 188
+    weight: 8
     region: content
   field_fract_preservation_struct:
     type: entity_reference_label
@@ -261,7 +270,29 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 186
+    weight: 6
+    region: content
+  field_geolocation_original:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 190
+    region: content
+  field_geolocation_original_priv:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 191
+    region: content
+  field_mass_structure_data_pres:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 189
     region: content
   field_material_colour:
     type: entity_reference_label
@@ -269,14 +300,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 187
+    weight: 7
     region: content
   field_preserved_parts:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 185
+    weight: 5
     region: content
   field_preserved_parts_struct:
     type: entity_reference_label
@@ -284,14 +315,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 180
+    weight: 0
     region: content
   field_recent_damage_type:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 184
+    weight: 4
     region: content
   field_recent_damage_type_struct:
     type: entity_reference_label
@@ -299,7 +330,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 183
+    weight: 3
     region: content
   field_surf_data_pres:
     type: entity_reference_label
@@ -307,23 +338,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 191
-    region: content
-  field_surf_data_pres2:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 190
-    region: content
-  field_test_custom_field:
-    type: custom_formatter
-    label: above
-    settings:
-      fields: {  }
-    third_party_settings: {  }
-    weight: 189
+    weight: 9
     region: content
 hidden:
   a3d_arf_content_browse_title: true
@@ -347,6 +362,7 @@ hidden:
   a3d_eva_handle_entity_view_1: true
   a3d_kch_content2_browse_title: true
   a3d_kch_content2_kch_analysis_to_object: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_1: true
   a3d_kch_media_nef_images: true
   a3d_meta_content_browse_title: true
   a3d_meta_object_on_map_a3d_object_map: true
@@ -394,7 +410,6 @@ hidden:
   field_coll_org: true
   field_coll_rights: true
   field_coll_title: true
-  field_comparison: true
   field_country: true
   field_cov_spat: true
   field_cov_temp: true

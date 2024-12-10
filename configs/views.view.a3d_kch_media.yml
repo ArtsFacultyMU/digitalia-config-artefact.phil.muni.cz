@@ -14,6 +14,10 @@ dependencies:
     - media.type.file
     - media.type.image
     - media.type.video
+    - user.role.administrator
+    - user.role.kch_user
+    - user.role.lindat_editor
+    - user.role.standard_user
   module:
     - csv_serialization
     - entity_comparison
@@ -1273,6 +1277,14 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+      access:
+        type: role
+        options:
+          role:
+            administrator: administrator
+            standard_user: standard_user
+            kch_user: kch_user
+            lindat_editor: lindat_editor
       empty:
         area:
           id: area
@@ -1463,7 +1475,7 @@ display:
           override: true
           sticky: false
           summary: ''
-          empty_table: false
+          empty_table: true
           caption: ''
           description: ''
       row:
@@ -1475,6 +1487,7 @@ display:
           hide_empty: false
       defaults:
         empty: false
+        access: false
         pager: false
         style: false
         row: false
@@ -1493,7 +1506,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: entity
-          empty: false
+          empty: true
           target: '{{ nid }}'
           view_mode: token
           tokenize: true
@@ -1506,9 +1519,9 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: text
-          empty: false
+          empty: true
           content:
-            value: "<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/kch/node/{{ raw_arguments.nid }}/\">Back to object</a>\r\n</p>\r\n</div>"
+            value: "<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/kch/node/{{ raw_arguments.nid }}/\">Back to object</a>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/media/upload?destination=/kch/node/{{ raw_arguments.nid }}/media\">Add media</a>\r\n</p>\r\n</div>"
             format: full_html
           tokenize: true
       display_extenders:
@@ -1531,7 +1544,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.media.field_description'
         - 'config:field.storage.media.field_featured'
@@ -1622,7 +1635,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if (bundle == 'Image') %}\r\n    JPEG, PNG, TIFF\r\n{% elseif (bundle == '3D Model') %}\r\n    PLY\r\n{% else %}\r\n    PDF\r\n{% endif %}"
+            text: "{% if (bundle == 'Image') or (bundle == 'Obrázek') %}\r\n    JPEG, PNG, TIFF\r\n{% elseif (bundle == '3D Model') %}\r\n    PLY\r\n{% else %}\r\n    PDF\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -1671,7 +1684,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if (bundle == 'Image') %}\r\n    Photos and layouts from 3D models\r\n{% elseif (bundle == '3D Model') %}\r\n    3D models \r\n{% else %}\r\n    other files\r\n{% endif %}"
+            text: "{% if (bundle == 'Image') %}\r\n    Photos and drawings\r\n{% elseif (bundle == '3D Model') %}\r\n    3D models \r\n{% else %}\r\n    Other files\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false

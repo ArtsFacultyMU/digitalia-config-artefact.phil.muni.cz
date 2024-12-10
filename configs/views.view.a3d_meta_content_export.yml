@@ -1,6 +1,6 @@
 uuid: 2bee409e-7eb9-4987-a7f5-137bf6fdda7e
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.citations

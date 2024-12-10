@@ -138,6 +138,7 @@ dependencies:
     - taxonomy.vocabulary.unknown_values
   module:
     - content_translation
+    - entity_comparison
     - taxonomy
 id: can_edit_taxonomy
 label: 'Can edit taxonomy'
@@ -411,3 +412,4 @@ permissions:
   - 'edit terms in units'
   - 'edit terms in unknown_values'
   - 'translate aquamanile_type taxonomy_term'
+  - 'use a3d_kch_entity_comparison entity comparison'

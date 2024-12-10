@@ -6,9 +6,9 @@ dependencies:
     - entity_comparison.entity_comparison.a3d_meta_entity_comparison
   module:
     - block_class
+    - context
     - entity_comparison
     - islandora
-    - system
   theme:
     - islandora_muni
 third_party_settings:
@@ -32,7 +32,7 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
-  request_path:
-    id: request_path
+  request_domain:
+    id: request_domain
     negate: false
-    pages: "/a3d\r\n/group/a3d\r\n/a3d/*\r\n/*/a3d"
+    domains: "archeo3data-devel.phil.muni.cz\r\narcheo3data.phil.muni.cz"

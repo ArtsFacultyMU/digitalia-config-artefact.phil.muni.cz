@@ -1,0 +1,29 @@
+display:
+  media_manage:
+    display_options:
+      empty:
+        area:
+          content:
+            value: '<p>No media exist.</p>'
+            format: basic_html
+      header:
+        area:
+          content:
+            value: '<div class="a3d-editor-block"><p><a class="button" href="/kch/node/{{ raw_arguments.nid }}/">Back to object</a></p></div>'
+            format: full_html
+  media_statistics:
+    display_options:
+      title: 'Soubory v databázi'
+      fields:
+        bundle:
+          label: Typ
+        nothing_1:
+          label: Formát
+        nothing:
+          label: Popis
+          alter:
+            text: "{% if (bundle == 'Obrázek') %}\r\n    Fotografie a nákresy\r\n{% elseif (bundle == '3D Model') %}\r\n    3D modely \r\n{% else %}\r\n    Jiné\r\n{% endif %}"
+        mid:
+          label: 'Počet souborů'
+        field_file_size_value:
+          label: Velikost

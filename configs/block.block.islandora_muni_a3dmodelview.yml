@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_a3dmodelview
 theme: islandora_muni
 region: content
-weight: -32
+weight: -31
 provider: null
 plugin: 'simple_block:a3d_model_view'
 settings:

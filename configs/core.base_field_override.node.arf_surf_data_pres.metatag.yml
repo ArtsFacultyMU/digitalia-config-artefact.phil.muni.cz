@@ -1,0 +1,20 @@
+uuid: 8ee37458-b1c2-48e2-90f7-bc164080c8e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.arf_surf_data_pres
+  module:
+    - metatag
+id: node.arf_surf_data_pres.metatag
+field_name: metatag
+entity_type: node
+bundle: arf_surf_data_pres
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

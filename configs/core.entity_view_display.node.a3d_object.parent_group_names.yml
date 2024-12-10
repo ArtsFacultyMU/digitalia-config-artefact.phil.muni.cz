@@ -44,7 +44,6 @@ dependencies:
     - field.field.node.a3d_object.field_coll_rights
     - field.field.node.a3d_object.field_coll_title
     - field.field.node.a3d_object.field_colour_paint
-    - field.field.node.a3d_object.field_comparison
     - field.field.node.a3d_object.field_country
     - field.field.node.a3d_object.field_cov_spat
     - field.field.node.a3d_object.field_cov_temp
@@ -78,6 +77,8 @@ dependencies:
     - field.field.node.a3d_object.field_general_note
     - field.field.node.a3d_object.field_general_type
     - field.field.node.a3d_object.field_geolocation
+    - field.field.node.a3d_object.field_geolocation_original
+    - field.field.node.a3d_object.field_geolocation_original_priv
     - field.field.node.a3d_object.field_glue_residues
     - field.field.node.a3d_object.field_grain_type
     - field.field.node.a3d_object.field_handle
@@ -89,6 +90,7 @@ dependencies:
     - field.field.node.a3d_object.field_link_to_3d_model
     - field.field.node.a3d_object.field_literature
     - field.field.node.a3d_object.field_longitudinal_profile
+    - field.field.node.a3d_object.field_mass_structure_data_pres
     - field.field.node.a3d_object.field_material_colour
     - field.field.node.a3d_object.field_measurements
     - field.field.node.a3d_object.field_member_of
@@ -151,10 +153,8 @@ dependencies:
     - field.field.node.a3d_object.field_subord_dataset
     - field.field.node.a3d_object.field_subord_dataset_link
     - field.field.node.a3d_object.field_surf_data_pres
-    - field.field.node.a3d_object.field_surf_data_pres2
     - field.field.node.a3d_object.field_surface_alt
     - field.field.node.a3d_object.field_surface_finishing
-    - field.field.node.a3d_object.field_test_custom_field
     - field.field.node.a3d_object.field_thermic_cracks
     - field.field.node.a3d_object.field_tile_type
     - field.field.node.a3d_object.field_timespan
@@ -176,7 +176,7 @@ third_party_settings:
       label: Biblatex
       parent_name: ''
       region: hidden
-      weight: 177
+      weight: 189
       format_type: details
       format_settings:
         classes: ''
@@ -191,7 +191,7 @@ third_party_settings:
       label: 'Harvard citation style'
       parent_name: ''
       region: hidden
-      weight: 178
+      weight: 190
       format_type: details
       format_settings:
         classes: ''
@@ -206,7 +206,7 @@ third_party_settings:
       label: Platforms
       parent_name: ''
       region: hidden
-      weight: 179
+      weight: 191
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -229,7 +229,7 @@ content:
   a3d_eva_entity_group_relation_entity_view_5:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 0
     region: content
   a3d_eva_parent_groups_entity_view_1:
     settings: {  }
@@ -257,6 +257,9 @@ hidden:
   a3d_eva_handle_entity_view_1: true
   a3d_kch_content2_browse_title: true
   a3d_kch_content2_kch_analysis_to_object: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_1: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_4: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_5: true
   a3d_kch_media_nef_images: true
   a3d_meta_content_browse_title: true
   a3d_meta_object_on_map_a3d_object_map: true
@@ -307,7 +310,6 @@ hidden:
   field_coll_rights: true
   field_coll_title: true
   field_colour_paint: true
-  field_comparison: true
   field_country: true
   field_cov_spat: true
   field_cov_temp: true
@@ -341,6 +343,8 @@ hidden:
   field_general_note: true
   field_general_type: true
   field_geolocation: true
+  field_geolocation_original: true
+  field_geolocation_original_priv: true
   field_glue_residues: true
   field_grain_type: true
   field_handle: true
@@ -352,6 +356,7 @@ hidden:
   field_link_to_3d_model: true
   field_literature: true
   field_longitudinal_profile: true
+  field_mass_structure_data_pres: true
   field_material_colour: true
   field_measurements: true
   field_member_of: true
@@ -414,10 +419,8 @@ hidden:
   field_subord_dataset: true
   field_subord_dataset_link: true
   field_surf_data_pres: true
-  field_surf_data_pres2: true
   field_surface_alt: true
   field_surface_finishing: true
-  field_test_custom_field: true
   field_thermic_cracks: true
   field_tile_type: true
   field_timespan: true

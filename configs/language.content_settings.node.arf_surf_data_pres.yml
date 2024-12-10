@@ -4,6 +4,13 @@ status: true
 dependencies:
   config:
     - node.type.arf_surf_data_pres
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: node.arf_surf_data_pres
 target_entity_type_id: node
 target_bundle: arf_surf_data_pres

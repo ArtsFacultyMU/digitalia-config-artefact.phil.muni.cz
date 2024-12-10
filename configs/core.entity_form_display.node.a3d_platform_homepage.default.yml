@@ -6,11 +6,13 @@ dependencies:
     - field.field.node.a3d_platform_homepage.field_banner_text
     - field.field.node.a3d_platform_homepage.field_citation_text
     - field.field.node.a3d_platform_homepage.field_copyright_text
+    - field.field.node.a3d_platform_homepage.field_homepage_statistics
     - field.field.node.a3d_platform_homepage.field_intro_text
     - node.type.a3d_platform_homepage
   module:
     - path
     - text
+    - viewfield
 id: node.a3d_platform_homepage.default
 targetEntityType: node
 bundle: a3d_platform_homepage
@@ -45,6 +47,12 @@ content:
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_homepage_statistics:
+    type: viewfield_select
+    weight: 26
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_intro_text:
     type: text_textarea

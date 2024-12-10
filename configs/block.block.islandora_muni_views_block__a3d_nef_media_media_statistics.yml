@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_views_block__a3d_nef_media_media_statistics
 theme: islandora_muni
 region: content
-weight: -38
+weight: -37
 provider: null
 plugin: 'views_block:a3d_nef_media-media_statistics'
 settings:

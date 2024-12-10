@@ -1,0 +1,109 @@
+uuid: 302b6e8e-aa5a-4ff5-b4aa-096365e097fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.minerals
+    - field.field.node.analysis.field_analysed_by
+    - field.field.node.analysis.field_analysis_date
+    - field.field.node.analysis.field_analysis_of
+    - field.field.node.analysis.field_analysis_type
+    - field.field.node.analysis.field_binder_ratio
+    - field.field.node.analysis.field_binder_type
+    - field.field.node.analysis.field_cavity_pores
+    - field.field.node.analysis.field_chemical_analysis
+    - field.field.node.analysis.field_colour_inward
+    - field.field.node.analysis.field_colour_of_core
+    - field.field.node.analysis.field_colour_outward
+    - field.field.node.analysis.field_data_pres_value
+    - field.field.node.analysis.field_date_analysed
+    - field.field.node.analysis.field_elements
+    - field.field.node.analysis.field_firing_characteristic
+    - field.field.node.analysis.field_firing_temperature
+    - field.field.node.analysis.field_fractured_pores
+    - field.field.node.analysis.field_grain_type
+    - field.field.node.analysis.field_instrument
+    - field.field.node.analysis.field_matrix
+    - field.field.node.analysis.field_matrix_vitrification
+    - field.field.node.analysis.field_microstructure
+    - field.field.node.analysis.field_minerals
+    - field.field.node.analysis.field_non_plastic_inclusions
+    - field.field.node.analysis.field_nonplastic_sort
+    - field.field.node.analysis.field_note
+    - field.field.node.analysis.field_note_on_method
+    - field.field.node.analysis.field_planar_pores
+    - field.field.node.analysis.field_pore_channels
+    - field.field.node.analysis.field_porosity
+    - field.field.node.analysis.field_private_note
+    - field.field.node.analysis.field_publications
+    - field.field.node.analysis.field_reduction_core
+    - field.field.node.analysis.field_reduction_inward
+    - field.field.node.analysis.field_reduction_outward
+    - field.field.node.analysis.field_rock_fragments
+    - field.field.node.analysis.field_vesicular_pores
+    - node.type.analysis
+  module:
+    - user
+id: node.analysis.minerals
+targetEntityType: node
+bundle: analysis
+mode: minerals
+content:
+  a3d_kch_index_related_samples_and_analyses_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_2: true
+  a3d_eva_entity_group_relation_entity_view_4: true
+  a3d_eva_entity_group_relation_entity_view_5: true
+  a3d_kch_content_sample_to_analysis: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_2: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_6: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_7: true
+  display_media_entity_view_1: true
+  display_media_entity_view_3: true
+  display_media_original_download: true
+  display_media_service_file: true
+  display_media_thumbnail: true
+  field_analysed_by: true
+  field_analysis_date: true
+  field_analysis_of: true
+  field_analysis_type: true
+  field_binder_ratio: true
+  field_binder_type: true
+  field_cavity_pores: true
+  field_chemical_analysis: true
+  field_colour_inward: true
+  field_colour_of_core: true
+  field_colour_outward: true
+  field_data_pres_value: true
+  field_date_analysed: true
+  field_elements: true
+  field_firing_characteristic: true
+  field_firing_temperature: true
+  field_fractured_pores: true
+  field_grain_type: true
+  field_instrument: true
+  field_matrix: true
+  field_matrix_vitrification: true
+  field_microstructure: true
+  field_minerals: true
+  field_non_plastic_inclusions: true
+  field_nonplastic_sort: true
+  field_note: true
+  field_note_on_method: true
+  field_planar_pores: true
+  field_pore_channels: true
+  field_porosity: true
+  field_private_note: true
+  field_publications: true
+  field_reduction_core: true
+  field_reduction_inward: true
+  field_reduction_outward: true
+  field_rock_fragments: true
+  field_vesicular_pores: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

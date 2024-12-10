@@ -15,6 +15,10 @@ group_type: test_group_type
 permissions:
   - 'update any group_node:at_project entity'
   - 'view group'
+  - 'view group_media:image entity'
   - 'view group_node:a3d_object entity'
   - 'view group_node:a3d_platform_homepage entity'
+  - 'view group_node:analysis entity'
   - 'view group_node:at_project entity'
+  - 'view group_node:sample entity'
+  - 'view group_term:actor entity'

@@ -10,6 +10,7 @@ dependencies:
     - node.type.page
     - node.type.sample
   module:
+    - entity_comparison
     - field_permissions
     - node
 id: lindat_editor
@@ -24,6 +25,8 @@ permissions:
   - 'edit any contract content'
   - 'edit any page content'
   - 'edit any sample content'
+  - 'edit field_geolocation_original_priv'
   - 'edit own field_private_note'
+  - 'use a3d_kch_entity_comparison entity comparison'
   - 'view field_private_note'
   - 'view own field_private_note'

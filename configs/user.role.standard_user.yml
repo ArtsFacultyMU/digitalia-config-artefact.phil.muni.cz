@@ -8,7 +8,10 @@ dependencies:
     - media.type.file
     - media.type.image
     - media.type.video
+    - node.type.a3d_object
   module:
+    - entity_comparison
+    - field_permissions
     - media
     - node
     - persistent_identifiers
@@ -18,10 +21,15 @@ weight: -3
 is_admin: null
 permissions:
   - 'create 3d_model media'
+  - 'create a3d_object content'
   - 'create document media'
+  - 'create field_geolocation_original_priv'
   - 'create file media'
   - 'create image media'
   - 'create video media'
+  - 'edit own field_geolocation_original_priv'
   - 'mint persistent identifiers'
+  - 'use a3d_kch_entity_comparison entity comparison'
+  - 'view a3d_object revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'

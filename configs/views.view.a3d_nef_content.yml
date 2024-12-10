@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.citations
-    - core.entity_view_mode.node.nef_browse
     - core.entity_view_mode.node.nef_media
     - core.entity_view_mode.node.platforms
     - field.storage.node.field_3d_shaping
@@ -54,7 +53,6 @@ dependencies:
     - geolocation
     - group
     - node
-    - taxonomy
     - text
     - user
     - views_field_view
@@ -8912,10 +8910,10 @@ display:
         - 'config:field.storage.node.field_wear'
         - 'config:field.storage.node.field_wgs84_geolocation'
         - 'config:field.storage.node.field_wgs84_geolocation_accuracy'
-  nef_statistics:
-    id: nef_statistics
-    display_title: 'Statistics entries'
-    display_plugin: block
+  nef_num_figures:
+    id: nef_num_figures
+    display_title: 'Statistics - Number of figures'
+    display_plugin: embed
     position: 6
     display_options:
       title: 'Current entries in the database'
@@ -8930,11 +8928,11 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: field
-          label: 'Number of figures'
+          label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<span class="views-label">{{ nid }}</span> figures'
             make_link: false
             path: ''
             absolute: false
@@ -8963,7 +8961,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -8986,6 +8984,13 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
       pager:
         type: mini
         options:
@@ -9177,6 +9182,195 @@ display:
       contexts:
         - 'languages:language_interface'
         - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  nef_statistics:
+    id: nef_statistics
+    display_title: 'Statistics Block'
+    display_plugin: block
+    position: 6
+    display_options:
+      fields:
+        view_1:
+          id: view_1
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: 'Number of figurines'
+          plugin_id: view
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: a3d_nef_content
+          display: nef_num_figures
+          arguments: ''
+        view_2:
+          id: view_2
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: 'Number of colours'
+          plugin_id: view
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: a3d_nef_taxonomy
+          display: nef_colour
+          arguments: ''
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: 'Number of sites'
+          plugin_id: view
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: a3d_nef_taxonomy
+          display: nef_sites
+          arguments: ''
+      arguments: {  }
+      defaults:
+        css_class: false
+        fields: false
+        arguments: false
+      css_class: 'nef block-views-block-homepage-statistics-block-1'
+      display_description: ''
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

@@ -1,0 +1,21 @@
+uuid: 53810261-41ea-40a9-ba99-71a47dd2a239
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - viewfield
+    - views
+id: node.field_homepage_statistics
+field_name: field_homepage_statistics
+entity_type: node
+type: viewfield
+settings:
+  target_type: view
+module: viewfield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

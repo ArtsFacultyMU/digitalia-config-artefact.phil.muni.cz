@@ -953,7 +953,7 @@ display:
           operator: or
           value:
             a3d_object: a3d_object
-          group: 2
+          group: 1
           exposed: false
           expose:
             operator_id: ''
@@ -993,7 +993,7 @@ display:
           plugin_id: search_api_boolean
           operator: '='
           value: '1'
-          group: 2
+          group: 1
           exposed: false
           expose:
             operator_id: ''
@@ -1031,7 +1031,7 @@ display:
           plugin_id: search_api_fulltext
           operator: and
           value: ''
-          group: 2
+          group: 1
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
@@ -1084,14 +1084,14 @@ display:
           field: a3d_object_parent_groups
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: Platform
           plugin_id: search_api_text
           operator: '='
           value:
             min: ''
             max: ''
             value: ''
-          group: 3
+          group: 1
           exposed: true
           expose:
             operator_id: a3d_object_parent_groups_op
@@ -1104,7 +1104,7 @@ display:
             identifier: a3d_object_parent_groups
             required: false
             remember: false
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
             min_placeholder: null
@@ -1147,321 +1147,6 @@ display:
                 operator: '='
                 value:
                   value: 'PLACEHOLDER 5 options to display correctly'
-        field_measurements_dimensions_value:
-          id: field_measurements_dimensions_value
-          table: search_api_index_a3d_object_index
-          field: field_measurements_dimensions_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_numeric
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 4
-          exposed: true
-          expose:
-            operator_id: field_measurements_dimensions_value_op
-            label: 'Measurements » value'
-            description: ''
-            use_operator: true
-            operator: field_measurements_dimensions_value_op
-            operator_limit_selection: true
-            operator_list:
-              '<': '<'
-              '<=': '<='
-              '=': '='
-              '!=': '!='
-              '>=': '>='
-              '>': '>'
-              between: between
-              'not between': 'not between'
-              empty: empty
-              'not empty': 'not empty'
-            identifier: field_measurements_dimensions_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        field_timespan_to:
-          id: field_timespan_to
-          table: search_api_index_a3d_object_index
-          field: field_timespan_to
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_numeric
-          operator: '>='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 4
-          exposed: true
-          expose:
-            operator_id: field_timespan_to_op
-            label: 'Timespan » From'
-            description: ''
-            use_operator: false
-            operator: field_timespan_to_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_timespan_to
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        field_timespan_from:
-          id: field_timespan_from
-          table: search_api_index_a3d_object_index
-          field: field_timespan_from
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_numeric
-          operator: '<='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 4
-          exposed: true
-          expose:
-            operator_id: field_timespan_from_op
-            label: 'Timespan » To'
-            description: ''
-            use_operator: false
-            operator: field_timespan_from_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_timespan_from
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        field_wgs84_geolocation:
-          id: field_wgs84_geolocation
-          table: search_api_index_a3d_object_index
-          field: field_wgs84_geolocation
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_location
-          operator: '<'
-          value:
-            value: ''
-            distance:
-              from: ''
-              to: ''
-          group: 4
-          exposed: true
-          expose:
-            operator_id: field_wgs84_geolocation_op
-            label: 'Geolocation Radius'
-            description: 'Enter coordinates, e.g. "48.8985908,16.1340411"'
-            use_operator: false
-            operator: field_wgs84_geolocation_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_wgs84_geolocation
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin: raw
-          plugin-geocode:
-            plugins:
-              nominatim:
-                checked: '0'
-                weight: '0'
-              openstreetmap:
-                checked: '0'
-                weight: '0'
-            radius_type: select
-            radius_options: "- -\r\n5 5 km\r\n10 10 km\r\n16.09 10 mi"
-            radius_units: km
-          plugin-geocode_map:
-            radius_border_color: ''
-            radius_border_weight: ''
-            radius_background_color: ''
-            radius_background_transparency: ''
-            marker_image: ''
-          plugin-raw:
-            radius_type: textfield
-            radius_options: "- -\r\n5 5 km\r\n10 10 km\r\n16.09 10 mi"
-            radius_units: km
-          require: 0
-        field_wgs84_geolocation_boundary:
-          id: field_wgs84_geolocation_boundary
-          table: search_api_index_a3d_object_index
-          field: field_wgs84_geolocation_boundary
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: geolocation_search_api_filter_boundary
-          operator: '='
-          value:
-            lat_north_east: ''
-            lng_north_east: ''
-            lat_south_west: ''
-            lng_south_west: ''
-          group: 4
-          exposed: true
-          expose:
-            operator_id: ''
-            label: 'Geolocation Boundary'
-            description: ''
-            use_operator: false
-            operator: field_wgs84_geolocation_boundary_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_wgs84_geolocation_boundary
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            input_by_geocoding_widget: 0
-            geocoder_plugin_settings:
-              plugin_id: photon
-              settings:
-                label: Address
-                description: 'Enter an address to be localized.'
-                autocomplete_min_length: 1
-                location_priority:
-                  lat: null
-                  lng: null
-                remove_duplicates: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
         facets_field_artefact_category:
           id: facets_field_artefact_category
           table: search_api_index_a3d_object_index
@@ -1483,76 +1168,6 @@ display:
             operator_limit_selection: false
             operator_list: {  }
             identifier: field_artefact_category_facet
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          hierarchy: false
-          label_display: visible
-          facet:
-            query_operator: or
-            min_count: 1
-            show_numbers: true
-            processor_configs:
-              translate_entity:
-                weights:
-                  build: 5
-                settings: {  }
-              count_widget_order:
-                weights:
-                  sort: -8
-                settings:
-                  sort: DESC
-              display_value_widget_order:
-                weights:
-                  sort: -9
-                settings:
-                  sort: ASC
-        facets_field_ownership:
-          id: facets_field_ownership
-          table: search_api_index_a3d_object_index
-          field: facets_field_ownership
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: facets_filter
-          operator: '='
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: Ownership
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_ownership_facet
             required: false
             remember: false
             multiple: true
@@ -1672,30 +1287,33 @@ display:
                   sort: -9
                 settings:
                   sort: ASC
-        facets_field_city:
-          id: facets_field_city
+        field_timespan_to:
+          id: field_timespan_to
           table: search_api_index_a3d_object_index
-          field: facets_field_city
+          field: field_timespan_to
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: facets_filter
-          operator: '='
-          value: ''
+          plugin_id: search_api_numeric
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: ''
-            label: City
+            operator_id: field_timespan_to_op
+            label: 'Timespan » From'
             description: ''
             use_operator: false
-            operator: ''
+            operator: field_timespan_to_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_city
+            identifier: field_timespan_to
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -1709,6 +1327,9 @@ display:
               arf_user: '0'
               kch_user: '0'
               lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1721,27 +1342,61 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          hierarchy: false
-          label_display: visible
-          facet:
-            query_operator: or
-            min_count: 1
-            show_numbers: true
-            processor_configs:
-              translate_entity:
-                weights:
-                  build: 5
-                settings: {  }
-              count_widget_order:
-                weights:
-                  sort: -8
-                settings:
-                  sort: DESC
-              display_value_widget_order:
-                weights:
-                  sort: -9
-                settings:
-                  sort: ASC
+        field_timespan_from:
+          id: field_timespan_from
+          table: search_api_index_a3d_object_index
+          field: field_timespan_from
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_numeric
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_timespan_from_op
+            label: 'Timespan » To'
+            description: ''
+            use_operator: false
+            operator: field_timespan_from_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_timespan_from
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
         facets_field_site:
           id: facets_field_site
           table: search_api_index_a3d_object_index
@@ -1819,12 +1474,355 @@ display:
                   sort: ASC
             hierarchy: taxonomy
             expand_hierarchy: 0
+        facets_field_city:
+          id: facets_field_city
+          table: search_api_index_a3d_object_index
+          field: facets_field_city
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: City
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_city
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              count_widget_order:
+                weights:
+                  sort: -8
+                settings:
+                  sort: DESC
+              display_value_widget_order:
+                weights:
+                  sort: -9
+                settings:
+                  sort: ASC
+        facets_field_ownership:
+          id: facets_field_ownership
+          table: search_api_index_a3d_object_index
+          field: facets_field_ownership
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: Ownership
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_ownership_facet
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              count_widget_order:
+                weights:
+                  sort: -8
+                settings:
+                  sort: DESC
+              display_value_widget_order:
+                weights:
+                  sort: -9
+                settings:
+                  sort: ASC
+        field_wgs84_geolocation:
+          id: field_wgs84_geolocation
+          table: search_api_index_a3d_object_index
+          field: field_wgs84_geolocation
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_location
+          operator: '<'
+          value:
+            value: ''
+            distance:
+              from: ''
+              to: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_wgs84_geolocation_op
+            label: 'Geolocation radius'
+            description: 'Enter coordinates, e.g. "48.8985908,16.1340411"'
+            use_operator: false
+            operator: field_wgs84_geolocation_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_wgs84_geolocation
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin: raw
+          plugin-geocode:
+            plugins:
+              nominatim:
+                checked: '0'
+                weight: '0'
+              openstreetmap:
+                checked: '0'
+                weight: '0'
+            radius_type: select
+            radius_options: "- -\r\n5 5 km\r\n10 10 km\r\n16.09 10 mi"
+            radius_units: km
+          plugin-geocode_map:
+            radius_border_color: ''
+            radius_border_weight: ''
+            radius_background_color: ''
+            radius_background_transparency: ''
+            marker_image: ''
+          plugin-raw:
+            radius_type: textfield
+            radius_options: "- -\r\n5 5 km\r\n10 10 km\r\n16.09 10 mi"
+            radius_units: km
+          require: 0
+        field_wgs84_geolocation_boundary:
+          id: field_wgs84_geolocation_boundary
+          table: search_api_index_a3d_object_index
+          field: field_wgs84_geolocation_boundary
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: geolocation_search_api_filter_boundary
+          operator: '='
+          value:
+            lat_north_east: ''
+            lng_north_east: ''
+            lat_south_west: ''
+            lng_south_west: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Geolocation boundary'
+            description: ''
+            use_operator: false
+            operator: field_wgs84_geolocation_boundary_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_wgs84_geolocation_boundary
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            input_by_geocoding_widget: 0
+            geocoder_plugin_settings:
+              plugin_id: photon
+              settings:
+                label: Address
+                description: 'Enter an address to be localized.'
+                autocomplete_min_length: 1
+                location_priority:
+                  lat: null
+                  lng: null
+                remove_duplicates: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_measurements_dimensions_value:
+          id: field_measurements_dimensions_value
+          table: search_api_index_a3d_object_index
+          field: field_measurements_dimensions_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_numeric
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_measurements_dimensions_value_op
+            label: 'Measurements » value'
+            description: ''
+            use_operator: true
+            operator: field_measurements_dimensions_value_op
+            operator_limit_selection: true
+            operator_list:
+              '<': '<'
+              '<=': '<='
+              '=': '='
+              '!=': '!='
+              '>=': '>='
+              '>': '>'
+              between: between
+              'not between': 'not between'
+              empty: empty
+              'not empty': 'not empty'
+            identifier: field_measurements_dimensions_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
         groups:
           1: AND
-          2: OR
-          3: AND
       style:
         type: table
         options:
@@ -1950,8 +1948,17 @@ display:
             format: basic_html
           tokenize: false
       arguments: {  }
+      query:
+        type: search_api_query
+        options:
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
+          query_tags:
+            - digitalia_calculate_paged
       defaults:
         empty: false
+        query: false
         title: true
         exposed_form: true
         fields: true

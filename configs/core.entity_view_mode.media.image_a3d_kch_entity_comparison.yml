@@ -1,0 +1,11 @@
+uuid: 980ea9a9-9174-423f-a7a1-b486e74786b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.image_a3d_kch_entity_comparison
+label: 'A3D KCH entity comparison'
+description: ''
+targetEntityType: media
+cache: true

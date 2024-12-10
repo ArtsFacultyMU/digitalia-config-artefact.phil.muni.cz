@@ -1,17 +1,8 @@
 display:
-  default:
-    display_options:
-      empty:
-        area:
-          content:
-            value: '<p>Page not found.</p>'
-            format: basic_html
   kch_analysis_to_object:
     display_options:
       title: 'Analýzy tohoto objektu'
       fields:
-        field_analysis_of:
-          label: Analyzuje
         field_analysed_by:
           label: Výzkumník
         field_instrument:
@@ -178,3 +169,9 @@ display:
       header:
         result:
           content: 'Zobrazuje se @start - @end z @total souvisejících keramických výrobků'
+  kch_statistics:
+    display_options:
+      fields:
+        nothing:
+          alter:
+            text: "{% if type == \"A3D object\" %}\r\n    keramických výrobků\r\n{% elseif type == \"Analysis\"  %}\r\n    analýz\r\n{% endif %}"

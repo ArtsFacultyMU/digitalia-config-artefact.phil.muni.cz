@@ -1,0 +1,11 @@
+uuid: 9f9c443f-febe-4564-a223-5402e82659cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.chemicals
+label: chemicals
+description: 'indexed display, used in analysis index, enables search on data field'
+targetEntityType: node
+cache: true

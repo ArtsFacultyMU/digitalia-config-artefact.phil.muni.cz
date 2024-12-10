@@ -26,6 +26,7 @@ permissions:
   - 'access site-wide contact form'
   - 'restful get oai_pmh'
   - 'use a3d_arf_entity_comparison entity comparison'
+  - 'use a3d_kch_entity_comparison entity comparison'
   - 'use a3d_meta_entity_comparison entity comparison'
   - 'use a3d_nef_entity_comparison entity comparison'
   - 'use text format restricted_html'

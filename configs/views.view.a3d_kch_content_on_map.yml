@@ -9,6 +9,7 @@ dependencies:
     - field.storage.node.field_wgs84_geolocation_accuracy
     - node.type.a3d_object
     - system.menu.kch-main-menu
+    - taxonomy.vocabulary.actor
     - taxonomy.vocabulary.artefact_category
   content:
     - 'taxonomy_term:artefact_category:77112d62-5917-4d8f-b3c1-98b881dc7f45'
@@ -94,6 +95,69 @@ display:
           type: geolocation_latlng
           settings: {  }
           group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_artefact_category:
+          id: field_artefact_category
+          table: node__field_artefact_category
+          field: field_artefact_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -234,8 +298,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_artefact_category }} | {{ title__value }}'
             make_link: true
             path: '/kch/node/{{ nid }}'
             absolute: false
@@ -277,69 +341,6 @@ display:
           settings:
             link_to_entity: false
           group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_artefact_category:
-          id: field_artefact_category
-          table: node__field_artefact_category
-          field: field_artefact_category
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -497,23 +498,7 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
-          granularity: second
+      sorts: {  }
       arguments: {  }
       filters:
         status:
@@ -536,6 +521,7 @@ display:
           plugin_id: bundle
           value:
             a3d_object: a3d_object
+          group: 1
         field_group_code_value:
           id: field_group_code_value
           table: group__field_group_code
@@ -693,7 +679,7 @@ display:
             identifier: field_artefact_category_target_id
             required: false
             remember: false
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -732,6 +718,247 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+        field_ownership_target_id:
+          id: field_ownership_target_id
+          table: node__field_ownership
+          field: field_ownership_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_ownership_target_id_op
+            label: 'Held by'
+            description: ''
+            use_operator: false
+            operator: field_ownership_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_ownership_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            reduce: false
+            chosen_override: 0
+            disable_search: 0
+            search_contains: 0
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: actor
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_wgs84_geolocation_boundary:
+          id: field_wgs84_geolocation_boundary
+          table: node__field_wgs84_geolocation
+          field: field_wgs84_geolocation_boundary
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: geolocation_filter_boundary
+          operator: '='
+          value:
+            lat_north_east: ''
+            lng_north_east: ''
+            lat_south_west: ''
+            lng_south_west: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Geolocation Boundary'
+            description: 'e.g. NE lat. "49.2225389", long. "16.6746572" and SW lat. "49.1646728", long. "16.5446453"'
+            use_operator: false
+            operator: field_wgs84_geolocation_boundary_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_wgs84_geolocation_boundary
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            input_by_geocoding_widget: 0
+            geocoder_plugin_settings:
+              plugin_id: photon
+              settings:
+                label: Address
+                description: 'Enter an address to be localized.'
+                autocomplete_min_length: 1
+                location_priority:
+                  lat: null
+                  lng: null
+                remove_duplicates: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_timespan_from:
+          id: field_timespan_from
+          table: node__field_timespan
+          field: field_timespan_from
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_timespan_from_op
+            label: 'Earliest datation'
+            description: ''
+            use_operator: false
+            operator: field_timespan_from_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_timespan_from
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_timespan_to:
+          id: field_timespan_to
+          table: node__field_timespan
+          field: field_timespan_to
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_timespan_to_op
+            label: 'Latest datation'
+            description: ''
+            use_operator: false
+            operator: field_timespan_to_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_timespan_to
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: maps_common
         options:
@@ -1374,8 +1601,8 @@ display:
         - 'config:field.storage.node.field_site'
         - 'config:field.storage.node.field_wgs84_geolocation'
         - 'config:field.storage.node.field_wgs84_geolocation_accuracy'
-  page_1:
-    id: page_1
+  kch_map:
+    id: kch_map
     display_title: ' Pottery Products on Map'
     display_plugin: page
     position: 1
@@ -1396,7 +1623,7 @@ display:
       path: kch/map
       menu:
         type: normal
-        title: 'Pottery Products on Map'
+        title: Map
         description: ''
         weight: -49
         expanded: false

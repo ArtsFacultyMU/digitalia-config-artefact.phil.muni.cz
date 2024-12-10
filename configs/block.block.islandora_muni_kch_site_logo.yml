@@ -34,4 +34,4 @@ visibility:
   request_domain:
     id: request_domain
     negate: false
-    domains: pottery-analyses-devel.phil.muni.cz
+    domains: "pottery-analyses-devel.phil.muni.cz\r\npottery-analyses.phil.muni.cz"

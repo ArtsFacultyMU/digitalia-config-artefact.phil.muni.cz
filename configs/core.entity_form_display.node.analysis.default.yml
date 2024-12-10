@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.analysis.field_colour_inward
     - field.field.node.analysis.field_colour_of_core
     - field.field.node.analysis.field_colour_outward
+    - field.field.node.analysis.field_data_pres_value
     - field.field.node.analysis.field_date_analysed
     - field.field.node.analysis.field_elements
     - field.field.node.analysis.field_firing_characteristic
@@ -131,6 +132,16 @@ content:
     weight: 16
     region: content
     settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_data_pres_value:
+    type: entity_reference_autocomplete
+    weight: 40
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }

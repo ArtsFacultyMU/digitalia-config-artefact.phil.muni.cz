@@ -7,5 +7,5 @@ dependencies:
 id: kch_site_logo
 title: 'KCH site logo'
 content:
-  value: '<p><a href="/group/kch"><img src="/themes/custom/islandora_muni/platform_specific/images/pottery_analyses.svg" alt="Home" width="167" height="67"></a></p>'
+  value: '<p><a class="site-branding__logo" href="/group/kch"><img src="/themes/custom/islandora_muni/platform_specific/images/pottery_analyses.svg" alt="Home" width="167" height="67"></a></p>'
   format: full_html

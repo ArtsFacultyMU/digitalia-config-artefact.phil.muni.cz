@@ -5,14 +5,6 @@ display:
         nid:
           fallback_options:
             format_plural_string: !!binary MQNAY291bnQD
-  browse_analyses:
-    display_options:
-      fields:
-        nid:
-          fallback_options:
-            format_plural_string: !!binary MQNAY291bnQD
-      menu:
-        title: Analýzy
   kch_browse:
     display_options:
       fields:
@@ -42,11 +34,13 @@ display:
         field_site:
           label: Lokalita
         field_ownership:
-          label: Vlastník
+          label: 'V držení'
         field_timespan:
           label: Datace
         field_abs_dat_range:
           label: 'Absolutní rozsah datace'
+        view:
+          label: Obrázek
       exposed_form:
         options:
           submit_button: Vyhledat
@@ -58,6 +52,8 @@ display:
             sort:
               advanced:
                 collapsible_label: 'Možnosti řazení'
+            general:
+              secondary_label: 'Rozšíření vyhledávání podle typu objektu'
           text_input_required: 'Vyberte filtr, až kliknete na vyhledat, zobrazí se výsledky'
       empty:
         area:
@@ -83,7 +79,7 @@ display:
             label: 'ID artefaktu'
         field_ownership:
           expose:
-            label: Vlastník
+            label: 'V držení'
         field_site:
           expose:
             label: Lokalita
@@ -93,14 +89,55 @@ display:
         field_timespan_to:
           expose:
             label: 'Horní odhad datace'
-        field_artefact_category:
+        search_api_fulltext:
+          expose:
+            label: 'Libovolný výraz'
+        facets_field_motif:
+          expose:
+            label: Motiv
+        facets_field_raw_material_name:
+          expose:
+            label: Materiál
+        facets_field_material_colour:
+          expose:
+            label: 'Barva materiálu'
+        facets_field_artefact_category:
           expose:
             label: 'Kategorie artefaktu'
+        facets_field_aquamanile_type:
+          expose:
+            label: 'Typ akvamanile'
+        facets_field_aquamanile_subtype:
+          expose:
+            label: 'Podtype aquamanile'
+        facets_field_sculpture_type:
+          expose:
+            label: 'Typ drobné plastiky'
+        facets_field_sculpture_subtype:
+          expose:
+            label: 'Podtyp drobné plastiky'
+        facets_field_st_placement_type1:
+          expose:
+            label: 'Typ kachle dle umístění 1'
+        facets_field_st_placement_type2:
+          expose:
+            label: 'Typ kachle dle umístění 2'
+        facets_field_st_placement_type3:
+          expose:
+            label: 'Typ kachle dle umístění 3'
+        facets_field_st_shape_type1:
+          expose:
+            label: 'Typ kachle dle morfologie 1'
+        facets_field_st_shape_type2:
+          expose:
+            label: 'Typ kachle dle morfologie 2'
       header:
         result:
           content: 'Zobrazují se položky @start - @end z @total'
       menu:
-        title: Vyhledávání
+        title: 'Keramické výrobky'
+      title: 'Keramické výrobky'
+    display_title: 'Keramické výrobky'
   kch_search_top:
     display_options:
       title: Vyhledávání

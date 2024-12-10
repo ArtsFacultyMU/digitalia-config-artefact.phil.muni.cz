@@ -1,0 +1,2314 @@
+uuid: bff13fe4-a449-424f-87cc-5d0613453afc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artefact_id
+    - search_api.index.analyses
+    - system.menu.kch-main-menu
+    - taxonomy.vocabulary.artefact_category
+    - taxonomy.vocabulary.binder_type
+    - taxonomy.vocabulary.grain_type
+    - taxonomy.vocabulary.microstructure
+  content:
+    - 'taxonomy_term:artefact_category:77112d62-5917-4d8f-b3c1-98b881dc7f45'
+    - 'taxonomy_term:artefact_category:87e4e39f-b847-453f-a2cf-c0c4632f73b1'
+    - 'taxonomy_term:artefact_category:8fdfc173-9e25-469b-a709-9335128ab74b'
+    - 'taxonomy_term:artefact_category:a48922b9-32c2-46a9-b126-8181102c63b8'
+    - 'taxonomy_term:artefact_category:c9d690a9-0600-4adc-afc4-e3c5832bd98c'
+  module:
+    - facets_exposed_filters
+    - search_api
+    - views_field_view
+id: a3d_kch_analyses_search
+label: 'A3D KCH Analyses Search'
+module: views
+description: ''
+tag: ''
+base_table: search_api_index_analyses
+base_field: search_api_id
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Search Pottery Product Analyses'
+      fields:
+        nid:
+          id: nid
+          table: search_api_datasource_analyses_entity_node
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ID
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_numeric
+          fallback_options:
+            set_precision: false
+            precision: 0
+            decimal: .
+            separator: ','
+            format_plural: false
+            format_plural_string: !!binary MQNAY291bnQ=
+            prefix: ''
+            suffix: ''
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            format_plural_values:
+              - '1'
+              - '@count'
+        nid_2:
+          id: nid_2
+          table: search_api_index_analyses
+          field: nid_2
+          relationship: none
+          group_type: group
+          admin_label: 'a3d object nid'
+          plugin_id: search_api_field
+          label: 'Analysis of » Content » Sample of » Content » ID (indexed field)'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_numeric
+          fallback_options:
+            set_precision: false
+            precision: 0
+            decimal: .
+            separator: ','
+            format_plural: false
+            format_plural_string: !!binary MQNAY291bnQ=
+            prefix: ''
+            suffix: ''
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            format_plural_values:
+              - '1'
+              - '@count'
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: image
+          plugin_id: view
+          label: Image
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: a3d_artefact_media
+          display: a3d_first_image_thumbnail
+          arguments: '{{ raw_fields.nid_2 }}'
+        name_5:
+          id: name_5
+          table: search_api_index_analyses
+          field: name_5
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: 'Artefact category'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        field_artefact_id:
+          id: field_artefact_id
+          table: search_api_index_analyses
+          field: field_artefact_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: 'Artefact ID'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        name:
+          id: name
+          table: search_api_index_analyses
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: Analysis
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: true
+            path: '/kch/analysis/node/{{ nid }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        name_2:
+          id: name_2
+          table: search_api_index_analyses
+          field: name_2
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: 'Instrument used'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'Analysis of'
+          plugin_id: custom
+          label: 'Analysis of'
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ name_5 }} {{ field_artefact_id }}'
+            make_link: true
+            path: '/kch/node/{{ nid_2 }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+        name_7:
+          id: name_7
+          table: search_api_index_analyses
+          field: name_7
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: Site
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        name_4:
+          id: name_4
+          table: search_api_index_analyses
+          field: name_4
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: 'Rock fragments » Taxonomy term » Name (indexed field)'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        name_1:
+          id: name_1
+          table: search_api_index_analyses
+          field: name_1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_field
+          label: 'Grain type » Taxonomy term » Name (indexed field)'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+        from_1:
+          id: from_1
+          table: search_api_index_analyses
+          field: from_1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_numeric
+          label: 'Analysis of » Content » Sample of » Content » Timespan » From value (indexed field)'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ''
+          format_plural: false
+          format_plural_string: !!binary Aw==
+          prefix: ''
+          suffix: ''
+          link_to_item: false
+          use_highlighting: false
+          multi_type: separator
+          multi_separator: ', '
+          format_plural_values: {  }
+        to_1:
+          id: to_1
+          table: search_api_index_analyses
+          field: to_1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_numeric
+          label: 'Analysis of » Content » Sample of » Content » Timespan » To value (indexed field)'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ''
+          format_plural: false
+          format_plural_string: !!binary Aw==
+          prefix: ''
+          suffix: ''
+          link_to_item: false
+          use_highlighting: false
+          multi_type: separator
+          multi_separator: ', '
+          format_plural_values: {  }
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: Datation
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ from_1 }} - {{ to_1 }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+        rendered_item_3:
+          id: rendered_item_3
+          table: search_api_index_analyses
+          field: rendered_item_3
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          label: 'Parent group (indexed field)'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          use_highlighting: false
+          multi_type: separator
+          multi_separator: ', '
+      pager:
+        type: full
+        options:
+          offset: 0
+          pagination_heading_level: h4
+          items_per_page: 60
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 5
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: search_api_none
+        options: {  }
+      empty: {  }
+      sorts:
+        name:
+          id: name
+          table: search_api_index_analyses
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: 'Analysis type'
+            field_identifier: analysis_type
+          exposed: true
+        name_5:
+          id: name_5
+          table: search_api_index_analyses
+          field: name_5
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: 'Artefact category'
+            field_identifier: artefact_category
+          exposed: true
+        field_artefact_id:
+          id: field_artefact_id
+          table: search_api_index_analyses
+          field: field_artefact_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: 'Artefact ID'
+            field_identifier: artefact_id
+          exposed: true
+        from:
+          id: from
+          table: search_api_index_analyses
+          field: from
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: 'Firing temperature » From'
+            field_identifier: firing_temp_from
+          exposed: true
+        to:
+          id: to
+          table: search_api_index_analyses
+          field: to
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: 'Firing temperature » To'
+            field_identifier: firing_temp_to
+          exposed: true
+        from_1:
+          id: from_1
+          table: search_api_index_analyses
+          field: from_1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: 'Earliest datation'
+            field_identifier: earliest_datation
+          exposed: true
+        to_1:
+          id: to_1
+          table: search_api_index_analyses
+          field: to_1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: 'Latest datation'
+            field_identifier: latest_datation
+          exposed: true
+      arguments: {  }
+      filters:
+        field_artefact_category:
+          id: field_artefact_category
+          table: search_api_index_analyses
+          field: field_artefact_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_term
+          operator: or
+          value:
+            533: 533
+            535: 535
+            537: 537
+            534: 534
+            536: 536
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: artefact_category
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        type:
+          id: type
+          table: search_api_index_analyses
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_options
+          operator: or
+          value:
+            analysis: analysis
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        facets_field_artefact_category:
+          id: facets_field_artefact_category
+          table: search_api_index_analyses
+          field: facets_field_artefact_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Artefact category'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_artefact_category
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              display_value_widget_order:
+                weights:
+                  sort: 40
+                settings:
+                  sort: ASC
+        from_1:
+          id: from_1
+          table: search_api_index_analyses
+          field: from_1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_numeric
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: from_1_op
+            label: 'Earliest datation'
+            description: ''
+            use_operator: false
+            operator: from_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: from_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        to_1:
+          id: to_1
+          table: search_api_index_analyses
+          field: to_1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_numeric
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: to_1_op
+            label: 'Latest datation'
+            description: ''
+            use_operator: false
+            operator: to_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: to_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        facets_field_analysis_type:
+          id: facets_field_analysis_type
+          table: search_api_index_analyses
+          field: facets_field_analysis_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Analysis type'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_analysis_type
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              display_value_widget_order:
+                weights:
+                  sort: 40
+                settings:
+                  sort: ASC
+        facets_field_instrument:
+          id: facets_field_instrument
+          table: search_api_index_analyses
+          field: facets_field_instrument
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Instrument used'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_instrument
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+        facets_field_rock_fragments:
+          id: facets_field_rock_fragments
+          table: search_api_index_analyses
+          field: facets_field_rock_fragments
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Rock fragments'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_rock_fragments
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              display_value_widget_order:
+                weights:
+                  sort: 40
+                settings:
+                  sort: ASC
+        rendered_item:
+          id: rendered_item
+          table: search_api_index_analyses
+          field: rendered_item
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_text
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: rendered_item_op
+            label: Chemicals
+            description: ''
+            use_operator: false
+            operator: rendered_item_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: chemical
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        rendered_item_1:
+          id: rendered_item_1
+          table: search_api_index_analyses
+          field: rendered_item_1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_text
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: rendered_item_1_op
+            label: Minerals
+            description: ''
+            use_operator: false
+            operator: rendered_item_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: mineral
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        rendered_item_2:
+          id: rendered_item_2
+          table: search_api_index_analyses
+          field: rendered_item_2
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_text
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: rendered_item_2_op
+            label: Elements
+            description: ''
+            use_operator: false
+            operator: rendered_item_2_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: element
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_grain_type:
+          id: field_grain_type
+          table: search_api_index_analyses
+          field: field_grain_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_term
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_grain_type_op
+            label: 'Grain type'
+            description: ''
+            use_operator: false
+            operator: field_grain_type_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_grain_type
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: grain_type
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_binder_type:
+          id: field_binder_type
+          table: search_api_index_analyses
+          field: field_binder_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_term
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_binder_type_op
+            label: 'Binder type'
+            description: ''
+            use_operator: false
+            operator: field_binder_type_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_binder_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: binder_type
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_microstructure:
+          id: field_microstructure
+          table: search_api_index_analyses
+          field: field_microstructure
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_term
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_microstructure_op
+            label: Microstructure
+            description: ''
+            use_operator: false
+            operator: field_microstructure_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_microstructure
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: microstructure
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        to:
+          id: to
+          table: search_api_index_analyses
+          field: to
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_numeric
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: to_op
+            label: 'Firing temperature » upper bound'
+            description: ''
+            use_operator: false
+            operator: to_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: to
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        from:
+          id: from
+          table: search_api_index_analyses
+          field: from
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_numeric
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: from_op
+            label: 'Firing temperature » lower bound'
+            description: ''
+            use_operator: false
+            operator: from_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: from
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_porosity:
+          id: field_porosity
+          table: search_api_index_analyses
+          field: field_porosity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_numeric
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_porosity_op
+            label: 'Porosity percentage » lower bound'
+            description: ''
+            use_operator: false
+            operator: field_porosity_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_porosity
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_porosity_1:
+          id: field_porosity_1
+          table: search_api_index_analyses
+          field: field_porosity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_numeric
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_porosity_1_op
+            label: 'Porosity percentage » upper bound'
+            description: ''
+            use_operator: false
+            operator: field_porosity_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_porosity_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            nid: nid
+            name_5: name_5
+            field_artefact_id: field_artefact_id
+            name: name
+            nothing: nothing
+            name_7: name_7
+            name_2: name_2
+          default: '-1'
+          info:
+            nid:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            name_5:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_artefact_id:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            nothing:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            name_7:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            name_2:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
+      row:
+        type: fields
+      query:
+        type: search_api_query
+        options:
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
+          query_tags: {  }
+      relationships: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: 'Displaying @start - @end of @total'
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_artefact_id'
+        - 'config:search_api.index.analyses'
+        - 'search_api_list:analyses'
+  page_1:
+    id: page_1
+    display_title: 'Search Analyses'
+    display_plugin: page
+    position: 1
+    display_options:
+      display_description: ''
+      exposed_block: true
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+      path: kch/analyses
+      menu:
+        type: normal
+        title: Analyses
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: kch-main-menu
+        parent: 'menu_link_content:e1220490-eed2-47e8-a48d-607e680203fd'
+        context: '0'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_artefact_id'
+        - 'config:search_api.index.analyses'
+        - 'search_api_list:analyses'

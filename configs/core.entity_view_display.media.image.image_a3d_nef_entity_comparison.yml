@@ -55,6 +55,7 @@ hidden:
   field_width: true
   langcode: true
   link_for_entity_comparison_a3d_arf_entity_comparison: true
+  link_for_entity_comparison_a3d_kch_entity_comparison: true
   link_for_entity_comparison_a3d_meta_entity_comparison: true
   link_for_entity_comparison_a3d_nef_entity_comparison: true
   name: true

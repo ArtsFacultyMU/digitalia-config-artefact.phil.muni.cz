@@ -1,0 +1,133 @@
+uuid: 5905ad65-c895-4c37-b030-cf935198cdc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_homepage_statistics
+    - node.type.a3d_platform_homepage
+  module:
+    - viewfield
+id: node.a3d_platform_homepage.field_homepage_statistics
+field_name: field_homepage_statistics
+entity_type: node
+bundle: a3d_platform_homepage
+label: 'Homepage statistics'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  force_default: false
+  allowed_views:
+    a3d_all_platform_terms: '0'
+    dev_generic_content_view: '0'
+    a3d_arf_content: '0'
+    a3d_arf_media: '0'
+    a3d_arf_search_index_browse: '0'
+    a3d_arf_search_index_search: '0'
+    a3d_arf_search_index_taxonomy: '0'
+    a3d_arf_taxonomy: '0'
+    a3d_artefact_media: '0'
+    a3d_associated_media_export: '0'
+    a3d_dev_add_term: '0'
+    a3d_editor_block: '0'
+    a3d_eva_biblatex: '0'
+    a3d_eva_entity_group_relation: '0'
+    a3d_eva_field_appellation: '0'
+    a3d_eva_handle: '0'
+    a3d_eva_homepage_link: '0'
+    a3d_eva_taxonomy_title: '0'
+    a3d_group_list: '0'
+    a3d_group_terms: '0'
+    a3d_kch_analyses_of_sample: '0'
+    a3d_kch_analyses_search: '0'
+    a3d_kch_content: '0'
+    a3d_kch_content2: '0'
+    a3d_kch_content_on_map: '0'
+    a3d_kch_index_related_samples_and_analyses: '0'
+    a3d_kch_media: '0'
+    mindat_org_integration: '0'
+    a3d_kch_search_index: '0'
+    a3d_kch_taxonomy: '0'
+    manage_samples: '0'
+    a3d_meta_content: '0'
+    a3d_meta_content_export: '0'
+    a3d_meta_group: '0'
+    a3d_meta_media: '0'
+    a3d_meta_object_on_map: '0'
+    a3d_meta_search_index_browse: '0'
+    a3d_meta_search_index_search: '0'
+    a3d_meta_search_index_taxonomy: '0'
+    a3d_meta_taxonomy: '0'
+    a3d_nef_content: '0'
+    a3d_nef_content_export: '0'
+    a3d_nef_content_taxonomy: '0'
+    a3d_nef_media: '0'
+    a3d_nef_search_index_browse: '0'
+    a3d_nef_search_index_search: '0'
+    a3d_nef_search_index_taxonomy: '0'
+    a3d_nef_taxonomy: '0'
+    a3d_platforms: '0'
+    a3d_private_fields: '0'
+    a3d_statistics: '0'
+    a3d_taxonomy: '0'
+    a3d_taxonomy_reference_group: '0'
+    a3d_vbo_media: '0'
+    all_taxonomy_terms: '0'
+    article_mods_mapping: '0'
+    comment: '0'
+    content: '0'
+    block_content: '0'
+    file_checksum: '0'
+    files: '0'
+    frontpage: '0'
+    group_media: '0'
+    group_members: '0'
+    group_nodes: '0'
+    group_terms: '0'
+    iiif_manifest: '0'
+    media_of: '0'
+    manage_members: '0'
+    media: '0'
+    media_display_blocks: '0'
+    display_media: '0'
+    missing_media: '0'
+    newspaper_issues_accordion_view: '0'
+    non_fedora_files: '0'
+    oai_pmh: '0'
+    oai_pmh_item_data: '0'
+    oai_pmh_item_links: '0'
+    user_admin_people: '0'
+    comments_recent: '0'
+    content_recent: '0'
+    reorder_children: '0'
+    site_on_map: '0'
+    solr_search_content: '0'
+    taxonomy_term: '0'
+    taxonomy_terms: '0'
+    t: '0'
+    term_from_term_name: '0'
+    term_from_uri: '0'
+    terms_in_vocabulary: '0'
+    thumbnail: '0'
+    thumbnail_of_first_child: '0'
+    top_level_collections: '0'
+    watchdog: '0'
+    who_s_new: '0'
+    who_s_online: '0'
+  allowed_display_types:
+    block: block
+    data_export: '0'
+    default: '0'
+    embed: '0'
+    entity_reference: '0'
+    entity_view: '0'
+    feed: '0'
+    page: '0'
+    rest_export: '0'
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: viewfield

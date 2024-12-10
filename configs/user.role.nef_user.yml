@@ -1,9 +1,12 @@
 uuid: 9045391c-37c0-48a8-8507-64ef8a954684
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - entity_comparison
 id: nef_user
 label: 'NEF user'
 weight: -2
 is_admin: null
-permissions: {  }
+permissions:
+  - 'use a3d_kch_entity_comparison entity comparison'

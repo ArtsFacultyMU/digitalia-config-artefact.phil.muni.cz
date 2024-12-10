@@ -1,0 +1,18 @@
+uuid: ae819fb7-157b-4bdd-9cb1-e9924a8dda9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.arf_surf_data_pres
+id: node.arf_surf_data_pres.title
+field_name: title
+entity_type: node
+bundle: arf_surf_data_pres
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_views_block__a3d_arf_taxonomy_statistics_site
 theme: islandora_muni
 region: content
-weight: -36
+weight: -35
 provider: null
 plugin: 'views_block:a3d_arf_taxonomy-statistics_site'
 settings:

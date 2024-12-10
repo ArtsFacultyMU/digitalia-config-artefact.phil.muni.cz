@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_mainnavigation
 theme: islandora_muni
 region: primary_menu
-weight: -43
+weight: -41
 provider: null
 plugin: 'superfish:main'
 settings:

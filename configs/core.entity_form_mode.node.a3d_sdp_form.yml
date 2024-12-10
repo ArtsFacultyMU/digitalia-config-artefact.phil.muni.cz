@@ -1,0 +1,11 @@
+uuid: c218cee6-d68e-43fa-a8bd-6cb26e047a0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.a3d_sdp_form
+label: 'A3D SDP form'
+description: ''
+targetEntityType: node
+cache: true
