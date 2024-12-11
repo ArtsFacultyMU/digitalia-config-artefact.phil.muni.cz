@@ -1162,19 +1162,6 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        field_artefact_id:
-          id: field_artefact_id
-          table: search_api_index_a3d_object_index
-          field: field_artefact_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: ASC
-          expose:
-            label: 'Artefact ID'
-            field_identifier: field_artefact_id
-          exposed: true
         field_alternative_id:
           id: field_alternative_id
           table: search_api_index_a3d_object_index
@@ -1187,6 +1174,19 @@ display:
           expose:
             label: 'Alternative ID'
             field_identifier: field_alternative_id
+          exposed: true
+        field_artefact_id:
+          id: field_artefact_id
+          table: search_api_index_a3d_object_index
+          field: field_artefact_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: 'Artefact ID'
+            field_identifier: field_artefact_id
           exposed: true
         field_posture_name:
           id: field_posture_name

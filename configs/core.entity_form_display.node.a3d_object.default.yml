@@ -259,6 +259,8 @@ third_party_settings:
         - field_description_a3d
         - field_field_description_a3d_cs
         - field_measurements
+        - group_floor_tiles
+        - group_small_sculptures
         - group_aquamanilia
         - group_stove_tile
         - field_culture
@@ -324,8 +326,6 @@ third_party_settings:
         - field_preserved_parts_struct
         - field_surf_data_pres
         - field_mass_structure_data_pres
-        - group_small_sculptures
-        - group_floor_tiles
       label: Description
       region: content
       parent_name: ''
@@ -478,7 +478,7 @@ third_party_settings:
       label: 'Stove tiles'
       region: content
       parent_name: group_description
-      weight: 21
+      weight: 23
       format_type: details
       format_settings:
         classes: a3d_object_category_specific
@@ -494,7 +494,7 @@ third_party_settings:
       label: 'Small sculptures'
       region: hidden
       parent_name: group_description
-      weight: 23
+      weight: 21
       format_type: details
       format_settings:
         classes: ''
@@ -510,7 +510,7 @@ third_party_settings:
       label: Aquamanilia
       region: content
       parent_name: group_description
-      weight: 20
+      weight: 22
       format_type: details
       format_settings:
         classes: ''
@@ -525,7 +525,7 @@ third_party_settings:
       label: 'Floor tiles'
       region: hidden
       parent_name: group_description
-      weight: 24
+      weight: 20
       format_type: details
       format_settings:
         classes: ''
@@ -547,7 +547,7 @@ content:
     third_party_settings: {  }
   field_2d_asymmetry:
     type: entity_reference_autocomplete
-    weight: 27
+    weight: 29
     region: content
     settings:
       match_operator: CONTAINS
@@ -557,31 +557,13 @@ content:
     third_party_settings: {  }
   field_3d_shaping:
     type: string_textarea
-    weight: 40
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_3d_shaping_struct:
-    type: entity_reference_autocomplete
-    weight: 41
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_3d_traces:
-    type: string_textarea
     weight: 42
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_3d_traces_struct:
+  field_3d_shaping_struct:
     type: entity_reference_autocomplete
     weight: 43
     region: content
@@ -591,9 +573,27 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_3d_traces:
+    type: string_textarea
+    weight: 44
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_3d_traces_struct:
+    type: entity_reference_autocomplete
+    weight: 45
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_a_asymmetry:
     type: entity_reference_autocomplete
-    weight: 28
+    weight: 30
     region: content
     settings:
       match_operator: CONTAINS
@@ -637,7 +637,7 @@ content:
     third_party_settings: {  }
   field_alteration:
     type: entity_reference_autocomplete
-    weight: 49
+    weight: 51
     region: content
     settings:
       match_operator: CONTAINS
@@ -720,7 +720,7 @@ content:
     third_party_settings: {  }
   field_assess_cond_date:
     type: datetime_default
-    weight: 73
+    weight: 75
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -746,7 +746,7 @@ content:
     third_party_settings: {  }
   field_b_asymmetry:
     type: entity_reference_autocomplete
-    weight: 29
+    weight: 31
     region: content
     settings:
       match_operator: CONTAINS
@@ -756,7 +756,7 @@ content:
     third_party_settings: {  }
   field_ballistic_profile:
     type: entity_reference_autocomplete
-    weight: 26
+    weight: 28
     region: content
     settings:
       match_operator: CONTAINS
@@ -766,7 +766,7 @@ content:
     third_party_settings: {  }
   field_base_curve:
     type: entity_reference_autocomplete
-    weight: 32
+    weight: 34
     region: content
     settings:
       match_operator: CONTAINS
@@ -776,7 +776,7 @@ content:
     third_party_settings: {  }
   field_binder_type:
     type: entity_reference_autocomplete
-    weight: 53
+    weight: 55
     region: content
     settings:
       match_operator: CONTAINS
@@ -786,7 +786,7 @@ content:
     third_party_settings: {  }
   field_blank_orientation:
     type: entity_reference_autocomplete
-    weight: 33
+    weight: 35
     region: content
     settings:
       match_operator: CONTAINS
@@ -822,7 +822,7 @@ content:
     third_party_settings: {  }
   field_clay_colour:
     type: options_select
-    weight: 75
+    weight: 77
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -895,7 +895,7 @@ content:
     third_party_settings: {  }
   field_colour_paint:
     type: entity_reference_autocomplete
-    weight: 107
+    weight: 21
     region: content
     settings:
       match_operator: CONTAINS
@@ -939,7 +939,7 @@ content:
     third_party_settings: {  }
   field_culture:
     type: entity_reference_autocomplete
-    weight: 22
+    weight: 24
     region: content
     settings:
       match_operator: CONTAINS
@@ -959,7 +959,7 @@ content:
     third_party_settings: {  }
   field_deposition_cond:
     type: entity_reference_autocomplete
-    weight: 44
+    weight: 46
     region: content
     settings:
       match_operator: CONTAINS
@@ -1102,7 +1102,7 @@ content:
     third_party_settings: {  }
   field_firing:
     type: range
-    weight: 59
+    weight: 61
     region: content
     settings:
       label:
@@ -1114,7 +1114,7 @@ content:
     third_party_settings: {  }
   field_fract_nature:
     type: string_textarea
-    weight: 72
+    weight: 74
     region: content
     settings:
       rows: 5
@@ -1122,7 +1122,7 @@ content:
     third_party_settings: {  }
   field_fract_preservation:
     type: string_textarea
-    weight: 70
+    weight: 72
     region: content
     settings:
       rows: 5
@@ -1130,7 +1130,7 @@ content:
     third_party_settings: {  }
   field_fract_preservation_struct:
     type: entity_reference_autocomplete
-    weight: 71
+    weight: 73
     region: content
     settings:
       match_operator: CONTAINS
@@ -1150,7 +1150,7 @@ content:
     third_party_settings: {  }
   field_gb_scale:
     type: string_textfield
-    weight: 56
+    weight: 58
     region: content
     settings:
       size: 60
@@ -1158,7 +1158,7 @@ content:
     third_party_settings: {  }
   field_general_lateral_wear:
     type: entity_reference_autocomplete
-    weight: 37
+    weight: 39
     region: content
     settings:
       match_operator: CONTAINS
@@ -1224,7 +1224,7 @@ content:
     third_party_settings: {  }
   field_geolocation_original:
     type: string_textarea
-    weight: 108
+    weight: 22
     region: content
     settings:
       rows: 5
@@ -1232,7 +1232,7 @@ content:
     third_party_settings: {  }
   field_geolocation_original_priv:
     type: string_textarea
-    weight: 109
+    weight: 23
     region: content
     settings:
       rows: 5
@@ -1240,7 +1240,7 @@ content:
     third_party_settings: {  }
   field_glue_residues:
     type: entity_reference_autocomplete
-    weight: 39
+    weight: 41
     region: content
     settings:
       match_operator: CONTAINS
@@ -1250,7 +1250,7 @@ content:
     third_party_settings: {  }
   field_grain_type:
     type: entity_reference_autocomplete
-    weight: 54
+    weight: 56
     region: content
     settings:
       match_operator: CONTAINS
@@ -1285,7 +1285,7 @@ content:
     third_party_settings: {  }
   field_ledge_type:
     type: options_select
-    weight: 78
+    weight: 80
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -1327,7 +1327,7 @@ content:
     third_party_settings: {  }
   field_longitudinal_profile:
     type: entity_reference_autocomplete
-    weight: 30
+    weight: 32
     region: content
     settings:
       match_operator: CONTAINS
@@ -1337,7 +1337,7 @@ content:
     third_party_settings: {  }
   field_mass_structure_data_pres:
     type: inline_entity_form_simple
-    weight: 84
+    weight: 86
     region: content
     settings:
       form_mode: a3d_msdp_form
@@ -1350,7 +1350,7 @@ content:
     third_party_settings: {  }
   field_material_colour:
     type: entity_reference_autocomplete
-    weight: 68
+    weight: 70
     region: content
     settings:
       match_operator: CONTAINS
@@ -1396,7 +1396,7 @@ content:
     third_party_settings: {  }
   field_micro_ct:
     type: string_textarea
-    weight: 60
+    weight: 62
     region: content
     settings:
       rows: 5
@@ -1404,7 +1404,7 @@ content:
     third_party_settings: {  }
   field_microstructure:
     type: entity_reference_autocomplete
-    weight: 52
+    weight: 54
     region: content
     settings:
       match_operator: CONTAINS
@@ -1414,7 +1414,7 @@ content:
     third_party_settings: {  }
   field_mineral_fragments:
     type: entity_reference_autocomplete
-    weight: 57
+    weight: 59
     region: content
     settings:
       match_operator: CONTAINS
@@ -1424,7 +1424,7 @@ content:
     third_party_settings: {  }
   field_mineralogy:
     type: string_textarea
-    weight: 63
+    weight: 65
     region: content
     settings:
       rows: 5
@@ -1432,7 +1432,7 @@ content:
     third_party_settings: {  }
   field_motif:
     type: entity_reference_autocomplete
-    weight: 76
+    weight: 78
     region: content
     settings:
       match_operator: CONTAINS
@@ -1442,7 +1442,7 @@ content:
     third_party_settings: {  }
   field_number_of_instances:
     type: data_field_widget
-    weight: 23
+    weight: 25
     region: content
     settings:
       inline: true
@@ -1465,7 +1465,7 @@ content:
     third_party_settings: {  }
   field_orig_state_pres:
     type: entity_reference_autocomplete
-    weight: 24
+    weight: 26
     region: content
     settings:
       match_operator: CONTAINS
@@ -1495,7 +1495,7 @@ content:
     third_party_settings: {  }
   field_painting_eye:
     type: string_textfield
-    weight: 65
+    weight: 67
     region: content
     settings:
       size: 60
@@ -1503,7 +1503,7 @@ content:
     third_party_settings: {  }
   field_painting_microscope:
     type: string_textarea
-    weight: 67
+    weight: 69
     region: content
     settings:
       rows: 5
@@ -1511,7 +1511,7 @@ content:
     third_party_settings: {  }
   field_painting_tool:
     type: string_textarea
-    weight: 66
+    weight: 68
     region: content
     settings:
       rows: 5
@@ -1519,7 +1519,7 @@ content:
     third_party_settings: {  }
   field_pigment:
     type: entity_reference_autocomplete
-    weight: 69
+    weight: 71
     region: content
     settings:
       match_operator: CONTAINS
@@ -1529,7 +1529,7 @@ content:
     third_party_settings: {  }
   field_polished_sec_petrography:
     type: string_textarea
-    weight: 62
+    weight: 64
     region: content
     settings:
       rows: 5
@@ -1537,14 +1537,14 @@ content:
     third_party_settings: {  }
   field_porosity:
     type: number
-    weight: 55
+    weight: 57
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_posture:
     type: entity_reference_autocomplete
-    weight: 74
+    weight: 76
     region: content
     settings:
       match_operator: CONTAINS
@@ -1554,7 +1554,7 @@ content:
     third_party_settings: {  }
   field_preserved_parts:
     type: string_textarea
-    weight: 81
+    weight: 83
     region: content
     settings:
       rows: 5
@@ -1562,7 +1562,7 @@ content:
     third_party_settings: {  }
   field_preserved_parts_struct:
     type: entity_reference_autocomplete
-    weight: 82
+    weight: 84
     region: content
     settings:
       match_operator: CONTAINS
@@ -1608,7 +1608,7 @@ content:
     third_party_settings: {  }
   field_quality:
     type: entity_reference_autocomplete
-    weight: 46
+    weight: 48
     region: content
     settings:
       match_operator: CONTAINS
@@ -1618,7 +1618,7 @@ content:
     third_party_settings: {  }
   field_quiver_trans_bright_spots:
     type: entity_reference_autocomplete
-    weight: 35
+    weight: 37
     region: content
     settings:
       match_operator: CONTAINS
@@ -1628,7 +1628,7 @@ content:
     third_party_settings: {  }
   field_quiver_trans_lat_rounding:
     type: entity_reference_autocomplete
-    weight: 36
+    weight: 38
     region: content
     settings:
       match_operator: CONTAINS
@@ -1638,7 +1638,7 @@ content:
     third_party_settings: {  }
   field_quiver_trans_tip_rounding:
     type: entity_reference_autocomplete
-    weight: 34
+    weight: 36
     region: content
     settings:
       match_operator: CONTAINS
@@ -1647,18 +1647,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_raw_material:
-    type: entity_reference_autocomplete
-    weight: 25
+    type: options_select
+    weight: 27
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_recent_damage:
     type: entity_reference_autocomplete
-    weight: 47
+    weight: 49
     region: content
     settings:
       match_operator: CONTAINS
@@ -1668,7 +1664,7 @@ content:
     third_party_settings: {  }
   field_recent_damage_note:
     type: string_textarea
-    weight: 48
+    weight: 50
     region: content
     settings:
       rows: 5
@@ -1676,7 +1672,7 @@ content:
     third_party_settings: {  }
   field_recent_damage_type:
     type: string_textarea
-    weight: 79
+    weight: 81
     region: content
     settings:
       rows: 5
@@ -1684,7 +1680,7 @@ content:
     third_party_settings: {  }
   field_recent_damage_type_struct:
     type: entity_reference_autocomplete
-    weight: 80
+    weight: 82
     region: content
     settings:
       match_operator: CONTAINS
@@ -1736,7 +1732,7 @@ content:
     third_party_settings: {  }
   field_reparation_features:
     type: entity_reference_autocomplete
-    weight: 38
+    weight: 40
     region: content
     settings:
       match_operator: CONTAINS
@@ -1746,7 +1742,7 @@ content:
     third_party_settings: {  }
   field_retouch:
     type: entity_reference_autocomplete
-    weight: 50
+    weight: 52
     region: content
     settings:
       match_operator: CONTAINS
@@ -1776,7 +1772,7 @@ content:
     third_party_settings: {  }
   field_rock_fragments:
     type: entity_reference_autocomplete
-    weight: 58
+    weight: 60
     region: content
     settings:
       match_operator: CONTAINS
@@ -1798,7 +1794,7 @@ content:
     third_party_settings: {  }
   field_serration:
     type: entity_reference_autocomplete
-    weight: 31
+    weight: 33
     region: content
     settings:
       match_operator: CONTAINS
@@ -1898,7 +1894,7 @@ content:
     third_party_settings: {  }
   field_surf_data_pres:
     type: inline_entity_form_simple
-    weight: 83
+    weight: 85
     region: content
     settings:
       form_mode: a3d_sdp_form
@@ -1911,7 +1907,7 @@ content:
     third_party_settings: {  }
   field_surface_alt:
     type: entity_reference_autocomplete
-    weight: 45
+    weight: 47
     region: content
     settings:
       match_operator: CONTAINS
@@ -1921,7 +1917,7 @@ content:
     third_party_settings: {  }
   field_surface_finishing:
     type: data_field_table_widget
-    weight: 77
+    weight: 79
     region: content
     settings:
       inline: false
@@ -1944,7 +1940,7 @@ content:
     third_party_settings: {  }
   field_thermic_cracks:
     type: entity_reference_autocomplete
-    weight: 61
+    weight: 63
     region: content
     settings:
       match_operator: CONTAINS
@@ -1972,7 +1968,7 @@ content:
     third_party_settings: {  }
   field_tip_fracture:
     type: entity_reference_autocomplete
-    weight: 51
+    weight: 53
     region: content
     settings:
       match_operator: CONTAINS
@@ -1982,7 +1978,7 @@ content:
     third_party_settings: {  }
   field_wear:
     type: string_textarea
-    weight: 64
+    weight: 66
     region: content
     settings:
       rows: 5

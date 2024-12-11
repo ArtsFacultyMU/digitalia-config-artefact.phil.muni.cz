@@ -1,6 +1,6 @@
 uuid: 4b78d800-0319-43ff-8263-f3791e613795
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - field.storage.node.field_dimensions
@@ -1145,6 +1145,7 @@ display:
     display_plugin: rest_export
     position: 1
     display_options:
+      enabled: false
       fields:
         field_geolocation:
           id: field_geolocation
@@ -1575,6 +1576,7 @@ display:
     display_plugin: rest_export
     position: 1
     display_options:
+      enabled: false
       fields:
         field_dimensions:
           id: field_dimensions
@@ -2076,6 +2078,7 @@ display:
     display_plugin: rest_export
     position: 1
     display_options:
+      enabled: false
       fields:
         field_surf_data_pres_sdp_method:
           id: field_surf_data_pres_sdp_method
@@ -2324,6 +2327,7 @@ display:
     display_plugin: rest_export
     position: 1
     display_options:
+      enabled: false
       fields:
         field_mass_structure_data_pres_msdp_method:
           id: field_mass_structure_data_pres_msdp_method
@@ -2443,6 +2447,205 @@ display:
             replace_spaces: false
             path_case: none
             trim_whitespace: true
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: serializer
+        options:
+          formats:
+            csv: csv
+            jsonld: jsonld
+            json: json
+            xml: xml
+      row:
+        type: data_field
+        options:
+          field_options:
+            title:
+              alias: ''
+              raw_output: false
+      defaults:
+        fields: false
+      display_description: ''
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+      path: a3d/node/%node/export/datafield/mass_structure_data_pres
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - request_format
+        - route
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  rest_export_4:
+    id: rest_export_4
+    display_title: 'Alternative IDs'
+    display_plugin: rest_export
+    position: 1
+    display_options:
+      fields:
+        field_alternative_ids_id:
+          id: field_alternative_ids_id
+          table: node__field_alternative_ids
+          field: field_alternative_ids_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        field_alternative_ids_note:
+          id: field_alternative_ids_note
+          table: node__field_alternative_ids
+          field: field_alternative_ids_note
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        field_alternative_ids_type:
+          id: field_alternative_ids_type
+          table: node__field_alternative_ids
+          field: field_alternative_ids_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
             alt: ''
             rel: ''
             link_class: ''

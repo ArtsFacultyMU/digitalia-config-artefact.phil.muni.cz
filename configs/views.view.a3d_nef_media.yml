@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.a3d_nef_compare
+    - field.storage.media.field_featured
     - field.storage.media.field_media_image
     - field.storage.media.field_mime_type
     - media.type.3d_model
@@ -340,6 +341,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: null
           id: 0
@@ -354,7 +356,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -731,6 +732,71 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_featured:
+          id: field_featured
+          table: media__field_featured
+          field: field_featured
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Featured
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: default
+            format_custom_false: ''
+            format_custom_true: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         bundle:
           id: bundle
           table: media_field_data
@@ -1057,6 +1123,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 25
           total_pages: null
           id: 0
@@ -1074,7 +1141,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       empty:
         area:
           id: area
@@ -1277,6 +1343,7 @@ display:
         - url.query_args
         - user.permissions
       tags:
+        - 'config:field.storage.media.field_featured'
         - 'config:field.storage.media.field_mime_type'
   media_statistics:
     id: media_statistics
@@ -2223,39 +2290,4 @@ display:
         - url.query_args
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.media.3d_model.default'
-        - 'config:core.entity_view_display.media.audio.default'
-        - 'config:core.entity_view_display.media.audio.file_download'
-        - 'config:core.entity_view_display.media.audio.source'
-        - 'config:core.entity_view_display.media.document.default'
-        - 'config:core.entity_view_display.media.document.file_download'
-        - 'config:core.entity_view_display.media.document.pdfjs'
-        - 'config:core.entity_view_display.media.document.source'
-        - 'config:core.entity_view_display.media.extracted_text.default'
-        - 'config:core.entity_view_display.media.file.default'
-        - 'config:core.entity_view_display.media.file.file_download'
-        - 'config:core.entity_view_display.media.file.open_seadragon'
-        - 'config:core.entity_view_display.media.file.pdfjs'
-        - 'config:core.entity_view_display.media.file.source'
-        - 'config:core.entity_view_display.media.fits_technical_metadata.default'
-        - 'config:core.entity_view_display.media.fits_technical_metadata.fits_technical_metadata'
-        - 'config:core.entity_view_display.media.image.a3d_arf_compare'
-        - 'config:core.entity_view_display.media.image.a3d_meta_compare'
-        - 'config:core.entity_view_display.media.image.a3d_nef_compare'
-        - 'config:core.entity_view_display.media.image.default'
-        - 'config:core.entity_view_display.media.image.file_download'
-        - 'config:core.entity_view_display.media.image.full'
-        - 'config:core.entity_view_display.media.image.image_a3d_arf_entity_comparison'
-        - 'config:core.entity_view_display.media.image.image_a3d_image_comparison'
-        - 'config:core.entity_view_display.media.image.image_a3d_meta_entity_comparison'
-        - 'config:core.entity_view_display.media.image.image_a3d_nef_entity_comparison'
-        - 'config:core.entity_view_display.media.image.open_seadragon'
-        - 'config:core.entity_view_display.media.image.source'
-        - 'config:core.entity_view_display.media.image.thumbnail'
-        - 'config:core.entity_view_display.media.image.token'
-        - 'config:core.entity_view_display.media.remote_video.default'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.video.file_download'
-        - 'config:core.entity_view_display.media.video.source'
-        - 'config:core.entity_view_display.media.video.token'
         - 'config:field.storage.media.field_media_image'

@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_raw_material
     - node.type.a3d_object
     - taxonomy.vocabulary.raw_material
+  content:
+    - 'taxonomy_term:raw_material:84cfe5d4-2ec7-469b-b4e5-5f7261fde8e1'
 id: node.a3d_object.field_raw_material
 field_name: field_raw_material
 entity_type: node
@@ -14,10 +16,12 @@ label: 'Raw material'
 description: ''
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: 84cfe5d4-2ec7-469b-b4e5-5f7261fde8e1
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       raw_material: raw_material

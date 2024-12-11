@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_preserved_parts_struct
     - node.type.a3d_object
     - taxonomy.vocabulary.preserved_parts
+    - taxonomy.vocabulary.unknown_values
 id: node.a3d_object.field_preserved_parts_struct
 field_name: field_preserved_parts_struct
 entity_type: node
@@ -17,13 +18,14 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       preserved_parts: preserved_parts
+      unknown_values: unknown_values
     sort:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: preserved_parts
 field_type: entity_reference

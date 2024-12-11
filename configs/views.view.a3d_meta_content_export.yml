@@ -22649,7 +22649,7 @@ display:
           field: view
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'Media URLs'
           plugin_id: view
           label: ''
           exclude: false

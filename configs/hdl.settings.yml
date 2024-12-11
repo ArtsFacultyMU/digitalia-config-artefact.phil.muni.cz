@@ -8,3 +8,4 @@ hdl_handle_api_endpoint: 'https://handle.phil.muni.cz:8000'
 hdl_handle_permissions: '111111111111'
 hdl_admin_private_key: null
 hdl_metaplatform_qualifier: a3d
+hdl_metaplatform_url: 'https://archeo3data-devel.phil.muni.cz'
