@@ -1,0 +1,23 @@
+uuid: 6635bbe9-f5e5-4127-8aaa-411eb8b985a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_percent
+    - node.type.non_plastic_inclusion
+id: node.non_plastic_inclusion.field_percent
+field_name: field_percent
+entity_type: node
+bundle: non_plastic_inclusion
+label: Percent
+description: 'ED-XRF Weight Percent (wt%)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0.0
+  max: 100.0
+  prefix: ''
+  suffix: wt%
+field_type: decimal

@@ -597,8 +597,8 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        fieldset_1:
-          id: fieldset_1
+        fieldset_12:
+          id: fieldset_12
           table: views
           field: fieldset
           relationship: none
@@ -648,17 +648,11 @@ display:
           hide_alter_empty: true
           fields:
             - field_wgs84_geolocation_1
-            - field_site
-            - field_geolocation
-            - field_wgs84_geolocation
-            - field_wgs84_geolocation_accuracy
-            - field_finding_context_loc
-            - field_relative_datation
-          wrapper: div
-          legend: ''
-          classes: views-field-block
+          wrapper: details
+          legend: Map
+          classes: 'js-form-wrapper form-wrapper'
           collapsible: true
-          collapsed: false
+          collapsed: true
         field_wgs84_geolocation_1:
           id: field_wgs84_geolocation_1
           table: node__field_wgs84_geolocation
@@ -1284,6 +1278,67 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        fieldset_1:
+          id: fieldset_1
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: fieldset
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          fields:
+            - field_site
+            - field_geolocation
+            - field_wgs84_geolocation
+            - field_wgs84_geolocation_accuracy
+            - field_finding_context_loc
+            - field_relative_datation
+          wrapper: div
+          legend: ''
+          classes: views-field-block
+          collapsible: true
+          collapsed: false
         field_site:
           id: field_site
           table: node__field_site

@@ -1,0 +1,29 @@
+uuid: 01e9441b-879c-4138-9c65-658244c43848
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_estimated_quantity
+    - node.type.non_plastic_inclusion
+    - taxonomy.vocabulary.non_plastic_inclusions_scale
+id: node.non_plastic_inclusion.field_estimated_quantity
+field_name: field_estimated_quantity
+entity_type: node
+bundle: non_plastic_inclusion
+label: 'Estimated quantity'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      non_plastic_inclusions_scale: non_plastic_inclusions_scale
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

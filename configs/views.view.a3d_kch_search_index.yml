@@ -3102,7 +3102,7 @@ display:
       path: kch/browse
       menu:
         type: normal
-        title: 'Pottery Products'
+        title: Database
         description: ''
         weight: -50
         expanded: false
@@ -3130,7 +3130,7 @@ display:
     display_plugin: page
     position: 2
     display_options:
-      title: Search
+      title: 'Search Pottery Products'
       fields:
         view:
           id: view
@@ -4207,7 +4207,7 @@ display:
           admin_label: ''
           entity_type: node
           plugin_id: search_api_field
-          label: 'Held by'
+          label: Institution
           exclude: false
           alter:
             alter_text: false
@@ -5499,7 +5499,7 @@ display:
           text_input_required_format: basic_html
           bef:
             general:
-              autosubmit: true
+              autosubmit: false
               autosubmit_exclude_textfield: true
               autosubmit_textfield_delay: 500
               autosubmit_hide: false
@@ -5507,7 +5507,7 @@ display:
               allow_secondary: true
               secondary_label: 'Advanced object typology'
               secondary_open: false
-              reset_button_always_show: false
+              reset_button_always_show: true
             sort:
               plugin_id: default
               advanced:
@@ -5529,10 +5529,12 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
-              field_artefact_id:
+              facets_field_artefact_category:
                 plugin_id: default
                 advanced:
-                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
@@ -5557,19 +5559,21 @@ display:
                   collapsible_disable_automatic_open: false
                   is_secondary: false
               field_timespan_from:
-                plugin_id: default
+                plugin_id: bef_number
                 advanced:
-                  placeholder_text: ''
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                max: 2000
+                min: 1000
               field_timespan_to:
-                plugin_id: default
+                plugin_id: bef_number
                 advanced:
-                  placeholder_text: ''
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
+                max: 2000
+                min: 1000
               facets_field_motif:
                 plugin_id: default
                 advanced:
@@ -5597,12 +5601,10 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
-              facets_field_artefact_category:
+              field_artefact_id:
                 plugin_id: default
                 advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                    filter_rewrite_values_key: false
+                  placeholder_text: ''
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
@@ -5935,35 +5937,33 @@ display:
           min_length: null
           fields:
             - rendered_item
-        field_artefact_id:
-          id: field_artefact_id
+        facets_field_artefact_category:
+          id: facets_field_artefact_category
           table: search_api_index_a3d_object_index
-          field: field_artefact_id
+          field: facets_field_artefact_category
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: search_api_string
+          plugin_id: facets_filter
           operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
+          value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: field_artefact_id_op
-            label: 'Artefact ID'
+            operator_id: ''
+            label: 'Artefact category'
             description: ''
             use_operator: false
-            operator: field_artefact_id_op
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_artefact_id
+            identifier: field_artefact_category
             required: false
             remember: false
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
+              0: '0'
               anonymous: '0'
               content_editor: '0'
               administrator: '0'
@@ -5975,9 +5975,6 @@ display:
               arf_user: '0'
               kch_user: '0'
               lindat_editor: '0'
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -5990,6 +5987,22 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              display_value_widget_order:
+                weights:
+                  sort: 40
+                settings:
+                  sort: ASC
         field_ownership:
           id: field_ownership
           table: search_api_index_a3d_object_index
@@ -6004,7 +6017,7 @@ display:
           exposed: true
           expose:
             operator_id: field_ownership_op
-            label: 'Held by'
+            label: Institution
             description: ''
             use_operator: false
             operator: field_ownership_op
@@ -6398,33 +6411,35 @@ display:
                   sort: 40
                 settings:
                   sort: ASC
-        facets_field_artefact_category:
-          id: facets_field_artefact_category
+        field_artefact_id:
+          id: field_artefact_id
           table: search_api_index_a3d_object_index
-          field: facets_field_artefact_category
+          field: field_artefact_id
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: facets_filter
+          plugin_id: search_api_string
           operator: '='
-          value: ''
+          value:
+            min: ''
+            max: ''
+            value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: ''
-            label: 'Artefact category'
+            operator_id: field_artefact_id_op
+            label: 'Artefact ID'
             description: ''
             use_operator: false
-            operator: ''
+            operator: field_artefact_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_artefact_category
+            identifier: field_artefact_id
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
-              0: '0'
               anonymous: '0'
               content_editor: '0'
               administrator: '0'
@@ -6436,6 +6451,9 @@ display:
               arf_user: '0'
               kch_user: '0'
               lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -6448,22 +6466,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          hierarchy: false
-          label_display: visible
-          facet:
-            query_operator: or
-            min_count: 1
-            show_numbers: true
-            processor_configs:
-              translate_entity:
-                weights:
-                  build: 5
-                settings: {  }
-              display_value_widget_order:
-                weights:
-                  sort: 40
-                settings:
-                  sort: ASC
         facets_field_aquamanile_type:
           id: facets_field_aquamanile_type
           table: search_api_index_a3d_object_index
@@ -7245,6 +7247,19 @@ display:
         header: false
       display_description: ''
       header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: "<p>\r\n    <a class=\"button\" align=\"right\" href=\"/kch/analyses\">Search in Analyses</a>\r\n</p>"
+            format: full_html
+          tokenize: false
         result:
           id: result
           table: views
@@ -7270,7 +7285,7 @@ display:
           category_facets_concat_separator: ', '
       path: kch/search
       menu:
-        type: normal
+        type: none
         title: 'Pottery Products'
         description: ''
         weight: -50

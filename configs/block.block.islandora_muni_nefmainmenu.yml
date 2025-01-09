@@ -5,7 +5,6 @@ dependencies:
   config:
     - system.menu.nef-main-menu
   module:
-    - block_class
     - context
     - islandora
     - superfish

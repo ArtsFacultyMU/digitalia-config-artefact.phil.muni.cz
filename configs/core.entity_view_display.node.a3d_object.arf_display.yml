@@ -372,6 +372,15 @@ content:
     third_party_settings: {  }
     weight: 20
     region: content
+  field_surf_data_pres:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
   field_surface_alt:
     type: entity_reference_label
     label: hidden
@@ -544,7 +553,6 @@ hidden:
   field_state: true
   field_statement: true
   field_stove_tile_shape_certainty: true
-  field_surf_data_pres: true
   field_surface_finishing: true
   field_thermic_cracks: true
   field_tile_type: true

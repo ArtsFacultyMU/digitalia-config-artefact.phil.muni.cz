@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.sample.field_description_a3d
     - field.field.node.sample.field_is_macrosample
+    - field.field.node.sample.field_is_powder
     - field.field.node.sample.field_is_thin_section
     - field.field.node.sample.field_note
     - field.field.node.sample.field_object_reference
@@ -37,6 +38,16 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_is_powder:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_is_thin_section:
     type: boolean
     label: inline
@@ -52,7 +63,7 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_object_reference:
     type: entity_reference_label
@@ -69,7 +80,7 @@ content:
       dumper: wkt
       providers: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_sample_id:
     type: string
@@ -82,7 +93,7 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
 hidden:
   a3d_eva_entity_group_relation_entity_view_2: true

@@ -1081,10 +1081,10 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        aggregated_field_artefact_category:
-          id: aggregated_field_artefact_category
+        field_artefact_category_name:
+          id: field_artefact_category_name
           table: search_api_index_a3d_object_index
-          field: aggregated_field_artefact_category
+          field: field_artefact_category_name
           relationship: none
           group_type: group
           admin_label: ''
@@ -1092,7 +1092,7 @@ display:
           order: ASC
           expose:
             label: 'Artefact category'
-            field_identifier: aggregated_field_artefact_category
+            field_identifier: field_artefact_category_name
           exposed: true
         field_site_name:
           id: field_site_name
@@ -1119,32 +1119,6 @@ display:
           expose:
             label: 'Relative datation'
             field_identifier: field_relative_datation_name
-          exposed: true
-        field_feature_type_name:
-          id: field_feature_type_name
-          table: search_api_index_a3d_object_index
-          field: field_feature_type_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: ASC
-          expose:
-            label: 'Feature type'
-            field_identifier: field_feature_type_name
-          exposed: true
-        field_deposition_cond_name:
-          id: field_deposition_cond_name
-          table: search_api_index_a3d_object_index
-          field: field_deposition_cond_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: ASC
-          expose:
-            label: 'Deposition condition'
-            field_identifier: field_deposition_cond_name
           exposed: true
         field_artefact_id:
           id: field_artefact_id
@@ -2965,7 +2939,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "{% if drupal_token('current-page:query:sort_by') == 'aggregated_field_artefact_category' or drupal_token('current-page:query:sort_by') == '[current-page:query:sort_by]' %}\r\n<h3>Artefact category:\_{{ field_artefact_category_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_site_name' %}\r\n<h3>Site: {{ field_site_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_relative_datation_name' %}\r\n<h3>Relative datation: {{ field_relative_datation_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_feature_type_name' %}\r\n<h3>Feature type:\_{{ field_feature_type_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_deposition_cond_name' %}\r\n<h3>Deposition condition: {{ field_deposition_cond_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_raw_material_name' %}\r\n<h3>Raw material: {{ field_raw_material_name }}</h3>\r\n{% endif %}\r\n\r\n\r\n"
+            text: "{% if drupal_token('current-page:query:sort_by') == 'field_artefact_category_name' or drupal_token('current-page:query:sort_by') == '[current-page:query:sort_by]' %}\r\n<h3>Artefact category:\_{{ field_artefact_category_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_site_name' %}\r\n<h3>Site: {{ field_site_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_relative_datation_name' %}\r\n<h3>Relative datation: {{ field_relative_datation_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_feature_type_name' %}\r\n<h3>Feature type:\_{{ field_feature_type_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_deposition_cond_name' %}\r\n<h3>Deposition condition: {{ field_deposition_cond_name }}</h3>\r\n{% endif %}\r\n{% if drupal_token('current-page:query:sort_by') == 'field_raw_material_name' %}\r\n<h3>Raw material: {{ field_raw_material_name }}</h3>\r\n{% endif %}\r\n\r\n\r\n"
             make_link: false
             path: ''
             absolute: false

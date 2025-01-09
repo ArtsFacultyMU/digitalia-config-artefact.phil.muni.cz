@@ -20,6 +20,9 @@ display:
             label: Stav
   page_2:
     display_options:
+      fields:
+        type:
+          label: 'Typ entity'
       pager:
         options:
           expose:

@@ -33,12 +33,6 @@ display:
         facets_field_artefact_category:
           expose:
             label: 'Kategorie artefaktu'
-        from_1:
-          expose:
-            label: 'Spodní odhad datace'
-        to_1:
-          expose:
-            label: 'Horní odhad datace'
         facets_field_analysis_type:
           expose:
             label: 'Typ analýzy'
@@ -48,15 +42,9 @@ display:
         facets_field_rock_fragments:
           expose:
             label: Horniny
-        rendered_item:
-          expose:
-            label: 'Chemické sloučeniny'
         rendered_item_1:
           expose:
             label: Minerály
-        rendered_item_2:
-          expose:
-            label: Prvky
         field_grain_type:
           expose:
             label: Zrnitost
@@ -108,6 +96,7 @@ display:
           tags:
             first: '« První'
             last: 'Poslední »'
+      title: 'Vyhledávání v analýzách'
   page_1:
     display_options:
       menu:

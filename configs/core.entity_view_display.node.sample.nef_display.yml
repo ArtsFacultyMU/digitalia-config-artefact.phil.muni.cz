@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.nef_display
     - field.field.node.sample.field_description_a3d
     - field.field.node.sample.field_is_macrosample
+    - field.field.node.sample.field_is_powder
     - field.field.node.sample.field_is_thin_section
     - field.field.node.sample.field_note
     - field.field.node.sample.field_object_reference
@@ -19,6 +20,21 @@ targetEntityType: node
 bundle: sample
 mode: nef_display
 content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   display_media_entity_view_1:
     settings: {  }
     third_party_settings: {  }
@@ -58,6 +74,7 @@ content:
     region: content
 hidden:
   field_is_macrosample: true
+  field_is_powder: true
   field_is_thin_section: true
   field_note: true
   field_object_reference: true

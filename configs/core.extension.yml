@@ -46,6 +46,7 @@ module:
   digitalia_muni_general_includes: 0
   digitalia_muni_token: 0
   digitalia_muni_universal_form: 0
+  digitalia_muni_view_field: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
@@ -53,6 +54,7 @@ module:
   eva: 0
   facets: 0
   facets_exposed_filters: 0
+  facets_rest: 0
   facets_summary: 0
   field: 0
   field_group: 0
@@ -153,6 +155,7 @@ module:
   responsive_image: 0
   rest: 0
   rest_oai_pmh: 0
+  rest_views: 0
   restui: 0
   search_api: 0
   search_api_autocomplete: 0

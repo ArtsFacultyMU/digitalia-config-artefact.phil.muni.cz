@@ -13,6 +13,7 @@ dependencies:
     - rest
     - serialization
     - user
+    - views_field_view
 id: a3d_datafield_export
 label: 'A3D datafield export'
 module: views
@@ -1572,20 +1573,20 @@ display:
         - 'config:field.storage.node.field_geolocation'
   rest_export_1:
     id: rest_export_1
-    display_title: 'REST export dimensions'
+    display_title: 'REST export measurements'
     display_plugin: rest_export
     position: 1
     display_options:
-      enabled: false
+      enabled: true
       fields:
-        field_dimensions:
-          id: field_dimensions
-          table: node__field_dimensions
-          field: field_dimensions
+        field_measurements_dimensions_type:
+          id: field_measurements_dimensions_type
+          table: node__field_measurements
+          field: field_measurements_dimensions_type
           relationship: none
           group_type: group
-          admin_label: 'Dimensions - units'
-          plugin_id: field
+          admin_label: ''
+          plugin_id: standard
           label: ''
           exclude: true
           alter:
@@ -1597,7 +1598,7 @@ display:
             external: false
             replace_spaces: false
             path_case: none
-            trim_whitespace: true
+            trim_whitespace: false
             alt: ''
             rel: ''
             link_class: ''
@@ -1611,7 +1612,7 @@ display:
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: true
+            strip_tags: false
             trim: false
             preserve_tags: ''
             html: false
@@ -1627,68 +1628,16 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: data_field_unformatted_list
-          settings:
-            inline: false
-            formatter_settings:
-              extent:
-                format_type: text_default
-                hidden: true
-                weight: '0'
-                show_label: 0
-              measurement_type:
-                format_type: entity_reference_label
-                link: false
-                hidden: true
-                weight: '0'
-                show_label: 0
-              units:
-                format_type: entity_reference_label
-                link: false
-                hidden: false
-                weight: '0'
-                show_label: 0
-              scale:
-                format_type: number_integer
-                hidden: true
-                thousand_separator: ''
-                prefix_suffix: false
-                weight: '0'
-                show_label: 0
-              value:
-                format_type: number_unformatted
-                hidden: true
-                decimal_separator: .
-                thousand_separator: ''
-                scale: 2
-                prefix_suffix: false
-                weight: '0'
-                show_label: 0
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_dimensions_1:
-          id: field_dimensions_1
-          table: node__field_dimensions
-          field: field_dimensions
+        view_1:
+          id: view_1
+          table: views
+          field: view
           relationship: none
           group_type: group
-          admin_label: 'Dimensions - measurement type'
-          plugin_id: field
+          admin_label: type
+          plugin_id: view
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -1698,7 +1647,7 @@ display:
             external: false
             replace_spaces: false
             path_case: none
-            trim_whitespace: true
+            trim_whitespace: false
             alt: ''
             rel: ''
             link_class: ''
@@ -1712,7 +1661,59 @@ display:
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: true
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: a
+          display: taxonomy_name
+          arguments: '{{ raw_fields.field_measurements_dimensions_type }}'
+        field_measurements_dimensions_value:
+          id: field_measurements_dimensions_value
+          table: node__field_measurements
+          field: field_measurements_dimensions_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
             trim: false
             preserve_tags: ''
             html: false
@@ -1728,62 +1729,616 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: data_field_unformatted_list
-          settings:
-            inline: false
-            formatter_settings:
-              extent:
-                format_type: text_default
-                hidden: true
-                weight: '0'
-                show_label: 0
-              measurement_type:
-                format_type: entity_reference_label
-                link: true
-                hidden: false
-                weight: '0'
-                show_label: 0
-              units:
-                format_type: entity_reference_label
-                link: true
-                hidden: true
-                weight: '0'
-                show_label: 0
-              scale:
-                format_type: number_integer
-                hidden: true
-                thousand_separator: ''
-                prefix_suffix: true
-                weight: '0'
-                show_label: 0
-              value:
-                format_type: number_unformatted
-                hidden: true
-                decimal_separator: .
-                thousand_separator: ''
-                scale: 2
-                prefix_suffix: true
-                weight: '0'
-                show_label: 0
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_dimensions_value:
-          id: field_dimensions_value
-          table: node__field_dimensions
-          field: field_dimensions_value
+        field_measurements_dimensions_unit:
+          id: field_measurements_dimensions_unit
+          table: node__field_measurements
+          field: field_measurements_dimensions_unit
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        view_2:
+          id: view_2
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: unit
+          plugin_id: view
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: a
+          display: taxonomy_name
+          arguments: '{{ fields.field_measurements_dimensions_unit }}'
+        field_measurements_scale_type:
+          id: field_measurements_scale_type
+          table: node__field_measurements
+          field: field_measurements_scale_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        view_6:
+          id: view_6
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: 'scale type'
+          plugin_id: view
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: a
+          display: taxonomy_name
+          arguments: '{{ raw_fields.field_measurements_scale_type }}'
+        field_measurements_dimensions_extent:
+          id: field_measurements_dimensions_extent
+          table: node__field_measurements
+          field: field_measurements_dimensions_extent
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: extent
+          plugin_id: view
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: a
+          display: taxonomy_name
+          arguments: '{{ fields.field_measurements_dimensions_extent }}'
+        field_measurements_format_size:
+          id: field_measurements_format_size
+          table: node__field_measurements
+          field: field_measurements_format_size
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        view_4:
+          id: view_4
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: format/size
+          plugin_id: view
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: a
+          display: taxonomy_name
+          arguments: '{{ raw_fields.field_measurements_format_size }'
+        field_measurements_shape:
+          id: field_measurements_shape
+          table: node__field_measurements
+          field: field_measurements_shape
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        view_5:
+          id: view_5
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: shape
+          plugin_id: view
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: a
+          display: taxonomy_name
+          arguments: '{{ raw_fields.field_measurements_shape }}'
+        field_measurements_dimensions_qualifier:
+          id: field_measurements_dimensions_qualifier
+          table: node__field_measurements
+          field: field_measurements_dimensions_qualifier
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+        view_3:
+          id: view_3
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: qualifier
+          plugin_id: view
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: a
+          display: taxonomy_name
+          arguments: '{{ raw_fields.field_measurements_dimensions_qualifier }}'
+        field_measurements_measurement_date:
+          id: field_measurements_measurement_date
+          table: node__field_measurements
+          field: field_measurements_measurement_date
           relationship: none
           group_type: group
           admin_label: ''
@@ -1826,13 +2381,13 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: true
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-        field_dimensions_extent:
-          id: field_dimensions_extent
-          table: node__field_dimensions
-          field: field_dimensions_extent
+        field_measurements_citations:
+          id: field_measurements_citations
+          table: node__field_measurements
+          field: field_measurements_citations
           relationship: none
           group_type: group
           admin_label: ''
@@ -1875,62 +2430,13 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: true
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-        field_dimensions_measurement_type:
-          id: field_dimensions_measurement_type
-          table: node__field_dimensions
-          field: field_dimensions_measurement_type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: standard
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: '{{ field_dimensions_1 }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: true
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: false
-          hide_alter_empty: true
-        field_dimensions_scale:
-          id: field_dimensions_scale
-          table: node__field_dimensions
-          field: field_dimensions_scale
+        field_measurements_remarks:
+          id: field_measurements_remarks
+          table: node__field_measurements
+          field: field_measurements_remarks
           relationship: none
           group_type: group
           admin_label: ''
@@ -1973,56 +2479,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: true
-          empty_zero: false
-          hide_alter_empty: true
-        field_dimensions_units:
-          id: field_dimensions_units
-          table: node__field_dimensions
-          field: field_dimensions_units
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: standard
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: '{{ field_dimensions }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: true
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: true
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
       pager:
@@ -2041,12 +2498,43 @@ display:
         type: data_field
         options:
           field_options:
-            title:
-              alias: ''
+            view_1:
+              alias: type
+              raw_output: false
+            field_measurements_dimensions_value:
+              alias: value
+              raw_output: false
+            view_2:
+              alias: unit
+              raw_output: false
+            view_6:
+              alias: scale_type
+              raw_output: false
+            view:
+              alias: extent
+              raw_output: false
+            view_4:
+              alias: format_size
+              raw_output: false
+            view_5:
+              alias: shape
+              raw_output: false
+            view_3:
+              alias: qualifier
+              raw_output: false
+            field_measurements_measurement_date:
+              alias: measurement_date
+              raw_output: false
+            field_measurements_citations:
+              alias: citations
+              raw_output: false
+            field_measurements_remarks:
+              alias: remarks
               raw_output: false
       defaults:
         fields: false
       display_description: ''
+      rendering_language: '***LANGUAGE_site_default***'
       display_extenders:
         matomo:
           enabled: false
@@ -2059,19 +2547,17 @@ display:
           category_fallback: ''
           category_facets: {  }
           category_facets_concat_separator: ', '
-      path: a3d/node/%node/export/datafield/dimensions
+      path: a3d/node/%node/export/dimensions
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
         - route
         - url
         - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.field_dimensions'
+      tags: {  }
   rest_export_2:
     id: rest_export_2
     display_title: 'REST export surface data presence'

@@ -20,11 +20,13 @@ dependencies:
     - field.field.node.analysis.field_firing_characteristic
     - field.field.node.analysis.field_firing_temperature
     - field.field.node.analysis.field_fractured_pores
+    - field.field.node.analysis.field_fragments
     - field.field.node.analysis.field_grain_type
     - field.field.node.analysis.field_instrument
     - field.field.node.analysis.field_matrix
     - field.field.node.analysis.field_matrix_vitrification
     - field.field.node.analysis.field_microstructure
+    - field.field.node.analysis.field_mineral_fragments
     - field.field.node.analysis.field_minerals
     - field.field.node.analysis.field_non_plastic_inclusions
     - field.field.node.analysis.field_nonplastic_sort
@@ -294,6 +296,14 @@ content:
     third_party_settings: {  }
     weight: 27
     region: content
+  field_fragments:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 41
+    region: content
   field_grain_type:
     type: entity_reference_label
     label: inline
@@ -525,5 +535,6 @@ hidden:
   display_media_original_download: true
   display_media_service_file: true
   display_media_thumbnail: true
+  field_mineral_fragments: true
   langcode: true
   search_api_excerpt: true

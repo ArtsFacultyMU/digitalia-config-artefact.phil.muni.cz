@@ -1,0 +1,29 @@
+uuid: b99b6071-54a8-4bfe-8983-3dc557a792f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fragments
+    - node.type.analysis
+    - node.type.non_plastic_inclusion
+id: node.analysis.field_fragments
+field_name: field_fragments
+entity_type: node
+bundle: analysis
+label: Fragments
+description: 'select the non-plastic inclusions identified in the sample (minerals, rocks, etc.)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      non_plastic_inclusion: non_plastic_inclusion
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

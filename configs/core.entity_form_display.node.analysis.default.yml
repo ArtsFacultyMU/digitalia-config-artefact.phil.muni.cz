@@ -20,11 +20,13 @@ dependencies:
     - field.field.node.analysis.field_firing_characteristic
     - field.field.node.analysis.field_firing_temperature
     - field.field.node.analysis.field_fractured_pores
+    - field.field.node.analysis.field_fragments
     - field.field.node.analysis.field_grain_type
     - field.field.node.analysis.field_instrument
     - field.field.node.analysis.field_matrix
     - field.field.node.analysis.field_matrix_vitrification
     - field.field.node.analysis.field_microstructure
+    - field.field.node.analysis.field_mineral_fragments
     - field.field.node.analysis.field_minerals
     - field.field.node.analysis.field_non_plastic_inclusions
     - field.field.node.analysis.field_nonplastic_sort
@@ -43,6 +45,7 @@ dependencies:
     - node.type.analysis
   module:
     - datafield
+    - inline_entity_form
     - range
     - text
 id: node.analysis.default
@@ -52,7 +55,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 21
+    weight: 38
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -84,7 +87,7 @@ content:
     third_party_settings: {  }
   field_binder_ratio:
     type: string_textfield
-    weight: 32
+    weight: 29
     region: content
     settings:
       size: 60
@@ -92,19 +95,19 @@ content:
     third_party_settings: {  }
   field_binder_type:
     type: options_select
-    weight: 31
+    weight: 28
     region: content
     settings: {  }
     third_party_settings: {  }
   field_cavity_pores:
     type: options_buttons
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_chemical_analysis:
     type: data_field_table_widget
-    weight: 38
+    weight: 31
     region: content
     settings:
       inline: false
@@ -137,7 +140,7 @@ content:
     third_party_settings: {  }
   field_data_pres_value:
     type: entity_reference_autocomplete
-    weight: 40
+    weight: 33
     region: content
     settings:
       match_operator: CONTAINS
@@ -155,7 +158,7 @@ content:
     third_party_settings: {  }
   field_elements:
     type: data_field_table_widget
-    weight: 39
+    weight: 32
     region: content
     settings:
       inline: false
@@ -164,13 +167,13 @@ content:
     third_party_settings: {  }
   field_firing_characteristic:
     type: options_select
-    weight: 18
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
   field_firing_temperature:
     type: range
-    weight: 17
+    weight: 21
     region: content
     settings:
       label:
@@ -182,13 +185,26 @@ content:
     third_party_settings: {  }
   field_fractured_pores:
     type: options_buttons
-    weight: 8
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_fragments:
+    type: inline_entity_form_simple
+    weight: 60
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: 'Non-plastic inclusion'
+      label_plural: 'Non-plastic inclusions'
+      collapsible: true
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
   field_grain_type:
     type: entity_reference_autocomplete
-    weight: 24
+    weight: 20
     region: content
     settings:
       match_operator: CONTAINS
@@ -204,20 +220,30 @@ content:
     third_party_settings: {  }
   field_matrix:
     type: number
-    weight: 19
+    weight: 17
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_matrix_vitrification:
     type: options_buttons
-    weight: 20
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   field_microstructure:
     type: entity_reference_autocomplete
-    weight: 23
+    weight: 19
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mineral_fragments:
+    type: entity_reference_autocomplete
+    weight: 59
     region: content
     settings:
       match_operator: CONTAINS
@@ -227,7 +253,7 @@ content:
     third_party_settings: {  }
   field_minerals:
     type: data_field_table_widget
-    weight: 37
+    weight: 30
     region: content
     settings:
       inline: false
@@ -236,14 +262,14 @@ content:
     third_party_settings: {  }
   field_non_plastic_inclusions:
     type: number
-    weight: 29
+    weight: 26
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_nonplastic_sort:
     type: boolean_checkbox
-    weight: 30
+    weight: 27
     region: content
     settings:
       display_label: true
@@ -258,7 +284,7 @@ content:
     third_party_settings: {  }
   field_note_on_method:
     type: text_textarea
-    weight: 28
+    weight: 6
     region: content
     settings:
       rows: 5
@@ -266,26 +292,26 @@ content:
     third_party_settings: {  }
   field_planar_pores:
     type: options_buttons
-    weight: 9
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_pore_channels:
     type: options_buttons
-    weight: 7
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   field_porosity:
     type: number
-    weight: 6
+    weight: 7
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_private_note:
     type: text_textarea
-    weight: 34
+    weight: 36
     region: content
     settings:
       rows: 5
@@ -293,7 +319,7 @@ content:
     third_party_settings: {  }
   field_publications:
     type: text_textarea
-    weight: 33
+    weight: 34
     region: content
     settings:
       rows: 5
@@ -301,25 +327,25 @@ content:
     third_party_settings: {  }
   field_reduction_core:
     type: options_buttons
-    weight: 25
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
   field_reduction_inward:
     type: options_buttons
-    weight: 26
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }
   field_reduction_outward:
     type: options_buttons
-    weight: 27
+    weight: 25
     region: content
     settings: {  }
     third_party_settings: {  }
   field_rock_fragments:
     type: entity_reference_autocomplete
-    weight: 12
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS
@@ -329,20 +355,20 @@ content:
     third_party_settings: {  }
   field_vesicular_pores:
     type: options_buttons
-    weight: 11
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 22
+    weight: 39
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 13
+    weight: 40
     region: content
     settings:
       display_label: true
@@ -357,7 +383,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 36
+    weight: 37
     region: content
     settings:
       match_operator: CONTAINS

@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
-    - core.entity_view_mode.node.nef_media
     - field.storage.node.field_3d_shaping
     - field.storage.node.field_3d_traces
     - field.storage.node.field_alternative_id
@@ -1879,13 +1878,13 @@ display:
           click_sort_column: from
           type: range_integer
           settings:
-            range_separator: '-'
+            range_separator: —
             thousand_separator: ''
             range_combine: true
             field_prefix_suffix: false
             from_prefix_suffix: false
             to_prefix_suffix: false
-            combined_prefix_suffix: false
+            combined_prefix_suffix: true
           group_column: ''
           group_columns: {  }
           group_rows: true

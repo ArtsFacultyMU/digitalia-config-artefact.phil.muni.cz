@@ -2611,7 +2611,7 @@ display:
           category_fallback: ''
           category_facets: {  }
           category_facets_concat_separator: ', '
-      path: arf/browse/paged
+      path: arf/browse/all/paged
       menu:
         type: none
         title: Browse

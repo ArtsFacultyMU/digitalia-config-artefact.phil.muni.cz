@@ -3,9 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.citations
     - core.entity_view_mode.node.nef_display
-    - core.entity_view_mode.node.platforms
+    - field.storage.group.field_group_code
     - field.storage.node.field_2d_asymmetry
     - field.storage.node.field_3d_shaping
     - field.storage.node.field_3d_traces
@@ -112,7 +111,9 @@ dependencies:
     - field.storage.node.field_thermic_cracks
     - field.storage.node.field_tip_fracture
     - field.storage.node.field_wear
+    - field.storage.node.field_wgs84_geolocation_accuracy
     - node.type.a3d_object
+    - taxonomy.vocabulary.artefact_category
   module:
     - csv_serialization
     - datafield
@@ -122,7 +123,9 @@ dependencies:
     - node
     - range
     - rest
+    - rest_views
     - serialization
+    - taxonomy
     - user
     - views_field_view
 id: a3d_meta_content_export
@@ -563,21 +566,18 @@ display:
           value:
             a3d_object: a3d_object
           group: 1
-          exposed: false
+          exposed: true
           expose:
-            operator_id: ''
-            label: ''
-            description: ''
+            label: 'Content type'
+            description: null
             use_operator: false
-            operator: ''
+            operator: type_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: ''
+            identifier: type
             required: false
             remember: false
             multiple: false
-            remember_roles:
-              authenticated: authenticated
             reduce: false
           is_grouped: false
           group_info:
@@ -8136,57 +8136,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        rendered_entity_1:
-          id: rendered_entity_1
-          table: node
-          field: rendered_entity
-          relationship: none
-          group_type: group
-          admin_label: Platforms
-          entity_type: node
-          plugin_id: rendered_entity
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          view_mode: platforms
         field_artefact_category_1:
           id: field_artefact_category_1
           table: node__field_artefact_category
@@ -8325,7 +8274,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<h1>{{ field_artefact_category_1 }}{{ field_artefact_class_1 }} ({{ field_artefact_id_1 }})</h1>'
+            text: '{{ field_artefact_category_1 }}{{ field_artefact_class_1 }} ({{ field_artefact_id_1 }})'
             make_link: false
             path: ''
             absolute: false
@@ -8425,57 +8374,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-        rendered_entity:
-          id: rendered_entity
-          table: node
-          field: rendered_entity
-          relationship: none
-          group_type: group
-          admin_label: Citations
-          entity_type: node
-          plugin_id: rendered_entity
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          view_mode: citations
         field_abs_dat_range:
           id: field_abs_dat_range
           table: node__field_abs_dat_range
@@ -8738,7 +8636,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_artefact_category__target_id }}'
             absolute: false
             external: false
@@ -8990,7 +8888,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_auth_3d_models__target_id }}'
             absolute: false
             external: false
@@ -9053,7 +8951,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_auth_res_data__target_id }}'
             absolute: false
             external: false
@@ -9116,7 +9014,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_city__target_id }}'
             absolute: false
             external: false
@@ -10388,7 +10286,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_feature_id__target_id }}'
             absolute: false
             external: false
@@ -10451,7 +10349,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_feature_type__target_id }}'
             absolute: false
             external: false
@@ -10828,7 +10726,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_finding_context_type__target_id }}'
             absolute: false
             external: false
@@ -10928,72 +10826,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: spatial_ref_system
-          type: data_field_table_formatter
+          type: data_field_json_export
           settings:
-            formatter_settings:
-              spatial_ref_system:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Spatial reference system'
-              loc_coord_cadastre_x:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 1'
-              loc_coord_cadastre_y:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 2'
-              loc_coord_cadastre_accuracy:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Location coordinates accuracy'
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
-            number_column: false
-            number_column_label: №
-            direction: horizontal
-            mode: table
-            caption: ''
-            footer_text: ''
-            datatables_options:
-              bExpandable: 0
-              bInfo: 0
-              scrollX: 0
-              bStateSave: 0
-              ordering: 0
-              paging: 0
-              searching: 0
-              show-export: 0
-              bMultiFilter: 0
-            bootstrap_table_options:
-              sticky-header: 0
-              show-export: 0
-              show-print: 0
-              show-copy-rows: 0
-              show-multi-sort: 0
-              show-fullscreen: 0
-              search: 0
-              show-refresh: 0
-              show-toggle: 0
-              show-columns: 0
-              mobile-responsive: 0
-              sortable: 0
-              click-to-select: 0
-              show-pagination-switch: 0
-              pagination: 0
-              show-footer: 0
+            recursion_level: 2
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -11456,7 +11291,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_orig_state_pres__target_id }}'
             absolute: false
             external: false
@@ -11519,7 +11354,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_ownership__target_id }}'
             absolute: false
             external: false
@@ -11771,7 +11606,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_raw_material__target_id }}'
             absolute: false
             external: false
@@ -11959,7 +11794,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_relative_datation__target_id }}'
             absolute: false
             external: false
@@ -12085,7 +11920,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_site__target_id }}'
             absolute: false
             external: false
@@ -12148,7 +11983,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_state__target_id }}'
             absolute: false
             external: false
@@ -13090,7 +12925,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_recent_damage_note__target_id }}'
             absolute: false
             external: false
@@ -13278,7 +13113,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_deposition_cond__target_id }}'
             absolute: false
             external: false
@@ -14727,7 +14562,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_recent_damage__target_id }}'
             absolute: false
             external: false
@@ -15042,7 +14877,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/{{ nothing }}/taxonomy/term/{{ field_surface_alt__target_id }}'
             absolute: false
             external: false
@@ -15073,7 +14908,7 @@ display:
           element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -15324,7 +15159,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -15332,138 +15167,489 @@ display:
           view: a3d_meta_media
           display: media_uri_export
           arguments: '{{ raw_fields.nid }}'
+        field_group_code:
+          id: field_group_code
+          table: group__field_group_code
+          field: field_group_code
+          relationship: gid
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_wgs84_geolocation_accuracy_export:
+          id: field_wgs84_geolocation_accuracy_export
+          table: node__field_wgs84_geolocation_accuracy
+          field: field_wgs84_geolocation_accuracy_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field_export
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: false
+        field_feature_id_export:
+          id: field_feature_id_export
+          table: node__field_feature_id
+          field: field_feature_id_export
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field_export
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_export
+          settings:
+            view_mode: default
+            extra:
+              id: id
+              title: title
+              url: url
+              type: type
+              bundle: bundle
+              uid: uid
+              created: created
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          field_api_classes: false
       pager:
         type: some
         options:
           offset: 0
           items_per_page: 1
       arguments: {  }
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            a3d_object: a3d_object
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_group_code_value:
+          id: field_group_code_value
+          table: group__field_group_code
+          field: field_group_code_value
+          relationship: gid
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_group_code_value_op
+            label: 'group code'
+            description: ''
+            use_operator: false
+            operator: field_group_code_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_group_code
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_artefact_category_target_id:
+          id: field_artefact_category_target_id
+          table: node__field_artefact_category
+          field: field_artefact_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_artefact_category_target_id_op
+            label: 'Artefact category'
+            description: ''
+            use_operator: false
+            operator: field_artefact_category_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_artefact_category_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            reduce: false
+            chosen_override: 0
+            disable_search: 0
+            search_contains: 0
+            placeholder_text_multiple: 'Choose some options'
+            placeholder_text_single: 'Choose an option'
+            no_results_text: 'No results match'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: artefact_category
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_timespan_from:
+          id: field_timespan_from
+          table: node__field_timespan
+          field: field_timespan_from
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_timespan_from_op
+            label: 'Timespan (field_timespan:from)'
+            description: ''
+            use_operator: false
+            operator: field_timespan_from_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_timespan_from
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_timespan_to:
+          id: field_timespan_to
+          table: node__field_timespan
+          field: field_timespan_to
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_timespan_to_op
+            label: 'Timespan (field_timespan:to)'
+            description: ''
+            use_operator: false
+            operator: field_timespan_to_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_timespan_to
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: serializer
         options:
           formats:
-            csv: csv
-            jsonld: jsonld
             json: json
-            xml: xml
       row:
-        type: fields
-        options:
-          default_field_elements: true
-          inline:
-            field_abs_dat_range: field_abs_dat_range
-            field_abs_dat_source: field_abs_dat_source
-            field_rights_access: field_rights_access
-            field_ais_cr: field_ais_cr
-            field_artefact_category: field_artefact_category
-            field_artefact_class: field_artefact_class
-            field_artefact_id: field_artefact_id
-            field_artefact_subclass: field_artefact_subclass
-            field_auth_3d_models: field_auth_3d_models
-            field_auth_res_data: field_auth_res_data
-            field_city: field_city
-            field_city_code: field_city_code
-            field_coll_id: field_coll_id
-            field_coll_keyword: field_coll_keyword
-            field_coll_lang: field_coll_lang
-            field_coll_rights: field_coll_rights
-            field_coll_title: field_coll_title
-            field_coll_contacts: field_coll_contacts
-            field_cov_spat: field_cov_spat
-            field_cov_temp: field_cov_temp
-            field_creation: field_creation
-            field_culture: field_culture
-            field_current_location: field_current_location
-            field_description_a3d: field_description_a3d
-            field_discoverer: field_discoverer
-            field_discovery_date: field_discovery_date
-            field_doc_creator: field_doc_creator
-            field_doc_date: field_doc_date
-            field_feature_id: field_feature_id
-            field_feature_type: field_feature_type
-            field_finding_context_loc: field_finding_context_loc
-            field_finding_context_note: field_finding_context_note
-            field_finding_context_pos: field_finding_context_pos
-            field_finding_context_sec_value: field_finding_context_sec_value
-            field_finding_context_subtype: field_finding_context_subtype
-            field_finding_context_type: field_finding_context_type
-            field_holder_type: field_holder_type
-            field_legal_status: field_legal_status
-            field_licence_url: field_licence_url
-            field_literature: field_literature
-            field_general_note: field_general_note
-            field_coll_org: field_coll_org
-            field_original_location: field_original_location
-            field_orig_state_pres: field_orig_state_pres
-            field_ownership: field_ownership
-            field_proj_dedication: field_proj_dedication
-            field_proj_id: field_proj_id
-            field_quality: field_quality
-            field_raw_material: field_raw_material
-            field_reg_number: field_reg_number
-            field_relations: field_relations
-            field_relative_datation: field_relative_datation
-            field_rights_reproduction: field_rights_reproduction
-            field_site: field_site
-            field_state: field_state
-            field_statement: field_statement
-            field_subord_dataset: field_subord_dataset
-            field_subord_dataset_link: field_subord_dataset_link
-            field_2d_asymmetry: field_2d_asymmetry
-            field_3d_shaping: field_3d_shaping
-            field_3d_traces: field_3d_traces
-            field_alteration: field_alteration
-            field_alternative_id: field_alternative_id
-            field_assess_cond_date: field_assess_cond_date
-            field_ballistic_profile: field_ballistic_profile
-            field_base_curve: field_base_curve
-            field_binder_type: field_binder_type
-            field_blank_orientation: field_blank_orientation
-            field_circle: field_circle
-            field_recent_damage_note: field_recent_damage_note
-            field_a_asymmetry: field_a_asymmetry
-            field_b_asymmetry: field_b_asymmetry
-            field_deposition_cond: field_deposition_cond
-            field_firing: field_firing
-            field_fract_nature: field_fract_nature
-            field_fract_preservation: field_fract_preservation
-            field_general_lateral_wear: field_general_lateral_wear
-            field_glue_residues: field_glue_residues
-            field_g_w_practice: field_g_w_practice
-            field_grain_type: field_grain_type
-            field_gb_scale: field_gb_scale
-            field_longitudinal_profile: field_longitudinal_profile
-            field_met_note_cz: field_met_note_cz
-            field_micro_ct: field_micro_ct
-            field_microstructure: field_microstructure
-            field_mineral_fragments: field_mineral_fragments
-            field_painting_microscope: field_painting_microscope
-            field_painting_eye: field_painting_eye
-            field_painting_tool: field_painting_tool
-            field_pigment: field_pigment
-            field_polished_sec_petrography: field_polished_sec_petrography
-            field_porosity_value: field_porosity_value
-            field_preserved_parts: field_preserved_parts
-            field_quiver_trans_bright_spots: field_quiver_trans_bright_spots
-            field_quiver_trans_lat_rounding: field_quiver_trans_lat_rounding
-            field_quiver_trans_tip_rounding: field_quiver_trans_tip_rounding
-            field_recent_damage: field_recent_damage
-            field_recent_damage_type: field_recent_damage_type
-            field_reparation_features: field_reparation_features
-            field_retouch: field_retouch
-            field_rock_fragments: field_rock_fragments
-            field_serration: field_serration
-            field_surface_alt: field_surface_alt
-            field_thermic_cracks: field_thermic_cracks
-            field_tip_fracture: field_tip_fracture
-            field_wear: field_wear
-          separator: '<br>'
-          hide_empty: true
+        type: data_entity
+        options: {  }
       defaults:
         style: false
         row: false
         fields: false
         arguments: false
+        filters: false
+        filter_groups: false
       display_description: 'All non-empty fields'
       display_extenders:
         matomo:
@@ -15477,16 +15663,18 @@ display:
           category_fallback: ''
           category_facets: {  }
           category_facets_concat_separator: ', '
-      path: a3d/node/export
+      path: a3d/artefact/export
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
+        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.group.field_group_code'
         - 'config:field.storage.node.field_2d_asymmetry'
         - 'config:field.storage.node.field_3d_shaping'
         - 'config:field.storage.node.field_3d_traces'
@@ -15593,7 +15781,292 @@ display:
         - 'config:field.storage.node.field_thermic_cracks'
         - 'config:field.storage.node.field_tip_fracture'
         - 'config:field.storage.node.field_wear'
+        - 'config:field.storage.node.field_wgs84_geolocation_accuracy'
     deleted: false
+  rest_export_nodes:
+    id: rest_export_nodes
+    display_title: 'REST export'
+    display_plugin: rest_export
+    position: 4
+    display_options:
+      pager:
+        type: full
+        options:
+          offset: 0
+          pagination_heading_level: h4
+          items_per_page: 50
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      arguments: {  }
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_op
+            label: 'Content type'
+            description: ''
+            use_operator: false
+            operator: type_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: type
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: numeric
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: nid_op
+            label: ID
+            description: ''
+            use_operator: false
+            operator: nid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: nid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_group_code_value:
+          id: field_group_code_value
+          table: group__field_group_code
+          field: field_group_code_value
+          relationship: gid
+          group_type: group
+          admin_label: ''
+          plugin_id: string
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_group_code_value_op
+            label: 'group code (field_group_code)'
+            description: ''
+            use_operator: false
+            operator: field_group_code_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: group_code
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: serializer
+        options:
+          uses_fields: false
+          formats:
+            json: json
+      defaults:
+        relationships: false
+        sorts: false
+        arguments: false
+        filters: false
+        filter_groups: false
+      relationships:
+        group_relationship:
+          id: group_relationship
+          table: node_field_data
+          field: group_relationship
+          relationship: none
+          group_type: group
+          admin_label: 'Content group relationship'
+          entity_type: node
+          plugin_id: group_relationship_to_entity_reverse
+          required: true
+          group_relation_plugins:
+            'group_node:a3d_object': 'group_node:a3d_object'
+            'group_node:analysis': 'group_node:analysis'
+            'group_node:sample': 'group_node:sample'
+            'group_node:a3d_platform_homepage': '0'
+            'group_node:arf_surf_data_pres': '0'
+            'group_node:article': '0'
+            'group_node:at_project': '0'
+            'group_node:contract': '0'
+            'group_node:islandora_object': '0'
+            'group_node:page': '0'
+            'group_node:test_a3d': '0'
+        gid:
+          id: gid
+          table: group_relationship_field_data
+          field: gid
+          relationship: group_relationship
+          group_type: group
+          admin_label: Group
+          entity_type: group_relationship
+          entity_field: gid
+          plugin_id: standard
+          required: false
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+      path: export/nodes
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_alternative_id'
+        - 'config:field.storage.node.field_artefact_id'
+        - 'config:field.storage.node.field_geolocation'
+        - 'config:field.storage.node.field_site'
   rest_export_single:
     id: rest_export_single
     display_title: 'REST export'

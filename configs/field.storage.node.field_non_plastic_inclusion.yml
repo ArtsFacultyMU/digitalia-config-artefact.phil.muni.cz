@@ -1,0 +1,20 @@
+uuid: da226b85-59b1-400e-b6f0-95a3ad6808b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_non_plastic_inclusion
+field_name: field_non_plastic_inclusion
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

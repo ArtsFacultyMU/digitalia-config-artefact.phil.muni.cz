@@ -1,0 +1,31 @@
+uuid: e4a3ff47-f751-4853-8dac-4075a9ad2dbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_non_plastic_inclusion
+    - node.type.non_plastic_inclusion
+    - taxonomy.vocabulary.mineral_fragments
+    - taxonomy.vocabulary.rock_fragments
+id: node.non_plastic_inclusion.field_non_plastic_inclusion
+field_name: field_non_plastic_inclusion
+entity_type: node
+bundle: non_plastic_inclusion
+label: 'Non-plastic inclusion'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      mineral_fragments: mineral_fragments
+      rock_fragments: rock_fragments
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: mineral_fragments
+field_type: entity_reference

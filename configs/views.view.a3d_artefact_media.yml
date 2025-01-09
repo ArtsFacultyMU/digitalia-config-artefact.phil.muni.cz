@@ -627,6 +627,21 @@ display:
             label: ''
             field_identifier: ''
           exposed: false
+        name:
+          id: name
+          table: media_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: media
+          entity_field: name
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       filters:
         status:
           id: status
@@ -825,6 +840,21 @@ display:
           admin_label: ''
           plugin_id: standard
           order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        name:
+          id: name
+          table: media_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: media
+          entity_field: name
+          plugin_id: standard
+          order: ASC
           expose:
             label: ''
             field_identifier: ''
@@ -1339,7 +1369,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if drupal_token('site:url-brief')|split('.')[0] == 'archeo3data-devel' or drupal_token('site:url-brief')|split('.')[0] == 'archeo3data' %}\r\n{{ entity_comparison_link_a3d_meta_entity_comparison }}\r\n{% endif %}\r\n{% if drupal_token('site:url-brief')|split('.')[0] == 'artefact-devel' or drupal_token('site:url-brief')|split('.')[0] == 'artefact' %}\r\n{{ entity_comparison_link_a3d_arf_entity_comparison }}\r\n{% endif %}\r\n{% if drupal_token('site:url-brief')|split('.')[0] == 'neofig-devel' or drupal_token('site:url-brief')|split('.')[0] == 'neofig' %}\r\n{{ entity_comparison_link_a3d_nef_entity_comparison }}\r\n{% endif %}\r\n{% if drupal_token('site:url-brief')|split('.')[0] == 'pottery-analyses-devel' or drupal_token('site:url-brief')|split('.')[0] == 'pottery-analyses' %}\r\n{{ entity_comparison_link_a3d_kch_entity_comparison }}\r\n{% endif %}"
+            text: "{% if drupal_token('site:url-brief')|split('.')[0] == 'archaeo3data-devel' or drupal_token('site:url-brief')|split('.')[0] == 'archaeo3data' %}\r\n{{ entity_comparison_link_a3d_meta_entity_comparison }}\r\n{% endif %}\r\n{% if drupal_token('site:url-brief')|split('.')[0] == 'artefact-devel' or drupal_token('site:url-brief')|split('.')[0] == 'artefact' %}\r\n{{ entity_comparison_link_a3d_arf_entity_comparison }}\r\n{% endif %}\r\n{% if drupal_token('site:url-brief')|split('.')[0] == 'neofig-devel' or drupal_token('site:url-brief')|split('.')[0] == 'neofig' %}\r\n{{ entity_comparison_link_a3d_nef_entity_comparison }}\r\n{% endif %}\r\n{% if drupal_token('site:url-brief')|split('.')[0] == 'pottery-analyses-devel' or drupal_token('site:url-brief')|split('.')[0] == 'pottery-analyses' %}\r\n{{ entity_comparison_link_a3d_kch_entity_comparison }}\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false

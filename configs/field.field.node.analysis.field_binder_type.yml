@@ -11,14 +11,14 @@ id: node.analysis.field_binder_type
 field_name: field_binder_type
 entity_type: node
 bundle: analysis
-label: 'Binder type'
+label: 'Matrix type'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       binder_type: binder_type

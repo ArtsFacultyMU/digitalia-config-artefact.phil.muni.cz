@@ -1,0 +1,21 @@
+uuid: 7dce4571-5f94-42e4-986b-6998e3ac1acd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_powder
+    - node.type.sample
+id: node.sample.field_is_powder
+field_name: field_is_powder
+entity_type: node
+bundle: sample
+label: 'Is powder'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

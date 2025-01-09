@@ -7,5 +7,5 @@ dependencies:
 id: arf_site_logo
 title: 'ARF site logo'
 content:
-  value: '<p><a href="/group/arf" rel="home"><img src="/themes/custom/islandora_muni/platform_specific/images/logo-en.svg" alt="Home" width="167" height="68"></a></p>'
+  value: '<p><a href="/group/arf" rel="home"><img src="/themes/custom/islandora_muni/platform_specific/images/arf-logo-en.svg" alt="Home" width="167" height="68"></a></p>'
   format: full_html

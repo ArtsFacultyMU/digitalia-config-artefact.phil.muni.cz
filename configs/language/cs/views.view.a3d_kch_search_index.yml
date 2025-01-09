@@ -5,6 +5,13 @@ display:
         nid:
           fallback_options:
             format_plural_string: !!binary MQNAY291bnQD
+      filters:
+        field_artefact_category_name:
+          expose:
+            description: ''
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
   kch_browse:
     display_options:
       fields:
@@ -20,7 +27,7 @@ display:
           expose:
             label: 'Kategorie artefaktu'
       menu:
-        title: 'Keramické výrobky'
+        title: Databáze
   kch_search:
     display_options:
       fields:
@@ -134,10 +141,14 @@ display:
       header:
         result:
           content: 'Zobrazují se položky @start - @end z @total'
+        area:
+          content:
+            value: '<p><a class="button" href="/cs/kch/analyses" align="right">Vyhledávat v analýzách</a></p>'
+            format: full_html
       menu:
         title: 'Keramické výrobky'
       title: 'Keramické výrobky'
-    display_title: 'Keramické výrobky'
+    display_title: 'Vyhledávání keramických produktů'
   kch_search_top:
     display_options:
       title: Vyhledávání
@@ -177,3 +188,10 @@ display:
             format_plural_string: !!binary MQNAY291bnQD
       menu:
         title: Lokality
+      exposed_form:
+        options:
+          submit_button: Vyhledat
+          reset_button_label: Resetovat
+          exposed_sorts_label: 'Řadit podle'
+          sort_asc_label: vzestupně
+          sort_desc_label: sestupně

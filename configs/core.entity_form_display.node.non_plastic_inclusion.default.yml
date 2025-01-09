@@ -1,0 +1,46 @@
+uuid: 3f1759fe-da35-40bc-83bf-7cd61ba20248
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.non_plastic_inclusion.field_estimated_quantity
+    - field.field.node.non_plastic_inclusion.field_non_plastic_inclusion
+    - field.field.node.non_plastic_inclusion.field_percent
+    - node.type.non_plastic_inclusion
+id: node.non_plastic_inclusion.default
+targetEntityType: node
+bundle: non_plastic_inclusion
+mode: default
+content:
+  field_estimated_quantity:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_non_plastic_inclusion:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_percent:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  title: true
+  uid: true

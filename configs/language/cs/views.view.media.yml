@@ -5,6 +5,8 @@ display:
       fields:
         bundle:
           label: Typ
+        uid:
+          label: Autor
         status:
           label: Stav
           settings:

@@ -5,7 +5,6 @@ dependencies:
   config:
     - views.view.a3d_kch_search_index
   module:
-    - block_class
     - context
     - islandora
     - system

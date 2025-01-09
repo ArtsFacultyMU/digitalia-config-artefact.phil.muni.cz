@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.sample.field_description_a3d
     - field.field.node.sample.field_is_macrosample
+    - field.field.node.sample.field_is_powder
     - field.field.node.sample.field_is_thin_section
     - field.field.node.sample.field_note
     - field.field.node.sample.field_object_reference
@@ -38,6 +39,13 @@ content:
     weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_is_powder:
+    type: boolean_checkbox
+    weight: 26
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_is_thin_section:
     type: options_buttons

@@ -32,5 +32,5 @@ settings:
       min: null
       required: false
       prefix: ''
-      suffix: ''
+      suffix: PPM
 field_type: data_field

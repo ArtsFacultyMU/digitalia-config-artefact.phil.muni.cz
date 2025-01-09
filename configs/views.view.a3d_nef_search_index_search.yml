@@ -1213,7 +1213,7 @@ display:
           expose:
             label: Site
             field_identifier: field_site_name
-          exposed: true
+          exposed: false
       arguments: {  }
       filters:
         status:

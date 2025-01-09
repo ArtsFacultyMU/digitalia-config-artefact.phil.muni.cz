@@ -12,7 +12,7 @@ dependencies:
 id: a3d_arf_search_index_taxonomy
 label: 'A3D ARF Search Index Taxonomy'
 module: views
-description: 'NEF Browse views built atop "Index A3D object index"'
+description: 'ARF Browse views built atop "Index A3D object index"'
 tag: ''
 base_table: search_api_index_a3d_object_index
 base_field: search_api_id
@@ -811,10 +811,10 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        aggregated_field_artefact_category:
-          id: aggregated_field_artefact_category
+        field_artefact_category_name:
+          id: field_artefact_category_name
           table: search_api_index_a3d_object_index
-          field: aggregated_field_artefact_category
+          field: field_artefact_category_name
           relationship: none
           group_type: group
           admin_label: ''
@@ -822,7 +822,7 @@ display:
           order: ASC
           expose:
             label: 'Artefact category'
-            field_identifier: aggregated_field_artefact_category
+            field_identifier: field_artefact_category_name
           exposed: true
         field_site_name:
           id: field_site_name
@@ -849,32 +849,6 @@ display:
           expose:
             label: 'Relative datation'
             field_identifier: field_relative_datation_name
-          exposed: true
-        field_feature_type_name:
-          id: field_feature_type_name
-          table: search_api_index_a3d_object_index
-          field: field_feature_type_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: ASC
-          expose:
-            label: 'Feature type'
-            field_identifier: field_feature_type_name
-          exposed: true
-        field_deposition_cond_name:
-          id: field_deposition_cond_name
-          table: search_api_index_a3d_object_index
-          field: field_deposition_cond_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: ASC
-          expose:
-            label: 'Deposition condition'
-            field_identifier: field_deposition_cond_name
           exposed: true
         field_artefact_id:
           id: field_artefact_id

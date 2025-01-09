@@ -5,6 +5,8 @@ display:
       fields:
         title:
           label: Nadpis
+        name:
+          label: Autor
       pager:
         options:
           expose:

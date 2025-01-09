@@ -1,0 +1,20 @@
+uuid: fd026ef0-1f8b-4bf7-af50-2ecbbcf8002b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_percent
+field_name: field_percent
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

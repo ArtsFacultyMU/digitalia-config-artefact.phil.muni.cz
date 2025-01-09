@@ -1,6 +1,6 @@
 uuid: f6491a2d-fb5a-4612-99de-946870dfd41b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.a3d_arf_content

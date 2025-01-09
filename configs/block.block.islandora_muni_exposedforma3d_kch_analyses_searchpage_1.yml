@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.a3d_kch_analyses_search
   module:
+    - block_class
     - context
     - islandora
     - views
@@ -19,7 +20,7 @@ plugin: 'views_exposed_filter_block:a3d_kch_analyses_search-page_1'
 settings:
   id: 'views_exposed_filter_block:a3d_kch_analyses_search-page_1'
   label: ''
-  label_display: '0'
+  label_display: visible
   provider: views
   views_label: ''
 visibility:

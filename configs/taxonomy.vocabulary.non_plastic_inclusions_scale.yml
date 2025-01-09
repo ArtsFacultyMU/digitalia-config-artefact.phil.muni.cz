@@ -1,0 +1,9 @@
+uuid: 5309e6c0-65dc-49d8-b72e-6bf65f7fe30a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Non-plastic inclusions scale'
+vid: non_plastic_inclusions_scale
+description: 'Estimate of how much of the inclusion can be found in the sample on a scale of 1 to 7'
+weight: 0
+new_revision: false

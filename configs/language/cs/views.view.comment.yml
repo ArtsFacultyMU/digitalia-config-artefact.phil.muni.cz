@@ -3,6 +3,8 @@ display:
     display_title: Výchozí
     display_options:
       fields:
+        name:
+          label: Autor
         operations:
           label: Operace
       pager:
@@ -15,5 +17,7 @@ display:
   page_unapproved:
     display_options:
       fields:
+        name:
+          label: Autor
         operations:
           label: Operace

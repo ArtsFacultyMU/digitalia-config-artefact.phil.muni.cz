@@ -15,17 +15,13 @@ display:
             label: 'Kategorie artefaktu'
         field_ownership_target_id:
           expose:
-            label: 'V držení'
+            label: Instituce
         field_timespan_from:
           expose:
             label: 'Spodní odhad datace'
         field_timespan_to:
           expose:
             label: 'Horní odhad datace'
-        field_wgs84_geolocation_boundary:
-          expose:
-            label: 'Omezit na plochu'
-            description: 'např. SV z. š. "49.2225389", z. d. "16.6746572" a JZ z. š. "49.1646728", z. d. "16.5446453"'
       header:
         result:
           content: "<h1>Keramické výrobky na mapě</h1>\r\n\r\nPočet výsledků: @total "

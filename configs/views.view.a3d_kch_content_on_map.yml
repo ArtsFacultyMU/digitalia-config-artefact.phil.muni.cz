@@ -732,7 +732,7 @@ display:
           exposed: true
           expose:
             operator_id: field_ownership_target_id_op
-            label: 'Held by'
+            label: Institution
             description: ''
             use_operator: false
             operator: field_ownership_target_id_op
@@ -780,71 +780,6 @@ display:
           hierarchy: false
           limit: true
           error_message: true
-        field_wgs84_geolocation_boundary:
-          id: field_wgs84_geolocation_boundary
-          table: node__field_wgs84_geolocation
-          field: field_wgs84_geolocation_boundary
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          plugin_id: geolocation_filter_boundary
-          operator: '='
-          value:
-            lat_north_east: ''
-            lng_north_east: ''
-            lat_south_west: ''
-            lng_south_west: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: 'Geolocation Boundary'
-            description: 'e.g. NE lat. "49.2225389", long. "16.6746572" and SW lat. "49.1646728", long. "16.5446453"'
-            use_operator: false
-            operator: field_wgs84_geolocation_boundary_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_wgs84_geolocation_boundary
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            input_by_geocoding_widget: 0
-            geocoder_plugin_settings:
-              plugin_id: photon
-              settings:
-                label: Address
-                description: 'Enter an address to be localized.'
-                autocomplete_min_length: 1
-                location_priority:
-                  lat: null
-                  lng: null
-                remove_duplicates: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
         field_timespan_from:
           id: field_timespan_from
           table: node__field_timespan

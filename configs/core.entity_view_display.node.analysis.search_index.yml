@@ -21,11 +21,13 @@ dependencies:
     - field.field.node.analysis.field_firing_characteristic
     - field.field.node.analysis.field_firing_temperature
     - field.field.node.analysis.field_fractured_pores
+    - field.field.node.analysis.field_fragments
     - field.field.node.analysis.field_grain_type
     - field.field.node.analysis.field_instrument
     - field.field.node.analysis.field_matrix
     - field.field.node.analysis.field_matrix_vitrification
     - field.field.node.analysis.field_microstructure
+    - field.field.node.analysis.field_mineral_fragments
     - field.field.node.analysis.field_minerals
     - field.field.node.analysis.field_non_plastic_inclusions
     - field.field.node.analysis.field_nonplastic_sort
@@ -79,6 +81,11 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  a3d_kch_index_related_samples_and_analyses_entity_view_7:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   display_media_entity_view_1:
     settings: {  }
     third_party_settings: {  }
@@ -122,11 +129,13 @@ hidden:
   field_firing_characteristic: true
   field_firing_temperature: true
   field_fractured_pores: true
+  field_fragments: true
   field_grain_type: true
   field_instrument: true
   field_matrix: true
   field_matrix_vitrification: true
   field_microstructure: true
+  field_mineral_fragments: true
   field_minerals: true
   field_non_plastic_inclusions: true
   field_nonplastic_sort: true
