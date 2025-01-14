@@ -195,9 +195,11 @@ process:
       bundle: deposition_cond
   field_finding_context_note:
     -
-      plugin: explode
+      plugin: str_replace
       source: field_finding_context_note
-      delimiter: '|'
+      regex: true
+      search: '/\|/'
+      replace: "\n"
     -
       plugin: callback
       callable: trim
