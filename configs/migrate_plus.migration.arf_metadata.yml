@@ -198,8 +198,9 @@ process:
       plugin: str_replace
       source: field_finding_context_note
       regex: true
-      search: '/\|/'
+      search: /\|/
       replace: "\n"
+
     -
       plugin: callback
       callable: trim
@@ -316,10 +317,8 @@ process:
             source: '@exploded'
             default: ''
           -
-            plugin: str_replace
-            regex: true
-            search: /\+/
-            replace: ', '
+            plugin: explode
+            delimiter: '+'
           -
             plugin: entity_generate
             entity_type: taxonomy_term
