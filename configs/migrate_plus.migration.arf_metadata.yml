@@ -382,7 +382,7 @@ process:
             default: ''
           -
             plugin: explode
-            delimiter: +
+            delimiter: '+'
           -
             plugin: single_value
         field_value:
@@ -405,10 +405,8 @@ process:
             source: '@exploded'
             default: ''
           -
-            plugin: str_replace
-            regex: true
-            search: /\+/
-            replace: ', '
+            plugin: explode
+            delimiter: '+'
           -
             plugin: entity_generate
             entity_type: taxonomy_term
