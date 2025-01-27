@@ -54,6 +54,21 @@ targetEntityType: node
 bundle: analysis
 mode: default
 content:
+  a3d_artefact_media_a3d_documents:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_artefact_media_a3d_images:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_artefact_media_a3d_other_files:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   a3d_eva_entity_group_relation_entity_view_2:
     settings: {  }
     third_party_settings: {  }

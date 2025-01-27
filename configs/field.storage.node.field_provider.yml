@@ -1,21 +1,16 @@
-uuid: 4dca1579-0b36-42b2-9c9e-64d985978a2c
+uuid: b9d0e3f1-4197-4608-b96e-72334fde0f59
 langcode: en
 status: true
 dependencies:
   module:
-    - field_permissions
     - node
-third_party_settings:
-  field_permissions:
-    permission_type: public
+    - taxonomy
 id: node.field_provider
 field_name: field_provider
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: -1

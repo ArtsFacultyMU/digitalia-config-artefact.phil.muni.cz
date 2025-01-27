@@ -58,11 +58,6 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
-  a3d_kch_index_related_samples_and_analyses_entity_view_3:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 15
-    region: content
   a3d_kch_index_related_samples_and_analyses_entity_view_6:
     settings: {  }
     third_party_settings: {  }
@@ -99,14 +94,6 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 21
-    region: content
-  field_binder_ratio:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
     weight: 18
     region: content
   field_binder_type:
@@ -115,7 +102,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 17
+    weight: 15
     region: content
   field_colour_inward:
     type: string
@@ -147,7 +134,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 22
+    weight: 19
     region: content
   field_firing_characteristic:
     type: entity_reference_label
@@ -156,6 +143,14 @@ content:
       link: false
     third_party_settings: {  }
     weight: 9
+    region: content
+  field_fragments:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 20
     region: content
   field_grain_type:
     type: entity_reference_label
@@ -190,21 +185,12 @@ content:
     third_party_settings: {  }
     weight: 14
     region: content
-  field_non_plastic_inclusions:
-    type: number_integer
-    label: hidden
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 16
-    region: content
   field_note:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 20
+    weight: 17
     region: content
   field_note_on_method:
     type: text_default
@@ -218,7 +204,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 19
+    weight: 16
     region: content
   field_rock_fragments:
     type: entity_reference_label
@@ -229,6 +215,9 @@ content:
     weight: 6
     region: content
 hidden:
+  a3d_artefact_media_a3d_documents: true
+  a3d_artefact_media_a3d_images: true
+  a3d_artefact_media_a3d_other_files: true
   a3d_eva_entity_group_relation_entity_view_2: true
   a3d_eva_entity_group_relation_entity_view_4: true
   a3d_eva_entity_group_relation_entity_view_5: true
@@ -239,16 +228,17 @@ hidden:
   display_media_original_download: true
   display_media_service_file: true
   display_media_thumbnail: true
+  field_binder_ratio: true
   field_cavity_pores: true
   field_chemical_analysis: true
   field_data_pres_value: true
   field_elements: true
   field_firing_temperature: true
   field_fractured_pores: true
-  field_fragments: true
   field_matrix_vitrification: true
   field_mineral_fragments: true
   field_minerals: true
+  field_non_plastic_inclusions: true
   field_nonplastic_sort: true
   field_planar_pores: true
   field_pore_channels: true

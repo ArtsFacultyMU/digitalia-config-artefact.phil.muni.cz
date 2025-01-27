@@ -1,0 +1,17 @@
+uuid: 1f199b06-adaa-4cfe-8fdb-a696c5a5cfd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.stove_tile_placement_type_2
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-70be686a51e85297
+group_type: test_group_type
+content_plugin: 'group_term:stove_tile_placement_type_2'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

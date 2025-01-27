@@ -1,0 +1,18 @@
+uuid: dcc03f3f-643c-4d7d-ba7b-a817ade71cb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - media.type.document
+  module:
+    - groupmedia
+    - media
+id: test_group_type-1f71dcad5210d3c3
+group_type: test_group_type
+content_plugin: 'group_media:document'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false
+  tracking_enabled: 0

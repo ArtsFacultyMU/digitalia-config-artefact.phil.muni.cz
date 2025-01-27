@@ -39,21 +39,6 @@ display:
         facets_field_instrument:
           expose:
             label: Přístroj
-        facets_field_rock_fragments:
-          expose:
-            label: Horniny
-        rendered_item_1:
-          expose:
-            label: Minerály
-        field_grain_type:
-          expose:
-            label: Zrnitost
-        field_binder_type:
-          expose:
-            label: 'Typ pojiva'
-        field_microstructure:
-          expose:
-            label: Mikrostruktura
         to:
           expose:
             label: 'Horní odhad teploty výpalu'
@@ -66,6 +51,18 @@ display:
         field_porosity_1:
           expose:
             label: 'Horní odhad pórovitosti [%]'
+        facets_name_8:
+          expose:
+            label: 'Fragmenty minerálů a hornin'
+        facets_field_microstructure:
+          expose:
+            label: Mikrostruktura
+        facets_field_grain_type:
+          expose:
+            label: Zrnitost
+        facets_field_binder_type:
+          expose:
+            label: 'Typ pojiva'
       header:
         result:
           content: 'Zobrazují se položky @start - @end z @total'
@@ -96,6 +93,9 @@ display:
           tags:
             first: '« První'
             last: 'Poslední »'
+          expose:
+            items_per_page_label: 'Počet položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
       title: 'Vyhledávání v analýzách'
   page_1:
     display_options:

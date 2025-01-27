@@ -38,8 +38,6 @@ process:
     plugin: migration_lookup
     migration: kch_site_type
     source: site_type
-  field_geo_geolocation/lng: long
-  field_geo_geolocation/lat: lat
 destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: site

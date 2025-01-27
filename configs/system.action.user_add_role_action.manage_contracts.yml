@@ -1,0 +1,14 @@
+uuid: aa4a41d9-9223-4ba6-81e9-9867852f42c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.manage_contracts
+  module:
+    - user
+id: user_add_role_action.manage_contracts
+label: 'Add the manage contracts role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: manage_contracts

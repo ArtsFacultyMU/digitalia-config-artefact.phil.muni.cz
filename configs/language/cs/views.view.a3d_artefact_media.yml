@@ -6,9 +6,21 @@ display:
           content:
             value: '<p><strong>[view:title]:</strong></p>'
             format: basic_html
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Počet položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
+          views_infinite_scroll:
+            button_text: 'Zobrazit další'
   a3d_documents:
     display_options:
       title: Dokumenty
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'počet položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
   a3d_images:
     display_options:
       title: Obrázky

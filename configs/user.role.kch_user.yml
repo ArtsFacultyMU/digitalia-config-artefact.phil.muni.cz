@@ -13,6 +13,7 @@ dependencies:
   module:
     - content_translation
     - entity_comparison
+    - field_permissions
     - node
     - taxonomy
 id: kch_user
@@ -22,22 +23,21 @@ is_admin: null
 permissions:
   - 'create a3d_object content'
   - 'create analysis content'
-  - 'create contract content'
+  - 'create field_contract'
   - 'create sample content'
   - 'create terms in actor'
   - 'create terms in aquamanile_type'
   - 'delete any sample content'
   - 'delete own a3d_object content'
   - 'delete own analysis content'
-  - 'delete own contract content'
   - 'delete own sample content'
   - 'edit any a3d_object content'
   - 'edit any analysis content'
-  - 'edit any contract content'
   - 'edit any sample content'
   - 'edit own a3d_object content'
   - 'edit own analysis content'
   - 'edit own contract content'
+  - 'edit own field_contract'
   - 'edit own sample content'
   - 'edit terms in actor'
   - 'edit terms in aquamanile_type'
@@ -48,4 +48,6 @@ permissions:
   - 'view a3d_object revisions'
   - 'view analysis revisions'
   - 'view contract revisions'
+  - 'view field_contract'
+  - 'view own field_contract'
   - 'view sample revisions'

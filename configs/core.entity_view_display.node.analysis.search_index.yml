@@ -71,11 +71,6 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  a3d_kch_index_related_samples_and_analyses_entity_view_3:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
   a3d_kch_index_related_samples_and_analyses_entity_view_6:
     settings: {  }
     third_party_settings: {  }

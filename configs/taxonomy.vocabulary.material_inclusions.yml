@@ -1,0 +1,9 @@
+uuid: 84ccef11-730a-4aa4-8e12-a66a9c2cde9c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Material Inclusions'
+vid: material_inclusions
+description: 'Inclusions in the clay affecting the texture and properties of a ceramic object'
+weight: 0
+new_revision: false

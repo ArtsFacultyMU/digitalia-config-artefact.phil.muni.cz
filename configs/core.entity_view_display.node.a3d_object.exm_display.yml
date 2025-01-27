@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.a3d_object.field_3d_traces_struct
     - field.field.node.a3d_object.field_a_asymmetry
     - field.field.node.a3d_object.field_abs_dat_range
+    - field.field.node.a3d_object.field_abs_dat_range_cs
     - field.field.node.a3d_object.field_abs_dat_source
     - field.field.node.a3d_object.field_acquisition_type
     - field.field.node.a3d_object.field_ais_cr
@@ -44,6 +45,7 @@ dependencies:
     - field.field.node.a3d_object.field_coll_rights
     - field.field.node.a3d_object.field_coll_title
     - field.field.node.a3d_object.field_colour_paint
+    - field.field.node.a3d_object.field_contract
     - field.field.node.a3d_object.field_country
     - field.field.node.a3d_object.field_cov_spat
     - field.field.node.a3d_object.field_cov_temp
@@ -92,6 +94,7 @@ dependencies:
     - field.field.node.a3d_object.field_longitudinal_profile
     - field.field.node.a3d_object.field_mass_structure_data_pres
     - field.field.node.a3d_object.field_material_colour
+    - field.field.node.a3d_object.field_material_inclusions
     - field.field.node.a3d_object.field_measurements
     - field.field.node.a3d_object.field_member_of
     - field.field.node.a3d_object.field_met_note_cz
@@ -172,6 +175,11 @@ targetEntityType: node
 bundle: a3d_object
 mode: exm_display
 content:
+  a3d_arf_content_browse_title:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   a3d_artefact_media_a3d_documents:
     settings: {  }
     third_party_settings: {  }
@@ -279,6 +287,7 @@ hidden:
   field_3d_traces_struct: true
   field_a_asymmetry: true
   field_abs_dat_range: true
+  field_abs_dat_range_cs: true
   field_abs_dat_source: true
   field_acquisition_type: true
   field_ais_cr: true
@@ -312,6 +321,7 @@ hidden:
   field_coll_rights: true
   field_coll_title: true
   field_colour_paint: true
+  field_contract: true
   field_country: true
   field_cov_spat: true
   field_cov_temp: true
@@ -360,6 +370,7 @@ hidden:
   field_longitudinal_profile: true
   field_mass_structure_data_pres: true
   field_material_colour: true
+  field_material_inclusions: true
   field_measurements: true
   field_member_of: true
   field_met_note_cz: true

@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.a3d_object.field_3d_traces_struct
     - field.field.node.a3d_object.field_a_asymmetry
     - field.field.node.a3d_object.field_abs_dat_range
+    - field.field.node.a3d_object.field_abs_dat_range_cs
     - field.field.node.a3d_object.field_abs_dat_source
     - field.field.node.a3d_object.field_acquisition_type
     - field.field.node.a3d_object.field_ais_cr
@@ -43,6 +44,7 @@ dependencies:
     - field.field.node.a3d_object.field_coll_rights
     - field.field.node.a3d_object.field_coll_title
     - field.field.node.a3d_object.field_colour_paint
+    - field.field.node.a3d_object.field_contract
     - field.field.node.a3d_object.field_country
     - field.field.node.a3d_object.field_cov_spat
     - field.field.node.a3d_object.field_cov_temp
@@ -91,6 +93,7 @@ dependencies:
     - field.field.node.a3d_object.field_longitudinal_profile
     - field.field.node.a3d_object.field_mass_structure_data_pres
     - field.field.node.a3d_object.field_material_colour
+    - field.field.node.a3d_object.field_material_inclusions
     - field.field.node.a3d_object.field_measurements
     - field.field.node.a3d_object.field_member_of
     - field.field.node.a3d_object.field_met_note_cz
@@ -256,6 +259,13 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_abs_dat_range_cs:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 194
+    region: content
   field_colour_paint:
     type: entity_reference_label
     label: above
@@ -263,6 +273,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 8
+    region: content
+  field_contract:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 192
     region: content
   field_fract_preservation_struct:
     type: entity_reference_label
@@ -301,6 +319,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 7
+    region: content
+  field_material_inclusions:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 193
     region: content
   field_preserved_parts:
     type: basic_string

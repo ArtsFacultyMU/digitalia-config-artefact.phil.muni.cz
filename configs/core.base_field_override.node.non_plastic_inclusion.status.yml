@@ -1,0 +1,22 @@
+uuid: 821e02c1-5272-4ca8-801e-6b69bdfc403b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.non_plastic_inclusion
+id: node.non_plastic_inclusion.status
+field_name: status
+entity_type: node
+bundle: non_plastic_inclusion
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

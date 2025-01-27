@@ -1,0 +1,23 @@
+uuid: d0601808-4978-4ebe-938d-149eb9fe789f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contract
+  module:
+    - field_permissions
+    - node
+id: manage_contracts
+label: 'manage contracts'
+weight: 3
+is_admin: null
+permissions:
+  - 'create contract content'
+  - 'create field_contract'
+  - 'edit any contract content'
+  - 'edit field_contract'
+  - 'edit own contract content'
+  - 'edit own field_contract'
+  - 'view contract revisions'
+  - 'view field_contract'
+  - 'view own field_contract'

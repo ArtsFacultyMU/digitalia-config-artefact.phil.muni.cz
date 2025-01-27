@@ -13,12 +13,12 @@ entity_type: node
 bundle: non_plastic_inclusion
 label: 'Non-plastic inclusion'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:filter_existing_terms'
+  handler: unpublished_taxonomy_term
   handler_settings:
     target_bundles:
       mineral_fragments: mineral_fragments
@@ -26,6 +26,6 @@ settings:
     sort:
       field: name
       direction: asc
-    auto_create: false
+    auto_create: 0
     auto_create_bundle: mineral_fragments
 field_type: entity_reference

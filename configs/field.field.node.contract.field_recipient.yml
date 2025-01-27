@@ -1,19 +1,29 @@
-uuid: 996b24e0-e049-4ae9-b362-46b0ebc1d7b4
+uuid: 6f13c497-1b68-47c7-baa1-af8d29877531
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_recipient
     - node.type.contract
+    - taxonomy.vocabulary.actor
 id: node.contract.field_recipient
 field_name: field_recipient
 entity_type: node
 bundle: contract
 label: Recipient
-description: 'The contract side receiving the right to use the object'
-required: false
+description: ''
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      actor: actor
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

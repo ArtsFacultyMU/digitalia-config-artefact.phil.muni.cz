@@ -1,0 +1,31 @@
+uuid: A0921601-20A2-45C3-AEBE-70855B420367
+langcode: cs
+status: true
+dependencies: {  }
+id: kch_node_a3d_object_cs
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: kch
+label: 'translate a3d object'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/a3d_object.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - uri
+  constants:
+    uid: 5
+process:
+  uid: constants/uid
+  field_description_a3d: field_description_a3d_cs
+  field_abs_dat_range: field_abs_dat_range_cs
+destination:
+  plugin: 'entity:node'
+  default_bundle: a3d_object
+  translations: true
+migration_dependencies:
+  required:
+    - kch_node_a3d_object

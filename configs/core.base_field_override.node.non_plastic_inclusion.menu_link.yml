@@ -1,0 +1,20 @@
+uuid: 6f8c23d6-92d7-479f-ba6c-0fc3aa4972f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.non_plastic_inclusion
+id: node.non_plastic_inclusion.menu_link
+field_name: menu_link
+entity_type: node
+bundle: non_plastic_inclusion
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

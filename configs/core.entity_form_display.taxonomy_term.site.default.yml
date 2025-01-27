@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.site.field_city
+    - field.field.taxonomy_term.site.field_city_code
     - field.field.taxonomy_term.site.field_country
     - field.field.taxonomy_term.site.field_geo_geolocation
     - field.field.taxonomy_term.site.field_plot_number
     - field.field.taxonomy_term.site.field_site_type
+    - field.field.taxonomy_term.site.field_state
     - field.field.taxonomy_term.site.field_street
     - field.field.taxonomy_term.site.field_street_number
     - taxonomy.vocabulary.site
@@ -38,9 +40,19 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_country:
+  field_city_code:
     type: entity_reference_autocomplete
     weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_country:
+    type: entity_reference_autocomplete
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -56,7 +68,7 @@ content:
     third_party_settings: {  }
   field_plot_number:
     type: string_textfield
-    weight: 7
+    weight: 8
     region: content
     settings:
       size: 60
@@ -64,7 +76,17 @@ content:
     third_party_settings: {  }
   field_site_type:
     type: entity_reference_autocomplete
-    weight: 12
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_state:
+    type: entity_reference_autocomplete
+    weight: 14
     region: content
     settings:
       match_operator: CONTAINS
@@ -90,7 +112,7 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 8
+    weight: 9
     region: content
     settings:
       include_locked: true
@@ -105,19 +127,19 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 11
+    weight: 12
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   translation:
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

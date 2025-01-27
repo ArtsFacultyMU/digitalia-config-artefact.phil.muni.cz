@@ -12,12 +12,12 @@ entity_type: node
 bundle: a3d_object
 label: 'Project identification'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       proj_id: proj_id

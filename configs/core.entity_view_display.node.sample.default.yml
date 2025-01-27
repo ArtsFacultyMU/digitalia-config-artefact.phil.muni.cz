@@ -21,6 +21,21 @@ targetEntityType: node
 bundle: sample
 mode: default
 content:
+  a3d_artefact_media_a3d_documents:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_artefact_media_a3d_images:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_artefact_media_a3d_other_files:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   field_description_a3d:
     type: basic_string
     label: inline
@@ -40,7 +55,7 @@ content:
     region: content
   field_is_powder:
     type: boolean
-    label: above
+    label: inline
     settings:
       format: default
       format_custom_false: ''

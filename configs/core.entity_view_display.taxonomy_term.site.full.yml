@@ -5,10 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.site.field_city
+    - field.field.taxonomy_term.site.field_city_code
     - field.field.taxonomy_term.site.field_country
     - field.field.taxonomy_term.site.field_geo_geolocation
     - field.field.taxonomy_term.site.field_plot_number
     - field.field.taxonomy_term.site.field_site_type
+    - field.field.taxonomy_term.site.field_state
     - field.field.taxonomy_term.site.field_street
     - field.field.taxonomy_term.site.field_street_number
     - taxonomy.vocabulary.site
@@ -90,6 +92,8 @@ hidden:
   a3d_eva_groups_solr_entity_view_1: true
   a3d_eva_groups_solr_entity_view_2: true
   a3d_eva_groups_solr_nef: true
+  field_city_code: true
   field_geo_geolocation: true
+  field_state: true
   langcode: true
   search_api_excerpt: true

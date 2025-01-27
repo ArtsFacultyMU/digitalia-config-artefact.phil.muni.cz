@@ -9,6 +9,7 @@ dependencies:
     - context
     - entity_comparison
     - islandora
+    - system
   theme:
     - islandora_muni
 third_party_settings:
@@ -36,3 +37,7 @@ visibility:
     id: request_domain
     negate: false
     domains: "neofig-devel.phil.muni.cz\r\nneofig.phil.muni.cz"
+  request_path:
+    id: request_path
+    negate: true
+    pages: /compare/a3d-nef-entity-comparison/nef

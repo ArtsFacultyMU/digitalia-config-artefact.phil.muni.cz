@@ -13,12 +13,12 @@ entity_type: taxonomy_term
 bundle: instrument_type
 label: 'Identifier Type'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       identifier_type: identifier_type

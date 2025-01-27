@@ -1,0 +1,13 @@
+display:
+  default:
+    display_options:
+      title: 'Fragmenty minerálů a hornin'
+      fields:
+        name:
+          label: 'Neplastická složka'
+        vid:
+          label: Typ
+        field_estimated_quantity:
+          label: 'Odhad množství ve vzorku'
+        field_percent:
+          label: '% hmotnosti'

@@ -21,7 +21,7 @@ default_value:
     target_uuid: 734abeea-d499-46bd-974e-db42d4d14555
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       general_type: general_type

@@ -12,7 +12,7 @@ field_name: field_firing_temperature
 entity_type: node
 bundle: analysis
 label: 'Firing temperature'
-description: 'Enter the estimated value in °c. If the lower or upper bound is not set, -/+ infinity is considered in filters. For exact value, set the lower and upper values to the same number.'
+description: 'Enter the estimated value in °C. If the lower or upper bound is not set, -/+ infinity is considered in filters. For exact value, set the lower and upper values to the same number.'
 required: false
 translatable: false
 default_value: {  }
@@ -22,7 +22,7 @@ settings:
   max: null
   field:
     prefix: ''
-    suffix: °c
+    suffix: ' °C'
   from:
     prefix: ''
     suffix: ''

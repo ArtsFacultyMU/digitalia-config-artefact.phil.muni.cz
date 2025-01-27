@@ -1,0 +1,17 @@
+uuid: a79bde13-d7c9-41aa-921f-2d0f1e1590f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.analysis_type
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-2a1f9f79c3d2c28b
+group_type: test_group_type
+content_plugin: 'group_term:analysis_type'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

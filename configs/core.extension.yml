@@ -51,6 +51,7 @@ module:
   editor: 0
   entity: 0
   entity_comparison: 0
+  entity_reference_unpublished: 0
   eva: 0
   facets: 0
   facets_exposed_filters: 0

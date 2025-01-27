@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.source
+    - field.field.media.file.field_description
     - field.field.media.file.field_file_size
     - field.field.media.file.field_height
     - field.field.media.file.field_media_file
@@ -33,6 +34,7 @@ content:
 hidden:
   a3d_comparison_image_entity_view_1: true
   created: true
+  field_description: true
   field_file_size: true
   field_gemini_uri: true
   field_height: true

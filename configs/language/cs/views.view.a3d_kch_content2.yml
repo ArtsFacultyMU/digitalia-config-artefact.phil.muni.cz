@@ -11,10 +11,6 @@ display:
           label: 'Poznámka k metodologii'
         field_chemical_analysis:
           label: 'Chemická analýza'
-        field_rock_fragments:
-          label: 'Fragmenty hornin'
-        field_minerals:
-          label: 'Fragmenty minerálů'
         field_binder_type:
           label: Pojivo
         field_nonplastic_sort:
@@ -65,11 +61,20 @@ display:
           label: Poznámka
         field_private_note:
           label: 'Soukromá poznámka'
+        field_analysis_of_1:
+          label: 'Analyzovaný vzorek'
+          alter:
+            text: 'Vzorek {{ field_sample_id }}'
+      header:
+        result:
+          content: "<h2>Analýzy tohoto objektu</h2>\r\n@current_record_count z @total analýz"
   kch_analysis:
     display_options:
       fields:
         field_analysis_of:
           label: Vzorek
+          alter:
+            text: 'Vzorek {{ field_sample_id }} z {{ field_artefact_category }} ({{ field_artefact_id }})'
         title_1:
           label: 'Objekt ze kterého byl vzorek odebrán'
         field_instrument:
@@ -80,10 +85,6 @@ display:
           label: 'Datum analýzy'
         field_note_on_method:
           label: 'Poznámka k metodologii'
-        field_rock_fragments:
-          label: 'Fragmenty hornin'
-        field_minerals:
-          label: 'Fragmenty minerálů'
         field_chemical_analysis:
           label: 'Chemická analýza'
         field_elements:
@@ -164,6 +165,11 @@ display:
           label: Publikace
         field_note:
           label: Poznámka
+        view_1:
+          label: 'Fragmenty minerálů a hornin'
+        title:
+          alter:
+            text: '{{ field_analysis_type|capitalize }} předmětu {{ field_artefact_category }} ({{ field_artefact_id }})'
   kch_taxonomy:
     display_options:
       header:
@@ -175,3 +181,6 @@ display:
         nothing:
           alter:
             text: "{% if type == \"A3D object\" %}\r\n    keramických výrobků\r\n{% elseif type == \"Analysis\"  %}\r\n    analýz\r\n{% endif %}"
+        field_artefact_category:
+          alter:
+            text: '<strong>{{ field_artefact_category }}</strong> kategorie artefaktu</br>'

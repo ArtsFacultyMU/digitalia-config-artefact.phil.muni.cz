@@ -74,6 +74,7 @@ dependencies:
     - taxonomy.vocabulary.licence_url
     - taxonomy.vocabulary.loc_coord_cadastre_accuracy
     - taxonomy.vocabulary.longitudinal_profile
+    - taxonomy.vocabulary.material_inclusions
     - taxonomy.vocabulary.matrix_characteristic
     - taxonomy.vocabulary.measured_variable
     - taxonomy.vocabulary.measurement_type
@@ -83,6 +84,7 @@ dependencies:
     - taxonomy.vocabulary.motif
     - taxonomy.vocabulary.msdp_method
     - taxonomy.vocabulary.msdp_value
+    - taxonomy.vocabulary.non_plastic_inclusions_scale
     - taxonomy.vocabulary.orig_state_pres
     - taxonomy.vocabulary.original_location
     - taxonomy.vocabulary.painting
@@ -109,6 +111,7 @@ dependencies:
     - taxonomy.vocabulary.rights_access
     - taxonomy.vocabulary.rights_reproduction
     - taxonomy.vocabulary.rock_fragments
+    - taxonomy.vocabulary.scale_type
     - taxonomy.vocabulary.sdp_method
     - taxonomy.vocabulary.sdp_value
     - taxonomy.vocabulary.serration
@@ -217,6 +220,7 @@ permissions:
   - 'create terms in licence_url'
   - 'create terms in loc_coord_cadastre_accuracy'
   - 'create terms in longitudinal_profile'
+  - 'create terms in material_inclusions'
   - 'create terms in matrix_characteristic'
   - 'create terms in measured_variable'
   - 'create terms in measurement_type'
@@ -226,6 +230,7 @@ permissions:
   - 'create terms in motif'
   - 'create terms in msdp_method'
   - 'create terms in msdp_value'
+  - 'create terms in non_plastic_inclusions_scale'
   - 'create terms in orig_state_pres'
   - 'create terms in original_location'
   - 'create terms in painting'
@@ -349,6 +354,7 @@ permissions:
   - 'edit terms in licence_url'
   - 'edit terms in loc_coord_cadastre_accuracy'
   - 'edit terms in longitudinal_profile'
+  - 'edit terms in material_inclusions'
   - 'edit terms in matrix_characteristic'
   - 'edit terms in measured_variable'
   - 'edit terms in measurement_type'
@@ -384,6 +390,7 @@ permissions:
   - 'edit terms in rights_access'
   - 'edit terms in rights_reproduction'
   - 'edit terms in rock_fragments'
+  - 'edit terms in scale_type'
   - 'edit terms in sdp_method'
   - 'edit terms in sdp_value'
   - 'edit terms in serration'

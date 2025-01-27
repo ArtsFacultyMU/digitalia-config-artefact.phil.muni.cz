@@ -1,0 +1,29 @@
+uuid: c47089e0-5163-4470-8861-889c1e4fe79c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_state
+    - taxonomy.vocabulary.site
+    - taxonomy.vocabulary.state
+id: taxonomy_term.site.field_state
+field_name: field_state
+entity_type: taxonomy_term
+bundle: site
+label: State
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      state: state
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

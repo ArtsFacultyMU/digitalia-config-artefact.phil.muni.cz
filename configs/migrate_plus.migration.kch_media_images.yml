@@ -16,20 +16,32 @@ source:
   enclosure: '"'
   header_row_count: 1
   ids:
-    - path
+    - mypath
   constants:
     UID: 1
 process:
   field_media_image:
     plugin: migration_lookup
     migration: kch_files_images
-    source: path
+    source: mypath
   field_media_of:
     plugin: migration_lookup
     migration: kch_node_a3d_object
     source: uri
-  name: filename
+  name: mypath
   uid: constants/UID
+  field_description: description
+  field_original_name: filename
+  field_featured:
+    -
+      plugin: str_replace
+      source: field_featured
+      search: 'yes'
+      replace: '1'
+    -
+      plugin: str_replace
+      search: 'no'
+      replace: '0'
   status:
     plugin: default_value
     default_value: 1

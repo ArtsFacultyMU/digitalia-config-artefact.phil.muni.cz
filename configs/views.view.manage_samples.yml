@@ -7,6 +7,7 @@ dependencies:
     - user.role.administrator
     - user.role.kch_user
   module:
+    - group
     - node
     - user
     - views_field_view
@@ -75,6 +76,72 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
+        id:
+          id: id
+          table: groups_field_data
+          field: id
+          relationship: gid
+          group_type: group
+          admin_label: ''
+          entity_type: group
+          entity_field: id
+          plugin_id: field
+          label: ID
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: '13'
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         nid:
           id: nid
           table: node_field_data
@@ -156,8 +223,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: '/{{ nothing_1 }}/sample/node/{{ nid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -195,7 +262,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -340,7 +407,7 @@ display:
             alter_text: true
             text: 'Add analysis'
             make_link: true
-            path: '/group/13/content/create/group_node%3Aanalysis?edit[field_analysis_of][widget][0][target_id]={{ nid }}&destination=/{{ nothing_1 }}/samples/node/{{ raw_arguments.nid }}'
+            path: '/group/{{ id }}/content/create/group_node%3Aanalysis?edit[field_analysis_of][widget][0][target_id]={{ nid }}&destination=/{{ nothing_1 }}/samples/node/{{ raw_arguments.nid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -669,6 +736,41 @@ display:
           entity_type: node
           plugin_id: entity_reverse
           required: false
+        group_relationship:
+          id: group_relationship
+          table: node_field_data
+          field: group_relationship
+          relationship: none
+          group_type: group
+          admin_label: 'Content group relationship'
+          entity_type: node
+          plugin_id: group_relationship_to_entity_reverse
+          required: false
+          group_relation_plugins:
+            'group_node:sample': 'group_node:sample'
+            'group_node:a3d_object': '0'
+            'group_node:a3d_platform_homepage': '0'
+            'group_node:analysis': '0'
+            'group_node:arf_surf_data_pres': '0'
+            'group_node:article': '0'
+            'group_node:at_project': '0'
+            'group_node:contract': '0'
+            'group_node:islandora_object': '0'
+            'group_node:non_plastic_inclusion': '0'
+            'group_node:page': '0'
+            'group_node:test_a3d': '0'
+        gid:
+          id: gid
+          table: group_relationship_field_data
+          field: gid
+          relationship: group_relationship
+          group_type: group
+          admin_label: Group
+          entity_type: group_relationship
+          entity_field: gid
+          plugin_id: standard
+          required: false
+      group_by: true
       header:
         area:
           id: area
@@ -676,11 +778,11 @@ display:
           field: area
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'action buttons'
           plugin_id: text
           empty: true
           content:
-            value: "{% set new_sample_id = [view:total-rows] + 1 %}\r\n<h1> Manage samples and analyses of {{ arguments.nid }}</h1>\r\n<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/kch/node/{{ raw_arguments.nid }}\">Back to object</a>\r\n    <a class=\"button\" href=\"/group/13/content/create/group_node%3Asample?edit[field_object_reference][widget][0][target_id]={{ raw_arguments.nid }}&[field_sample_id]={{ new_sample_id }}&destination=/{{ nothing_1 }}/samples/node/{{ raw_arguments.nid }}\">Add sample</a>\r\n</p>\r\n</div>"
+            value: "{% set new_sample_id = [view:total-rows] + 1 %}\r\n<h1> Manage samples and analyses of {{ arguments.nid }}</h1>\r\n<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/{{ nothing_1 }}/node/{{ raw_arguments.nid }}\">Back to object</a>\r\n    <a class=\"button\" href=\"/group/{{ id }}/content/create/group_node%3Asample?edit[field_object_reference][widget][0][target_id]={{ raw_arguments.nid }}&[field_sample_id]={{ new_sample_id }}&destination=/{{ nothing_1 }}/samples/node/{{ raw_arguments.nid }}\">Add sample</a>\r\n</p>\r\n</div>"
             format: full_html
           tokenize: true
       footer: {  }

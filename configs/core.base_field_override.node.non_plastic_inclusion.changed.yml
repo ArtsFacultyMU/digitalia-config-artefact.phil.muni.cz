@@ -1,0 +1,18 @@
+uuid: ef166f09-b151-450e-80ec-4936cd392d35
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.non_plastic_inclusion
+id: node.non_plastic_inclusion.changed
+field_name: changed
+entity_type: node
+bundle: non_plastic_inclusion
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

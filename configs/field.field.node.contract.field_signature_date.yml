@@ -1,0 +1,21 @@
+uuid: b5865b98-b614-4d69-9cd4-77dc0bd0bcf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_signature_date
+    - node.type.contract
+  module:
+    - datetime
+id: node.contract.field_signature_date
+field_name: field_signature_date
+entity_type: node
+bundle: contract
+label: 'Signature date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

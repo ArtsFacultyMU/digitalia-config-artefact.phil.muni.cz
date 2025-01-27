@@ -1,0 +1,29 @@
+uuid: 73e7fcac-ebd1-448a-9e07-188ee75aa396
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_material_inclusions
+    - node.type.a3d_object
+    - taxonomy.vocabulary.material_inclusions
+id: node.a3d_object.field_material_inclusions
+field_name: field_material_inclusions
+entity_type: node
+bundle: a3d_object
+label: 'Material inclusions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      material_inclusions: material_inclusions
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

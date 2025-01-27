@@ -13,7 +13,6 @@ scope: insider
 global_role: kch_user
 group_type: test_group_type
 permissions:
-  - 'access group_term overview'
   - 'create group_term:actor entity'
   - 'create group_term:actor relationship'
   - 'create group_term:artefact_category entity'

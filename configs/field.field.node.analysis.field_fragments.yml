@@ -10,7 +10,7 @@ id: node.analysis.field_fragments
 field_name: field_fragments
 entity_type: node
 bundle: analysis
-label: Fragments
+label: 'Mineral and Rock Fragments'
 description: 'select the non-plastic inclusions identified in the sample (minerals, rocks, etc.)'
 required: false
 translatable: false

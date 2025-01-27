@@ -16,23 +16,23 @@ source:
   enclosure: '"'
   header_row_count: 1
   ids:
-    - path
+    - mypath
   constants:
-    FEDORA_URI: 'fedora://kch/images'
-    IMAGE_URI: /data/platform_data/kch
+    FEDORA_URI: 'fedora://kch/img'
+    IMAGE_URI: /data/platform_data/kch/images
 process:
   image_source_path:
     plugin: concat
     delimiter: /
     source:
       - constants/IMAGE_URI
-      - path
+      - mypath
   image_destination_path:
     plugin: concat
     delimiter: /
     source:
       - constants/FEDORA_URI
-      - path
+      - mypath
   uri:
     plugin: file_copy
     source:

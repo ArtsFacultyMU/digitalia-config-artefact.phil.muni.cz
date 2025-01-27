@@ -1,0 +1,14 @@
+uuid: 32ac3a47-4b08-41c1-b816-a4c66ff7997b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.workbench
+  module:
+    - user
+id: user_add_role_action.workbench
+label: 'Add the workbench role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: workbench

@@ -1,5 +1,5 @@
 status: 1
-pattern: '[node:field_non_plastic_inclusion:entity:name]'
+pattern: '[node:field_non_plastic_inclusion:entity:name] [node:field_percent] [node:field_estimated_quantity:entity:field_name]'
 escape: false
 preserve_titles: false
 save: false

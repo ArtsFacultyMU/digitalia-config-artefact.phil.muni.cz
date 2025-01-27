@@ -1,0 +1,11 @@
+uuid: 08dedecd-8ac2-4a1e-bab3-b00ef3944fa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: muni_menu_links
+title: muni-menu-links
+content:
+  value: "<script>\r\nif (document.documentElement.lang === 'cs') {\r\n    var links = document.getElementsByClassName('muni-menu-links');\r\n    links[links.length-1].setAttribute(\"href\", \"https://digitalia.phil.muni.cz/\");\r\n}\r\n</script>"
+  format: full_html

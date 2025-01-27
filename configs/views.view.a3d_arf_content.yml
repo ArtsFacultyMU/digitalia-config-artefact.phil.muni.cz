@@ -11,13 +11,11 @@ dependencies:
     - field.storage.node.field_abs_dat_range
     - field.storage.node.field_abs_dat_source
     - field.storage.node.field_alternative_id
-    - field.storage.node.field_analysis_type
     - field.storage.node.field_artefact_category
     - field.storage.node.field_artefact_class
     - field.storage.node.field_artefact_id
     - field.storage.node.field_auth_3d_models
     - field.storage.node.field_auth_res_data
-    - field.storage.node.field_data_pres_value
     - field.storage.node.field_deposition_cond
     - field.storage.node.field_description_a3d
     - field.storage.node.field_feature_id
@@ -29,11 +27,10 @@ dependencies:
     - field.storage.node.field_g_w_practice
     - field.storage.node.field_general_note
     - field.storage.node.field_geolocation
+    - field.storage.node.field_mass_structure_data_pres
     - field.storage.node.field_met_note_cz
     - field.storage.node.field_micro_ct
     - field.storage.node.field_mineralogy
-    - field.storage.node.field_note
-    - field.storage.node.field_note_on_method
     - field.storage.node.field_orig_state_pres
     - field.storage.node.field_painting_eye
     - field.storage.node.field_painting_microscope
@@ -48,6 +45,7 @@ dependencies:
     - field.storage.node.field_site
     - field.storage.node.field_subord_dataset
     - field.storage.node.field_subord_dataset_link
+    - field.storage.node.field_surf_data_pres
     - field.storage.node.field_surface_alt
     - field.storage.node.field_thermic_cracks
     - field.storage.node.field_wear
@@ -57,6 +55,7 @@ dependencies:
     - filter.format.plain_text
     - node.type.a3d_object
     - node.type.a3d_platform_homepage
+    - views.view.a3d_editor_block
   module:
     - csv_serialization
     - datafield
@@ -67,10 +66,8 @@ dependencies:
     - node
     - rest
     - serialization
-    - text
     - user
     - views_field_view
-    - views_fieldsets
 id: a3d_arf_content
 label: 'A3D ARF Content'
 module: views
@@ -2536,78 +2533,19 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        fieldset:
-          id: fieldset
-          table: views
-          field: fieldset
+        field_surf_data_pres:
+          id: field_surf_data_pres
+          table: node__field_surf_data_pres
+          field: field_surf_data_pres
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: fieldset
+          plugin_id: field
           label: 'Surface data presence'
           exclude: false
           alter:
             alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: fieldset-field-container
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields:
-            - field_data_pres_value
-            - field_analysis_type
-            - field_note_on_method
-            - field_note
-          wrapper: div
-          legend: ''
-          classes: ''
-          collapsible: false
-          collapsed: false
-        field_data_pres_value:
-          id: field_data_pres_value
-          table: node__field_data_pres_value
-          field: field_data_pres_value
-          relationship: field_surf_data_pres
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: Value
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
+            text: "{{ field_surf_data_pres | replace({'taxonomy/term': 'arf/taxonomy/term'}) }}"
             make_link: false
             path: ''
             absolute: false
@@ -2645,9 +2583,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_label
+          type: entity_reference_entity_view
           settings:
-            link: false
+            view_mode: arf_display
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -2655,204 +2593,17 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
-          separator: ', '
+          multi_type: ol
+          separator: ' '
           field_api_classes: false
-        field_analysis_type:
-          id: field_analysis_type
-          table: node__field_analysis_type
-          field: field_analysis_type
-          relationship: field_surf_data_pres
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: Method
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_note_on_method:
-          id: field_note_on_method
-          table: node__field_note_on_method
-          field: field_note_on_method
-          relationship: field_surf_data_pres
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: Specification
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_note:
-          id: field_note
-          table: node__field_note
-          field: field_note
-          relationship: field_surf_data_pres
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: Note
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        fieldset_1:
-          id: fieldset_1
-          table: views
-          field: fieldset
+        field_mass_structure_data_pres:
+          id: field_mass_structure_data_pres
+          table: node__field_mass_structure_data_pres
+          field: field_mass_structure_data_pres
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: fieldset
+          plugin_id: field
           label: 'Mass & structure data presence'
           exclude: false
           alter:
@@ -2883,64 +2634,6 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: fieldset-field-container
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          fields:
-            - field_data_pres_value_1
-            - field_analysis_type_1
-            - field_note_1
-          wrapper: div
-          legend: ''
-          classes: ''
-          collapsible: false
-          collapsed: false
-        field_data_pres_value_1:
-          id: field_data_pres_value_1
-          table: node__field_data_pres_value
-          field: field_data_pres_value
-          relationship: field_mass_structure_data_pres
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: Value
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -2953,9 +2646,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_label
+          type: entity_reference_entity_view
           settings:
-            link: false
+            view_mode: arf_display
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -2963,183 +2656,9 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
+          multi_type: ol
           separator: ', '
           field_api_classes: false
-        field_analysis_type_1:
-          id: field_analysis_type_1
-          table: node__field_analysis_type
-          field: field_analysis_type
-          relationship: field_mass_structure_data_pres
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: Method
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_note_1:
-          id: field_note_1
-          table: node__field_note
-          field: field_note
-          relationship: field_mass_structure_data_pres
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: Note
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        nothing_1:
-          id: nothing_1
-          table: views
-          field: nothing
-          relationship: none
-          group_type: group
-          admin_label: 'DUMMY EMPTY FIELD'
-          plugin_id: custom
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: ' '
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: false
         field_recent_damage_note:
           id: field_recent_damage_note
           table: node__field_recent_damage_note
@@ -3529,7 +3048,7 @@ display:
             alter_text: false
             text: ''
             make_link: true
-            path: '/{{ nothing }}/taxonomy/term/{{ field_orig_proj_dedication__target_id }}'
+            path: '/{{ nothing }}/taxonomy/term/{{ field_proj_dedication__target_id }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -3879,7 +3398,20 @@ display:
         fields: false
         filters: false
         filter_groups: false
+        header: false
       display_description: ''
+      header:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: view
+          empty: false
+          view_to_insert: 'a3d_editor_block:arf'
+          inherit_arguments: true
       display_extenders:
         matomo:
           enabled: false
@@ -3904,20 +3436,17 @@ display:
       tags:
         - 'config:field.storage.node.field_abs_dat_range'
         - 'config:field.storage.node.field_abs_dat_source'
-        - 'config:field.storage.node.field_analysis_type'
         - 'config:field.storage.node.field_artefact_category'
         - 'config:field.storage.node.field_artefact_class'
         - 'config:field.storage.node.field_artefact_id'
         - 'config:field.storage.node.field_auth_res_data'
-        - 'config:field.storage.node.field_data_pres_value'
         - 'config:field.storage.node.field_deposition_cond'
         - 'config:field.storage.node.field_feature_id'
         - 'config:field.storage.node.field_feature_type'
         - 'config:field.storage.node.field_finding_context_note'
         - 'config:field.storage.node.field_g_w_practice'
+        - 'config:field.storage.node.field_mass_structure_data_pres'
         - 'config:field.storage.node.field_met_note_cz'
-        - 'config:field.storage.node.field_note'
-        - 'config:field.storage.node.field_note_on_method'
         - 'config:field.storage.node.field_orig_state_pres'
         - 'config:field.storage.node.field_proj_dedication'
         - 'config:field.storage.node.field_raw_material'
@@ -3927,6 +3456,7 @@ display:
         - 'config:field.storage.node.field_site'
         - 'config:field.storage.node.field_subord_dataset'
         - 'config:field.storage.node.field_subord_dataset_link'
+        - 'config:field.storage.node.field_surf_data_pres'
         - 'config:field.storage.node.field_surface_alt'
         - 'config:field.storage.node.field_wgs84_geolocation'
         - 'config:field.storage.node.field_wgs84_geolocation_accuracy'

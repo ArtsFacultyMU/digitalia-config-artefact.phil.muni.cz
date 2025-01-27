@@ -7,6 +7,11 @@ entity_type_groups:
       advanced: advanced
       dublin_core: dublin_core
       dublin_core_advanced: dublin_core_advanced
+    analysis:
+      basic: basic
+      advanced: advanced
+      dublin_core: dublin_core
+      dublin_core_advanced: dublin_core_advanced
 separator: ;
 tag_trim_method: beforeValue
 use_maxlength: true

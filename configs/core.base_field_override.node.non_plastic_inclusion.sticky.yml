@@ -1,0 +1,22 @@
+uuid: 78638b50-0ce9-434e-b551-b6e952a16b7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.non_plastic_inclusion
+id: node.non_plastic_inclusion.sticky
+field_name: sticky
+entity_type: node
+bundle: non_plastic_inclusion
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -78,6 +78,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: null
           id: 0
@@ -92,7 +93,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -502,7 +502,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/edit?destination=/{{ nothing_1 }}/node/{{ raw_arguments.nid }}\">Edit</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/media/upload?destination=/{{ nothing_1 }}/node/{{ raw_arguments.nid }}\">Add media</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/{{ nothing_1 }}/node/{{ raw_arguments.nid }}/media\">Manage media</a>\r\n</p>\r\n</div>"
+            value: "<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/edit?destination=/{{ nothing_1 }}/analysis/node/{{ raw_arguments.nid }}\">Edit</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/media/upload?destination=/{{ nothing_1 }}/analysis/node/{{ raw_arguments.nid }}\">Add media</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/{{ nothing_1 }}/node/{{ raw_arguments.nid }}/media\">Manage media</a>\r\n</p>\r\n</div>"
             format: full_html
           tokenize: true
       display_extenders:

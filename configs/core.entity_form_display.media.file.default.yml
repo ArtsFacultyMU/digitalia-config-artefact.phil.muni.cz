@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.file.field_description
     - field.field.media.file.field_file_size
     - field.field.media.file.field_height
     - field.field.media.file.field_media_file
@@ -15,6 +16,7 @@ dependencies:
   module:
     - file
     - path
+    - text
 _core:
   default_config_hash: KBFaIyU4BWuyhM9EC8IsREAxU8F0OqcQJ9a1V5HaiKo
 id: media.file.default
@@ -27,6 +29,14 @@ content:
     weight: 6
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   field_height:
     type: number

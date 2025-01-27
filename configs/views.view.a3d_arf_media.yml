@@ -8,6 +8,7 @@ dependencies:
     - media.type.file
     - media.type.image
     - media.type.video
+    - views.view.a3d_editor_block
   module:
     - csv_serialization
     - file
@@ -333,6 +334,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: null
           id: 0
@@ -347,7 +349,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -1050,6 +1051,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 25
           total_pages: null
           id: 0
@@ -1067,7 +1069,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       empty:
         area:
           id: area
@@ -1224,6 +1225,17 @@ display:
         header: false
       display_description: ''
       header:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: view
+          empty: true
+          view_to_insert: 'a3d_editor_block:arf'
+          inherit_arguments: true
         entity_node:
           id: entity_node
           table: views

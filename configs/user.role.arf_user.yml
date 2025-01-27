@@ -4,9 +4,14 @@ status: true
 dependencies:
   module:
     - entity_comparison
+    - field_permissions
 id: arf_user
 label: 'ARF user'
 weight: -1
 is_admin: null
 permissions:
+  - 'create field_contract'
+  - 'edit own field_contract'
   - 'use a3d_kch_entity_comparison entity comparison'
+  - 'view field_contract'
+  - 'view own field_contract'

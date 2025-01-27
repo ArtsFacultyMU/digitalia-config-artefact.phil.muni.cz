@@ -1,0 +1,14 @@
+uuid: c9d8e434-1a00-459c-b312-dac978aec3a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.manage_contracts
+  module:
+    - user
+id: user_remove_role_action.manage_contracts
+label: 'Remove the manage contracts role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: manage_contracts

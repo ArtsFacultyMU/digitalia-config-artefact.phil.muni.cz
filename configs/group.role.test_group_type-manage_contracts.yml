@@ -1,0 +1,26 @@
+uuid: f0268ffc-6b6f-4591-af0f-a3ef298f872d
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - user.role.manage_contracts
+id: test_group_type-manage_contracts
+label: 'manage contracts'
+weight: 2
+admin: false
+scope: insider
+global_role: manage_contracts
+group_type: test_group_type
+permissions:
+  - 'create group_node:contract entity'
+  - 'create group_node:contract relationship'
+  - 'delete own group_node:contract relationship'
+  - 'update any group_node:contract entity'
+  - 'update any group_node:contract relationship'
+  - 'update own group_node:contract entity'
+  - 'update own group_node:contract relationship'
+  - 'view group_node:contract entity'
+  - 'view group_node:contract relationship'
+  - 'view own unpublished group_node:contract entity'
+  - 'view unpublished group_node:contract entity'

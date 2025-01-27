@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.file.field_description
     - field.field.media.file.field_file_size
     - field.field.media.file.field_height
     - field.field.media.file.field_media_file
@@ -14,6 +15,7 @@ dependencies:
     - media.type.file
   module:
     - file
+    - text
 _core:
   default_config_hash: xvDrCk0MLOxsyqOt9bqbAvT-qq1yONc-knLG55Rf9Aw
 id: media.file.default
@@ -21,6 +23,13 @@ targetEntityType: media
 bundle: file
 mode: default
 content:
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
   field_file_size:
     type: number_integer
     label: above

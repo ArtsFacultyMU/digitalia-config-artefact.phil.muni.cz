@@ -1,8 +1,8 @@
 _core:
   default_config_hash: 6PQBSsRyX81lTFgc44CgmHotr19DK4tVapnDUDm2pO0
 langcode: en
-media_fields: 'image:field_media_image;file:field_media_file;3d_model:field_media_file;video:field_media_video_file'
-reference_fields: field_member_of
+media_fields: 'image:field_media_image;file:field_media_file;3d_model:field_media_file;video:field_media_video_file;document:field_media_document'
+reference_fields: field_member_of;
 media_delimiter: ;
 reference_delimiter: ;
 double_fields: ''

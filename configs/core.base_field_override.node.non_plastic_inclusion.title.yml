@@ -1,0 +1,18 @@
+uuid: 6b203012-54f2-41a3-b071-9210cc05ca39
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.non_plastic_inclusion
+id: node.non_plastic_inclusion.title
+field_name: title
+entity_type: node
+bundle: non_plastic_inclusion
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

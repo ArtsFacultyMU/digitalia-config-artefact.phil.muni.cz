@@ -88,6 +88,10 @@ display:
           label: Literatura
         field_material_colour:
           label: 'Barva materiálu'
+        field_material_inclusions:
+          label: 'Složky materiálu'
+        field_3d_traces:
+          label: Trasologie
   kch_sample:
     display_options:
       title: Vzorek

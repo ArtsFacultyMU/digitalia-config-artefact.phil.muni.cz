@@ -50,12 +50,7 @@ id: node.analysis.minerals
 targetEntityType: node
 bundle: analysis
 mode: minerals
-content:
-  a3d_kch_index_related_samples_and_analyses_entity_view_3:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
+content: {  }
 hidden:
   a3d_eva_entity_group_relation_entity_view_2: true
   a3d_eva_entity_group_relation_entity_view_4: true

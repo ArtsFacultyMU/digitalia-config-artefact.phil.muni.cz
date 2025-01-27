@@ -4,21 +4,13 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_artefact_id
+    - field.storage.node.field_microstructure
     - search_api.index.analyses
-    - taxonomy.vocabulary.artefact_category
-    - taxonomy.vocabulary.binder_type
-    - taxonomy.vocabulary.grain_type
-    - taxonomy.vocabulary.microstructure
-  content:
-    - 'taxonomy_term:artefact_category:77112d62-5917-4d8f-b3c1-98b881dc7f45'
-    - 'taxonomy_term:artefact_category:87e4e39f-b847-453f-a2cf-c0c4632f73b1'
-    - 'taxonomy_term:artefact_category:8fdfc173-9e25-469b-a709-9335128ab74b'
-    - 'taxonomy_term:artefact_category:a48922b9-32c2-46a9-b126-8181102c63b8'
-    - 'taxonomy_term:artefact_category:c9d690a9-0600-4adc-afc4-e3c5832bd98c'
   module:
     - better_exposed_filters
     - facets_exposed_filters
     - search_api
+    - user
     - views_field_view
 id: a3d_kch_analyses_search
 label: 'A3D KCH Analyses Search'
@@ -201,58 +193,6 @@ display:
             format_plural_values:
               - '1'
               - '@count'
-        view:
-          id: view
-          table: views
-          field: view
-          relationship: none
-          group_type: group
-          admin_label: image
-          plugin_id: view
-          label: Image
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          view: a3d_artefact_media
-          display: a3d_first_image_thumbnail
-          arguments: '{{ raw_fields.nid_2 }}'
         name_5:
           id: name_5
           table: search_api_index_analyses
@@ -393,6 +333,58 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: image
+          plugin_id: view
+          label: Image
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: a3d_artefact_media
+          display: a3d_first_image_thumbnail
+          arguments: '{{ raw_fields.nid_2 }}'
         name:
           id: name
           table: search_api_index_analyses
@@ -546,7 +538,7 @@ display:
           alter:
             alter_text: true
             text: '{{ name_5 }} {{ field_artefact_id }}'
-            make_link: true
+            make_link: false
             path: '/kch/node/{{ nid_2 }}'
             absolute: false
             external: false
@@ -592,76 +584,6 @@ display:
           plugin_id: search_api_field
           label: Site
           exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-        name_4:
-          id: name_4
-          table: search_api_index_analyses
-          field: name_4
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_field
-          label: 'Rock fragments » Taxonomy term » Name (indexed field)'
-          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1018,6 +940,445 @@ display:
           use_highlighting: false
           multi_type: separator
           multi_separator: ', '
+        field_microstructure:
+          id: field_microstructure
+          table: search_api_datasource_analyses_entity_node
+          field: field_microstructure
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: Microstructure
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              2d_asymetry:
+                display_method: label
+                view_mode: default
+              3d_shaping:
+                display_method: label
+              3d_traces:
+                display_method: label
+              acquisition_type:
+                display_method: label
+              actor:
+                display_method: label
+                view_mode: default
+              actor_type:
+                display_method: label
+              alteration:
+                display_method: label
+                view_mode: default
+              analysis_type:
+                display_method: label
+              aquamanile_subtype:
+                display_method: label
+              aquamanile_type:
+                display_method: label
+              artefact_category:
+                display_method: label
+                view_mode: default
+              artefact_class:
+                display_method: label
+                view_mode: default
+              artefact_subclass:
+                display_method: label
+                view_mode: default
+              author:
+                display_method: label
+                view_mode: default
+              ballistic_profile:
+                display_method: label
+                view_mode: default
+              base_curve:
+                display_method: label
+                view_mode: default
+              binder_type:
+                display_method: label
+                view_mode: default
+              blank_orientation:
+                display_method: label
+                view_mode: default
+              chemical_compounds:
+                display_method: label
+              circle:
+                display_method: label
+                view_mode: default
+              city:
+                display_method: label
+                view_mode: default
+              city_code:
+                display_method: label
+                view_mode: default
+              coll_keyword:
+                display_method: label
+                view_mode: default
+              coll_lang:
+                display_method: label
+              coll_org:
+                display_method: label
+                view_mode: default
+              collection_title:
+                display_method: label
+                view_mode: default
+              colour:
+                display_method: label
+              corporate_body:
+                display_method: label
+                view_mode: default
+              country_a3d:
+                display_method: label
+                view_mode: default
+              cov_spat:
+                display_method: label
+                view_mode: default
+              creation:
+                display_method: label
+                view_mode: default
+              cross_section_asymmetry:
+                display_method: label
+                view_mode: default
+              culture:
+                display_method: label
+                view_mode: default
+              current_location:
+                display_method: label
+                view_mode: default
+              deposition_cond:
+                display_method: label
+                view_mode: default
+              dimensions_extent:
+                display_method: label
+              dimensions_qualifier:
+                display_method: label
+              elements:
+                display_method: label
+              family:
+                display_method: label
+                view_mode: default
+              feature_id:
+                display_method: label
+                view_mode: default
+              feature_type:
+                display_method: label
+                view_mode: default
+              fhp_type:
+                display_method: label
+              finding_context_subtype:
+                display_method: label
+                view_mode: default
+              finding_context_type:
+                display_method: label
+                view_mode: default
+              firing_characteristic:
+                display_method: label
+              format_size:
+                display_method: label
+              fract_nature:
+                display_method: label
+                view_mode: default
+              fract_preservation:
+                display_method: label
+                view_mode: default
+              frequencies:
+                display_method: label
+                view_mode: default
+              g_w_practice:
+                display_method: label
+                view_mode: default
+              general_lateral_wear:
+                display_method: label
+                view_mode: default
+              general_type:
+                display_method: label
+                view_mode: default
+              genre:
+                display_method: label
+                view_mode: default
+              geo_location:
+                display_method: label
+                view_mode: default
+              glue_residues:
+                display_method: label
+                view_mode: default
+              grain_type:
+                display_method: label
+                view_mode: default
+              holder_type:
+                display_method: label
+                view_mode: default
+              identifier_type:
+                display_method: label
+              instrument:
+                display_method: label
+                view_mode: default
+              instrument_relation_type:
+                display_method: label
+              instrument_type:
+                display_method: label
+                view_mode: default
+              islandora_display:
+                display_method: label
+              islandora_media_use:
+                display_method: label
+                view_mode: default
+              islandora_models:
+                display_method: label
+                view_mode: default
+              issuance_modes:
+                display_method: label
+                view_mode: default
+              language:
+                display_method: label
+                view_mode: default
+              ledge_type:
+                display_method: label
+              legal_status:
+                display_method: label
+                view_mode: default
+              licence_url:
+                display_method: label
+                view_mode: default
+              loc_coord_cadastre_accuracy:
+                display_method: label
+                view_mode: default
+              longitudinal_profile:
+                display_method: label
+                view_mode: default
+              material_inclusions:
+                display_method: label
+              matrix_characteristic:
+                display_method: label
+              measured_variable:
+                display_method: label
+                view_mode: default
+              measurement_type:
+                display_method: label
+                view_mode: default
+              metadata_rights:
+                display_method: label
+                view_mode: default
+              microstructure:
+                display_method: label
+                view_mode: default
+              mineral_fragments:
+                display_method: label
+                view_mode: default
+              motif:
+                display_method: label
+              msdp_method:
+                display_method: label
+                view_mode: default
+              msdp_value:
+                display_method: label
+                view_mode: default
+              non_plastic_inclusions_scale:
+                display_method: label
+              orig_state_pres:
+                display_method: label
+                view_mode: default
+              original_location:
+                display_method: label
+                view_mode: default
+              painting:
+                display_method: label
+                view_mode: default
+              person:
+                display_method: label
+                view_mode: default
+              physical_form:
+                display_method: label
+                view_mode: default
+              pigment:
+                display_method: label
+                view_mode: default
+              posture:
+                display_method: label
+              preserved_parts:
+                display_method: label
+                view_mode: default
+              proj_dedication:
+                display_method: label
+                view_mode: default
+              proj_id:
+                display_method: label
+              quality:
+                display_method: label
+                view_mode: default
+              quiver_trans_bright_spots:
+                display_method: label
+                view_mode: default
+              quiver_trans_lat_rounding:
+                display_method: label
+                view_mode: default
+              quiver_trans_tip_rounding:
+                display_method: label
+                view_mode: default
+              raw_material:
+                display_method: label
+                view_mode: default
+              recent_damage:
+                display_method: label
+                view_mode: default
+              recent_damage_type:
+                display_method: label
+                view_mode: default
+              record_source:
+                display_method: label
+                view_mode: default
+              relative_datation:
+                display_method: label
+                view_mode: default
+              relief_type:
+                display_method: label
+              reparation_features:
+                display_method: label
+                view_mode: default
+              resource_types:
+                display_method: label
+                view_mode: default
+              retouch:
+                display_method: label
+                view_mode: default
+              rights_access:
+                display_method: label
+                view_mode: default
+              rights_reproduction:
+                display_method: label
+                view_mode: default
+              rock_fragments:
+                display_method: label
+                view_mode: default
+              scale_type:
+                display_method: label
+              sdp_method:
+                display_method: label
+                view_mode: default
+              sdp_value:
+                display_method: label
+                view_mode: default
+              serration:
+                display_method: label
+                view_mode: default
+              shape:
+                display_method: label
+              site:
+                display_method: label
+                view_mode: default
+              site_type:
+                display_method: label
+              small_sculpture_subtype:
+                display_method: label
+              small_sculpture_type:
+                display_method: label
+              spatial_ref_system:
+                display_method: label
+                view_mode: default
+              state:
+                display_method: label
+                view_mode: default
+              stove_tile_placement_type_1:
+                display_method: label
+              stove_tile_placement_type_2:
+                display_method: label
+              stove_tile_placement_type_3:
+                display_method: label
+              stove_tile_shape_type_1:
+                display_method: label
+              stove_tile_shape_type_2:
+                display_method: label
+              subject:
+                display_method: label
+                view_mode: default
+              subord_dataset:
+                display_method: label
+                view_mode: default
+              surface_alt:
+                display_method: label
+                view_mode: default
+              surface_finishing:
+                display_method: label
+              tags:
+                display_method: label
+              temporal_subjects:
+                display_method: label
+                view_mode: default
+              test_level_0:
+                display_method: label
+              thermic_cracks:
+                display_method: label
+                view_mode: default
+              tile_type:
+                display_method: label
+              tip_fracture:
+                display_method: label
+                view_mode: default
+              units:
+                display_method: label
+                view_mode: default
+              unknown_values:
+                display_method: label
+                view_mode: default
       pager:
         type: full
         options:
@@ -1083,20 +1444,6 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
-              from_1:
-                plugin_id: default
-                advanced:
-                  placeholder_text: ''
-                  collapsible: false
-                  collapsible_disable_automatic_open: false
-                  is_secondary: false
-              to_1:
-                plugin_id: default
-                advanced:
-                  placeholder_text: ''
-                  collapsible: false
-                  collapsible_disable_automatic_open: false
-                  is_secondary: false
               facets_field_analysis_type:
                 plugin_id: default
                 advanced:
@@ -1105,7 +1452,7 @@ display:
                     filter_rewrite_values_key: false
                   collapsible: false
                   collapsible_disable_automatic_open: false
-                  is_secondary: false
+                  is_secondary: true
               facets_field_instrument:
                 plugin_id: default
                 advanced:
@@ -1114,53 +1461,25 @@ display:
                     filter_rewrite_values_key: false
                   collapsible: false
                   collapsible_disable_automatic_open: false
-                  is_secondary: false
-              facets_field_rock_fragments:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                    filter_rewrite_values_key: false
-                  collapsible: false
-                  collapsible_disable_automatic_open: false
-                  is_secondary: false
-              rendered_item_1:
-                plugin_id: default
-                advanced:
-                  placeholder_text: ''
-                  collapsible: false
-                  collapsible_disable_automatic_open: false
-                  is_secondary: false
-              field_grain_type:
-                plugin_id: default
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                    filter_rewrite_values_key: false
-                  collapsible: false
-                  collapsible_disable_automatic_open: false
-                  is_secondary: false
-              field_binder_type:
-                plugin_id: default
-                advanced:
-                  sort_options: false
-                  rewrite:
-                    filter_rewrite_values: ''
-                    filter_rewrite_values_key: false
-                  collapsible: false
-                  collapsible_disable_automatic_open: false
                   is_secondary: true
-              field_microstructure:
+              facets_name_8:
                 plugin_id: default
                 advanced:
-                  sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
                   collapsible_disable_automatic_open: false
-                  is_secondary: true
+                  is_secondary: false
+              facets_field_microstructure:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
               to:
                 plugin_id: bef_number
                 advanced:
@@ -1193,9 +1512,28 @@ display:
                   is_secondary: true
                 max: 100
                 min: 0
+              facets_field_grain_type:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              facets_field_binder_type:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: true
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: search_api_none
         options: {  }
@@ -1294,56 +1632,6 @@ display:
           exposed: true
       arguments: {  }
       filters:
-        field_artefact_category:
-          id: field_artefact_category
-          table: search_api_index_analyses
-          field: field_artefact_category
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_term
-          operator: or
-          value:
-            533: 533
-            535: 535
-            537: 537
-            534: 534
-            536: 536
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: artefact_category
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
         type:
           id: type
           table: search_api_index_analyses
@@ -1445,11 +1733,15 @@ display:
                 weights:
                   build: 5
                 settings: {  }
-              display_value_widget_order:
+              hide_non_narrowing_result_processor:
                 weights:
-                  sort: 40
+                  build: 40
+                settings: {  }
+              count_widget_order:
+                weights:
+                  sort: 30
                 settings:
-                  sort: ASC
+                  sort: DESC
         facets_field_analysis_type:
           id: facets_field_analysis_type
           table: search_api_index_analyses
@@ -1575,10 +1867,10 @@ display:
                 weights:
                   build: 5
                 settings: {  }
-        facets_field_rock_fragments:
-          id: facets_field_rock_fragments
+        facets_name_8:
+          id: facets_name_8
           table: search_api_index_analyses
-          field: facets_field_rock_fragments
+          field: facets_name_8
           relationship: none
           group_type: group
           admin_label: ''
@@ -1589,13 +1881,86 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Rock fragments'
+            label: 'Mineral and Rock Fragments'
             description: ''
             use_operator: false
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_rock_fragments
+            identifier: fragments
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              0: '0'
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+              workbench: '0'
+              manage_contracts: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              hide_non_narrowing_result_processor:
+                weights:
+                  build: 40
+                settings: {  }
+              count_widget_order:
+                weights:
+                  sort: 30
+                settings:
+                  sort: DESC
+              display_value_widget_order:
+                weights:
+                  sort: 40
+                settings:
+                  sort: ASC
+        facets_field_microstructure:
+          id: facets_field_microstructure
+          table: search_api_index_analyses
+          field: facets_field_microstructure
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: Microstructure
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: microstructure
             required: false
             remember: false
             multiple: true
@@ -1612,6 +1977,8 @@ display:
               arf_user: '0'
               kch_user: '0'
               lindat_editor: '0'
+              workbench: '0'
+              manage_contracts: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -1635,234 +2002,10 @@ display:
                 weights:
                   build: 5
                 settings: {  }
-              display_value_widget_order:
+              hide_non_narrowing_result_processor:
                 weights:
-                  sort: 40
-                settings:
-                  sort: ASC
-        rendered_item_1:
-          id: rendered_item_1
-          table: search_api_index_analyses
-          field: rendered_item_1
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_text
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: rendered_item_1_op
-            label: Minerals
-            description: ''
-            use_operator: false
-            operator: rendered_item_1_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: mineral
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        field_grain_type:
-          id: field_grain_type
-          table: search_api_index_analyses
-          field: field_grain_type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_term
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_grain_type_op
-            label: 'Grain type'
-            description: ''
-            use_operator: false
-            operator: field_grain_type_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_grain_type
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: grain_type
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
-        field_binder_type:
-          id: field_binder_type
-          table: search_api_index_analyses
-          field: field_binder_type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_term
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_binder_type_op
-            label: 'Binder type'
-            description: ''
-            use_operator: false
-            operator: field_binder_type_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_binder_type
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: binder_type
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
-        field_microstructure:
-          id: field_microstructure
-          table: search_api_index_analyses
-          field: field_microstructure
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_term
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_microstructure_op
-            label: Microstructure
-            description: ''
-            use_operator: false
-            operator: field_microstructure_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_microstructure
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: microstructure
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
+                  build: 40
+                settings: {  }
         to:
           id: to
           table: search_api_index_analyses
@@ -1973,6 +2116,130 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        facets_field_grain_type:
+          id: facets_field_grain_type
+          table: search_api_index_analyses
+          field: facets_field_grain_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Grain type'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_grain_type
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              hide_non_narrowing_result_processor:
+                weights:
+                  build: 40
+                settings: {  }
+        facets_field_binder_type:
+          id: facets_field_binder_type
+          table: search_api_index_analyses
+          field: facets_field_binder_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: facets_filter
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Binder type'
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_binder_type
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+              workbench: '0'
+              manage_contracts: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          hierarchy: false
+          label_display: visible
+          facet:
+            query_operator: or
+            min_count: 1
+            show_numbers: true
+            processor_configs:
+              translate_entity:
+                weights:
+                  build: 5
+                settings: {  }
+              hide_non_narrowing_result_processor:
+                weights:
+                  build: 40
+                settings: {  }
+              count_widget_order:
+                weights:
+                  sort: 30
+                settings:
+                  sort: DESC
         field_porosity:
           id: field_porosity
           table: search_api_index_analyses
@@ -2068,6 +2335,88 @@ display:
               arf_user: '0'
               kch_user: '0'
               lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        status:
+          id: status
+          table: search_api_index_analyses
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        rendered_item_3:
+          id: rendered_item_3
+          table: search_api_index_analyses
+          field: rendered_item_3
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_string
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: kch
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
             min_placeholder: ''
             max_placeholder: ''
             placeholder: ''
@@ -2187,8 +2536,10 @@ display:
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
         - 'user.node_grants:view'
+        - user.permissions
       tags:
         - 'config:field.storage.node.field_artefact_id'
+        - 'config:field.storage.node.field_microstructure'
         - 'config:search_api.index.analyses'
         - 'search_api_list:analyses'
   page_1:
@@ -2231,7 +2582,9 @@ display:
         - 'url.query_args:sort_by'
         - 'url.query_args:sort_order'
         - 'user.node_grants:view'
+        - user.permissions
       tags:
         - 'config:field.storage.node.field_artefact_id'
+        - 'config:field.storage.node.field_microstructure'
         - 'config:search_api.index.analyses'
         - 'search_api_list:analyses'

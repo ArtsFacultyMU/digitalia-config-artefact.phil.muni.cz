@@ -14,10 +14,20 @@ source:
     uid: 5
     INSTRUMENT: 'Olympus BX51 polarizing microscope'
     RESEARCHER: 'Martin Hložek'
-    TYPE: 'Optic microscopy'
+    TYPE: 'optical microscopy'
 process:
   uid: constants/uid
   title: field_artefact_id
+  status:
+    -
+      plugin: str_replace
+      source: is_public
+      search: 'yes'
+      replace: '1'
+    -
+      plugin: str_replace
+      search: 'no'
+      replace: '0'
   field_analysis_of:
     plugin: migration_lookup
     migration: kch_node_sample
@@ -36,38 +46,14 @@ process:
     value_key: name
     bundle_key: vid
     bundle: binder_type
-  field_rock_fragments:
+  field_fragments:
     -
       plugin: explode
       delimiter: ' | '
-      source: field_rock_fragments
+      source: field_fragments
     -
       plugin: migration_lookup
-      migration: kch_term_rock_fragments
-  list_minerals:
-    -
-      source: field_minerals
-      plugin: skip_on_empty
-      method: process
-    -
-      plugin: explode
-      delimiter: ' | '
-    -
-      plugin: str_to_assoc
-      key: mineral
-  field_minerals:
-    -
-      plugin: sub_process
-      source: '@list_minerals'
-      process:
-        mineral:
-          -
-            plugin: entity_lookup
-            source: mineral
-            entity_type: taxonomy_term
-            value_key: name
-            bundle_key: vid
-            bundle: mineral_fragments
+      migration: kch_node_non_plastic_inclusion
   list_chemical_analysis:
     -
       source: field_chemical_analysis

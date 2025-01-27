@@ -1,0 +1,9 @@
+uuid: 960a2242-6b2a-4d23-aea2-0254f017d3ac
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__a3d_kch_search_index__kch_search
+name: 'search_api:views_page__a3d_kch_search_index__kch_search'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

@@ -38,6 +38,7 @@ process:
     bundle: islandora_media_use
   name: filename
   uid: constants/UID
+  field_description: description
 destination:
   plugin: 'entity:media'
   default_bundle: 3d_model

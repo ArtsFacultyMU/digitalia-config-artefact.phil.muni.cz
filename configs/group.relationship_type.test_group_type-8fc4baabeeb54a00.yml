@@ -1,0 +1,17 @@
+uuid: c2671f23-2491-4a88-a99f-55685ccac276
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - taxonomy.vocabulary.aquamanile_type
+  module:
+    - group_term
+    - taxonomy
+id: test_group_type-8fc4baabeeb54a00
+group_type: test_group_type
+content_plugin: 'group_term:aquamanile_type'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

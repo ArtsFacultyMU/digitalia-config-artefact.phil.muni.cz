@@ -1,0 +1,49 @@
+uuid: 8b92f6a9-6af0-403c-a68d-b509bbb66a76
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - user.role.workbench
+id: test_group_type-workbench
+label: workbench
+weight: 3
+admin: false
+scope: outsider
+global_role: workbench
+group_type: test_group_type
+permissions:
+  - 'access group_media overview'
+  - 'create group_media:document entity'
+  - 'create group_media:document relationship'
+  - 'create group_term:site entity'
+  - 'create group_term:site relationship'
+  - 'delete any group_media:document entity'
+  - 'delete any group_media:document relationship'
+  - 'delete any group_term:site entity'
+  - 'delete any group_term:site relationship'
+  - 'delete group_media:document entity revisions'
+  - 'delete group_term:site entity revisions'
+  - 'delete own group_media:document entity'
+  - 'delete own group_media:document relationship'
+  - 'delete own group_term:site relationship'
+  - 'revert group_media:document entity revisions'
+  - 'revert group_term:site entity revisions'
+  - 'update any group_media:document entity'
+  - 'update any group_media:document relationship'
+  - 'update any group_term:site entity'
+  - 'update any group_term:site relationship'
+  - 'update own group_media:document entity'
+  - 'update own group_media:document relationship'
+  - 'update own group_term:site relationship'
+  - 'view all group_media:document entity revisions'
+  - 'view all group_term:site entity revisions'
+  - 'view any unpublished group_term:site entity'
+  - 'view group_media:document entity'
+  - 'view group_media:document entity revisions'
+  - 'view group_media:document relationship'
+  - 'view group_term:site entity'
+  - 'view group_term:site entity revisions'
+  - 'view group_term:site relationship'
+  - 'view own unpublished group_media:document entity'
+  - 'view unpublished group_media:document entity'

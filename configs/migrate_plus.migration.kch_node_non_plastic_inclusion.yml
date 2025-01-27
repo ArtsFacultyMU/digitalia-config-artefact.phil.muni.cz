@@ -1,0 +1,33 @@
+uuid: 9AB5C0F5-D487-4131-A724-30C950FE4DAB
+langcode: en
+status: true
+dependencies: {  }
+id: kch_node_non_plastic_inclusion
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: kch
+label: 'Import non-plastic inclusions/fragments of analyses'
+source:
+  plugin: csv
+  path: /var/www/html/drupal/web/sites/default/files/data/kch/fragments.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    uid: 1
+process:
+  uid: constants/uid
+  title: id
+  field_non_plastic_inclusion:
+    plugin: migration_lookup
+    source: fragment
+    migration:
+      - kch_term_mineral_fragments
+      - kch_term_rock_fragments
+destination:
+  plugin: 'entity:node'
+  default_bundle: non_plastic_inclusion
+migration_dependencies: null

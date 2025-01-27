@@ -199,8 +199,7 @@ process:
       source: field_finding_context_note
       regex: true
       search: /\|/
-      replace: "\n"
-
+      replace: ''
     -
       plugin: callback
       callable: trim
@@ -318,7 +317,7 @@ process:
             default: ''
           -
             plugin: explode
-            delimiter: '+'
+            delimiter: +
           -
             plugin: entity_generate
             entity_type: taxonomy_term
@@ -382,7 +381,7 @@ process:
             default: ''
           -
             plugin: explode
-            delimiter: '+'
+            delimiter: +
           -
             plugin: single_value
         field_value:
@@ -406,7 +405,7 @@ process:
             default: ''
           -
             plugin: explode
-            delimiter: '+'
+            delimiter: +
           -
             plugin: entity_generate
             entity_type: taxonomy_term

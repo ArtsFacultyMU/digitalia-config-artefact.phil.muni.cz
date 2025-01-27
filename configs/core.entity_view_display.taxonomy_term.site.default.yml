@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.site.field_city
+    - field.field.taxonomy_term.site.field_city_code
     - field.field.taxonomy_term.site.field_country
     - field.field.taxonomy_term.site.field_geo_geolocation
     - field.field.taxonomy_term.site.field_plot_number
     - field.field.taxonomy_term.site.field_site_type
+    - field.field.taxonomy_term.site.field_state
     - field.field.taxonomy_term.site.field_street
     - field.field.taxonomy_term.site.field_street_number
     - taxonomy.vocabulary.site
@@ -39,6 +41,14 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
+  field_city_code:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
   field_country:
     type: entity_reference_label
     label: inline
@@ -69,6 +79,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_state:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
     region: content
   field_street:
     type: string

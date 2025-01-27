@@ -23,6 +23,16 @@ process:
     plugin: migration_lookup
     migration: kch_node_a3d_object
     source: uri
+  status:
+    -
+      plugin: str_replace
+      source: is_public
+      search: 'yes'
+      replace: '1'
+    -
+      plugin: str_replace
+      search: 'no'
+      replace: '0'
 destination:
   plugin: 'entity:node'
   default_bundle: sample

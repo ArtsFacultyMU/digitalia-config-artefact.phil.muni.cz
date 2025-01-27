@@ -1,0 +1,20 @@
+uuid: 0f579640-8858-4aac-a2b8-ed79f0858bb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.non_plastic_inclusion
+  module:
+    - metatag
+id: node.non_plastic_inclusion.metatag
+field_name: metatag
+entity_type: node
+bundle: non_plastic_inclusion
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

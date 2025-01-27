@@ -45,6 +45,7 @@ dependencies:
     - field.field.node.analysis.field_vesicular_pores
     - node.type.analysis
   module:
+    - chosen_field
     - text
 id: node.analysis.a3d_sdp_form
 targetEntityType: node
@@ -52,7 +53,7 @@ bundle: analysis
 mode: a3d_sdp_form
 content:
   field_analysis_type:
-    type: options_select
+    type: chosen_select
     weight: 1
     region: content
     settings: {  }

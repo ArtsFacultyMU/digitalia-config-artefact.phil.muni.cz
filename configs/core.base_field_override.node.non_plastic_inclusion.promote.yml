@@ -1,0 +1,22 @@
+uuid: cc4cfb36-1cd8-49f3-8662-e9395d1d8b1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.non_plastic_inclusion
+id: node.non_plastic_inclusion.promote
+field_name: promote
+entity_type: node
+bundle: non_plastic_inclusion
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

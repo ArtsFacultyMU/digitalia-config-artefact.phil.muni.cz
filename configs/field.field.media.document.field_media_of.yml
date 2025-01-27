@@ -5,6 +5,9 @@ dependencies:
   config:
     - field.storage.media.field_media_of
     - media.type.document
+    - node.type.a3d_object
+    - node.type.analysis
+    - node.type.contract
 _core:
   default_config_hash: hCtesdEi_L52_jy8fXeSz8iof2nR_h6KdIHwHhojtvg
 id: media.document.field_media_of
@@ -18,6 +21,15 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
-  handler_settings: {  }
+  handler: unpublished
+  handler_settings:
+    target_bundles:
+      a3d_object: a3d_object
+      analysis: analysis
+      contract: contract
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: a3d_object
 field_type: entity_reference

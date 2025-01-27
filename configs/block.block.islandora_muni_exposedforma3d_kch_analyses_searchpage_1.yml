@@ -5,7 +5,6 @@ dependencies:
   config:
     - views.view.a3d_kch_analyses_search
   module:
-    - block_class
     - context
     - islandora
     - views

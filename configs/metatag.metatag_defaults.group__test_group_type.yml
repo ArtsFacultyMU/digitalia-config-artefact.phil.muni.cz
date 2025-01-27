@@ -5,4 +5,6 @@ dependencies: {  }
 id: group__test_group_type
 label: 'Group: A3D group'
 tags:
+  dcterms_publisher: 'Digitalia MUNI ARTS, Faculty of Arts, Masaryk University'
+  dcterms_title: '[group:title]'
   title: '[group:title]'

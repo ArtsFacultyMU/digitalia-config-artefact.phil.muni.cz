@@ -17,42 +17,47 @@ content:
   a3d_eva_entity_group_relation_entity_view_2:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 0
     region: content
   a3d_eva_entity_group_relation_entity_view_4:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 1
     region: content
   a3d_eva_entity_group_relation_entity_view_5:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 2
+    region: content
+  a3d_kch_export_non_plastic_inclusions_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
   display_media_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 4
     region: content
   display_media_entity_view_3:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 5
     region: content
   display_media_original_download:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 6
     region: content
   display_media_service_file:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 7
     region: content
   display_media_thumbnail:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 8
     region: content
   field_estimated_quantity:
     type: entity_reference_label
@@ -60,7 +65,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 103
+    weight: 11
     region: content
   field_non_plastic_inclusion:
     type: entity_reference_label
@@ -68,7 +73,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 102
+    weight: 10
     region: content
   field_percent:
     type: number_decimal
@@ -79,13 +84,14 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 104
+    weight: 12
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 9
     region: content
 hidden:
+  a3d_kch_export_non_plastic_inclusions_entity_view_1: true
   langcode: true
   search_api_excerpt: true

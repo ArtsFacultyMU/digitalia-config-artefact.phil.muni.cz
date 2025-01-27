@@ -858,14 +858,14 @@ display:
           exposed: false
           expose:
             operator_id: ''
-            label: ''
-            description: ''
+            label: Published
+            description: null
             use_operator: false
-            operator: ''
+            operator: status_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: ''
-            required: false
+            identifier: status
+            required: true
             remember: false
             multiple: false
             remember_roles:
