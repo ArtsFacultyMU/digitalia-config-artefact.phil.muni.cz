@@ -13,6 +13,7 @@ dependencies:
     - taxonomy.vocabulary.analysis_type
     - taxonomy.vocabulary.aquamanile_subtype
     - taxonomy.vocabulary.aquamanile_type
+    - taxonomy.vocabulary.archaeological_site
     - taxonomy.vocabulary.artefact_category
     - taxonomy.vocabulary.artefact_class
     - taxonomy.vocabulary.artefact_subclass
@@ -47,12 +48,14 @@ dependencies:
     - taxonomy.vocabulary.fhp_type
     - taxonomy.vocabulary.finding_context_subtype
     - taxonomy.vocabulary.finding_context_type
+    - taxonomy.vocabulary.finding_documentation
     - taxonomy.vocabulary.firing_characteristic
     - taxonomy.vocabulary.format_size
     - taxonomy.vocabulary.fract_nature
     - taxonomy.vocabulary.fract_preservation
     - taxonomy.vocabulary.frequencies
     - taxonomy.vocabulary.g_w_practice
+    - taxonomy.vocabulary.general_accuracy
     - taxonomy.vocabulary.general_lateral_wear
     - taxonomy.vocabulary.general_type
     - taxonomy.vocabulary.genre
@@ -91,6 +94,7 @@ dependencies:
     - taxonomy.vocabulary.person
     - taxonomy.vocabulary.physical_form
     - taxonomy.vocabulary.pigment
+    - taxonomy.vocabulary.place_analysis
     - taxonomy.vocabulary.posture
     - taxonomy.vocabulary.preserved_parts
     - taxonomy.vocabulary.proj_dedication
@@ -103,9 +107,11 @@ dependencies:
     - taxonomy.vocabulary.recent_damage
     - taxonomy.vocabulary.recent_damage_type
     - taxonomy.vocabulary.record_source
+    - taxonomy.vocabulary.region
     - taxonomy.vocabulary.relative_datation
     - taxonomy.vocabulary.relief_type
     - taxonomy.vocabulary.reparation_features
+    - taxonomy.vocabulary.research_question
     - taxonomy.vocabulary.resource_types
     - taxonomy.vocabulary.retouch
     - taxonomy.vocabulary.rights_access
@@ -142,12 +148,16 @@ dependencies:
   module:
     - content_translation
     - entity_comparison
+    - system
     - taxonomy
+    - taxonomy_manager
 id: can_edit_taxonomy
 label: 'Can edit taxonomy'
 weight: -4
 is_admin: null
 permissions:
+  - 'access administration pages'
+  - 'access taxonomy manager list'
   - 'access taxonomy overview'
   - 'create terms in 2d_asymetry'
   - 'create terms in 3d_shaping'
@@ -159,6 +169,7 @@ permissions:
   - 'create terms in analysis_type'
   - 'create terms in aquamanile_subtype'
   - 'create terms in aquamanile_type'
+  - 'create terms in archaeological_site'
   - 'create terms in artefact_category'
   - 'create terms in artefact_class'
   - 'create terms in artefact_subclass'
@@ -252,11 +263,13 @@ permissions:
   - 'create terms in relative_datation'
   - 'create terms in relief_type'
   - 'create terms in reparation_features'
+  - 'create terms in research_question'
   - 'create terms in resource_types'
   - 'create terms in retouch'
   - 'create terms in rights_access'
   - 'create terms in rights_reproduction'
   - 'create terms in rock_fragments'
+  - 'create terms in scale_type'
   - 'create terms in sdp_method'
   - 'create terms in sdp_value'
   - 'create terms in serration'
@@ -382,9 +395,11 @@ permissions:
   - 'edit terms in recent_damage'
   - 'edit terms in recent_damage_type'
   - 'edit terms in record_source'
+  - 'edit terms in region'
   - 'edit terms in relative_datation'
   - 'edit terms in relief_type'
   - 'edit terms in reparation_features'
+  - 'edit terms in research_question'
   - 'edit terms in resource_types'
   - 'edit terms in retouch'
   - 'edit terms in rights_access'
@@ -418,5 +433,138 @@ permissions:
   - 'edit terms in tip_fracture'
   - 'edit terms in units'
   - 'edit terms in unknown_values'
+  - 'translate 2d_asymetry taxonomy_term'
+  - 'translate 3d_shaping taxonomy_term'
+  - 'translate 3d_traces taxonomy_term'
+  - 'translate acquisition_type taxonomy_term'
+  - 'translate actor taxonomy_term'
+  - 'translate actor_type taxonomy_term'
+  - 'translate alteration taxonomy_term'
+  - 'translate analysis_type taxonomy_term'
+  - 'translate aquamanile_subtype taxonomy_term'
   - 'translate aquamanile_type taxonomy_term'
+  - 'translate artefact_category taxonomy_term'
+  - 'translate artefact_class taxonomy_term'
+  - 'translate artefact_subclass taxonomy_term'
+  - 'translate ballistic_profile taxonomy_term'
+  - 'translate base_curve taxonomy_term'
+  - 'translate binder_type taxonomy_term'
+  - 'translate blank_orientation taxonomy_term'
+  - 'translate circle taxonomy_term'
+  - 'translate city taxonomy_term'
+  - 'translate city_code taxonomy_term'
+  - 'translate coll_keyword taxonomy_term'
+  - 'translate coll_lang taxonomy_term'
+  - 'translate coll_org taxonomy_term'
+  - 'translate collection_title taxonomy_term'
+  - 'translate colour taxonomy_term'
+  - 'translate corporate_body taxonomy_term'
+  - 'translate country_a3d taxonomy_term'
+  - 'translate cov_spat taxonomy_term'
+  - 'translate creation taxonomy_term'
+  - 'translate cross_section_asymmetry taxonomy_term'
+  - 'translate culture taxonomy_term'
+  - 'translate current_location taxonomy_term'
+  - 'translate deposition_cond taxonomy_term'
+  - 'translate dimensions_extent taxonomy_term'
+  - 'translate dimensions_qualifier taxonomy_term'
+  - 'translate elements taxonomy_term'
+  - 'translate family taxonomy_term'
+  - 'translate feature_id taxonomy_term'
+  - 'translate feature_type taxonomy_term'
+  - 'translate fhp_type taxonomy_term'
+  - 'translate finding_context_subtype taxonomy_term'
+  - 'translate finding_context_type taxonomy_term'
+  - 'translate finding_documentation taxonomy_term'
+  - 'translate firing_characteristic taxonomy_term'
+  - 'translate fract_nature taxonomy_term'
+  - 'translate fract_preservation taxonomy_term'
+  - 'translate frequencies taxonomy_term'
+  - 'translate g_w_practice taxonomy_term'
+  - 'translate general_accuracy taxonomy_term'
+  - 'translate general_lateral_wear taxonomy_term'
+  - 'translate general_type taxonomy_term'
+  - 'translate genre taxonomy_term'
+  - 'translate geo_location taxonomy_term'
+  - 'translate glue_residues taxonomy_term'
+  - 'translate grain_type taxonomy_term'
+  - 'translate holder_type taxonomy_term'
+  - 'translate identifier_type taxonomy_term'
+  - 'translate instrument taxonomy_term'
+  - 'translate instrument_type taxonomy_term'
+  - 'translate islandora_media_use taxonomy_term'
+  - 'translate islandora_models taxonomy_term'
+  - 'translate issuance_modes taxonomy_term'
+  - 'translate language taxonomy_term'
+  - 'translate ledge_type taxonomy_term'
+  - 'translate legal_status taxonomy_term'
+  - 'translate licence_url taxonomy_term'
+  - 'translate loc_coord_cadastre_accuracy taxonomy_term'
+  - 'translate longitudinal_profile taxonomy_term'
+  - 'translate material_inclusions taxonomy_term'
+  - 'translate matrix_characteristic taxonomy_term'
+  - 'translate measured_variable taxonomy_term'
+  - 'translate measurement_type taxonomy_term'
+  - 'translate metadata_rights taxonomy_term'
+  - 'translate microstructure taxonomy_term'
+  - 'translate mineral_fragments taxonomy_term'
+  - 'translate motif taxonomy_term'
+  - 'translate msdp_method taxonomy_term'
+  - 'translate msdp_value taxonomy_term'
+  - 'translate non_plastic_inclusions_scale taxonomy_term'
+  - 'translate orig_state_pres taxonomy_term'
+  - 'translate original_location taxonomy_term'
+  - 'translate painting taxonomy_term'
+  - 'translate person taxonomy_term'
+  - 'translate physical_form taxonomy_term'
+  - 'translate pigment taxonomy_term'
+  - 'translate place_analysis taxonomy_term'
+  - 'translate posture taxonomy_term'
+  - 'translate preserved_parts taxonomy_term'
+  - 'translate proj_dedication taxonomy_term'
+  - 'translate proj_id taxonomy_term'
+  - 'translate quality taxonomy_term'
+  - 'translate quiver_trans_bright_spots taxonomy_term'
+  - 'translate quiver_trans_lat_rounding taxonomy_term'
+  - 'translate quiver_trans_tip_rounding taxonomy_term'
+  - 'translate raw_material taxonomy_term'
+  - 'translate recent_damage taxonomy_term'
+  - 'translate recent_damage_type taxonomy_term'
+  - 'translate record_source taxonomy_term'
+  - 'translate region taxonomy_term'
+  - 'translate relative_datation taxonomy_term'
+  - 'translate relief_type taxonomy_term'
+  - 'translate reparation_features taxonomy_term'
+  - 'translate research_question taxonomy_term'
+  - 'translate resource_types taxonomy_term'
+  - 'translate retouch taxonomy_term'
+  - 'translate rights_access taxonomy_term'
+  - 'translate rights_reproduction taxonomy_term'
+  - 'translate rock_fragments taxonomy_term'
+  - 'translate scale_type taxonomy_term'
+  - 'translate sdp_method taxonomy_term'
+  - 'translate sdp_value taxonomy_term'
+  - 'translate serration taxonomy_term'
+  - 'translate shape taxonomy_term'
+  - 'translate site taxonomy_term'
+  - 'translate site_type taxonomy_term'
+  - 'translate small_sculpture_subtype taxonomy_term'
+  - 'translate small_sculpture_type taxonomy_term'
+  - 'translate spatial_ref_system taxonomy_term'
+  - 'translate state taxonomy_term'
+  - 'translate stove_tile_placement_type_1 taxonomy_term'
+  - 'translate stove_tile_placement_type_2 taxonomy_term'
+  - 'translate stove_tile_placement_type_3 taxonomy_term'
+  - 'translate stove_tile_shape_type_1 taxonomy_term'
+  - 'translate stove_tile_shape_type_2 taxonomy_term'
+  - 'translate subject taxonomy_term'
+  - 'translate subord_dataset taxonomy_term'
+  - 'translate surface_alt taxonomy_term'
+  - 'translate surface_finishing taxonomy_term'
+  - 'translate temporal_subjects taxonomy_term'
+  - 'translate thermic_cracks taxonomy_term'
+  - 'translate tile_type taxonomy_term'
+  - 'translate tip_fracture taxonomy_term'
+  - 'translate units taxonomy_term'
+  - 'translate unknown_values taxonomy_term'
   - 'use a3d_kch_entity_comparison entity comparison'

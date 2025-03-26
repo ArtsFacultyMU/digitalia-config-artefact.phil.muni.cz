@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - filter.format.restricted_html
+    - node.type.a3d_object
+    - node.type.analysis
     - rest.resource.oai_pmh
   module:
     - comment
@@ -11,6 +13,7 @@ dependencies:
     - entity_comparison
     - filter
     - media
+    - node
     - rest
     - system
     - taxonomy
@@ -30,5 +33,7 @@ permissions:
   - 'use a3d_meta_entity_comparison entity comparison'
   - 'use a3d_nef_entity_comparison entity comparison'
   - 'use text format restricted_html'
+  - 'view a3d_object revisions'
+  - 'view analysis revisions'
   - 'view media'
   - 'view vocabulary labels'

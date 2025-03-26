@@ -1,0 +1,92 @@
+uuid: 9bbea0e3-dd81-44cd-9f95-6eea8f2155ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.institution_agent_type
+    - entity_browser.browser.institution_entity_browser
+    - entity_browser.browser.person_agent_type
+    - entity_browser.browser.personal_contacts_entity_browser
+    - entity_browser.browser.site_entity_browser
+    - node.type.a3d_ingest_artefact
+    - node.type.a3d_ingest_object
+    - taxonomy.vocabulary.actor
+    - taxonomy.vocabulary.coll_org
+    - taxonomy.vocabulary.finding_context_subtype
+    - taxonomy.vocabulary.region
+    - taxonomy.vocabulary.research_question
+    - taxonomy.vocabulary.site
+    - taxonomy.vocabulary.site_type
+  module:
+    - entity_browser
+    - field_permissions
+    - islandora
+    - node
+    - persistent_identifiers
+    - system
+    - taxonomy
+    - view_unpublished
+id: producer
+label: Producer
+weight: 5
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access institution_agent_type entity browser pages'
+  - 'access institution_entity_browser entity browser pages'
+  - 'access person_agent_type entity browser pages'
+  - 'access personal_contacts_entity_browser entity browser pages'
+  - 'access site_entity_browser entity browser pages'
+  - 'access taxonomy overview'
+  - 'administer nodes'
+  - 'create a3d_ingest_artefact content'
+  - 'create a3d_ingest_object content'
+  - 'create field_coll_contacts'
+  - 'create field_coll_contacts_alt'
+  - 'create field_contact_email'
+  - 'create field_contact_phone'
+  - 'create field_geolocation_original_priv'
+  - 'create field_personal_contact'
+  - 'create field_private_note'
+  - 'create field_wgs84_accuracy_private'
+  - 'create field_wgs84_geolocation_private'
+  - 'create terms in actor'
+  - 'create terms in coll_org'
+  - 'create terms in finding_context_subtype'
+  - 'create terms in region'
+  - 'create terms in research_question'
+  - 'create terms in site'
+  - 'create terms in site_type'
+  - 'edit field_coll_contacts'
+  - 'edit field_coll_contacts_alt'
+  - 'edit field_contact_email'
+  - 'edit field_contact_phone'
+  - 'edit own a3d_ingest_artefact content'
+  - 'edit own a3d_ingest_object content'
+  - 'edit own field_coll_contacts'
+  - 'edit own field_coll_contacts_alt'
+  - 'edit own field_contact_email'
+  - 'edit own field_contact_phone'
+  - 'edit own field_personal_contact'
+  - 'edit terms in actor'
+  - 'edit terms in coll_org'
+  - 'edit terms in region'
+  - 'edit terms in research_question'
+  - 'edit terms in site'
+  - 'manage media'
+  - 'manage members'
+  - 'mint persistent identifiers'
+  - 'view any unpublished a3d_ingest_artefact content'
+  - 'view any unpublished a3d_ingest_object content'
+  - 'view checksums'
+  - 'view field_coll_contacts'
+  - 'view field_coll_contacts_alt'
+  - 'view field_contact_email'
+  - 'view field_contact_phone'
+  - 'view own field_coll_contacts'
+  - 'view own field_coll_contacts_alt'
+  - 'view own field_contact_email'
+  - 'view own field_contact_phone'
+  - 'view own field_personal_contact'
+  - 'view own unpublished content'
+  - 'view term revisions in actor'

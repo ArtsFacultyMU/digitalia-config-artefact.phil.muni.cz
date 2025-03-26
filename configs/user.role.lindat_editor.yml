@@ -3,12 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.a3d_ingest_artefact
+    - node.type.a3d_ingest_object
     - node.type.a3d_object
     - node.type.a3d_platform_homepage
     - node.type.analysis
     - node.type.contract
+    - node.type.decoration
+    - node.type.non_plastic_inclusion
     - node.type.page
     - node.type.sample
+    - node.type.traceology
   module:
     - entity_comparison
     - field_permissions
@@ -23,6 +28,11 @@ permissions:
   - 'access administration pages'
   - 'access taxonomy overview'
   - 'administer taxonomy'
+  - 'create field_coll_contacts'
+  - 'create field_coll_contacts_alt'
+  - 'create field_contact_email'
+  - 'create field_contact_phone'
+  - 'create field_personal_contact'
   - 'create field_private_note'
   - 'delete all taxonomy revisions'
   - 'edit any a3d_object content'
@@ -31,10 +41,38 @@ permissions:
   - 'edit any contract content'
   - 'edit any page content'
   - 'edit any sample content'
+  - 'edit field_coll_contacts'
+  - 'edit field_coll_contacts_alt'
+  - 'edit field_contact_email'
+  - 'edit field_contact_phone'
   - 'edit field_geolocation_original_priv'
+  - 'edit field_personal_contact'
+  - 'edit own field_coll_contacts'
+  - 'edit own field_coll_contacts_alt'
+  - 'edit own field_contact_email'
+  - 'edit own field_contact_phone'
+  - 'edit own field_personal_contact'
   - 'edit own field_private_note'
   - 'revert all taxonomy revisions'
+  - 'revert contract revisions'
+  - 'revert decoration revisions'
+  - 'revert non_plastic_inclusion revisions'
+  - 'revert page revisions'
+  - 'revert sample revisions'
+  - 'revert traceology revisions'
   - 'use a3d_kch_entity_comparison entity comparison'
+  - 'view a3d_ingest_artefact revisions'
+  - 'view a3d_ingest_object revisions'
   - 'view all taxonomy revisions'
+  - 'view field_coll_contacts'
+  - 'view field_coll_contacts_alt'
+  - 'view field_contact_email'
+  - 'view field_contact_phone'
+  - 'view field_personal_contact'
   - 'view field_private_note'
+  - 'view own field_coll_contacts'
+  - 'view own field_coll_contacts_alt'
+  - 'view own field_contact_email'
+  - 'view own field_contact_phone'
+  - 'view own field_personal_contact'
   - 'view own field_private_note'

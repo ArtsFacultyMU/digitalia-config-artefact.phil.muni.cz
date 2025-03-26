@@ -11,8 +11,8 @@ label: Administrator
 weight: -7
 is_admin: true
 permissions:
-  - 'create field_contract'
-  - 'edit field_contract'
-  - 'edit own field_contract'
-  - 'view field_contract'
-  - 'view own field_contract'
+  - 'create field_personal_contact'
+  - 'edit field_personal_contact'
+  - 'edit own field_personal_contact'
+  - 'view field_personal_contact'
+  - 'view own field_personal_contact'

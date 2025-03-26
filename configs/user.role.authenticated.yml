@@ -5,6 +5,14 @@ dependencies:
   config:
     - filter.format.basic_html
     - filter.format.restricted_html
+    - node.type.a3d_object
+    - node.type.analysis
+    - node.type.contract
+    - node.type.decoration
+    - node.type.non_plastic_inclusion
+    - node.type.page
+    - node.type.sample
+    - node.type.traceology
     - rest.resource.oai_pmh
   module:
     - comment
@@ -14,6 +22,7 @@ dependencies:
     - filter
     - matomo
     - media
+    - node
     - rest
     - shortcut
     - system
@@ -41,9 +50,18 @@ permissions:
   - 'use a3d_nef_entity_comparison entity comparison'
   - 'use text format basic_html'
   - 'use text format restricted_html'
+  - 'view a3d_object revisions'
+  - 'view all revisions'
+  - 'view analysis revisions'
+  - 'view contract revisions'
+  - 'view decoration revisions'
   - 'view field_private_note'
   - 'view media'
+  - 'view non_plastic_inclusion revisions'
   - 'view own field_geolocation_original_priv'
   - 'view own field_private_note'
+  - 'view page revisions'
+  - 'view sample revisions'
   - 'view the administration theme'
+  - 'view traceology revisions'
   - 'view vocabulary labels'

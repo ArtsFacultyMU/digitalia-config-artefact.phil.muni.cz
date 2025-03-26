@@ -1,0 +1,9 @@
+uuid: 7e099143-1d7a-42db-911c-18c9c82608b2
+langcode: en
+status: true
+dependencies: {  }
+id: swd_user
+label: 'SWD user'
+weight: 4
+is_admin: null
+permissions: {  }
