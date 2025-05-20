@@ -1,0 +1,43 @@
+uuid: 019b4abc-7462-40e5-9157-0725779daa29
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.arf_prod_lang_hack
+  module:
+    - block_class
+    - context
+    - islandora
+    - node
+    - simple_block
+  theme:
+    - claro
+id: claro_arf_prod_lang_hack
+theme: claro
+region: content
+weight: -2
+provider: null
+plugin: 'simple_block:arf_prod_lang_hack'
+settings:
+  id: 'simple_block:arf_prod_lang_hack'
+  label: 'ARF prod lang hack'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_domain:
+    id: request_domain
+    negate: false
+    domains: "artefact-devel.phil.muni.cz\r\nartefact.phil.muni.cz"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      a3d_ingest_artefact: a3d_ingest_artefact
+      a3d_ingest_object: a3d_ingest_object

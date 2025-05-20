@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.full
+    - field.field.taxonomy_term.recent_damage_type.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.recent_damage_type.field_tax_hierarchical_weight
     - taxonomy.vocabulary.recent_damage_type
   module:
     - text
@@ -17,6 +19,11 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  a3d_eva_taxonomy_title_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   description:
     type: text_default
     label: hidden
@@ -26,5 +33,7 @@ content:
     region: content
 hidden:
   a3d_eva_entity_group_relation_entity_view_1: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
   langcode: true
   search_api_excerpt: true

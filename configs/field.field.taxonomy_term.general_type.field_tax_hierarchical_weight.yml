@@ -1,0 +1,23 @@
+uuid: 0695a676-b8b3-41b0-a7a4-5f6e7fefda38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.general_type
+id: taxonomy_term.general_type.field_tax_hierarchical_weight
+field_name: field_tax_hierarchical_weight
+entity_type: taxonomy_term
+bundle: general_type
+label: 'Hierarchical Weight'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

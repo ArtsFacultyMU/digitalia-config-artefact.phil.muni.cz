@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.islandora_display.field_external_uri
+    - field.field.taxonomy_term.islandora_display.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.islandora_display.field_tax_hierarchical_weight
     - taxonomy.vocabulary.islandora_display
   module:
     - link
@@ -58,4 +60,6 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true

@@ -1,0 +1,20 @@
+uuid: 1165f08d-15a0-4961-bb2a-10de03f13040
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.reineckes_chronology
+  module:
+    - path
+id: taxonomy_term.reineckes_chronology.path
+field_name: path
+entity_type: taxonomy_term
+bundle: reineckes_chronology
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

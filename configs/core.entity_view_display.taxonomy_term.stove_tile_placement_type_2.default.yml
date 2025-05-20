@@ -1,0 +1,33 @@
+uuid: 1e408ccb-cc5c-4876-a4a0-3657f74971ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.stove_tile_placement_type_2.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.stove_tile_placement_type_2.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.stove_tile_placement_type_2
+  module:
+    - text
+id: taxonomy_term.stove_tile_placement_type_2.default
+targetEntityType: taxonomy_term
+bundle: stove_tile_placement_type_2
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_taxonomy_title_entity_view_2: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: aa6f2500-3667-40ff-8483-0884de2803a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.issuance_modes
+id: taxonomy_term.issuance_modes.field_tax_hierarchical_weight
+field_name: field_tax_hierarchical_weight
+entity_type: taxonomy_term
+bundle: issuance_modes
+label: 'Hierarchical Weight'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,23 @@
+uuid: c49380d1-09ff-487c-a789-9c9c4de7ea42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_depth
+    - taxonomy.vocabulary.dimensions_extent
+id: taxonomy_term.dimensions_extent.field_tax_hierarchical_depth
+field_name: field_tax_hierarchical_depth
+entity_type: taxonomy_term
+bundle: dimensions_extent
+label: 'Hierarchical Depth'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,116 @@
+uuid: fac4a42d-0a7b-4dd8-ad62-c47828f1195d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.kch_index
+    - field.field.node.sample.field_description_a3d
+    - field.field.node.sample.field_is_macrosample
+    - field.field.node.sample.field_is_powder
+    - field.field.node.sample.field_is_thin_section
+    - field.field.node.sample.field_member_of
+    - field.field.node.sample.field_note
+    - field.field.node.sample.field_object_reference
+    - field.field.node.sample.field_private_note
+    - field.field.node.sample.field_sample_id
+    - field.field.node.sample.field_sampled_from
+    - field.field.node.sample.field_sampling_type
+    - node.type.sample
+  module:
+    - user
+id: node.sample.kch_index
+targetEntityType: node
+bundle: sample
+mode: kch_index
+content:
+  a3d_artefact_media_a3d_documents:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_artefact_media_a3d_images:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_artefact_media_a3d_other_files:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_kch_analyses_of_sample_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_kch_analyses_of_sample_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_service_file:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_member_of:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description_a3d: true
+  field_is_macrosample: true
+  field_is_powder: true
+  field_is_thin_section: true
+  field_note: true
+  field_object_reference: true
+  field_private_note: true
+  field_sample_id: true
+  field_sampled_from: true
+  field_sampling_type: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: ec617e0f-2596-422b-a72e-e10f03f1505b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_depth
+    - taxonomy.vocabulary.coll_org
+id: taxonomy_term.coll_org.field_tax_hierarchical_depth
+field_name: field_tax_hierarchical_depth
+entity_type: taxonomy_term
+bundle: coll_org
+label: 'Hierarchical Depth'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

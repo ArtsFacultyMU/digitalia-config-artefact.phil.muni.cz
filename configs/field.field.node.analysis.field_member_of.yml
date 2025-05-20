@@ -1,0 +1,29 @@
+uuid: 2be32cd0-8b5c-458f-b89d-e29e9db1fbd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_member_of
+    - node.type.a3d_object
+    - node.type.analysis
+id: node.analysis.field_member_of
+field_name: field_member_of
+entity_type: node
+bundle: analysis
+label: 'Member of'
+description: "This item's parent item in Islandora. Usually this will be a collection or compound object."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      a3d_object: a3d_object
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

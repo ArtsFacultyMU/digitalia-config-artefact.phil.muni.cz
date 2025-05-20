@@ -1,0 +1,29 @@
+uuid: f733dfbd-198e-48cf-975b-8b53a992a4c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_region
+    - node.type.a3d_ingest_object
+    - taxonomy.vocabulary.region
+id: node.a3d_ingest_object.field_region
+field_name: field_region
+entity_type: node
+bundle: a3d_ingest_object
+label: Region
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      region: region
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 1
+    auto_create_bundle: ''
+field_type: entity_reference

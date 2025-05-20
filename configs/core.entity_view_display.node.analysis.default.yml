@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.analysis.field_analysed_by
+    - field.field.node.analysis.field_analysed_day
+    - field.field.node.analysis.field_analysed_month
+    - field.field.node.analysis.field_analysed_year
     - field.field.node.analysis.field_analysis_date
     - field.field.node.analysis.field_analysis_of
     - field.field.node.analysis.field_analysis_type
@@ -25,6 +28,7 @@ dependencies:
     - field.field.node.analysis.field_instrument
     - field.field.node.analysis.field_matrix
     - field.field.node.analysis.field_matrix_vitrification
+    - field.field.node.analysis.field_member_of
     - field.field.node.analysis.field_microstructure
     - field.field.node.analysis.field_mineral_fragments
     - field.field.node.analysis.field_minerals
@@ -41,12 +45,14 @@ dependencies:
     - field.field.node.analysis.field_reduction_inward
     - field.field.node.analysis.field_reduction_outward
     - field.field.node.analysis.field_rock_fragments
+    - field.field.node.analysis.field_traceology
     - field.field.node.analysis.field_vesicular_pores
     - node.type.analysis
   module:
     - datafield
     - datetime
     - range
+    - rest_views
     - text
     - user
 id: node.analysis.default
@@ -91,6 +97,33 @@ content:
       link: true
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_analysed_day:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 45
+    region: content
+  field_analysed_month:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 44
+    region: content
+  field_analysed_year:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 43
     region: content
   field_analysis_date:
     type: datetime_default
@@ -147,11 +180,6 @@ content:
     type: data_field_table_formatter
     label: above
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -188,6 +216,11 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 35
     region: content
@@ -235,11 +268,6 @@ content:
     type: data_field_table_formatter
     label: above
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -276,6 +304,11 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 36
     region: content
@@ -354,6 +387,16 @@ content:
     third_party_settings: {  }
     weight: 25
     region: content
+  field_member_of:
+    type: entity_reference_export
+    label: inline
+    settings:
+      view_mode: default
+      link: false
+      extra: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
   field_microstructure:
     type: entity_reference_label
     label: inline
@@ -366,11 +409,6 @@ content:
     type: data_field_table_formatter
     label: above
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -407,6 +445,11 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 34
     region: content
@@ -524,6 +567,14 @@ content:
     third_party_settings: {  }
     weight: 8
     region: content
+  field_traceology:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 42
+    region: content
   field_vesicular_pores:
     type: boolean
     label: inline
@@ -540,6 +591,7 @@ content:
     weight: 1
     region: content
 hidden:
+  a3d_kch_content2_entity_view_1: true
   a3d_kch_content_sample_to_analysis: true
   a3d_kch_index_related_samples_and_analyses_entity_view_2: true
   a3d_kch_index_related_samples_and_analyses_entity_view_3: true

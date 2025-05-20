@@ -1,0 +1,1062 @@
+uuid: a3a220b9-3515-4d61-8d60-526e08632648
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.kch_index
+    - field.field.node.a3d_object.field_2d_asymmetry
+    - field.field.node.a3d_object.field_3d_shaping
+    - field.field.node.a3d_object.field_3d_shaping_struct
+    - field.field.node.a3d_object.field_3d_traces
+    - field.field.node.a3d_object.field_3d_traces_struct
+    - field.field.node.a3d_object.field_a_asymmetry
+    - field.field.node.a3d_object.field_abs_dat_range
+    - field.field.node.a3d_object.field_abs_dat_range_cs
+    - field.field.node.a3d_object.field_abs_dat_source
+    - field.field.node.a3d_object.field_acquisition_type
+    - field.field.node.a3d_object.field_ais_cr
+    - field.field.node.a3d_object.field_alteration
+    - field.field.node.a3d_object.field_alternative_id
+    - field.field.node.a3d_object.field_alternative_ids
+    - field.field.node.a3d_object.field_aquamanile_subtype
+    - field.field.node.a3d_object.field_aquamanile_type
+    - field.field.node.a3d_object.field_archaeological_site
+    - field.field.node.a3d_object.field_artefact_category
+    - field.field.node.a3d_object.field_artefact_class
+    - field.field.node.a3d_object.field_artefact_id
+    - field.field.node.a3d_object.field_artefact_id_type
+    - field.field.node.a3d_object.field_artefact_subclass
+    - field.field.node.a3d_object.field_assess_cond_date
+    - field.field.node.a3d_object.field_auth_3d_models
+    - field.field.node.a3d_object.field_auth_res_data
+    - field.field.node.a3d_object.field_b_asymmetry
+    - field.field.node.a3d_object.field_ballistic_profile
+    - field.field.node.a3d_object.field_base_curve
+    - field.field.node.a3d_object.field_binder_type
+    - field.field.node.a3d_object.field_blank_orientation
+    - field.field.node.a3d_object.field_circle
+    - field.field.node.a3d_object.field_city
+    - field.field.node.a3d_object.field_city_code
+    - field.field.node.a3d_object.field_clay_colour
+    - field.field.node.a3d_object.field_coll_contacts
+    - field.field.node.a3d_object.field_coll_id
+    - field.field.node.a3d_object.field_coll_keyword
+    - field.field.node.a3d_object.field_coll_lang
+    - field.field.node.a3d_object.field_coll_org
+    - field.field.node.a3d_object.field_coll_rights
+    - field.field.node.a3d_object.field_coll_title
+    - field.field.node.a3d_object.field_colour_paint
+    - field.field.node.a3d_object.field_contract
+    - field.field.node.a3d_object.field_country
+    - field.field.node.a3d_object.field_cov_spat
+    - field.field.node.a3d_object.field_cov_temp
+    - field.field.node.a3d_object.field_creation
+    - field.field.node.a3d_object.field_culture
+    - field.field.node.a3d_object.field_current_location
+    - field.field.node.a3d_object.field_decoration
+    - field.field.node.a3d_object.field_deposition_cond
+    - field.field.node.a3d_object.field_description_a3d
+    - field.field.node.a3d_object.field_discoverer
+    - field.field.node.a3d_object.field_discovery_date
+    - field.field.node.a3d_object.field_doc_creator
+    - field.field.node.a3d_object.field_doc_date
+    - field.field.node.a3d_object.field_edging
+    - field.field.node.a3d_object.field_feature_id
+    - field.field.node.a3d_object.field_feature_type
+    - field.field.node.a3d_object.field_fhp_type
+    - field.field.node.a3d_object.field_field_description_a3d_cs
+    - field.field.node.a3d_object.field_finding_context_loc
+    - field.field.node.a3d_object.field_finding_context_note
+    - field.field.node.a3d_object.field_finding_context_pos
+    - field.field.node.a3d_object.field_finding_context_sec
+    - field.field.node.a3d_object.field_finding_context_subtype
+    - field.field.node.a3d_object.field_finding_context_type
+    - field.field.node.a3d_object.field_firing
+    - field.field.node.a3d_object.field_fract_nature
+    - field.field.node.a3d_object.field_fract_preservation
+    - field.field.node.a3d_object.field_fract_preservation_struct
+    - field.field.node.a3d_object.field_g_w_practice
+    - field.field.node.a3d_object.field_gb_scale
+    - field.field.node.a3d_object.field_general_lateral_wear
+    - field.field.node.a3d_object.field_general_note
+    - field.field.node.a3d_object.field_general_type
+    - field.field.node.a3d_object.field_geo_site
+    - field.field.node.a3d_object.field_geolocation
+    - field.field.node.a3d_object.field_geolocation_original
+    - field.field.node.a3d_object.field_geolocation_original_priv
+    - field.field.node.a3d_object.field_glue_residues
+    - field.field.node.a3d_object.field_grain_type
+    - field.field.node.a3d_object.field_handle
+    - field.field.node.a3d_object.field_has_a_construction_opening
+    - field.field.node.a3d_object.field_has_decoration
+    - field.field.node.a3d_object.field_has_ricasso
+    - field.field.node.a3d_object.field_holder_type
+    - field.field.node.a3d_object.field_ledge_type
+    - field.field.node.a3d_object.field_legal_status
+    - field.field.node.a3d_object.field_licence_url
+    - field.field.node.a3d_object.field_link_to_3d_model
+    - field.field.node.a3d_object.field_literature
+    - field.field.node.a3d_object.field_longitudinal_profile
+    - field.field.node.a3d_object.field_mass_structure_data_pres
+    - field.field.node.a3d_object.field_material_colour
+    - field.field.node.a3d_object.field_material_inclusions
+    - field.field.node.a3d_object.field_measurements
+    - field.field.node.a3d_object.field_member_of
+    - field.field.node.a3d_object.field_met_note_cz
+    - field.field.node.a3d_object.field_metadata_rights
+    - field.field.node.a3d_object.field_micro_ct
+    - field.field.node.a3d_object.field_microstructure
+    - field.field.node.a3d_object.field_mineral_fragments
+    - field.field.node.a3d_object.field_mineralogy
+    - field.field.node.a3d_object.field_motif
+    - field.field.node.a3d_object.field_note_on_preservation
+    - field.field.node.a3d_object.field_number_of_instances
+    - field.field.node.a3d_object.field_number_of_preserved_parts
+    - field.field.node.a3d_object.field_orig_state_pres
+    - field.field.node.a3d_object.field_original_location
+    - field.field.node.a3d_object.field_ownership
+    - field.field.node.a3d_object.field_painting_eye
+    - field.field.node.a3d_object.field_painting_microscope
+    - field.field.node.a3d_object.field_painting_tool
+    - field.field.node.a3d_object.field_pigment
+    - field.field.node.a3d_object.field_polished_sec_petrography
+    - field.field.node.a3d_object.field_porosity
+    - field.field.node.a3d_object.field_posture
+    - field.field.node.a3d_object.field_preserved_parts
+    - field.field.node.a3d_object.field_preserved_parts_struct
+    - field.field.node.a3d_object.field_private_note
+    - field.field.node.a3d_object.field_proj_dedication
+    - field.field.node.a3d_object.field_proj_id
+    - field.field.node.a3d_object.field_provenance
+    - field.field.node.a3d_object.field_quality
+    - field.field.node.a3d_object.field_quiver_trans_bright_spots
+    - field.field.node.a3d_object.field_quiver_trans_lat_rounding
+    - field.field.node.a3d_object.field_quiver_trans_tip_rounding
+    - field.field.node.a3d_object.field_raw_material
+    - field.field.node.a3d_object.field_recent_damage
+    - field.field.node.a3d_object.field_recent_damage_note
+    - field.field.node.a3d_object.field_recent_damage_type
+    - field.field.node.a3d_object.field_recent_damage_type_struct
+    - field.field.node.a3d_object.field_record_source
+    - field.field.node.a3d_object.field_reg_number
+    - field.field.node.a3d_object.field_reineckes_chronology
+    - field.field.node.a3d_object.field_relations
+    - field.field.node.a3d_object.field_relative_datation
+    - field.field.node.a3d_object.field_relief
+    - field.field.node.a3d_object.field_reparation_features
+    - field.field.node.a3d_object.field_retouch
+    - field.field.node.a3d_object.field_rights_access
+    - field.field.node.a3d_object.field_rights_reproduction
+    - field.field.node.a3d_object.field_rock_fragments
+    - field.field.node.a3d_object.field_sculpture_subtype
+    - field.field.node.a3d_object.field_sculpture_type
+    - field.field.node.a3d_object.field_serration
+    - field.field.node.a3d_object.field_site
+    - field.field.node.a3d_object.field_st_placement_certainty
+    - field.field.node.a3d_object.field_st_placement_type1
+    - field.field.node.a3d_object.field_st_placement_type2
+    - field.field.node.a3d_object.field_st_placement_type3
+    - field.field.node.a3d_object.field_st_shape_type1
+    - field.field.node.a3d_object.field_st_shape_type2
+    - field.field.node.a3d_object.field_standard_chronology
+    - field.field.node.a3d_object.field_state
+    - field.field.node.a3d_object.field_statement
+    - field.field.node.a3d_object.field_stove_tile_shape_certainty
+    - field.field.node.a3d_object.field_subord_dataset
+    - field.field.node.a3d_object.field_subord_dataset_link
+    - field.field.node.a3d_object.field_surf_data_pres
+    - field.field.node.a3d_object.field_surface_alt
+    - field.field.node.a3d_object.field_surface_finishing
+    - field.field.node.a3d_object.field_thermic_cracks
+    - field.field.node.a3d_object.field_tile_type
+    - field.field.node.a3d_object.field_timespan
+    - field.field.node.a3d_object.field_tip_fracture
+    - field.field.node.a3d_object.field_wear
+    - field.field.node.a3d_object.field_wgs84_accuracy_private
+    - field.field.node.a3d_object.field_wgs84_geolocation
+    - field.field.node.a3d_object.field_wgs84_geolocation_accuracy
+    - field.field.node.a3d_object.field_wgs84_geolocation_private
+    - node.type.a3d_object
+  module:
+    - cshs
+    - datafield
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_biblatex:
+      children:
+        - a3d_eva_biblatex_biblatex
+      label: Biblatex
+      parent_name: ''
+      region: hidden
+      weight: 52
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: false
+    group_harvard_citation_style:
+      children:
+        - a3d_eva_biblatex_harvard
+      label: 'Harvard citation style'
+      parent_name: ''
+      region: hidden
+      weight: 53
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: false
+    group_platforms:
+      children:
+        - a3d_eva_entity_group_relation_entity_view_4
+      label: Platforms
+      parent_name: ''
+      region: hidden
+      weight: 0
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        required_fields: false
+        weight: 0
+        effect: bounceslide
+    group_collection:
+      children:
+        - field_coll_contacts
+        - field_coll_id
+        - field_coll_keyword
+        - field_coll_lang
+        - field_coll_rights
+        - field_coll_title
+        - field_cov_spat
+        - field_cov_temp
+        - field_creation
+        - field_relations
+        - field_statement
+      label: Collection
+      parent_name: ''
+      region: hidden
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_identification:
+      children:
+        - field_ais_cr
+        - field_artefact_class
+        - field_artefact_subclass
+        - field_discoverer
+        - field_discovery_date
+        - field_feature_id
+        - field_feature_type
+        - field_finding_context_loc
+        - field_finding_context_pos
+        - field_finding_context_sec
+        - field_general_type
+        - field_proj_id
+        - field_record_source
+      label: Identification
+      parent_name: ''
+      region: hidden
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_description:
+      children:
+        - field_2d_asymmetry
+        - field_3d_shaping
+        - field_3d_shaping_struct
+        - field_3d_traces
+        - field_3d_traces_struct
+        - field_a_asymmetry
+        - field_alteration
+        - field_assess_cond_date
+        - field_b_asymmetry
+        - field_ballistic_profile
+        - field_base_curve
+        - field_blank_orientation
+        - field_colour_paint
+        - field_decoration
+        - field_deposition_cond
+        - field_fract_nature
+        - field_fract_preservation
+        - field_fract_preservation_struct
+        - field_general_lateral_wear
+        - field_glue_residues
+        - field_has_a_construction_opening
+        - field_has_decoration
+        - field_has_ricasso
+        - field_longitudinal_profile
+        - field_mass_structure_data_pres
+        - field_measurements
+        - field_micro_ct
+        - field_mineralogy
+        - field_number_of_instances
+        - field_number_of_preserved_parts
+        - field_orig_state_pres
+        - field_painting_eye
+        - field_painting_microscope
+        - field_painting_tool
+        - field_pigment
+        - field_polished_sec_petrography
+        - field_porosity
+        - field_posture
+        - field_preserved_parts
+        - field_preserved_parts_struct
+        - field_quality
+        - field_quiver_trans_bright_spots
+        - field_quiver_trans_lat_rounding
+        - field_quiver_trans_tip_rounding
+        - field_recent_damage
+        - field_recent_damage_note
+        - field_recent_damage_type
+        - field_recent_damage_type_struct
+        - field_reparation_features
+        - field_retouch
+        - field_rock_fragments
+        - field_serration
+        - field_st_placement_certainty
+        - field_surf_data_pres
+        - field_surface_alt
+        - field_thermic_cracks
+        - field_tip_fracture
+        - field_wear
+      label: Description
+      parent_name: ''
+      region: hidden
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_datation:
+      children:
+        - field_abs_dat_source
+        - field_reineckes_chronology
+        - field_standard_chronology
+        - field_timespan
+      label: Datation
+      parent_name: ''
+      region: hidden
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_custody:
+      children:
+        - field_current_location
+        - field_g_w_practice
+        - field_legal_status
+        - field_licence_url
+        - field_original_location
+        - field_rights_access
+        - field_rights_reproduction
+      label: Custody
+      parent_name: ''
+      region: hidden
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_references:
+      children:
+        - field_contract
+        - field_link_to_3d_model
+        - field_subord_dataset
+        - field_subord_dataset_link
+      label: References
+      parent_name: ''
+      region: hidden
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_documentation:
+      children:
+        - field_doc_creator
+        - field_doc_date
+        - field_metadata_rights
+        - field_provenance
+        - field_stove_tile_shape_certainty
+      label: Documentation
+      parent_name: ''
+      region: hidden
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_general:
+      children:
+        - field_private_note
+      label: General
+      parent_name: ''
+      region: hidden
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_location:
+      children:
+        - field_archaeological_site
+        - field_country
+        - field_geolocation
+        - field_geolocation_original
+        - field_geolocation_original_priv
+        - field_site
+        - field_wgs84_accuracy_private
+        - field_wgs84_geolocation
+        - field_wgs84_geolocation_accuracy
+        - field_wgs84_geolocation_private
+      label: Location
+      parent_name: ''
+      region: hidden
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+id: node.a3d_object.kch_index
+targetEntityType: node
+bundle: a3d_object
+mode: kch_index
+content:
+  a3d_artefact_media_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  a3d_eva_parent_groups_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_kch_index_related_samples_and_analyses_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  a3d_kch_index_related_samples_and_analyses_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  a3d_kch_index_related_samples_and_analyses_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_abs_dat_range:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 78
+    region: content
+  field_abs_dat_range_cs:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 79
+    region: content
+  field_acquisition_type:
+    type: cshs_flexible_hierarchy
+    label: hidden
+    settings:
+      linked: false
+      reverse: false
+      format: '[term:name]'
+      clear: true
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_alternative_id:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_alternative_ids:
+    type: data_field_unformatted_list
+    label: hidden
+    settings:
+      inline: true
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_aquamanile_subtype:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_aquamanile_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_artefact_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_artefact_id:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_artefact_id_type:
+    type: entity_reference_label
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_auth_3d_models:
+    type: cshs_flexible_hierarchy
+    label: hidden
+    settings:
+      linked: false
+      reverse: false
+      format: '[term:name]'
+      clear: true
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_auth_res_data:
+    type: cshs_flexible_hierarchy
+    label: hidden
+    settings:
+      linked: false
+      reverse: false
+      format: '[term:name]'
+      clear: true
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_circle:
+    type: cshs_full_hierarchy
+    label: hidden
+    settings:
+      linked: false
+      reverse: false
+      separator: ' » '
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_clay_colour:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 130
+    region: content
+  field_coll_org:
+    type: cshs_full_hierarchy
+    label: inline
+    settings:
+      linked: false
+      reverse: false
+      separator: ' » '
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_culture:
+    type: cshs_flexible_hierarchy
+    label: hidden
+    settings:
+      linked: false
+      reverse: false
+      format: '[term:name]'
+      clear: true
+    third_party_settings: {  }
+    weight: 57
+    region: content
+  field_description_a3d:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: -50
+    region: content
+  field_edging:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_fhp_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 119
+    region: content
+  field_field_description_a3d_cs:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: -51
+    region: content
+  field_finding_context_note:
+    type: basic_string
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_finding_context_subtype:
+    type: cshs_full_hierarchy
+    label: visually_hidden
+    settings:
+      linked: false
+      reverse: false
+      separator: ' » '
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_finding_context_type:
+    type: cshs_full_hierarchy
+    label: visually_hidden
+    settings:
+      linked: false
+      reverse: false
+      separator: ' » '
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_general_note:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_handle:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_ledge_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_literature:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_material_colour:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 121
+    region: content
+  field_material_inclusions:
+    type: entity_reference_label
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_member_of:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_met_note_cz:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  field_motif:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 126
+    region: content
+  field_note_on_preservation:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 62
+    region: content
+  field_ownership:
+    type: cshs_flexible_hierarchy
+    label: hidden
+    settings:
+      linked: false
+      reverse: false
+      format: '[term:name]'
+      clear: true
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_proj_dedication:
+    type: cshs_full_hierarchy
+    label: hidden
+    settings:
+      linked: false
+      reverse: false
+      separator: ' » '
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_raw_material:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 65
+    region: content
+  field_reg_number:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_relative_datation:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 77
+    region: content
+  field_relief:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 136
+    region: content
+  field_sculpture_subtype:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 131
+    region: content
+  field_sculpture_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 128
+    region: content
+  field_st_placement_type1:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_st_placement_type2:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_st_placement_type3:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_st_shape_type1:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_st_shape_type2:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_surface_finishing:
+    type: data_field_unformatted_list
+    label: hidden
+    settings:
+      inline: true
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
+    third_party_settings: {  }
+    weight: 125
+    region: content
+  field_tile_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+hidden:
+  a3d_arf_content_browse_title: true
+  a3d_artefact_media_a3d_documents: true
+  a3d_artefact_media_a3d_first_image: true
+  a3d_artefact_media_a3d_first_image_thumbnail: true
+  a3d_artefact_media_a3d_images: true
+  a3d_artefact_media_a3d_models: true
+  a3d_artefact_media_a3d_other_files: true
+  a3d_artefact_media_a3d_videos: true
+  a3d_artefact_media_entity_view_1: true
+  a3d_content_entity_view_1: true
+  a3d_editor_block_entity_view_1: true
+  a3d_eva_biblatex_biblatex: true
+  a3d_eva_biblatex_harvard: true
+  a3d_eva_entity_group_relation_entity_view_2: true
+  a3d_eva_entity_group_relation_entity_view_3: true
+  a3d_eva_entity_group_relation_entity_view_4: true
+  a3d_eva_entity_group_relation_entity_view_5: true
+  a3d_eva_field_appellation_entity_view_1: true
+  a3d_eva_field_appellation_entity_view_2: true
+  a3d_eva_handle_entity_view_1: true
+  a3d_kch_content2_browse_title: true
+  a3d_kch_content2_kch_analysis_to_object: true
+  a3d_kch_media_nef_images: true
+  a3d_meta_content_browse_title: true
+  a3d_meta_object_on_map_a3d_object_map: true
+  a3d_nef_content_browse_title: true
+  a3d_nef_media_nef_images: true
+  display_media_entity_view_1: true
+  display_media_entity_view_3: true
+  display_media_original_download: true
+  display_media_service_file: true
+  display_media_thumbnail: true
+  field_2d_asymmetry: true
+  field_3d_shaping: true
+  field_3d_shaping_struct: true
+  field_3d_traces: true
+  field_3d_traces_struct: true
+  field_a_asymmetry: true
+  field_abs_dat_source: true
+  field_ais_cr: true
+  field_alteration: true
+  field_archaeological_site: true
+  field_artefact_class: true
+  field_artefact_subclass: true
+  field_assess_cond_date: true
+  field_b_asymmetry: true
+  field_ballistic_profile: true
+  field_base_curve: true
+  field_binder_type: true
+  field_blank_orientation: true
+  field_city: true
+  field_city_code: true
+  field_coll_contacts: true
+  field_coll_id: true
+  field_coll_keyword: true
+  field_coll_lang: true
+  field_coll_rights: true
+  field_coll_title: true
+  field_colour_paint: true
+  field_contract: true
+  field_country: true
+  field_cov_spat: true
+  field_cov_temp: true
+  field_creation: true
+  field_current_location: true
+  field_decoration: true
+  field_deposition_cond: true
+  field_discoverer: true
+  field_discovery_date: true
+  field_doc_creator: true
+  field_doc_date: true
+  field_feature_id: true
+  field_feature_type: true
+  field_finding_context_loc: true
+  field_finding_context_pos: true
+  field_finding_context_sec: true
+  field_firing: true
+  field_fract_nature: true
+  field_fract_preservation: true
+  field_fract_preservation_struct: true
+  field_g_w_practice: true
+  field_gb_scale: true
+  field_general_lateral_wear: true
+  field_general_type: true
+  field_geo_site: true
+  field_geolocation: true
+  field_geolocation_original: true
+  field_geolocation_original_priv: true
+  field_glue_residues: true
+  field_grain_type: true
+  field_has_a_construction_opening: true
+  field_has_decoration: true
+  field_has_ricasso: true
+  field_holder_type: true
+  field_legal_status: true
+  field_licence_url: true
+  field_link_to_3d_model: true
+  field_longitudinal_profile: true
+  field_mass_structure_data_pres: true
+  field_measurements: true
+  field_metadata_rights: true
+  field_micro_ct: true
+  field_microstructure: true
+  field_mineral_fragments: true
+  field_mineralogy: true
+  field_number_of_instances: true
+  field_number_of_preserved_parts: true
+  field_orig_state_pres: true
+  field_original_location: true
+  field_painting_eye: true
+  field_painting_microscope: true
+  field_painting_tool: true
+  field_pigment: true
+  field_polished_sec_petrography: true
+  field_porosity: true
+  field_posture: true
+  field_preserved_parts: true
+  field_preserved_parts_struct: true
+  field_private_note: true
+  field_proj_id: true
+  field_provenance: true
+  field_quality: true
+  field_quiver_trans_bright_spots: true
+  field_quiver_trans_lat_rounding: true
+  field_quiver_trans_tip_rounding: true
+  field_recent_damage: true
+  field_recent_damage_note: true
+  field_recent_damage_type: true
+  field_recent_damage_type_struct: true
+  field_record_source: true
+  field_reineckes_chronology: true
+  field_relations: true
+  field_reparation_features: true
+  field_retouch: true
+  field_rights_access: true
+  field_rights_reproduction: true
+  field_rock_fragments: true
+  field_serration: true
+  field_site: true
+  field_st_placement_certainty: true
+  field_standard_chronology: true
+  field_state: true
+  field_statement: true
+  field_stove_tile_shape_certainty: true
+  field_subord_dataset: true
+  field_subord_dataset_link: true
+  field_surf_data_pres: true
+  field_surface_alt: true
+  field_thermic_cracks: true
+  field_timespan: true
+  field_tip_fracture: true
+  field_wear: true
+  field_wgs84_accuracy_private: true
+  field_wgs84_geolocation: true
+  field_wgs84_geolocation_accuracy: true
+  field_wgs84_geolocation_private: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

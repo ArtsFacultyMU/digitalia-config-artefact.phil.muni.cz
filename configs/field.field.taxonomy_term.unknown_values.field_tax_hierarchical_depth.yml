@@ -1,0 +1,23 @@
+uuid: 2ee1e96d-1df2-41fa-9156-df647ee41ee7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_depth
+    - taxonomy.vocabulary.unknown_values
+id: taxonomy_term.unknown_values.field_tax_hierarchical_depth
+field_name: field_tax_hierarchical_depth
+entity_type: taxonomy_term
+bundle: unknown_values
+label: 'Hierarchical Depth'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

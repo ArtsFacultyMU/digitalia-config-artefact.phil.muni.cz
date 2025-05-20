@@ -1,0 +1,31 @@
+uuid: 40229186-717b-4ac1-8ef7-808ccd866314
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.a3d_arf_taxonomy
+  module:
+    - views
+name: city_entity_browser
+label: 'city entity browser'
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  857c4c20-646e-4479-b831-24ccf4633b3e:
+    id: view
+    uuid: 857c4c20-646e-4479-b831-24ccf4633b3e
+    label: view
+    weight: 1
+    settings:
+      submit_text: 'Select entities'
+      auto_select: false
+      view: a3d_arf_taxonomy
+      view_display: entity_browser_6

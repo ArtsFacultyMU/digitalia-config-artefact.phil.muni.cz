@@ -1,0 +1,23 @@
+uuid: e09c7e18-1c8a-4a56-a704-1c1fc9ef4d96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_depth
+    - taxonomy.vocabulary.quiver_trans_lat_rounding
+id: taxonomy_term.quiver_trans_lat_rounding.field_tax_hierarchical_depth
+field_name: field_tax_hierarchical_depth
+entity_type: taxonomy_term
+bundle: quiver_trans_lat_rounding
+label: 'Hierarchical Depth'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

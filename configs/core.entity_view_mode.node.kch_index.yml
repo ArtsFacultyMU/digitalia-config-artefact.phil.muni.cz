@@ -1,0 +1,11 @@
+uuid: b48103ff-1307-4a93-995b-2a47908a1340
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.kch_index
+label: 'KCH Index'
+description: 'Display with public fields for indexing'
+targetEntityType: node
+cache: true

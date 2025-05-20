@@ -1,0 +1,18 @@
+uuid: 04dacf42-0355-4a0f-a56d-6a6d3b9d0682
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.finding_documentation
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.finding_documentation
+target_entity_type_id: taxonomy_term
+target_bundle: finding_documentation
+default_langcode: site_default
+language_alterable: true

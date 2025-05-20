@@ -1,0 +1,18 @@
+uuid: 90452ebf-4ac9-45d9-a081-ab0ddac245b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.decoration
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.decoration
+target_entity_type_id: node
+target_bundle: decoration
+default_langcode: site_default
+language_alterable: false

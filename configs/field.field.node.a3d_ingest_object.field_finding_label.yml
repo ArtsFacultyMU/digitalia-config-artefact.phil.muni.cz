@@ -1,0 +1,19 @@
+uuid: 18b347de-a556-455a-bfd1-afcb624541c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_finding_label
+    - node.type.a3d_ingest_object
+id: node.a3d_ingest_object.field_finding_label
+field_name: field_finding_label
+entity_type: node
+bundle: a3d_ingest_object
+label: 'Finding label'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

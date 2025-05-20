@@ -12,8 +12,8 @@ entity_type_groups:
       advanced: advanced
       dublin_core: dublin_core
       dublin_core_advanced: dublin_core_advanced
-separator: ;
-tag_trim_method: beforeValue
+separator: ^
+tag_trim_method: afterValue
 use_maxlength: true
 tag_trim_maxlength:
   metatag_maxlength_title: null
@@ -22,4 +22,4 @@ tag_trim_maxlength:
   metatag_maxlength_dcterms_title: null
   metatag_maxlength_dcterms_description: null
 tag_scroll_max_height: ''
-tag_trim_end: '|.,-:;/+&([{"'''
+tag_trim_end: '|.,-:;/"''–'

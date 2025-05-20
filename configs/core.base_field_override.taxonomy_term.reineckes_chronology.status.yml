@@ -1,0 +1,22 @@
+uuid: 6069855f-fae6-446d-9b25-2f5004ef2cc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.reineckes_chronology
+id: taxonomy_term.reineckes_chronology.status
+field_name: status
+entity_type: taxonomy_term
+bundle: reineckes_chronology
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -6,6 +6,7 @@ dependencies:
     - field.storage.media.field_media_of
     - media.type.3d_model
     - node.type.a3d_object
+    - node.type.analysis
 id: media.3d_model.field_media_of
 field_name: field_media_of
 entity_type: media
@@ -21,9 +22,10 @@ settings:
   handler_settings:
     target_bundles:
       a3d_object: a3d_object
+      analysis: analysis
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: a3d_object
 field_type: entity_reference

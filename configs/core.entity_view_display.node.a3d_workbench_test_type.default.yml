@@ -1,0 +1,119 @@
+uuid: e57bb1a1-7547-4922-9965-ac5155a4de4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.a3d_workbench_test_type.body
+    - field.field.node.a3d_workbench_test_type.field_alle_zusammen
+    - field.field.node.a3d_workbench_test_type.field_alternative_ids
+    - field.field.node.a3d_workbench_test_type.field_artefact_category
+    - field.field.node.a3d_workbench_test_type.field_classification
+    - field.field.node.a3d_workbench_test_type.field_geolocation
+    - field.field.node.a3d_workbench_test_type.field_site
+    - field.field.node.a3d_workbench_test_type.field_test_custom_field
+    - field.field.node.a3d_workbench_test_type.field_test_datafield
+    - field.field.node.a3d_workbench_test_type.field_test_datafield_2
+    - field.field.node.a3d_workbench_test_type.field_test_datafield_3
+    - field.field.node.a3d_workbench_test_type.field_test_date
+    - field.field.node.a3d_workbench_test_type.field_test_timestamp
+    - field.field.node.a3d_workbench_test_type.field_wgs84_geolocation
+    - node.type.a3d_workbench_test_type
+  module:
+    - datetime
+    - user
+id: node.a3d_workbench_test_type.default
+targetEntityType: node
+bundle: a3d_workbench_test_type
+mode: default
+content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  display_media_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  display_media_service_file:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_artefact_category:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_test_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_test_timestamp:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 9
+    region: content
+hidden:
+  body: true
+  field_alle_zusammen: true
+  field_alternative_ids: true
+  field_classification: true
+  field_geolocation: true
+  field_site: true
+  field_test_custom_field: true
+  field_test_datafield: true
+  field_test_datafield_2: true
+  field_test_datafield_3: true
+  field_wgs84_geolocation: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

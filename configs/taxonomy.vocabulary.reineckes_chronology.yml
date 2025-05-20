@@ -1,0 +1,9 @@
+uuid: 230bbfa5-593b-454a-84f9-e17cf5d5fa2f
+langcode: en
+status: true
+dependencies: {  }
+name: "Reinecke's chronology"
+vid: reineckes_chronology
+description: SWD
+weight: 0
+new_revision: false

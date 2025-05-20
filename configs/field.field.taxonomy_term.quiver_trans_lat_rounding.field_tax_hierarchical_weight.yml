@@ -1,0 +1,23 @@
+uuid: 95c738d1-bdcd-4878-9c87-72f964dab6e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.quiver_trans_lat_rounding
+id: taxonomy_term.quiver_trans_lat_rounding.field_tax_hierarchical_weight
+field_name: field_tax_hierarchical_weight
+entity_type: taxonomy_term
+bundle: quiver_trans_lat_rounding
+label: 'Hierarchical Weight'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,6 +1,6 @@
 uuid: 7dcd2ffc-822e-4954-afe3-e0d46e0404f2
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - taxonomy.vocabulary.2d_asymetry

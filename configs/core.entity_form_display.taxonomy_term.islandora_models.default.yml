@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.islandora_models.field_external_uri
+    - field.field.taxonomy_term.islandora_models.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.islandora_models.field_tax_hierarchical_weight
     - taxonomy.vocabulary.islandora_models
   module:
     - link
@@ -65,4 +67,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true

@@ -1,0 +1,37 @@
+uuid: edd8b71f-52f1-48ff-84e7-7ba8789e1e85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.3d_traces.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.3d_traces.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.3d_traces
+  module:
+    - text
+id: taxonomy_term.3d_traces.default
+targetEntityType: taxonomy_term
+bundle: 3d_traces
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  a3d_eva_taxonomy_title_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
+  langcode: true
+  search_api_excerpt: true

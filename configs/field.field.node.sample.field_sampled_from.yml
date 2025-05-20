@@ -1,0 +1,31 @@
+uuid: a492bd8d-9730-4782-a334-335001d4b9cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sampled_from
+    - node.type.sample
+    - taxonomy.vocabulary.dimensions_extent
+    - taxonomy.vocabulary.unknown_values
+id: node.sample.field_sampled_from
+field_name: field_sampled_from
+entity_type: node
+bundle: sample
+label: 'Sampled from'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      dimensions_extent: dimensions_extent
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: dimensions_extent
+field_type: entity_reference

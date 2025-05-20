@@ -1,0 +1,20 @@
+uuid: f9721485-7bed-4036-8f4c-a0eeb4f20b9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sword_segment
+  module:
+    - path
+id: taxonomy_term.sword_segment.path
+field_name: path
+entity_type: taxonomy_term
+bundle: sword_segment
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

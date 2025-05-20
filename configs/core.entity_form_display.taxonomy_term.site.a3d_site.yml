@@ -1,0 +1,72 @@
+uuid: 06b84135-629f-472e-9c62-5f98e9d8b825
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.taxonomy_term.a3d_site
+    - field.field.taxonomy_term.site.field_city
+    - field.field.taxonomy_term.site.field_city_code
+    - field.field.taxonomy_term.site.field_city_code_text
+    - field.field.taxonomy_term.site.field_city_text
+    - field.field.taxonomy_term.site.field_country
+    - field.field.taxonomy_term.site.field_geo_geolocation
+    - field.field.taxonomy_term.site.field_plot_number
+    - field.field.taxonomy_term.site.field_site_type
+    - field.field.taxonomy_term.site.field_state
+    - field.field.taxonomy_term.site.field_street
+    - field.field.taxonomy_term.site.field_street_number
+    - field.field.taxonomy_term.site.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.site.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.site
+id: taxonomy_term.site.a3d_site
+targetEntityType: taxonomy_term
+bundle: site
+mode: a3d_site
+content:
+  field_city_code_text:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_city_text:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  field_city: true
+  field_city_code: true
+  field_country: true
+  field_geo_geolocation: true
+  field_plot_number: true
+  field_site_type: true
+  field_state: true
+  field_street: true
+  field_street_number: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
+  path: true
+  status: true
+  translation: true

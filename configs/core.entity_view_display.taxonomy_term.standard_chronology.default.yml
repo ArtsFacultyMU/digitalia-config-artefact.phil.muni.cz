@@ -1,0 +1,58 @@
+uuid: e35561e1-38e4-4ff0-b50a-83555f82004b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.standard_chronology.field_relative_datation
+    - field.field.taxonomy_term.standard_chronology.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.standard_chronology.field_tax_hierarchical_weight
+    - field.field.taxonomy_term.standard_chronology.field_timespan
+    - taxonomy.vocabulary.standard_chronology
+  module:
+    - range
+    - text
+id: taxonomy_term.standard_chronology.default
+targetEntityType: taxonomy_term
+bundle: standard_chronology
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_relative_datation:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_timespan:
+    type: range_integer
+    label: above
+    settings:
+      range_separator: '-'
+      thousand_separator: ''
+      range_combine: true
+      field_prefix_suffix: false
+      from_prefix_suffix: false
+      to_prefix_suffix: false
+      combined_prefix_suffix: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  a3d_eva_taxonomy_title_entity_view_2: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
+  langcode: true
+  search_api_excerpt: true

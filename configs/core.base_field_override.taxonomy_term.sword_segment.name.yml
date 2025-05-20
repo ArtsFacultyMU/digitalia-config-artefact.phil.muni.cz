@@ -1,0 +1,18 @@
+uuid: 72618a5b-b7ea-498d-9483-2d9926a763e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sword_segment
+id: taxonomy_term.sword_segment.name
+field_name: name
+entity_type: taxonomy_term
+bundle: sword_segment
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

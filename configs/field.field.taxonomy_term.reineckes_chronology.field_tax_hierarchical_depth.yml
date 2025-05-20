@@ -1,0 +1,23 @@
+uuid: 52a22f5f-14f9-4c6d-9124-4a75a958d384
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_depth
+    - taxonomy.vocabulary.reineckes_chronology
+id: taxonomy_term.reineckes_chronology.field_tax_hierarchical_depth
+field_name: field_tax_hierarchical_depth
+entity_type: taxonomy_term
+bundle: reineckes_chronology
+label: 'Hierarchical Depth'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

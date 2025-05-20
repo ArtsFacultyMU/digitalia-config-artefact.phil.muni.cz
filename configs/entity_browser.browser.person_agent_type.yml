@@ -1,0 +1,31 @@
+uuid: a6d8edae-7e0e-45d3-9ce8-90591e557889
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.a3d_arf_taxonomy
+  module:
+    - views
+name: person_agent_type
+label: 'Person agent type'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  a8f010c2-0522-4c9b-a221-293fdb21f781:
+    id: view
+    uuid: a8f010c2-0522-4c9b-a221-293fdb21f781
+    label: view
+    weight: 1
+    settings:
+      submit_text: 'Select entities'
+      auto_select: false
+      view: a3d_arf_taxonomy
+      view_display: entity_browser_5

@@ -1,0 +1,58 @@
+uuid: 2c5c42b2-0b87-429f-b011-0493469603a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_field
+    - node
+    - taxonomy
+id: node.field_test_custom_field
+field_name: field_test_custom_field
+entity_type: node
+type: custom
+settings:
+  columns:
+    text_subfield:
+      name: text_subfield
+      type: string
+      max_length: '255'
+      unsigned: 0
+      precision: '10'
+      scale: '2'
+      size: normal
+      datetime_type: datetime
+    number_subfield:
+      name: number_subfield
+      type: integer
+      max_length: '255'
+      unsigned: 0
+      precision: '10'
+      scale: '2'
+      size: normal
+      datetime_type: datetime
+    taxonomoy_subfield:
+      name: taxonomoy_subfield
+      type: entity_reference
+      max_length: '255'
+      unsigned: 0
+      precision: '10'
+      scale: '2'
+      size: normal
+      datetime_type: datetime
+      target_type: taxonomy_term
+    date_subfield:
+      name: date_subfield
+      type: datetime
+      max_length: '255'
+      unsigned: 0
+      precision: '10'
+      scale: '2'
+      size: normal
+      datetime_type: datetime
+module: custom_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

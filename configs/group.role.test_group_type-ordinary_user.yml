@@ -12,6 +12,8 @@ scope: individual
 global_role: null
 group_type: test_group_type
 permissions:
+  - 'create group_node:a3d_ingest_artefact entity'
+  - 'create group_node:a3d_ingest_object entity'
   - 'create group_node:a3d_object entity'
   - 'create group_node:analysis entity'
   - 'create group_node:page entity'
@@ -20,6 +22,7 @@ permissions:
   - 'delete own group_node:page entity'
   - 'update any group_node:page entity'
   - 'update any group_node:test_a3d entity'
+  - 'update own group_node:a3d_ingest_object entity'
   - 'update own group_node:a3d_object entity'
   - 'update own group_node:analysis entity'
   - 'update own group_node:page entity'
@@ -29,6 +32,7 @@ permissions:
   - 'view all group_node:test_a3d entity revisions'
   - 'view group'
   - 'view group_media:image entity'
+  - 'view group_node:a3d_ingest_object entity'
   - 'view group_node:a3d_object entity'
   - 'view group_node:a3d_platform_homepage entity'
   - 'view group_node:analysis entity'
@@ -47,10 +51,12 @@ permissions:
   - 'view group_term:relative_datation entity'
   - 'view group_term:site entity'
   - 'view group_term:thermic_cracks entity'
+  - 'view own unpublished group_node:a3d_ingest_object entity'
   - 'view own unpublished group_node:a3d_object entity'
   - 'view own unpublished group_node:analysis entity'
   - 'view own unpublished group_node:page entity'
   - 'view own unpublished group_node:sample entity'
   - 'view own unpublished group_node:test_a3d entity'
+  - 'view unpublished group_node:a3d_ingest_object entity'
   - 'view unpublished group_node:page entity'
   - 'view unpublished group_node:test_a3d entity'

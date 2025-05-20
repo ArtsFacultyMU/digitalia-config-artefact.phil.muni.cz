@@ -1,0 +1,29 @@
+uuid: 64a8b366-b949-4b45-ab2f-09b596792b34
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - field.field.taxonomy_term.raw_material.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.raw_material.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.raw_material
+id: taxonomy_term.raw_material.teaser
+targetEntityType: taxonomy_term
+bundle: raw_material
+mode: teaser
+content:
+  a3d_eva_taxonomy_title_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  a3d_arf_search_index_taxonomy_entity_view_1: true
+  a3d_arf_search_index_taxonomy_entity_view_1_form: true
+  a3d_eva_entity_group_relation_entity_view_1: true
+  a3d_eva_taxonomy_title_entity_view_1: true
+  description: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
+  langcode: true
+  search_api_excerpt: true

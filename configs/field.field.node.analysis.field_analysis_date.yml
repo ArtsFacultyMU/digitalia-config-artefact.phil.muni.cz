@@ -11,7 +11,7 @@ id: node.analysis.field_analysis_date
 field_name: field_analysis_date
 entity_type: node
 bundle: analysis
-label: 'Analysis date'
+label: Depracted
 description: ''
 required: false
 translatable: false

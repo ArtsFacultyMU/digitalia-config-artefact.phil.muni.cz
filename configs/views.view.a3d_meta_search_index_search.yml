@@ -178,7 +178,7 @@ display:
             alter_text: false
             text: ''
             make_link: true
-            path: '/a3d/node/{{ nid }}'
+            path: '/node/{{ nid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -762,7 +762,7 @@ display:
               autosubmit_textfield_delay: 500
               autosubmit_hide: false
               input_required: false
-              allow_secondary: false
+              allow_secondary: true
               secondary_label: 'Advanced options'
               secondary_open: false
               reset_button_always_show: false
@@ -797,16 +797,21 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
-              field_measurements_dimensions_value:
+              facets_field_artefact_category:
                 plugin_id: default
                 advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
-              field_timespan_from:
+              facets_field_relative_datation:
                 plugin_id: default
                 advanced:
-                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
@@ -817,21 +822,10 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
-              field_wgs84_geolocation:
+              field_timespan_from:
                 plugin_id: default
                 advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                    filter_rewrite_values_key: false
-                  collapsible: false
-                  collapsible_disable_automatic_open: false
-                  is_secondary: false
-              field_wgs84_geolocation_boundary:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                    filter_rewrite_values_key: false
+                  placeholder_text: ''
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
@@ -853,15 +847,6 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
-              facets_field_artefact_category:
-                plugin_id: default
-                advanced:
-                  rewrite:
-                    filter_rewrite_values: ''
-                    filter_rewrite_values_key: false
-                  collapsible: false
-                  collapsible_disable_automatic_open: false
-                  is_secondary: false
               facets_field_ownership:
                 plugin_id: default
                 advanced:
@@ -871,7 +856,7 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
-              facets_field_relative_datation:
+              field_wgs84_geolocation:
                 plugin_id: default
                 advanced:
                   rewrite:
@@ -879,7 +864,16 @@ display:
                     filter_rewrite_values_key: false
                   collapsible: false
                   collapsible_disable_automatic_open: false
-                  is_secondary: false
+                  is_secondary: true
+              field_wgs84_geolocation_boundary:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: true
       access:
         type: none
         options: {  }
@@ -1091,7 +1085,7 @@ display:
             min: ''
             max: ''
             value: ''
-          group: 1
+          group: 2
           exposed: true
           expose:
             operator_id: a3d_object_parent_groups_op
@@ -1266,27 +1260,28 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          hierarchy: false
+          hierarchy: true
           label_display: visible
           facet:
             query_operator: or
             min_count: 1
             show_numbers: true
             processor_configs:
+              hierarchy_processor:
+                weights:
+                  build: 100
+                settings: {  }
               translate_entity:
                 weights:
                   build: 5
                 settings: {  }
-              count_widget_order:
+              term_weight_widget_order:
                 weights:
-                  sort: -8
-                settings:
-                  sort: DESC
-              display_value_widget_order:
-                weights:
-                  sort: -9
+                  sort: 60
                 settings:
                   sort: ASC
+            hierarchy: taxonomy
+            expand_hierarchy: 1
         field_timespan_to:
           id: field_timespan_to
           table: search_api_index_a3d_object_index
@@ -1397,6 +1392,71 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_measurements_dimensions_value:
+          id: field_measurements_dimensions_value
+          table: search_api_index_a3d_object_index
+          field: field_measurements_dimensions_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_numeric
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_measurements_dimensions_value_op
+            label: 'Measurements » value'
+            description: ''
+            use_operator: true
+            operator: field_measurements_dimensions_value_op
+            operator_limit_selection: true
+            operator_list:
+              '<': '<'
+              '<=': '<='
+              '=': '='
+              '!=': '!='
+              '>=': '>='
+              '>': '>'
+              between: between
+              'not between': 'not between'
+              empty: empty
+              'not empty': 'not empty'
+            identifier: field_measurements_dimensions_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              fedoraadmin: '0'
+              can_publish: '0'
+              can_edit_taxonomy: '0'
+              standard_user: '0'
+              nef_user: '0'
+              arf_user: '0'
+              kch_user: '0'
+              lindat_editor: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
         facets_field_site:
           id: facets_field_site
           table: search_api_index_a3d_object_index
@@ -1467,13 +1527,13 @@ display:
                   sort: -8
                 settings:
                   sort: DESC
-              display_value_widget_order:
+              term_weight_widget_order:
                 weights:
-                  sort: -9
+                  sort: 60
                 settings:
                   sort: ASC
             hierarchy: taxonomy
-            expand_hierarchy: 0
+            expand_hierarchy: 1
         facets_field_city:
           id: facets_field_city
           table: search_api_index_a3d_object_index
@@ -1754,75 +1814,11 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        field_measurements_dimensions_value:
-          id: field_measurements_dimensions_value
-          table: search_api_index_a3d_object_index
-          field: field_measurements_dimensions_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_numeric
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: false
-          expose:
-            operator_id: field_measurements_dimensions_value_op
-            label: 'Measurements » value'
-            description: ''
-            use_operator: true
-            operator: field_measurements_dimensions_value_op
-            operator_limit_selection: true
-            operator_list:
-              '<': '<'
-              '<=': '<='
-              '=': '='
-              '!=': '!='
-              '>=': '>='
-              '>': '>'
-              between: between
-              'not between': 'not between'
-              empty: empty
-              'not empty': 'not empty'
-            identifier: field_measurements_dimensions_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              fedoraadmin: '0'
-              can_publish: '0'
-              can_edit_taxonomy: '0'
-              standard_user: '0'
-              nef_user: '0'
-              arf_user: '0'
-              kch_user: '0'
-              lindat_editor: '0'
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       filter_groups:
         operator: AND
         groups:
           1: AND
+          2: OR
       style:
         type: table
         options:
@@ -2197,7 +2193,7 @@ display:
               autosubmit_exclude_textfield: true
               autosubmit_textfield_delay: 500
               autosubmit_hide: false
-              input_required: true
+              input_required: false
               allow_secondary: false
               secondary_label: 'Advanced options'
               secondary_open: false
@@ -2233,20 +2229,77 @@ display:
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
-              field_artefact_category:
+              facets_field_artefact_category:
                 plugin_id: default
                 advanced:
-                  sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
                   collapsible: false
                   collapsible_disable_automatic_open: false
                   is_secondary: false
-              field_site:
+              facets_field_relative_datation:
                 plugin_id: default
                 advanced:
-                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              field_timespan_to:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              field_timespan_from:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              facets_field_site:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              facets_field_city:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              facets_field_ownership:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              field_wgs84_geolocation:
+                plugin_id: default
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: false
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+              field_wgs84_geolocation_boundary:
+                plugin_id: default
+                advanced:
                   rewrite:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
@@ -2274,12 +2327,163 @@ display:
           row_class: ''
           default_row_class: true
       row:
-        type: fields
+        type: search_api
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          view_modes:
+            'entity:node':
+              ':default': default
+              a3d_object: ':default'
+              analysis: ':default'
+              sample: ':default'
+            'entity:taxonomy_term':
+              2d_asymetry: ':default'
+              3d_shaping: ':default'
+              3d_traces: ':default'
+              ':default': default
+              acquisition_type: ':default'
+              actor: ':default'
+              actor_type: ':default'
+              alteration: ':default'
+              analysis_type: ':default'
+              aquamanile_subtype: ':default'
+              aquamanile_type: ':default'
+              archaeological_site: ':default'
+              artefact_category: ':default'
+              artefact_class: ':default'
+              artefact_subclass: ':default'
+              author: ':default'
+              ballistic_profile: ':default'
+              base_curve: ':default'
+              binder_type: ':default'
+              blank_orientation: ':default'
+              chemical_compounds: ':default'
+              circle: ':default'
+              city: ':default'
+              city_code: ':default'
+              coll_keyword: ':default'
+              coll_lang: ':default'
+              coll_org: ':default'
+              collection_title: ':default'
+              colour: ':default'
+              corporate_body: ':default'
+              country_a3d: ':default'
+              cov_spat: ':default'
+              creation: ':default'
+              cross_section_asymmetry: ':default'
+              culture: ':default'
+              current_location: ':default'
+              deposition_cond: ':default'
+              dimensions_extent: ':default'
+              dimensions_qualifier: ':default'
+              elements: ':default'
+              family: ':default'
+              feature_id: ':default'
+              feature_type: ':default'
+              fhp_type: ':default'
+              finding_context_subtype: ':default'
+              finding_context_type: ':default'
+              finding_documentation: ':default'
+              firing_characteristic: ':default'
+              format_size: ':default'
+              fract_nature: ':default'
+              fract_preservation: ':default'
+              frequencies: ':default'
+              g_w_practice: ':default'
+              general_accuracy: ':default'
+              general_lateral_wear: ':default'
+              general_type: ':default'
+              genre: ':default'
+              geo_location: ':default'
+              glue_residues: ':default'
+              grain_type: ':default'
+              holder_type: ':default'
+              identifier_type: ':default'
+              instrument: ':default'
+              instrument_relation_type: ':default'
+              instrument_type: ':default'
+              islandora_display: ':default'
+              islandora_media_use: ':default'
+              islandora_models: ':default'
+              issuance_modes: ':default'
+              language: ':default'
+              ledge_type: ':default'
+              legal_status: ':default'
+              licence_url: ':default'
+              loc_coord_cadastre_accuracy: ':default'
+              longitudinal_profile: ':default'
+              material_inclusions: ':default'
+              matrix_characteristic: ':default'
+              measured_variable: ':default'
+              measurement_type: ':default'
+              metadata_rights: ':default'
+              microstructure: ':default'
+              mineral_fragments: ':default'
+              motif: ':default'
+              msdp_method: ':default'
+              msdp_value: ':default'
+              non_plastic_inclusions_scale: ':default'
+              orig_state_pres: ':default'
+              original_location: ':default'
+              painting: ':default'
+              person: ':default'
+              physical_form: ':default'
+              pigment: ':default'
+              place_analysis: ':default'
+              posture: ':default'
+              preserved_parts: ':default'
+              proj_dedication: ':default'
+              proj_id: ':default'
+              quality: ':default'
+              quiver_trans_bright_spots: ':default'
+              quiver_trans_lat_rounding: ':default'
+              quiver_trans_tip_rounding: ':default'
+              raw_material: ':default'
+              recent_damage: ':default'
+              recent_damage_type: ':default'
+              record_source: ':default'
+              region: ':default'
+              reineckes_chronology: ':default'
+              relative_datation: ':default'
+              relief_type: ':default'
+              reparation_features: ':default'
+              research_question: ':default'
+              resource_types: ':default'
+              retouch: ':default'
+              rights_access: ':default'
+              rights_reproduction: ':default'
+              rock_fragments: ':default'
+              scale_type: ':default'
+              sdp_method: ':default'
+              sdp_value: ':default'
+              serration: ':default'
+              shape: ':default'
+              site: ':default'
+              site_type: ':default'
+              small_sculpture_subtype: ':default'
+              small_sculpture_type: ':default'
+              spatial_ref_system: ':default'
+              standard_chronology: ':default'
+              state: ':default'
+              stove_tile_placement_type_1: ':default'
+              stove_tile_placement_type_2: ':default'
+              stove_tile_placement_type_3: ':default'
+              stove_tile_shape_type_1: ':default'
+              stove_tile_shape_type_2: ':default'
+              subject: ':default'
+              subord_dataset: ':default'
+              surface_alt: ':default'
+              surface_finishing: ':default'
+              surface_properties: ':default'
+              sword_segment: ':default'
+              tags: ':default'
+              temporal_subjects: ':default'
+              test_level_0: ':default'
+              thermic_cracks: ':default'
+              tile_type: ':default'
+              tip_fracture: ':default'
+              trace_type: ':default'
+              units: ':default'
+              unknown_values: ':default'
       defaults:
         empty: false
         title: true

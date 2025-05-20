@@ -1,0 +1,11 @@
+uuid: 009423e8-e68c-4213-973b-4588f8330c21
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: swd_site_logo
+title: 'SWD site logo'
+content:
+  value: '<p><a class="site-branding__logo" href="/group/swd" rel="home"><img src="/themes/custom/islandora_muni/platform_specific/images/swd-logo.svg" alt="Home" width="206" height="84"></a></p>'
+  format: full_html

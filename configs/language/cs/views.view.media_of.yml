@@ -1,23 +1,58 @@
 display:
   default:
+    display_title: Nadřízené
     display_options:
       exposed_form:
         options:
+          submit_button: Použít
+          reset_button_label: Reset
           exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
       pager:
         options:
           expose:
+            items_per_page_label: 'Položek na stránku'
             items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
       fields:
         name:
-          label: Jméno
+          label: Jméno/Název
+          separator: ', '
+        bundle:
+          separator: ', '
+        field_mime_type:
+          separator: ', '
+        changed:
+          label: Změněno
+          separator: ', '
   page_1:
     display_options:
+      menu:
+        title: Média
       fields:
         name:
-          label: Jméno
+          label: Jméno/Název
+          separator: ', '
+        bundle:
+          separator: ', '
+        field_mime_type:
+          separator: ', '
+        field_media_use:
+          separator: ', '
+        changed:
+          label: Změněno
+          separator: ', '
   rest_export_1:
     display_options:
       fields:
         name:
-          label: Jméno
+          label: Jméno/Název
+          separator: ', '
+        bundle:
+          separator: ', '
+        field_mime_type:
+          separator: ', '
+        changed:
+          label: Změněno
+          separator: ', '

@@ -1,0 +1,18 @@
+uuid: 3888baf6-76dd-4732-bcd8-2e3a782b9981
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.surface_properties
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.surface_properties
+target_entity_type_id: taxonomy_term
+target_bundle: surface_properties
+default_langcode: site_default
+language_alterable: false

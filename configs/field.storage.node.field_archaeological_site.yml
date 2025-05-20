@@ -1,0 +1,20 @@
+uuid: bed41587-2813-4f91-81db-afb45c803843
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_archaeological_site
+field_name: field_archaeological_site
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

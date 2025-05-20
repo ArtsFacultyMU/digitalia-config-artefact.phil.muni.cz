@@ -1,0 +1,18 @@
+uuid: be207c12-16d3-46e3-ac38-4267ea9c168d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.reineckes_chronology
+id: taxonomy_term.reineckes_chronology.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: reineckes_chronology
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,29 @@
+uuid: cb3ea9f7-15a9-41ba-9b14-a59feea455b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_standard_chronology
+    - node.type.a3d_object
+    - taxonomy.vocabulary.unknown_values
+id: node.a3d_object.field_standard_chronology
+field_name: field_standard_chronology
+entity_type: node
+bundle: a3d_object
+label: 'Standard Chronology'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

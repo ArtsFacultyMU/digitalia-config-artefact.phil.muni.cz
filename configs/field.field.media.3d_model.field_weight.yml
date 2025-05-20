@@ -1,0 +1,23 @@
+uuid: 25e8c4a9-e35d-4892-875b-3f86487d518d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_weight
+    - media.type.3d_model
+id: media.3d_model.field_weight
+field_name: field_weight
+entity_type: media
+bundle: 3d_model
+label: Weight
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

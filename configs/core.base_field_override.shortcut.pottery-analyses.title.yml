@@ -1,0 +1,18 @@
+uuid: ddca596d-ffcb-4df4-a30f-91f3bf5d022a
+langcode: en
+status: true
+dependencies:
+  config:
+    - shortcut.set.pottery-analyses
+id: shortcut.pottery-analyses.title
+field_name: title
+entity_type: shortcut
+bundle: pottery-analyses
+label: Name
+description: 'The name of the shortcut.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

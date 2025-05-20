@@ -1,0 +1,9 @@
+uuid: 0f213e89-a4f6-4ec4-9c40-46ce95ed92f9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Research question'
+vid: research_question
+description: null
+weight: 0
+new_revision: false

@@ -182,7 +182,6 @@ dependencies:
     - flysystem
     - geocoder
     - group
-    - group_term
     - groupmedia
     - islandora
     - media
@@ -259,7 +258,6 @@ permissions:
   - 'create a3d_platform_homepage content'
   - 'create a3d_workbench_test_type content'
   - 'create analysis content'
-  - 'create any group_term entity'
   - 'create arf_surf_data_pres content'
   - 'create article content'
   - 'create at_project content'

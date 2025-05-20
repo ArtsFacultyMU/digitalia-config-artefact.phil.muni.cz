@@ -1,0 +1,33 @@
+uuid: 4efc8112-895b-45c4-8365-b8ed74df9822
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.motif.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.motif.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.motif
+  module:
+    - text
+id: taxonomy_term.motif.default
+targetEntityType: taxonomy_term
+bundle: motif
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+hidden:
+  a3d_eva_taxonomy_title_entity_view_2: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
+  langcode: true
+  search_api_excerpt: true

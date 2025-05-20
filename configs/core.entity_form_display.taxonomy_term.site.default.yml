@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.taxonomy_term.site.field_city
     - field.field.taxonomy_term.site.field_city_code
+    - field.field.taxonomy_term.site.field_city_code_text
+    - field.field.taxonomy_term.site.field_city_text
     - field.field.taxonomy_term.site.field_country
     - field.field.taxonomy_term.site.field_geo_geolocation
     - field.field.taxonomy_term.site.field_plot_number
@@ -12,8 +14,11 @@ dependencies:
     - field.field.taxonomy_term.site.field_state
     - field.field.taxonomy_term.site.field_street
     - field.field.taxonomy_term.site.field_street_number
+    - field.field.taxonomy_term.site.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.site.field_tax_hierarchical_weight
     - taxonomy.vocabulary.site
   module:
+    - chosen_field
     - geolocation
     - path
     - text
@@ -31,24 +36,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_city:
-    type: entity_reference_autocomplete
+    type: chosen_select
     weight: 5
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_city_code:
-    type: entity_reference_autocomplete
+    type: chosen_select
     weight: 6
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_country:
     type: entity_reference_autocomplete
@@ -143,4 +140,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_city_code_text: true
+  field_city_text: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true

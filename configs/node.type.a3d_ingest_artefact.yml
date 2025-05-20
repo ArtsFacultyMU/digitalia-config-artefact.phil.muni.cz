@@ -1,0 +1,17 @@
+uuid: dbe60244-7f86-490d-9dd3-66c6353a76e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'A3D ingest artefact'
+type: a3d_ingest_artefact
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,107 @@
+uuid: afbf5086-9dd0-4dc8-90c0-2d1dd1f814f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.a3d_ingest_artefact_test
+    - field.field.node.a3d_workbench_test_type.body
+    - field.field.node.a3d_workbench_test_type.field_alle_zusammen
+    - field.field.node.a3d_workbench_test_type.field_alternative_ids
+    - field.field.node.a3d_workbench_test_type.field_artefact_category
+    - field.field.node.a3d_workbench_test_type.field_classification
+    - field.field.node.a3d_workbench_test_type.field_geolocation
+    - field.field.node.a3d_workbench_test_type.field_site
+    - field.field.node.a3d_workbench_test_type.field_test_custom_field
+    - field.field.node.a3d_workbench_test_type.field_test_datafield
+    - field.field.node.a3d_workbench_test_type.field_test_datafield_2
+    - field.field.node.a3d_workbench_test_type.field_test_datafield_3
+    - field.field.node.a3d_workbench_test_type.field_test_date
+    - field.field.node.a3d_workbench_test_type.field_test_timestamp
+    - field.field.node.a3d_workbench_test_type.field_wgs84_geolocation
+    - node.type.a3d_workbench_test_type
+  module:
+    - chosen_field
+    - path
+id: node.a3d_workbench_test_type.a3d_ingest_artefact_test
+targetEntityType: node
+bundle: a3d_workbench_test_type
+mode: a3d_ingest_artefact_test
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_artefact_category:
+    type: chosen_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_alle_zusammen: true
+  field_alternative_ids: true
+  field_classification: true
+  field_geolocation: true
+  field_site: true
+  field_test_custom_field: true
+  field_test_datafield: true
+  field_test_datafield_2: true
+  field_test_datafield_3: true
+  field_test_date: true
+  field_test_timestamp: true
+  field_wgs84_geolocation: true

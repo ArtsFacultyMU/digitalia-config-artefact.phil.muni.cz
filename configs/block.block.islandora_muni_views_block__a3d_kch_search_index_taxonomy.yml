@@ -1,0 +1,47 @@
+uuid: 40e09301-2c74-4793-8e24-db0da4fd9284
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.duplicate_of_a3d_nef_search_index_taxonomy
+  module:
+    - context
+    - islandora
+    - system
+    - views
+  theme:
+    - islandora_muni
+id: islandora_muni_views_block__a3d_kch_search_index_taxonomy
+theme: islandora_muni
+region: content
+weight: -36
+provider: null
+plugin: 'views_block:duplicate_of_a3d_nef_search_index_taxonomy-kch'
+settings:
+  id: 'views_block:duplicate_of_a3d_nef_search_index_taxonomy-kch'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_domain:
+    id: request_domain
+    negate: false
+    domains: "pottery-analyses.phil.muni.cz\r\npottery-analyses-devel.phil.muni.cz"
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/taxonomy/term/*\r\n!/taxonomy/term/*/paged"
+  islandora_entity_bundle:
+    id: islandora_entity_bundle
+    negate: true
+    context_mapping:
+      taxonomy_term: '@islandora.taxonomy_term_route_context_provider:taxonomy_term'
+    bundles:
+      instrument: instrument

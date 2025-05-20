@@ -12,7 +12,7 @@ dependencies:
 id: a3d_meta_taxonomy
 label: 'A3D META Taxonomy'
 module: views
-description: 'All NEF views built atop "Taxonomy"'
+description: 'All NEF views built atop "Taxonomy". Statistics'
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
@@ -38,7 +38,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<span class=\"views-label\"> {{ tid }} </span>\r\n{% if tid == 1 %}\r\nsite\r\n{% else %}\r\nsites\r\n{%endif %}\r\n"
+            text: "<span class=\"views-label\">{{ tid }}</span>\r\n{% if tid == '1' %}\r\nsite\r\n{% else %}\r\nsites\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -76,7 +76,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: number_integer
+          type: number_unformatted
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -86,15 +86,8 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ''
+          separator: ', '
           field_api_classes: false
-          set_precision: false
-          precision: 0
-          decimal: .
-          format_plural: 0
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
       pager:
         type: none
         options:
@@ -177,6 +170,46 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        status_1:
+          id: status_1
+          table: node_field_data
+          field: status
+          relationship: nid
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -187,7 +220,6 @@ display:
           grouping: {  }
           row_class: ''
           default_row_class: true
-          uses_fields: false
       row:
         type: fields
         options:
@@ -227,14 +259,23 @@ display:
           required: false
           group_relation_plugins:
             'group_node:a3d_object': 'group_node:a3d_object'
+            'group_node:a3d_ingest_artefact': '0'
+            'group_node:a3d_ingest_object': '0'
+            'group_node:a3d_personal_contact': '0'
             'group_node:a3d_platform_homepage': '0'
+            'group_node:a3d_workbench_test_type': '0'
             'group_node:analysis': '0'
+            'group_node:arf_surf_data_pres': '0'
             'group_node:article': '0'
             'group_node:at_project': '0'
+            'group_node:contract': '0'
+            'group_node:decoration': '0'
             'group_node:islandora_object': '0'
+            'group_node:non_plastic_inclusion': '0'
             'group_node:page': '0'
             'group_node:sample': '0'
             'group_node:test_a3d': '0'
+            'group_node:traceology': '0'
         gid:
           id: gid
           table: group_relationship_field_data
@@ -263,6 +304,7 @@ display:
     position: 1
     display_options:
       display_description: ''
+      rendering_language: '***LANGUAGE_language_interface***'
       display_extenders:
         matomo:
           enabled: false

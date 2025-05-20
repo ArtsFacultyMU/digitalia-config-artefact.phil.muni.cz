@@ -3,15 +3,15 @@ langcode: en
 status: true
 dependencies:
   module:
+    - context
     - islandora
     - language
-    - system
   theme:
     - islandora_muni
 id: islandora_muni_languageswitcher
 theme: islandora_muni
 region: header
-weight: -31
+weight: -32
 provider: null
 plugin: 'language_block:language_interface'
 settings:
@@ -25,7 +25,7 @@ visibility:
     negate: false
     context_mapping: {  }
     mimetype: ''
-  request_path:
-    id: request_path
+  request_domain:
+    id: request_domain
     negate: false
-    pages: "/kch\r\n/kch/*\r\n/group/kch\r\n/group/kch/*\r\n/group/13\r\n/group/13/*\r\n/compare/*/kch\r\n/contact"
+    domains: "pottery-analyses.phil.muni.cz\r\npottery-analyses-devel.phil.muni.cz"

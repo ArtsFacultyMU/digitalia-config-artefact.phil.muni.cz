@@ -1,0 +1,14 @@
+uuid: ffbfa38c-48e7-47df-85da-82bc327df0a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.swd_user
+  module:
+    - user
+id: user_remove_role_action.swd_user
+label: 'Remove the SWD user role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: swd_user

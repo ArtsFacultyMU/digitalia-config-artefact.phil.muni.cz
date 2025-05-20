@@ -1,0 +1,23 @@
+uuid: 71dfd97d-8f4c-4140-b6fe-9f10e84a1cea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.artefact_class
+id: taxonomy_term.artefact_class.field_tax_hierarchical_weight
+field_name: field_tax_hierarchical_weight
+entity_type: taxonomy_term
+bundle: artefact_class
+label: 'Hierarchical Weight'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

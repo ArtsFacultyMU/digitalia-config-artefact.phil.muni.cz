@@ -3,12 +3,8 @@ langcode: en
 status: true
 dependencies:
   module:
-    - field_permissions
     - geolocation
     - node
-third_party_settings:
-  field_permissions:
-    permission_type: public
 id: node.field_wgs84_geolocation
 field_name: field_wgs84_geolocation
 entity_type: node

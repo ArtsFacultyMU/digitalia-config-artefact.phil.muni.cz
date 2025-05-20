@@ -1,0 +1,17 @@
+uuid: 034bb7e4-a533-4d7b-995c-bb88b7167315
+langcode: en
+status: true
+dependencies:
+  module:
+    - group_action
+id: group_add_content_to_swd
+label: 'Group: add content to SWD'
+type: node
+plugin: 'group_add_content:node'
+configuration:
+  operation: create
+  content_plugin: 'group_node:a3d_object'
+  group_id: '10'
+  entity_id: ''
+  values: {  }
+  add_method: update_existing

@@ -1,0 +1,14 @@
+uuid: d8d242af-ab7f-4cbe-baf8-07fd0777013f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.swd_user
+  module:
+    - user
+id: user_add_role_action.swd_user
+label: 'Add the SWD user role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: swd_user

@@ -6,24 +6,26 @@ dependencies:
     - field.storage.taxonomy_term.field_city
     - taxonomy.vocabulary.city
     - taxonomy.vocabulary.site
+    - taxonomy.vocabulary.unknown_values
 id: taxonomy_term.site.field_city
 field_name: field_city
 entity_type: taxonomy_term
 bundle: site
 label: City
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       city: city
+      unknown_values: unknown_values
     sort:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: city
 field_type: entity_reference

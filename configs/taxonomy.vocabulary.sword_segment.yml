@@ -1,0 +1,9 @@
+uuid: b0d1d1d7-f769-4eb1-b6a0-4de4100f60b5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Sword segment'
+vid: sword_segment
+description: SWD
+weight: 0
+new_revision: false

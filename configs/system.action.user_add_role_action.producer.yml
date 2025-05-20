@@ -1,0 +1,14 @@
+uuid: 1e6703ac-aea8-4d62-87ce-31ec764429da
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.producer
+  module:
+    - user
+id: user_add_role_action.producer
+label: 'Add the Producer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: producer

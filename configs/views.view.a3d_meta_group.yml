@@ -7,7 +7,7 @@ dependencies:
 id: a3d_meta_group
 label: 'A3D META Group'
 module: views
-description: ''
+description: 'Platform statistics'
 tag: ''
 base_table: groups_field_data
 base_field: id
@@ -33,7 +33,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<span class=\"views-label\"> {{ label }} </span>\r\n{% if label == 1 %}\r\nplatform\r\n{% else %}\r\nplatforms\r\n{% endif %}"
+            text: "<span class=\"views-label\"> {{ label }} </span>\r\n{% if label == '1' %}\r\nplatform\r\n{% else %}\r\nplatforms\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -72,7 +72,8 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: string
-          settings: {  }
+          settings:
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -156,6 +157,7 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
       tags: {  }
   embed_1:
@@ -180,5 +182,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
       tags: {  }

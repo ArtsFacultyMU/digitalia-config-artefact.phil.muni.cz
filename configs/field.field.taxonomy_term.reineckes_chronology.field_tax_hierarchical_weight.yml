@@ -1,0 +1,23 @@
+uuid: 7178278a-8b11-423e-a2b4-f87630396c88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.reineckes_chronology
+id: taxonomy_term.reineckes_chronology.field_tax_hierarchical_weight
+field_name: field_tax_hierarchical_weight
+entity_type: taxonomy_term
+bundle: reineckes_chronology
+label: 'Hierarchical Weight'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

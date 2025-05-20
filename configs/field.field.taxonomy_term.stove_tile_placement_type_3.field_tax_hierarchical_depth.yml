@@ -1,0 +1,23 @@
+uuid: 5b11a524-57b0-4b9c-8377-bfdbe9e98d92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_depth
+    - taxonomy.vocabulary.stove_tile_placement_type_3
+id: taxonomy_term.stove_tile_placement_type_3.field_tax_hierarchical_depth
+field_name: field_tax_hierarchical_depth
+entity_type: taxonomy_term
+bundle: stove_tile_placement_type_3
+label: 'Hierarchical Depth'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

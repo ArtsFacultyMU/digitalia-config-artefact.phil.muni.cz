@@ -3,3 +3,5 @@ tips:
     label: 'Výstupní formát'
   views-ui-fields:
     label: Pole
+  views-ui-preview:
+    label: Náhled

@@ -1,0 +1,53 @@
+uuid: cf5f297a-454f-483b-9463-c092155f7d1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.a3d_personal_contact.field_coll_contacts_email
+    - field.field.node.a3d_personal_contact.field_coll_contacts_person
+    - field.field.node.a3d_personal_contact.field_coll_contacts_phone
+    - field.field.node.a3d_personal_contact.field_coll_contacts_type
+    - node.type.a3d_personal_contact
+id: node.a3d_personal_contact.default
+targetEntityType: node
+bundle: a3d_personal_contact
+mode: default
+content:
+  field_coll_contacts_email:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_coll_contacts_person:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_coll_contacts_phone:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_coll_contacts_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  title: true
+  translation: true
+  uid: true

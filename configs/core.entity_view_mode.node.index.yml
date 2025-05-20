@@ -1,0 +1,11 @@
+uuid: f17dd0de-bc04-476a-88c6-591680ef5639
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.index
+label: Index
+description: 'Display with public fields for indexing'
+targetEntityType: node
+cache: true

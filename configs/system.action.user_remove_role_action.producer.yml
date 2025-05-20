@@ -1,0 +1,14 @@
+uuid: e8e6783e-df40-4608-b94a-2b47bb13c58f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.producer
+  module:
+    - user
+id: user_remove_role_action.producer
+label: 'Remove the Producer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: producer

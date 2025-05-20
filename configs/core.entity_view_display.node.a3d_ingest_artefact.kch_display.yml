@@ -1,0 +1,113 @@
+uuid: d0ebc2ec-ed26-4820-91ee-c5b488ee9a08
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.kch_display
+    - field.field.node.a3d_ingest_artefact.field_artefact_category
+    - field.field.node.a3d_ingest_artefact.field_artefact_id
+    - field.field.node.a3d_ingest_artefact.field_contract
+    - field.field.node.a3d_ingest_artefact.field_deposition_cond
+    - field.field.node.a3d_ingest_artefact.field_description_a3d
+    - field.field.node.a3d_ingest_artefact.field_destruction_analysis
+    - field.field.node.a3d_ingest_artefact.field_general_note
+    - field.field.node.a3d_ingest_artefact.field_relative_datation
+    - field.field.node.a3d_ingest_artefact.field_research_question
+    - node.type.a3d_ingest_artefact
+  module:
+    - user
+id: node.a3d_ingest_artefact.kch_display
+targetEntityType: node
+bundle: a3d_ingest_artefact
+mode: kch_display
+content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_service_file:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_artefact_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_artefact_id:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_description_a3d:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_general_note:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_relative_datation:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_contract: true
+  field_deposition_cond: true
+  field_destruction_analysis: true
+  field_research_question: true
+  langcode: true
+  search_api_excerpt: true

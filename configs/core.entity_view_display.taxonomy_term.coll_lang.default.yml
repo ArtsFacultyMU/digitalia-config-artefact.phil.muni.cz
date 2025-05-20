@@ -1,0 +1,33 @@
+uuid: 78fe9f67-d88a-4c97-8f96-14bbf9e182c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.coll_lang.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.coll_lang.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.coll_lang
+  module:
+    - text
+id: taxonomy_term.coll_lang.default
+targetEntityType: taxonomy_term
+bundle: coll_lang
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_taxonomy_title_entity_view_2: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
+  langcode: true
+  search_api_excerpt: true

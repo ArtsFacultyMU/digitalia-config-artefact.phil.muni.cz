@@ -13,7 +13,7 @@ bundle: site
 label: 'City code'
 description: 'Code for Czech locations search at https://vdp.cuzk.cz/vdp/ruian/obce/, for Slovak locations search at https://www.epi.sk/disk/zz/file/2002/2002c230z0597p01t003ga.pdf.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

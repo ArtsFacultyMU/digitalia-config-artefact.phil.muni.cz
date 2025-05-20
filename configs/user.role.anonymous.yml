@@ -34,6 +34,7 @@ permissions:
   - 'use a3d_nef_entity_comparison entity comparison'
   - 'use text format restricted_html'
   - 'view a3d_object revisions'
+  - 'view all revisions'
   - 'view analysis revisions'
   - 'view media'
   - 'view vocabulary labels'

@@ -1,0 +1,25 @@
+uuid: 9f682908-ea49-441e-a155-225731ecc934
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+label: 'KCH default display'
+name: duplicate_of_nef_default_display
+group: Display
+description: "A3D change default node view to 'KCH Display' on pottery-analyses.phil.muni.cz"
+requireAllConditions: true
+disabled: false
+conditions:
+  request_domain:
+    id: request_domain
+    negate: false
+    uuid: 1f7202e0-ad53-4402-bb58-fc275fc2a456
+    context_mapping: {  }
+    domains: "pottery-analyses-devel.phil.muni.cz\r\npottery-analyses.phil.muni.cz"
+reactions:
+  view_mode_alter:
+    id: view_mode_alter
+    saved: false
+    mode: node.kch_display
+weight: -2

@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.unknown_values.field_datacite_code
+    - field.field.taxonomy_term.unknown_values.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.unknown_values.field_tax_hierarchical_weight
     - taxonomy.vocabulary.unknown_values
   module:
     - text
@@ -15,14 +17,14 @@ content:
   a3d_eva_taxonomy_title_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 0
     region: content
   description:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_datacite_code:
     type: string
@@ -30,8 +32,11 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 11
+    weight: 2
     region: content
 hidden:
+  a3d_eva_taxonomy_title_entity_view_2: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
   langcode: true
   search_api_excerpt: true

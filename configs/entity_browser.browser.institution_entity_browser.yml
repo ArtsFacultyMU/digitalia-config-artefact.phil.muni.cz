@@ -1,0 +1,31 @@
+uuid: eba4e8cd-e4a1-410a-a952-080eb5cf85d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.a3d_arf_taxonomy
+  module:
+    - views
+name: institution_entity_browser
+label: 'Institution entity browser'
+display: modal
+display_configuration:
+  width: '800'
+  height: '800'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  3bc45108-7f1a-4d4f-8d55-49f5f32c2921:
+    id: view
+    uuid: 3bc45108-7f1a-4d4f-8d55-49f5f32c2921
+    label: view
+    weight: 1
+    settings:
+      submit_text: 'Select entities'
+      auto_select: false
+      view: a3d_arf_taxonomy
+      view_display: entity_browser_2

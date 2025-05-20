@@ -1,0 +1,23 @@
+uuid: af5131a0-7fac-4336-8393-b5d3d907fbc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_of_preserved_parts
+    - node.type.a3d_object
+id: node.a3d_object.field_number_of_preserved_parts
+field_name: field_number_of_preserved_parts
+entity_type: node
+bundle: a3d_object
+label: 'Number of preserved parts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

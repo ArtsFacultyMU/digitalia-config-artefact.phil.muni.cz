@@ -1,0 +1,19 @@
+uuid: eeaf45bf-dd85-41b3-8082-13ec61b8b698
+langcode: en
+status: true
+dependencies:
+  module:
+    - range
+    - taxonomy
+id: taxonomy_term.field_timespan
+field_name: field_timespan
+entity_type: taxonomy_term
+type: range_integer
+settings: {  }
+module: range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

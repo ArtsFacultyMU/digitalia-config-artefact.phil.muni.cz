@@ -1,0 +1,24 @@
+uuid: 6ae331f8-ca59-44db-bd00-228c52143d24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.a3d_workbench_test_type
+  module:
+    - text
+id: node.a3d_workbench_test_type.body
+field_name: body
+entity_type: node
+bundle: a3d_workbench_test_type
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

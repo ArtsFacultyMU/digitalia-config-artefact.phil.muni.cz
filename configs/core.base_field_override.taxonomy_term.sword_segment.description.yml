@@ -1,0 +1,21 @@
+uuid: ecc25c85-4d9c-4b48-b9d7-168f9bfabd06
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sword_segment
+  module:
+    - text
+id: taxonomy_term.sword_segment.description
+field_name: description
+entity_type: taxonomy_term
+bundle: sword_segment
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

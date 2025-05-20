@@ -1,0 +1,11 @@
+uuid: c9c83671-b2e6-466c-9476-4af1db3d24f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.swd
+label: SWD
+description: ''
+targetEntityType: node
+cache: true

@@ -1,0 +1,11 @@
+uuid: 166579cf-530e-4c5b-9a38-372814052591
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sampling_type
+id: taxonomy_term.sampling_type
+target_entity_type_id: taxonomy_term
+target_bundle: sampling_type
+default_langcode: site_default
+language_alterable: false

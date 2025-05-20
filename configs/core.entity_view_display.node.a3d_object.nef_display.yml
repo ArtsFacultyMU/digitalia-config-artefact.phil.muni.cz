@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.a3d_object.field_alternative_ids
     - field.field.node.a3d_object.field_aquamanile_subtype
     - field.field.node.a3d_object.field_aquamanile_type
+    - field.field.node.a3d_object.field_archaeological_site
     - field.field.node.a3d_object.field_artefact_category
     - field.field.node.a3d_object.field_artefact_class
     - field.field.node.a3d_object.field_artefact_id
@@ -52,6 +53,7 @@ dependencies:
     - field.field.node.a3d_object.field_creation
     - field.field.node.a3d_object.field_culture
     - field.field.node.a3d_object.field_current_location
+    - field.field.node.a3d_object.field_decoration
     - field.field.node.a3d_object.field_deposition_cond
     - field.field.node.a3d_object.field_description_a3d
     - field.field.node.a3d_object.field_discoverer
@@ -78,6 +80,7 @@ dependencies:
     - field.field.node.a3d_object.field_general_lateral_wear
     - field.field.node.a3d_object.field_general_note
     - field.field.node.a3d_object.field_general_type
+    - field.field.node.a3d_object.field_geo_site
     - field.field.node.a3d_object.field_geolocation
     - field.field.node.a3d_object.field_geolocation_original
     - field.field.node.a3d_object.field_geolocation_original_priv
@@ -85,6 +88,8 @@ dependencies:
     - field.field.node.a3d_object.field_grain_type
     - field.field.node.a3d_object.field_handle
     - field.field.node.a3d_object.field_has_a_construction_opening
+    - field.field.node.a3d_object.field_has_decoration
+    - field.field.node.a3d_object.field_has_ricasso
     - field.field.node.a3d_object.field_holder_type
     - field.field.node.a3d_object.field_ledge_type
     - field.field.node.a3d_object.field_legal_status
@@ -104,7 +109,9 @@ dependencies:
     - field.field.node.a3d_object.field_mineral_fragments
     - field.field.node.a3d_object.field_mineralogy
     - field.field.node.a3d_object.field_motif
+    - field.field.node.a3d_object.field_note_on_preservation
     - field.field.node.a3d_object.field_number_of_instances
+    - field.field.node.a3d_object.field_number_of_preserved_parts
     - field.field.node.a3d_object.field_orig_state_pres
     - field.field.node.a3d_object.field_original_location
     - field.field.node.a3d_object.field_ownership
@@ -132,6 +139,7 @@ dependencies:
     - field.field.node.a3d_object.field_recent_damage_type_struct
     - field.field.node.a3d_object.field_record_source
     - field.field.node.a3d_object.field_reg_number
+    - field.field.node.a3d_object.field_reineckes_chronology
     - field.field.node.a3d_object.field_relations
     - field.field.node.a3d_object.field_relative_datation
     - field.field.node.a3d_object.field_relief
@@ -150,6 +158,7 @@ dependencies:
     - field.field.node.a3d_object.field_st_placement_type3
     - field.field.node.a3d_object.field_st_shape_type1
     - field.field.node.a3d_object.field_st_shape_type2
+    - field.field.node.a3d_object.field_standard_chronology
     - field.field.node.a3d_object.field_state
     - field.field.node.a3d_object.field_statement
     - field.field.node.a3d_object.field_stove_tile_shape_certainty
@@ -167,93 +176,375 @@ dependencies:
     - field.field.node.a3d_object.field_wgs84_geolocation
     - field.field.node.a3d_object.field_wgs84_geolocation_accuracy
     - field.field.node.a3d_object.field_wgs84_geolocation_private
+    - filter.format.plain_text
     - node.type.a3d_object
   module:
     - datafield
+    - field_group
+    - geocoder_field
+    - geolocation
     - user
+third_party_settings:
+  field_group:
+    group_id:
+      children:
+        - field_artefact_id
+        - field_alternative_id
+      label: ID
+      parent_name: ''
+      region: content
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        classes: 'fieldset-no-border fieldset-no-legend'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_map:
+      children:
+        - field_wgs84_geolocation
+      label: Map
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+        weight: 0
+    group_location:
+      children:
+        - field_site
+        - field_geolocation
+        - field_wgs84_geolocation_accuracy
+        - field_finding_context_loc
+        - field_relative_datation
+      label: Location
+      parent_name: ''
+      region: content
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        classes: 'fieldset-no-border fieldset-no-legend'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_posture:
+      children:
+        - field_posture
+        - field_preserved_parts
+        - field_preserved_parts_struct
+        - field_description_a3d
+      label: Posture
+      parent_name: ''
+      region: content
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        classes: 'fieldset-no-border fieldset-no-legend'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_3d:
+      children:
+        - field_3d_shaping
+        - field_3d_shaping_struct
+        - field_3d_traces
+        - field_3d_traces_struct
+        - field_thermic_cracks
+        - field_wear
+      label: 3D
+      parent_name: ''
+      region: content
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        classes: 'fieldset-no-border fieldset-no-legend'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_fracture:
+      children:
+        - field_fract_nature
+        - field_fract_preservation
+        - field_fract_preservation_struct
+      label: Fracture
+      parent_name: ''
+      region: content
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        classes: 'fieldset-no-border fieldset-no-legend'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_colour:
+      children:
+        - field_painting_eye
+        - field_painting_tool
+        - field_painting_microscope
+        - field_pigment
+      label: Colour
+      parent_name: ''
+      region: content
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        classes: 'fieldset-no-border fieldset-no-legend'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_analysis:
+      children:
+        - field_micro_ct
+        - field_polished_sec_petrography
+        - field_mineralogy
+      label: Analysis
+      parent_name: ''
+      region: content
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        classes: 'fieldset-no-border fieldset-no-legend'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_recent_damage:
+      children:
+        - field_recent_damage
+        - field_recent_damage_type
+        - field_recent_damage_type_struct
+      label: 'Recent damage'
+      parent_name: ''
+      region: content
+      weight: 12
+      format_type: fieldset
+      format_settings:
+        classes: 'fieldset-no-border fieldset-no-legend'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_authors:
+      children:
+        - field_auth_res_data
+        - field_auth_3d_models
+      label: Authors
+      parent_name: ''
+      region: content
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        classes: 'fieldset-no-border fieldset-no-legend'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_metadat_download:
+      children:
+        - a3d_eva_handle_entity_view_1
+      label: 'Metadata download'
+      parent_name: ''
+      region: content
+      weight: 14
+      format_type: fieldset
+      format_settings:
+        classes: 'fieldset-no-border fieldset-no-legend'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_citation_biblatex:
+      children:
+        - a3d_eva_biblatex_biblatex
+      label: Biblatex
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+    group_citation_harvard:
+      children:
+        - a3d_eva_biblatex_harvard
+      label: 'Citation Harvard'
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
 id: node.a3d_object.nef_display
 targetEntityType: node
 bundle: a3d_object
 mode: nef_display
 content:
+  a3d_artefact_media_a3d_first_image:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  a3d_artefact_media_a3d_images:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  a3d_artefact_media_a3d_models:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
   a3d_artefact_media_entity_view_2:
     settings: {  }
     third_party_settings: {  }
     weight: 24
     region: content
-  a3d_eva_handle_entity_view_1:
+  a3d_eva_biblatex_biblatex:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  a3d_eva_biblatex_harvard:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  a3d_eva_field_appellation_entity_view_2:
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
-  field_3d_shaping:
-    type: basic_string
-    label: hidden
+  a3d_eva_handle_entity_view_1:
     settings: {  }
-    third_party_settings: {  }
-    weight: 7
-    region: content
-  field_3d_traces:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 8
-    region: content
-  field_alternative_id:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_artefact_id:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_description_a3d:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 6
-    region: content
-  field_finding_context_loc:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
     third_party_settings: {  }
     weight: 5
     region: content
-  field_fract_nature:
+  field_3d_shaping:
     type: basic_string
-    label: hidden
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 20
+    weight: 10
+    region: content
+  field_3d_shaping_struct:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_3d_traces:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_3d_traces_struct:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_alternative_id:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_artefact_id:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_auth_3d_models:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_auth_res_data:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_description_a3d:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_finding_context_loc:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_fract_nature:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
     region: content
   field_fract_preservation:
     type: basic_string
-    label: hidden
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 19
+    weight: 13
+    region: content
+  field_fract_preservation_struct:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_geolocation:
     type: data_field_table_formatter
-    label: hidden
+    label: inline
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -290,116 +581,735 @@ content:
         pagination: true
         cookie: true
         show-footer: false
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_micro_ct:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  field_mineralogy:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 13
-    region: content
-  field_painting_eye:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 15
-    region: content
-  field_painting_microscope:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 17
-    region: content
-  field_painting_tool:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 16
-    region: content
-  field_pigment:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 18
-    region: content
-  field_polished_sec_petrography:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 12
-    region: content
-  field_recent_damage:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 9
     region: content
-  field_relative_datation:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 21
-    region: content
-  field_site:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_thermic_cracks:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 11
-    region: content
-  field_wear:
+  field_micro_ct:
     type: basic_string
-    label: hidden
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 14
     region: content
+  field_mineralogy:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_painting_eye:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_painting_microscope:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_painting_tool:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_pigment:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_polished_sec_petrography:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_posture:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_preserved_parts:
+    type: geocoder_geocode_formatter
+    label: inline
+    settings:
+      dumper: wkt
+      providers: {  }
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_preserved_parts_struct:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_recent_damage:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_recent_damage_type:
+    type: geocoder_geocode_formatter
+    label: inline
+    settings:
+      dumper: wkt
+      providers: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_recent_damage_type_struct:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_relative_datation:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_site:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_thermic_cracks:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_wear:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_wgs84_geolocation:
+    type: geolocation_map
+    label: hidden
+    settings:
+      set_marker: true
+      show_label: false
+      common_map: true
+      show_delta_label: false
+      use_overridden_map_settings: false
+      title: ''
+      info_text:
+        value: ''
+        format: plain_text
+      centre:
+        fit_bounds:
+          enable: true
+          weight: -101
+          settings:
+            reset_zoom: false
+            min_zoom: 8
+          map_center_id: fit_bounds
+        fixed_value:
+          enable: false
+          weight: 0
+          settings:
+            location_option_id: fixed_value
+            latitude: null
+            longitude: null
+          map_center_id: location_plugins
+        ipstack:
+          enable: false
+          weight: 0
+          settings:
+            location_option_id: ipstack
+            access_key: ''
+          map_center_id: location_plugins
+        fixed_boundaries:
+          enable: false
+          weight: 0
+          settings:
+            south: ''
+            west: ''
+            north: ''
+            east: ''
+          map_center_id: fixed_boundaries
+        client_location:
+          enable: false
+          weight: 0
+          map_center_id: client_location
+      map_provider_id: leaflet
+      map_provider_settings:
+        map_features:
+          leaflet_client_location_indicator:
+            weight: 0
+            enabled: false
+          leaflet_disable_user_interaction:
+            weight: 0
+            enabled: false
+          geolocation_shapes:
+            weight: 0
+            settings:
+              remove_markers: false
+              polyline: true
+              polyline_title: ''
+              strokeColor: '#FF0000'
+              strokeOpacity: 0.8
+              strokeWidth: '2'
+              polygon: false
+              polygon_title: ''
+              fillColor: '#FF0000'
+              fillOpacity: 0.35
+            enabled: false
+          leaflet_gesture_handling:
+            weight: 0
+            enabled: false
+          leaflet_rotate:
+            weight: 0
+            settings:
+              display_control: true
+              bearing: 0.0
+            enabled: false
+          leaflet_control_attribution:
+            weight: 0
+            settings:
+              position: bottomright
+              prefix: Leaflet
+            enabled: true
+          leaflet_control_fullscreen:
+            weight: 0
+            settings:
+              position: topright
+            enabled: false
+          leaflet_control_geocoder:
+            weight: 0
+            settings:
+              position: topright
+              geocoder: photon
+              settings:
+                label: Address
+                description: 'Enter an address to be localized.'
+                autocomplete_min_length: 1
+                location_priority:
+                  lat: null
+                  lng: null
+                remove_duplicates: false
+            enabled: false
+          leaflet_control_locate:
+            weight: 0
+            settings:
+              position: topright
+            enabled: false
+          leaflet_control_recenter:
+            weight: 0
+            settings:
+              position: topright
+            enabled: false
+          leaflet_control_scale:
+            weight: 0
+            settings:
+              position: topright
+              metric: true
+              imperial: true
+            enabled: false
+          leaflet_control_layer:
+            weight: 0
+            settings:
+              position: topright
+              default_label: Default
+              tile_layer_providers:
+                OpenStreetMap:
+                  'OpenStreetMap Mapnik':
+                    checkbox: false
+                    label: ''
+                  'OpenStreetMap BlackAndWhite':
+                    checkbox: false
+                    label: ''
+                  'OpenStreetMap DE':
+                    checkbox: false
+                    label: ''
+                  'OpenStreetMap CH':
+                    checkbox: false
+                    label: ''
+                  'OpenStreetMap France':
+                    checkbox: false
+                    label: ''
+                  'OpenStreetMap HOT':
+                    checkbox: false
+                    label: ''
+                  'OpenStreetMap BZH':
+                    checkbox: false
+                    label: ''
+                OpenTopoMap:
+                  OpenTopoMap:
+                    checkbox: false
+                    label: ''
+                Thunderforest:
+                  'Thunderforest OpenCycleMap':
+                    checkbox: false
+                    label: ''
+                  'Thunderforest Transport':
+                    checkbox: false
+                    label: ''
+                  'Thunderforest TransportDark':
+                    checkbox: false
+                    label: ''
+                  'Thunderforest SpinalMap':
+                    checkbox: false
+                    label: ''
+                  'Thunderforest Landscape':
+                    checkbox: false
+                    label: ''
+                  'Thunderforest Outdoors':
+                    checkbox: false
+                    label: ''
+                  'Thunderforest Pioneer':
+                    checkbox: false
+                    label: ''
+                OpenMapSurfer:
+                  'OpenMapSurfer Roads':
+                    checkbox: false
+                    label: ''
+                  'OpenMapSurfer Grayscale':
+                    checkbox: false
+                    label: ''
+                Hydda:
+                  'Hydda Full':
+                    checkbox: false
+                    label: ''
+                  'Hydda Base':
+                    checkbox: false
+                    label: ''
+                MapBox:
+                  MapBox:
+                    checkbox: false
+                    label: ''
+                Stamen:
+                  'Stamen Toner':
+                    checkbox: false
+                    label: ''
+                  'Stamen TonerBackground':
+                    checkbox: false
+                    label: ''
+                  'Stamen TonerLite':
+                    checkbox: false
+                    label: ''
+                  'Stamen Watercolor':
+                    checkbox: false
+                    label: ''
+                  'Stamen Terrain':
+                    checkbox: false
+                    label: ''
+                  'Stamen TerrainBackground':
+                    checkbox: false
+                    label: ''
+                  'Stamen TopOSMRelief':
+                    checkbox: false
+                    label: ''
+                Esri:
+                  'Esri WorldStreetMap':
+                    checkbox: false
+                    label: ''
+                  'Esri DeLorme':
+                    checkbox: false
+                    label: ''
+                  'Esri WorldTopoMap':
+                    checkbox: false
+                    label: ''
+                  'Esri WorldImagery':
+                    checkbox: false
+                    label: ''
+                  'Esri WorldTerrain':
+                    checkbox: false
+                    label: ''
+                  'Esri WorldShadedRelief':
+                    checkbox: false
+                    label: ''
+                  'Esri WorldPhysical':
+                    checkbox: false
+                    label: ''
+                  'Esri OceanBasemap':
+                    checkbox: false
+                    label: ''
+                  'Esri NatGeoWorldMap':
+                    checkbox: false
+                    label: ''
+                  'Esri WorldGrayCanvas':
+                    checkbox: false
+                    label: ''
+                HERE:
+                  'HERE normalDay':
+                    checkbox: false
+                    label: ''
+                  'HERE normalDayCustom':
+                    checkbox: false
+                    label: ''
+                  'HERE normalDayGrey':
+                    checkbox: false
+                    label: ''
+                  'HERE normalDayMobile':
+                    checkbox: false
+                    label: ''
+                  'HERE normalDayGreyMobile':
+                    checkbox: false
+                    label: ''
+                  'HERE normalDayTransit':
+                    checkbox: false
+                    label: ''
+                  'HERE normalDayTransitMobile':
+                    checkbox: false
+                    label: ''
+                  'HERE normalNight':
+                    checkbox: false
+                    label: ''
+                  'HERE normalNightMobile':
+                    checkbox: false
+                    label: ''
+                  'HERE normalNightGrey':
+                    checkbox: false
+                    label: ''
+                  'HERE normalNightGreyMobile':
+                    checkbox: false
+                    label: ''
+                  'HERE normalNightTransit':
+                    checkbox: false
+                    label: ''
+                  'HERE normalNightTransitMobile':
+                    checkbox: false
+                    label: ''
+                  'HERE redcuedDay':
+                    checkbox: false
+                    label: ''
+                  'HERE redcuedNight':
+                    checkbox: false
+                    label: ''
+                  'HERE basicMap':
+                    checkbox: false
+                    label: ''
+                  'HERE mapLabels':
+                    checkbox: false
+                    label: ''
+                  'HERE trafficFlow':
+                    checkbox: false
+                    label: ''
+                  'HERE carnavDayGrey':
+                    checkbox: false
+                    label: ''
+                  'HERE hybridDayMobile':
+                    checkbox: false
+                    label: ''
+                  'HERE hybridDayTransit':
+                    checkbox: false
+                    label: ''
+                  'HERE hybridDayGrey':
+                    checkbox: false
+                    label: ''
+                  'HERE pedestrianDay':
+                    checkbox: false
+                    label: ''
+                  'HERE pedestrianNight':
+                    checkbox: false
+                    label: ''
+                  'HERE satelliteDay':
+                    checkbox: false
+                    label: ''
+                  'HERE terrainDay':
+                    checkbox: false
+                    label: ''
+                  'HERE terrainDayMobile':
+                    checkbox: false
+                    label: ''
+                FreeMapSK:
+                  FreeMapSK:
+                    checkbox: false
+                    label: ''
+                MtbMap:
+                  MtbMap:
+                    checkbox: false
+                    label: ''
+                CartoDB:
+                  'CartoDB Positron':
+                    checkbox: false
+                    label: ''
+                  'CartoDB PositronNoLabels':
+                    checkbox: false
+                    label: ''
+                  'CartoDB PositronOnlyLabels':
+                    checkbox: false
+                    label: ''
+                  'CartoDB DarkMatter':
+                    checkbox: false
+                    label: ''
+                  'CartoDB DarkMatterNoLabels':
+                    checkbox: false
+                    label: ''
+                  'CartoDB DarkMatterOnlyLabels':
+                    checkbox: false
+                    label: ''
+                  'CartoDB Voyager':
+                    checkbox: false
+                    label: ''
+                  'CartoDB VoyagerNoLabels':
+                    checkbox: false
+                    label: ''
+                  'CartoDB VoyagerOnlyLabels':
+                    checkbox: false
+                    label: ''
+                  'CartoDB VoyagerLabelsUnder':
+                    checkbox: false
+                    label: ''
+                HikeBike:
+                  HikeBike:
+                    checkbox: false
+                    label: ''
+                  'HikeBike HillShading':
+                    checkbox: false
+                    label: ''
+                BasemapAT:
+                  'BasemapAT basemap':
+                    checkbox: false
+                    label: ''
+                  'BasemapAT grau':
+                    checkbox: false
+                    label: ''
+                  'BasemapAT overlay':
+                    checkbox: false
+                    label: ''
+                  'BasemapAT highdpi':
+                    checkbox: false
+                    label: ''
+                  'BasemapAT orthofoto':
+                    checkbox: false
+                    label: ''
+                NLS:
+                  NLS:
+                    checkbox: false
+                    label: ''
+                GeoportailFrance:
+                  'GeoportailFrance parcels':
+                    checkbox: false
+                    label: ''
+                  'GeoportailFrance ignMaps':
+                    checkbox: false
+                    label: ''
+                  'GeoportailFrance maps':
+                    checkbox: false
+                    label: ''
+                  'GeoportailFrance orthos':
+                    checkbox: false
+                    label: ''
+              tile_providers_options:
+                Thunderforest:
+                  apikey: ''
+                MapBox:
+                  accessToken: ''
+                HERE:
+                  app_id: ''
+                  app_code: ''
+                GeoportailFrance:
+                  apikey: ''
+            enabled: false
+          leaflet_control_zoom:
+            weight: 0
+            settings:
+              position: topright
+            enabled: true
+          leaflet_marker_clusterer:
+            weight: 0
+            settings:
+              cluster_settings:
+                show_coverage_on_hover: true
+                zoom_to_bounds_on_click: true
+              disable_clustering_at_zoom: 0
+              custom_marker_settings: ''
+            enabled: false
+          leaflet_marker_icon:
+            weight: 0
+            settings:
+              marker_shadow_path: ''
+              marker_icon_path: ''
+              icon_size:
+                width: null
+                height: null
+              icon_anchor:
+                x: null
+                'y': null
+              popup_anchor:
+                x: 0
+                'y': 0
+              shadow_size:
+                width: null
+                height: null
+              shadow_anchor:
+                x: null
+                'y': null
+            enabled: false
+          leaflet_marker_popup:
+            weight: 0
+            settings:
+              info_auto_display: false
+              max_width: 300
+              min_width: 50
+              max_height: 0
+              auto_pan: true
+              keep_in_view: false
+              close_button: true
+              auto_close: true
+              close_on_escape_key: true
+              class_name: ''
+            enabled: true
+          geolocation_marker_scroll_to_id:
+            weight: 0
+            settings:
+              scroll_target_id: ''
+            enabled: false
+          leaflet_marker_zoom_and_animate:
+            weight: 0
+            settings:
+              marker_zoom_anchor_id: ''
+            enabled: false
+          leaflet_max_bounds:
+            weight: 0
+            settings:
+              north: null
+              south: null
+              east: null
+              west: null
+            enabled: false
+          leaflet_custom_tile_layer:
+            weight: 0
+            settings:
+              tile_layer_url: '//{s}.tile.osm.org/{z}/{x}/{y}.png'
+              tile_layer_attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+              tile_layer_subdomains: abc
+              tile_layer_zoom: 18
+            enabled: false
+          leaflet_tile_layer_overlay:
+            weight: 0
+            settings:
+              tile_layer_overlay: OpenInfraMap.Power
+            enabled: false
+          leaflet_tile_layer:
+            weight: 0
+            settings:
+              tile_layer_provider: 'OpenStreetMap Mapnik'
+              tile_provider_options:
+                Thunderforest:
+                  apikey: ''
+                MapBox:
+                  accessToken: ''
+                HERE:
+                  app_id: ''
+                  app_code: ''
+                GeoportailFrance:
+                  apikey: ''
+            enabled: false
+          leaflet_wms:
+            weight: 0
+            settings:
+              url: ''
+              version: 1.1.1
+              layers: ''
+              styles: ''
+              srs: ''
+              format: image/jpeg
+              transparent: false
+              identify: false
+            enabled: false
+        zoom: '10'
+        height: 400px
+        width: 100%
+        minZoom: '0'
+        maxZoom: '0'
+        maxBounds:
+          north_east_bound:
+            lat: null
+            lng: null
+          south_west_bound:
+            lat: null
+            lng: null
+        crs: EPSG3857
+        preferCanvas: false
+        zoomSnap: 1
+        zoomDelta: 1
+        trackResize: true
+        boxZoom: true
+        doubleClickZoom: true
+        dragging: true
+        zoomAnimation: true
+        zoomAnimationThreshold: 4
+        fadeAnimation: true
+        markerZoomAnimation: true
+        inertia: false
+        inertiaDeceleration: 3000
+        easeLinearity: 0.2
+        worldCopyJump: false
+        maxBoundsViscosity: 0.0
+        keyboard: true
+        keyboardPanDelta: 80
+        scrollWheelZoom: true
+        wheelDebounceTime: 40
+        wheelPxPerZoomLevel: 60
+        tap: true
+        tapTolerance: 15
+        touchZoom: true
+        bounceAtZoomLimits: true
+      data_provider_settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_wgs84_geolocation_accuracy:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
 hidden:
   a3d_arf_content_browse_title: true
   a3d_artefact_media_a3d_documents: true
-  a3d_artefact_media_a3d_first_image: true
   a3d_artefact_media_a3d_first_image_thumbnail: true
-  a3d_artefact_media_a3d_images: true
-  a3d_artefact_media_a3d_models: true
   a3d_artefact_media_a3d_other_files: true
   a3d_artefact_media_a3d_videos: true
-  a3d_eva_biblatex_biblatex: true
-  a3d_eva_biblatex_harvard: true
+  a3d_editor_block_entity_view_1: true
   a3d_eva_entity_group_relation_entity_view_2: true
   a3d_eva_entity_group_relation_entity_view_3: true
   a3d_eva_entity_group_relation_entity_view_4: true
   a3d_eva_entity_group_relation_entity_view_5: true
   a3d_eva_field_appellation_entity_view_1: true
-  a3d_eva_field_appellation_entity_view_2: true
   a3d_eva_parent_groups_entity_view_1: true
   a3d_eva_parent_groups_entity_view_2: true
   a3d_kch_content2_browse_title: true
@@ -418,8 +1328,6 @@ hidden:
   display_media_service_file: true
   display_media_thumbnail: true
   field_2d_asymmetry: true
-  field_3d_shaping_struct: true
-  field_3d_traces_struct: true
   field_a_asymmetry: true
   field_abs_dat_range: true
   field_abs_dat_range_cs: true
@@ -430,13 +1338,12 @@ hidden:
   field_alternative_ids: true
   field_aquamanile_subtype: true
   field_aquamanile_type: true
+  field_archaeological_site: true
   field_artefact_category: true
   field_artefact_class: true
   field_artefact_id_type: true
   field_artefact_subclass: true
   field_assess_cond_date: true
-  field_auth_3d_models: true
-  field_auth_res_data: true
   field_b_asymmetry: true
   field_ballistic_profile: true
   field_base_curve: true
@@ -461,6 +1368,7 @@ hidden:
   field_creation: true
   field_culture: true
   field_current_location: true
+  field_decoration: true
   field_deposition_cond: true
   field_discoverer: true
   field_discovery_date: true
@@ -477,18 +1385,20 @@ hidden:
   field_finding_context_subtype: true
   field_finding_context_type: true
   field_firing: true
-  field_fract_preservation_struct: true
   field_g_w_practice: true
   field_gb_scale: true
   field_general_lateral_wear: true
   field_general_note: true
   field_general_type: true
+  field_geo_site: true
   field_geolocation_original: true
   field_geolocation_original_priv: true
   field_glue_residues: true
   field_grain_type: true
   field_handle: true
   field_has_a_construction_opening: true
+  field_has_decoration: true
+  field_has_ricasso: true
   field_holder_type: true
   field_ledge_type: true
   field_legal_status: true
@@ -506,14 +1416,13 @@ hidden:
   field_microstructure: true
   field_mineral_fragments: true
   field_motif: true
+  field_note_on_preservation: true
   field_number_of_instances: true
+  field_number_of_preserved_parts: true
   field_orig_state_pres: true
   field_original_location: true
   field_ownership: true
   field_porosity: true
-  field_posture: true
-  field_preserved_parts: true
-  field_preserved_parts_struct: true
   field_private_note: true
   field_proj_dedication: true
   field_proj_id: true
@@ -524,10 +1433,9 @@ hidden:
   field_quiver_trans_tip_rounding: true
   field_raw_material: true
   field_recent_damage_note: true
-  field_recent_damage_type: true
-  field_recent_damage_type_struct: true
   field_record_source: true
   field_reg_number: true
+  field_reineckes_chronology: true
   field_relations: true
   field_relief: true
   field_reparation_features: true
@@ -544,6 +1452,7 @@ hidden:
   field_st_placement_type3: true
   field_st_shape_type1: true
   field_st_shape_type2: true
+  field_standard_chronology: true
   field_state: true
   field_statement: true
   field_stove_tile_shape_certainty: true
@@ -556,8 +1465,6 @@ hidden:
   field_timespan: true
   field_tip_fracture: true
   field_wgs84_accuracy_private: true
-  field_wgs84_geolocation: true
-  field_wgs84_geolocation_accuracy: true
   field_wgs84_geolocation_private: true
   langcode: true
   links: true

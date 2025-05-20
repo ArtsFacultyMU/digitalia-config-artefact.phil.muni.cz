@@ -7,7 +7,9 @@ dependencies:
     - user.role.arf_user
     - user.role.kch_user
     - user.role.nef_user
+    - user.role.producer
   module:
+    - eva
     - node
     - user
 id: a3d_editor_block
@@ -265,6 +267,7 @@ display:
           role:
             administrator: administrator
             arf_user: arf_user
+            producer: producer
       defaults:
         access: false
         fields: false
@@ -293,10 +296,10 @@ display:
         - 'user.node_grants:view'
         - user.roles
       tags: {  }
-  kch:
-    id: kch
-    display_title: KCH
-    display_plugin: block
+  entity_view_1:
+    id: entity_view_1
+    display_title: 'EVA KCH object'
+    display_plugin: entity_view
     position: 1
     display_options:
       fields:
@@ -384,7 +387,126 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/edit?destination=/{{ nothing_1 }}/node/{{ raw_arguments.nid }}\">Edit</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/media/upload?destination=/{{ nothing_1 }}/node/{{ raw_arguments.nid }}\">Add media</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/{{ nothing_1 }}/node/{{ raw_arguments.nid }}/media\">Manage media</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/{{ nothing_1 }}/samples/node/{{ raw_arguments.nid }}\">Manage samples and analyses</a>\r\n</p>\r\n</div>"
+            value: "<div>\r\n<p>\r\n    <a class=\"button\" href=\"/{{ nothing_1 }}/samples/node/{{ raw_arguments.nid }}\">Manage samples and analyses</a>\r\n</p>\r\n</div>"
+            format: full_html
+          tokenize: true
+      display_extenders:
+        matomo:
+          enabled: false
+          keyword_gets: ''
+          keyword_behavior: first
+          keyword_concat_separator: ' '
+          category_behavior: none
+          category_gets: ''
+          category_concat_separator: ' '
+          category_fallback: ''
+          category_facets: {  }
+          category_facets_concat_separator: ', '
+      entity_type: node
+      bundles:
+        - a3d_object
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.roles
+      tags: {  }
+  kch:
+    id: kch
+    display_title: 'KCH object'
+    display_plugin: block
+    position: 1
+    display_options:
+      enabled: false
+      fields:
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'PLATFORM CODE'
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: kch
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: .hidden
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+      access:
+        type: role
+        options:
+          role:
+            administrator: administrator
+            kch_user: kch_user
+      defaults:
+        access: false
+        group_by: false
+        relationships: false
+        fields: false
+        header: false
+      relationships:
+        field_object_reference:
+          id: field_object_reference
+          table: node__field_object_reference
+          field: field_object_reference
+          relationship: none
+          group_type: group
+          admin_label: 'field_object_reference: Content'
+          plugin_id: standard
+          required: false
+      group_by: true
+      display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: "<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/edit?destination=/node/{{ raw_arguments.nid }}\">Edit</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/media/upload?destination=/node/{{ raw_arguments.nid }}\">Add media</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/media\">Manage media</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/{{ nothing_1 }}/samples/node/{{ raw_arguments.nid }}\">Manage samples and analyses</a>\r\n</p>\r\n</div>"
             format: full_html
           tokenize: true
       display_extenders:
@@ -417,6 +539,7 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      enabled: false
       fields:
         nothing_1:
           id: nothing_1
@@ -502,7 +625,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/edit?destination=/{{ nothing_1 }}/analysis/node/{{ raw_arguments.nid }}\">Edit</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/media/upload?destination=/{{ nothing_1 }}/analysis/node/{{ raw_arguments.nid }}\">Add media</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/{{ nothing_1 }}/node/{{ raw_arguments.nid }}/media\">Manage media</a>\r\n</p>\r\n</div>"
+            value: "<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/edit?destination=/node/{{ raw_arguments.nid }}\">Edit</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/media/upload?destination=/node/{{ raw_arguments.nid }}\">Add media</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/media\">Manage media</a>\r\n</p>\r\n</div>"
             format: full_html
           tokenize: true
       display_extenders:
@@ -535,6 +658,7 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      enabled: false
       fields:
         nothing_1:
           id: nothing_1
@@ -620,7 +744,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/edit?destination=/{{ nothing_1 }}/node/{{ raw_arguments.nid }}\">Edit</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/media/upload?destination=/{{ nothing_1 }}/node/{{ raw_arguments.nid }}\">Add media</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/{{ nothing_1 }}/node/{{ raw_arguments.nid }}/media\">Manage media</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/{{ nothing_1 }}/node/add/analysis?edit[field_analysis_of][widget][0][target_id]={{ raw_arguments.nid }}\">Add Analysis</a>\r\n</p>\r\n</div>"
+            value: "<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/edit?destination=/node/{{ raw_arguments.nid }}\">Edit</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/media/upload?destination=/node/{{ raw_arguments.nid }}\">Add media</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}/media\">Manage media</a>\r\n</p>\r\n<p>\r\n    <a class=\"button\" href=\"/node/add/analysis?edit[field_analysis_of][widget][0][target_id]={{ raw_arguments.nid }}\">Add Analysis</a>\r\n</p>\r\n</div>"
             format: full_html
           tokenize: true
       display_extenders:

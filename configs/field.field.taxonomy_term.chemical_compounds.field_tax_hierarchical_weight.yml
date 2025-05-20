@@ -1,0 +1,23 @@
+uuid: b7d7c598-3a4e-45ae-950b-985a76b68dbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.chemical_compounds
+id: taxonomy_term.chemical_compounds.field_tax_hierarchical_weight
+field_name: field_tax_hierarchical_weight
+entity_type: taxonomy_term
+bundle: chemical_compounds
+label: 'Hierarchical Weight'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

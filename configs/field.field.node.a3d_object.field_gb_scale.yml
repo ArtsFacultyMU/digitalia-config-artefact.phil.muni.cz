@@ -9,7 +9,7 @@ id: node.a3d_object.field_gb_scale
 field_name: field_gb_scale
 entity_type: node
 bundle: a3d_object
-label: 'Grog/binder scale'
+label: DEPRACTED
 description: ''
 required: false
 translatable: false

@@ -9,6 +9,7 @@ dependencies:
     - field.field.media.3d_model.field_media_of
     - field.field.media.3d_model.field_media_use
     - field.field.media.3d_model.field_mime_type
+    - field.field.media.3d_model.field_weight
     - media.type.3d_model
   module:
     - file
@@ -69,6 +70,13 @@ content:
     region: content
     settings:
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_weight:
+    type: number
+    weight: 29
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   langcode:

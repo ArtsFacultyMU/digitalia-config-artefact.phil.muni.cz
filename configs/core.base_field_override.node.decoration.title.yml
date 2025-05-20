@@ -1,0 +1,18 @@
+uuid: d25e98bf-98cc-4f34-8db1-abc80ca28d13
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.decoration
+id: node.decoration.title
+field_name: title
+entity_type: node
+bundle: decoration
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 6d3e99f2-a14c-4b55-981d-e82643597301
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.traceology
+id: node.traceology.field_location
+field_name: field_location
+entity_type: node
+bundle: traceology
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

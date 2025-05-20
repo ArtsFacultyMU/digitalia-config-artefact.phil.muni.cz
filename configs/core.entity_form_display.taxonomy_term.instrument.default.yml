@@ -14,6 +14,8 @@ dependencies:
     - field.field.taxonomy_term.instrument.field_model_identifier_type
     - field.field.taxonomy_term.instrument.field_owner
     - field.field.taxonomy_term.instrument.field_related_identifier
+    - field.field.taxonomy_term.instrument.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.instrument.field_tax_hierarchical_weight
     - taxonomy.vocabulary.instrument
   module:
     - datafield
@@ -157,4 +159,11 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-hidden: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true

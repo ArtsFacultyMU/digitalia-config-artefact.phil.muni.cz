@@ -1,0 +1,70 @@
+uuid: ed1c30ba-fde5-411d-8178-83a3bbe4d232
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.a3d_personal_contact.field_coll_contacts_email
+    - field.field.node.a3d_personal_contact.field_coll_contacts_person
+    - field.field.node.a3d_personal_contact.field_coll_contacts_phone
+    - field.field.node.a3d_personal_contact.field_coll_contacts_type
+    - node.type.a3d_personal_contact
+  module:
+    - user
+id: node.a3d_personal_contact.teaser
+targetEntityType: node
+bundle: a3d_personal_contact
+mode: teaser
+content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_service_file:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_coll_contacts_email: true
+  field_coll_contacts_person: true
+  field_coll_contacts_phone: true
+  field_coll_contacts_type: true
+  langcode: true
+  search_api_excerpt: true

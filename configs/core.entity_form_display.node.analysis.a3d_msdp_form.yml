@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_form_mode.node.a3d_msdp_form
     - field.field.node.analysis.field_analysed_by
+    - field.field.node.analysis.field_analysed_day
+    - field.field.node.analysis.field_analysed_month
+    - field.field.node.analysis.field_analysed_year
     - field.field.node.analysis.field_analysis_date
     - field.field.node.analysis.field_analysis_of
     - field.field.node.analysis.field_analysis_type
@@ -26,6 +29,7 @@ dependencies:
     - field.field.node.analysis.field_instrument
     - field.field.node.analysis.field_matrix
     - field.field.node.analysis.field_matrix_vitrification
+    - field.field.node.analysis.field_member_of
     - field.field.node.analysis.field_microstructure
     - field.field.node.analysis.field_mineral_fragments
     - field.field.node.analysis.field_minerals
@@ -42,6 +46,7 @@ dependencies:
     - field.field.node.analysis.field_reduction_inward
     - field.field.node.analysis.field_reduction_outward
     - field.field.node.analysis.field_rock_fragments
+    - field.field.node.analysis.field_traceology
     - field.field.node.analysis.field_vesicular_pores
     - node.type.analysis
   module:
@@ -79,6 +84,9 @@ content:
 hidden:
   created: true
   field_analysed_by: true
+  field_analysed_day: true
+  field_analysed_month: true
+  field_analysed_year: true
   field_analysis_date: true
   field_analysis_of: true
   field_binder_ratio: true
@@ -98,6 +106,7 @@ hidden:
   field_instrument: true
   field_matrix: true
   field_matrix_vitrification: true
+  field_member_of: true
   field_microstructure: true
   field_mineral_fragments: true
   field_minerals: true
@@ -113,6 +122,7 @@ hidden:
   field_reduction_inward: true
   field_reduction_outward: true
   field_rock_fragments: true
+  field_traceology: true
   field_vesicular_pores: true
   langcode: true
   path: true

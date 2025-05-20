@@ -1,0 +1,11 @@
+uuid: d57ddbe9-040a-4684-8499-872bcf09340e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: arf_prod_lang_hack_node
+title: 'ARF prod lang hack node'
+content:
+  value: "<script>\r\nlet path = window.location.pathname;\r\nif (window.location.pathname.startsWith(\"/cs/node\")) {\r\n  path = path.replace(\"/cs/node\", \"/en/node\");\r\n}\r\nlet urlParams = new URLSearchParams(window.location.search);\r\nif (!urlParams.has(\"languageswitch\")) {\r\n  console.log(urlParams.toString());\r\n  urlParams.set(\"languageswitch\", 1);\r\n  console.log(urlParams.toString());\r\n}\r\nif (window.location.pathname != path) {\r\n  window.location = path + \"?\" +\_urlParams.toString();\r\n}\r\n</script>"
+  format: full_html

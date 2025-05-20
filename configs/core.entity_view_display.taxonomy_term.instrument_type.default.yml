@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.taxonomy_term.instrument_type.field_identifier
     - field.field.taxonomy_term.instrument_type.field_identifier_type
+    - field.field.taxonomy_term.instrument_type.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.instrument_type.field_tax_hierarchical_weight
     - taxonomy.vocabulary.instrument_type
   module:
     - text
@@ -14,6 +16,11 @@ bundle: instrument_type
 mode: default
 content:
   a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_taxonomy_title_entity_view_2:
     settings: {  }
     third_party_settings: {  }
     weight: 10
@@ -42,5 +49,7 @@ content:
     weight: 12
     region: content
 hidden:
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
   langcode: true
   search_api_excerpt: true

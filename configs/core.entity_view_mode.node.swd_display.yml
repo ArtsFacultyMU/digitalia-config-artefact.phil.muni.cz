@@ -1,0 +1,11 @@
+uuid: 82413f50-306d-4aa4-af97-2cea32aaa511
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.swd_display
+label: 'SWD display'
+description: ''
+targetEntityType: node
+cache: true

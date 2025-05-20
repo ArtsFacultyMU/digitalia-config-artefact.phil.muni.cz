@@ -1,0 +1,22 @@
+uuid: ec151bc3-ec59-4181-8504-85788365ece9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.traceology
+id: node.traceology.sticky
+field_name: sticky
+entity_type: node
+bundle: traceology
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

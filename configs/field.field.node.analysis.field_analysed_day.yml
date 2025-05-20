@@ -1,0 +1,23 @@
+uuid: 671e4381-7da1-4f11-830a-870651c612f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_analysed_day
+    - node.type.analysis
+id: node.analysis.field_analysed_day
+field_name: field_analysed_day
+entity_type: node
+bundle: analysis
+label: 'Day analysed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

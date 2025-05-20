@@ -1,0 +1,9 @@
+uuid: 325f01de-a17a-4f8c-832f-25620049f4be
+langcode: en
+status: true
+dependencies: {  }
+name: 'Archaeological site'
+vid: archaeological_site
+description: 'Czech archaeological site'
+weight: 0
+new_revision: false

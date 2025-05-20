@@ -1,0 +1,34 @@
+uuid: 77800540-305c-4439-8974-6e4ac95df640
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.test_group_type
+    - user.role.producer
+id: test_group_type-arf_producer
+label: 'ARF producer'
+weight: 4
+admin: false
+scope: insider
+global_role: producer
+group_type: test_group_type
+permissions:
+  - 'create group_node:a3d_ingest_artefact entity'
+  - 'create group_node:a3d_ingest_object entity'
+  - 'create group_term:actor entity'
+  - 'create group_term:coll_org entity'
+  - 'delete own group_node:a3d_ingest_artefact relationship'
+  - 'delete own group_node:a3d_ingest_object entity'
+  - 'delete own group_node:a3d_ingest_object relationship'
+  - 'update any group_term:actor entity'
+  - 'update any group_term:coll_org entity'
+  - 'update own group_node:a3d_ingest_artefact entity'
+  - 'update own group_node:a3d_ingest_artefact relationship'
+  - 'update own group_node:a3d_ingest_object entity'
+  - 'view group_node:a3d_ingest_artefact entity'
+  - 'view group_node:a3d_ingest_artefact relationship'
+  - 'view group_term:actor entity'
+  - 'view group_term:coll_org entity'
+  - 'view own unpublished group_node:a3d_ingest_artefact entity'
+  - 'view own unpublished group_node:a3d_ingest_object entity'
+  - 'view unpublished group_node:a3d_ingest_object entity'

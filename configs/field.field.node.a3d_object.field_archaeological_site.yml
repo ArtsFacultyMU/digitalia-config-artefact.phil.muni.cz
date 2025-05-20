@@ -1,0 +1,31 @@
+uuid: 7d8cdeb6-f171-40ba-ad2b-339946e954e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_archaeological_site
+    - node.type.a3d_object
+    - taxonomy.vocabulary.archaeological_site
+    - taxonomy.vocabulary.unknown_values
+id: node.a3d_object.field_archaeological_site
+field_name: field_archaeological_site
+entity_type: node
+bundle: a3d_object
+label: 'Archaeological site'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      archaeological_site: archaeological_site
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: archaeological_site
+field_type: entity_reference

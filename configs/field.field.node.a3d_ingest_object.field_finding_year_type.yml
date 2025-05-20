@@ -1,0 +1,29 @@
+uuid: dfa11b42-af2f-4383-a350-7fca5a7d5c36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_finding_year_type
+    - node.type.a3d_ingest_object
+    - taxonomy.vocabulary.general_accuracy
+id: node.a3d_ingest_object.field_finding_year_type
+field_name: field_finding_year_type
+entity_type: node
+bundle: a3d_ingest_object
+label: 'Finding year type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      general_accuracy: general_accuracy
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

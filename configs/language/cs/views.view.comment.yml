@@ -3,21 +3,61 @@ display:
     display_title: Výchozí
     display_options:
       fields:
+        subject:
+          separator: ', '
+        uid:
+          separator: ', '
         name:
           label: Autor
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          separator: ', '
         operations:
           label: Operace
+        name_1:
+          separator: ', '
       pager:
         options:
+          tags:
+            next: 'následující ›'
+            previous: '‹ předchozí'
+            first: '« první'
+            last: 'poslední »'
           expose:
+            items_per_page_label: 'Položek na stránku'
             items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
       exposed_form:
         options:
+          reset_button_label: Reset
           exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      filters:
+        langcode:
+          expose:
+            label: Jazyk
   page_unapproved:
     display_options:
       fields:
+        subject:
+          separator: ', '
+        uid:
+          separator: ', '
         name:
           label: Autor
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          separator: ', '
         operations:
           label: Operace
+        name_1:
+          separator: ', '
+      filters:
+        langcode:
+          expose:
+            label: Jazyk

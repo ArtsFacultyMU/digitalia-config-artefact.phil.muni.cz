@@ -1,0 +1,23 @@
+uuid: 85d220f7-978a-45b9-a91a-266323716943
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_depth
+    - taxonomy.vocabulary.non_plastic_inclusions_scale
+id: taxonomy_term.non_plastic_inclusions_scale.field_tax_hierarchical_depth
+field_name: field_tax_hierarchical_depth
+entity_type: taxonomy_term
+bundle: non_plastic_inclusions_scale
+label: 'Hierarchical Depth'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

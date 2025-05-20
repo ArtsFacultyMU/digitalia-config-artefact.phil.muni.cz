@@ -1,0 +1,33 @@
+uuid: f0715fca-7b40-4ce0-81d5-65a790b236ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.material_inclusions.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.material_inclusions.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.material_inclusions
+  module:
+    - text
+id: taxonomy_term.material_inclusions.default
+targetEntityType: taxonomy_term
+bundle: material_inclusions
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_taxonomy_title_entity_view_2: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
+  langcode: true
+  search_api_excerpt: true

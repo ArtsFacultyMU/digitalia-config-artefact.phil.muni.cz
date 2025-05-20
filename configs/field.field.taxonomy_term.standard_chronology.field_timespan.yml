@@ -1,0 +1,35 @@
+uuid: f2cfebef-a808-4152-b3b4-18c9e5d5805a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_timespan
+    - taxonomy.vocabulary.standard_chronology
+  module:
+    - range
+id: taxonomy_term.standard_chronology.field_timespan
+field_name: field_timespan
+entity_type: taxonomy_term
+bundle: standard_chronology
+label: Timespan
+description: 'Start and end years of chronology. Use a negative number for BC '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  field:
+    prefix: ''
+    suffix: ''
+  from:
+    prefix: ''
+    suffix: –
+  to:
+    prefix: ''
+    suffix: ''
+  combined:
+    prefix: ''
+    suffix: ''
+field_type: range_integer

@@ -10,14 +10,14 @@ id: node.a3d_object.field_mineral_fragments
 field_name: field_mineral_fragments
 entity_type: node
 bundle: a3d_object
-label: 'Mineral fragments'
+label: DEPRACTED
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       mineral_fragments: mineral_fragments

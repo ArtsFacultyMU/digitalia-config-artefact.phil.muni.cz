@@ -1,0 +1,11 @@
+uuid: c0b4ceaf-1dad-4b2b-a8b5-5c4590bdea56
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.a3d_arf_organisation
+label: 'A3D ARF organisation'
+description: ''
+targetEntityType: taxonomy_term
+cache: true

@@ -1,0 +1,23 @@
+uuid: 6171f8ce-a381-4f9b-9b0a-a1c2133f4073
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.loc_coord_cadastre_accuracy
+id: taxonomy_term.loc_coord_cadastre_accuracy.field_tax_hierarchical_weight
+field_name: field_tax_hierarchical_weight
+entity_type: taxonomy_term
+bundle: loc_coord_cadastre_accuracy
+label: 'Hierarchical Weight'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

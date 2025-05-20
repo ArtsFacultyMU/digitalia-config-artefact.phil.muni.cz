@@ -1,0 +1,31 @@
+uuid: d51d8015-fd7f-4426-9cfc-5249c3e9280b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trace_type
+    - node.type.traceology
+    - taxonomy.vocabulary.trace_type
+    - taxonomy.vocabulary.unknown_values
+id: node.traceology.field_trace_type
+field_name: field_trace_type
+entity_type: node
+bundle: traceology
+label: 'Trace type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      unknown_values: unknown_values
+      trace_type: trace_type
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: unknown_values
+field_type: entity_reference

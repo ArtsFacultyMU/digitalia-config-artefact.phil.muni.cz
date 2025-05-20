@@ -1,0 +1,23 @@
+uuid: a52bc618-9bce-4d16-8dd3-9470223c1b57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_depth
+    - taxonomy.vocabulary.quiver_trans_bright_spots
+id: taxonomy_term.quiver_trans_bright_spots.field_tax_hierarchical_depth
+field_name: field_tax_hierarchical_depth
+entity_type: taxonomy_term
+bundle: quiver_trans_bright_spots
+label: 'Hierarchical Depth'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

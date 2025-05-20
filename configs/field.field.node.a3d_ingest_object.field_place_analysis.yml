@@ -1,0 +1,29 @@
+uuid: ec70a07c-73d5-455d-97d5-b6b3dab7fe27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_place_analysis
+    - node.type.a3d_ingest_object
+    - taxonomy.vocabulary.place_analysis
+id: node.a3d_ingest_object.field_place_analysis
+field_name: field_place_analysis
+entity_type: node
+bundle: a3d_ingest_object
+label: 'Place of analysis'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      place_analysis: place_analysis
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 1
+    auto_create_bundle: place_analysis
+field_type: entity_reference

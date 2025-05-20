@@ -1,0 +1,98 @@
+uuid: d6d550f2-0e01-483d-996a-24068bdc2e53
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.a3d_workbench_test_type.body
+    - field.field.node.a3d_workbench_test_type.field_alle_zusammen
+    - field.field.node.a3d_workbench_test_type.field_alternative_ids
+    - field.field.node.a3d_workbench_test_type.field_artefact_category
+    - field.field.node.a3d_workbench_test_type.field_classification
+    - field.field.node.a3d_workbench_test_type.field_geolocation
+    - field.field.node.a3d_workbench_test_type.field_site
+    - field.field.node.a3d_workbench_test_type.field_test_custom_field
+    - field.field.node.a3d_workbench_test_type.field_test_datafield
+    - field.field.node.a3d_workbench_test_type.field_test_datafield_2
+    - field.field.node.a3d_workbench_test_type.field_test_datafield_3
+    - field.field.node.a3d_workbench_test_type.field_test_date
+    - field.field.node.a3d_workbench_test_type.field_test_timestamp
+    - field.field.node.a3d_workbench_test_type.field_wgs84_geolocation
+    - node.type.a3d_workbench_test_type
+  module:
+    - text
+    - user
+id: node.a3d_workbench_test_type.teaser
+targetEntityType: node
+bundle: a3d_workbench_test_type
+mode: teaser
+content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_service_file:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_alle_zusammen: true
+  field_alternative_ids: true
+  field_artefact_category: true
+  field_classification: true
+  field_geolocation: true
+  field_site: true
+  field_test_custom_field: true
+  field_test_datafield: true
+  field_test_datafield_2: true
+  field_test_datafield_3: true
+  field_test_date: true
+  field_test_timestamp: true
+  field_wgs84_geolocation: true
+  langcode: true
+  search_api_excerpt: true

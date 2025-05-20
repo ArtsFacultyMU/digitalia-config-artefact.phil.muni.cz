@@ -1,0 +1,17 @@
+uuid: ee28acf6-e552-4be2-8790-8f01eb488825
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'A3D personal contact'
+type: a3d_personal_contact
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

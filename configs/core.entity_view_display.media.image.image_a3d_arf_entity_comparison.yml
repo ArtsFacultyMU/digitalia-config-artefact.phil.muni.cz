@@ -13,6 +13,7 @@ dependencies:
     - field.field.media.image.field_media_use
     - field.field.media.image.field_mime_type
     - field.field.media.image.field_original_name
+    - field.field.media.image.field_weight
     - field.field.media.image.field_width
     - image.style.a3d_convert_to_jpeg
     - media.type.image
@@ -36,10 +37,9 @@ content:
     weight: 0
     region: content
   field_media_of:
-    type: entity_reference_label
+    type: entity_reference_entity_id
     label: hidden
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
@@ -53,6 +53,7 @@ hidden:
   field_media_use: true
   field_mime_type: true
   field_original_name: true
+  field_weight: true
   field_width: true
   langcode: true
   link_for_entity_comparison_a3d_arf_entity_comparison: true

@@ -1,0 +1,19 @@
+uuid: d92b8a24-8969-4491-9f6a-abdee6c7f318
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+label: '**DEV**'
+name: dev
+group: Display
+description: ''
+requireAllConditions: false
+disabled: true
+conditions: {  }
+reactions:
+  view_mode_alter:
+    id: view_mode_alter
+    saved: false
+    mode: node.dev
+weight: -1

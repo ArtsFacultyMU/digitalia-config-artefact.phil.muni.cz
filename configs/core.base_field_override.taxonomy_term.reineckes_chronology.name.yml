@@ -1,0 +1,18 @@
+uuid: df54ef2f-eef7-4022-81b4-8b97d14c4654
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.reineckes_chronology
+id: taxonomy_term.reineckes_chronology.name
+field_name: name
+entity_type: taxonomy_term
+bundle: reineckes_chronology
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

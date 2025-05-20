@@ -1,10 +1,14 @@
+label: Obsah
 display:
   default:
     display_title: Výchozí
     display_options:
+      title: Obsah
       fields:
         title:
           label: Nadpis
+        type:
+          separator: ', '
         name:
           label: Autor
         status:
@@ -14,9 +18,17 @@ display:
             format_custom_true: Zveřejněno
         operations:
           label: Operace
+      pager:
+        options:
+          tags:
+            next: 'Následující ›'
+            previous: '‹ Předchozí'
       exposed_form:
         options:
+          reset_button_label: Reset
           exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
       filters:
         title:
           expose:
@@ -30,3 +42,12 @@ display:
                 title: Zveřejněno
               2:
                 title: Skryto
+        langcode:
+          expose:
+            label: Jazyk
+  page_1:
+    display_options:
+      menu:
+        title: Obsah
+      tab_options:
+        title: Obsah

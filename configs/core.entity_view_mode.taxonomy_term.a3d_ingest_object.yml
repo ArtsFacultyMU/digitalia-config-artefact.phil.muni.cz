@@ -1,0 +1,11 @@
+uuid: 430a44af-8385-403e-9174-69f666ae3824
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.a3d_ingest_object
+label: 'A3D ingest object'
+description: ''
+targetEntityType: taxonomy_term
+cache: true

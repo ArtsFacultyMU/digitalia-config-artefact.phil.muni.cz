@@ -1,0 +1,196 @@
+uuid: c72ad294-2018-4c7d-8a20-5ac600cf9f20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alle_zusammen
+    - node.type.a3d_workbench_test_type
+  module:
+    - datafield
+id: node.a3d_workbench_test_type.field_alle_zusammen
+field_name: field_alle_zusammen
+entity_type: node
+bundle: a3d_workbench_test_type
+label: 'Alle zusammen'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    number_integer:
+      label: Number_integer
+      list: false
+      allowed_values: ''
+      max: null
+      min: null
+      required: false
+      prefix: ''
+      suffix: ''
+    telephone:
+      label: Telephone
+      list: false
+      allowed_values: ''
+      required: false
+    blob:
+      label: Blob
+    email:
+      label: Email
+      list: false
+      allowed_values: ''
+      required: false
+    date_date_time:
+      label: Date_date_time
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    date_date:
+      label: Date_date
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    date_time:
+      label: Date_time
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    date_year:
+      label: Date_year
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    date_month:
+      label: Date_month
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    date_week:
+      label: Date_week
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    date_timestamp:
+      label: Date_timestamp
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    text_plain_long:
+      label: Text_plain_long
+      required: false
+    date_iso_date_time:
+      label: Date_iso_date_time
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    date_iso_date:
+      label: Date_iso_date
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    date_iso_time:
+      label: Date_iso_time
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    date_iso_year:
+      label: Date_iso_year
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    date_iso_month:
+      label: Date_iso_month
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    date_iso_week:
+      label: Date_iso_week
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    date_iso_timestamp:
+      label: Date_iso_timestamp
+      max: null
+      min: null
+      required: false
+      default_date_type: ''
+      default_date: ''
+    number_float:
+      label: Number_float
+      list: false
+      allowed_values: ''
+      max: null
+      min: null
+      required: false
+      prefix: ''
+      suffix: ''
+    file:
+      label: File
+      required: false
+      uri_scheme: fedora
+      file_directory: alle_zusammen-file
+      file_extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+    entity_reference_taxonomy:
+      label: Entity_reference_taxonomy
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: 3d_shaping
+    entity_reference_content:
+      label: Entity_reference_content
+      required: false
+      entity_reference_type: node
+      target_bundles: a3d_workbench_test_type
+    text_plain:
+      label: Text_plain
+      list: false
+      allowed_values: ''
+      required: false
+    boolean:
+      label: Boolean
+      required: false
+      on_label: ''
+      off_label: ''
+    url:
+      label: Url
+      list: false
+      allowed_values: ''
+      required: false
+    json:
+      label: Json
+      required: false
+    number_decimal:
+      label: Number_decimal
+      list: false
+      allowed_values: ''
+      max: null
+      min: null
+      required: false
+      prefix: ''
+      suffix: ''
+field_type: data_field

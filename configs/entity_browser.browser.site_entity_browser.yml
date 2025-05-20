@@ -1,0 +1,31 @@
+uuid: 1fc33c34-2c6d-433f-a00a-e5f4c1f13efc
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.a3d_arf_taxonomy
+  module:
+    - views
+name: site_entity_browser
+label: 'Site entity browser'
+display: modal
+display_configuration:
+  width: '800'
+  height: '800'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  2855e364-5dd2-4730-a5ec-265cebcee028:
+    id: view
+    uuid: 2855e364-5dd2-4730-a5ec-265cebcee028
+    label: view
+    weight: 1
+    settings:
+      submit_text: 'Select entities'
+      auto_select: false
+      view: a3d_arf_taxonomy
+      view_display: entity_browser_4

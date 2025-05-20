@@ -1,0 +1,33 @@
+uuid: b80894c1-3c30-4851-9778-bafe50801b00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.surface_finishing.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.surface_finishing.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.surface_finishing
+  module:
+    - text
+id: taxonomy_term.surface_finishing.default
+targetEntityType: taxonomy_term
+bundle: surface_finishing
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_taxonomy_title_entity_view_2: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
+  langcode: true
+  search_api_excerpt: true

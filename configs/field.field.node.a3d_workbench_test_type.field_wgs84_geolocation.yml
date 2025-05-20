@@ -1,0 +1,21 @@
+uuid: 7af680f5-67fe-484d-8bd9-3bb4d855636c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_wgs84_geolocation
+    - node.type.a3d_workbench_test_type
+  module:
+    - geolocation
+id: node.a3d_workbench_test_type.field_wgs84_geolocation
+field_name: field_wgs84_geolocation
+entity_type: node
+bundle: a3d_workbench_test_type
+label: 'WGS84 Geolocation'
+description: 'This data will be displayed on a map.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

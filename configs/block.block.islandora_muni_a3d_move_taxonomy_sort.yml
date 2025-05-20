@@ -1,0 +1,33 @@
+uuid: c94305f1-1cc7-4606-b61a-4d4db3b7020d
+langcode: en
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.a3d_move_taxonomy_sort
+  module:
+    - islandora
+    - simple_block
+    - system
+  theme:
+    - islandora_muni
+id: islandora_muni_a3d_move_taxonomy_sort
+theme: islandora_muni
+region: content
+weight: -27
+provider: null
+plugin: 'simple_block:a3d_move_taxonomy_sort'
+settings:
+  id: 'simple_block:a3d_move_taxonomy_sort'
+  label: a3d_move_taxonomy_sort
+  label_display: '0'
+  provider: simple_block
+visibility:
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/taxonomy/term/*\r\n!/taxonomy/term/*/paged"

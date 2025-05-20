@@ -10,14 +10,14 @@ id: node.a3d_object.field_holder_type
 field_name: field_holder_type
 entity_type: node
 bundle: a3d_object
-label: 'Holder type'
+label: DEPRACTED
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       holder_type: holder_type

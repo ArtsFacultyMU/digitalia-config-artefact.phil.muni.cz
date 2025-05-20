@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.a3d_nef_compare
     - field.storage.media.field_featured
+    - field.storage.media.field_file_size
     - field.storage.media.field_media_image
     - field.storage.media.field_mime_type
     - media.type.3d_model
@@ -29,7 +30,7 @@ dependencies:
 id: a3d_nef_media
 label: 'A3D NEF Media'
 module: views
-description: 'All NEF views built atop "Media". Contains REST media export, Manage media.'
+description: 'All NEF views built atop "Media". Contains REST media export.'
 tag: ''
 base_table: media_field_data
 base_field: mid
@@ -544,6 +545,7 @@ display:
     display_plugin: page
     position: 2
     display_options:
+      enabled: false
       fields:
         media_bulk_form:
           id: media_bulk_form
@@ -1594,7 +1596,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{{ ((field_file_size_value)/1073741274) |round(2, 'floor') }} GiB"
+            text: "{{ ((field_file_size_value__value)/1073741274) |round(2, 'floor') }} GiB"
             make_link: false
             path: ''
             absolute: false
@@ -1915,7 +1917,8 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.media.field_file_size'
   media_uri_export:
     id: media_uri_export
     display_title: 'REST media URI export'

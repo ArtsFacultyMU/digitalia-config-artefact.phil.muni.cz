@@ -1,0 +1,251 @@
+uuid: 1c06c80b-2029-43a8-a7fe-7594d818f88e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.arf_display
+    - field.field.node.a3d_ingest_object.field_coll_org
+    - field.field.node.a3d_ingest_object.field_date_borrowing
+    - field.field.node.a3d_ingest_object.field_date_return
+    - field.field.node.a3d_ingest_object.field_finding_context_note
+    - field.field.node.a3d_ingest_object.field_finding_context_subtype
+    - field.field.node.a3d_ingest_object.field_finding_documentation
+    - field.field.node.a3d_ingest_object.field_finding_documentation_note
+    - field.field.node.a3d_ingest_object.field_finding_label
+    - field.field.node.a3d_ingest_object.field_finding_report
+    - field.field.node.a3d_ingest_object.field_finding_year
+    - field.field.node.a3d_ingest_object.field_finding_year_type
+    - field.field.node.a3d_ingest_object.field_geolocation
+    - field.field.node.a3d_ingest_object.field_ingest_artefact
+    - field.field.node.a3d_ingest_object.field_member_of
+    - field.field.node.a3d_ingest_object.field_personal_contact
+    - field.field.node.a3d_ingest_object.field_place_analysis
+    - field.field.node.a3d_ingest_object.field_region
+    - field.field.node.a3d_ingest_object.field_site
+    - node.type.a3d_ingest_object
+  module:
+    - cshs
+    - datetime
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_collection:
+      children:
+        - field_coll_org
+        - field_personal_contact
+        - field_date_borrowing
+        - field_date_return
+        - field_place_analysis
+      label: Collection
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        open: 0
+    group_location:
+      children:
+        - field_finding_label
+        - field_finding_year
+        - field_finding_year_type
+        - field_region
+        - field_site
+        - field_finding_context_subtype
+        - field_finding_context_note
+        - field_finding_report
+        - field_finding_documentation
+        - field_finding_documentation_note
+      label: Location
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: false
+        open: false
+    group_artefacts:
+      children:
+        - field_ingest_artefact
+      label: Artefacts
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: false
+        open: false
+id: node.a3d_ingest_object.arf_display
+targetEntityType: node
+bundle: a3d_ingest_object
+mode: arf_display
+content:
+  field_coll_org:
+    type: entity_reference_entity_view
+    label: inline
+    settings:
+      view_mode: a3d_arf_organisation
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_date_borrowing:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_date_return:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_finding_context_note:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_finding_context_subtype:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_finding_documentation:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_finding_documentation_note:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_finding_label:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_finding_report:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_finding_year:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_finding_year_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_ingest_artefact:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_personal_contact:
+    type: entity_reference_entity_view
+    label: inline
+    settings:
+      view_mode: a3d_arf_personal_contact
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_place_analysis:
+    type: cshs_flexible_hierarchy
+    label: inline
+    settings:
+      linked: false
+      reverse: false
+      format: '[term:name]'
+      clear: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_region:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_site:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: a3d_ingest_object
+      link: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  a3d_eva_entity_group_relation_entity_view_2: true
+  a3d_eva_entity_group_relation_entity_view_4: true
+  a3d_eva_entity_group_relation_entity_view_5: true
+  display_media_entity_view_1: true
+  display_media_entity_view_3: true
+  display_media_original_download: true
+  display_media_service_file: true
+  display_media_thumbnail: true
+  field_geolocation: true
+  field_member_of: true
+  langcode: true
+  search_api_excerpt: true

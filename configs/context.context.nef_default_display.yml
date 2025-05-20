@@ -1,0 +1,25 @@
+uuid: 50a0fa15-8e12-42b0-be1c-dfe15ec40706
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+label: 'NEF default display'
+name: nef_default_display
+group: Display
+description: "A3D change default node view to 'NEF Display' on neofig.phil.muni.cz"
+requireAllConditions: true
+disabled: false
+conditions:
+  request_domain:
+    id: request_domain
+    negate: false
+    uuid: 1f7202e0-ad53-4402-bb58-fc275fc2a456
+    context_mapping: {  }
+    domains: "neofig-devel.phil.muni.cz\r\nneofig.phil.muni.cz"
+reactions:
+  view_mode_alter:
+    id: view_mode_alter
+    saved: false
+    mode: node.nef_display
+weight: -2

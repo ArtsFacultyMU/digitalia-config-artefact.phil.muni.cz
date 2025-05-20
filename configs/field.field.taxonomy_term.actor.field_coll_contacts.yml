@@ -1,0 +1,19 @@
+uuid: eaae6cc1-5808-4897-9de9-7dfa92cfa986
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_coll_contacts
+    - taxonomy.vocabulary.actor
+id: taxonomy_term.actor.field_coll_contacts
+field_name: field_coll_contacts
+entity_type: taxonomy_term
+bundle: actor
+label: Contact
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

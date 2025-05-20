@@ -1,0 +1,386 @@
+uuid: c5cec3d1-7ab0-47b5-beaf-2de53532606c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.a3d_workbench_test_type.body
+    - field.field.node.a3d_workbench_test_type.field_alle_zusammen
+    - field.field.node.a3d_workbench_test_type.field_alternative_ids
+    - field.field.node.a3d_workbench_test_type.field_artefact_category
+    - field.field.node.a3d_workbench_test_type.field_classification
+    - field.field.node.a3d_workbench_test_type.field_geolocation
+    - field.field.node.a3d_workbench_test_type.field_site
+    - field.field.node.a3d_workbench_test_type.field_test_custom_field
+    - field.field.node.a3d_workbench_test_type.field_test_datafield
+    - field.field.node.a3d_workbench_test_type.field_test_datafield_2
+    - field.field.node.a3d_workbench_test_type.field_test_datafield_3
+    - field.field.node.a3d_workbench_test_type.field_test_date
+    - field.field.node.a3d_workbench_test_type.field_test_timestamp
+    - field.field.node.a3d_workbench_test_type.field_wgs84_geolocation
+    - node.type.a3d_workbench_test_type
+  module:
+    - datafield
+    - datetime
+id: node.a3d_workbench_test_type.default
+targetEntityType: node
+bundle: a3d_workbench_test_type
+mode: default
+content:
+  field_alle_zusammen:
+    type: data_field_table_widget
+    weight: 3
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings:
+        number_integer:
+          type: number
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          step: '2'
+          col: ''
+        telephone:
+          type: telephone
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          step: '2'
+          separator: ' '
+          col: ''
+        blob:
+          type: textarea
+          label_display: ''
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          cols: 10
+          rows: 5
+          col: ''
+        email:
+          type: email
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          col: ''
+        date_date_time:
+          type: datetime
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          col: ''
+        date_date:
+          type: date
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          col: ''
+        date_time:
+          type: time
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          col: ''
+        date_year:
+          type: year
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          target_type: datelist
+          col: ''
+        date_month:
+          type: month
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          col: ''
+        date_week:
+          type: week
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          col: ''
+        date_timestamp:
+          type: timestamp
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          col: ''
+        text_plain_long:
+          type: textarea
+          label_display: ''
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          cols: 10
+          rows: 5
+          col: ''
+        date_iso_date_time:
+          type: datetime
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          col: ''
+        date_iso_date:
+          type: date
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          col: ''
+        date_iso_time:
+          type: time
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          col: ''
+        date_iso_year:
+          type: year
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          target_type: datelist
+          col: ''
+        date_iso_month:
+          type: month
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          col: ''
+        date_iso_week:
+          type: week
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          col: ''
+        date_iso_timestamp:
+          type: timestamp
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          col: ''
+        number_float:
+          type: number
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          step: '2'
+          col: ''
+        file:
+          type: managed_file
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          col: ''
+        entity_reference_taxonomy:
+          type: entity_reference_autocomplete
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          autocreate: '1'
+          col: ''
+        entity_reference_content:
+          type: entity_reference_autocomplete
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          autocreate: '1'
+          col: ''
+        text_plain:
+          type: textfield
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          step: ''
+          maxlength: ''
+          pattern: ''
+          min: ''
+          max: ''
+          list: ''
+          class: ''
+          col: ''
+        boolean:
+          type: checkbox
+          label_display: ''
+          label: Ok
+          field_display: '1'
+          weight: 0
+          col: ''
+        url:
+          type: url
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          col: ''
+        json:
+          type: json
+          label_display: ''
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          cols: 10
+          rows: 5
+          col: ''
+        number_decimal:
+          type: number
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          step: '2'
+          col: ''
+    third_party_settings: {  }
+  field_geolocation:
+    type: data_field_table_widget
+    weight: 2
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings:
+        spatial_ref_system:
+          type: entity_reference_autocomplete
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          autocreate: '1'
+          col: ''
+        loc_coord_cadastre_x:
+          type: textfield
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          step: ''
+          maxlength: ''
+          pattern: ''
+          min: ''
+          max: ''
+          list: ''
+          class: ''
+          col: ''
+        loc_coord_cadastre_y:
+          type: textfield
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          step: ''
+          maxlength: ''
+          pattern: ''
+          min: ''
+          max: ''
+          list: ''
+          class: ''
+          col: ''
+        loc_coord_cadastre_accuracy:
+          type: entity_reference_autocomplete
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          autocreate: '1'
+          col: ''
+    third_party_settings: {  }
+  field_test_datafield_3:
+    type: data_field_table_widget
+    weight: 1
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings:
+        dummy:
+          type: textfield
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '0'
+          weight: 0
+          step: ''
+          maxlength: ''
+          pattern: ''
+          min: ''
+          max: ''
+          list: ''
+          class: ''
+          col: ''
+        reference_1:
+          type: entity_reference_autocomplete
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          autocreate: '1'
+          col: ''
+        reference_2:
+          type: entity_reference_autocomplete
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          col: ''
+    third_party_settings: {  }
+  field_test_date:
+    type: datetime_default
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_test_timestamp:
+    type: datetime_timestamp
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  created: true
+  field_alternative_ids: true
+  field_artefact_category: true
+  field_classification: true
+  field_site: true
+  field_test_custom_field: true
+  field_test_datafield: true
+  field_test_datafield_2: true
+  field_wgs84_geolocation: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

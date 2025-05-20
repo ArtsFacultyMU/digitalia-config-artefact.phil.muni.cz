@@ -11,7 +11,7 @@ id: node.a3d_object.field_firing
 field_name: field_firing
 entity_type: node
 bundle: a3d_object
-label: Firing
+label: DEPRACTED
 description: ''
 required: false
 translatable: false

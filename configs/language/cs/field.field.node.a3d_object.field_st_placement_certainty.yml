@@ -1,3 +1,4 @@
 settings:
   on_label: jisté
   off_label: nejisté
+label: 'Jistota typologie dle umístění'

@@ -13,7 +13,7 @@ dependencies:
 id: islandora_muni_exposedforma3d_meta_search_index_searcha3d
 theme: islandora_muni
 region: breadcrumb
-weight: -39
+weight: -38
 provider: null
 plugin: 'views_exposed_filter_block:a3d_meta_search_index_search-a3d'
 settings:

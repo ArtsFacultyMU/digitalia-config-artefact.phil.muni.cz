@@ -1,0 +1,29 @@
+uuid: 3a4ae3de-eda1-4855-8ef0-c82cbc653bc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relative_datation
+    - node.type.a3d_ingest_artefact
+    - taxonomy.vocabulary.relative_datation
+id: node.a3d_ingest_artefact.field_relative_datation
+field_name: field_relative_datation
+entity_type: node
+bundle: a3d_ingest_artefact
+label: 'Relative datation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      relative_datation: relative_datation
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 1
+    auto_create_bundle: ''
+field_type: entity_reference

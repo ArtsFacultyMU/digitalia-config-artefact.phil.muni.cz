@@ -1,0 +1,97 @@
+uuid: d954c076-7a4e-4a66-b635-1fe2e73b0088
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.a3d_personal_contact.field_coll_contacts_email
+    - field.field.node.a3d_personal_contact.field_coll_contacts_person
+    - field.field.node.a3d_personal_contact.field_coll_contacts_phone
+    - field.field.node.a3d_personal_contact.field_coll_contacts_type
+    - node.type.a3d_personal_contact
+  module:
+    - user
+id: node.a3d_personal_contact.default
+targetEntityType: node
+bundle: a3d_personal_contact
+mode: default
+content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  display_media_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  display_media_service_file:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_coll_contacts_email:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_coll_contacts_person:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_coll_contacts_phone:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_coll_contacts_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

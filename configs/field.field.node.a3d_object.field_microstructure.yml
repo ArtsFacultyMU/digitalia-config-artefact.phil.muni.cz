@@ -10,14 +10,14 @@ id: node.a3d_object.field_microstructure
 field_name: field_microstructure
 entity_type: node
 bundle: a3d_object
-label: Microstructure
+label: DEPRACTED
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       microstructure: microstructure

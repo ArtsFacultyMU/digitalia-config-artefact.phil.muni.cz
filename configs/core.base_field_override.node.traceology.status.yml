@@ -1,0 +1,22 @@
+uuid: 97c4eeae-d4a3-4610-bb17-5853adb4bc5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.traceology
+id: node.traceology.status
+field_name: status
+entity_type: node
+bundle: traceology
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,29 @@
+uuid: 018756a7-9705-4e44-b371-1d1130808a9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site
+    - node.type.a3d_ingest_object
+    - taxonomy.vocabulary.site
+id: node.a3d_ingest_object.field_site
+field_name: field_site
+entity_type: node
+bundle: a3d_ingest_object
+label: Site
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      site: site
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

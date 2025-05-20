@@ -1,0 +1,22 @@
+uuid: 72ea49a9-65fc-4c90-bc19-2918506b1190
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.a3d_workbench_test_type
+id: node.a3d_workbench_test_type.promote
+field_name: promote
+entity_type: node
+bundle: a3d_workbench_test_type
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

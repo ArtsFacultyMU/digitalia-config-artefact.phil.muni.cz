@@ -1,0 +1,11 @@
+uuid: ad3be4e2-6ff2-40b6-a330-47097e598bce
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.a3d_site
+label: 'A3D site'
+description: ''
+targetEntityType: taxonomy_term
+cache: true

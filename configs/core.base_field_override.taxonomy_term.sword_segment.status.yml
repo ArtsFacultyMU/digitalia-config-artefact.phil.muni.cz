@@ -1,0 +1,22 @@
+uuid: 133b4223-ff24-4e35-80fe-3f4febb9c577
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sword_segment
+id: taxonomy_term.sword_segment.status
+field_name: status
+entity_type: taxonomy_term
+bundle: sword_segment
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

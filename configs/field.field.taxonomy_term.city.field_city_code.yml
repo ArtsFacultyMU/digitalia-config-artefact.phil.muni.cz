@@ -1,0 +1,29 @@
+uuid: 72dec56f-d9cb-4cf6-8e08-80bae99d67d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_city_code
+    - taxonomy.vocabulary.city
+    - taxonomy.vocabulary.city_code
+id: taxonomy_term.city.field_city_code
+field_name: field_city_code
+entity_type: taxonomy_term
+bundle: city
+label: 'City code'
+description: 'Code for Czech locations search at <a href="https://vdp.cuzk.cz/vdp/ruian/obce/">https://vdp.cuzk.cz/vdp/ruian/obce/</a>, for Slovak locations search at <a href="https://www.epi.sk/disk/zz/file/2002/2002c230z0597p01t003ga.pdf">https://www.epi.sk/disk/zz/file/2002/2002c230z0597p01t003ga.pdf</a>.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      city_code: city_code
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 1
+    auto_create_bundle: ''
+field_type: entity_reference

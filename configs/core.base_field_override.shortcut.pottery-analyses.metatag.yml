@@ -1,0 +1,20 @@
+uuid: 7d90dc75-da80-4d45-9f12-1199327b09a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - shortcut.set.pottery-analyses
+  module:
+    - metatag
+id: shortcut.pottery-analyses.metatag
+field_name: metatag
+entity_type: shortcut
+bundle: pottery-analyses
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

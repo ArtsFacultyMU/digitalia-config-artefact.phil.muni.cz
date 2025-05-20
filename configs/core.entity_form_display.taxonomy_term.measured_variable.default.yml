@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.measured_variable.field_machine_name
+    - field.field.taxonomy_term.measured_variable.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.measured_variable.field_tax_hierarchical_weight
     - taxonomy.vocabulary.measured_variable
   module:
     - path
@@ -62,4 +64,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true

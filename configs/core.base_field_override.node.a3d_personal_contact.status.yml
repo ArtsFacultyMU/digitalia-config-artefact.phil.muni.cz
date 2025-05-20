@@ -1,0 +1,22 @@
+uuid: 20f1fd1f-e59f-4051-9a3f-e000c19db423
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.a3d_personal_contact
+id: node.a3d_personal_contact.status
+field_name: status
+entity_type: node
+bundle: a3d_personal_contact
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

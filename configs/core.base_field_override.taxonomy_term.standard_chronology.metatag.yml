@@ -1,0 +1,20 @@
+uuid: bf1a5d8a-6b9b-46ff-880f-eef4646e21c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.standard_chronology
+  module:
+    - metatag
+id: taxonomy_term.standard_chronology.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: standard_chronology
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

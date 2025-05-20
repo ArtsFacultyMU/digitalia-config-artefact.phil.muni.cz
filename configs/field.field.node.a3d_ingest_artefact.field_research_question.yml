@@ -1,0 +1,29 @@
+uuid: 8dfdfc7b-6fc2-4871-9306-6e08ea6d01e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_question
+    - node.type.a3d_ingest_artefact
+    - taxonomy.vocabulary.research_question
+id: node.a3d_ingest_artefact.field_research_question
+field_name: field_research_question
+entity_type: node
+bundle: a3d_ingest_artefact
+label: 'Research question'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      research_question: research_question
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: 1
+    auto_create_bundle: ''
+field_type: entity_reference

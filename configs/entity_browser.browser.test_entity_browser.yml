@@ -1,0 +1,31 @@
+uuid: 783cb8a1-3538-469a-a6d1-4b06b71f2c61
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.a3d_test_entity_browser
+  module:
+    - views
+name: test_entity_browser
+label: 'Test entity browser'
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  4080f871-2a91-4ae0-9d4d-fb7fe7adc0cd:
+    id: view
+    uuid: 4080f871-2a91-4ae0-9d4d-fb7fe7adc0cd
+    label: view
+    weight: 1
+    settings:
+      submit_text: 'Select entities'
+      auto_select: false
+      view: a3d_test_entity_browser
+      view_display: entity_browser_1

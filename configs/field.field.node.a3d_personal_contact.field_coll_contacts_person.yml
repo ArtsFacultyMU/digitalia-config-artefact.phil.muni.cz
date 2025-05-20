@@ -1,0 +1,29 @@
+uuid: 2d9dc802-b10b-44b3-9269-664336bff98d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coll_contacts_person
+    - node.type.a3d_personal_contact
+    - taxonomy.vocabulary.actor
+id: node.a3d_personal_contact.field_coll_contacts_person
+field_name: field_coll_contacts_person
+entity_type: node
+bundle: a3d_personal_contact
+label: 'Contacts - person'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      actor: actor
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

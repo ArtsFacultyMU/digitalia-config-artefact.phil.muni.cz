@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.resource_types.field_authority_link
+    - field.field.taxonomy_term.resource_types.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.resource_types.field_tax_hierarchical_weight
     - taxonomy.vocabulary.resource_types
   module:
     - link
@@ -15,6 +17,16 @@ targetEntityType: taxonomy_term
 bundle: resource_types
 mode: default
 content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_taxonomy_title_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   description:
     type: text_default
     label: hidden
@@ -35,5 +47,7 @@ content:
     weight: 1
     region: content
 hidden:
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
   langcode: true
   search_api_excerpt: true

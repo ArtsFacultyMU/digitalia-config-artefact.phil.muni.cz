@@ -1,0 +1,20 @@
+uuid: f0e5e6c0-e356-434f-a594-1550436b4029
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.traceology
+  module:
+    - path
+id: node.traceology.path
+field_name: path
+entity_type: node
+bundle: traceology
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

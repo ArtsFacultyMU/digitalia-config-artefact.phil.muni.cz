@@ -1,0 +1,23 @@
+uuid: ab57b6bb-4bcc-45cb-ac78-c76117f394fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_analysed_month
+    - node.type.analysis
+id: node.analysis.field_analysed_month
+field_name: field_analysed_month
+entity_type: node
+bundle: analysis
+label: 'Month analysed '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

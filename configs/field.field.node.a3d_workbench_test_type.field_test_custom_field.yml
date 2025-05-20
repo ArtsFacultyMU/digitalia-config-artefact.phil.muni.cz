@@ -1,0 +1,91 @@
+uuid: 86c0ff6e-ec5b-46d5-801f-b08287856bac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test_custom_field
+    - node.type.a3d_workbench_test_type
+    - taxonomy.vocabulary.artefact_category
+  module:
+    - custom_field
+id: node.a3d_workbench_test_type.field_test_custom_field
+field_name: field_test_custom_field
+entity_type: node
+bundle: a3d_workbench_test_type
+label: 'Test custom field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    text_subfield:
+      type: text
+      weight: 0
+      check_empty: false
+      widget_settings:
+        label: 'Text subfield'
+        translatable: true
+        settings:
+          description: ''
+          description_display: after
+          size: 60
+          placeholder: ''
+          maxlength: 255
+          maxlength_js: false
+          prefix: ''
+          suffix: ''
+          required: false
+    number_subfield:
+      type: integer
+      weight: 0
+      check_empty: false
+      widget_settings:
+        label: 'Number subfield'
+        translatable: true
+        settings:
+          description: ''
+          description_display: after
+          placeholder: ''
+          min: null
+          max: null
+          prefix: ''
+          suffix: ''
+          required: false
+    taxonomoy_subfield:
+      type: entity_reference_autocomplete
+      weight: 0
+      check_empty: false
+      widget_settings:
+        label: 'Taxonomoy subfield'
+        translatable: true
+        settings:
+          description: ''
+          description_display: after
+          size: 60
+          placeholder: ''
+          required: false
+          match_operator: CONTAINS
+          match_limit: 10
+          handler: 'default:taxonomy_term'
+          handler_settings:
+            sort:
+              field: name
+              direction: asc
+            auto_create: false
+            target_bundles:
+              artefact_category: artefact_category
+            auto_create_bundle: ''
+    date_subfield:
+      type: datetime_default
+      weight: 0
+      check_empty: false
+      widget_settings:
+        label: 'Date subfield'
+        translatable: true
+        settings:
+          description: ''
+          description_display: after
+          required: false
+field_type: custom

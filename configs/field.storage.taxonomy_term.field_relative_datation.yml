@@ -1,0 +1,19 @@
+uuid: d4856f7a-0e55-4601-8e84-3f1b996f8a22
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_relative_datation
+field_name: field_relative_datation
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

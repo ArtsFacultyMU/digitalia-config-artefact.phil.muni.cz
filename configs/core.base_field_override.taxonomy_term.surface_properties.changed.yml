@@ -1,0 +1,18 @@
+uuid: 5503fd59-cf0a-4910-aab9-90106cd21d08
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.surface_properties
+id: taxonomy_term.surface_properties.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: surface_properties
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

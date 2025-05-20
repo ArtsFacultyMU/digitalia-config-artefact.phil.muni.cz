@@ -1,0 +1,21 @@
+uuid: 41b7dcad-8c17-44a4-b949-6ec28ec78a5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test_date
+    - node.type.a3d_workbench_test_type
+  module:
+    - datetime
+id: node.a3d_workbench_test_type.field_test_date
+field_name: field_test_date
+entity_type: node
+bundle: a3d_workbench_test_type
+label: 'TEST date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

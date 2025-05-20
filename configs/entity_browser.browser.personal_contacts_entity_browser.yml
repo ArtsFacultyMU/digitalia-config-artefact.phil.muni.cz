@@ -1,0 +1,31 @@
+uuid: 1df27d87-4586-48af-b48f-fe080b412505
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.a3d_arf_taxonomy
+  module:
+    - views
+name: personal_contacts_entity_browser
+label: 'Personal contacts entity browser'
+display: modal
+display_configuration:
+  width: '800'
+  height: '800'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  b3f1a4e2-4e65-40a0-a2df-1ec0403cd0e8:
+    id: view
+    uuid: b3f1a4e2-4e65-40a0-a2df-1ec0403cd0e8
+    label: view
+    weight: 1
+    settings:
+      submit_text: 'Select entities'
+      auto_select: false
+      view: a3d_arf_taxonomy
+      view_display: entity_browser_3

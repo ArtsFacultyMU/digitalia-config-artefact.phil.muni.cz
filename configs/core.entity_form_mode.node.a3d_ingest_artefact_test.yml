@@ -1,0 +1,11 @@
+uuid: 05713f13-bccd-43ab-a7d1-f63e0fd7b2aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.a3d_ingest_artefact_test
+label: 'A3D ingest artefact test'
+description: ''
+targetEntityType: node
+cache: true

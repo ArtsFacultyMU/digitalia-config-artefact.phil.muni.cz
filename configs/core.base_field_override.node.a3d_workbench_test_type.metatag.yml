@@ -1,0 +1,20 @@
+uuid: d502297f-1a9f-4b37-b436-dd8fbdddbce2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.a3d_workbench_test_type
+  module:
+    - metatag
+id: node.a3d_workbench_test_type.metatag
+field_name: metatag
+entity_type: node
+bundle: a3d_workbench_test_type
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

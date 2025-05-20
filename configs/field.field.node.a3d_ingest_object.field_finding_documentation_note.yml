@@ -1,0 +1,19 @@
+uuid: b5b63006-c06a-4909-bf09-5a1d9fabab11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_finding_documentation_note
+    - node.type.a3d_ingest_object
+id: node.a3d_ingest_object.field_finding_documentation_note
+field_name: field_finding_documentation_note
+entity_type: node
+bundle: a3d_ingest_object
+label: 'Finding documentation note'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

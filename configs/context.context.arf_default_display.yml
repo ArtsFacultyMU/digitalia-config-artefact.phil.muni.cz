@@ -1,0 +1,25 @@
+uuid: df3ca788-a406-434c-8591-2d2499fd7e26
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+label: 'ARF default display'
+name: arf_default_display
+group: Display
+description: "A3D change default node view to 'ARF Display' on artefact.phil.muni.cz"
+requireAllConditions: true
+disabled: false
+conditions:
+  request_domain:
+    id: request_domain
+    negate: false
+    uuid: b3eda792-7548-4711-9e64-ad35380fc37f
+    context_mapping: {  }
+    domains: "artefact-devel.phil.muni.cz\r\nartefact.phil.muni.cz"
+reactions:
+  view_mode_alter:
+    id: view_mode_alter
+    saved: false
+    mode: node.arf_display
+weight: -3

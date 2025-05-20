@@ -1,0 +1,2 @@
+label: 'Identifikační číslo artefaktu'
+description: 'Zadejte interní identifikační číslo artefaktu, formát může být libovolný; nemá-li artefakt žádné identifikační číslo, zkonstruujte jej pro tento účel.'

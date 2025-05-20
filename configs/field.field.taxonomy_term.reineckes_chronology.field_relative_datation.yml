@@ -1,0 +1,31 @@
+uuid: 6eef4997-b407-4230-95b0-c7f98f0a16a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_relative_datation
+    - taxonomy.vocabulary.reineckes_chronology
+    - taxonomy.vocabulary.relative_datation
+    - taxonomy.vocabulary.unknown_values
+id: taxonomy_term.reineckes_chronology.field_relative_datation
+field_name: field_relative_datation
+entity_type: taxonomy_term
+bundle: reineckes_chronology
+label: 'Relative datation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      relative_datation: relative_datation
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: relative_datation
+field_type: entity_reference

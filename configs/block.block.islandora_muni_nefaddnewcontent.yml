@@ -14,7 +14,7 @@ dependencies:
 id: islandora_muni_nefaddnewcontent
 theme: islandora_muni
 region: sidebar_second
-weight: -29
+weight: -47
 provider: null
 plugin: 'simple_block:nef_add_new_content'
 settings:

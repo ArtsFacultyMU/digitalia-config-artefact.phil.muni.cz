@@ -1,0 +1,18 @@
+uuid: 6931b5aa-7b8a-4b95-91eb-cc9de487015b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.traceology
+id: node.traceology.title
+field_name: title
+entity_type: node
+bundle: traceology
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+label: Geolokace
+settings:
+  field_settings:
+    spatial_ref_system:
+      label: 'Systém geolokace'
+    loc_coord_cadastre_x:
+      label: 'Souřadnice 1'
+    loc_coord_cadastre_y:
+      label: 'Souřadnice 2'
+    loc_coord_cadastre_accuracy:
+      label: 'Přesnost souřadnic'

@@ -1,0 +1,20 @@
+uuid: 34c39898-dae0-413c-a91a-95f7d730ae92
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.reineckes_chronology
+  module:
+    - metatag
+id: taxonomy_term.reineckes_chronology.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: reineckes_chronology
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

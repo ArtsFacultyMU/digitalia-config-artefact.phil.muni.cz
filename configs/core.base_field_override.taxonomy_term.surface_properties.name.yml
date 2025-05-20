@@ -1,0 +1,18 @@
+uuid: 2723e9d1-8bcf-4973-8af9-841b9535aae9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.surface_properties
+id: taxonomy_term.surface_properties.name
+field_name: name
+entity_type: taxonomy_term
+bundle: surface_properties
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,33 @@
+uuid: 86bca32f-6b2c-4567-a61c-e971b0e94743
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.finding_documentation.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.finding_documentation.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.finding_documentation
+  module:
+    - text
+id: taxonomy_term.finding_documentation.default
+targetEntityType: taxonomy_term
+bundle: finding_documentation
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_taxonomy_title_entity_view_2: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
+  langcode: true
+  search_api_excerpt: true

@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.taxonomy_term.instrument_type.field_identifier
     - field.field.taxonomy_term.instrument_type.field_identifier_type
+    - field.field.taxonomy_term.instrument_type.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.instrument_type.field_tax_hierarchical_weight
     - taxonomy.vocabulary.instrument_type
   module:
     - path
@@ -73,4 +75,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true

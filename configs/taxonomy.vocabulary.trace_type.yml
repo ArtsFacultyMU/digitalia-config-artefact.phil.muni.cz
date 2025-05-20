@@ -1,0 +1,9 @@
+uuid: 980ea01c-a041-4b63-aea2-b16b7f5648d5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Trace type'
+vid: trace_type
+description: SWD
+weight: 0
+new_revision: false

@@ -4,11 +4,7 @@ status: true
 dependencies:
   module:
     - datafield
-    - field_permissions
     - node
-third_party_settings:
-  field_permissions:
-    permission_type: public
 id: node.field_geolocation
 field_name: field_geolocation
 entity_type: node
@@ -53,7 +49,7 @@ settings:
       datetime_type: date
 module: datafield
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

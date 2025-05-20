@@ -1,0 +1,29 @@
+uuid: 750b5354-fdbb-430c-bf51-d89982764f2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coll_org
+    - node.type.a3d_ingest_object
+    - taxonomy.vocabulary.actor
+id: node.a3d_ingest_object.field_coll_org
+field_name: field_coll_org
+entity_type: node
+bundle: a3d_ingest_object
+label: Organisation
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      actor: actor
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

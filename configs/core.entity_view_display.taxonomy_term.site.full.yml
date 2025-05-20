@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.site.field_city
     - field.field.taxonomy_term.site.field_city_code
+    - field.field.taxonomy_term.site.field_city_code_text
+    - field.field.taxonomy_term.site.field_city_text
     - field.field.taxonomy_term.site.field_country
     - field.field.taxonomy_term.site.field_geo_geolocation
     - field.field.taxonomy_term.site.field_plot_number
@@ -13,6 +15,8 @@ dependencies:
     - field.field.taxonomy_term.site.field_state
     - field.field.taxonomy_term.site.field_street
     - field.field.taxonomy_term.site.field_street_number
+    - field.field.taxonomy_term.site.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.site.field_tax_hierarchical_weight
     - taxonomy.vocabulary.site
   module:
     - text
@@ -92,8 +96,13 @@ hidden:
   a3d_eva_groups_solr_entity_view_1: true
   a3d_eva_groups_solr_entity_view_2: true
   a3d_eva_groups_solr_nef: true
+  a3d_eva_taxonomy_title_entity_view_2: true
   field_city_code: true
+  field_city_code_text: true
+  field_city_text: true
   field_geo_geolocation: true
   field_state: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
   langcode: true
   search_api_excerpt: true

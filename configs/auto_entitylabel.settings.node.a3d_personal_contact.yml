@@ -1,0 +1,10 @@
+status: 1
+pattern: 'Personal contact [node:nid]'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - node.type.a3d_personal_contact
+new_content_behavior: 1

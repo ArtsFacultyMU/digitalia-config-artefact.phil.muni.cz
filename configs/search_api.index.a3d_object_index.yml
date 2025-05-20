@@ -4,23 +4,19 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.analysis_types
-    - core.entity_view_mode.node.arf_display
-    - core.entity_view_mode.node.exm_display
-    - core.entity_view_mode.node.kch_display
-    - core.entity_view_mode.node.meta_display
-    - core.entity_view_mode.node.nef_display
+    - core.entity_view_mode.node.arf_index
+    - core.entity_view_mode.node.index
+    - core.entity_view_mode.node.kch_index
+    - core.entity_view_mode.node.nef_index
     - core.entity_view_mode.node.parent_group_names
     - core.entity_view_mode.node.parent_groups
     - core.entity_view_mode.taxonomy_term.parent_groups
     - field.storage.node.field_2d_asymmetry
-    - field.storage.node.field_3d_shaping
     - field.storage.node.field_3d_shaping_struct
-    - field.storage.node.field_3d_traces
     - field.storage.node.field_3d_traces_struct
     - field.storage.node.field_a_asymmetry
     - field.storage.node.field_abs_dat_range
     - field.storage.node.field_abs_dat_source
-    - field.storage.node.field_ais_cr
     - field.storage.node.field_alteration
     - field.storage.node.field_alternative_id
     - field.storage.node.field_analysis_of
@@ -153,6 +149,8 @@ dependencies:
     - field.storage.node.field_tip_fracture
     - field.storage.node.field_wear
     - field.storage.node.field_wgs84_geolocation
+    - field.storage.taxonomy_term.field_tax_hierarchical_depth
+    - field.storage.taxonomy_term.field_tax_hierarchical_weight
     - search_api.server.default_solr_server
   module:
     - node
@@ -223,7 +221,7 @@ field_settings:
       view_mode:
         'entity:node':
           ':default': ''
-          a3d_object: arf_display
+          a3d_object: arf_index
           analysis: ''
           sample: ''
         'entity:taxonomy_term':
@@ -238,6 +236,7 @@ field_settings:
           analysis_type: ''
           aquamanile_subtype: ''
           aquamanile_type: ''
+          archaeological_site: ':default'
           artefact_category: ''
           artefact_class: ''
           artefact_subclass: ''
@@ -272,12 +271,14 @@ field_settings:
           fhp_type: ''
           finding_context_subtype: ''
           finding_context_type: ''
+          finding_documentation: ':default'
           firing_characteristic: ''
           format_size: ''
           fract_nature: ''
           fract_preservation: ''
           frequencies: ''
           g_w_practice: ''
+          general_accuracy: ':default'
           general_lateral_wear: ''
           general_type: ''
           genre: ''
@@ -299,6 +300,7 @@ field_settings:
           licence_url: ''
           loc_coord_cadastre_accuracy: ''
           longitudinal_profile: ''
+          material_inclusions: ':default'
           matrix_characteristic: ''
           measured_variable: ''
           measurement_type: ''
@@ -308,12 +310,14 @@ field_settings:
           motif: ''
           msdp_method: ''
           msdp_value: ''
+          non_plastic_inclusions_scale: ':default'
           orig_state_pres: ''
           original_location: ''
           painting: ''
           person: ''
           physical_form: ''
           pigment: ''
+          place_analysis: ':default'
           posture: ''
           preserved_parts: ''
           proj_dedication: ''
@@ -326,14 +330,18 @@ field_settings:
           recent_damage: ''
           recent_damage_type: ''
           record_source: ''
+          region: ':default'
+          reineckes_chronology: ':default'
           relative_datation: ''
           relief_type: ''
           reparation_features: ''
+          research_question: ':default'
           resource_types: ''
           retouch: ''
           rights_access: ''
           rights_reproduction: ''
           rock_fragments: ''
+          sampling_type: ':default'
           scale_type: ''
           sdp_method: ''
           sdp_value: ''
@@ -344,6 +352,7 @@ field_settings:
           small_sculpture_subtype: ''
           small_sculpture_type: ''
           spatial_ref_system: ''
+          standard_chronology: ':default'
           state: ''
           stove_tile_placement_type_1: ''
           stove_tile_placement_type_2: ''
@@ -354,163 +363,17 @@ field_settings:
           subord_dataset: ''
           surface_alt: ''
           surface_finishing: ''
+          surface_properties: ':default'
+          sword_segment: ':default'
           tags: ''
           temporal_subjects: ''
           test_level_0: ''
           thermic_cracks: ''
           tile_type: ''
           tip_fracture: ''
+          trace_type: ':default'
           units: ''
           unknown_values: ''
-  a3d_exm_display:
-    label: 'A3D EXM display'
-    property_path: rendered_item
-    type: 'solr_text_custom:ngram'
-    configuration:
-      roles:
-        - anonymous
-      view_mode:
-        'entity:node':
-          ':default': ''
-          a3d_object: exm_display
-          analysis: ':default'
-          sample: ':default'
-        'entity:taxonomy_term':
-          2d_asymetry: ''
-          3d_shaping: ':default'
-          3d_traces: ':default'
-          ':default': ''
-          acquisition_type: ':default'
-          actor: ':default'
-          actor_type: ':default'
-          alteration: ''
-          analysis_type: ':default'
-          aquamanile_subtype: ':default'
-          aquamanile_type: ':default'
-          artefact_category: ''
-          artefact_class: ''
-          artefact_subclass: ''
-          author: ':default'
-          ballistic_profile: ''
-          base_curve: ''
-          binder_type: ''
-          blank_orientation: ''
-          chemical_compounds: ':default'
-          circle: ''
-          city: ''
-          city_code: ''
-          coll_keyword: ''
-          coll_lang: ''
-          coll_org: ''
-          collection_title: ''
-          colour: ':default'
-          corporate_body: ''
-          country_a3d: ''
-          cov_spat: ''
-          creation: ''
-          cross_section_asymmetry: ''
-          culture: ''
-          current_location: ''
-          deposition_cond: ''
-          dimensions_extent: ':default'
-          dimensions_qualifier: ':default'
-          elements: ':default'
-          family: ''
-          feature_id: ''
-          feature_type: ''
-          fhp_type: ':default'
-          finding_context_subtype: ''
-          finding_context_type: ''
-          firing_characteristic: ':default'
-          format_size: ':default'
-          fract_nature: ''
-          fract_preservation: ''
-          frequencies: ''
-          g_w_practice: ''
-          general_lateral_wear: ''
-          general_type: ''
-          genre: ''
-          geo_location: ''
-          glue_residues: ''
-          grain_type: ''
-          holder_type: ''
-          identifier_type: ':default'
-          instrument: ':default'
-          instrument_relation_type: ':default'
-          instrument_type: ':default'
-          islandora_display: ''
-          islandora_media_use: ''
-          islandora_models: ''
-          issuance_modes: ''
-          language: ''
-          ledge_type: ':default'
-          legal_status: ''
-          licence_url: ''
-          loc_coord_cadastre_accuracy: ''
-          longitudinal_profile: ''
-          matrix_characteristic: ':default'
-          measured_variable: ':default'
-          measurement_type: ''
-          metadata_rights: ''
-          microstructure: ''
-          mineral_fragments: ''
-          motif: ':default'
-          msdp_method: ''
-          msdp_value: ''
-          orig_state_pres: ''
-          original_location: ''
-          painting: ''
-          person: ''
-          physical_form: ''
-          pigment: ''
-          posture: ':default'
-          preserved_parts: ''
-          proj_dedication: ''
-          proj_id: ''
-          quality: ''
-          quiver_trans_bright_spots: ''
-          quiver_trans_lat_rounding: ''
-          quiver_trans_tip_rounding: ''
-          raw_material: ''
-          recent_damage: ''
-          recent_damage_type: ''
-          record_source: ''
-          relative_datation: ''
-          relief_type: ':default'
-          reparation_features: ''
-          resource_types: ''
-          retouch: ''
-          rights_access: ''
-          rights_reproduction: ''
-          rock_fragments: ''
-          scale_type: ':default'
-          sdp_method: ''
-          sdp_value: ''
-          serration: ''
-          shape: ':default'
-          site: ''
-          site_type: ':default'
-          small_sculpture_subtype: ':default'
-          small_sculpture_type: ':default'
-          spatial_ref_system: ''
-          state: ''
-          stove_tile_placement_type_1: ':default'
-          stove_tile_placement_type_2: ':default'
-          stove_tile_placement_type_3: ':default'
-          stove_tile_shape_type_1: ':default'
-          stove_tile_shape_type_2: ':default'
-          subject: ''
-          subord_dataset: ''
-          surface_alt: ''
-          surface_finishing: ':default'
-          tags: ''
-          temporal_subjects: ''
-          test_level_0: ''
-          thermic_cracks: ''
-          tile_type: ':default'
-          tip_fracture: ''
-          units: ''
-          unknown_values: ':default'
   a3d_kch_display:
     label: 'A3D KCH Display'
     property_path: rendered_item
@@ -521,7 +384,7 @@ field_settings:
       view_mode:
         'entity:node':
           ':default': ''
-          a3d_object: kch_display
+          a3d_object: kch_index
           analysis: ''
           sample: ''
         'entity:taxonomy_term':
@@ -536,6 +399,7 @@ field_settings:
           analysis_type: ''
           aquamanile_subtype: ''
           aquamanile_type: ''
+          archaeological_site: ':default'
           artefact_category: ''
           artefact_class: ''
           artefact_subclass: ''
@@ -570,12 +434,14 @@ field_settings:
           fhp_type: ''
           finding_context_subtype: ''
           finding_context_type: ''
+          finding_documentation: ':default'
           firing_characteristic: ''
           format_size: ''
           fract_nature: ''
           fract_preservation: ''
           frequencies: ''
           g_w_practice: ''
+          general_accuracy: ':default'
           general_lateral_wear: ''
           general_type: ''
           genre: ''
@@ -614,6 +480,7 @@ field_settings:
           person: ''
           physical_form: ''
           pigment: ''
+          place_analysis: ':default'
           posture: ''
           preserved_parts: ''
           proj_dedication: ''
@@ -626,14 +493,18 @@ field_settings:
           recent_damage: ''
           recent_damage_type: ''
           record_source: ''
+          region: ':default'
+          reineckes_chronology: ':default'
           relative_datation: ''
           relief_type: ''
           reparation_features: ''
+          research_question: ':default'
           resource_types: ''
           retouch: ''
           rights_access: ''
           rights_reproduction: ''
           rock_fragments: ''
+          sampling_type: ':default'
           scale_type: ''
           sdp_method: ''
           sdp_value: ''
@@ -644,6 +515,7 @@ field_settings:
           small_sculpture_subtype: ''
           small_sculpture_type: ''
           spatial_ref_system: ''
+          standard_chronology: ':default'
           state: ''
           stove_tile_placement_type_1: ''
           stove_tile_placement_type_2: ''
@@ -654,12 +526,15 @@ field_settings:
           subord_dataset: ''
           surface_alt: ''
           surface_finishing: ''
+          surface_properties: ':default'
+          sword_segment: ':default'
           tags: ''
           temporal_subjects: ''
           test_level_0: ''
           thermic_cracks: ''
           tile_type: ''
           tip_fracture: ''
+          trace_type: ':default'
           units: ''
           unknown_values: ''
   a3d_meta_display:
@@ -671,10 +546,10 @@ field_settings:
         - anonymous
       view_mode:
         'entity:node':
-          ':default': ''
-          a3d_object: meta_display
-          analysis: meta_display
-          sample: meta_display
+          ':default': index
+          a3d_object: ':default'
+          analysis: ''
+          sample: ''
         'entity:taxonomy_term':
           2d_asymetry: ''
           3d_shaping: ''
@@ -687,6 +562,7 @@ field_settings:
           analysis_type: ''
           aquamanile_subtype: ''
           aquamanile_type: ''
+          archaeological_site: ':default'
           artefact_category: ''
           artefact_class: ''
           artefact_subclass: ''
@@ -721,12 +597,14 @@ field_settings:
           fhp_type: ''
           finding_context_subtype: ''
           finding_context_type: ''
+          finding_documentation: ':default'
           firing_characteristic: ''
           format_size: ''
           fract_nature: ''
           fract_preservation: ''
           frequencies: ''
           g_w_practice: ''
+          general_accuracy: ':default'
           general_lateral_wear: ''
           general_type: ''
           genre: ''
@@ -748,6 +626,7 @@ field_settings:
           licence_url: ''
           loc_coord_cadastre_accuracy: ''
           longitudinal_profile: ''
+          material_inclusions: ':default'
           matrix_characteristic: ''
           measured_variable: ''
           measurement_type: ''
@@ -757,12 +636,14 @@ field_settings:
           motif: ''
           msdp_method: ''
           msdp_value: ''
+          non_plastic_inclusions_scale: ':default'
           orig_state_pres: ''
           original_location: ''
           painting: ''
           person: ''
           physical_form: ''
           pigment: ''
+          place_analysis: ':default'
           posture: ''
           preserved_parts: ''
           proj_dedication: ''
@@ -775,14 +656,18 @@ field_settings:
           recent_damage: ''
           recent_damage_type: ''
           record_source: ''
+          region: ':default'
+          reineckes_chronology: ':default'
           relative_datation: ''
           relief_type: ''
           reparation_features: ''
+          research_question: ':default'
           resource_types: ''
           retouch: ''
           rights_access: ''
           rights_reproduction: ''
           rock_fragments: ''
+          sampling_type: ':default'
           scale_type: ':default'
           sdp_method: ''
           sdp_value: ''
@@ -793,6 +678,7 @@ field_settings:
           small_sculpture_subtype: ''
           small_sculpture_type: ''
           spatial_ref_system: ''
+          standard_chronology: ':default'
           state: ''
           stove_tile_placement_type_1: ''
           stove_tile_placement_type_2: ''
@@ -803,12 +689,15 @@ field_settings:
           subord_dataset: ''
           surface_alt: ''
           surface_finishing: ''
+          surface_properties: ':default'
+          sword_segment: ':default'
           tags: ''
           temporal_subjects: ''
           test_level_0: ''
           thermic_cracks: ''
           tile_type: ''
           tip_fracture: ''
+          trace_type: ':default'
           units: ''
           unknown_values: ''
   a3d_nef_display:
@@ -821,7 +710,7 @@ field_settings:
       view_mode:
         'entity:node':
           ':default': ''
-          a3d_object: nef_display
+          a3d_object: nef_index
           analysis: ''
           sample: ''
         'entity:taxonomy_term':
@@ -836,6 +725,7 @@ field_settings:
           analysis_type: ':default'
           aquamanile_subtype: ':default'
           aquamanile_type: ':default'
+          archaeological_site: ':default'
           artefact_category: ''
           artefact_class: ''
           artefact_subclass: ''
@@ -870,12 +760,14 @@ field_settings:
           fhp_type: ':default'
           finding_context_subtype: ''
           finding_context_type: ''
+          finding_documentation: ':default'
           firing_characteristic: ':default'
           format_size: ':default'
           fract_nature: ''
           fract_preservation: ''
           frequencies: ''
           g_w_practice: ''
+          general_accuracy: ':default'
           general_lateral_wear: ''
           general_type: ''
           genre: ''
@@ -897,6 +789,7 @@ field_settings:
           licence_url: ''
           loc_coord_cadastre_accuracy: ''
           longitudinal_profile: ''
+          material_inclusions: ':default'
           matrix_characteristic: ':default'
           measured_variable: ':default'
           measurement_type: ''
@@ -906,12 +799,14 @@ field_settings:
           motif: ':default'
           msdp_method: ''
           msdp_value: ''
+          non_plastic_inclusions_scale: ':default'
           orig_state_pres: ''
           original_location: ''
           painting: ''
           person: ''
           physical_form: ''
           pigment: ''
+          place_analysis: ':default'
           posture: ':default'
           preserved_parts: ''
           proj_dedication: ''
@@ -924,14 +819,18 @@ field_settings:
           recent_damage: ''
           recent_damage_type: ''
           record_source: ''
+          region: ':default'
+          reineckes_chronology: ':default'
           relative_datation: ''
           relief_type: ':default'
           reparation_features: ''
+          research_question: ':default'
           resource_types: ''
           retouch: ''
           rights_access: ''
           rights_reproduction: ''
           rock_fragments: ''
+          sampling_type: ':default'
           scale_type: ':default'
           sdp_method: ''
           sdp_value: ''
@@ -942,6 +841,7 @@ field_settings:
           small_sculpture_subtype: ':default'
           small_sculpture_type: ':default'
           spatial_ref_system: ''
+          standard_chronology: ':default'
           state: ''
           stove_tile_placement_type_1: ':default'
           stove_tile_placement_type_2: ':default'
@@ -952,12 +852,15 @@ field_settings:
           subord_dataset: ''
           surface_alt: ''
           surface_finishing: ':default'
+          surface_properties: ':default'
+          sword_segment: ':default'
           tags: ''
           temporal_subjects: ''
           test_level_0: ''
           thermic_cracks: ''
           tile_type: ':default'
           tip_fracture: ''
+          trace_type: ':default'
           units: ''
           unknown_values: ':default'
   a3d_object_parent_group_names:
@@ -1269,8 +1172,12 @@ field_settings:
         - 'entity:node/field_3d_shaping_struct'
         - 'entity:node/field_3d_traces_struct'
         - 'entity:node/field_a_asymmetry'
+        - 'entity:node/field_acquisition_type'
         - 'entity:node/field_alteration'
         - 'entity:node/field_analysis_type'
+        - 'entity:node/field_aquamanile_subtype'
+        - 'entity:node/field_aquamanile_type'
+        - 'entity:node/field_archaeological_site'
         - 'entity:node/field_artefact_category'
         - 'entity:node/field_artefact_class'
         - 'entity:node/field_artefact_id_type'
@@ -1284,11 +1191,14 @@ field_settings:
         - 'entity:node/field_blank_orientation'
         - 'entity:node/field_circle'
         - 'entity:node/field_city'
+        - 'entity:node/field_city_code'
+        - 'entity:node/field_clay_colour'
         - 'entity:node/field_coll_keyword'
         - 'entity:node/field_coll_lang'
         - 'entity:node/field_coll_org'
         - 'entity:node/field_coll_title'
         - 'entity:node/field_colour_paint'
+        - 'entity:node/field_country'
         - 'entity:node/field_cov_spat'
         - 'entity:node/field_creation'
         - 'entity:node/field_culture'
@@ -1305,19 +1215,18 @@ field_settings:
         - 'entity:node/field_fract_preservation_struct'
         - 'entity:node/field_g_w_practice'
         - 'entity:node/field_general_lateral_wear'
+        - 'entity:node/field_general_type'
         - 'entity:node/field_glue_residues'
-        - 'entity:node/field_grain_type'
         - 'entity:node/field_has_a_construction_opening'
-        - 'entity:node/field_holder_type'
         - 'entity:node/field_ledge_type'
         - 'entity:node/field_legal_status'
         - 'entity:node/field_licence_url'
         - 'entity:node/field_longitudinal_profile'
         - 'entity:node/field_mass_structure_data_pres'
         - 'entity:node/field_material_colour'
-        - 'entity:node/field_microstructure'
-        - 'entity:node/field_mineral_fragments'
-        - 'entity:node/field_minerals'
+        - 'entity:node/field_material_inclusions'
+        - 'entity:node/field_metadata_rights'
+        - 'entity:node/field_motif'
         - 'entity:node/field_orig_state_pres'
         - 'entity:node/field_original_location'
         - 'entity:node/field_ownership'
@@ -1333,21 +1242,32 @@ field_settings:
         - 'entity:node/field_raw_material'
         - 'entity:node/field_recent_damage'
         - 'entity:node/field_recent_damage_type_struct'
+        - 'entity:node/field_record_source'
+        - 'entity:node/field_reineckes_chronology'
         - 'entity:node/field_relative_datation'
+        - 'entity:node/field_relief'
         - 'entity:node/field_reparation_features'
         - 'entity:node/field_retouch'
         - 'entity:node/field_rights_access'
         - 'entity:node/field_rights_reproduction'
-        - 'entity:node/field_rock_fragments'
+        - 'entity:node/field_sculpture_subtype'
+        - 'entity:node/field_sculpture_type'
         - 'entity:node/field_serration'
         - 'entity:node/field_site'
+        - 'entity:node/field_st_placement_type1'
+        - 'entity:node/field_st_placement_type2'
+        - 'entity:node/field_st_placement_type3'
+        - 'entity:node/field_st_shape_type1'
+        - 'entity:node/field_st_shape_type2'
         - 'entity:node/field_state'
         - 'entity:node/field_subord_dataset'
         - 'entity:node/field_surf_data_pres'
         - 'entity:node/field_surface_alt'
         - 'entity:node/field_surface_finishing'
         - 'entity:node/field_thermic_cracks'
+        - 'entity:node/field_tile_type'
         - 'entity:node/field_tip_fracture'
+        - 'entity:node/field_wgs84_geolocation_accuracy'
   a3d_term_groups:
     label: 'A3D term groups'
     property_path: rendered_item
@@ -1512,6 +1432,21 @@ field_settings:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       fields: {  }
   aggregated_field_artefact_category:
     label: 'A3D Aggregated Artefact category'
@@ -1582,14 +1517,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_2d_asymmetry
-  field_3d_shaping:
-    label: '3D specifics of shaping'
-    datasource_id: 'entity:node'
-    property_path: field_3d_shaping
-    type: 'solr_text_custom:ngram'
-    dependencies:
-      config:
-        - field.storage.node.field_3d_shaping
   field_3d_shaping_struct:
     label: '3D specifics of shaping (structured)'
     datasource_id: 'entity:node'
@@ -1608,14 +1535,6 @@ field_settings:
         - field.storage.node.field_3d_shaping_struct
       module:
         - taxonomy
-  field_3d_traces:
-    label: '3D specifics of traces'
-    datasource_id: 'entity:node'
-    property_path: field_3d_traces
-    type: 'solr_text_custom:ngram'
-    dependencies:
-      config:
-        - field.storage.node.field_3d_traces
   field_3d_traces_struct:
     label: '3D specifics of traces (structured)'
     datasource_id: 'entity:node'
@@ -1658,14 +1577,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_abs_dat_source
-  field_ais_cr:
-    label: 'AIS CR'
-    datasource_id: 'entity:node'
-    property_path: field_ais_cr
-    type: 'solr_text_custom:ngram'
-    dependencies:
-      config:
-        - field.storage.node.field_ais_cr
   field_alteration:
     label: Alteration
     datasource_id: 'entity:node'
@@ -2612,6 +2523,16 @@ field_settings:
         - field.storage.node.field_raw_material
       module:
         - taxonomy
+  field_raw_material_weight:
+    label: 'Raw material » Taxonomy term » Weight'
+    datasource_id: 'entity:node'
+    property_path: 'field_raw_material:entity:weight'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_raw_material
+      module:
+        - taxonomy
   field_recent_damage:
     label: 'Recent damage & alteration'
     datasource_id: 'entity:node'
@@ -2706,6 +2627,28 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_relative_datation
+  field_relative_datation_hierarchical_depth:
+    label: 'Relative datation » Taxonomy term » Hierarchical Depth'
+    datasource_id: 'entity:node'
+    property_path: 'field_relative_datation:entity:field_tax_hierarchical_depth'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_relative_datation
+        - field.storage.taxonomy_term.field_tax_hierarchical_depth
+      module:
+        - taxonomy
+  field_relative_datation_hierarchical_weight:
+    label: 'Relative datation » Taxonomy term » Hierarchical Weight'
+    datasource_id: 'entity:node'
+    property_path: 'field_relative_datation:entity:field_tax_hierarchical_weight'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_relative_datation
+        - field.storage.taxonomy_term.field_tax_hierarchical_weight
+      module:
+        - taxonomy
   field_relative_datation_name:
     label: 'Relative datation » Taxonomy term » Name'
     datasource_id: 'entity:node'
@@ -2720,6 +2663,16 @@ field_settings:
     label: 'Relative datation » Taxonomy term » Term ID'
     datasource_id: 'entity:node'
     property_path: 'field_relative_datation:entity:tid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_relative_datation
+      module:
+        - taxonomy
+  field_relative_datation_weight:
+    label: 'Relative datation » Taxonomy term » Weight'
+    datasource_id: 'entity:node'
+    property_path: 'field_relative_datation:entity:weight'
     type: integer
     dependencies:
       config:
@@ -3383,6 +3336,14 @@ field_settings:
     dependencies:
       module:
         - node
+  weight:
+    label: Weight
+    datasource_id: 'entity:taxonomy_term'
+    property_path: weight
+    type: integer
+    dependencies:
+      module:
+        - taxonomy
 datasource_settings:
   'entity:node':
     bundles:
@@ -3411,6 +3372,7 @@ processor_settings:
     weights:
       preprocess_index: -45
     fields:
+      field_relative_datation: taxonomy_term-parent
       field_site: taxonomy_term-parent
   language_with_fallback: {  }
   rendered_item: {  }

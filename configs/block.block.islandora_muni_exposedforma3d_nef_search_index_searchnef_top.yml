@@ -14,7 +14,7 @@ dependencies:
 id: islandora_muni_exposedforma3d_nef_search_index_searchnef_top
 theme: islandora_muni
 region: header
-weight: -34
+weight: -35
 provider: null
 plugin: 'views_exposed_filter_block:a3d_nef_search_index_search-nef_top'
 settings:
@@ -31,8 +31,8 @@ visibility:
     mimetype: ''
   request_path:
     id: request_path
-    negate: false
-    pages: "!/nef/search\r\n/nef\r\n/nef/*\r\n/group/nef\r\n/group/nef/*\r\n/group/9\r\n/group/9/*\r\n/compare/*/nef"
+    negate: true
+    pages: /nef/search
   request_domain:
     id: request_domain
     negate: false

@@ -1,0 +1,19 @@
+uuid: 7c12e3b0-d7d2-4f04-9193-37ad8e49b53a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_finding_label
+field_name: field_finding_label
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

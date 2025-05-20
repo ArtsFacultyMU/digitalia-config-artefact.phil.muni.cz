@@ -1,0 +1,20 @@
+uuid: 54635bf6-6cc4-4767-9741-288efe488e2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sword_segment
+  module:
+    - metatag
+id: taxonomy_term.sword_segment.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: sword_segment
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

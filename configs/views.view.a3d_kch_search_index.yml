@@ -2118,7 +2118,7 @@ display:
             alter_text: true
             text: '{{ field_artefact_category_name }} | {{ field_artefact_id__value }}'
             make_link: true
-            path: '/kch/node/{{ nid }}'
+            path: '/node/{{ nid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -3711,7 +3711,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: '/kch/node/{{ nid }}'
             absolute: false
             external: false
@@ -3750,7 +3750,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -7961,6 +7961,10 @@ display:
               arf_user: '0'
               kch_user: '0'
               lindat_editor: '0'
+              workbench: '0'
+              manage_contracts: '0'
+              swd_user: '0'
+              producer: '0'
             expose_fields: false
             placeholder: ''
             searched_fields_id: search_api_fulltext_searched_fields
@@ -7980,7 +7984,7 @@ display:
           parse_mode: terms
           min_length: null
           fields:
-            - rendered_item
+            - a3d_kch_display
       filter_groups:
         operator: AND
         groups:

@@ -1,0 +1,20 @@
+uuid: de52ceaa-7783-4d93-ac4f-89ff40e537c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.traceology
+id: node.traceology.uid
+field_name: uid
+entity_type: node
+bundle: traceology
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

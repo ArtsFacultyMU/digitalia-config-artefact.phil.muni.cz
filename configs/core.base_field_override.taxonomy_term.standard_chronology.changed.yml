@@ -1,0 +1,18 @@
+uuid: dfb38d26-df5c-4bb2-ba72-8507dc88c3f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.standard_chronology
+id: taxonomy_term.standard_chronology.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: standard_chronology
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

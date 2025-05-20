@@ -1,0 +1,21 @@
+uuid: ab707b7e-900d-48af-9ba2-960aa251305d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.standard_chronology
+  module:
+    - text
+id: taxonomy_term.standard_chronology.description
+field_name: description
+entity_type: taxonomy_term
+bundle: standard_chronology
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

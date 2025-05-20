@@ -1,0 +1,11 @@
+uuid: d93504a6-55e2-4a75-9269-f9010fcc3d3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.a3d_arf_personal_contact
+label: 'A3D ARF personal contact'
+description: ''
+targetEntityType: taxonomy_term
+cache: true

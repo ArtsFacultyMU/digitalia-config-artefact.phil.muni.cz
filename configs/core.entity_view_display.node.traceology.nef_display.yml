@@ -1,0 +1,84 @@
+uuid: 8f0e058f-4a08-4472-87e4-ad49ca3ad6c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.nef_display
+    - field.field.node.traceology.field_conservation
+    - field.field.node.traceology.field_description_a3d
+    - field.field.node.traceology.field_general_note
+    - field.field.node.traceology.field_is_recent
+    - field.field.node.traceology.field_location
+    - field.field.node.traceology.field_segment
+    - field.field.node.traceology.field_surface_properties
+    - field.field.node.traceology.field_trace_type
+    - node.type.traceology
+  module:
+    - user
+id: node.traceology.nef_display
+targetEntityType: node
+bundle: traceology
+mode: nef_display
+content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_service_file:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_description_a3d:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_conservation: true
+  field_general_note: true
+  field_is_recent: true
+  field_location: true
+  field_segment: true
+  field_surface_properties: true
+  field_trace_type: true
+  langcode: true
+  search_api_excerpt: true

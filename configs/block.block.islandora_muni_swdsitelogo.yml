@@ -1,0 +1,37 @@
+uuid: a9f13bfe-0c0e-4cb5-9cc2-41fcfcc6f670
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.swd_site_logo
+  module:
+    - block_class
+    - context
+    - islandora
+    - simple_block
+  theme:
+    - islandora_muni
+third_party_settings:
+  block_class:
+    classes: block-sitelogo
+id: islandora_muni_swdsitelogo
+theme: islandora_muni
+region: header
+weight: -38
+provider: null
+plugin: 'simple_block:swd_site_logo'
+settings:
+  id: 'simple_block:swd_site_logo'
+  label: 'SWD site logo'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  request_domain:
+    id: request_domain
+    negate: false
+    domains: "swords-devel.phil.muni.cz\r\nswords.phil.muni.cz"
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

@@ -1,0 +1,18 @@
+uuid: 0dea5c48-7304-4fdd-8030-0024f5bf3c40
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.standard_chronology
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.standard_chronology
+target_entity_type_id: taxonomy_term
+target_bundle: standard_chronology
+default_langcode: site_default
+language_alterable: false

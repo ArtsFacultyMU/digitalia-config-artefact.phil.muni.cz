@@ -13,6 +13,7 @@ dependencies:
     - field.field.media.image.field_media_use
     - field.field.media.image.field_mime_type
     - field.field.media.image.field_original_name
+    - field.field.media.image.field_weight
     - field.field.media.image.field_width
     - media.type.image
   module:
@@ -38,6 +39,14 @@ content:
     weight: 0
     region: content
   link_for_entity_comparison_a3d_arf_entity_comparison:
+    type: entity_comparison_link
+    label: above
+    settings:
+      enitity_comparison: ''
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  link_for_entity_comparison_a3d_kch_entity_comparison:
     type: entity_comparison_link
     label: above
     settings:
@@ -73,6 +82,7 @@ hidden:
   field_media_use: true
   field_mime_type: true
   field_original_name: true
+  field_weight: true
   field_width: true
   langcode: true
   link_for_entity_comparison_a3d_image_comparison: true

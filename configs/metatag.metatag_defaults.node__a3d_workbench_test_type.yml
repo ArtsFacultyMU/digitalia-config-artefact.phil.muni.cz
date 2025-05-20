@@ -1,0 +1,10 @@
+uuid: 271c7079-9ced-480f-9808-dae906b5b774
+langcode: en
+status: true
+dependencies: {  }
+id: node__a3d_workbench_test_type
+label: 'Content: A3D Workbench test type'
+tags:
+  dcterms_description: '[digitalia_muni:media_mime_types]'
+  dcterms_publisher: '[digitalia_muni:media_urls]'
+  dcterms_title: '[node:title]'

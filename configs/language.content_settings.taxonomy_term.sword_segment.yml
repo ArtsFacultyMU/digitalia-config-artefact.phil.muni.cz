@@ -1,0 +1,18 @@
+uuid: 17908d98-fc00-4f23-8a87-c397aae3405c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sword_segment
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.sword_segment
+target_entity_type_id: taxonomy_term
+target_bundle: sword_segment
+default_langcode: site_default
+language_alterable: false

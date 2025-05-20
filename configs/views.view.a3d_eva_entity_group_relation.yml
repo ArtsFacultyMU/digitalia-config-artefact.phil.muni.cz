@@ -1073,7 +1073,7 @@ display:
             alter_text: false
             text: "{% if label__value == \"nef\" %}\r\nNeofig entry\r\n{% elseif label__value == \"arf\" %}\r\nArtefact entry\r\n{% elseif label__value == \"exm\" %}\r\nExample entry\r\n{% else %}\r\n{{ label }}\r\n{% endif %}"
             make_link: true
-            path: '/{{ field_group_code }}/node/{{ raw_arguments.nid }}'
+            path: '/node/{{ raw_arguments.nid }}?platform={{ field_group_code }}'
             absolute: false
             external: false
             replace_spaces: false

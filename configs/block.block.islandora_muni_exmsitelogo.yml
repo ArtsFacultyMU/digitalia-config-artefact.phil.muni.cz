@@ -17,7 +17,7 @@ third_party_settings:
 id: islandora_muni_exmsitelogo
 theme: islandora_muni
 region: header
-weight: -30
+weight: -31
 provider: null
 plugin: 'simple_block:exm_site_logo'
 settings:

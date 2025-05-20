@@ -1,0 +1,11 @@
+uuid: 5dfec125-b616-427d-b619-400f85c3e6a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.paged_from_taxonomy
+label: 'Paged from taxonomy'
+description: ''
+targetEntityType: node
+cache: true

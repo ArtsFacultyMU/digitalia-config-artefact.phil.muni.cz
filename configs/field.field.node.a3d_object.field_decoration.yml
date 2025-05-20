@@ -1,0 +1,29 @@
+uuid: 65e02e93-d9f7-42ff-8786-ee824d93d574
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_decoration
+    - node.type.a3d_object
+    - node.type.decoration
+id: node.a3d_object.field_decoration
+field_name: field_decoration
+entity_type: node
+bundle: a3d_object
+label: Decoration
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      decoration: decoration
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

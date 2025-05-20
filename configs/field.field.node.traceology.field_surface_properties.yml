@@ -1,0 +1,29 @@
+uuid: 3b983e09-ca34-40c8-b09b-2af459f1b60c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_surface_properties
+    - node.type.traceology
+    - taxonomy.vocabulary.surface_properties
+id: node.traceology.field_surface_properties
+field_name: field_surface_properties
+entity_type: node
+bundle: traceology
+label: 'Surface properties'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      surface_properties: surface_properties
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

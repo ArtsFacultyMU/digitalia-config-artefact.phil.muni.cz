@@ -1,0 +1,152 @@
+uuid: 6ea4e59a-4b98-4ada-89a6-fb4816413c7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.arf_display
+    - field.field.node.a3d_workbench_test_type.body
+    - field.field.node.a3d_workbench_test_type.field_alle_zusammen
+    - field.field.node.a3d_workbench_test_type.field_alternative_ids
+    - field.field.node.a3d_workbench_test_type.field_artefact_category
+    - field.field.node.a3d_workbench_test_type.field_classification
+    - field.field.node.a3d_workbench_test_type.field_geolocation
+    - field.field.node.a3d_workbench_test_type.field_site
+    - field.field.node.a3d_workbench_test_type.field_test_custom_field
+    - field.field.node.a3d_workbench_test_type.field_test_datafield
+    - field.field.node.a3d_workbench_test_type.field_test_datafield_2
+    - field.field.node.a3d_workbench_test_type.field_test_datafield_3
+    - field.field.node.a3d_workbench_test_type.field_test_date
+    - field.field.node.a3d_workbench_test_type.field_test_timestamp
+    - field.field.node.a3d_workbench_test_type.field_wgs84_geolocation
+    - node.type.a3d_workbench_test_type
+  module:
+    - datafield
+    - user
+id: node.a3d_workbench_test_type.arf_display
+targetEntityType: node
+bundle: a3d_workbench_test_type
+mode: arf_display
+content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_service_file:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_artefact_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_geolocation:
+    type: data_field_table_formatter
+    label: hidden
+    settings:
+      number_column: false
+      number_column_label: №
+      direction: horizontal
+      mode: table
+      caption: ''
+      footer_text: ''
+      datatables_options:
+        bExpandable: true
+        bInfo: true
+        scrollX: true
+        bStateSave: false
+        paging: true
+        ordering: true
+        searching: true
+        show-export: true
+        bMultiFilter: false
+      bootstrap_table_options:
+        sticky-header: true
+        search: true
+        show-search-clear-button: true
+        show-refresh: true
+        show-toggle: true
+        show-fullscreen: true
+        show-columns: true
+        data-detail-view: true
+        show-columns-toggle-all: true
+        mobile-responsive: true
+        show-print: true
+        show-copy-rows: true
+        show-export: true
+        sortable: true
+        click-to-select: true
+        show-pagination-switch: true
+        pagination: true
+        cookie: true
+        show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_site:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_alle_zusammen: true
+  field_alternative_ids: true
+  field_classification: true
+  field_test_custom_field: true
+  field_test_datafield: true
+  field_test_datafield_2: true
+  field_test_datafield_3: true
+  field_test_date: true
+  field_test_timestamp: true
+  field_wgs84_geolocation: true
+  langcode: true
+  search_api_excerpt: true

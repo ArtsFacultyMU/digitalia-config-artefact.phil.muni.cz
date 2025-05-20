@@ -1,0 +1,47 @@
+uuid: bd7c2477-4ac3-4d5e-b328-c392f0171f96
+langcode: en
+status: true
+dependencies:
+  module:
+    - datafield
+    - node
+id: node.field_test_datafield
+field_name: field_test_datafield
+entity_type: node
+type: data_field
+settings:
+  columns:
+    text:
+      name: text
+      type: string
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    taxonomy_1:
+      name: taxonomy_1
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    taxonomy_2:
+      name: taxonomy_2
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+module: datafield
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

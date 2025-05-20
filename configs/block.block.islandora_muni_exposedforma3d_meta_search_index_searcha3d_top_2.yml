@@ -7,13 +7,14 @@ dependencies:
   module:
     - context
     - islandora
+    - system
     - views
   theme:
     - islandora_muni
 id: islandora_muni_exposedforma3d_meta_search_index_searcha3d_top_2
 theme: islandora_muni
 region: header
-weight: -32
+weight: -33
 provider: null
 plugin: 'views_exposed_filter_block:a3d_meta_search_index_search-a3d_top'
 settings:
@@ -32,3 +33,7 @@ visibility:
     id: request_domain
     negate: false
     domains: "archaeo3data-devel.phil.muni.cz\r\narchaeo3data.phil.muni.cz"
+  request_path:
+    id: request_path
+    negate: true
+    pages: /a3d/search

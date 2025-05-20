@@ -1,0 +1,52 @@
+display:
+  entity_browser_4:
+    display_options:
+      fields:
+        field_city:
+          label: Obec
+        field_city_code:
+          label: 'Kód obce'
+      exposed_form:
+        options:
+          submit_button: Vyhledat
+      filters:
+        name:
+          expose:
+            label: Název
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Použít
+  entity_browser_2:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Vyhledat
+      filters:
+        name:
+          expose:
+            label: Název
+      fields:
+        field_coll_contacts:
+          label: Kontakt
+        field_contact_email:
+          label: 'Kontaktní e-mail'
+        field_contact_phone:
+          label: 'Kontaktní telefon'
+  entity_browser_3:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Vyhledat
+      filters:
+        name:
+          expose:
+            label: Název
+      fields:
+        field_coll_contacts:
+          label: Kontakt
+        field_contact_email:
+          label: 'Kontaktní e-mail'
+        field_contact_phone:
+          label: 'Kontaktní telefon'

@@ -1,0 +1,43 @@
+uuid: d09d2120-e7ac-4b66-b9a6-0afb812ffdee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_address
+    - taxonomy.vocabulary.actor
+  module:
+    - address
+    - content_translation
+third_party_settings:
+  content_translation:
+    translation_sync:
+      langcode: langcode
+      country_code: country_code
+      administrative_area: administrative_area
+      locality: locality
+      dependent_locality: dependent_locality
+      postal_code: postal_code
+      sorting_code: sorting_code
+      address_line1: address_line1
+      address_line2: address_line2
+      address_line3: address_line3
+      organization: organization
+      given_name: given_name
+      additional_name: additional_name
+      family_name: family_name
+id: taxonomy_term.actor.field_address
+field_name: field_address
+entity_type: taxonomy_term
+bundle: actor
+label: Address
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides: {  }
+  fields: {  }
+field_type: address

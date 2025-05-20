@@ -1,0 +1,9 @@
+uuid: 70e90ea6-f887-49a6-b333-b941292eb98a
+langcode: en
+status: true
+dependencies: {  }
+name: 'General accuracy'
+vid: general_accuracy
+description: null
+weight: 0
+new_revision: false

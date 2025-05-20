@@ -1,0 +1,19 @@
+uuid: 6bb2dd31-dbb1-4492-8db2-20b32eb842f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_contact_phone
+    - taxonomy.vocabulary.actor
+id: taxonomy_term.actor.field_contact_phone
+field_name: field_contact_phone
+entity_type: taxonomy_term
+bundle: actor
+label: 'Contact phone'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

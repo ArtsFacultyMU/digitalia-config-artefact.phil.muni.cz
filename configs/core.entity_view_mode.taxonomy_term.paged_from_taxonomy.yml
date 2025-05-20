@@ -1,0 +1,11 @@
+uuid: ed49e34e-ac8e-40b1-ba23-003a2fac7b2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.paged_from_taxonomy
+label: 'Paged from taxonomy'
+description: ''
+targetEntityType: taxonomy_term
+cache: true

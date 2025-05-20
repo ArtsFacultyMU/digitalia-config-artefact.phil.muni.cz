@@ -1,0 +1,31 @@
+uuid: fbf39ce0-628e-4525-81ca-b7a1ca020297
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_relative_datation
+    - taxonomy.vocabulary.relative_datation
+    - taxonomy.vocabulary.standard_chronology
+    - taxonomy.vocabulary.unknown_values
+id: taxonomy_term.standard_chronology.field_relative_datation
+field_name: field_relative_datation
+entity_type: taxonomy_term
+bundle: standard_chronology
+label: 'Relative datation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      relative_datation: relative_datation
+      unknown_values: unknown_values
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: relative_datation
+field_type: entity_reference

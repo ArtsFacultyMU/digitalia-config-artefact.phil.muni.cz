@@ -1,0 +1,18 @@
+uuid: 5c2635a2-461b-4b38-95c0-06807a4d55c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.a3d_workbench_test_type
+id: node.a3d_workbench_test_type.created
+field_name: created
+entity_type: node
+bundle: a3d_workbench_test_type
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

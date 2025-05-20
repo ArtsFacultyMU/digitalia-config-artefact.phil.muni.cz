@@ -1,0 +1,11 @@
+uuid: 10fa1c75-9a16-458a-8fea-0611ce4d7be8
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: a3d_move_taxonomy_sort
+title: a3d_move_taxonomy_sort
+content:
+  value: "<script>\r\nlet form = document.querySelector('.region-content .views-exposed-form .content form');\r\nlet parent = document.querySelector('div.correct-filter-place');\r\nif (form != null) {\r\n  parent.appendChild(form);\r\n}\r\n</script>"
+  format: full_html

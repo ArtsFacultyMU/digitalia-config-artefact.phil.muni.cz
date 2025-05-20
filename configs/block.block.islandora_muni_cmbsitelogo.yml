@@ -1,0 +1,33 @@
+uuid: edc95e37-a0f3-456c-bd8b-fccaa674d806
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.cmb_site_logo
+  module:
+    - context
+    - islandora
+    - simple_block
+  theme:
+    - islandora_muni
+id: islandora_muni_cmbsitelogo
+theme: islandora_muni
+region: header
+weight: -37
+provider: null
+plugin: 'simple_block:cmb_site_logo'
+settings:
+  id: 'simple_block:cmb_site_logo'
+  label: 'CMB site logo'
+  label_display: '0'
+  provider: simple_block
+visibility:
+  request_domain:
+    id: request_domain
+    negate: false
+    domains: "combs-devel.phil.muni.cz\r\ncombs.phil.muni.cz"
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

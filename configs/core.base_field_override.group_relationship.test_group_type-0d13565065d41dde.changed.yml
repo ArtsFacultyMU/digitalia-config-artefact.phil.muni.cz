@@ -1,0 +1,18 @@
+uuid: 81f4f07a-0c5f-42ce-9497-96f2759e8f2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.relationship_type.test_group_type-0d13565065d41dde
+id: group_relationship.test_group_type-0d13565065d41dde.changed
+field_name: changed
+entity_type: group_relationship
+bundle: test_group_type-0d13565065d41dde
+label: 'Changed on'
+description: 'The time that the group relationship was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

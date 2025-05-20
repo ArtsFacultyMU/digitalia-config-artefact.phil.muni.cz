@@ -23,6 +23,7 @@ dependencies:
     - islandora
     - node
     - persistent_identifiers
+    - save_edit
     - system
     - taxonomy
     - view_unpublished
@@ -38,13 +39,13 @@ permissions:
   - 'access personal_contacts_entity_browser entity browser pages'
   - 'access site_entity_browser entity browser pages'
   - 'access taxonomy overview'
-  - 'administer nodes'
   - 'create a3d_ingest_artefact content'
   - 'create a3d_ingest_object content'
   - 'create field_coll_contacts'
   - 'create field_coll_contacts_alt'
   - 'create field_contact_email'
   - 'create field_contact_phone'
+  - 'create field_contract'
   - 'create field_geolocation_original_priv'
   - 'create field_personal_contact'
   - 'create field_private_note'
@@ -67,6 +68,7 @@ permissions:
   - 'edit own field_coll_contacts_alt'
   - 'edit own field_contact_email'
   - 'edit own field_contact_phone'
+  - 'edit own field_contract'
   - 'edit own field_personal_contact'
   - 'edit terms in actor'
   - 'edit terms in coll_org'
@@ -74,8 +76,8 @@ permissions:
   - 'edit terms in research_question'
   - 'edit terms in site'
   - 'manage media'
-  - 'manage members'
   - 'mint persistent identifiers'
+  - 'use save and edit'
   - 'view any unpublished a3d_ingest_artefact content'
   - 'view any unpublished a3d_ingest_object content'
   - 'view checksums'
@@ -83,10 +85,12 @@ permissions:
   - 'view field_coll_contacts_alt'
   - 'view field_contact_email'
   - 'view field_contact_phone'
+  - 'view field_contract'
   - 'view own field_coll_contacts'
   - 'view own field_coll_contacts_alt'
   - 'view own field_contact_email'
   - 'view own field_contact_phone'
+  - 'view own field_contract'
   - 'view own field_personal_contact'
   - 'view own unpublished content'
   - 'view term revisions in actor'

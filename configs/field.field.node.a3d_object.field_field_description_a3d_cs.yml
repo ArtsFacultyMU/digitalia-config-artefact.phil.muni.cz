@@ -9,7 +9,7 @@ id: node.a3d_object.field_field_description_a3d_cs
 field_name: field_field_description_a3d_cs
 entity_type: node
 bundle: a3d_object
-label: Popis
+label: 'Description (CZ)'
 description: 'Popis v češtině'
 required: false
 translatable: false

@@ -1,0 +1,20 @@
+uuid: a944943b-3e2f-4cc8-8cef-ccd82a10d407
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_reineckes_chronology
+field_name: field_reineckes_chronology
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

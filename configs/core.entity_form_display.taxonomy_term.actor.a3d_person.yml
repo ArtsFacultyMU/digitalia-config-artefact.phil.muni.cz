@@ -1,0 +1,78 @@
+uuid: 98de9c06-f35c-469a-9e2c-d126cc32f713
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.taxonomy_term.a3d_person
+    - field.field.taxonomy_term.actor.field_actor_type
+    - field.field.taxonomy_term.actor.field_address
+    - field.field.taxonomy_term.actor.field_alternate_identifier
+    - field.field.taxonomy_term.actor.field_coll_contacts
+    - field.field.taxonomy_term.actor.field_coll_contacts_alt
+    - field.field.taxonomy_term.actor.field_contact_email
+    - field.field.taxonomy_term.actor.field_contact_phone
+    - field.field.taxonomy_term.actor.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.actor.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.actor
+  module:
+    - cshs
+id: taxonomy_term.actor.a3d_person
+targetEntityType: taxonomy_term
+bundle: actor
+mode: a3d_person
+content:
+  field_actor_type:
+    type: cshs
+    weight: 1
+    region: content
+    settings:
+      save_lineage: false
+      force_deepest: false
+      parent: '2309'
+      level_labels: ''
+      hierarchy_depth: 0
+      required_depth: 0
+      none_label: '- Please select -'
+    third_party_settings: {  }
+  field_contact_email:
+    type: email_default
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_contact_phone:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  field_address: true
+  field_alternate_identifier: true
+  field_coll_contacts: true
+  field_coll_contacts_alt: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
+  langcode: true
+  path: true
+  translation: true

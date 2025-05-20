@@ -1,0 +1,9 @@
+uuid: 1af2ab4e-8e2e-4fc3-84e1-de9eed718c94
+langcode: en
+status: true
+dependencies: {  }
+name: 'Standard Chronology'
+vid: standard_chronology
+description: null
+weight: 0
+new_revision: false

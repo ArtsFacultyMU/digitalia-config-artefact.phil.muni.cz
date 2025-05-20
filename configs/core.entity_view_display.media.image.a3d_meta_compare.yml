@@ -13,6 +13,7 @@ dependencies:
     - field.field.media.image.field_media_use
     - field.field.media.image.field_mime_type
     - field.field.media.image.field_original_name
+    - field.field.media.image.field_weight
     - field.field.media.image.field_width
     - image.style.max_1300x1300
     - media.type.image
@@ -116,6 +117,14 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
+  link_for_entity_comparison_a3d_kch_entity_comparison:
+    type: entity_comparison_link
+    label: above
+    settings:
+      enitity_comparison: ''
+    third_party_settings: {  }
+    weight: 100
+    region: content
   link_for_entity_comparison_a3d_meta_entity_comparison:
     type: entity_comparison_link
     label: above
@@ -145,6 +154,7 @@ hidden:
   created: true
   field_description: true
   field_featured: true
+  field_weight: true
   langcode: true
   search_api_excerpt: true
   thumbnail: true

@@ -1,0 +1,18 @@
+uuid: eddd2bc1-588d-4fb1-a62d-6cddec2749f7
+langcode: cs
+status: true
+dependencies:
+  config:
+    - group.relationship_type.test_group_type-863f3646b7fd5f02
+id: group_relationship.test_group_type-863f3646b7fd5f02.created
+field_name: created
+entity_type: group_relationship
+bundle: test_group_type-863f3646b7fd5f02
+label: 'Vytvořeno v'
+description: 'The time that the group relationship was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

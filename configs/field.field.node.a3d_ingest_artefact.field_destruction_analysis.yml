@@ -1,0 +1,21 @@
+uuid: a4a82267-cca4-417d-9d07-e0020ee4d613
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_destruction_analysis
+    - node.type.a3d_ingest_artefact
+id: node.a3d_ingest_artefact.field_destruction_analysis
+field_name: field_destruction_analysis
+entity_type: node
+bundle: a3d_ingest_artefact
+label: 'Destruction analysis'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

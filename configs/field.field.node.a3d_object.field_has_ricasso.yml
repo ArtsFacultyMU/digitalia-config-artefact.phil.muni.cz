@@ -1,0 +1,21 @@
+uuid: 64791491-e3d6-45bf-8dd4-e91afa8594c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_ricasso
+    - node.type.a3d_object
+id: node.a3d_object.field_has_ricasso
+field_name: field_has_ricasso
+entity_type: node
+bundle: a3d_object
+label: 'Has ricasso'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

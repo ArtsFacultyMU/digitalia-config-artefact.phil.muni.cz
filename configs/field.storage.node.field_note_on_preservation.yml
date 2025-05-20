@@ -1,0 +1,19 @@
+uuid: 2963a5aa-ea19-476e-882d-c35b22cc84c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_note_on_preservation
+field_name: field_note_on_preservation
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

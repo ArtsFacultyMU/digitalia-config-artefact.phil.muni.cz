@@ -1,18 +1,33 @@
 display:
   default:
+    display_title: Nadřízené
     display_options:
       fields:
+        name:
+          separator: ', '
+        bundle:
+          label: Bundle
+          separator: ', '
         status:
           label: Stav
+          separator: ', '
+        uid:
+          separator: ', '
         dropbutton:
           label: Operace
       pager:
         options:
           expose:
+            items_per_page_label: 'Položek na stránku'
             items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
       exposed_form:
         options:
+          submit_button: Použít
+          reset_button_label: Reset
           exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
       filters:
         status:
           expose:
@@ -24,3 +39,7 @@ display:
                 title: Zveřejněno
               2:
                 title: Skryto
+  page_1:
+    display_options:
+      menu:
+        title: Média

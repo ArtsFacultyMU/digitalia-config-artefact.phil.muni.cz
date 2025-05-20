@@ -66,14 +66,10 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_2d_asymmetry:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 27
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_a_asymmetry:
     type: entity_reference_autocomplete
@@ -208,7 +204,48 @@ content:
     region: content
     settings:
       inline: false
-      widget_settings: {  }
+      widget_settings:
+        extent:
+          type: textarea
+          label_display: ''
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          cols: 10
+          rows: 5
+          col: ''
+        measurement_type:
+          type: entity_reference_autocomplete
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          autocreate: '1'
+          col: ''
+        units:
+          type: entity_reference_autocomplete
+          label_display: ''
+          field_display: '1'
+          weight: 0
+          autocreate: '1'
+          col: ''
+        scale:
+          type: number
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          step: '2'
+          col: ''
+        value:
+          type: number
+          label_display: ''
+          size: 30
+          placeholder: 'Please type'
+          field_display: '1'
+          weight: 0
+          step: '2'
+          col: ''
     third_party_settings: {  }
   field_discovery_date:
     type: datetime_default
@@ -223,14 +260,10 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_feature_id:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 25
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_fhp_shape:
     type: entity_reference_autocomplete
@@ -282,11 +315,10 @@ content:
       inline: false
       widget_settings:
         spatial_ref_system:
-          type: entity_reference_autocomplete
+          type: options_select
           label_display: block
           field_display: '1'
           weight: 0
-          autocreate: '1'
           col: ''
         loc_coord_cadastre_x:
           type: textfield
@@ -347,14 +379,10 @@ content:
       widget_settings: {  }
     third_party_settings: {  }
   field_ownership:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 22
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_porosity:
     type: number

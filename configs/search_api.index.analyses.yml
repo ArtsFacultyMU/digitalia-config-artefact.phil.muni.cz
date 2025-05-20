@@ -92,6 +92,14 @@ name: Analyses
 description: ''
 read_only: false
 field_settings:
+  aggregated_field:
+    label: 'Analysis terms'
+    property_path: aggregated_field
+    type: 'solr_text_custom:edge'
+    configuration:
+      type: union
+      fields:
+        - 'entity:node/field_instrument'
   field_analysis_of:
     label: 'Analysis of'
     datasource_id: 'entity:node'

@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.analysis.field_analysed_by
+    - field.field.node.analysis.field_analysed_day
+    - field.field.node.analysis.field_analysed_month
+    - field.field.node.analysis.field_analysed_year
     - field.field.node.analysis.field_analysis_date
     - field.field.node.analysis.field_analysis_of
     - field.field.node.analysis.field_analysis_type
@@ -25,6 +28,7 @@ dependencies:
     - field.field.node.analysis.field_instrument
     - field.field.node.analysis.field_matrix
     - field.field.node.analysis.field_matrix_vitrification
+    - field.field.node.analysis.field_member_of
     - field.field.node.analysis.field_microstructure
     - field.field.node.analysis.field_mineral_fragments
     - field.field.node.analysis.field_minerals
@@ -41,10 +45,12 @@ dependencies:
     - field.field.node.analysis.field_reduction_inward
     - field.field.node.analysis.field_reduction_outward
     - field.field.node.analysis.field_rock_fragments
+    - field.field.node.analysis.field_traceology
     - field.field.node.analysis.field_vesicular_pores
     - node.type.analysis
   module:
     - datafield
+    - entity_browser_entity_form
     - inline_entity_form
     - range
     - text
@@ -67,6 +73,27 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_analysed_day:
+    type: number
+    weight: 42
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_analysed_month:
+    type: number
+    weight: 41
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_analysed_year:
+    type: number
+    weight: 40
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   field_analysis_of:
@@ -222,7 +249,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_fragments:
-    type: inline_entity_form_simple
+    type: inline_entity_form_complex
     weight: 7
     region: content
     settings:
@@ -230,19 +257,22 @@ content:
       override_labels: true
       label_singular: 'Non-plastic inclusion'
       label_plural: 'Non-plastic inclusions'
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
       collapsible: false
       collapsed: false
       revision: false
-    third_party_settings: {  }
+      removed_reference: keep
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
   field_grain_type:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 22
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_instrument:
     type: options_select
@@ -264,14 +294,10 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_microstructure:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 21
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_non_plastic_inclusions:
     type: number
@@ -356,22 +382,35 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_traceology:
+    type: inline_entity_form_complex
+    weight: 39
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: true
+      removed_reference: keep
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
   field_vesicular_pores:
     type: options_buttons
     weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 38
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 39
+    weight: 38
     region: content
     settings:
       display_label: true
@@ -396,9 +435,11 @@ content:
     third_party_settings: {  }
 hidden:
   field_analysis_date: true
+  field_member_of: true
   field_mineral_fragments: true
   field_minerals: true
   field_rock_fragments: true
+  langcode: true
   path: true
   promote: true
   sticky: true

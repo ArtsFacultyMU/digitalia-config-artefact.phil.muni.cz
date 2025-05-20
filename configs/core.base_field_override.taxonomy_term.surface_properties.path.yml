@@ -1,0 +1,20 @@
+uuid: 790bbe02-2154-4009-a119-8a5da2550475
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.surface_properties
+  module:
+    - path
+id: taxonomy_term.surface_properties.path
+field_name: path
+entity_type: taxonomy_term
+bundle: surface_properties
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

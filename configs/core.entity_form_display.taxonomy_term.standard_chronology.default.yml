@@ -1,0 +1,80 @@
+uuid: 647193da-467b-4906-a8f8-9e851b85e430
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.standard_chronology.field_relative_datation
+    - field.field.taxonomy_term.standard_chronology.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.standard_chronology.field_tax_hierarchical_weight
+    - field.field.taxonomy_term.standard_chronology.field_timespan
+    - taxonomy.vocabulary.standard_chronology
+  module:
+    - path
+    - range
+    - text
+id: taxonomy_term.standard_chronology.default
+targetEntityType: taxonomy_term
+bundle: standard_chronology
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_relative_datation:
+    type: entity_reference_autocomplete
+    weight: 102
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_timespan:
+    type: range
+    weight: 101
+    region: content
+    settings:
+      label:
+        from: From
+        to: to
+      placeholder:
+        from: ''
+        to: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true

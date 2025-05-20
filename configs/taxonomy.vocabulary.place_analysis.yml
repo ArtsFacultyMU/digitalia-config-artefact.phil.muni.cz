@@ -1,0 +1,9 @@
+uuid: 83328c19-11c3-49e5-9974-9c86d1dd1d01
+langcode: en
+status: true
+dependencies: {  }
+name: 'Place of analysis'
+vid: place_analysis
+description: null
+weight: 0
+new_revision: false

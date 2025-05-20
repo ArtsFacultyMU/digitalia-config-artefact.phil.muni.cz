@@ -6,7 +6,8 @@ dependencies:
     - field.storage.media.field_media_of
     - media.type.image
     - node.type.a3d_object
-    - node.type.islandora_object
+    - node.type.analysis
+    - node.type.sample
     - node.type.test_a3d
 _core:
   default_config_hash: II3-g2WzFJTItCsK7PFCOchXURVgIiu6X9J4NBpEju0
@@ -25,11 +26,12 @@ settings:
   handler_settings:
     target_bundles:
       a3d_object: a3d_object
-      islandora_object: islandora_object
+      analysis: analysis
+      sample: sample
       test_a3d: test_a3d
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: islandora_object
+    auto_create_bundle: a3d_object
 field_type: entity_reference

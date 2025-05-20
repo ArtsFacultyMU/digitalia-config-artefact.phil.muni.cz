@@ -1,0 +1,19 @@
+uuid: 02c96241-e465-4ca2-9c4f-1d87ebefaa32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test_timestamp
+    - node.type.a3d_workbench_test_type
+id: node.a3d_workbench_test_type.field_test_timestamp
+field_name: field_test_timestamp
+entity_type: node
+bundle: a3d_workbench_test_type
+label: 'TEST timestamp'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

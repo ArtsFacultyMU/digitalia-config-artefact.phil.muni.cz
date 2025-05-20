@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.a3d_object.field_alternative_ids
     - field.field.node.a3d_object.field_aquamanile_subtype
     - field.field.node.a3d_object.field_aquamanile_type
+    - field.field.node.a3d_object.field_archaeological_site
     - field.field.node.a3d_object.field_artefact_category
     - field.field.node.a3d_object.field_artefact_class
     - field.field.node.a3d_object.field_artefact_id
@@ -52,6 +53,7 @@ dependencies:
     - field.field.node.a3d_object.field_creation
     - field.field.node.a3d_object.field_culture
     - field.field.node.a3d_object.field_current_location
+    - field.field.node.a3d_object.field_decoration
     - field.field.node.a3d_object.field_deposition_cond
     - field.field.node.a3d_object.field_description_a3d
     - field.field.node.a3d_object.field_discoverer
@@ -78,6 +80,7 @@ dependencies:
     - field.field.node.a3d_object.field_general_lateral_wear
     - field.field.node.a3d_object.field_general_note
     - field.field.node.a3d_object.field_general_type
+    - field.field.node.a3d_object.field_geo_site
     - field.field.node.a3d_object.field_geolocation
     - field.field.node.a3d_object.field_geolocation_original
     - field.field.node.a3d_object.field_geolocation_original_priv
@@ -85,6 +88,8 @@ dependencies:
     - field.field.node.a3d_object.field_grain_type
     - field.field.node.a3d_object.field_handle
     - field.field.node.a3d_object.field_has_a_construction_opening
+    - field.field.node.a3d_object.field_has_decoration
+    - field.field.node.a3d_object.field_has_ricasso
     - field.field.node.a3d_object.field_holder_type
     - field.field.node.a3d_object.field_ledge_type
     - field.field.node.a3d_object.field_legal_status
@@ -104,7 +109,9 @@ dependencies:
     - field.field.node.a3d_object.field_mineral_fragments
     - field.field.node.a3d_object.field_mineralogy
     - field.field.node.a3d_object.field_motif
+    - field.field.node.a3d_object.field_note_on_preservation
     - field.field.node.a3d_object.field_number_of_instances
+    - field.field.node.a3d_object.field_number_of_preserved_parts
     - field.field.node.a3d_object.field_orig_state_pres
     - field.field.node.a3d_object.field_original_location
     - field.field.node.a3d_object.field_ownership
@@ -132,6 +139,7 @@ dependencies:
     - field.field.node.a3d_object.field_recent_damage_type_struct
     - field.field.node.a3d_object.field_record_source
     - field.field.node.a3d_object.field_reg_number
+    - field.field.node.a3d_object.field_reineckes_chronology
     - field.field.node.a3d_object.field_relations
     - field.field.node.a3d_object.field_relative_datation
     - field.field.node.a3d_object.field_relief
@@ -150,6 +158,7 @@ dependencies:
     - field.field.node.a3d_object.field_st_placement_type3
     - field.field.node.a3d_object.field_st_shape_type1
     - field.field.node.a3d_object.field_st_shape_type2
+    - field.field.node.a3d_object.field_standard_chronology
     - field.field.node.a3d_object.field_state
     - field.field.node.a3d_object.field_statement
     - field.field.node.a3d_object.field_stove_tile_shape_certainty
@@ -196,6 +205,7 @@ hidden:
   a3d_artefact_media_a3d_videos: true
   a3d_artefact_media_entity_view_1: true
   a3d_artefact_media_entity_view_2: true
+  a3d_editor_block_entity_view_1: true
   a3d_eva_biblatex_biblatex: true
   a3d_eva_biblatex_harvard: true
   a3d_eva_entity_group_relation_entity_view_2: true
@@ -235,6 +245,7 @@ hidden:
   field_alternative_ids: true
   field_aquamanile_subtype: true
   field_aquamanile_type: true
+  field_archaeological_site: true
   field_artefact_category: true
   field_artefact_class: true
   field_artefact_id: true
@@ -267,6 +278,7 @@ hidden:
   field_creation: true
   field_culture: true
   field_current_location: true
+  field_decoration: true
   field_deposition_cond: true
   field_description_a3d: true
   field_discoverer: true
@@ -293,6 +305,7 @@ hidden:
   field_general_lateral_wear: true
   field_general_note: true
   field_general_type: true
+  field_geo_site: true
   field_geolocation: true
   field_geolocation_original: true
   field_geolocation_original_priv: true
@@ -300,6 +313,8 @@ hidden:
   field_grain_type: true
   field_handle: true
   field_has_a_construction_opening: true
+  field_has_decoration: true
+  field_has_ricasso: true
   field_holder_type: true
   field_ledge_type: true
   field_legal_status: true
@@ -319,7 +334,9 @@ hidden:
   field_mineral_fragments: true
   field_mineralogy: true
   field_motif: true
+  field_note_on_preservation: true
   field_number_of_instances: true
+  field_number_of_preserved_parts: true
   field_orig_state_pres: true
   field_original_location: true
   field_ownership: true
@@ -347,6 +364,7 @@ hidden:
   field_recent_damage_type_struct: true
   field_record_source: true
   field_reg_number: true
+  field_reineckes_chronology: true
   field_relations: true
   field_relative_datation: true
   field_relief: true
@@ -365,6 +383,7 @@ hidden:
   field_st_placement_type3: true
   field_st_shape_type1: true
   field_st_shape_type2: true
+  field_standard_chronology: true
   field_state: true
   field_statement: true
   field_stove_tile_shape_certainty: true

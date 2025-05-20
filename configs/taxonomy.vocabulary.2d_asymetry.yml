@@ -2,7 +2,7 @@ uuid: 9632f5f2-2dc2-4965-bd98-4ffd5046405a
 langcode: en
 status: true
 dependencies: {  }
-name: '2D asymetry (smaller barb)'
+name: '2D asymmetry (smaller barb)'
 vid: 2d_asymetry
 description: null
 weight: 0

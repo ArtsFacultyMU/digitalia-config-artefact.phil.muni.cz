@@ -1,0 +1,372 @@
+uuid: 39dd4ebc-0f2c-4dcd-bd26-a46f9f38b30b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.taxonomy_term.a3d_site
+    - field.field.node.a3d_ingest_object.field_coll_org
+    - field.field.node.a3d_ingest_object.field_date_borrowing
+    - field.field.node.a3d_ingest_object.field_date_return
+    - field.field.node.a3d_ingest_object.field_finding_context_note
+    - field.field.node.a3d_ingest_object.field_finding_context_subtype
+    - field.field.node.a3d_ingest_object.field_finding_documentation
+    - field.field.node.a3d_ingest_object.field_finding_documentation_note
+    - field.field.node.a3d_ingest_object.field_finding_label
+    - field.field.node.a3d_ingest_object.field_finding_report
+    - field.field.node.a3d_ingest_object.field_finding_year
+    - field.field.node.a3d_ingest_object.field_finding_year_type
+    - field.field.node.a3d_ingest_object.field_geolocation
+    - field.field.node.a3d_ingest_object.field_ingest_artefact
+    - field.field.node.a3d_ingest_object.field_member_of
+    - field.field.node.a3d_ingest_object.field_personal_contact
+    - field.field.node.a3d_ingest_object.field_place_analysis
+    - field.field.node.a3d_ingest_object.field_region
+    - field.field.node.a3d_ingest_object.field_site
+    - node.type.a3d_ingest_object
+  module:
+    - chosen_field
+    - datafield
+    - datetime
+    - entity_browser_entity_form
+    - field_group
+    - inline_entity_form
+    - path
+third_party_settings:
+  field_group:
+    group_collection:
+      children:
+        - field_coll_org
+        - field_personal_contact
+        - field_place_analysis
+        - field_date_borrowing
+        - field_date_return
+      label: Collection
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
+    group_location:
+      children:
+        - field_finding_label
+        - field_finding_year
+        - field_finding_year_type
+        - field_site
+        - field_region
+        - field_geolocation
+        - field_finding_context_subtype
+        - field_finding_context_note
+        - field_finding_report
+        - field_finding_documentation
+        - field_finding_documentation_note
+      label: Location
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
+    group_artefact:
+      children:
+        - field_ingest_artefact
+      label: Artefacts
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
+id: node.a3d_ingest_object.default
+targetEntityType: node
+bundle: a3d_ingest_object
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_coll_org:
+    type: inline_entity_form_complex
+    weight: 2
+    region: content
+    settings:
+      form_mode: a3d_institution
+      override_labels: true
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: institution_entity_browser
+  field_date_borrowing:
+    type: datetime_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_return:
+    type: datetime_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_finding_context_note:
+    type: string_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_finding_context_subtype:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_finding_documentation:
+    type: chosen_select
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_finding_documentation_note:
+    type: string_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_finding_label:
+    type: string_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_finding_report:
+    type: options_buttons
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_finding_year:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_finding_year_type:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_geolocation:
+    type: data_field_table_widget
+    weight: 8
+    region: content
+    settings:
+      inline: false
+      field_reference: ''
+      widget_settings:
+        spatial_ref_system:
+          type: options_select
+          label_display: block
+          field_display: '1'
+          weight: 0
+          autocreate: '1'
+          col: ''
+        loc_coord_cadastre_x:
+          type: textfield
+          label_display: ''
+          size: 30
+          placeholder: ''
+          field_display: '1'
+          weight: 0
+          step: ''
+          maxlength: ''
+          pattern: ''
+          min: ''
+          max: ''
+          list: ''
+          class: ''
+          col: ''
+        loc_coord_cadastre_y:
+          type: textfield
+          label_display: ''
+          size: 30
+          placeholder: ''
+          field_display: '1'
+          weight: 0
+          step: ''
+          maxlength: ''
+          pattern: ''
+          min: ''
+          max: ''
+          list: ''
+          class: ''
+          col: ''
+        loc_coord_cadastre_accuracy:
+          type: options_select
+          label_display: block
+          field_display: '1'
+          weight: 0
+          autocreate: '1'
+          col: ''
+    third_party_settings: {  }
+  field_ingest_artefact:
+    type: inline_entity_form_complex
+    weight: 4
+    region: content
+    settings:
+      form_mode: a3d_ingest_artefact_test
+      override_labels: true
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: true
+      removed_reference: keep
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+  field_personal_contact:
+    type: inline_entity_form_complex
+    weight: 4
+    region: content
+    settings:
+      form_mode: a3d_person
+      override_labels: true
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: personal_contacts_entity_browser
+  field_place_analysis:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_region:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_site:
+    type: inline_entity_form_complex
+    weight: 6
+    region: content
+    settings:
+      form_mode: a3d_site
+      override_labels: true
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: site_entity_browser
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_member_of: true
+  langcode: true
+  status: true

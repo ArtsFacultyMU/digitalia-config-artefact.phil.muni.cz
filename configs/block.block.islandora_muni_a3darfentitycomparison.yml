@@ -17,7 +17,7 @@ third_party_settings:
 id: islandora_muni_a3darfentitycomparison
 theme: islandora_muni
 region: featured_bottom_third
-weight: 0
+weight: -42
 provider: null
 plugin: 'entity_comparison_block:a3d_arf_entity_comparison'
 settings:

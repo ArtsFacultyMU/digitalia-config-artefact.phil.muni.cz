@@ -1,0 +1,22 @@
+uuid: 8231e390-9890-4f67-bd1c-fa25566198c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.decoration
+id: node.decoration.status
+field_name: status
+entity_type: node
+bundle: decoration
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

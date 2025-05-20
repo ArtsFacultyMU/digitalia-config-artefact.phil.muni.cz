@@ -1,0 +1,80 @@
+uuid: a3cfb971-cda2-452d-b0f7-3c6ef1997a57
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.a3d_ingest_artefact.field_artefact_category
+    - field.field.node.a3d_ingest_artefact.field_artefact_id
+    - field.field.node.a3d_ingest_artefact.field_contract
+    - field.field.node.a3d_ingest_artefact.field_deposition_cond
+    - field.field.node.a3d_ingest_artefact.field_description_a3d
+    - field.field.node.a3d_ingest_artefact.field_destruction_analysis
+    - field.field.node.a3d_ingest_artefact.field_general_note
+    - field.field.node.a3d_ingest_artefact.field_relative_datation
+    - field.field.node.a3d_ingest_artefact.field_research_question
+    - node.type.a3d_ingest_artefact
+  module:
+    - user
+id: node.a3d_ingest_artefact.teaser
+targetEntityType: node
+bundle: a3d_ingest_artefact
+mode: teaser
+content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_service_file:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_artefact_category: true
+  field_artefact_id: true
+  field_contract: true
+  field_deposition_cond: true
+  field_description_a3d: true
+  field_destruction_analysis: true
+  field_general_note: true
+  field_relative_datation: true
+  field_research_question: true
+  langcode: true
+  search_api_excerpt: true

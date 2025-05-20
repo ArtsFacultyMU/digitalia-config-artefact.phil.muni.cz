@@ -1,0 +1,23 @@
+uuid: f25cafa6-7569-4c62-8551-70c148874f75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_weight
+    - media.type.image
+id: media.image.field_weight
+field_name: field_weight
+entity_type: media
+bundle: image
+label: Weight
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

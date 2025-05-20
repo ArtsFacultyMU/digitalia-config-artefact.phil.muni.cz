@@ -1,0 +1,272 @@
+uuid: c06266a5-7bda-4a1a-8ac0-0c1b2784b017
+langcode: en
+status: true
+dependencies:
+  module:
+    - datafield
+    - node
+id: node.field_alle_zusammen
+field_name: field_alle_zusammen
+entity_type: node
+type: data_field
+settings:
+  columns:
+    number_integer:
+      name: number_integer
+      type: integer
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    telephone:
+      name: telephone
+      type: telephone
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    blob:
+      name: blob
+      type: blob
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    email:
+      name: email
+      type: email
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    date_date_time:
+      name: date_date_time
+      type: date
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: datetime
+    date_date:
+      name: date_date
+      type: date
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    date_time:
+      name: date_time
+      type: date
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: time
+    date_year:
+      name: date_year
+      type: date
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: year
+    date_month:
+      name: date_month
+      type: date
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: month
+    date_week:
+      name: date_week
+      type: date
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: week
+    date_timestamp:
+      name: date_timestamp
+      type: date
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: timestamp
+    text_plain_long:
+      name: text_plain_long
+      type: text
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    date_iso_date_time:
+      name: date_iso_date_time
+      type: datetime_iso8601
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: datetime
+    date_iso_date:
+      name: date_iso_date
+      type: datetime_iso8601
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    date_iso_time:
+      name: date_iso_time
+      type: datetime_iso8601
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: time
+    date_iso_year:
+      name: date_iso_year
+      type: datetime_iso8601
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: year
+    date_iso_month:
+      name: date_iso_month
+      type: datetime_iso8601
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: month
+    date_iso_week:
+      name: date_iso_week
+      type: datetime_iso8601
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: week
+    date_iso_timestamp:
+      name: date_iso_timestamp
+      type: datetime_iso8601
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: timestamp
+    number_float:
+      name: number_float
+      type: float
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    file:
+      name: file
+      type: file
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    entity_reference_taxonomy:
+      name: entity_reference_taxonomy
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    entity_reference_content:
+      name: entity_reference_content
+      type: entity_reference
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    text_plain:
+      name: text_plain
+      type: string
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    boolean:
+      name: boolean
+      type: boolean
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    url:
+      name: url
+      type: uri
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    json:
+      name: json
+      type: json
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+    number_decimal:
+      name: number_decimal
+      type: numeric
+      max_length: 255
+      size: normal
+      precision: 10
+      unsigned: false
+      scale: 2
+      datetime_type: date
+module: datafield
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

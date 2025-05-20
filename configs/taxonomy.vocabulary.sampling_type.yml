@@ -1,0 +1,9 @@
+uuid: 13f3de46-43cf-4700-822d-8fec8ee74257
+langcode: en
+status: true
+dependencies: {  }
+name: 'Sampling type'
+vid: sampling_type
+description: SWD
+weight: 0
+new_revision: false

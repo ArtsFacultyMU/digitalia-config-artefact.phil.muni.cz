@@ -1,0 +1,22 @@
+uuid: c4cba2ea-eeb2-47a3-b696-5156ae4ab0d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.trace_type
+id: taxonomy_term.trace_type.status
+field_name: status
+entity_type: taxonomy_term
+bundle: trace_type
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

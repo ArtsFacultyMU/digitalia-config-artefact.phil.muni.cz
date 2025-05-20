@@ -1,0 +1,9 @@
+langcode: cs
+third_party_settings:
+  field_group:
+    group_collection:
+      label: Kolekce
+    group_location:
+      label: Lokace
+    group_artefact:
+      label: Artefakty

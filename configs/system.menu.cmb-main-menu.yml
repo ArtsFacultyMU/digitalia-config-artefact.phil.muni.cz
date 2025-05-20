@@ -1,0 +1,8 @@
+uuid: b1472088-d038-49ca-b006-286b46122eb6
+langcode: en
+status: true
+dependencies: {  }
+id: cmb-main-menu
+label: 'CMB main menu'
+description: ''
+locked: false

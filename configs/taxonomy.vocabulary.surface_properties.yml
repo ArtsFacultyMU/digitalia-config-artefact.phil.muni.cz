@@ -1,0 +1,9 @@
+uuid: 8ccf105f-11b4-419d-bc6d-cf7c4564558d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Surface properties'
+vid: surface_properties
+description: SWD
+weight: 0
+new_revision: false

@@ -1,0 +1,41 @@
+uuid: b49284d7-4830-4cd8-b5cf-2162e6cb903d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.taxonomy_term.a3d_site
+    - field.field.taxonomy_term.city.field_city_code
+    - field.field.taxonomy_term.city.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.city.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.city
+id: taxonomy_term.city.a3d_site
+targetEntityType: taxonomy_term
+bundle: city
+mode: a3d_site
+content:
+  field_city_code:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
+  langcode: true
+  path: true
+  status: true
+  translation: true

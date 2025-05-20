@@ -15,6 +15,8 @@ dependencies:
     - field.field.taxonomy_term.instrument.field_model_identifier_type
     - field.field.taxonomy_term.instrument.field_owner
     - field.field.taxonomy_term.instrument.field_related_identifier
+    - field.field.taxonomy_term.instrument.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.instrument.field_tax_hierarchical_weight
     - taxonomy.vocabulary.instrument
   module:
     - datafield
@@ -41,11 +43,6 @@ content:
     type: data_field_table_formatter
     label: inline
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -82,6 +79,11 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 11
     region: content
@@ -163,11 +165,6 @@ content:
     type: data_field_table_formatter
     label: inline
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -204,9 +201,17 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 12
     region: content
 hidden:
+  a3d_eva_taxonomy_title_entity_view_2: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
   langcode: true
   search_api_excerpt: true

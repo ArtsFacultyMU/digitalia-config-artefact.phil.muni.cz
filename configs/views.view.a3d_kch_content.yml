@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.citations
     - field.storage.node.field_3d_traces
     - field.storage.node.field_abs_dat_range
+    - field.storage.node.field_abs_dat_range_cs
     - field.storage.node.field_acquisition_type
     - field.storage.node.field_alternative_ids
     - field.storage.node.field_analysed_by
@@ -239,30 +240,6 @@ display:
           click_sort_column: id
           type: data_field_table_formatter
           settings:
-            formatter_settings:
-              id:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: id
-              type:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 1
-                column_label: type
-              note:
-                format_type: text_default
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: note
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
             number_column: false
             number_column_label: №
             direction: horizontal
@@ -296,6 +273,30 @@ display:
               show-pagination-switch: 0
               pagination: 0
               show-footer: 0
+            formatter_settings:
+              id:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: id
+              type:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 1
+                column_label: type
+              note:
+                format_type: text_default
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: note
+            ajax: false
+            custom_class: ''
+            line_operations: false
+            form_format_table: false
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -3646,6 +3647,7 @@ display:
     display_plugin: page
     position: 2
     display_options:
+      enabled: false
       title: 'Pottery product'
       fields:
         nothing:
@@ -4489,30 +4491,6 @@ display:
           click_sort_column: id
           type: data_field_table_formatter
           settings:
-            formatter_settings:
-              id:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: ID
-              type:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: Type/Typ
-              note:
-                format_type: text_default
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: Note/Poznámka
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
             number_column: false
             number_column_label: №
             direction: horizontal
@@ -4546,6 +4524,30 @@ display:
               show-pagination-switch: 0
               pagination: 0
               show-footer: 0
+            formatter_settings:
+              id:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: ID
+              type:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: Type/Typ
+              note:
+                format_type: text_default
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: Note/Poznámka
+            ajax: false
+            custom_class: ''
+            line_operations: false
+            form_format_table: false
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -6059,6 +6061,68 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_abs_dat_range_cs:
+          id: field_abs_dat_range_cs
+          table: node__field_abs_dat_range_cs
+          field: field_abs_dat_range_cs
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         field_timespan:
           id: field_timespan
           table: node__field_timespan
@@ -6140,7 +6204,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_abs_dat_range }} ({{ field_timespan }})'
+            text: '{{ field_abs_dat_range }} / {{ field_abs_dat_range_cs }} ({{ field_timespan }})'
             make_link: false
             path: ''
             absolute: false
@@ -6242,6 +6306,39 @@ display:
           click_sort_column: dimensions_type
           type: data_field_table_formatter
           settings:
+            number_column: false
+            number_column_label: №
+            direction: horizontal
+            mode: table
+            caption: ''
+            footer_text: ''
+            datatables_options:
+              bExpandable: 0
+              bInfo: 0
+              scrollX: 0
+              bStateSave: 0
+              ordering: 0
+              paging: 0
+              searching: 0
+              show-export: 0
+              bMultiFilter: 0
+            bootstrap_table_options:
+              sticky-header: 0
+              show-export: 0
+              show-print: 0
+              show-copy-rows: 0
+              show-multi-sort: 0
+              show-fullscreen: 0
+              search: 0
+              show-refresh: 0
+              show-toggle: 0
+              show-columns: 0
+              mobile-responsive: 0
+              sortable: 0
+              click-to-select: 0
+              show-pagination-switch: 0
+              pagination: 0
+              show-footer: 0
             formatter_settings:
               dimensions_type:
                 format_type: entity_reference_label
@@ -6325,39 +6422,6 @@ display:
             custom_class: ''
             line_operations: false
             form_format_table: false
-            number_column: false
-            number_column_label: №
-            direction: horizontal
-            mode: table
-            caption: ''
-            footer_text: ''
-            datatables_options:
-              bExpandable: 0
-              bInfo: 0
-              scrollX: 0
-              bStateSave: 0
-              ordering: 0
-              paging: 0
-              searching: 0
-              show-export: 0
-              bMultiFilter: 0
-            bootstrap_table_options:
-              sticky-header: 0
-              show-export: 0
-              show-print: 0
-              show-copy-rows: 0
-              show-multi-sort: 0
-              show-fullscreen: 0
-              search: 0
-              show-refresh: 0
-              show-toggle: 0
-              show-columns: 0
-              mobile-responsive: 0
-              sortable: 0
-              click-to-select: 0
-              show-pagination-switch: 0
-              pagination: 0
-              show-footer: 0
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -6735,25 +6799,6 @@ display:
           click_sort_column: finishing
           type: data_field_table_formatter
           settings:
-            formatter_settings:
-              finishing:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: Finishing/Povrch
-              colour:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: Colour/Barva
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
             number_column: false
             number_column_label: №
             direction: horizontal
@@ -6787,6 +6832,25 @@ display:
               show-pagination-switch: 0
               pagination: 0
               show-footer: 0
+            formatter_settings:
+              finishing:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: Finishing/Povrch
+              colour:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: Colour/Barva
+            ajax: false
+            custom_class: ''
+            line_operations: false
+            form_format_table: false
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -8097,6 +8161,7 @@ display:
       tags:
         - 'config:field.storage.node.field_3d_traces'
         - 'config:field.storage.node.field_abs_dat_range'
+        - 'config:field.storage.node.field_abs_dat_range_cs'
         - 'config:field.storage.node.field_acquisition_type'
         - 'config:field.storage.node.field_alternative_ids'
         - 'config:field.storage.node.field_aquamanile_subtype'
@@ -10024,6 +10089,68 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_abs_dat_range_cs:
+          id: field_abs_dat_range_cs
+          table: node__field_abs_dat_range_cs
+          field: field_abs_dat_range_cs
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Absolute datation range (Czech)'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         measurements_csv:
           id: measurements_csv
           table: node
@@ -11279,6 +11406,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_abs_dat_range'
+        - 'config:field.storage.node.field_abs_dat_range_cs'
         - 'config:field.storage.node.field_acquisition_type'
         - 'config:field.storage.node.field_aquamanile_subtype'
         - 'config:field.storage.node.field_aquamanile_type'

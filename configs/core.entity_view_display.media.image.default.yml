@@ -12,6 +12,7 @@ dependencies:
     - field.field.media.image.field_media_use
     - field.field.media.image.field_mime_type
     - field.field.media.image.field_original_name
+    - field.field.media.image.field_weight
     - field.field.media.image.field_width
     - image.style.max_1300x1300
     - media.type.image
@@ -106,6 +107,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 8
+    region: content
+  field_weight:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 12
     region: content
   field_width:
     type: number_integer

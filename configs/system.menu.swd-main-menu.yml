@@ -1,0 +1,8 @@
+uuid: 16e14601-ee8d-4b30-98f1-2f5c47e31a64
+langcode: en
+status: true
+dependencies: {  }
+id: swd-main-menu
+label: 'SWD main menu'
+description: ''
+locked: false

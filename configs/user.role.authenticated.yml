@@ -24,7 +24,6 @@ dependencies:
     - media
     - node
     - rest
-    - shortcut
     - system
     - taxonomy
     - toolbar
@@ -37,7 +36,6 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
-  - 'access shortcuts'
   - 'access site-wide contact form'
   - 'access toolbar'
   - 'opt-in or out of matomo tracking'

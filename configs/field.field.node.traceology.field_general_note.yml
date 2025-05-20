@@ -1,0 +1,19 @@
+uuid: d38633b9-ab22-41cb-87dd-8a3dd14c818c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_general_note
+    - node.type.traceology
+id: node.traceology.field_general_note
+field_name: field_general_note
+entity_type: node
+bundle: traceology
+label: Note
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

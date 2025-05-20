@@ -1,0 +1,23 @@
+uuid: 6eaa6228-c6af-4371-ac12-30057203ab41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_weight
+    - media.type.document
+id: media.document.field_weight
+field_name: field_weight
+entity_type: media
+bundle: document
+label: Weight
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

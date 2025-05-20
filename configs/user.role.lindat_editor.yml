@@ -18,6 +18,7 @@ dependencies:
     - entity_comparison
     - field_permissions
     - node
+    - save_edit
     - system
     - taxonomy
 id: lindat_editor
@@ -61,6 +62,7 @@ permissions:
   - 'revert sample revisions'
   - 'revert traceology revisions'
   - 'use a3d_kch_entity_comparison entity comparison'
+  - 'use save and edit'
   - 'view a3d_ingest_artefact revisions'
   - 'view a3d_ingest_object revisions'
   - 'view all taxonomy revisions'

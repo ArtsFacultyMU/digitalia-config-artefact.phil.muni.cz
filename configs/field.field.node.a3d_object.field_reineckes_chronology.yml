@@ -1,0 +1,31 @@
+uuid: d2648034-23db-492d-8f6e-0faa2deb564f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reineckes_chronology
+    - node.type.a3d_object
+    - taxonomy.vocabulary.reineckes_chronology
+    - taxonomy.vocabulary.unknown_values
+id: node.a3d_object.field_reineckes_chronology
+field_name: field_reineckes_chronology
+entity_type: node
+bundle: a3d_object
+label: "Reinecke's chronology"
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      reineckes_chronology: reineckes_chronology
+      unknown_values: unknown_values
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: reineckes_chronology
+field_type: entity_reference

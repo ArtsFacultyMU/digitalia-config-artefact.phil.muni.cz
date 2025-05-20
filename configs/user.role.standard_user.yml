@@ -15,6 +15,7 @@ dependencies:
     - media
     - node
     - persistent_identifiers
+    - save_edit
 id: standard_user
 label: 'standard user'
 weight: -3
@@ -30,6 +31,7 @@ permissions:
   - 'edit own field_geolocation_original_priv'
   - 'mint persistent identifiers'
   - 'use a3d_kch_entity_comparison entity comparison'
+  - 'use save and edit'
   - 'view a3d_object revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'

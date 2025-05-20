@@ -36,7 +36,7 @@ display:
           admin_label: 'platform code'
           plugin_id: custom
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
             text: kch
@@ -223,8 +223,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
-            path: '/{{ nothing_1 }}/sample/node/{{ nid }}'
+            make_link: false
+            path: '/node/{{ nid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -262,7 +262,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -786,7 +786,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "{% set group_id = 3 %}\r\n{% if drupal_token('site:url-brief')|split('.')[0] == 'pottery-analyses-devel' %}\r\n    {% set group_id = 13 %}\r\n{% endif %}\r\n\r\n{% set new_sample_id = 1 %}\r\n{% if [view:total-rows] %}\r\n    {% set new_sample_id = [view:total-rows] + 1 %}\r\n{% endif %}\r\n\r\n<h1> Manage samples and analyses of {{ arguments.nid }}</h1>\r\n<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/kch/node/{{ raw_arguments.nid }}\">Back to object</a>\r\n    <a class=\"button\" href=\"/group/{{ group_id }}/content/create/group_node%3Asample?edit[field_object_reference][widget][0][target_id]={{ raw_arguments.nid }}&edit[field_sample_id][widget][0][value]={{ new_sample_id }}&destination=/kch/samples/node/{{ raw_arguments.nid }}\">Add sample</a>\r\n</p>\r\n</div>"
+            value: "{% set group_id = 3 %}\r\n{% if drupal_token('site:url-brief')|split('.')[0] == ('pottery-analyses-devel' or 'pottery-analyses') %}\r\n    {% set group_id = 13 %}\r\n{% endif %}\r\n\r\n{% set new_sample_id = 1 %}\r\n{% if [view:total-rows] %}\r\n    {% set new_sample_id = [view:total-rows] + 1 %}\r\n{% endif %}\r\n\r\n<h1> Manage samples and analyses of {{ arguments.nid }}</h1>\r\n<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/node/{{ raw_arguments.nid }}\">Back to object</a>\r\n    <a class=\"button\" href=\"/group/{{ group_id }}/content/create/group_node%3Asample?edit[field_object_reference][widget][0][target_id]={{ raw_arguments.nid }}&edit[field_sample_id][widget][0][value]={{ new_sample_id }}&destination=/kch/samples/node/{{ raw_arguments.nid }}\">Add sample</a>\r\n</p>\r\n</div>"
             format: full_html
           tokenize: true
       footer: {  }

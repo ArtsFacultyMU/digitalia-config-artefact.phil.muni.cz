@@ -1,0 +1,11 @@
+uuid: 8550ae44-7bf2-4b9d-b4be-137d55e9b352
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.a3d_institution
+label: 'A3D institution'
+description: ''
+targetEntityType: taxonomy_term
+cache: true

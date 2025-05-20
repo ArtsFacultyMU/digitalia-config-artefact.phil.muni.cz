@@ -28,6 +28,7 @@ permissions:
   - 'view group_term:3d_shaping entity'
   - 'view group_term:3d_traces entity'
   - 'view group_term:actor entity'
+  - 'view group_term:actor_type entity'
   - 'view group_term:alteration entity'
   - 'view group_term:artefact_category entity'
   - 'view group_term:artefact_class entity'

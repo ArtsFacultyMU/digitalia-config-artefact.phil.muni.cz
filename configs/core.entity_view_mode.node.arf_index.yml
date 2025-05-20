@@ -1,0 +1,11 @@
+uuid: d2bb070c-1803-49e1-a33d-d5a8d48ea1d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.arf_index
+label: 'ARF Index'
+description: 'Display with public fields for indexing'
+targetEntityType: node
+cache: true

@@ -1,0 +1,21 @@
+uuid: 82f43c46-4cb8-4ded-9c4f-845511606669
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.trace_type
+  module:
+    - text
+id: taxonomy_term.trace_type.description
+field_name: description
+entity_type: taxonomy_term
+bundle: trace_type
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,20 @@
+uuid: 518747b5-15e7-4a11-ac31-a35564319f98
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_date_return
+field_name: field_date_return
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

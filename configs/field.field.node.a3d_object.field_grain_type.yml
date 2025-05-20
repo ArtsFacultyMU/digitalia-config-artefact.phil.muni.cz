@@ -10,14 +10,14 @@ id: node.a3d_object.field_grain_type
 field_name: field_grain_type
 entity_type: node
 bundle: a3d_object
-label: 'Grain type'
+label: DEPRACTED
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       grain_type: grain_type

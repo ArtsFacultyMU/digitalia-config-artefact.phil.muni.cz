@@ -10,3 +10,9 @@ display:
           label: Výzkumník
         field_date_analysed:
           label: 'Datum analýzy'
+  entity_view_2:
+    display_options:
+      fields:
+        nothing:
+          alter:
+            text: '{{ field_artefact_category|capitalize }} ({{ field_artefact_id }}) » vzorek {{ field_sample_id }}'

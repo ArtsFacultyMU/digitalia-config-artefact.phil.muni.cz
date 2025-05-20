@@ -1,0 +1,18 @@
+uuid: 0f097a99-5e5b-4516-8da3-77fdb83a004f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.traceology
+id: node.traceology.created
+field_name: created
+entity_type: node
+bundle: traceology
+label: 'Authored on'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

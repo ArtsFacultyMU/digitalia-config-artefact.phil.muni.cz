@@ -9,6 +9,7 @@ dependencies:
     - field.field.media.3d_model.field_media_of
     - field.field.media.3d_model.field_media_use
     - field.field.media.3d_model.field_mime_type
+    - field.field.media.3d_model.field_weight
     - media.type.3d_model
   module:
     - file
@@ -65,6 +66,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_weight:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 12
     region: content
 hidden:
   created: true

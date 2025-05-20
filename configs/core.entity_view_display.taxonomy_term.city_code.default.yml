@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.city_code.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.city_code.field_tax_hierarchical_weight
     - taxonomy.vocabulary.city_code
   module:
     - text
@@ -16,6 +18,11 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  a3d_eva_taxonomy_title_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   description:
     type: text_default
     label: hidden
@@ -25,5 +32,7 @@ content:
     region: content
 hidden:
   a3d_eva_entity_group_relation_entity_view_1: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
   langcode: true
   search_api_excerpt: true

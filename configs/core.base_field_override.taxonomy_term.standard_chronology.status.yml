@@ -1,0 +1,22 @@
+uuid: 97e6324d-8d5e-419f-bd85-7061f1cf487e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.standard_chronology
+id: taxonomy_term.standard_chronology.status
+field_name: status
+entity_type: taxonomy_term
+bundle: standard_chronology
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

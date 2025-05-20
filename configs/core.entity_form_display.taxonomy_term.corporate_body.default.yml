@@ -8,6 +8,8 @@ dependencies:
     - field.field.taxonomy_term.corporate_body.field_cat_date_end
     - field.field.taxonomy_term.corporate_body.field_corp_alt_name
     - field.field.taxonomy_term.corporate_body.field_relationships
+    - field.field.taxonomy_term.corporate_body.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.corporate_body.field_tax_hierarchical_weight
     - field.field.taxonomy_term.corporate_body.field_type
     - taxonomy.vocabulary.corporate_body
   module:
@@ -109,4 +111,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true

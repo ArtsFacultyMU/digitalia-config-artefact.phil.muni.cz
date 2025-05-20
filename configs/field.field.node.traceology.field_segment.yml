@@ -1,0 +1,31 @@
+uuid: a3cb347d-5576-4384-b3e3-3a9210be917d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_segment
+    - node.type.traceology
+    - taxonomy.vocabulary.sword_segment
+    - taxonomy.vocabulary.unknown_values
+id: node.traceology.field_segment
+field_name: field_segment
+entity_type: node
+bundle: traceology
+label: Segment
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      unknown_values: unknown_values
+      sword_segment: sword_segment
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: unknown_values
+field_type: entity_reference

@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.a3d_object.field_alternative_ids
     - field.field.node.a3d_object.field_aquamanile_subtype
     - field.field.node.a3d_object.field_aquamanile_type
+    - field.field.node.a3d_object.field_archaeological_site
     - field.field.node.a3d_object.field_artefact_category
     - field.field.node.a3d_object.field_artefact_class
     - field.field.node.a3d_object.field_artefact_id
@@ -51,6 +52,7 @@ dependencies:
     - field.field.node.a3d_object.field_creation
     - field.field.node.a3d_object.field_culture
     - field.field.node.a3d_object.field_current_location
+    - field.field.node.a3d_object.field_decoration
     - field.field.node.a3d_object.field_deposition_cond
     - field.field.node.a3d_object.field_description_a3d
     - field.field.node.a3d_object.field_discoverer
@@ -77,6 +79,7 @@ dependencies:
     - field.field.node.a3d_object.field_general_lateral_wear
     - field.field.node.a3d_object.field_general_note
     - field.field.node.a3d_object.field_general_type
+    - field.field.node.a3d_object.field_geo_site
     - field.field.node.a3d_object.field_geolocation
     - field.field.node.a3d_object.field_geolocation_original
     - field.field.node.a3d_object.field_geolocation_original_priv
@@ -84,6 +87,8 @@ dependencies:
     - field.field.node.a3d_object.field_grain_type
     - field.field.node.a3d_object.field_handle
     - field.field.node.a3d_object.field_has_a_construction_opening
+    - field.field.node.a3d_object.field_has_decoration
+    - field.field.node.a3d_object.field_has_ricasso
     - field.field.node.a3d_object.field_holder_type
     - field.field.node.a3d_object.field_ledge_type
     - field.field.node.a3d_object.field_legal_status
@@ -103,7 +108,9 @@ dependencies:
     - field.field.node.a3d_object.field_mineral_fragments
     - field.field.node.a3d_object.field_mineralogy
     - field.field.node.a3d_object.field_motif
+    - field.field.node.a3d_object.field_note_on_preservation
     - field.field.node.a3d_object.field_number_of_instances
+    - field.field.node.a3d_object.field_number_of_preserved_parts
     - field.field.node.a3d_object.field_orig_state_pres
     - field.field.node.a3d_object.field_original_location
     - field.field.node.a3d_object.field_ownership
@@ -131,6 +138,7 @@ dependencies:
     - field.field.node.a3d_object.field_recent_damage_type_struct
     - field.field.node.a3d_object.field_record_source
     - field.field.node.a3d_object.field_reg_number
+    - field.field.node.a3d_object.field_reineckes_chronology
     - field.field.node.a3d_object.field_relations
     - field.field.node.a3d_object.field_relative_datation
     - field.field.node.a3d_object.field_relief
@@ -149,6 +157,7 @@ dependencies:
     - field.field.node.a3d_object.field_st_placement_type3
     - field.field.node.a3d_object.field_st_shape_type1
     - field.field.node.a3d_object.field_st_shape_type2
+    - field.field.node.a3d_object.field_standard_chronology
     - field.field.node.a3d_object.field_state
     - field.field.node.a3d_object.field_statement
     - field.field.node.a3d_object.field_stove_tile_shape_certainty
@@ -168,7 +177,14 @@ dependencies:
     - field.field.node.a3d_object.field_wgs84_geolocation_private
     - node.type.a3d_object
   module:
+    - datafield
+    - datetime
     - field_group
+    - geolocation
+    - link
+    - range
+    - rest_views
+    - text
     - user
 third_party_settings:
   field_group:
@@ -177,8 +193,8 @@ third_party_settings:
         - a3d_eva_biblatex_biblatex
       label: Biblatex
       parent_name: ''
-      region: hidden
-      weight: 186
+      region: content
+      weight: 53
       format_type: details
       format_settings:
         classes: ''
@@ -192,8 +208,8 @@ third_party_settings:
         - a3d_eva_biblatex_harvard
       label: 'Harvard citation style'
       parent_name: ''
-      region: hidden
-      weight: 187
+      region: content
+      weight: 54
       format_type: details
       format_settings:
         classes: ''
@@ -204,11 +220,11 @@ third_party_settings:
         required_fields: false
     group_platforms:
       children:
-        - a3d_eva_field_appellation_entity_view_1
+        - a3d_eva_entity_group_relation_entity_view_4
       label: Platforms
       parent_name: ''
-      region: hidden
-      weight: 188
+      region: content
+      weight: 0
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -218,177 +234,2005 @@ third_party_settings:
         required_fields: false
         weight: 0
         effect: bounceslide
+    group_collection:
+      children:
+        - field_coll_id
+        - field_coll_title
+        - field_coll_org
+        - field_coll_contacts
+        - field_coll_rights
+        - field_coll_lang
+        - field_statement
+        - field_creation
+        - field_coll_keyword
+        - field_cov_temp
+        - field_cov_spat
+        - field_relations
+      label: Collection
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_identification:
+      children:
+        - field_artefact_id
+        - field_alternative_ids
+        - field_artefact_category
+        - field_artefact_class
+        - field_artefact_subclass
+        - field_discovery_date
+        - field_discoverer
+        - field_alternative_id
+        - field_handle
+        - field_record_source
+        - field_general_type
+        - field_artefact_id_type
+        - field_proj_id
+        - field_ais_cr
+        - field_feature_type
+        - field_feature_id
+        - field_finding_context_loc
+        - field_finding_context_type
+        - field_finding_context_subtype
+        - field_finding_context_pos
+        - field_finding_context_sec
+        - field_finding_context_note
+        - field_material_inclusions
+      label: Identification
+      parent_name: ''
+      region: content
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_description:
+      children:
+        - field_field_description_a3d_cs
+        - field_description_a3d
+        - field_circle
+        - field_st_placement_type1
+        - field_st_placement_type2
+        - field_st_placement_type3
+        - field_st_shape_type1
+        - field_st_shape_type2
+        - field_aquamanile_type
+        - field_aquamanile_subtype
+        - field_ledge_type
+        - field_tile_type
+        - field_culture
+        - field_measurements
+        - field_orig_state_pres
+        - field_number_of_preserved_parts
+        - field_note_on_preservation
+        - field_st_placement_certainty
+        - field_has_ricasso
+        - field_raw_material
+        - field_ballistic_profile
+        - field_2d_asymmetry
+        - field_a_asymmetry
+        - field_b_asymmetry
+        - field_longitudinal_profile
+        - field_serration
+        - field_base_curve
+        - field_blank_orientation
+        - field_quiver_trans_tip_rounding
+        - field_quiver_trans_bright_spots
+        - field_quiver_trans_lat_rounding
+        - field_general_lateral_wear
+        - field_reparation_features
+        - field_glue_residues
+        - field_posture
+        - field_preserved_parts
+        - field_preserved_parts_struct
+        - field_3d_shaping
+        - field_3d_shaping_struct
+        - field_3d_traces
+        - field_3d_traces_struct
+        - field_deposition_cond
+        - field_surface_alt
+        - field_quality
+        - field_recent_damage
+        - field_recent_damage_type
+        - field_recent_damage_type_struct
+        - field_recent_damage_note
+        - field_alteration
+        - field_retouch
+        - field_tip_fracture
+        - field_porosity
+        - field_rock_fragments
+        - field_micro_ct
+        - field_thermic_cracks
+        - field_polished_sec_petrography
+        - field_mineralogy
+        - field_wear
+        - field_painting_eye
+        - field_painting_tool
+        - field_painting_microscope
+        - field_pigment
+        - field_fract_preservation
+        - field_fract_preservation_struct
+        - field_fract_nature
+        - field_assess_cond_date
+        - field_has_decoration
+        - field_decoration
+        - field_colour_paint
+        - field_edging
+        - field_number_of_instances
+        - field_fhp_type
+        - field_has_a_construction_opening
+        - field_material_colour
+        - field_surface_finishing
+        - field_motif
+        - field_sculpture_type
+        - field_clay_colour
+        - field_sculpture_subtype
+        - field_relief
+        - group_arf_sdp
+        - group_arf_msdp
+      label: Description
+      parent_name: ''
+      region: content
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_datation:
+      children:
+        - field_relative_datation
+        - field_abs_dat_range
+        - field_abs_dat_range_cs
+        - field_abs_dat_source
+        - field_timespan
+        - field_reineckes_chronology
+        - field_standard_chronology
+      label: Datation
+      parent_name: ''
+      region: content
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_custody:
+      children:
+        - field_original_location
+        - field_current_location
+        - field_ownership
+        - field_reg_number
+        - field_legal_status
+        - field_rights_access
+        - field_rights_reproduction
+        - field_licence_url
+        - field_met_note_cz
+        - field_g_w_practice
+      label: Custody
+      parent_name: ''
+      region: content
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_references:
+      children:
+        - field_subord_dataset
+        - field_subord_dataset_link
+        - field_proj_dedication
+        - field_literature
+        - field_contract
+        - field_link_to_3d_model
+      label: References
+      parent_name: ''
+      region: content
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_documentation:
+      children:
+        - field_doc_creator
+        - field_doc_date
+        - field_auth_res_data
+        - field_stove_tile_shape_certainty
+        - field_auth_3d_models
+        - field_metadata_rights
+        - field_provenance
+        - field_acquisition_type
+      label: Documentation
+      parent_name: ''
+      region: content
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_general:
+      children:
+        - field_general_note
+        - field_private_note
+      label: General
+      parent_name: ''
+      region: content
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_location:
+      children:
+        - field_country
+        - field_archaeological_site
+        - field_wgs84_geolocation_accuracy
+        - field_wgs84_geolocation
+        - field_geolocation
+        - field_site
+        - field_geolocation_original
+        - field_geolocation_original_priv
+        - field_wgs84_accuracy_private
+        - field_wgs84_geolocation_private
+      label: Location
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_arf_sdp:
+      children:
+        - field_surf_data_pres
+      label: 'Surface data presence'
+      parent_name: group_description
+      region: hidden
+      weight: -1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+    group_arf_msdp:
+      children:
+        - field_mass_structure_data_pres
+      label: 'Mass & structure data presence'
+      parent_name: group_description
+      region: hidden
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
 id: node.a3d_object.default
 targetEntityType: node
 bundle: a3d_object
 mode: default
 content:
+  a3d_artefact_media_a3d_documents:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  a3d_artefact_media_a3d_first_image:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  a3d_artefact_media_a3d_images:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  a3d_artefact_media_a3d_models:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  a3d_artefact_media_a3d_other_files:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  a3d_artefact_media_a3d_videos:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
   a3d_artefact_media_entity_view_2:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  a3d_eva_biblatex_biblatex:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  a3d_eva_biblatex_harvard:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  a3d_eva_field_appellation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
   a3d_eva_parent_groups_entity_view_1:
     settings: {  }
     third_party_settings: {  }
     weight: 10
     region: content
-  a3d_kch_index_related_samples_and_analyses_entity_view_4:
-    settings: {  }
+  field_2d_asymmetry:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 10
+    weight: -30
     region: content
-  a3d_kch_index_related_samples_and_analyses_entity_view_5:
+  field_3d_shaping:
+    type: basic_string
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: -14
     region: content
   field_3d_shaping_struct:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
-    weight: 1
+    weight: -13
+    region: content
+  field_3d_traces:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: -12
     region: content
   field_3d_traces_struct:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: -11
+    region: content
+  field_a_asymmetry:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -29
+    region: content
+  field_abs_dat_range:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 78
     region: content
   field_abs_dat_range_cs:
     type: basic_string
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 194
+    weight: 79
     region: content
-  field_colour_paint:
+  field_abs_dat_source:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 80
+    region: content
+  field_acquisition_type:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
-    weight: 8
+    weight: 35
     region: content
-  field_contract:
+  field_ais_cr:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_alteration:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
-    weight: 192
+    weight: -3
     region: content
-  field_fract_preservation_struct:
-    type: entity_reference_label
+  field_alternative_id:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_alternative_ids:
+    type: data_field_table_formatter
     label: above
+    settings:
+      number_column: false
+      number_column_label: №
+      direction: horizontal
+      mode: table
+      caption: ''
+      footer_text: ''
+      datatables_options:
+        bExpandable: 0
+        bInfo: 0
+        scrollX: 0
+        bStateSave: 0
+        ordering: 0
+        paging: 0
+        searching: 0
+        show-export: 0
+        bMultiFilter: 0
+      bootstrap_table_options:
+        sticky-header: 0
+        show-export: 0
+        show-print: 0
+        show-copy-rows: 0
+        show-multi-sort: 0
+        show-fullscreen: 0
+        search: 0
+        show-refresh: 0
+        show-toggle: 0
+        show-columns: 0
+        mobile-responsive: 0
+        sortable: 0
+        click-to-select: 0
+        show-pagination-switch: 0
+        pagination: 0
+        show-footer: 0
+      formatter_settings:
+        id:
+          format_type: string
+          column_label: Id
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        type:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: Type
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        note:
+          format_type: text_default
+          column_label: Note
+          weight: '0'
+          hidden: 0
+          show_label: 0
+      custom_class: ''
+      ajax: 0
+      line_operations: 0
+      form_format_table: 0
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_aquamanile_subtype:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -42
+    region: content
+  field_aquamanile_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -43
+    region: content
+  field_archaeological_site:
+    type: entity_reference_entity_view
+    label: inline
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_artefact_category:
+    type: entity_reference_label
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     weight: 6
     region: content
-  field_geolocation_original:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 190
-    region: content
-  field_geolocation_original_priv:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 191
-    region: content
-  field_mass_structure_data_pres:
+  field_artefact_class:
     type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 189
-    region: content
-  field_material_colour:
-    type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     weight: 7
     region: content
-  field_material_inclusions:
+  field_artefact_id:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_artefact_id_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_artefact_subclass:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_assess_cond_date:
+    type: datetime_plain
+    label: inline
+    settings:
+      timezone_override: ''
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_auth_3d_models:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_auth_res_data:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_b_asymmetry:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -28
+    region: content
+  field_ballistic_profile:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -31
+    region: content
+  field_base_curve:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -25
+    region: content
+  field_blank_orientation:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -24
+    region: content
+  field_circle:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -49
+    region: content
+  field_clay_colour:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_coll_contacts:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_coll_id:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_coll_keyword:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_coll_lang:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_coll_org:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_coll_rights:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_coll_title:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_colour_paint:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_contract:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_country:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_cov_spat:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_cov_temp:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_creation:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_culture:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -39
+    region: content
+  field_current_location:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_decoration:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_deposition_cond:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -10
+    region: content
+  field_description_a3d:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: -50
+    region: content
+  field_discoverer:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_discovery_date:
+    type: datetime_plain
+    label: inline
+    settings:
+      timezone_override: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_doc_creator:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_doc_date:
+    type: datetime_plain
+    label: inline
+    settings:
+      timezone_override: ''
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_edging:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_feature_id:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_feature_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_fhp_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_field_description_a3d_cs:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: -51
+    region: content
+  field_finding_context_loc:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_finding_context_note:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_finding_context_pos:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_finding_context_sec:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_finding_context_subtype:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_finding_context_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_fract_nature:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_fract_preservation:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_fract_preservation_struct:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_g_w_practice:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 41
+    region: content
+  field_general_lateral_wear:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_general_note:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_general_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_geo_site:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 193
+    weight: 85
     region: content
-  field_preserved_parts:
+  field_geolocation:
+    type: data_field_table_formatter
+    label: inline
+    settings:
+      number_column: false
+      number_column_label: №
+      direction: horizontal
+      mode: table
+      caption: ''
+      footer_text: ''
+      datatables_options:
+        bExpandable: 0
+        bInfo: 0
+        scrollX: 0
+        bStateSave: 0
+        ordering: 0
+        paging: 0
+        searching: 0
+        show-export: 0
+        bMultiFilter: 0
+      bootstrap_table_options:
+        sticky-header: 0
+        show-export: 0
+        show-print: 0
+        show-copy-rows: 0
+        show-multi-sort: 0
+        show-fullscreen: 0
+        search: 0
+        show-refresh: 0
+        show-toggle: 0
+        show-columns: 0
+        mobile-responsive: 0
+        sortable: 0
+        click-to-select: 0
+        show-pagination-switch: 0
+        pagination: 0
+        show-footer: 0
+      formatter_settings:
+        spatial_ref_system:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: 'Spatial reference system'
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        loc_coord_cadastre_x:
+          format_type: string
+          column_label: 'Location coordinates 1'
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        loc_coord_cadastre_y:
+          format_type: string
+          column_label: 'Location coordinates 2'
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        loc_coord_cadastre_accuracy:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: 'Location coordinates accuracy'
+          weight: '0'
+          hidden: 0
+          show_label: 0
+      custom_class: ''
+      ajax: 0
+      line_operations: 0
+      form_format_table: 0
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_geolocation_original:
     type: basic_string
-    label: above
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_geolocation_original_priv:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_glue_residues:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -18
+    region: content
+  field_handle:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_has_a_construction_opening:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_has_decoration:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_has_ricasso:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: -33
+    region: content
+  field_ledge_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -41
+    region: content
+  field_legal_status:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  field_licence_url:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 39
+    region: content
+  field_link_to_3d_model:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_literature:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_longitudinal_profile:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -27
+    region: content
+  field_mass_structure_data_pres:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: arf_display
+      link: false
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  field_material_colour:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_material_inclusions:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_measurements:
+    type: data_field_table_formatter
+    label: inline
+    settings:
+      number_column: false
+      number_column_label: №
+      direction: horizontal
+      mode: table
+      caption: ''
+      footer_text: ''
+      datatables_options:
+        bExpandable: 0
+        bInfo: 0
+        scrollX: 0
+        bStateSave: 0
+        ordering: 0
+        paging: 0
+        searching: 0
+        show-export: 0
+        bMultiFilter: 0
+      bootstrap_table_options:
+        sticky-header: 0
+        show-export: 0
+        show-print: 0
+        show-copy-rows: 0
+        show-multi-sort: 0
+        show-fullscreen: 0
+        search: 0
+        show-refresh: 0
+        show-toggle: 0
+        show-columns: 0
+        mobile-responsive: 0
+        sortable: 0
+        click-to-select: 0
+        show-pagination-switch: 0
+        pagination: 0
+        show-footer: 0
+      formatter_settings:
+        dimensions_type:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: 'Dimensions type'
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        dimensions_value:
+          format_type: number_unformatted
+          decimal_separator: .
+          scale: '2'
+          thousand_separator: ''
+          prefix_suffix: '1'
+          column_label: 'Dimensions value'
+          weight: '0'
+          hidden: 0
+          show_label: 0
+          sum_column: 0
+        dimensions_unit:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: 'Dimensions unit'
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        dimensions_extent:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: 'Dimensions extent'
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        scale_type:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: 'Scale type'
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        dimensions_qualifier:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: 'Dimensions qualifier'
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        measurement_date:
+          format_type: string
+          column_label: 'Measurement date'
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        shape:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: Shape
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        format_size:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: 'Format size'
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        remarks:
+          format_type: text_default
+          column_label: Remarks
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        citations:
+          format_type: text_default
+          column_label: Citations
+          weight: '0'
+          hidden: 0
+          show_label: 0
+      custom_class: ''
+      ajax: 0
+      line_operations: 0
+      form_format_table: 0
+    third_party_settings: {  }
+    weight: -38
+    region: content
+  field_member_of:
+    type: entity_reference_export
+    label: inline
+    settings:
+      view_mode: default
+      link: false
+      extra: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_met_note_cz:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  field_metadata_rights:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_micro_ct:
+    type: basic_string
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 5
     region: content
-  field_preserved_parts_struct:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 0
-    region: content
-  field_recent_damage_type:
+  field_mineralogy:
     type: basic_string
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 8
     region: content
-  field_recent_damage_type_struct:
+  field_motif:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_note_on_preservation:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: -35
+    region: content
+  field_number_of_instances:
+    type: data_field_table_formatter
+    label: inline
+    settings:
+      number_column: false
+      number_column_label: №
+      direction: horizontal
+      mode: googleCharts
+      caption: ''
+      footer_text: ''
+      datatables_options:
+        bExpandable: true
+        bInfo: true
+        scrollX: true
+        bStateSave: false
+        paging: true
+        ordering: true
+        searching: true
+        show-export: true
+        bMultiFilter: false
+      bootstrap_table_options:
+        sticky-header: true
+        search: true
+        show-search-clear-button: true
+        show-refresh: true
+        show-toggle: true
+        show-fullscreen: true
+        show-columns: true
+        data-detail-view: true
+        show-columns-toggle-all: true
+        mobile-responsive: true
+        show-print: true
+        show-copy-rows: true
+        show-export: true
+        sortable: true
+        click-to-select: true
+        show-pagination-switch: true
+        pagination: true
+        cookie: true
+        show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_number_of_preserved_parts:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: -36
+    region: content
+  field_orig_state_pres:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -37
+    region: content
+  field_original_location:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_ownership:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_painting_eye:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_painting_microscope:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_painting_tool:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_pigment:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_polished_sec_petrography:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_porosity:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
     weight: 3
     region: content
-  field_surf_data_pres:
+  field_posture:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
+    weight: -17
+    region: content
+  field_preserved_parts:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: -16
+    region: content
+  field_preserved_parts_struct:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -15
+    region: content
+  field_private_note:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_proj_dedication:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_proj_id:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_provenance:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_quality:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -8
+    region: content
+  field_quiver_trans_bright_spots:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -22
+    region: content
+  field_quiver_trans_lat_rounding:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -21
+    region: content
+  field_quiver_trans_tip_rounding:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -23
+    region: content
+  field_raw_material:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -32
+    region: content
+  field_recent_damage:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -7
+    region: content
+  field_recent_damage_note:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  field_recent_damage_type:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: -6
+    region: content
+  field_recent_damage_type_struct:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  field_record_source:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_reg_number:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_reineckes_chronology:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 82
+    region: content
+  field_relations:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_relative_datation:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 77
+    region: content
+  field_relief:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_reparation_features:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -19
+    region: content
+  field_retouch:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -2
+    region: content
+  field_rights_access:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 37
+    region: content
+  field_rights_reproduction:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 38
+    region: content
+  field_rock_fragments:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_sculpture_subtype:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_sculpture_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_serration:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -26
+    region: content
+  field_site:
+    type: entity_reference_entity_view
+    label: inline
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
     weight: 9
+    region: content
+  field_st_placement_certainty:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: -46
+    region: content
+  field_st_placement_type1:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -48
+    region: content
+  field_st_placement_type2:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -47
+    region: content
+  field_st_placement_type3:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -46
+    region: content
+  field_st_shape_type1:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -45
+    region: content
+  field_st_shape_type2:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -44
+    region: content
+  field_standard_chronology:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 84
+    region: content
+  field_statement:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_stove_tile_shape_certainty:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: -48
+    region: content
+  field_subord_dataset:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_subord_dataset_link:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_surf_data_pres:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: arf_display
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_surface_alt:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -9
+    region: content
+  field_surface_finishing:
+    type: data_field_table_formatter
+    label: inline
+    settings:
+      number_column: false
+      number_column_label: №
+      direction: horizontal
+      mode: table
+      caption: ''
+      footer_text: ''
+      datatables_options:
+        bExpandable: 0
+        bInfo: 0
+        scrollX: 0
+        bStateSave: 0
+        ordering: 0
+        paging: 0
+        searching: 0
+        show-export: 0
+        bMultiFilter: 0
+      bootstrap_table_options:
+        sticky-header: 0
+        show-export: 0
+        show-print: 0
+        show-copy-rows: 0
+        show-multi-sort: 0
+        show-fullscreen: 0
+        search: 0
+        show-refresh: 0
+        show-toggle: 0
+        show-columns: 0
+        mobile-responsive: 0
+        sortable: 0
+        click-to-select: 0
+        show-pagination-switch: 0
+        pagination: 0
+        show-footer: 0
+      formatter_settings:
+        finishing:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: 'Surface finishing type'
+          weight: '0'
+          hidden: 0
+          show_label: 0
+        colour:
+          format_type: entity_reference_label
+          link: '1'
+          column_label: Colour
+          weight: '0'
+          hidden: 0
+          show_label: 0
+      custom_class: ''
+      ajax: 0
+      line_operations: 0
+      form_format_table: 0
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_thermic_cracks:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_tile_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -40
+    region: content
+  field_timespan:
+    type: range_integer
+    label: inline
+    settings:
+      range_separator: '-'
+      thousand_separator: ''
+      range_combine: true
+      field_prefix_suffix: false
+      from_prefix_suffix: false
+      to_prefix_suffix: false
+      combined_prefix_suffix: false
+    third_party_settings: {  }
+    weight: 81
+    region: content
+  field_tip_fracture:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_wear:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_wgs84_accuracy_private:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_wgs84_geolocation:
+    type: geolocation_latlng
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_wgs84_geolocation_accuracy:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_wgs84_geolocation_private:
+    type: geolocation_latlng
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
     region: content
 hidden:
   a3d_arf_content_browse_title: true
-  a3d_artefact_media_a3d_documents: true
-  a3d_artefact_media_a3d_first_image: true
   a3d_artefact_media_a3d_first_image_thumbnail: true
-  a3d_artefact_media_a3d_images: true
-  a3d_artefact_media_a3d_models: true
-  a3d_artefact_media_a3d_other_files: true
-  a3d_artefact_media_a3d_videos: true
   a3d_artefact_media_entity_view_1: true
   a3d_content_entity_view_1: true
-  a3d_eva_biblatex_biblatex: true
-  a3d_eva_biblatex_harvard: true
+  a3d_editor_block_entity_view_1: true
   a3d_eva_entity_group_relation_entity_view_2: true
   a3d_eva_entity_group_relation_entity_view_3: true
-  a3d_eva_entity_group_relation_entity_view_4: true
   a3d_eva_entity_group_relation_entity_view_5: true
   a3d_eva_field_appellation_entity_view_1: true
-  a3d_eva_field_appellation_entity_view_2: true
   a3d_eva_handle_entity_view_1: true
   a3d_kch_content2_browse_title: true
   a3d_kch_content2_kch_analysis_to_object: true
   a3d_kch_index_related_samples_and_analyses_entity_view_1: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_4: true
+  a3d_kch_index_related_samples_and_analyses_entity_view_5: true
   a3d_kch_media_nef_images: true
   a3d_meta_content_browse_title: true
   a3d_meta_object_on_map_a3d_object_map: true
@@ -399,153 +2243,16 @@ hidden:
   display_media_original_download: true
   display_media_service_file: true
   display_media_thumbnail: true
-  field_2d_asymmetry: true
-  field_3d_shaping: true
-  field_3d_traces: true
-  field_a_asymmetry: true
-  field_abs_dat_range: true
-  field_abs_dat_source: true
-  field_acquisition_type: true
-  field_ais_cr: true
-  field_alteration: true
-  field_alternative_id: true
-  field_alternative_ids: true
-  field_aquamanile_subtype: true
-  field_aquamanile_type: true
-  field_artefact_category: true
-  field_artefact_class: true
-  field_artefact_id: true
-  field_artefact_id_type: true
-  field_artefact_subclass: true
-  field_assess_cond_date: true
-  field_auth_3d_models: true
-  field_auth_res_data: true
-  field_b_asymmetry: true
-  field_ballistic_profile: true
-  field_base_curve: true
   field_binder_type: true
-  field_blank_orientation: true
-  field_circle: true
   field_city: true
   field_city_code: true
-  field_clay_colour: true
-  field_coll_contacts: true
-  field_coll_id: true
-  field_coll_keyword: true
-  field_coll_lang: true
-  field_coll_org: true
-  field_coll_rights: true
-  field_coll_title: true
-  field_country: true
-  field_cov_spat: true
-  field_cov_temp: true
-  field_creation: true
-  field_culture: true
-  field_current_location: true
-  field_deposition_cond: true
-  field_description_a3d: true
-  field_discoverer: true
-  field_discovery_date: true
-  field_doc_creator: true
-  field_doc_date: true
-  field_edging: true
-  field_feature_id: true
-  field_feature_type: true
-  field_fhp_type: true
-  field_field_description_a3d_cs: true
-  field_finding_context_loc: true
-  field_finding_context_note: true
-  field_finding_context_pos: true
-  field_finding_context_sec: true
-  field_finding_context_subtype: true
-  field_finding_context_type: true
   field_firing: true
-  field_fract_nature: true
-  field_fract_preservation: true
-  field_g_w_practice: true
   field_gb_scale: true
-  field_general_lateral_wear: true
-  field_general_note: true
-  field_general_type: true
-  field_geolocation: true
-  field_glue_residues: true
   field_grain_type: true
-  field_handle: true
-  field_has_a_construction_opening: true
   field_holder_type: true
-  field_ledge_type: true
-  field_legal_status: true
-  field_licence_url: true
-  field_link_to_3d_model: true
-  field_literature: true
-  field_longitudinal_profile: true
-  field_measurements: true
-  field_member_of: true
-  field_met_note_cz: true
-  field_metadata_rights: true
-  field_micro_ct: true
   field_microstructure: true
   field_mineral_fragments: true
-  field_mineralogy: true
-  field_motif: true
-  field_number_of_instances: true
-  field_orig_state_pres: true
-  field_original_location: true
-  field_ownership: true
-  field_painting_eye: true
-  field_painting_microscope: true
-  field_painting_tool: true
-  field_pigment: true
-  field_polished_sec_petrography: true
-  field_porosity: true
-  field_posture: true
-  field_private_note: true
-  field_proj_dedication: true
-  field_proj_id: true
-  field_provenance: true
-  field_quality: true
-  field_quiver_trans_bright_spots: true
-  field_quiver_trans_lat_rounding: true
-  field_quiver_trans_tip_rounding: true
-  field_raw_material: true
-  field_recent_damage: true
-  field_recent_damage_note: true
-  field_record_source: true
-  field_reg_number: true
-  field_relations: true
-  field_relative_datation: true
-  field_relief: true
-  field_reparation_features: true
-  field_retouch: true
-  field_rights_access: true
-  field_rights_reproduction: true
-  field_rock_fragments: true
-  field_sculpture_subtype: true
-  field_sculpture_type: true
-  field_serration: true
-  field_site: true
-  field_st_placement_certainty: true
-  field_st_placement_type1: true
-  field_st_placement_type2: true
-  field_st_placement_type3: true
-  field_st_shape_type1: true
-  field_st_shape_type2: true
   field_state: true
-  field_statement: true
-  field_stove_tile_shape_certainty: true
-  field_subord_dataset: true
-  field_subord_dataset_link: true
-  field_surface_alt: true
-  field_surface_finishing: true
-  field_thermic_cracks: true
-  field_tile_type: true
-  field_timespan: true
-  field_tip_fracture: true
-  field_wear: true
-  field_wgs84_accuracy_private: true
-  field_wgs84_geolocation: true
-  field_wgs84_geolocation_accuracy: true
-  field_wgs84_geolocation_private: true
   langcode: true
   links: true
   search_api_excerpt: true

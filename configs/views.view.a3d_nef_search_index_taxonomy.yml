@@ -471,7 +471,7 @@ display:
             alter_text: true
             text: '{{ field_artefact_id }} | {{ field_posture_name }} | {{ field_preserved_parts_struct_name }}'
             make_link: true
-            path: '/nef/node/{{ nid }}'
+            path: '/node/{{ nid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -989,6 +989,8 @@ display:
           query_tags: {  }
       relationships: {  }
       use_ajax: false
+      link_display: custom_url
+      link_url: '/taxonomy/term/{{ raw_arguments.a3d_object_terms }}'
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -1008,8 +1010,8 @@ display:
         - 'search_api_list:a3d_object_index'
   nef:
     id: nef
-    display_title: Taxonomy
-    display_plugin: page
+    display_title: 'Block Taxonomy'
+    display_plugin: block
     position: 1
     display_options:
       style:
@@ -1056,20 +1058,7 @@ display:
         header: false
       css_class: nef-grid-page
       display_description: ''
-      header:
-        entity_taxonomy_term:
-          id: entity_taxonomy_term
-          table: views
-          field: entity_taxonomy_term
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: entity
-          empty: true
-          target: '{{ raw_arguments.a3d_object_terms }}'
-          view_mode: full
-          tokenize: true
-          bypass_access: false
+      header: {  }
       exposed_block: false
       display_extenders:
         matomo:
@@ -1083,16 +1072,6 @@ display:
           category_fallback: ''
           category_facets: {  }
           category_facets_concat_separator: ', '
-      path: nef/taxonomy/term/%
-      menu:
-        type: none
-        title: Browse
-        description: ''
-        weight: -49
-        expanded: false
-        menu_name: nef-main-menu
-        parent: ''
-        context: '0'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1109,8 +1088,8 @@ display:
         - 'search_api_list:a3d_object_index'
   nef_paged:
     id: nef_paged
-    display_title: 'Taxonomy Paged'
-    display_plugin: page
+    display_title: 'Block Taxonomy Paged'
+    display_plugin: block
     position: 1
     display_options:
       fields:
@@ -1270,6 +1249,38 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+      arguments:
+        a3d_object_terms:
+          id: a3d_object_terms
+          table: search_api_index_a3d_object_index
+          field: a3d_object_terms
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: raw
+          default_argument_options:
+            index: 2
+            use_alias: false
+          summary_options: {  }
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
       style:
         type: default
         options:
@@ -1277,12 +1288,164 @@ display:
           default_row_class: true
           uses_fields: false
       row:
-        type: fields
+        type: search_api
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          view_modes:
+            'entity:node':
+              ':default': nef_display
+              a3d_object: ':default'
+              analysis: ':default'
+              sample: ':default'
+            'entity:taxonomy_term':
+              2d_asymetry: ':default'
+              3d_shaping: ':default'
+              3d_traces: ':default'
+              ':default': default
+              acquisition_type: ':default'
+              actor: ':default'
+              actor_type: ':default'
+              alteration: ':default'
+              analysis_type: ':default'
+              aquamanile_subtype: ':default'
+              aquamanile_type: ':default'
+              archaeological_site: ':default'
+              artefact_category: ':default'
+              artefact_class: ':default'
+              artefact_subclass: ':default'
+              author: ':default'
+              ballistic_profile: ':default'
+              base_curve: ':default'
+              binder_type: ':default'
+              blank_orientation: ':default'
+              chemical_compounds: ':default'
+              circle: ':default'
+              city: ':default'
+              city_code: ':default'
+              coll_keyword: ':default'
+              coll_lang: ':default'
+              coll_org: ':default'
+              collection_title: ':default'
+              colour: ':default'
+              corporate_body: ':default'
+              country_a3d: ':default'
+              cov_spat: ':default'
+              creation: ':default'
+              cross_section_asymmetry: ':default'
+              culture: ':default'
+              current_location: ':default'
+              deposition_cond: ':default'
+              dimensions_extent: ':default'
+              dimensions_qualifier: ':default'
+              elements: ':default'
+              family: ':default'
+              feature_id: ':default'
+              feature_type: ':default'
+              fhp_type: ':default'
+              finding_context_subtype: ':default'
+              finding_context_type: ':default'
+              finding_documentation: ':default'
+              firing_characteristic: ':default'
+              format_size: ':default'
+              fract_nature: ':default'
+              fract_preservation: ':default'
+              frequencies: ':default'
+              g_w_practice: ':default'
+              general_accuracy: ':default'
+              general_lateral_wear: ':default'
+              general_type: ':default'
+              genre: ':default'
+              geo_location: ':default'
+              glue_residues: ':default'
+              grain_type: ':default'
+              holder_type: ':default'
+              identifier_type: ':default'
+              instrument: ':default'
+              instrument_relation_type: ':default'
+              instrument_type: ':default'
+              islandora_display: ':default'
+              islandora_media_use: ':default'
+              islandora_models: ':default'
+              issuance_modes: ':default'
+              language: ':default'
+              ledge_type: ':default'
+              legal_status: ':default'
+              licence_url: ':default'
+              loc_coord_cadastre_accuracy: ':default'
+              longitudinal_profile: ':default'
+              material_inclusions: ':default'
+              matrix_characteristic: ':default'
+              measured_variable: ':default'
+              measurement_type: ':default'
+              metadata_rights: ':default'
+              microstructure: ':default'
+              mineral_fragments: ':default'
+              motif: ':default'
+              msdp_method: ':default'
+              msdp_value: ':default'
+              non_plastic_inclusions_scale: ':default'
+              orig_state_pres: ':default'
+              original_location: ':default'
+              painting: ':default'
+              person: ':default'
+              physical_form: ':default'
+              pigment: ':default'
+              place_analysis: ':default'
+              posture: ':default'
+              preserved_parts: ':default'
+              proj_dedication: ':default'
+              proj_id: ':default'
+              quality: ':default'
+              quiver_trans_bright_spots: ':default'
+              quiver_trans_lat_rounding: ':default'
+              quiver_trans_tip_rounding: ':default'
+              raw_material: ':default'
+              recent_damage: ':default'
+              recent_damage_type: ':default'
+              record_source: ':default'
+              region: ':default'
+              reineckes_chronology: ':default'
+              relative_datation: ':default'
+              relief_type: ':default'
+              reparation_features: ':default'
+              research_question: ':default'
+              resource_types: ':default'
+              retouch: ':default'
+              rights_access: ':default'
+              rights_reproduction: ':default'
+              rock_fragments: ':default'
+              sampling_type: ':default'
+              scale_type: ':default'
+              sdp_method: ':default'
+              sdp_value: ':default'
+              serration: ':default'
+              shape: ':default'
+              site: ':default'
+              site_type: ':default'
+              small_sculpture_subtype: ':default'
+              small_sculpture_type: ':default'
+              spatial_ref_system: ':default'
+              standard_chronology: ':default'
+              state: ':default'
+              stove_tile_placement_type_1: ':default'
+              stove_tile_placement_type_2: ':default'
+              stove_tile_placement_type_3: ':default'
+              stove_tile_shape_type_1: ':default'
+              stove_tile_shape_type_2: ':default'
+              subject: ':default'
+              subord_dataset: ':default'
+              surface_alt: ':default'
+              surface_finishing: ':default'
+              surface_properties: ':default'
+              sword_segment: ':default'
+              tags: ':default'
+              temporal_subjects: ':default'
+              test_level_0: ':default'
+              thermic_cracks: ':default'
+              tile_type: ':default'
+              tip_fracture: ':default'
+              trace_type: ':default'
+              units: ':default'
+              unknown_values: ':default'
       defaults:
         cache: true
         title: true
@@ -1292,11 +1455,12 @@ display:
         row: false
         fields: false
         sorts: true
+        arguments: false
         filters: true
         filter_groups: true
       css_class: all-pagers
       display_description: ''
-      exposed_block: false
+      exposed_block: true
       display_extenders:
         matomo:
           enabled: false
@@ -1309,16 +1473,6 @@ display:
           category_fallback: ''
           category_facets: {  }
           category_facets_concat_separator: ', '
-      path: nef/taxonomy/term/%/paged
-      menu:
-        type: none
-        title: Browse
-        description: ''
-        weight: -49
-        expanded: false
-        menu_name: nef-main-menu
-        parent: ''
-        context: '0'
     cache_metadata:
       max-age: -1
       contexts:

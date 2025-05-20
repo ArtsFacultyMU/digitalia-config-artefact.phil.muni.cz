@@ -1,0 +1,20 @@
+uuid: 80756bc7-4ed5-4306-9e4c-8a20c8a8a8e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.decoration
+  module:
+    - path
+id: node.decoration.path
+field_name: path
+entity_type: node
+bundle: decoration
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

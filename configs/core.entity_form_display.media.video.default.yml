@@ -10,6 +10,7 @@ dependencies:
     - field.field.media.video.field_mime_type
     - field.field.media.video.field_original_name
     - field.field.media.video.field_track
+    - field.field.media.video.field_weight
     - media.type.video
   module:
     - file
@@ -64,6 +65,13 @@ content:
     region: content
     settings:
       progress_indicator: throbber
+    third_party_settings: {  }
+  field_weight:
+    type: number
+    weight: 29
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   name:
     type: string_textfield

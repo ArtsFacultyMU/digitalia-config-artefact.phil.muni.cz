@@ -1,0 +1,37 @@
+uuid: 3fbddb44-e29a-46c5-9b3e-4a3ffc444bde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test_datafield_3
+    - node.type.a3d_workbench_test_type
+  module:
+    - datafield
+id: node.a3d_workbench_test_type.field_test_datafield_3
+field_name: field_test_datafield_3
+entity_type: node
+bundle: a3d_workbench_test_type
+label: 'TEST DATAFIELD 3'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    dummy:
+      label: Dummy
+      list: false
+      allowed_values: ''
+      required: false
+    reference_1:
+      label: Reference_1
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: actor
+    reference_2:
+      label: Reference_2
+      required: false
+      entity_reference_type: taxonomy_term
+      target_bundles: site
+field_type: data_field

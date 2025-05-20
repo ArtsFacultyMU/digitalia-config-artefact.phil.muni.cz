@@ -35,6 +35,7 @@ settings:
   hoverintent: 1
   touch: 0
   touchbh: 2
+  touchdh: 0
   touchbp: 768
   touchua: 0
   touchual: ''

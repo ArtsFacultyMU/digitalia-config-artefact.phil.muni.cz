@@ -1,0 +1,33 @@
+uuid: 00287f48-47e0-44df-9a98-271909c9cfd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.small_sculpture_type.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.small_sculpture_type.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.small_sculpture_type
+  module:
+    - text
+id: taxonomy_term.small_sculpture_type.default
+targetEntityType: taxonomy_term
+bundle: small_sculpture_type
+mode: default
+content:
+  a3d_eva_taxonomy_title_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  a3d_eva_taxonomy_title_entity_view_2: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
+  langcode: true
+  search_api_excerpt: true

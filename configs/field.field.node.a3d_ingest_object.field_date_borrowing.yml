@@ -1,0 +1,21 @@
+uuid: e2f1c415-cd97-43f8-98f6-f7c5c3f2dcf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_borrowing
+    - node.type.a3d_ingest_object
+  module:
+    - datetime
+id: node.a3d_ingest_object.field_date_borrowing
+field_name: field_date_borrowing
+entity_type: node
+bundle: a3d_ingest_object
+label: 'Date of borrowing'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

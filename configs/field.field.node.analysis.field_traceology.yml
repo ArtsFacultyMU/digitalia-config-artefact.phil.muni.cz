@@ -1,0 +1,29 @@
+uuid: a3f0a7a4-4f13-4191-8e87-638fd3dc8c4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_traceology
+    - node.type.analysis
+    - node.type.traceology
+id: node.analysis.field_traceology
+field_name: field_traceology
+entity_type: node
+bundle: analysis
+label: Traceology
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      traceology: traceology
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

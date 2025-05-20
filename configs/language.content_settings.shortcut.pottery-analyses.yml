@@ -1,0 +1,18 @@
+uuid: 67e29dd7-c71c-44eb-b788-acc04a9492f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - shortcut.set.pottery-analyses
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: shortcut.pottery-analyses
+target_entity_type_id: shortcut
+target_bundle: pottery-analyses
+default_langcode: site_default
+language_alterable: false

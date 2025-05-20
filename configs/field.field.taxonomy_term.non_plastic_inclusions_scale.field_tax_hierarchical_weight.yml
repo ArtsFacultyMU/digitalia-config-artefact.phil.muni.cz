@@ -1,0 +1,23 @@
+uuid: 0f83325e-b12f-413b-bb99-109d0df9c3c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_weight
+    - taxonomy.vocabulary.non_plastic_inclusions_scale
+id: taxonomy_term.non_plastic_inclusions_scale.field_tax_hierarchical_weight
+field_name: field_tax_hierarchical_weight
+entity_type: taxonomy_term
+bundle: non_plastic_inclusions_scale
+label: 'Hierarchical Weight'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

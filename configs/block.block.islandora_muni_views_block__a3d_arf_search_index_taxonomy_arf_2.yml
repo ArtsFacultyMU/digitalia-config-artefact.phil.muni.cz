@@ -1,0 +1,40 @@
+uuid: fd05d1cc-2968-4803-994a-89bd87d1cc4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.a3d_arf_search_index_taxonomy
+  module:
+    - context
+    - islandora
+    - system
+    - views
+  theme:
+    - islandora_muni
+id: islandora_muni_views_block__a3d_arf_search_index_taxonomy_arf_2
+theme: islandora_muni
+region: content
+weight: -38
+provider: null
+plugin: 'views_block:a3d_arf_search_index_taxonomy-arf'
+settings:
+  id: 'views_block:a3d_arf_search_index_taxonomy-arf'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_domain:
+    id: request_domain
+    negate: false
+    domains: "artefact-devel.phil.muni.cz\r\nartefact.phil.muni.cz"
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/taxonomy/term/*\r\n!/taxonomy/term/*/paged"

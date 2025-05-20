@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.relative_datation.field_tax_hierarchical_depth
+    - field.field.taxonomy_term.relative_datation.field_tax_hierarchical_weight
     - taxonomy.vocabulary.relative_datation
   module:
     - text
@@ -14,16 +16,19 @@ content:
   a3d_eva_taxonomy_title_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   description:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
 hidden:
   a3d_eva_entity_group_relation_entity_view_1: true
+  a3d_eva_taxonomy_title_entity_view_2: true
+  field_tax_hierarchical_depth: true
+  field_tax_hierarchical_weight: true
   langcode: true
   search_api_excerpt: true

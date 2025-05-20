@@ -11,6 +11,7 @@ dependencies:
     - field.field.media.file.field_media_use
     - field.field.media.file.field_mime_type
     - field.field.media.file.field_original_name
+    - field.field.media.file.field_weight
     - field.field.media.file.field_width
     - media.type.file
   module:
@@ -73,6 +74,13 @@ content:
     region: content
     settings:
       rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_weight:
+    type: number
+    weight: 29
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   field_width:

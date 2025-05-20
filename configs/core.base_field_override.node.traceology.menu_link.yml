@@ -1,0 +1,20 @@
+uuid: 6d712bb6-4bd9-4092-88d8-0862ebb54171
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.traceology
+id: node.traceology.menu_link
+field_name: menu_link
+entity_type: node
+bundle: traceology
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

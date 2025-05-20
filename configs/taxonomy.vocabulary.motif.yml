@@ -2,7 +2,7 @@ uuid: bcb2bca7-0dff-41d3-bc5a-742f548bf31c
 langcode: en
 status: true
 dependencies: {  }
-name: motif
+name: Motif
 vid: motif
 description: KCH
 weight: 0

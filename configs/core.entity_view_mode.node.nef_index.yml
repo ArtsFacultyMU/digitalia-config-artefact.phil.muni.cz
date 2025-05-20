@@ -1,0 +1,11 @@
+uuid: ca1f4695-ef01-47ec-b75c-c4892131ce8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.nef_index
+label: 'NEF Index'
+description: 'Display with public fields for indexing'
+targetEntityType: node
+cache: true
