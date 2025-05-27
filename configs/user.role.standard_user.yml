@@ -4,11 +4,23 @@ status: true
 dependencies:
   config:
     - media.type.3d_model
+    - media.type.audio
     - media.type.document
     - media.type.file
     - media.type.image
     - media.type.video
+    - node.type.a3d_ingest_artefact
+    - node.type.a3d_ingest_object
     - node.type.a3d_object
+    - node.type.a3d_personal_contact
+    - node.type.analysis
+    - node.type.article
+    - node.type.contract
+    - node.type.decoration
+    - node.type.non_plastic_inclusion
+    - node.type.page
+    - node.type.sample
+    - node.type.traceology
   module:
     - entity_comparison
     - field_permissions
@@ -16,8 +28,9 @@ dependencies:
     - node
     - persistent_identifiers
     - save_edit
+    - view_unpublished
 id: standard_user
-label: 'standard user'
+label: Contributor
 weight: -3
 is_admin: null
 permissions:
@@ -25,13 +38,106 @@ permissions:
   - 'create a3d_object content'
   - 'create document media'
   - 'create field_geolocation_original_priv'
+  - 'create field_wgs84_accuracy_private'
+  - 'create field_wgs84_geolocation_private'
   - 'create file media'
   - 'create image media'
+  - 'create media'
   - 'create video media'
+  - 'delete media'
+  - 'delete own 3d_model media'
+  - 'delete own a3d_ingest_artefact content'
+  - 'delete own a3d_ingest_object content'
+  - 'delete own a3d_object content'
+  - 'delete own a3d_personal_contact content'
+  - 'delete own analysis content'
+  - 'delete own audio media'
+  - 'delete own contract content'
+  - 'delete own decoration content'
+  - 'delete own document media'
+  - 'delete own file media'
+  - 'delete own image media'
+  - 'delete own non_plastic_inclusion content'
+  - 'delete own page content'
+  - 'delete own sample content'
+  - 'delete own traceology content'
+  - 'delete own video media'
+  - 'edit any 3d_model media'
+  - 'edit any a3d_ingest_artefact content'
+  - 'edit any a3d_ingest_object content'
+  - 'edit any a3d_object content'
+  - 'edit any analysis content'
+  - 'edit any article content'
+  - 'edit any audio media'
+  - 'edit any decoration content'
+  - 'edit any document media'
+  - 'edit any file media'
+  - 'edit any image media'
+  - 'edit any non_plastic_inclusion content'
+  - 'edit any page content'
+  - 'edit any sample content'
+  - 'edit any traceology content'
+  - 'edit any video media'
+  - 'edit field_coll_contacts'
+  - 'edit field_coll_contacts_alt'
+  - 'edit field_contact_email'
+  - 'edit field_geolocation_original_priv'
+  - 'edit field_personal_contact'
+  - 'edit field_private_note'
+  - 'edit field_wgs84_accuracy_private'
+  - 'edit field_wgs84_geolocation_private'
+  - 'edit own 3d_model media'
+  - 'edit own a3d_ingest_artefact content'
+  - 'edit own a3d_ingest_object content'
+  - 'edit own a3d_object content'
+  - 'edit own analysis content'
+  - 'edit own audio media'
+  - 'edit own decoration content'
+  - 'edit own document media'
+  - 'edit own field_coll_contacts'
+  - 'edit own field_coll_contacts_alt'
+  - 'edit own field_contact_email'
   - 'edit own field_geolocation_original_priv'
+  - 'edit own field_personal_contact'
+  - 'edit own field_private_note'
+  - 'edit own file media'
+  - 'edit own image media'
+  - 'edit own non_plastic_inclusion content'
+  - 'edit own page content'
+  - 'edit own sample content'
+  - 'edit own traceology content'
+  - 'edit own video media'
   - 'mint persistent identifiers'
+  - 'update media'
   - 'use a3d_kch_entity_comparison entity comparison'
   - 'use save and edit'
   - 'view a3d_object revisions'
+  - 'view any 3d_model media revisions'
+  - 'view any audio media revisions'
+  - 'view any document media revisions'
+  - 'view any file media revisions'
+  - 'view any image media revisions'
+  - 'view any unpublished a3d_ingest_artefact content'
+  - 'view any unpublished a3d_ingest_object content'
+  - 'view any unpublished a3d_object content'
+  - 'view any unpublished analysis content'
+  - 'view any unpublished article content'
+  - 'view any unpublished decoration content'
+  - 'view any unpublished non_plastic_inclusion content'
+  - 'view any unpublished sample content'
+  - 'view any unpublished traceology content'
+  - 'view any video media revisions'
+  - 'view field_coll_contacts'
+  - 'view field_coll_contacts_alt'
+  - 'view field_contact_email'
+  - 'view field_personal_contact'
+  - 'view field_wgs84_accuracy_private'
+  - 'view field_wgs84_geolocation_private'
+  - 'view own field_coll_contacts'
+  - 'view own field_coll_contacts_alt'
+  - 'view own field_contact_email'
+  - 'view own field_personal_contact'
+  - 'view own field_wgs84_accuracy_private'
+  - 'view own field_wgs84_geolocation_private'
   - 'view own unpublished content'
   - 'view own unpublished media'

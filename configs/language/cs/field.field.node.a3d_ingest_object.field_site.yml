@@ -1,1 +1,2 @@
 label: 'Archeologické naleziště'
+description: "Zvolte archeologické naleziště pomocí tlačítka <strong>Přidat existující</strong>; pokud ještě není v\_systému zavedeno, použijte tlačítko <strong>Přidat nový</strong>. Nelze-li archeologické naleziště určit nebo není-li známé, vyberte hodnotu \"N/A\"."

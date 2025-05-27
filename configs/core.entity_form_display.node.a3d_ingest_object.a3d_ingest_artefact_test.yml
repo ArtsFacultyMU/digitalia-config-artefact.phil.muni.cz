@@ -1,0 +1,122 @@
+uuid: 452c2e93-4f37-4aa7-99ae-0b57059ed499
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.a3d_ingest_artefact_test
+    - field.field.node.a3d_ingest_object.field_coll_org
+    - field.field.node.a3d_ingest_object.field_contract
+    - field.field.node.a3d_ingest_object.field_date_borrowing
+    - field.field.node.a3d_ingest_object.field_date_return
+    - field.field.node.a3d_ingest_object.field_finding_context_note
+    - field.field.node.a3d_ingest_object.field_finding_context_subtype
+    - field.field.node.a3d_ingest_object.field_finding_documentation
+    - field.field.node.a3d_ingest_object.field_finding_documentation_note
+    - field.field.node.a3d_ingest_object.field_finding_label
+    - field.field.node.a3d_ingest_object.field_finding_report
+    - field.field.node.a3d_ingest_object.field_finding_year
+    - field.field.node.a3d_ingest_object.field_finding_year_type
+    - field.field.node.a3d_ingest_object.field_geolocation
+    - field.field.node.a3d_ingest_object.field_ingest_artefact
+    - field.field.node.a3d_ingest_object.field_member_of
+    - field.field.node.a3d_ingest_object.field_personal_contact
+    - field.field.node.a3d_ingest_object.field_place_analysis
+    - field.field.node.a3d_ingest_object.field_region
+    - field.field.node.a3d_ingest_object.field_site
+    - node.type.a3d_ingest_object
+  module:
+    - chosen_field
+    - path
+id: node.a3d_ingest_object.a3d_ingest_artefact_test
+targetEntityType: node
+bundle: a3d_ingest_object
+mode: a3d_ingest_artefact_test
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_contract:
+    type: chosen_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_coll_org: true
+  field_date_borrowing: true
+  field_date_return: true
+  field_finding_context_note: true
+  field_finding_context_subtype: true
+  field_finding_documentation: true
+  field_finding_documentation_note: true
+  field_finding_label: true
+  field_finding_report: true
+  field_finding_year: true
+  field_finding_year_type: true
+  field_geolocation: true
+  field_ingest_artefact: true
+  field_member_of: true
+  field_personal_contact: true
+  field_place_analysis: true
+  field_region: true
+  field_site: true

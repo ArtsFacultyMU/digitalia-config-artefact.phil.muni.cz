@@ -1,2 +1,2 @@
-label: 'Obec (text)'
-description: 'Zadává se obec, resp. město, na jehož katastru se nachází archeologické naleziště.'
+label: Obec
+description: 'Zadává se oficiální název obce, na jejímž katastru se archeologické naleziště nachází; v případě, že archeologické naleziště přesahuje katastr jedné obce, zapište jednu vybranou obec.'

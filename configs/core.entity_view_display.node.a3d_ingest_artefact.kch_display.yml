@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.kch_display
     - field.field.node.a3d_ingest_artefact.field_artefact_category
     - field.field.node.a3d_ingest_artefact.field_artefact_id
-    - field.field.node.a3d_ingest_artefact.field_contract
     - field.field.node.a3d_ingest_artefact.field_deposition_cond
     - field.field.node.a3d_ingest_artefact.field_description_a3d
     - field.field.node.a3d_ingest_artefact.field_destruction_analysis
@@ -105,7 +104,6 @@ content:
     weight: 100
     region: content
 hidden:
-  field_contract: true
   field_deposition_cond: true
   field_destruction_analysis: true
   field_research_question: true

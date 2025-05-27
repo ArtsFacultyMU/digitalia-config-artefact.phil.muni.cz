@@ -1,1 +1,2 @@
 label: 'Rok nálezu'
+description: "Znáte-li přesnou dobu nálezu, uveďte do pole <i>Rok nálezu</i> konkrétní rok a v\_poli <i>Typ časového údaje</i> zvolte hodnotu „<i>Přesný údaj</i>“; u nálezů datovaných s\_určitým rozptylem nebo s\_neznámou datací zapište patřičně formulovaný údaj do pole <i>Rok nálezu</i> (např.: „<i>80. léta 20. století</i>“; „<i>kolem roku 1970</i>“; „<i>pravděpodobně přelom 19. a 20. století</i>“; „<i>mezi 1920–1933</i>“ apod.) a v\_následujícím poli vyberte hodnotu „<i>Odhad</i>“."

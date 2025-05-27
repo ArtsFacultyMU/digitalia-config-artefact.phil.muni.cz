@@ -1,0 +1,23 @@
+uuid: 8c0e5f2b-f879-4166-aa80-6ac52d9bd02b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.relationship_type.test_group_type-e6c2e37f2d41304c
+id: group_relationship.test_group_type-e6c2e37f2d41304c.default
+targetEntityType: group_relationship
+bundle: test_group_type-e6c2e37f2d41304c
+mode: default
+content:
+  entity_id:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
+  uid: true

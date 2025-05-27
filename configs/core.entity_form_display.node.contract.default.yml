@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.contract.field_contract_number
     - field.field.node.contract.field_description
+    - field.field.node.contract.field_member_of
     - field.field.node.contract.field_provider
     - field.field.node.contract.field_recipient
     - field.field.node.contract.field_signature_date
@@ -75,6 +76,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_member_of: true
   path: true
   promote: true
   status: true

@@ -182,6 +182,7 @@ dependencies:
     - cshs
     - field_group
     - geolocation
+    - link
     - user
 third_party_settings:
   field_group:
@@ -426,9 +427,14 @@ content:
     weight: 21
     region: content
   field_subord_dataset_link:
-    type: basic_string
+    type: link
     label: inline
-    settings: {  }
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
     weight: 22
     region: content

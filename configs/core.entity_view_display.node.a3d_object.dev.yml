@@ -1723,13 +1723,6 @@ content:
     third_party_settings: {  }
     weight: 8
     region: content
-  field_subord_dataset_link:
-    type: basic_string
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    weight: 11
-    region: content
   field_surf_data_pres:
     type: entity_reference_entity_view
     label: inline
@@ -1953,6 +1946,7 @@ hidden:
   field_rock_fragments: true
   field_site: true
   field_state: true
+  field_subord_dataset_link: true
   langcode: true
   links: true
   search_api_excerpt: true

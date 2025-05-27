@@ -5,15 +5,13 @@ dependencies:
   config:
     - group.type.test_group_type
 id: test_group_type-ordinary_user
-label: 'ordinary user'
+label: Contributor
 weight: -2
 admin: false
 scope: individual
 global_role: null
 group_type: test_group_type
 permissions:
-  - 'create group_node:a3d_ingest_artefact entity'
-  - 'create group_node:a3d_ingest_object entity'
   - 'create group_node:a3d_object entity'
   - 'create group_node:analysis entity'
   - 'create group_node:page entity'

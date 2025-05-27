@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.a3d_ingest_object.field_coll_org
+    - field.field.node.a3d_ingest_object.field_contract
     - field.field.node.a3d_ingest_object.field_date_borrowing
     - field.field.node.a3d_ingest_object.field_date_return
     - field.field.node.a3d_ingest_object.field_finding_context_note
@@ -79,6 +80,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 9
+    region: content
+  field_contract:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 17
     region: content
   field_date_borrowing:
     type: datetime_default

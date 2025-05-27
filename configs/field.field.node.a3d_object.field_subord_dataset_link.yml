@@ -1,10 +1,12 @@
-uuid: c148c740-4338-430c-8620-9c80844fcd6a
+uuid: 92e3f106-69ea-4936-b9bd-95b6101193b7
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_subord_dataset_link
     - node.type.a3d_object
+  module:
+    - link
 id: node.a3d_object.field_subord_dataset_link
 field_name: field_subord_dataset_link
 entity_type: node
@@ -15,5 +17,7 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string_long
+settings:
+  title: 0
+  link_type: 16
+field_type: link

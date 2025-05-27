@@ -566,10 +566,10 @@ display:
         type: normal
         title: 'Content Group Update'
         description: ''
-        weight: 0
+        weight: 1
         expanded: false
         menu_name: admin
-        parent: 'menu_link_content:f9342ef6-d660-4b23-89da-00e6805f2049'
+        parent: system.admin
         context: '0'
     cache_metadata:
       max-age: 0

@@ -1,1 +1,2 @@
 label: 'Kategorie artefaktu'
+description: "Zvolte vhodnou kategorii artefaktu; pokud se v\_seznamu nenachází, vyberte hodnotu „<i>N/A</i>“ a artefakt typologicky určete v\_dalším poli, kam lze také uvádět jeho podrobnější charakteristiku (<i><strong>Popis</strong></i>)"

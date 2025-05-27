@@ -8,6 +8,7 @@ dependencies:
     - node.type.a3d_ingest_object
     - node.type.a3d_object
     - node.type.analysis
+    - node.type.contract
     - node.type.sample
     - taxonomy.vocabulary.artefact_category
   module:
@@ -33,7 +34,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Nodes
+      title: Records
       fields:
         field_group_code:
           id: field_group_code
@@ -858,6 +859,83 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        changed_1:
+          id: changed_1
+          table: group_relationship_field_data
+          field: changed
+          relationship: group_relationship
+          group_type: group
+          admin_label: ''
+          entity_type: group_relationship
+          entity_field: changed
+          plugin_id: field
+          label: Ingested
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: timestamp
+          settings:
+            date_format: short
+            custom_date_format: ''
+            timezone: ''
+            tooltip:
+              date_format: long
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
+              description: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         changed:
           id: changed
           table: node_field_data
@@ -1556,6 +1634,7 @@ display:
             a3d_ingest_object: a3d_ingest_object
             a3d_object: a3d_object
             analysis: analysis
+            contract: contract
             sample: sample
           group: 1
           exposed: false
@@ -1708,6 +1787,7 @@ display:
             a3d_ingest_object: a3d_ingest_object
             a3d_object: a3d_object
             analysis: analysis
+            contract: contract
             sample: sample
           group: 1
           exposed: true
@@ -1868,16 +1948,21 @@ display:
           row_class: ''
           default_row_class: true
           columns:
-            nothing: nothing
+            field_group_code: field_group_code
             nid: nid
             node_bulk_form: node_bulk_form
-            field_artefact_id: field_artefact_id
             title: title
+            title_1: title_1
+            title_2: title_2
+            field_artefact_id: field_artefact_id
             type: type
+            nothing: nothing
+            type_1: type_1
             status: status
             uid: uid
             revision_uid: revision_uid
             changed: changed
+            changed_1: changed_1
             revision_log: revision_log
             edit_node: edit_node
             nothing_1: nothing_1
@@ -1888,7 +1973,9 @@ display:
             dropbutton: dropbutton
           default: changed
           info:
-            nothing:
+            field_group_code:
+              sortable: false
+              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
@@ -1905,14 +1992,28 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_artefact_id:
+            title:
               sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            title:
+            title_1:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            title_2:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_artefact_id:
               sortable: true
               default_sort_order: asc
               align: ''
@@ -1921,6 +2022,18 @@ display:
               responsive: ''
             type:
               sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            nothing:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            type_1:
+              sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
@@ -1948,6 +2061,13 @@ display:
               empty_column: false
               responsive: ''
             changed:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            changed_1:
               sortable: true
               default_sort_order: desc
               align: ''
@@ -2103,7 +2223,7 @@ display:
         - 'config:field.storage.node.field_artefact_id'
   nodes:
     id: nodes
-    display_title: 'All nodes'
+    display_title: 'All records'
     display_plugin: page
     position: 1
     display_options:
@@ -2154,19 +2274,6 @@ display:
         header: false
       display_description: ''
       header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: 'Manage contracts'
-          plugin_id: text
-          empty: false
-          content:
-            value: "<div class=\"a3d-editor-block\">\r\n<p>\r\n    <a class=\"button\" href=\"/{{ field_group_code }}/manage-contracts\">Manage contracts</a>\r\n</p>\r\n</div>"
-            format: full_html
-          tokenize: true
         result:
           id: result
           table: views
@@ -2193,10 +2300,9 @@ display:
       path: group/%group/nodes
       menu:
         type: tab
-        title: Nodes
+        title: Records
         description: ''
         weight: 25
-        enabled: true
         expanded: false
         menu_name: main
         parent: ''
@@ -2216,10 +2322,11 @@ display:
         - 'config:field.storage.node.field_artefact_id'
   nodes_ordinary:
     id: nodes_ordinary
-    display_title: 'Own nodes'
+    display_title: 'Own records'
     display_plugin: page
     position: 1
     display_options:
+      title: Records
       access:
         type: group_permission
         options:
@@ -2313,6 +2420,7 @@ display:
             a3d_ingest_object: a3d_ingest_object
             a3d_object: a3d_object
             analysis: analysis
+            contract: contract
             sample: sample
           group: 1
           exposed: false
@@ -2409,6 +2517,7 @@ display:
             a3d_ingest_object: a3d_ingest_object
             a3d_object: a3d_object
             analysis: analysis
+            contract: contract
             sample: sample
           group: 1
           exposed: true
@@ -2564,6 +2673,7 @@ display:
           1: AND
       defaults:
         access: false
+        title: false
         fields: true
         arguments: false
         filters: false
@@ -2585,7 +2695,7 @@ display:
       path: group/%group/nodes_ordinary
       menu:
         type: tab
-        title: ' My Nodes'
+        title: ' My Records'
         description: ''
         weight: 25
         expanded: false

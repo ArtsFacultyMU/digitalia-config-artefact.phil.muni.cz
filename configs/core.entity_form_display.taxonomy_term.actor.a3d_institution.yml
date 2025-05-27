@@ -9,13 +9,14 @@ dependencies:
     - field.field.taxonomy_term.actor.field_alternate_identifier
     - field.field.taxonomy_term.actor.field_coll_contacts
     - field.field.taxonomy_term.actor.field_coll_contacts_alt
+    - field.field.taxonomy_term.actor.field_coll_contacts_phone
     - field.field.taxonomy_term.actor.field_contact_email
-    - field.field.taxonomy_term.actor.field_contact_phone
     - field.field.taxonomy_term.actor.field_tax_hierarchical_depth
     - field.field.taxonomy_term.actor.field_tax_hierarchical_weight
     - taxonomy.vocabulary.actor
   module:
     - cshs
+    - telephone
 id: taxonomy_term.actor.a3d_institution
 targetEntityType: taxonomy_term
 bundle: actor
@@ -50,6 +51,13 @@ content:
       rows: 2
       placeholder: ''
     third_party_settings: {  }
+  field_coll_contacts_phone:
+    type: telephone_default
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_contact_email:
     type: email_default
     weight: 4
@@ -58,21 +66,13 @@ content:
       placeholder: ''
       size: 60
     third_party_settings: {  }
-  field_contact_phone:
-    type: string_textfield
-    weight: 5
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 0
     region: content
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 'Uveďte oficiální název instituce.'
     third_party_settings: {  }
   status:
     type: boolean_checkbox

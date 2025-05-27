@@ -14,7 +14,6 @@ dependencies:
     - field.storage.node.field_artefact_category
     - field.storage.node.field_artefact_class
     - field.storage.node.field_artefact_id
-    - field.storage.node.field_auth_3d_models
     - field.storage.node.field_auth_res_data
     - field.storage.node.field_deposition_cond
     - field.storage.node.field_description_a3d
@@ -44,14 +43,12 @@ dependencies:
     - field.storage.node.field_relative_datation
     - field.storage.node.field_site
     - field.storage.node.field_subord_dataset
-    - field.storage.node.field_subord_dataset_link
     - field.storage.node.field_surf_data_pres
     - field.storage.node.field_surface_alt
     - field.storage.node.field_thermic_cracks
     - field.storage.node.field_wear
     - field.storage.node.field_wgs84_geolocation
     - field.storage.node.field_wgs84_geolocation_accuracy
-    - filter.format.basic_html
     - filter.format.plain_text
     - node.type.a3d_ingest_artefact
     - node.type.a3d_ingest_object
@@ -7064,68 +7061,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_subord_dataset_link:
-          id: field_subord_dataset_link
-          table: node__field_subord_dataset_link
-          field: field_subord_dataset_link
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Subordinate dataset link'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: true
-            path: '{{ field_subord_dataset_link }}'
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_met_note_cz:
           id: field_met_note_cz
           table: node__field_met_note_cz
@@ -7796,7 +7731,6 @@ display:
         - 'config:field.storage.node.field_relative_datation'
         - 'config:field.storage.node.field_site'
         - 'config:field.storage.node.field_subord_dataset'
-        - 'config:field.storage.node.field_subord_dataset_link'
         - 'config:field.storage.node.field_surf_data_pres'
         - 'config:field.storage.node.field_surface_alt'
         - 'config:field.storage.node.field_wgs84_geolocation'

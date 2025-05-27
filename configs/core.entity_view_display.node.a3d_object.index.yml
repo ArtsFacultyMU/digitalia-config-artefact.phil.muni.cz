@@ -182,6 +182,7 @@ dependencies:
     - datetime
     - field_group
     - geolocation
+    - link
     - range
     - user
 third_party_settings:
@@ -194,7 +195,7 @@ content:
   a3d_editor_block_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 11
     region: content
   field_2d_asymmetry:
     type: entity_reference_label
@@ -292,7 +293,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 11
+    weight: 12
     region: content
   field_archaeological_site:
     type: entity_reference_label
@@ -300,7 +301,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   field_artefact_category:
     type: entity_reference_label
@@ -308,7 +309,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 13
+    weight: 14
     region: content
   field_artefact_id:
     type: string
@@ -316,7 +317,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 14
+    weight: 15
     region: content
   field_artefact_id_type:
     type: entity_reference_label
@@ -324,7 +325,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 15
+    weight: 16
     region: content
   field_assess_cond_date:
     type: datetime_default
@@ -333,7 +334,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 16
+    weight: 17
     region: content
   field_auth_3d_models:
     type: entity_reference_label
@@ -341,7 +342,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 17
+    weight: 18
     region: content
   field_auth_res_data:
     type: entity_reference_label
@@ -349,7 +350,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 18
+    weight: 19
     region: content
   field_b_asymmetry:
     type: entity_reference_label
@@ -357,7 +358,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 19
+    weight: 20
     region: content
   field_ballistic_profile:
     type: entity_reference_label
@@ -365,7 +366,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 20
+    weight: 21
     region: content
   field_base_curve:
     type: entity_reference_label
@@ -373,7 +374,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 21
+    weight: 22
     region: content
   field_blank_orientation:
     type: entity_reference_label
@@ -381,7 +382,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 22
+    weight: 23
     region: content
   field_circle:
     type: entity_reference_label
@@ -389,7 +390,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 23
+    weight: 24
     region: content
   field_city:
     type: entity_reference_label
@@ -397,7 +398,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 24
+    weight: 25
     region: content
   field_coll_keyword:
     type: entity_reference_label
@@ -405,7 +406,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 25
+    weight: 26
     region: content
   field_coll_lang:
     type: entity_reference_label
@@ -413,14 +414,14 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 26
+    weight: 27
     region: content
   field_coll_rights:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 27
+    weight: 28
     region: content
   field_coll_title:
     type: entity_reference_label
@@ -428,7 +429,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 28
+    weight: 29
     region: content
   field_colour_paint:
     type: entity_reference_label
@@ -436,7 +437,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 30
+    weight: 31
     region: content
   field_cov_spat:
     type: entity_reference_label
@@ -444,14 +445,14 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 31
+    weight: 32
     region: content
   field_cov_temp:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 32
+    weight: 33
     region: content
   field_creation:
     type: entity_reference_label
@@ -459,7 +460,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 33
+    weight: 34
     region: content
   field_culture:
     type: entity_reference_label
@@ -467,7 +468,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 34
+    weight: 35
     region: content
   field_current_location:
     type: entity_reference_label
@@ -475,7 +476,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 35
+    weight: 36
     region: content
   field_decoration:
     type: entity_reference_label
@@ -491,14 +492,14 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 36
+    weight: 37
     region: content
   field_description_a3d:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 37
+    weight: 38
     region: content
   field_discoverer:
     type: entity_reference_label
@@ -506,7 +507,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 38
+    weight: 39
     region: content
   field_discovery_date:
     type: datetime_default
@@ -515,7 +516,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 39
+    weight: 40
     region: content
   field_doc_creator:
     type: entity_reference_label
@@ -523,7 +524,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 40
+    weight: 41
     region: content
   field_doc_date:
     type: datetime_default
@@ -532,7 +533,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 41
+    weight: 42
     region: content
   field_edging:
     type: string
@@ -540,7 +541,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 42
+    weight: 43
     region: content
   field_feature_id:
     type: entity_reference_label
@@ -548,7 +549,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 43
+    weight: 44
     region: content
   field_feature_type:
     type: entity_reference_label
@@ -556,7 +557,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 44
+    weight: 45
     region: content
   field_fhp_type:
     type: entity_reference_label
@@ -564,7 +565,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 45
+    weight: 46
     region: content
   field_finding_context_loc:
     type: string
@@ -572,21 +573,21 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 49
+    weight: 50
     region: content
   field_finding_context_note:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 50
+    weight: 51
     region: content
   field_finding_context_pos:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 51
+    weight: 52
     region: content
   field_finding_context_sec:
     type: number_integer
@@ -595,7 +596,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 52
+    weight: 53
     region: content
   field_finding_context_subtype:
     type: entity_reference_label
@@ -603,7 +604,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 53
+    weight: 54
     region: content
   field_finding_context_type:
     type: entity_reference_label
@@ -611,21 +612,21 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 54
+    weight: 55
     region: content
   field_fract_nature:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 55
+    weight: 56
     region: content
   field_fract_preservation:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 56
+    weight: 57
     region: content
   field_fract_preservation_struct:
     type: entity_reference_label
@@ -633,7 +634,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 57
+    weight: 58
     region: content
   field_g_w_practice:
     type: entity_reference_label
@@ -641,7 +642,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 58
+    weight: 59
     region: content
   field_general_lateral_wear:
     type: entity_reference_label
@@ -649,7 +650,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 59
+    weight: 60
     region: content
   field_glue_residues:
     type: entity_reference_label
@@ -657,7 +658,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 62
+    weight: 63
     region: content
   field_has_a_construction_opening:
     type: boolean
@@ -667,7 +668,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 63
+    weight: 64
     region: content
   field_has_decoration:
     type: boolean
@@ -687,7 +688,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 46
+    weight: 47
     region: content
   field_ledge_type:
     type: entity_reference_label
@@ -695,7 +696,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 64
+    weight: 65
     region: content
   field_legal_status:
     type: entity_reference_label
@@ -703,7 +704,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 65
+    weight: 66
     region: content
   field_licence_url:
     type: entity_reference_label
@@ -711,14 +712,14 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 66
+    weight: 67
     region: content
   field_literature:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 67
+    weight: 68
     region: content
   field_longitudinal_profile:
     type: entity_reference_label
@@ -726,7 +727,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 68
+    weight: 69
     region: content
   field_mass_structure_data_pres:
     type: entity_reference_label
@@ -734,7 +735,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 69
+    weight: 70
     region: content
   field_material_colour:
     type: entity_reference_label
@@ -742,7 +743,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 29
+    weight: 30
     region: content
   field_material_inclusions:
     type: entity_reference_label
@@ -750,7 +751,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 70
+    weight: 71
     region: content
   field_measurements:
     type: data_field_unformatted_list
@@ -829,28 +830,28 @@ content:
       line_operations: false
       form_format_table: false
     third_party_settings: {  }
-    weight: 71
+    weight: 72
     region: content
   field_met_note_cz:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 72
+    weight: 73
     region: content
   field_micro_ct:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 73
+    weight: 74
     region: content
   field_mineralogy:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 74
+    weight: 75
     region: content
   field_note_on_preservation:
     type: basic_string
@@ -885,7 +886,7 @@ content:
       line_operations: false
       form_format_table: false
     third_party_settings: {  }
-    weight: 75
+    weight: 76
     region: content
   field_number_of_preserved_parts:
     type: number_integer
@@ -894,7 +895,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 76
+    weight: 77
     region: content
   field_orig_state_pres:
     type: entity_reference_label
@@ -902,7 +903,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 77
+    weight: 78
     region: content
   field_original_location:
     type: entity_reference_label
@@ -910,7 +911,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 78
+    weight: 79
     region: content
   field_ownership:
     type: entity_reference_label
@@ -918,7 +919,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 79
+    weight: 80
     region: content
   field_painting_eye:
     type: string
@@ -926,21 +927,21 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 80
+    weight: 81
     region: content
   field_painting_microscope:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 81
+    weight: 82
     region: content
   field_painting_tool:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 82
+    weight: 83
     region: content
   field_pigment:
     type: entity_reference_label
@@ -948,14 +949,14 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 83
+    weight: 84
     region: content
   field_polished_sec_petrography:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 84
+    weight: 85
     region: content
   field_posture:
     type: entity_reference_label
@@ -963,14 +964,14 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 85
+    weight: 86
     region: content
   field_preserved_parts:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 86
+    weight: 87
     region: content
   field_preserved_parts_struct:
     type: entity_reference_label
@@ -978,7 +979,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 87
+    weight: 88
     region: content
   field_proj_dedication:
     type: entity_reference_label
@@ -986,7 +987,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 88
+    weight: 89
     region: content
   field_proj_id:
     type: entity_reference_label
@@ -994,14 +995,14 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 89
+    weight: 90
     region: content
   field_provenance:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 90
+    weight: 91
     region: content
   field_quality:
     type: entity_reference_label
@@ -1009,7 +1010,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 91
+    weight: 92
     region: content
   field_quiver_trans_bright_spots:
     type: entity_reference_label
@@ -1017,7 +1018,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 92
+    weight: 93
     region: content
   field_quiver_trans_lat_rounding:
     type: entity_reference_label
@@ -1025,7 +1026,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 93
+    weight: 94
     region: content
   field_quiver_trans_tip_rounding:
     type: entity_reference_label
@@ -1033,7 +1034,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 94
+    weight: 95
     region: content
   field_raw_material:
     type: entity_reference_label
@@ -1041,7 +1042,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 95
+    weight: 96
     region: content
   field_recent_damage:
     type: entity_reference_label
@@ -1049,21 +1050,21 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 96
+    weight: 97
     region: content
   field_recent_damage_note:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 97
+    weight: 98
     region: content
   field_recent_damage_type:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 98
+    weight: 99
     region: content
   field_recent_damage_type_struct:
     type: entity_reference_label
@@ -1071,7 +1072,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 99
+    weight: 100
     region: content
   field_reg_number:
     type: string
@@ -1079,7 +1080,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 100
+    weight: 101
     region: content
   field_reineckes_chronology:
     type: entity_reference_label
@@ -1087,14 +1088,14 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 47
+    weight: 48
     region: content
   field_relations:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 102
     region: content
   field_relative_datation:
     type: entity_reference_label
@@ -1102,7 +1103,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 102
+    weight: 103
     region: content
   field_reparation_features:
     type: entity_reference_label
@@ -1110,7 +1111,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 103
+    weight: 104
     region: content
   field_retouch:
     type: entity_reference_label
@@ -1118,7 +1119,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 104
+    weight: 105
     region: content
   field_rights_access:
     type: entity_reference_label
@@ -1126,7 +1127,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 105
+    weight: 106
     region: content
   field_rights_reproduction:
     type: entity_reference_label
@@ -1134,7 +1135,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 106
+    weight: 107
     region: content
   field_serration:
     type: entity_reference_label
@@ -1142,7 +1143,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 107
+    weight: 108
     region: content
   field_site:
     type: entity_reference_label
@@ -1150,7 +1151,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 108
+    weight: 109
     region: content
   field_standard_chronology:
     type: entity_reference_label
@@ -1158,7 +1159,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 48
+    weight: 49
     region: content
   field_state:
     type: entity_reference_label
@@ -1166,14 +1167,14 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 109
+    weight: 110
     region: content
   field_statement:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 110
+    weight: 111
     region: content
   field_subord_dataset:
     type: entity_reference_label
@@ -1181,14 +1182,19 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 111
+    weight: 112
     region: content
   field_subord_dataset_link:
-    type: basic_string
+    type: link
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    weight: 112
+    weight: 123
     region: content
   field_surf_data_pres:
     type: entity_reference_label
@@ -1248,7 +1254,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 60
+    weight: 61
     region: content
   field_wgs84_geolocation_accuracy:
     type: entity_reference_label
@@ -1256,7 +1262,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 61
+    weight: 62
     region: content
 hidden:
   a3d_arf_content_browse_title: true

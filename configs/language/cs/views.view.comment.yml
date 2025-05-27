@@ -31,6 +31,7 @@ display:
             offset_label: Posun
       exposed_form:
         options:
+          submit_button: Filtr
           reset_button_label: Reset
           exposed_sorts_label: 'Řadit dle'
           sort_asc_label: Vzestupně

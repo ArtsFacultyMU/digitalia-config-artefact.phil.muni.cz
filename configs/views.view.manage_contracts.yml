@@ -806,6 +806,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      enabled: false
       display_description: ''
       display_extenders:
         matomo:
@@ -845,6 +846,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      enabled: false
       fields:
         nothing_1:
           id: nothing_1

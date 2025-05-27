@@ -8,8 +8,8 @@ dependencies:
     - field.field.taxonomy_term.actor.field_alternate_identifier
     - field.field.taxonomy_term.actor.field_coll_contacts
     - field.field.taxonomy_term.actor.field_coll_contacts_alt
+    - field.field.taxonomy_term.actor.field_coll_contacts_phone
     - field.field.taxonomy_term.actor.field_contact_email
-    - field.field.taxonomy_term.actor.field_contact_phone
     - field.field.taxonomy_term.actor.field_tax_hierarchical_depth
     - field.field.taxonomy_term.actor.field_tax_hierarchical_weight
     - taxonomy.vocabulary.actor
@@ -127,20 +127,19 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
+  field_coll_contacts_phone:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
   field_contact_email:
     type: basic_string
     label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 3
-    region: content
-  field_contact_phone:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 5
     region: content
 hidden:
   a3d_eva_taxonomy_title_entity_view_2: true

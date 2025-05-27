@@ -112,7 +112,6 @@ dependencies:
     - field.storage.node.field_state
     - field.storage.node.field_statement
     - field.storage.node.field_subord_dataset
-    - field.storage.node.field_subord_dataset_link
     - field.storage.node.field_surface_alt
     - field.storage.node.field_thermic_cracks
     - field.storage.node.field_tip_fracture
@@ -2476,6 +2475,39 @@ display:
           click_sort_column: value
           type: data_field_table_formatter
           settings:
+            number_column: false
+            number_column_label: №
+            direction: horizontal
+            mode: table
+            caption: ''
+            footer_text: ''
+            datatables_options:
+              bExpandable: 0
+              bInfo: 0
+              scrollX: 0
+              bStateSave: 0
+              ordering: 0
+              paging: 0
+              searching: 0
+              show-export: 0
+              bMultiFilter: 0
+            bootstrap_table_options:
+              sticky-header: 0
+              show-export: 0
+              show-print: 0
+              show-copy-rows: 0
+              show-multi-sort: 0
+              show-fullscreen: 0
+              search: 0
+              show-refresh: 0
+              show-toggle: 0
+              show-columns: 0
+              mobile-responsive: 0
+              sortable: 0
+              click-to-select: 0
+              show-pagination-switch: 0
+              pagination: 0
+              show-footer: 0
             formatter_settings:
               extent:
                 format_type: text_default
@@ -2521,39 +2553,6 @@ display:
             custom_class: ''
             line_operations: false
             form_format_table: false
-            number_column: false
-            number_column_label: №
-            direction: horizontal
-            mode: table
-            caption: ''
-            footer_text: ''
-            datatables_options:
-              bExpandable: 0
-              bInfo: 0
-              scrollX: 0
-              bStateSave: 0
-              ordering: 0
-              paging: 0
-              searching: 0
-              show-export: 0
-              bMultiFilter: 0
-            bootstrap_table_options:
-              sticky-header: 0
-              show-export: 0
-              show-print: 0
-              show-copy-rows: 0
-              show-multi-sort: 0
-              show-fullscreen: 0
-              search: 0
-              show-refresh: 0
-              show-toggle: 0
-              show-columns: 0
-              mobile-responsive: 0
-              sortable: 0
-              click-to-select: 0
-              show-pagination-switch: 0
-              pagination: 0
-              show-footer: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -3373,37 +3372,6 @@ display:
           click_sort_column: spatial_ref_system
           type: data_field_table_formatter
           settings:
-            formatter_settings:
-              spatial_ref_system:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Spatial reference system'
-              loc_coord_cadastre_x:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 1'
-              loc_coord_cadastre_y:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 2'
-              loc_coord_cadastre_accuracy:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Location coordinates accuracy'
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
             number_column: false
             number_column_label: №
             direction: horizontal
@@ -3437,6 +3405,37 @@ display:
               show-pagination-switch: 0
               pagination: 0
               show-footer: 0
+            formatter_settings:
+              spatial_ref_system:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Spatial reference system'
+              loc_coord_cadastre_x:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 1'
+              loc_coord_cadastre_y:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 2'
+              loc_coord_cadastre_accuracy:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Location coordinates accuracy'
+            ajax: false
+            custom_class: ''
+            line_operations: false
+            form_format_table: false
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -4831,68 +4830,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_subord_dataset_link:
-          id: field_subord_dataset_link
-          table: node__field_subord_dataset_link
-          field: field_subord_dataset_link
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Subordinate dataset link'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         rendered_entity_1:
           id: rendered_entity_1
           table: node
@@ -5102,7 +5039,6 @@ display:
         - 'config:field.storage.node.field_state'
         - 'config:field.storage.node.field_statement'
         - 'config:field.storage.node.field_subord_dataset'
-        - 'config:field.storage.node.field_subord_dataset_link'
     deleted: false
   a3d_a2:
     id: a3d_a2
@@ -6957,6 +6893,39 @@ display:
           click_sort_column: value
           type: data_field_table_formatter
           settings:
+            number_column: false
+            number_column_label: №
+            direction: horizontal
+            mode: table
+            caption: ''
+            footer_text: ''
+            datatables_options:
+              bExpandable: 0
+              bInfo: 0
+              scrollX: 0
+              bStateSave: 0
+              ordering: 0
+              paging: 0
+              searching: 0
+              show-export: 0
+              bMultiFilter: 0
+            bootstrap_table_options:
+              sticky-header: 0
+              show-export: 0
+              show-print: 0
+              show-copy-rows: 0
+              show-multi-sort: 0
+              show-fullscreen: 0
+              search: 0
+              show-refresh: 0
+              show-toggle: 0
+              show-columns: 0
+              mobile-responsive: 0
+              sortable: 0
+              click-to-select: 0
+              show-pagination-switch: 0
+              pagination: 0
+              show-footer: 0
             formatter_settings:
               extent:
                 format_type: text_default
@@ -7002,39 +6971,6 @@ display:
             custom_class: ''
             line_operations: false
             form_format_table: false
-            number_column: false
-            number_column_label: №
-            direction: horizontal
-            mode: table
-            caption: ''
-            footer_text: ''
-            datatables_options:
-              bExpandable: 0
-              bInfo: 0
-              scrollX: 0
-              bStateSave: 0
-              ordering: 0
-              paging: 0
-              searching: 0
-              show-export: 0
-              bMultiFilter: 0
-            bootstrap_table_options:
-              sticky-header: 0
-              show-export: 0
-              show-print: 0
-              show-copy-rows: 0
-              show-multi-sort: 0
-              show-fullscreen: 0
-              search: 0
-              show-refresh: 0
-              show-toggle: 0
-              show-columns: 0
-              mobile-responsive: 0
-              sortable: 0
-              click-to-select: 0
-              show-pagination-switch: 0
-              pagination: 0
-              show-footer: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -7854,37 +7790,6 @@ display:
           click_sort_column: spatial_ref_system
           type: data_field_table_formatter
           settings:
-            formatter_settings:
-              spatial_ref_system:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Spatial reference system'
-              loc_coord_cadastre_x:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 1'
-              loc_coord_cadastre_y:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 2'
-              loc_coord_cadastre_accuracy:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Location coordinates accuracy'
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
             number_column: false
             number_column_label: №
             direction: horizontal
@@ -7918,6 +7823,37 @@ display:
               show-pagination-switch: 0
               pagination: 0
               show-footer: 0
+            formatter_settings:
+              spatial_ref_system:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Spatial reference system'
+              loc_coord_cadastre_x:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 1'
+              loc_coord_cadastre_y:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 2'
+              loc_coord_cadastre_accuracy:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Location coordinates accuracy'
+            ajax: false
+            custom_class: ''
+            line_operations: false
+            form_format_table: false
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -9289,68 +9225,6 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_subord_dataset_link:
-          id: field_subord_dataset_link
-          table: node__field_subord_dataset_link
-          field: field_subord_dataset_link
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Subordinate dataset link'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -12556,7 +12430,6 @@ display:
         - 'config:field.storage.node.field_state'
         - 'config:field.storage.node.field_statement'
         - 'config:field.storage.node.field_subord_dataset'
-        - 'config:field.storage.node.field_subord_dataset_link'
         - 'config:field.storage.node.field_surface_alt'
         - 'config:field.storage.node.field_thermic_cracks'
         - 'config:field.storage.node.field_tip_fracture'
@@ -14415,6 +14288,39 @@ display:
           click_sort_column: value
           type: data_field_table_formatter
           settings:
+            number_column: false
+            number_column_label: №
+            direction: horizontal
+            mode: table
+            caption: ''
+            footer_text: ''
+            datatables_options:
+              bExpandable: 0
+              bInfo: 0
+              scrollX: 0
+              bStateSave: 0
+              ordering: 0
+              paging: 0
+              searching: 0
+              show-export: 0
+              bMultiFilter: 0
+            bootstrap_table_options:
+              sticky-header: 0
+              show-export: 0
+              show-print: 0
+              show-copy-rows: 0
+              show-multi-sort: 0
+              show-fullscreen: 0
+              search: 0
+              show-refresh: 0
+              show-toggle: 0
+              show-columns: 0
+              mobile-responsive: 0
+              sortable: 0
+              click-to-select: 0
+              show-pagination-switch: 0
+              pagination: 0
+              show-footer: 0
             formatter_settings:
               extent:
                 format_type: text_default
@@ -14460,39 +14366,6 @@ display:
             custom_class: ''
             line_operations: false
             form_format_table: false
-            number_column: false
-            number_column_label: №
-            direction: horizontal
-            mode: table
-            caption: ''
-            footer_text: ''
-            datatables_options:
-              bExpandable: 0
-              bInfo: 0
-              scrollX: 0
-              bStateSave: 0
-              ordering: 0
-              paging: 0
-              searching: 0
-              show-export: 0
-              bMultiFilter: 0
-            bootstrap_table_options:
-              sticky-header: 0
-              show-export: 0
-              show-print: 0
-              show-copy-rows: 0
-              show-multi-sort: 0
-              show-fullscreen: 0
-              search: 0
-              show-refresh: 0
-              show-toggle: 0
-              show-columns: 0
-              mobile-responsive: 0
-              sortable: 0
-              click-to-select: 0
-              show-pagination-switch: 0
-              pagination: 0
-              show-footer: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -15312,37 +15185,6 @@ display:
           click_sort_column: spatial_ref_system
           type: data_field_table_formatter
           settings:
-            formatter_settings:
-              spatial_ref_system:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Spatial reference system'
-              loc_coord_cadastre_x:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 1'
-              loc_coord_cadastre_y:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 2'
-              loc_coord_cadastre_accuracy:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Location coordinates accuracy'
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
             number_column: false
             number_column_label: №
             direction: horizontal
@@ -15376,6 +15218,37 @@ display:
               show-pagination-switch: 0
               pagination: 0
               show-footer: 0
+            formatter_settings:
+              spatial_ref_system:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Spatial reference system'
+              loc_coord_cadastre_x:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 1'
+              loc_coord_cadastre_y:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 2'
+              loc_coord_cadastre_accuracy:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Location coordinates accuracy'
+            ajax: false
+            custom_class: ''
+            line_operations: false
+            form_format_table: false
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -16812,68 +16685,6 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_subord_dataset_link:
-          id: field_subord_dataset_link
-          table: node__field_subord_dataset_link
-          field: field_subord_dataset_link
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Subordinate dataset link'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -20028,7 +19839,6 @@ display:
         - 'config:field.storage.node.field_state'
         - 'config:field.storage.node.field_statement'
         - 'config:field.storage.node.field_subord_dataset'
-        - 'config:field.storage.node.field_subord_dataset_link'
         - 'config:field.storage.node.field_surface_alt'
         - 'config:field.storage.node.field_thermic_cracks'
         - 'config:field.storage.node.field_tip_fracture'
@@ -21598,6 +21408,39 @@ display:
           click_sort_column: value
           type: data_field_table_formatter
           settings:
+            number_column: false
+            number_column_label: №
+            direction: horizontal
+            mode: table
+            caption: ''
+            footer_text: ''
+            datatables_options:
+              bExpandable: 0
+              bInfo: 0
+              scrollX: 0
+              bStateSave: 0
+              ordering: 0
+              paging: 0
+              searching: 0
+              show-export: 0
+              bMultiFilter: 0
+            bootstrap_table_options:
+              sticky-header: 0
+              show-export: 0
+              show-print: 0
+              show-copy-rows: 0
+              show-multi-sort: 0
+              show-fullscreen: 0
+              search: 0
+              show-refresh: 0
+              show-toggle: 0
+              show-columns: 0
+              mobile-responsive: 0
+              sortable: 0
+              click-to-select: 0
+              show-pagination-switch: 0
+              pagination: 0
+              show-footer: 0
             formatter_settings:
               extent:
                 format_type: text_default
@@ -21643,39 +21486,6 @@ display:
             custom_class: ''
             line_operations: false
             form_format_table: false
-            number_column: false
-            number_column_label: №
-            direction: horizontal
-            mode: table
-            caption: ''
-            footer_text: ''
-            datatables_options:
-              bExpandable: 0
-              bInfo: 0
-              scrollX: 0
-              bStateSave: 0
-              ordering: 0
-              paging: 0
-              searching: 0
-              show-export: 0
-              bMultiFilter: 0
-            bootstrap_table_options:
-              sticky-header: 0
-              show-export: 0
-              show-print: 0
-              show-copy-rows: 0
-              show-multi-sort: 0
-              show-fullscreen: 0
-              search: 0
-              show-refresh: 0
-              show-toggle: 0
-              show-columns: 0
-              mobile-responsive: 0
-              sortable: 0
-              click-to-select: 0
-              show-pagination-switch: 0
-              pagination: 0
-              show-footer: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -22495,37 +22305,6 @@ display:
           click_sort_column: spatial_ref_system
           type: data_field_table_formatter
           settings:
-            formatter_settings:
-              spatial_ref_system:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Spatial reference system'
-              loc_coord_cadastre_x:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 1'
-              loc_coord_cadastre_y:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 2'
-              loc_coord_cadastre_accuracy:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Location coordinates accuracy'
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
             number_column: false
             number_column_label: №
             direction: horizontal
@@ -22559,6 +22338,37 @@ display:
               show-pagination-switch: 0
               pagination: 0
               show-footer: 0
+            formatter_settings:
+              spatial_ref_system:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Spatial reference system'
+              loc_coord_cadastre_x:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 1'
+              loc_coord_cadastre_y:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 2'
+              loc_coord_cadastre_accuracy:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Location coordinates accuracy'
+            ajax: false
+            custom_class: ''
+            line_operations: false
+            form_format_table: false
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -23995,68 +23805,6 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_subord_dataset_link:
-          id: field_subord_dataset_link
-          table: node__field_subord_dataset_link
-          field: field_subord_dataset_link
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Subordinate dataset link'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -27210,7 +26958,6 @@ display:
         - 'config:field.storage.node.field_state'
         - 'config:field.storage.node.field_statement'
         - 'config:field.storage.node.field_subord_dataset'
-        - 'config:field.storage.node.field_subord_dataset_link'
         - 'config:field.storage.node.field_surface_alt'
         - 'config:field.storage.node.field_thermic_cracks'
         - 'config:field.storage.node.field_tip_fracture'
@@ -29069,6 +28816,39 @@ display:
           click_sort_column: value
           type: data_field_table_formatter
           settings:
+            number_column: false
+            number_column_label: №
+            direction: horizontal
+            mode: table
+            caption: ''
+            footer_text: ''
+            datatables_options:
+              bExpandable: 0
+              bInfo: 0
+              scrollX: 0
+              bStateSave: 0
+              ordering: 0
+              paging: 0
+              searching: 0
+              show-export: 0
+              bMultiFilter: 0
+            bootstrap_table_options:
+              sticky-header: 0
+              show-export: 0
+              show-print: 0
+              show-copy-rows: 0
+              show-multi-sort: 0
+              show-fullscreen: 0
+              search: 0
+              show-refresh: 0
+              show-toggle: 0
+              show-columns: 0
+              mobile-responsive: 0
+              sortable: 0
+              click-to-select: 0
+              show-pagination-switch: 0
+              pagination: 0
+              show-footer: 0
             formatter_settings:
               extent:
                 format_type: text_default
@@ -29114,39 +28894,6 @@ display:
             custom_class: ''
             line_operations: false
             form_format_table: false
-            number_column: false
-            number_column_label: №
-            direction: horizontal
-            mode: table
-            caption: ''
-            footer_text: ''
-            datatables_options:
-              bExpandable: 0
-              bInfo: 0
-              scrollX: 0
-              bStateSave: 0
-              ordering: 0
-              paging: 0
-              searching: 0
-              show-export: 0
-              bMultiFilter: 0
-            bootstrap_table_options:
-              sticky-header: 0
-              show-export: 0
-              show-print: 0
-              show-copy-rows: 0
-              show-multi-sort: 0
-              show-fullscreen: 0
-              search: 0
-              show-refresh: 0
-              show-toggle: 0
-              show-columns: 0
-              mobile-responsive: 0
-              sortable: 0
-              click-to-select: 0
-              show-pagination-switch: 0
-              pagination: 0
-              show-footer: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -29966,37 +29713,6 @@ display:
           click_sort_column: spatial_ref_system
           type: data_field_table_formatter
           settings:
-            formatter_settings:
-              spatial_ref_system:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Spatial reference system'
-              loc_coord_cadastre_x:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 1'
-              loc_coord_cadastre_y:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 2'
-              loc_coord_cadastre_accuracy:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Location coordinates accuracy'
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
             number_column: false
             number_column_label: №
             direction: horizontal
@@ -30030,6 +29746,37 @@ display:
               show-pagination-switch: 0
               pagination: 0
               show-footer: 0
+            formatter_settings:
+              spatial_ref_system:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Spatial reference system'
+              loc_coord_cadastre_x:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 1'
+              loc_coord_cadastre_y:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 2'
+              loc_coord_cadastre_accuracy:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Location coordinates accuracy'
+            ajax: false
+            custom_class: ''
+            line_operations: false
+            form_format_table: false
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -31401,68 +31148,6 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_subord_dataset_link:
-          id: field_subord_dataset_link
-          table: node__field_subord_dataset_link
-          field: field_subord_dataset_link
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Subordinate dataset link'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -34705,7 +34390,6 @@ display:
         - 'config:field.storage.node.field_state'
         - 'config:field.storage.node.field_statement'
         - 'config:field.storage.node.field_subord_dataset'
-        - 'config:field.storage.node.field_subord_dataset_link'
         - 'config:field.storage.node.field_surface_alt'
         - 'config:field.storage.node.field_thermic_cracks'
         - 'config:field.storage.node.field_tip_fracture'
@@ -35260,6 +34944,39 @@ display:
           click_sort_column: spatial_ref_system
           type: data_field_table_formatter
           settings:
+            number_column: false
+            number_column_label: №
+            direction: horizontal
+            mode: table
+            caption: ''
+            footer_text: ''
+            datatables_options:
+              bExpandable: 0
+              bInfo: 0
+              scrollX: 0
+              bStateSave: 0
+              ordering: 0
+              paging: 0
+              searching: 0
+              show-export: 0
+              bMultiFilter: 0
+            bootstrap_table_options:
+              sticky-header: 0
+              show-export: 0
+              show-print: 0
+              show-copy-rows: 0
+              show-multi-sort: 0
+              show-fullscreen: 0
+              search: 0
+              show-refresh: 0
+              show-toggle: 0
+              show-columns: 0
+              mobile-responsive: 0
+              sortable: 0
+              click-to-select: 0
+              show-pagination-switch: 0
+              pagination: 0
+              show-footer: 0
             formatter_settings:
               spatial_ref_system:
                 format_type: entity_reference_label
@@ -35295,39 +35012,6 @@ display:
             custom_class: ''
             line_operations: false
             form_format_table: false
-            number_column: false
-            number_column_label: №
-            direction: horizontal
-            mode: table
-            caption: ''
-            footer_text: ''
-            datatables_options:
-              bExpandable: 0
-              bInfo: 0
-              scrollX: 0
-              bStateSave: 0
-              ordering: 0
-              paging: 0
-              searching: 0
-              show-export: 0
-              bMultiFilter: 0
-            bootstrap_table_options:
-              sticky-header: 0
-              show-export: 0
-              show-print: 0
-              show-copy-rows: 0
-              show-multi-sort: 0
-              show-fullscreen: 0
-              search: 0
-              show-refresh: 0
-              show-toggle: 0
-              show-columns: 0
-              mobile-responsive: 0
-              sortable: 0
-              click-to-select: 0
-              show-pagination-switch: 0
-              pagination: 0
-              show-footer: 0
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -36278,68 +35962,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_subord_dataset_link:
-          id: field_subord_dataset_link
-          table: node__field_subord_dataset_link
-          field: field_subord_dataset_link
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Subordinate dataset link'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ' '
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_proj_dedication:
           id: field_proj_dedication
           table: node__field_proj_dedication
@@ -36649,7 +36271,6 @@ display:
         - 'config:field.storage.node.field_relative_datation'
         - 'config:field.storage.node.field_site'
         - 'config:field.storage.node.field_subord_dataset'
-        - 'config:field.storage.node.field_subord_dataset_link'
         - 'config:field.storage.node.field_surface_alt'
     deleted: false
   exm_old:
@@ -37329,37 +36950,6 @@ display:
           click_sort_column: spatial_ref_system
           type: data_field_table_formatter
           settings:
-            formatter_settings:
-              spatial_ref_system:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Spatial reference system'
-              loc_coord_cadastre_x:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 1'
-              loc_coord_cadastre_y:
-                format_type: string
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 2'
-              loc_coord_cadastre_accuracy:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Location coordinates accuracy'
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
             number_column: false
             number_column_label: №
             direction: horizontal
@@ -37393,6 +36983,37 @@ display:
               show-pagination-switch: 0
               pagination: 0
               show-footer: 0
+            formatter_settings:
+              spatial_ref_system:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Spatial reference system'
+              loc_coord_cadastre_x:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 1'
+              loc_coord_cadastre_y:
+                format_type: string
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 2'
+              loc_coord_cadastre_accuracy:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Location coordinates accuracy'
+            ajax: false
+            custom_class: ''
+            line_operations: false
+            form_format_table: false
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -39831,6 +39452,39 @@ display:
           click_sort_column: value
           type: data_field_table_formatter
           settings:
+            number_column: false
+            number_column_label: №
+            direction: horizontal
+            mode: table
+            caption: ''
+            footer_text: ''
+            datatables_options:
+              bExpandable: 0
+              bInfo: 0
+              scrollX: 0
+              bStateSave: 0
+              ordering: 0
+              paging: 0
+              searching: 0
+              show-export: 0
+              bMultiFilter: 0
+            bootstrap_table_options:
+              sticky-header: 0
+              show-export: 0
+              show-print: 0
+              show-copy-rows: 0
+              show-multi-sort: 0
+              show-fullscreen: 0
+              search: 0
+              show-refresh: 0
+              show-toggle: 0
+              show-columns: 0
+              mobile-responsive: 0
+              sortable: 0
+              click-to-select: 0
+              show-pagination-switch: 0
+              pagination: 0
+              show-footer: 0
             formatter_settings:
               extent:
                 format_type: text_default
@@ -39876,39 +39530,6 @@ display:
             custom_class: ''
             line_operations: false
             form_format_table: false
-            number_column: false
-            number_column_label: №
-            direction: horizontal
-            mode: table
-            caption: ''
-            footer_text: ''
-            datatables_options:
-              bExpandable: 0
-              bInfo: 0
-              scrollX: 0
-              bStateSave: 0
-              ordering: 0
-              paging: 0
-              searching: 0
-              show-export: 0
-              bMultiFilter: 0
-            bootstrap_table_options:
-              sticky-header: 0
-              show-export: 0
-              show-print: 0
-              show-copy-rows: 0
-              show-multi-sort: 0
-              show-fullscreen: 0
-              search: 0
-              show-refresh: 0
-              show-toggle: 0
-              show-columns: 0
-              mobile-responsive: 0
-              sortable: 0
-              click-to-select: 0
-              show-pagination-switch: 0
-              pagination: 0
-              show-footer: 0
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -41786,68 +41407,6 @@ display:
           settings:
             link: false
           group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_subord_dataset_link:
-          id: field_subord_dataset_link
-          table: node__field_subord_dataset_link
-          field: field_subord_dataset_link
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Subordinate dataset link'
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -44459,7 +44018,6 @@ display:
         - 'config:field.storage.node.field_state'
         - 'config:field.storage.node.field_statement'
         - 'config:field.storage.node.field_subord_dataset'
-        - 'config:field.storage.node.field_subord_dataset_link'
         - 'config:field.storage.node.field_surface_alt'
         - 'config:field.storage.node.field_thermic_cracks'
         - 'config:field.storage.node.field_tip_fracture'
@@ -45078,6 +44636,39 @@ display:
           click_sort_column: spatial_ref_system
           type: data_field_table_formatter
           settings:
+            number_column: false
+            number_column_label: №
+            direction: horizontal
+            mode: table
+            caption: ''
+            footer_text: ''
+            datatables_options:
+              bExpandable: 0
+              bInfo: 0
+              scrollX: 0
+              bStateSave: 0
+              ordering: 0
+              paging: 0
+              searching: 0
+              show-export: 0
+              bMultiFilter: 0
+            bootstrap_table_options:
+              sticky-header: 0
+              show-export: 0
+              show-print: 0
+              show-copy-rows: 0
+              show-multi-sort: 0
+              show-fullscreen: 0
+              search: 0
+              show-refresh: 0
+              show-toggle: 0
+              show-columns: 0
+              mobile-responsive: 0
+              sortable: 0
+              click-to-select: 0
+              show-pagination-switch: 0
+              pagination: 0
+              show-footer: 0
             formatter_settings:
               spatial_ref_system:
                 format_type: entity_reference_label
@@ -45113,39 +44704,6 @@ display:
             custom_class: ''
             line_operations: false
             form_format_table: false
-            number_column: false
-            number_column_label: №
-            direction: horizontal
-            mode: table
-            caption: ''
-            footer_text: ''
-            datatables_options:
-              bExpandable: 0
-              bInfo: 0
-              scrollX: 0
-              bStateSave: 0
-              ordering: 0
-              paging: 0
-              searching: 0
-              show-export: 0
-              bMultiFilter: 0
-            bootstrap_table_options:
-              sticky-header: 0
-              show-export: 0
-              show-print: 0
-              show-copy-rows: 0
-              show-multi-sort: 0
-              show-fullscreen: 0
-              search: 0
-              show-refresh: 0
-              show-toggle: 0
-              show-columns: 0
-              mobile-responsive: 0
-              sortable: 0
-              click-to-select: 0
-              show-pagination-switch: 0
-              pagination: 0
-              show-footer: 0
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -51068,37 +50626,6 @@ display:
           click_sort_column: spatial_ref_system
           type: data_field_table_formatter
           settings:
-            formatter_settings:
-              spatial_ref_system:
-                format_type: entity_reference_label
-                weight: '0'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Spatial reference system'
-              loc_coord_cadastre_y:
-                format_type: string
-                weight: '2'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 2'
-              loc_coord_cadastre_x:
-                format_type: string
-                weight: '1'
-                hidden: 0
-                show_label: 0
-                column_label: 'Location coordinates 1'
-              loc_coord_cadastre_accuracy:
-                format_type: entity_reference_label
-                weight: '3'
-                hidden: 0
-                show_label: 0
-                link: 0
-                column_label: 'Location coordinates accuracy'
-            ajax: false
-            custom_class: ''
-            line_operations: false
-            form_format_table: false
             number_column: false
             number_column_label: №
             direction: horizontal
@@ -51132,6 +50659,37 @@ display:
               show-pagination-switch: 0
               pagination: 0
               show-footer: 0
+            formatter_settings:
+              spatial_ref_system:
+                format_type: entity_reference_label
+                weight: '0'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Spatial reference system'
+              loc_coord_cadastre_y:
+                format_type: string
+                weight: '2'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 2'
+              loc_coord_cadastre_x:
+                format_type: string
+                weight: '1'
+                hidden: 0
+                show_label: 0
+                column_label: 'Location coordinates 1'
+              loc_coord_cadastre_accuracy:
+                format_type: entity_reference_label
+                weight: '3'
+                hidden: 0
+                show_label: 0
+                link: 0
+                column_label: 'Location coordinates accuracy'
+            ajax: false
+            custom_class: ''
+            line_operations: false
+            form_format_table: false
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -52957,6 +52515,39 @@ display:
           click_sort_column: spatial_ref_system
           type: data_field_table_formatter
           settings:
+            number_column: false
+            number_column_label: №
+            direction: horizontal
+            mode: table
+            caption: ''
+            footer_text: ''
+            datatables_options:
+              bExpandable: 0
+              bInfo: 0
+              scrollX: 0
+              bStateSave: 0
+              ordering: 0
+              paging: 0
+              searching: 0
+              show-export: 0
+              bMultiFilter: 0
+            bootstrap_table_options:
+              sticky-header: 0
+              show-export: 0
+              show-print: 0
+              show-copy-rows: 0
+              show-multi-sort: 0
+              show-fullscreen: 0
+              search: 0
+              show-refresh: 0
+              show-toggle: 0
+              show-columns: 0
+              mobile-responsive: 0
+              sortable: 0
+              click-to-select: 0
+              show-pagination-switch: 0
+              pagination: 0
+              show-footer: 0
             formatter_settings:
               spatial_ref_system:
                 format_type: entity_reference_label
@@ -52992,39 +52583,6 @@ display:
             custom_class: ''
             line_operations: false
             form_format_table: false
-            number_column: false
-            number_column_label: №
-            direction: horizontal
-            mode: table
-            caption: ''
-            footer_text: ''
-            datatables_options:
-              bExpandable: 0
-              bInfo: 0
-              scrollX: 0
-              bStateSave: 0
-              ordering: 0
-              paging: 0
-              searching: 0
-              show-export: 0
-              bMultiFilter: 0
-            bootstrap_table_options:
-              sticky-header: 0
-              show-export: 0
-              show-print: 0
-              show-copy-rows: 0
-              show-multi-sort: 0
-              show-fullscreen: 0
-              search: 0
-              show-refresh: 0
-              show-toggle: 0
-              show-columns: 0
-              mobile-responsive: 0
-              sortable: 0
-              click-to-select: 0
-              show-pagination-switch: 0
-              pagination: 0
-              show-footer: 0
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -54438,6 +53996,39 @@ display:
           click_sort_column: spatial_ref_system
           type: data_field_table_formatter
           settings:
+            number_column: false
+            number_column_label: №
+            direction: horizontal
+            mode: table
+            caption: ''
+            footer_text: ''
+            datatables_options:
+              bExpandable: 0
+              bInfo: 0
+              scrollX: 0
+              bStateSave: 0
+              ordering: 0
+              paging: 0
+              searching: 0
+              show-export: 0
+              bMultiFilter: 0
+            bootstrap_table_options:
+              sticky-header: 0
+              show-export: 0
+              show-print: 0
+              show-copy-rows: 0
+              show-multi-sort: 0
+              show-fullscreen: 0
+              search: 0
+              show-refresh: 0
+              show-toggle: 0
+              show-columns: 0
+              mobile-responsive: 0
+              sortable: 0
+              click-to-select: 0
+              show-pagination-switch: 0
+              pagination: 0
+              show-footer: 0
             formatter_settings:
               spatial_ref_system:
                 format_type: entity_reference_label
@@ -54473,39 +54064,6 @@ display:
             custom_class: ''
             line_operations: false
             form_format_table: false
-            number_column: false
-            number_column_label: №
-            direction: horizontal
-            mode: table
-            caption: ''
-            footer_text: ''
-            datatables_options:
-              bExpandable: 0
-              bInfo: 0
-              scrollX: 0
-              bStateSave: 0
-              ordering: 0
-              paging: 0
-              searching: 0
-              show-export: 0
-              bMultiFilter: 0
-            bootstrap_table_options:
-              sticky-header: 0
-              show-export: 0
-              show-print: 0
-              show-copy-rows: 0
-              show-multi-sort: 0
-              show-fullscreen: 0
-              search: 0
-              show-refresh: 0
-              show-toggle: 0
-              show-columns: 0
-              mobile-responsive: 0
-              sortable: 0
-              click-to-select: 0
-              show-pagination-switch: 0
-              pagination: 0
-              show-footer: 0
           group_column: ''
           group_columns: {  }
           group_rows: true

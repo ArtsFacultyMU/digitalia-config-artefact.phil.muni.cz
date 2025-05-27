@@ -1,0 +1,19 @@
+uuid: 08d7de1a-3b30-4f0d-84b6-3c2f01158eba
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - telephone
+id: taxonomy_term.field_coll_contacts_phone
+field_name: field_coll_contacts_phone
+entity_type: taxonomy_term
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

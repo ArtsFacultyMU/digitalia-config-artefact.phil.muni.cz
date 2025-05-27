@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.a3d_ingest_artefact.field_artefact_category
     - field.field.node.a3d_ingest_artefact.field_artefact_id
-    - field.field.node.a3d_ingest_artefact.field_contract
     - field.field.node.a3d_ingest_artefact.field_deposition_cond
     - field.field.node.a3d_ingest_artefact.field_description_a3d
     - field.field.node.a3d_ingest_artefact.field_destruction_analysis
@@ -34,12 +33,6 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  field_contract:
-    type: chosen_select
-    weight: 9
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_deposition_cond:
     type: chosen_select

@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.meta_display
     - field.field.node.a3d_ingest_object.field_coll_org
+    - field.field.node.a3d_ingest_object.field_contract
     - field.field.node.a3d_ingest_object.field_date_borrowing
     - field.field.node.a3d_ingest_object.field_date_return
     - field.field.node.a3d_ingest_object.field_finding_context_note
@@ -156,6 +157,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_contract: true
   field_date_borrowing: true
   field_date_return: true
   field_finding_documentation: true

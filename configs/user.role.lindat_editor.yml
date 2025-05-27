@@ -21,18 +21,19 @@ dependencies:
     - save_edit
     - system
     - taxonomy
+    - taxonomy_manager
 id: lindat_editor
 label: 'Lindat Editor'
 weight: 1
 is_admin: null
 permissions:
   - 'access administration pages'
+  - 'access taxonomy manager list'
   - 'access taxonomy overview'
   - 'administer taxonomy'
   - 'create field_coll_contacts'
   - 'create field_coll_contacts_alt'
   - 'create field_contact_email'
-  - 'create field_contact_phone'
   - 'create field_personal_contact'
   - 'create field_private_note'
   - 'delete all taxonomy revisions'
@@ -45,13 +46,11 @@ permissions:
   - 'edit field_coll_contacts'
   - 'edit field_coll_contacts_alt'
   - 'edit field_contact_email'
-  - 'edit field_contact_phone'
   - 'edit field_geolocation_original_priv'
   - 'edit field_personal_contact'
   - 'edit own field_coll_contacts'
   - 'edit own field_coll_contacts_alt'
   - 'edit own field_contact_email'
-  - 'edit own field_contact_phone'
   - 'edit own field_personal_contact'
   - 'edit own field_private_note'
   - 'revert all taxonomy revisions'
@@ -69,12 +68,10 @@ permissions:
   - 'view field_coll_contacts'
   - 'view field_coll_contacts_alt'
   - 'view field_contact_email'
-  - 'view field_contact_phone'
   - 'view field_personal_contact'
   - 'view field_private_note'
   - 'view own field_coll_contacts'
   - 'view own field_coll_contacts_alt'
   - 'view own field_contact_email'
-  - 'view own field_contact_phone'
   - 'view own field_personal_contact'
   - 'view own field_private_note'

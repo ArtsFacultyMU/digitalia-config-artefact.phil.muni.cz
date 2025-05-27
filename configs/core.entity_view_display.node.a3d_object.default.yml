@@ -302,6 +302,7 @@ third_party_settings:
         - field_circle
         - field_st_placement_type1
         - field_st_placement_type2
+        - field_st_placement_certainty
         - field_st_placement_type3
         - field_st_shape_type1
         - field_st_shape_type2
@@ -314,7 +315,6 @@ third_party_settings:
         - field_orig_state_pres
         - field_number_of_preserved_parts
         - field_note_on_preservation
-        - field_st_placement_certainty
         - field_has_ricasso
         - field_raw_material
         - field_ballistic_profile
@@ -454,10 +454,10 @@ third_party_settings:
         description: ''
     group_documentation:
       children:
+        - field_stove_tile_shape_certainty
         - field_doc_creator
         - field_doc_date
         - field_auth_res_data
-        - field_stove_tile_shape_certainty
         - field_auth_3d_models
         - field_metadata_rights
         - field_provenance
@@ -971,7 +971,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 14
+    weight: 12
     region: content
   field_country:
     type: entity_reference_label
@@ -1387,14 +1387,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 15
+    weight: 13
     region: content
   field_literature:
     type: basic_string
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 13
+    weight: 11
     region: content
   field_longitudinal_profile:
     type: entity_reference_label
@@ -1769,7 +1769,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 12
+    weight: 10
     region: content
   field_proj_id:
     type: entity_reference_label
@@ -2060,11 +2060,16 @@ content:
     weight: 8
     region: content
   field_subord_dataset_link:
-    type: basic_string
+    type: link
     label: inline
-    settings: {  }
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    weight: 11
+    weight: 9
     region: content
   field_surf_data_pres:
     type: entity_reference_entity_view

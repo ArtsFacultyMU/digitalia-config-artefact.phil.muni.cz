@@ -1,1 +1,2 @@
-description: 'Pole se vyplní jen v případě, že není známo archeologické naleziště. Formát regionu není určen, lze jej konstruovat libovolně (např.: Slovácko, poblíž Moravského Krumlova, u Židlochovic).'
+description: 'Toto pole se vyplní pouze v případě, že archeologické naleziště nelze přesně lokalizovat (tj. v předchozím poli byla vybrána hodnota „N/A“); zde uveďte alespoň rámcovou charakteristiku místa nálezu (např.: „Slovácko“, „poblíž Moravského Krumlova“,  mezi Vranovicemi a Přísnoticemi“ apod.).'
+label: Lokalita

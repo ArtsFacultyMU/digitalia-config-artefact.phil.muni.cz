@@ -2,3 +2,4 @@ label: 'Nálezová zpráva'
 settings:
   on_label: Ano
   off_label: Ne
+description: 'Je nález dokumentován nálezovou zprávou?'

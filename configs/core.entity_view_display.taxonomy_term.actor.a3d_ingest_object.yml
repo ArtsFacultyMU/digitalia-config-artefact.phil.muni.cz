@@ -9,8 +9,8 @@ dependencies:
     - field.field.taxonomy_term.actor.field_alternate_identifier
     - field.field.taxonomy_term.actor.field_coll_contacts
     - field.field.taxonomy_term.actor.field_coll_contacts_alt
+    - field.field.taxonomy_term.actor.field_coll_contacts_phone
     - field.field.taxonomy_term.actor.field_contact_email
-    - field.field.taxonomy_term.actor.field_contact_phone
     - field.field.taxonomy_term.actor.field_tax_hierarchical_depth
     - field.field.taxonomy_term.actor.field_tax_hierarchical_weight
     - taxonomy.vocabulary.actor
@@ -46,7 +46,7 @@ hidden:
   field_alternate_identifier: true
   field_coll_contacts: true
   field_coll_contacts_alt: true
-  field_contact_phone: true
+  field_coll_contacts_phone: true
   field_tax_hierarchical_depth: true
   field_tax_hierarchical_weight: true
   langcode: true

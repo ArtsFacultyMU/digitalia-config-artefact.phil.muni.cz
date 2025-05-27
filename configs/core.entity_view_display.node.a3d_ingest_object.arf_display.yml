@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.arf_display
     - field.field.node.a3d_ingest_object.field_coll_org
+    - field.field.node.a3d_ingest_object.field_contract
     - field.field.node.a3d_ingest_object.field_date_borrowing
     - field.field.node.a3d_ingest_object.field_date_return
     - field.field.node.a3d_ingest_object.field_finding_context_note
@@ -245,6 +246,7 @@ hidden:
   display_media_original_download: true
   display_media_service_file: true
   display_media_thumbnail: true
+  field_contract: true
   field_geolocation: true
   field_member_of: true
   langcode: true

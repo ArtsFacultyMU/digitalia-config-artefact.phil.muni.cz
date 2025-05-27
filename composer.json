@@ -53,6 +53,7 @@
     "drupal/datafield": "^2.0",
     "drupal/entity_browser": "^2.12",
     "drupal/entity_comparison": "^4.0",
+    "drupal/entity_diff_ui": "^2.0@alpha",
     "drupal/entity_reference_unpublished": "^2.0",
     "drupal/epp": "^1.7",
     "drupal/facets": "^3",
@@ -194,7 +195,8 @@
       "drupal/core": {
         "ImageStyle": "./patches/ImageStyle.patch",
         "Datafield error fix: display references in select list": "./patches/form.inc.patch",
-        "Datafield error fix: save references in select list": "./patches/SqlContent.patch"
+        "Datafield error fix: save references in select list": "./patches/SqlContent.patch",
+        "Claro: hide silly 'Add' button": "./patches/claro.node.patch"
       },
       "drupal/persistent_identifiers-persistent_identifiers": {
         "Create handle automatically on node save/creation": "./patches/persistent_identifiers.patch",

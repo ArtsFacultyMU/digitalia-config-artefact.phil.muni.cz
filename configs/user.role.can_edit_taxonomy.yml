@@ -3,6 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - media.type.3d_model
+    - media.type.audio
+    - media.type.document
+    - media.type.file
+    - media.type.image
+    - media.type.video
     - taxonomy.vocabulary.2d_asymetry
     - taxonomy.vocabulary.3d_shaping
     - taxonomy.vocabulary.3d_traces
@@ -108,6 +114,7 @@ dependencies:
     - taxonomy.vocabulary.recent_damage_type
     - taxonomy.vocabulary.record_source
     - taxonomy.vocabulary.region
+    - taxonomy.vocabulary.reineckes_chronology
     - taxonomy.vocabulary.relative_datation
     - taxonomy.vocabulary.relief_type
     - taxonomy.vocabulary.reparation_features
@@ -117,6 +124,7 @@ dependencies:
     - taxonomy.vocabulary.rights_access
     - taxonomy.vocabulary.rights_reproduction
     - taxonomy.vocabulary.rock_fragments
+    - taxonomy.vocabulary.sampling_type
     - taxonomy.vocabulary.scale_type
     - taxonomy.vocabulary.sdp_method
     - taxonomy.vocabulary.sdp_value
@@ -127,6 +135,7 @@ dependencies:
     - taxonomy.vocabulary.small_sculpture_subtype
     - taxonomy.vocabulary.small_sculpture_type
     - taxonomy.vocabulary.spatial_ref_system
+    - taxonomy.vocabulary.standard_chronology
     - taxonomy.vocabulary.state
     - taxonomy.vocabulary.stove_tile_placement_type_1
     - taxonomy.vocabulary.stove_tile_placement_type_2
@@ -137,27 +146,29 @@ dependencies:
     - taxonomy.vocabulary.subord_dataset
     - taxonomy.vocabulary.surface_alt
     - taxonomy.vocabulary.surface_finishing
+    - taxonomy.vocabulary.surface_properties
+    - taxonomy.vocabulary.sword_segment
     - taxonomy.vocabulary.tags
     - taxonomy.vocabulary.temporal_subjects
     - taxonomy.vocabulary.test_level_0
     - taxonomy.vocabulary.thermic_cracks
     - taxonomy.vocabulary.tile_type
     - taxonomy.vocabulary.tip_fracture
+    - taxonomy.vocabulary.trace_type
     - taxonomy.vocabulary.units
     - taxonomy.vocabulary.unknown_values
   module:
     - content_translation
     - entity_comparison
+    - media
     - system
     - taxonomy
-    - taxonomy_manager
 id: can_edit_taxonomy
 label: 'Can edit taxonomy'
 weight: -4
 is_admin: null
 permissions:
   - 'access administration pages'
-  - 'access taxonomy manager list'
   - 'access taxonomy overview'
   - 'create content translations'
   - 'create terms in 2d_asymetry'
@@ -308,6 +319,7 @@ permissions:
   - 'edit terms in analysis_type'
   - 'edit terms in aquamanile_subtype'
   - 'edit terms in aquamanile_type'
+  - 'edit terms in archaeological_site'
   - 'edit terms in artefact_category'
   - 'edit terms in artefact_class'
   - 'edit terms in artefact_subclass'
@@ -342,12 +354,14 @@ permissions:
   - 'edit terms in fhp_type'
   - 'edit terms in finding_context_subtype'
   - 'edit terms in finding_context_type'
+  - 'edit terms in finding_documentation'
   - 'edit terms in firing_characteristic'
   - 'edit terms in format_size'
   - 'edit terms in fract_nature'
   - 'edit terms in fract_preservation'
   - 'edit terms in frequencies'
   - 'edit terms in g_w_practice'
+  - 'edit terms in general_accuracy'
   - 'edit terms in general_lateral_wear'
   - 'edit terms in general_type'
   - 'edit terms in genre'
@@ -379,12 +393,14 @@ permissions:
   - 'edit terms in motif'
   - 'edit terms in msdp_method'
   - 'edit terms in msdp_value'
+  - 'edit terms in non_plastic_inclusions_scale'
   - 'edit terms in orig_state_pres'
   - 'edit terms in original_location'
   - 'edit terms in painting'
   - 'edit terms in person'
   - 'edit terms in physical_form'
   - 'edit terms in pigment'
+  - 'edit terms in place_analysis'
   - 'edit terms in posture'
   - 'edit terms in preserved_parts'
   - 'edit terms in proj_dedication'
@@ -398,6 +414,7 @@ permissions:
   - 'edit terms in recent_damage_type'
   - 'edit terms in record_source'
   - 'edit terms in region'
+  - 'edit terms in reineckes_chronology'
   - 'edit terms in relative_datation'
   - 'edit terms in relief_type'
   - 'edit terms in reparation_features'
@@ -407,6 +424,7 @@ permissions:
   - 'edit terms in rights_access'
   - 'edit terms in rights_reproduction'
   - 'edit terms in rock_fragments'
+  - 'edit terms in sampling_type'
   - 'edit terms in scale_type'
   - 'edit terms in sdp_method'
   - 'edit terms in sdp_value'
@@ -417,6 +435,7 @@ permissions:
   - 'edit terms in small_sculpture_subtype'
   - 'edit terms in small_sculpture_type'
   - 'edit terms in spatial_ref_system'
+  - 'edit terms in standard_chronology'
   - 'edit terms in state'
   - 'edit terms in stove_tile_placement_type_1'
   - 'edit terms in stove_tile_placement_type_2'
@@ -427,12 +446,15 @@ permissions:
   - 'edit terms in subord_dataset'
   - 'edit terms in surface_alt'
   - 'edit terms in surface_finishing'
+  - 'edit terms in surface_properties'
+  - 'edit terms in sword_segment'
   - 'edit terms in tags'
   - 'edit terms in temporal_subjects'
   - 'edit terms in test_level_0'
   - 'edit terms in thermic_cracks'
   - 'edit terms in tile_type'
   - 'edit terms in tip_fracture'
+  - 'edit terms in trace_type'
   - 'edit terms in units'
   - 'edit terms in unknown_values'
   - 'translate 2d_asymetry taxonomy_term'
@@ -572,3 +594,9 @@ permissions:
   - 'translate unknown_values taxonomy_term'
   - 'update content translations'
   - 'use a3d_kch_entity_comparison entity comparison'
+  - 'view any 3d_model media revisions'
+  - 'view any audio media revisions'
+  - 'view any document media revisions'
+  - 'view any file media revisions'
+  - 'view any image media revisions'
+  - 'view any video media revisions'

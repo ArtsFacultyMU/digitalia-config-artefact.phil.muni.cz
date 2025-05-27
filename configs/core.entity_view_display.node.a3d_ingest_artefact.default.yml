@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.a3d_ingest_artefact.field_artefact_category
     - field.field.node.a3d_ingest_artefact.field_artefact_id
-    - field.field.node.a3d_ingest_artefact.field_contract
     - field.field.node.a3d_ingest_artefact.field_deposition_cond
     - field.field.node.a3d_ingest_artefact.field_description_a3d
     - field.field.node.a3d_ingest_artefact.field_destruction_analysis
@@ -75,14 +74,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 9
-    region: content
-  field_contract:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 17
     region: content
   field_deposition_cond:
     type: entity_reference_label

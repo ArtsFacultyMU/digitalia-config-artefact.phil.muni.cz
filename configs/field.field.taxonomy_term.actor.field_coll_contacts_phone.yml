@@ -1,0 +1,21 @@
+uuid: af980265-ed09-472a-807c-ffbca376010c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_coll_contacts_phone
+    - taxonomy.vocabulary.actor
+  module:
+    - telephone
+id: taxonomy_term.actor.field_coll_contacts_phone
+field_name: field_coll_contacts_phone
+entity_type: taxonomy_term
+bundle: actor
+label: 'Contacts - phone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

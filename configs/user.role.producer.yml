@@ -3,11 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.institution_agent_type
     - entity_browser.browser.institution_entity_browser
-    - entity_browser.browser.person_agent_type
     - entity_browser.browser.personal_contacts_entity_browser
     - entity_browser.browser.site_entity_browser
+    - media.type.3d_model
+    - media.type.audio
+    - media.type.document
+    - media.type.file
+    - media.type.image
+    - media.type.video
     - node.type.a3d_ingest_artefact
     - node.type.a3d_ingest_object
     - taxonomy.vocabulary.actor
@@ -21,6 +25,7 @@ dependencies:
     - entity_browser
     - field_permissions
     - islandora
+    - media
     - node
     - persistent_identifiers
     - save_edit
@@ -33,9 +38,7 @@ weight: 5
 is_admin: null
 permissions:
   - 'access administration pages'
-  - 'access institution_agent_type entity browser pages'
   - 'access institution_entity_browser entity browser pages'
-  - 'access person_agent_type entity browser pages'
   - 'access personal_contacts_entity_browser entity browser pages'
   - 'access site_entity_browser entity browser pages'
   - 'access taxonomy overview'
@@ -44,7 +47,6 @@ permissions:
   - 'create field_coll_contacts'
   - 'create field_coll_contacts_alt'
   - 'create field_contact_email'
-  - 'create field_contact_phone'
   - 'create field_contract'
   - 'create field_geolocation_original_priv'
   - 'create field_personal_contact'
@@ -58,16 +60,16 @@ permissions:
   - 'create terms in research_question'
   - 'create terms in site'
   - 'create terms in site_type'
+  - 'delete own a3d_ingest_artefact content'
+  - 'delete own a3d_ingest_object content'
   - 'edit field_coll_contacts'
   - 'edit field_coll_contacts_alt'
   - 'edit field_contact_email'
-  - 'edit field_contact_phone'
   - 'edit own a3d_ingest_artefact content'
   - 'edit own a3d_ingest_object content'
   - 'edit own field_coll_contacts'
   - 'edit own field_coll_contacts_alt'
   - 'edit own field_contact_email'
-  - 'edit own field_contact_phone'
   - 'edit own field_contract'
   - 'edit own field_personal_contact'
   - 'edit terms in actor'
@@ -78,18 +80,22 @@ permissions:
   - 'manage media'
   - 'mint persistent identifiers'
   - 'use save and edit'
+  - 'view any 3d_model media revisions'
+  - 'view any audio media revisions'
+  - 'view any document media revisions'
+  - 'view any file media revisions'
+  - 'view any image media revisions'
   - 'view any unpublished a3d_ingest_artefact content'
   - 'view any unpublished a3d_ingest_object content'
+  - 'view any video media revisions'
   - 'view checksums'
   - 'view field_coll_contacts'
   - 'view field_coll_contacts_alt'
   - 'view field_contact_email'
-  - 'view field_contact_phone'
   - 'view field_contract'
   - 'view own field_coll_contacts'
   - 'view own field_coll_contacts_alt'
   - 'view own field_contact_email'
-  - 'view own field_contact_phone'
   - 'view own field_contract'
   - 'view own field_personal_contact'
   - 'view own unpublished content'

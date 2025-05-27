@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.kch_index
     - field.field.node.a3d_ingest_object.field_coll_org
+    - field.field.node.a3d_ingest_object.field_contract
     - field.field.node.a3d_ingest_object.field_date_borrowing
     - field.field.node.a3d_ingest_object.field_date_return
     - field.field.node.a3d_ingest_object.field_finding_context_note
@@ -85,6 +86,7 @@ content:
     region: content
 hidden:
   field_coll_org: true
+  field_contract: true
   field_date_borrowing: true
   field_date_return: true
   field_finding_context_note: true

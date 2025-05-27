@@ -50,11 +50,11 @@ definitions:
     expanded: false
     enabled: true
   help__main:
-    weight: -2
+    weight: 2
     menu_name: admin
     parent: system.admin
-    expanded: false
     enabled: true
+    expanded: false
   system__admin:
     weight: 2
     menu_name: admin

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.contract.field_contract_number
     - field.field.node.contract.field_description
+    - field.field.node.contract.field_member_of
     - field.field.node.contract.field_provider
     - field.field.node.contract.field_recipient
     - field.field.node.contract.field_signature_date
@@ -17,6 +18,16 @@ targetEntityType: node
 bundle: contract
 mode: teaser
 content:
+  a3d_artefact_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_contract_artefacts_contract_related_objects:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   a3d_eva_entity_group_relation_entity_view_2:
     settings: {  }
     third_party_settings: {  }
@@ -71,6 +82,7 @@ content:
     region: content
 hidden:
   field_contract_number: true
+  field_member_of: true
   field_provider: true
   field_recipient: true
   field_signature_date: true

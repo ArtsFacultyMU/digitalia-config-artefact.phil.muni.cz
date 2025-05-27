@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_form_mode.taxonomy_term.a3d_site
     - field.field.node.a3d_ingest_object.field_coll_org
+    - field.field.node.a3d_ingest_object.field_contract
     - field.field.node.a3d_ingest_object.field_date_borrowing
     - field.field.node.a3d_ingest_object.field_date_return
     - field.field.node.a3d_ingest_object.field_finding_context_note
@@ -40,6 +41,7 @@ third_party_settings:
         - field_place_analysis
         - field_date_borrowing
         - field_date_return
+        - field_contract
       label: Collection
       region: content
       parent_name: ''
@@ -85,7 +87,7 @@ third_party_settings:
       label: Artefacts
       region: content
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: details
       format_settings:
         classes: ''
@@ -102,7 +104,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -121,20 +123,26 @@ content:
       allow_duplicate: false
       collapsible: false
       collapsed: false
-      revision: false
+      revision: true
       removed_reference: keep
     third_party_settings:
       entity_browser_entity_form:
         entity_browser_id: institution_entity_browser
+  field_contract:
+    type: chosen_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_date_borrowing:
     type: datetime_default
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_date_return:
     type: datetime_default
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -269,7 +277,7 @@ content:
         entity_browser_id: _none
   field_personal_contact:
     type: inline_entity_form_complex
-    weight: 4
+    weight: 3
     region: content
     settings:
       form_mode: a3d_person
@@ -289,7 +297,7 @@ content:
         entity_browser_id: personal_contacts_entity_browser
   field_place_analysis:
     type: options_select
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -325,40 +333,40 @@ content:
         entity_browser_id: site_entity_browser
   path:
     type: path
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
-    type: boolean_checkbox
-    weight: 6
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  sticky:
     type: boolean_checkbox
     weight: 7
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 9
+    weight: 10
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS

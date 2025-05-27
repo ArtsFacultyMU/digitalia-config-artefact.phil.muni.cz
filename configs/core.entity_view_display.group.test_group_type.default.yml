@@ -10,6 +10,16 @@ targetEntityType: group
 bundle: test_group_type
 mode: default
 content:
+  a3d_arf_content_arf_homepage:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_cmb_homepage_cmb_homepage:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   a3d_eva_group_homepage_arf:
     settings: {  }
     third_party_settings: {  }
@@ -29,6 +39,21 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  a3d_kch_content_kch_homepage:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_nef_content_nef_homepage:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  duplicate_of_a3d_arf_content_swd_homepage:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
 hidden:
   changed: true

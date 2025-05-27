@@ -42,6 +42,7 @@ module:
   datetime: 0
   dblog: 0
   devel: 0
+  diff: 0
   digitalia_muni_a3d_javascript: 0
   digitalia_muni_compare_tweaks: 0
   digitalia_muni_general_includes: 0
@@ -54,6 +55,7 @@ module:
   entity_browser: 0
   entity_browser_entity_form: 0
   entity_comparison: 0
+  entity_diff_ui: 0
   entity_reference_unpublished: 0
   epp: 0
   eva: 0
@@ -127,6 +129,7 @@ module:
   locale: 0
   matomo: 0
   media: 0
+  media_diff_ui: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
@@ -183,6 +186,7 @@ module:
   taxonomy: 0
   taxonomy_manager: 0
   taxonomy_manager_merge: 0
+  telephone: 0
   term_merge: 0
   term_reference_change: 0
   text: 0

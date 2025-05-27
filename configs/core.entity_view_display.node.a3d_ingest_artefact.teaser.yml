@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.a3d_ingest_artefact.field_artefact_category
     - field.field.node.a3d_ingest_artefact.field_artefact_id
-    - field.field.node.a3d_ingest_artefact.field_contract
     - field.field.node.a3d_ingest_artefact.field_deposition_cond
     - field.field.node.a3d_ingest_artefact.field_description_a3d
     - field.field.node.a3d_ingest_artefact.field_destruction_analysis
@@ -69,7 +68,6 @@ content:
 hidden:
   field_artefact_category: true
   field_artefact_id: true
-  field_contract: true
   field_deposition_cond: true
   field_description_a3d: true
   field_destruction_analysis: true

@@ -7,7 +7,6 @@ dependencies:
     - field.storage.taxonomy_term.field_city_code
     - field.storage.taxonomy_term.field_coll_contacts
     - field.storage.taxonomy_term.field_contact_email
-    - field.storage.taxonomy_term.field_contact_phone
     - taxonomy.vocabulary.actor
     - taxonomy.vocabulary.actor_type
     - taxonomy.vocabulary.city
@@ -303,7 +302,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - user.permissions
       tags: {  }
@@ -330,7 +328,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - user.permissions
       tags: {  }
@@ -681,7 +678,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - user.permissions
       tags: {  }
@@ -933,69 +929,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_contact_phone:
-          id: field_contact_phone
-          table: taxonomy_term__field_contact_phone
-          field: field_contact_phone
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Contact phone'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
       exposed_form:
         type: bef
         options:
@@ -1180,6 +1113,8 @@ display:
               lindat_editor: '0'
               workbench: '0'
               manage_contracts: '0'
+              swd_user: '0'
+              producer: '0'
             placeholder: ''
           is_grouped: false
           group_info:
@@ -1256,7 +1191,22 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+        header: false
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: "Vyberte (kliknutím na přepínač) jednu položku ze seznamu, ve kterém lze vyhledávat zápisem znaků v\_poli <strong>Název</strong>; volbu potvrďte tlačítkem <strong>Vybrat</strong> na konci interaktivního formuláře. Pokud hledaná položka neexistuje, vraťte se o dva kroky zpět a použijte volbu <strong>Přidat nový</strong>. "
+            format: basic_html
+          tokenize: false
       display_extenders:
         matomo:
           enabled: false
@@ -1272,14 +1222,12 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_coll_contacts'
         - 'config:field.storage.taxonomy_term.field_contact_email'
-        - 'config:field.storage.taxonomy_term.field_contact_phone'
   entity_browser_3:
     id: entity_browser_3
     display_title: 'Personal contacts Entity browser'
@@ -1518,69 +1466,6 @@ display:
           click_sort_column: value
           type: basic_string
           settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_contact_phone:
-          id: field_contact_phone
-          table: taxonomy_term__field_contact_phone
-          field: field_contact_phone
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Contact phone'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1853,7 +1738,22 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+        header: false
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: ''
+            format: basic_html
+          tokenize: false
       display_extenders:
         matomo:
           enabled: false
@@ -1869,14 +1769,12 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_coll_contacts'
         - 'config:field.storage.taxonomy_term.field_contact_email'
-        - 'config:field.storage.taxonomy_term.field_contact_phone'
   entity_browser_4:
     id: entity_browser_4
     display_title: 'Site Entity browser'
@@ -2334,7 +2232,22 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+        header: false
       display_description: ''
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: ''
+            format: basic_html
+          tokenize: false
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders:
         matomo:
@@ -2351,7 +2264,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user.permissions
@@ -2747,7 +2659,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - user.permissions
       tags: {  }
@@ -3166,7 +3077,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - user.permissions
@@ -3411,7 +3321,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - user.permissions
       tags: {  }
@@ -3645,7 +3554,6 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - user.permissions
       tags: {  }

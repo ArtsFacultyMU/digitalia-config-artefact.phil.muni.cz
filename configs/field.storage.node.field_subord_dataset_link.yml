@@ -1,20 +1,16 @@
-uuid: a4c065e8-62af-4c95-a701-5ee22083938e
+uuid: d04b2daf-11ad-4b88-8f8f-bfa8b5066ccf
 langcode: en
 status: true
 dependencies:
   module:
-    - field_permissions
+    - link
     - node
-third_party_settings:
-  field_permissions:
-    permission_type: public
 id: node.field_subord_dataset_link
 field_name: field_subord_dataset_link
 entity_type: node
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: link
+settings: {  }
+module: link
 locked: false
 cardinality: -1
 translatable: true

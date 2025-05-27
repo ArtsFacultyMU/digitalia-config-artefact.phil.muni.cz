@@ -13,6 +13,11 @@ display:
         name:
           expose:
             label: Název
+      header:
+        area:
+          content:
+            value: '<p>Vyberte (kliknutím na přepínač) jednu položku ze seznamu, ve kterém lze vyhledávat zápisem znaků v&nbsp;poli <strong>Název</strong>; volbu potvrďte tlačítkem <strong>Vybrat</strong> na konci interaktivního formuláře. Pokud hledaná položka neexistuje, vraťte se o dva kroky zpět a použijte volbu <strong>Přidat nový</strong>.&nbsp;</p>'
+            format: basic_html
   default:
     display_options:
       exposed_form:
@@ -32,8 +37,11 @@ display:
           label: Kontakt
         field_contact_email:
           label: 'Kontaktní e-mail'
-        field_contact_phone:
-          label: 'Kontaktní telefon'
+      header:
+        area:
+          content:
+            value: '<p>Vyberte (kliknutím na přepínač) jednu položku ze seznamu, ve kterém lze vyhledávat zápisem znaků v&nbsp;poli <strong>Název</strong>; volbu potvrďte tlačítkem <strong>Vybrat</strong> na konci interaktivního formuláře. Pokud hledaná položka neexistuje, vraťte se o dva kroky zpět a použijte volbu <strong>Přidat nový</strong>.</p>'
+            format: basic_html
   entity_browser_3:
     display_options:
       exposed_form:
@@ -48,5 +56,8 @@ display:
           label: Kontakt
         field_contact_email:
           label: 'Kontaktní e-mail'
-        field_contact_phone:
-          label: 'Kontaktní telefon'
+      header:
+        area:
+          content:
+            value: '<p>Zaškrtněte jednu nebo více položek ze seznamu, ve kterém lze vyhledávat zápisem znaků v&nbsp;poli <strong>Název</strong>; volbu potvrďte tlačítkem <strong>Vybrat</strong> na konci interaktivního formuláře. Pokud hledaná položka neexistuje, vraťte se o dva kroky zpět a použijte volbu <strong>Přidat nový</strong>.&nbsp;</p>'
+            format: basic_html

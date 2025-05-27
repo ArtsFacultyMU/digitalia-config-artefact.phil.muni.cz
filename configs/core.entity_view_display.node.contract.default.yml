@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.node.contract.field_contract_number
     - field.field.node.contract.field_description
+    - field.field.node.contract.field_member_of
     - field.field.node.contract.field_provider
     - field.field.node.contract.field_recipient
     - field.field.node.contract.field_signature_date
     - node.type.contract
   module:
     - datetime
+    - rest_views
     - user
 id: node.contract.default
 targetEntityType: node
@@ -21,6 +23,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 11
+    region: content
+  a3d_contract_artefacts_contract_related_objects:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
   a3d_contract_artefacts_entity_view_1:
     settings: {  }
@@ -81,6 +88,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_member_of:
+    type: entity_reference_export
+    label: inline
+    settings:
+      view_mode: default
+      link: false
+      extra: {  }
+    third_party_settings: {  }
+    weight: 12
     region: content
   field_provider:
     type: entity_reference_label
