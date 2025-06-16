@@ -1,6 +1,12 @@
 uuid: F1C25CBE-EF92-4DEC-BA2F-8F8E62109292
 langcode: en
+status: true
+dependencies: {  }
 id: kch_actor_type
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
 migration_group: kch
 label: 'Actor types'
 source:
@@ -18,3 +24,4 @@ process:
 destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: actor_type
+migration_dependencies: null

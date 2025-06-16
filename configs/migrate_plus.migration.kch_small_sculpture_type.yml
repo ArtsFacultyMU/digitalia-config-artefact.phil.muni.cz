@@ -1,6 +1,12 @@
 uuid: 3E024D8D-412D-469F-965C-5624E1BBD3B6
 langcode: en
+status: true
+dependencies: {  }
 id: kch_small_sculpture_type
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
 migration_group: kch
 label: 'Import small sculpture types'
 source:
@@ -18,3 +24,4 @@ process:
 destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: small_sculpture_type
+migration_dependencies: null

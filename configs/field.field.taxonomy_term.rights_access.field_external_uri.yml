@@ -1,0 +1,23 @@
+uuid: 9b3755c6-b505-4270-8f76-753acde40784
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_external_uri
+    - taxonomy.vocabulary.rights_access
+  module:
+    - link
+id: taxonomy_term.rights_access.field_external_uri
+field_name: field_external_uri
+entity_type: taxonomy_term
+bundle: rights_access
+label: 'External URI'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

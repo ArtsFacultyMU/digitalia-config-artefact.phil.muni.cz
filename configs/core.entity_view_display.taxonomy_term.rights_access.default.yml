@@ -3,10 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.rights_access.field_external_uri
     - field.field.taxonomy_term.rights_access.field_tax_hierarchical_depth
     - field.field.taxonomy_term.rights_access.field_tax_hierarchical_weight
     - taxonomy.vocabulary.rights_access
   module:
+    - link
     - text
 id: taxonomy_term.rights_access.default
 targetEntityType: taxonomy_term
@@ -24,6 +26,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_external_uri:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   a3d_eva_entity_group_relation_entity_view_1: true

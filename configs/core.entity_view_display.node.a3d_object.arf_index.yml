@@ -487,6 +487,7 @@ hidden:
   field_coll_rights: true
   field_coll_title: true
   field_colour_paint: true
+  field_comparison: true
   field_contract: true
   field_country: true
   field_cov_spat: true
@@ -589,7 +590,9 @@ hidden:
   field_state: true
   field_statement: true
   field_stove_tile_shape_certainty: true
+  field_surf_data_pres2: true
   field_surface_finishing: true
+  field_test_custom_field: true
   field_thermic_cracks: true
   field_tile_type: true
   field_timespan: true

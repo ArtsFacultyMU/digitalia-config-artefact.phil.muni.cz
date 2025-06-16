@@ -3,12 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.group.field_group_code
+    - field.storage.node.field_artefact_category
     - field.storage.node.field_artefact_id
     - field.storage.node.field_handle
     - field.storage.taxonomy_term.field_name
     - node.type.a3d_object
   module:
     - eva
+    - group
     - name
     - node
     - taxonomy
@@ -560,7 +563,7 @@ display:
           group_type: group
           admin_label: 'field_auth_res_data: Taxonomy term'
           plugin_id: standard
-          required: true
+          required: false
         field_auth_3d_models:
           id: field_auth_3d_models
           table: node__field_auth_3d_models
@@ -568,6 +571,46 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_auth_3d_models: Taxonomy term'
+          plugin_id: standard
+          required: false
+        group_relationship:
+          id: group_relationship
+          table: node_field_data
+          field: group_relationship
+          relationship: none
+          group_type: group
+          admin_label: 'Content group relationship'
+          entity_type: node
+          plugin_id: group_relationship_to_entity_reverse
+          required: false
+          group_relation_plugins:
+            'group_node:a3d_object': 'group_node:a3d_object'
+            'group_node:a3d_ingest_artefact': '0'
+            'group_node:a3d_ingest_object': '0'
+            'group_node:a3d_personal_contact': '0'
+            'group_node:a3d_platform_homepage': '0'
+            'group_node:a3d_workbench_test_type': '0'
+            'group_node:analysis': '0'
+            'group_node:arf_surf_data_pres': '0'
+            'group_node:article': '0'
+            'group_node:at_project': '0'
+            'group_node:contract': '0'
+            'group_node:decoration': '0'
+            'group_node:islandora_object': '0'
+            'group_node:non_plastic_inclusion': '0'
+            'group_node:page': '0'
+            'group_node:sample': '0'
+            'group_node:test_a3d': '0'
+            'group_node:traceology': '0'
+        gid:
+          id: gid
+          table: group_relationship_field_data
+          field: gid
+          relationship: group_relationship
+          group_type: group
+          admin_label: Group
+          entity_type: group_relationship
+          entity_field: gid
           plugin_id: standard
           required: false
       header: {  }
@@ -592,6 +635,134 @@ display:
     position: 1
     display_options:
       fields:
+        field_group_code:
+          id: field_group_code
+          table: group__field_group_code
+          field: field_group_code
+          relationship: gid
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: true
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: true
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        label:
+          id: label
+          table: groups_field_data
+          field: label
+          relationship: gid
+          group_type: group
+          admin_label: ''
+          entity_type: group
+          entity_field: label
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         title:
           id: title
           table: node_field_data
@@ -711,6 +882,69 @@ display:
           settings:
             link_to_entity: false
           group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_artefact_category:
+          id: field_artefact_category
+          table: node__field_artefact_category
+          field: field_artefact_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -1002,7 +1236,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "@dataset{{ '{' }}{{field_artefact_id}},\r\n<br>\r\n    author = {{ '{ ' }}{{ field_name }}{{ field_name_1 }}{{ ' }' }},\r\n<br>    \r\n    title  = {{ '{' }} {{ field_artefact_id }} {{ '}' }},\r\n<br>\r\n    url = {{ '{' }} {{ field_handle }} {{ '}' }},\r\n<br>\r\n    note = {{ '{' }} Digitalia MUNI ARTS, Faculty of Arts, Masaryk University {{ '}' }},\r\n<br>\r\n    date = \"{{ created }}\"\r\n<br>\r\n    urldate = \"{{ \"now\"|date(\"Y-m-d\") }}\"\r\n}"
+            text: "{% set arf_authors = '' %}\r\n{% if field_group_code == 'arf' %}\r\n    {% set arf_authors = 'Kaňáková, L. – Havlíková, M. – Nováčková, A. – Bíšková, J. – Nosek, V.' %}\r\n{% endif %}\r\n\r\n{% if label is empty %}\r\n    {% set platform = 'ArchaeoData' %}\r\n{% else %}\r\n    {% set platform = label %}\r\n{% endif %}\r\n\r\n@dataset{{ '{' }}{{ field_artefact_id }},\r\n<br>\r\n    author = {{ '{ ' }}{{ field_name }}{{ field_name_1 }}{{ arf_authors }}{{ ' }' }},\r\n<br>    \r\n    title  = {{ '{' }} {{ field_artefact_category }} ({{ field_artefact_id }}) {{ '}' }},\r\n<br>\r\n    url = {{ '{' }} {{ field_handle }} {{ '}' }},\r\n<br>\r\n    note = {{ '{' }} {{ platform }}, Digitalia MUNI ARTS, Faculty of Arts, Masaryk University {{ '}' }},\r\n<br>\r\n    date = \"{{ created }}\"\r\n<br>\r\n    urldate = \"{{ \"now\"|date(\"Y-m-d\") }}\"\r\n}"
             make_link: false
             path: ''
             absolute: false
@@ -1082,6 +1316,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.group.field_group_code'
+        - 'config:field.storage.node.field_artefact_category'
         - 'config:field.storage.node.field_artefact_id'
         - 'config:field.storage.node.field_handle'
         - 'config:field.storage.taxonomy_term.field_name'
@@ -1092,6 +1328,309 @@ display:
     position: 1
     display_options:
       fields:
+        field_group_code:
+          id: field_group_code
+          table: group__field_group_code
+          field: field_group_code
+          relationship: gid
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        label:
+          id: label
+          table: groups_field_data
+          field: label
+          relationship: gid
+          group_type: group
+          admin_label: ''
+          entity_type: group
+          entity_field: label
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_artefact_category:
+          id: field_artefact_category
+          table: node__field_artefact_category
+          field: field_artefact_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_artefact_id:
+          id: field_artefact_id
+          table: node__field_artefact_id
+          field: field_artefact_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_artefact_category|capitalize }} ({{ field_artefact_id }}) [3D object],'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: emphasis
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        nothing_2:
+          id: nothing_2
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: in
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: in
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
         field_name:
           id: field_name
           table: taxonomy_term__field_name
@@ -1222,6 +1761,55 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        nothing_3:
+          id: nothing_3
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'arf authors'
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{% if field_group_code == 'arf' and field_name is empty and field_name_1 is empty %}\r\nKaňáková, L. – Havlíková, M. – Nováčková, A. – Bíšková, J. – Nosek, V.\r\n{% endif %}\r\n"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
         created:
           id: created
           table: node_field_data
@@ -1236,7 +1824,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ created }},'
+            text: ', {{ created }}.'
             make_link: false
             path: ''
             absolute: false
@@ -1299,82 +1887,19 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_artefact_id:
-          id: field_artefact_id
-          table: node__field_artefact_id
-          field: field_artefact_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: '{{ field_artefact_id }},'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: emphasis
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         nothing:
           id: nothing
           table: views
           field: nothing
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: platform
           plugin_id: custom
           label: ''
           exclude: false
           alter:
             alter_text: true
-            text: 'Digitalia MUNI ARTS, Faculty of Arts, Masaryk University, dataset,'
+            text: "{% if label is empty %}\r\n    {% set platform = 'ArchaeoData' %}\r\n{% else %}\r\n    {% set platform = label %}\r\n{% endif %}\r\n{{ platform }}, Digitalia MUNI ARTS, Faculty of Arts, Masaryk University [dataset],"
             make_link: false
             path: ''
             absolute: false
@@ -1535,12 +2060,16 @@ display:
         options:
           default_field_elements: true
           inline:
+            field_artefact_category: field_artefact_category
+            field_artefact_id: field_artefact_id
+            nothing_2: nothing_2
             field_name: field_name
             field_name_1: field_name_1
+            nothing_3: nothing_3
             created: created
-            field_artefact_id: field_artefact_id
             nothing: nothing
             nothing_1: nothing_1
+            field_handle: field_handle
           separator: '&nbsp;'
           hide_empty: true
       defaults:
@@ -1572,6 +2101,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.group.field_group_code'
+        - 'config:field.storage.node.field_artefact_category'
         - 'config:field.storage.node.field_artefact_id'
         - 'config:field.storage.node.field_handle'
         - 'config:field.storage.taxonomy_term.field_name'

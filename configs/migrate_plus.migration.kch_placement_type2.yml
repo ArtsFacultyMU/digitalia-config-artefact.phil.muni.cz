@@ -24,3 +24,4 @@ process:
 destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: stove_tile_placement_type_2
+migration_dependencies: null

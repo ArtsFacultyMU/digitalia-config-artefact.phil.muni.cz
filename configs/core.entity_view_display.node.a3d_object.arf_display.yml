@@ -46,6 +46,7 @@ dependencies:
     - field.field.node.a3d_object.field_coll_rights
     - field.field.node.a3d_object.field_coll_title
     - field.field.node.a3d_object.field_colour_paint
+    - field.field.node.a3d_object.field_comparison
     - field.field.node.a3d_object.field_contract
     - field.field.node.a3d_object.field_country
     - field.field.node.a3d_object.field_cov_spat
@@ -165,8 +166,10 @@ dependencies:
     - field.field.node.a3d_object.field_subord_dataset
     - field.field.node.a3d_object.field_subord_dataset_link
     - field.field.node.a3d_object.field_surf_data_pres
+    - field.field.node.a3d_object.field_surf_data_pres2
     - field.field.node.a3d_object.field_surface_alt
     - field.field.node.a3d_object.field_surface_finishing
+    - field.field.node.a3d_object.field_test_custom_field
     - field.field.node.a3d_object.field_thermic_cracks
     - field.field.node.a3d_object.field_tile_type
     - field.field.node.a3d_object.field_timespan
@@ -192,7 +195,7 @@ third_party_settings:
       label: 'Surface data presence'
       parent_name: ''
       region: content
-      weight: 18
+      weight: 19
       format_type: fieldset
       format_settings:
         classes: ''
@@ -206,7 +209,7 @@ third_party_settings:
       label: 'Mass & structure data presence'
       parent_name: ''
       region: content
-      weight: 19
+      weight: 20
       format_type: fieldset
       format_settings:
         classes: ''
@@ -214,6 +217,38 @@ third_party_settings:
         id: ''
         label_as_html: false
         description: ''
+    group_biblatex:
+      children:
+        - a3d_eva_biblatex_biblatex
+      label: Biblatex
+      parent_name: ''
+      region: content
+      weight: 35
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
+    group_harvard_citation_style:
+      children:
+        - a3d_eva_biblatex_harvard
+      label: 'Harvard citation style'
+      parent_name: ''
+      region: content
+      weight: 37
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: false
 id: node.a3d_object.arf_display
 targetEntityType: node
 bundle: a3d_object
@@ -222,7 +257,7 @@ content:
   a3d_artefact_media_a3d_documents:
     settings: {  }
     third_party_settings: {  }
-    weight: 32
+    weight: 33
     region: content
   a3d_artefact_media_a3d_first_image:
     settings: {  }
@@ -232,22 +267,32 @@ content:
   a3d_artefact_media_a3d_images:
     settings: {  }
     third_party_settings: {  }
-    weight: 30
+    weight: 31
     region: content
   a3d_artefact_media_a3d_models:
     settings: {  }
     third_party_settings: {  }
-    weight: 29
+    weight: 30
     region: content
   a3d_artefact_media_a3d_other_files:
     settings: {  }
     third_party_settings: {  }
-    weight: 33
+    weight: 34
     region: content
   a3d_artefact_media_a3d_videos:
     settings: {  }
     third_party_settings: {  }
-    weight: 31
+    weight: 32
+    region: content
+  a3d_eva_biblatex_biblatex:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  a3d_eva_biblatex_harvard:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 37
     region: content
   a3d_eva_field_appellation_entity_view_2:
     settings: {  }
@@ -264,14 +309,14 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   field_abs_dat_source:
     type: basic_string
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 11
     region: content
   field_artefact_category:
     type: entity_reference_label
@@ -279,7 +324,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_artefact_id:
     type: string
@@ -287,7 +332,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_auth_3d_models:
     type: entity_reference_label
@@ -295,7 +340,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 28
+    weight: 29
     region: content
   field_auth_res_data:
     type: entity_reference_label
@@ -303,7 +348,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 27
+    weight: 28
     region: content
   field_deposition_cond:
     type: entity_reference_label
@@ -311,7 +356,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 13
+    weight: 14
     region: content
   field_feature_id:
     type: cshs_flexible_hierarchy
@@ -322,7 +367,7 @@ content:
       clear: '1'
       reverse: 0
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   field_feature_type:
     type: entity_reference_label
@@ -330,14 +375,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 11
+    weight: 12
     region: content
   field_finding_context_note:
     type: basic_string
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 14
+    weight: 15
     region: content
   field_g_w_practice:
     type: entity_reference_label
@@ -345,7 +390,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 25
+    weight: 26
     region: content
   field_mass_structure_data_pres:
     type: entity_reference_entity_view
@@ -361,7 +406,7 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 23
+    weight: 24
     region: content
   field_orig_state_pres:
     type: entity_reference_label
@@ -369,7 +414,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 15
+    weight: 16
     region: content
   field_proj_dedication:
     type: entity_reference_label
@@ -377,7 +422,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 26
+    weight: 27
     region: content
   field_raw_material:
     type: entity_reference_label
@@ -385,7 +430,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 16
+    weight: 17
     region: content
   field_recent_damage:
     type: entity_reference_label
@@ -393,14 +438,14 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 24
+    weight: 25
     region: content
   field_recent_damage_note:
     type: basic_string
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 20
+    weight: 21
     region: content
   field_relative_datation:
     type: entity_reference_label
@@ -408,7 +453,15 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 8
+    weight: 9
+    region: content
+  field_rights_access:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_site:
     type: entity_reference_label
@@ -416,7 +469,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_subord_dataset:
     type: entity_reference_label
@@ -424,7 +477,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 21
+    weight: 22
     region: content
   field_subord_dataset_link:
     type: link
@@ -436,7 +489,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 22
+    weight: 23
     region: content
   field_surf_data_pres:
     type: entity_reference_entity_view
@@ -453,7 +506,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 17
+    weight: 18
     region: content
   field_wgs84_geolocation:
     type: geolocation_map
@@ -1022,7 +1075,7 @@ content:
         bounceAtZoomLimits: true
       data_provider_settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_wgs84_geolocation_accuracy:
     type: entity_reference_label
@@ -1030,7 +1083,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
 hidden:
   a3d_arf_content_browse_title: true
@@ -1038,13 +1091,12 @@ hidden:
   a3d_artefact_media_entity_view_1: true
   a3d_artefact_media_entity_view_2: true
   a3d_editor_block_entity_view_1: true
-  a3d_eva_biblatex_biblatex: true
-  a3d_eva_biblatex_harvard: true
   a3d_eva_entity_group_relation_entity_view_2: true
   a3d_eva_entity_group_relation_entity_view_3: true
   a3d_eva_entity_group_relation_entity_view_4: true
   a3d_eva_entity_group_relation_entity_view_5: true
   a3d_eva_field_appellation_entity_view_1: true
+  a3d_eva_field_appellation_entity_view_3: true
   a3d_eva_parent_groups_entity_view_1: true
   a3d_eva_parent_groups_entity_view_2: true
   a3d_kch_content2_browse_title: true
@@ -1098,6 +1150,7 @@ hidden:
   field_coll_rights: true
   field_coll_title: true
   field_colour_paint: true
+  field_comparison: true
   field_contract: true
   field_country: true
   field_cov_spat: true
@@ -1184,7 +1237,6 @@ hidden:
   field_relief: true
   field_reparation_features: true
   field_retouch: true
-  field_rights_access: true
   field_rights_reproduction: true
   field_rock_fragments: true
   field_sculpture_subtype: true
@@ -1200,7 +1252,9 @@ hidden:
   field_state: true
   field_statement: true
   field_stove_tile_shape_certainty: true
+  field_surf_data_pres2: true
   field_surface_finishing: true
+  field_test_custom_field: true
   field_thermic_cracks: true
   field_tile_type: true
   field_timespan: true

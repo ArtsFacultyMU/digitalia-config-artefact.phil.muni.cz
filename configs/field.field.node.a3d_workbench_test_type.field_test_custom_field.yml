@@ -19,6 +19,7 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
+  add_more_label: ''
   field_settings:
     text_subfield:
       type: text

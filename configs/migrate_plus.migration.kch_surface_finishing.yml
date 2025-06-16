@@ -1,6 +1,12 @@
 uuid: 80A86B0C-77DC-4B76-A13B-66F0429FC738
 langcode: en
+status: true
+dependencies: {  }
 id: kch_surface_finishing
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
 migration_group: kch
 label: 'Surface finishing'
 source:
@@ -18,3 +24,4 @@ process:
 destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: surface_finishing
+migration_dependencies: null

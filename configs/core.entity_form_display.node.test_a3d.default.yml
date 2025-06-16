@@ -527,4 +527,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_mass_structure_data_pres: true
+  field_surf_data_pres: true

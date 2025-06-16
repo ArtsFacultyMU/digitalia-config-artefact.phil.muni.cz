@@ -1,0 +1,11 @@
+uuid: af43619b-d69a-4c9e-ae05-d6ed168b1114
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: nef_footer_logos
+title: 'NEF footer logos'
+content:
+  value: '<p><a href="https://gacr.cz/en" target="_blank"><img src="/themes/custom/islandora_muni/images/gacr_logo.png" data-entity-type="file" alt="GACR logo" width="110" height="46"></a></p>'
+  format: full_html

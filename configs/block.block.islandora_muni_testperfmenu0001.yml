@@ -1,6 +1,6 @@
 uuid: 0d930236-7b82-48fe-9f58-52576fc736db
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.test-perf-menu-0001
@@ -75,7 +75,7 @@ visibility:
   request_domain:
     id: request_domain
     negate: false
-    domains: archaeo3data.phil.muni.cz
+    domains: archaeodata.phil.muni.cz
   media_source_mimetype:
     id: media_source_mimetype
     negate: false

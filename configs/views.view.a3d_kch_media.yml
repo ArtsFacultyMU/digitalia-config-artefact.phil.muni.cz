@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.media.a3d_nef_compare
     - field.storage.media.field_description
     - field.storage.media.field_featured
+    - field.storage.media.field_file_size
     - field.storage.media.field_media_image
     - field.storage.media.field_mime_type
     - image.style.a3d_to_jpeg_square_thumbnail
@@ -1864,7 +1865,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{{ ((field_file_size_value)/1048576) |round(2, 'floor') }} MiB"
+            text: "{{ ((field_file_size_value__value)/1048576) |round(2, 'floor') }} MiB"
             make_link: false
             path: ''
             absolute: false
@@ -2184,7 +2185,8 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.media.field_file_size'
   media_uri_export:
     id: media_uri_export
     display_title: 'REST media URI export'

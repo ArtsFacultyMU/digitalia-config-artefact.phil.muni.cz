@@ -82,8 +82,10 @@ content:
     weight: 100
     region: content
 hidden:
+  body: true
   field_contract_number: true
   field_description: true
+  field_objects: true
   field_provider: true
   field_recipient: true
   field_signature_date: true

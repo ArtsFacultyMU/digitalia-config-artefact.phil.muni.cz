@@ -103,11 +103,6 @@ content:
     type: data_field_table_formatter
     label: hidden
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -144,6 +139,11 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 4
     region: content
@@ -179,6 +179,7 @@ hidden:
   field_field_st_placement_certain: true
   field_has_a_construction_opening: true
   field_link_to_3d_model: true
+  field_mass_structure_data_pres: true
   field_member_of: true
   field_number_of_instances: true
   field_ownership: true
@@ -187,6 +188,7 @@ hidden:
   field_rock_fragments: true
   field_st_placement_certainty: true
   field_st_placement_type1: true
+  field_surf_data_pres: true
   field_surface_data_presence: true
   field_surface_finishing: true
   field_test_geolocation: true

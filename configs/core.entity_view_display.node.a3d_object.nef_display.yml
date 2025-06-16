@@ -46,6 +46,7 @@ dependencies:
     - field.field.node.a3d_object.field_coll_rights
     - field.field.node.a3d_object.field_coll_title
     - field.field.node.a3d_object.field_colour_paint
+    - field.field.node.a3d_object.field_comparison
     - field.field.node.a3d_object.field_contract
     - field.field.node.a3d_object.field_country
     - field.field.node.a3d_object.field_cov_spat
@@ -165,8 +166,10 @@ dependencies:
     - field.field.node.a3d_object.field_subord_dataset
     - field.field.node.a3d_object.field_subord_dataset_link
     - field.field.node.a3d_object.field_surf_data_pres
+    - field.field.node.a3d_object.field_surf_data_pres2
     - field.field.node.a3d_object.field_surface_alt
     - field.field.node.a3d_object.field_surface_finishing
+    - field.field.node.a3d_object.field_test_custom_field
     - field.field.node.a3d_object.field_thermic_cracks
     - field.field.node.a3d_object.field_tile_type
     - field.field.node.a3d_object.field_timespan
@@ -179,6 +182,7 @@ dependencies:
     - filter.format.plain_text
     - node.type.a3d_object
   module:
+    - cshs
     - datafield
     - field_group
     - geocoder_field
@@ -193,7 +197,7 @@ third_party_settings:
       label: ID
       parent_name: ''
       region: content
-      weight: 4
+      weight: 6
       format_type: fieldset
       format_settings:
         classes: 'fieldset-no-border fieldset-no-legend'
@@ -207,7 +211,7 @@ third_party_settings:
       label: Map
       parent_name: ''
       region: content
-      weight: 5
+      weight: 7
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -228,7 +232,7 @@ third_party_settings:
       label: Location
       parent_name: ''
       region: content
-      weight: 6
+      weight: 8
       format_type: fieldset
       format_settings:
         classes: 'fieldset-no-border fieldset-no-legend'
@@ -245,7 +249,7 @@ third_party_settings:
       label: Posture
       parent_name: ''
       region: content
-      weight: 7
+      weight: 9
       format_type: fieldset
       format_settings:
         classes: 'fieldset-no-border fieldset-no-legend'
@@ -264,7 +268,7 @@ third_party_settings:
       label: 3D
       parent_name: ''
       region: content
-      weight: 8
+      weight: 10
       format_type: fieldset
       format_settings:
         classes: 'fieldset-no-border fieldset-no-legend'
@@ -280,7 +284,7 @@ third_party_settings:
       label: Fracture
       parent_name: ''
       region: content
-      weight: 9
+      weight: 11
       format_type: fieldset
       format_settings:
         classes: 'fieldset-no-border fieldset-no-legend'
@@ -297,7 +301,7 @@ third_party_settings:
       label: Colour
       parent_name: ''
       region: content
-      weight: 10
+      weight: 12
       format_type: fieldset
       format_settings:
         classes: 'fieldset-no-border fieldset-no-legend'
@@ -313,7 +317,7 @@ third_party_settings:
       label: Analysis
       parent_name: ''
       region: content
-      weight: 11
+      weight: 13
       format_type: fieldset
       format_settings:
         classes: 'fieldset-no-border fieldset-no-legend'
@@ -329,7 +333,7 @@ third_party_settings:
       label: 'Recent damage'
       parent_name: ''
       region: content
-      weight: 12
+      weight: 14
       format_type: fieldset
       format_settings:
         classes: 'fieldset-no-border fieldset-no-legend'
@@ -344,7 +348,7 @@ third_party_settings:
       label: Authors
       parent_name: ''
       region: content
-      weight: 13
+      weight: 15
       format_type: fieldset
       format_settings:
         classes: 'fieldset-no-border fieldset-no-legend'
@@ -353,12 +357,11 @@ third_party_settings:
         label_as_html: false
         description: ''
     group_metadat_download:
-      children:
-        - a3d_eva_handle_entity_view_1
+      children: {  }
       label: 'Metadata download'
       parent_name: ''
       region: content
-      weight: 14
+      weight: 16
       format_type: fieldset
       format_settings:
         classes: 'fieldset-no-border fieldset-no-legend'
@@ -410,12 +413,12 @@ content:
   a3d_artefact_media_a3d_images:
     settings: {  }
     third_party_settings: {  }
-    weight: 16
+    weight: 18
     region: content
   a3d_artefact_media_a3d_models:
     settings: {  }
     third_party_settings: {  }
-    weight: 15
+    weight: 17
     region: content
   a3d_artefact_media_entity_view_2:
     settings: {  }
@@ -432,7 +435,7 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
-  a3d_eva_field_appellation_entity_view_2:
+  a3d_eva_field_appellation_entity_view_3:
     settings: {  }
     third_party_settings: {  }
     weight: 0
@@ -440,7 +443,7 @@ content:
   a3d_eva_handle_entity_view_1:
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   field_3d_shaping:
     type: basic_string
@@ -489,18 +492,22 @@ content:
     weight: 6
     region: content
   field_auth_3d_models:
-    type: entity_reference_label
+    type: cshs_full_hierarchy
     label: inline
     settings:
-      link: true
+      linked: false
+      reverse: false
+      separator: ' » '
     third_party_settings: {  }
     weight: 18
     region: content
   field_auth_res_data:
-    type: entity_reference_label
+    type: cshs_full_hierarchy
     label: inline
     settings:
-      link: true
+      linked: false
+      reverse: false
+      separator: ' » '
     third_party_settings: {  }
     weight: 17
     region: content
@@ -626,10 +633,12 @@ content:
     weight: 17
     region: content
   field_pigment:
-    type: entity_reference_label
+    type: cshs_full_hierarchy
     label: inline
     settings:
-      link: true
+      linked: false
+      reverse: false
+      separator: ' » '
     third_party_settings: {  }
     weight: 19
     region: content
@@ -666,10 +675,12 @@ content:
     weight: 25
     region: content
   field_recent_damage:
-    type: entity_reference_label
+    type: cshs_full_hierarchy
     label: inline
     settings:
-      link: true
+      linked: false
+      reverse: false
+      separator: ' » '
     third_party_settings: {  }
     weight: 14
     region: content
@@ -683,10 +694,12 @@ content:
     weight: 15
     region: content
   field_recent_damage_type_struct:
-    type: entity_reference_label
+    type: cshs_full_hierarchy
     label: inline
     settings:
-      link: true
+      linked: false
+      reverse: false
+      separator: ' » '
     third_party_settings: {  }
     weight: 16
     region: content
@@ -697,6 +710,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 12
+    region: content
+  field_rights_access:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_site:
     type: entity_reference_label
@@ -1310,6 +1331,7 @@ hidden:
   a3d_eva_entity_group_relation_entity_view_4: true
   a3d_eva_entity_group_relation_entity_view_5: true
   a3d_eva_field_appellation_entity_view_1: true
+  a3d_eva_field_appellation_entity_view_2: true
   a3d_eva_parent_groups_entity_view_1: true
   a3d_eva_parent_groups_entity_view_2: true
   a3d_kch_content2_browse_title: true
@@ -1361,6 +1383,7 @@ hidden:
   field_coll_rights: true
   field_coll_title: true
   field_colour_paint: true
+  field_comparison: true
   field_contract: true
   field_country: true
   field_cov_spat: true
@@ -1440,7 +1463,6 @@ hidden:
   field_relief: true
   field_reparation_features: true
   field_retouch: true
-  field_rights_access: true
   field_rights_reproduction: true
   field_rock_fragments: true
   field_sculpture_subtype: true
@@ -1459,8 +1481,10 @@ hidden:
   field_subord_dataset: true
   field_subord_dataset_link: true
   field_surf_data_pres: true
+  field_surf_data_pres2: true
   field_surface_alt: true
   field_surface_finishing: true
+  field_test_custom_field: true
   field_tile_type: true
   field_timespan: true
   field_tip_fracture: true

@@ -1,6 +1,6 @@
 uuid: 3fa6bae2-c735-4a02-9af0-c09429ad4f30
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.citations
@@ -46,6 +46,7 @@ dependencies:
     - field.field.node.a3d_object.field_coll_rights
     - field.field.node.a3d_object.field_coll_title
     - field.field.node.a3d_object.field_colour_paint
+    - field.field.node.a3d_object.field_comparison
     - field.field.node.a3d_object.field_contract
     - field.field.node.a3d_object.field_country
     - field.field.node.a3d_object.field_cov_spat
@@ -165,8 +166,10 @@ dependencies:
     - field.field.node.a3d_object.field_subord_dataset
     - field.field.node.a3d_object.field_subord_dataset_link
     - field.field.node.a3d_object.field_surf_data_pres
+    - field.field.node.a3d_object.field_surf_data_pres2
     - field.field.node.a3d_object.field_surface_alt
     - field.field.node.a3d_object.field_surface_finishing
+    - field.field.node.a3d_object.field_test_custom_field
     - field.field.node.a3d_object.field_thermic_cracks
     - field.field.node.a3d_object.field_tile_type
     - field.field.node.a3d_object.field_timespan
@@ -183,12 +186,11 @@ dependencies:
 third_party_settings:
   field_group:
     group_biblatex:
-      children:
-        - a3d_eva_biblatex_biblatex
+      children: {  }
       label: Biblatex
       parent_name: ''
-      region: content
-      weight: 0
+      region: hidden
+      weight: 210
       format_type: details
       format_settings:
         classes: ''
@@ -198,12 +200,11 @@ third_party_settings:
         description: ''
         required_fields: false
     group_harvard_citation_style:
-      children:
-        - a3d_eva_biblatex_harvard
+      children: {  }
       label: 'Harvard citation style'
       parent_name: ''
-      region: content
-      weight: 1
+      region: hidden
+      weight: 211
       format_type: details
       format_settings:
         classes: ''
@@ -217,20 +218,10 @@ targetEntityType: node
 bundle: a3d_object
 mode: citations
 content:
-  a3d_editor_block_entity_view_1:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  a3d_eva_biblatex_biblatex:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
   a3d_eva_biblatex_harvard:
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 0
     region: content
 hidden:
   a3d_arf_content_browse_title: true
@@ -244,6 +235,8 @@ hidden:
   a3d_artefact_media_entity_view_1: true
   a3d_artefact_media_entity_view_2: true
   a3d_artefact_media_entity_view_3: true
+  a3d_editor_block_entity_view_1: true
+  a3d_eva_biblatex_biblatex: true
   a3d_eva_entity_group_relation_entity_view_2: true
   a3d_eva_entity_group_relation_entity_view_3: true
   a3d_eva_entity_group_relation_entity_view_4: true
@@ -310,6 +303,7 @@ hidden:
   field_coll_rights: true
   field_coll_title: true
   field_colour_paint: true
+  field_comparison: true
   field_contract: true
   field_country: true
   field_cov_spat: true
@@ -429,8 +423,10 @@ hidden:
   field_subord_dataset: true
   field_subord_dataset_link: true
   field_surf_data_pres: true
+  field_surf_data_pres2: true
   field_surface_alt: true
   field_surface_finishing: true
+  field_test_custom_field: true
   field_thermic_cracks: true
   field_tile_type: true
   field_timespan: true

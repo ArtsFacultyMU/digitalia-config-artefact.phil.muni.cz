@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_rights_access
     - node.type.a3d_object
     - taxonomy.vocabulary.rights_access
+  content:
+    - 'taxonomy_term:rights_access:8d29bb91-afc3-41d5-9bca-fbaa230d301c'
 id: node.a3d_object.field_rights_access
 field_name: field_rights_access
 entity_type: node
@@ -14,10 +16,12 @@ label: 'Access rights'
 description: ''
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: 8d29bb91-afc3-41d5-9bca-fbaa230d301c
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       rights_access: rights_access

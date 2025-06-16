@@ -98,6 +98,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_contract: true
   field_description_a3d: true
   field_destruction_analysis: true
   field_general_note: true

@@ -1,6 +1,12 @@
 uuid: 53DBAC64-E85F-4C03-9B75-30721B45291B
 langcode: en
+status: true
+dependencies: {  }
 id: kch_actor
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
 migration_group: kch
 label: 'Import actors (institutions)'
 source:

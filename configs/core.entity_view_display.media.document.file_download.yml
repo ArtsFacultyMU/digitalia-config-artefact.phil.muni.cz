@@ -37,6 +37,7 @@ content:
     region: content
 hidden:
   created: true
+  field_description: true
   field_file_size: true
   field_media_of: true
   field_media_use: true

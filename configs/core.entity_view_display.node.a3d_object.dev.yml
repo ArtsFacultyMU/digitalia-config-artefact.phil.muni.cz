@@ -1927,6 +1927,7 @@ hidden:
   field_circle: true
   field_city: true
   field_city_code: true
+  field_comparison: true
   field_fhp_type: true
   field_finding_context_subtype: true
   field_finding_context_type: true
@@ -1947,6 +1948,8 @@ hidden:
   field_site: true
   field_state: true
   field_subord_dataset_link: true
+  field_surf_data_pres2: true
+  field_test_custom_field: true
   langcode: true
   links: true
   search_api_excerpt: true

@@ -1,6 +1,12 @@
 uuid: 6B866F68-275C-4576-B6C8-FBC664F9AE17
 langcode: en
+status: true
+dependencies: {  }
 id: kch_placement_type3
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
 migration_group: kch
 label: 'stove tile placement type 3'
 source:
@@ -18,3 +24,4 @@ process:
 destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: stove_tile_placement_type_3
+migration_dependencies: null

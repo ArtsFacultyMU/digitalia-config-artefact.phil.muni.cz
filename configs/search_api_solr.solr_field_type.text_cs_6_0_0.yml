@@ -27,16 +27,16 @@ field_type:
       filters:
         -
           class: solr.WordDelimiterFilterFactory
-          protected: protwords_cs.txt
-          generateWordParts: 1
+          catenateNumbers: 1
           generateNumberParts: 1
+          protected: protwords_cs.txt
           splitOnCaseChange: 0
           splitOnNumerics: 1
-          catenateWords: 1
-          catenateNumbers: 1
-          catenateAll: 0
-          stemEnglishPossessive: 0
+          generateWordParts: 1
           preserveOriginal: 1
+          catenateAll: 0
+          catenateWords: 1
+          stemEnglishPossessive: 0
         -
           class: solr.LengthFilterFactory
           min: 2
@@ -78,9 +78,9 @@ field_type:
           class: solr.LowerCaseFilterFactory
         -
           class: solr.SynonymFilterFactory
+          ignoreCase: true
           synonyms: synonyms_cs.txt
           expand: true
-          ignoreCase: true
         -
           class: solr.StopFilterFactory
           ignoreCase: true
@@ -106,16 +106,16 @@ unstemmed_field_type:
       filters:
         -
           class: solr.WordDelimiterFilterFactory
-          protected: protwords_cs.txt
-          generateWordParts: 1
+          catenateNumbers: 1
           generateNumberParts: 1
+          protected: protwords_cs.txt
           splitOnCaseChange: 0
           splitOnNumerics: 1
-          catenateWords: 1
-          catenateNumbers: 1
-          catenateAll: 0
-          stemEnglishPossessive: 0
+          generateWordParts: 1
           preserveOriginal: 1
+          catenateAll: 0
+          catenateWords: 1
+          stemEnglishPossessive: 0
         -
           class: solr.LengthFilterFactory
           min: 2
@@ -155,9 +155,9 @@ unstemmed_field_type:
           class: solr.LowerCaseFilterFactory
         -
           class: solr.SynonymFilterFactory
+          ignoreCase: true
           synonyms: synonyms_cs.txt
           expand: true
-          ignoreCase: true
         -
           class: solr.StopFilterFactory
           ignoreCase: true
@@ -390,8 +390,6 @@ text_files:
     pro
     je
     na
-  synonyms: |
-    drupal, durpal
   protwords: ''
   accents: |
     # À => A
@@ -593,3 +591,5 @@ text_files:
     "\u014D" => "o"
     # ū => u
     "\u016B" => "u"
+  synonyms: |
+    drupal, durpal

@@ -45,6 +45,11 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
+  a3d_meta_content_a3d_homepage:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   a3d_nef_content_nef_homepage:
     settings: {  }
     third_party_settings: {  }

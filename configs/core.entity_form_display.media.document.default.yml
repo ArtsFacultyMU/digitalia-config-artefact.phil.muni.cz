@@ -102,6 +102,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_description: true
   field_file_size: true
   field_mime_type: true
   langcode: true

@@ -75,8 +75,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  body: true
   created: true
   field_member_of: true
+  field_objects: true
   path: true
   promote: true
   status: true

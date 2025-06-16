@@ -146,6 +146,7 @@ hidden:
   field_geolocation: true
   field_has_a_construction_opening: true
   field_link_to_3d_model: true
+  field_mass_structure_data_pres: true
   field_number_of_instances: true
   field_ownership: true
   field_porosity: true
@@ -153,6 +154,7 @@ hidden:
   field_rock_fragments: true
   field_st_placement_certainty: true
   field_st_placement_type1: true
+  field_surf_data_pres: true
   field_surface_data_presence: true
   field_surface_finishing: true
   field_test_geolocation: true

@@ -1,0 +1,29 @@
+uuid: 4091a212-8ecd-46e9-8252-f9d6a9f31f3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contract
+    - node.type.a3d_ingest_artefact
+    - node.type.contract
+id: node.a3d_ingest_artefact.field_contract
+field_name: field_contract
+entity_type: node
+bundle: a3d_ingest_artefact
+label: Contract
+description: 'Field visible only to authorized users'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished
+  handler_settings:
+    target_bundles:
+      contract: contract
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

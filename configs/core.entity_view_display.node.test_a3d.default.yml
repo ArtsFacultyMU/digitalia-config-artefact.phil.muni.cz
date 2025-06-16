@@ -131,11 +131,6 @@ content:
     type: data_field_table_formatter
     label: above
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -172,6 +167,11 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 28
     region: content
@@ -260,11 +260,6 @@ content:
     type: data_field_table_formatter
     label: above
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -301,6 +296,11 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 33
     region: content
@@ -391,11 +391,6 @@ content:
     type: data_field_table_formatter
     label: above
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -432,6 +427,11 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 19
     region: content
@@ -489,11 +489,6 @@ content:
     type: data_field_table_formatter
     label: above
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -530,6 +525,11 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 15
     region: content
@@ -537,11 +537,6 @@ content:
     type: data_field_table_formatter
     label: above
     settings:
-      formatter_settings: {  }
-      ajax: false
-      custom_class: ''
-      line_operations: false
-      form_format_table: false
       number_column: false
       number_column_label: №
       direction: horizontal
@@ -578,6 +573,11 @@ content:
         pagination: true
         cookie: true
         show-footer: false
+      formatter_settings: {  }
+      ajax: false
+      custom_class: ''
+      line_operations: false
+      form_format_table: false
     third_party_settings: {  }
     weight: 25
     region: content
@@ -628,6 +628,8 @@ hidden:
   field_comparison: true
   field_feature_id: true
   field_geolocation: true
+  field_mass_structure_data_pres: true
   field_member_of: true
+  field_surf_data_pres: true
   langcode: true
   search_api_excerpt: true

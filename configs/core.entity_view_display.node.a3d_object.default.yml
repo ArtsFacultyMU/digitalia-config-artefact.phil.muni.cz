@@ -45,6 +45,7 @@ dependencies:
     - field.field.node.a3d_object.field_coll_rights
     - field.field.node.a3d_object.field_coll_title
     - field.field.node.a3d_object.field_colour_paint
+    - field.field.node.a3d_object.field_comparison
     - field.field.node.a3d_object.field_contract
     - field.field.node.a3d_object.field_country
     - field.field.node.a3d_object.field_cov_spat
@@ -164,8 +165,10 @@ dependencies:
     - field.field.node.a3d_object.field_subord_dataset
     - field.field.node.a3d_object.field_subord_dataset_link
     - field.field.node.a3d_object.field_surf_data_pres
+    - field.field.node.a3d_object.field_surf_data_pres2
     - field.field.node.a3d_object.field_surface_alt
     - field.field.node.a3d_object.field_surface_finishing
+    - field.field.node.a3d_object.field_test_custom_field
     - field.field.node.a3d_object.field_thermic_cracks
     - field.field.node.a3d_object.field_tile_type
     - field.field.node.a3d_object.field_timespan
@@ -230,10 +233,10 @@ third_party_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        open: false
-        required_fields: false
+        label_as_html: false
+        open: true
+        description: ''
         weight: 0
-        effect: bounceslide
     group_collection:
       children:
         - field_coll_id
@@ -269,7 +272,6 @@ third_party_settings:
         - field_discovery_date
         - field_discoverer
         - field_alternative_id
-        - field_handle
         - field_record_source
         - field_general_type
         - field_artefact_id_type
@@ -284,6 +286,7 @@ third_party_settings:
         - field_finding_context_sec
         - field_finding_context_note
         - field_material_inclusions
+        - field_handle
       label: Identification
       parent_name: ''
       region: content
@@ -1315,14 +1318,6 @@ content:
     third_party_settings: {  }
     weight: -18
     region: content
-  field_handle:
-    type: string
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 12
-    region: content
   field_has_a_construction_opening:
     type: boolean
     label: inline
@@ -2232,6 +2227,7 @@ hidden:
   a3d_eva_entity_group_relation_entity_view_3: true
   a3d_eva_entity_group_relation_entity_view_5: true
   a3d_eva_field_appellation_entity_view_1: true
+  a3d_eva_field_appellation_entity_view_3: true
   a3d_eva_handle_entity_view_1: true
   a3d_kch_content2_browse_title: true
   a3d_kch_content2_kch_analysis_to_object: true
@@ -2251,13 +2247,17 @@ hidden:
   field_binder_type: true
   field_city: true
   field_city_code: true
+  field_comparison: true
   field_firing: true
   field_gb_scale: true
   field_grain_type: true
+  field_handle: true
   field_holder_type: true
   field_microstructure: true
   field_mineral_fragments: true
   field_state: true
+  field_surf_data_pres2: true
+  field_test_custom_field: true
   langcode: true
   links: true
   search_api_excerpt: true

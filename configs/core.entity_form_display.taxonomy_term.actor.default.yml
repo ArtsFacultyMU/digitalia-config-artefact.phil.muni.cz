@@ -119,5 +119,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_contact_phone: true
   field_tax_hierarchical_depth: true
   field_tax_hierarchical_weight: true

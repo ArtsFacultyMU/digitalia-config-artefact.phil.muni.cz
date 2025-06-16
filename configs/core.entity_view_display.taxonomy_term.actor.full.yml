@@ -119,6 +119,7 @@ hidden:
   field_coll_contacts: true
   field_coll_contacts_alt: true
   field_coll_contacts_phone: true
+  field_contact_phone: true
   field_tax_hierarchical_depth: true
   field_tax_hierarchical_weight: true
   langcode: true

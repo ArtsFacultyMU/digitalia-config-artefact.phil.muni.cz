@@ -1801,7 +1801,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{{ ((field_file_size_value)/1073741274) |round(2, 'floor') }} GiB"
+            text: "{{ ((field_file_size_value__value)/1073741274) |round(2, 'floor') }} GiB"
             make_link: false
             path: ''
             absolute: false
