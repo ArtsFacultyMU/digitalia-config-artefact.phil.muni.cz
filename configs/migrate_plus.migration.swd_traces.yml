@@ -1,0 +1,99 @@
+uuid: 82F12155-E0B5-46D9-A21E-C3AE811B8DC6
+langcode: en
+status: true
+id: swd_traces
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: swd
+label: 'SWD traces'
+source:
+  plugin: csv
+  path: /data/platform_data/swd/traces.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - id
+process:
+  uid:
+    -
+      plugin: default_value
+      default_value: havlikova
+    -
+      plugin: entity_lookup
+      entity_type: user
+      value_key: name
+  title: artefact_id
+  field_conservation:
+    -
+      plugin: str_replace
+      source: conservation
+      search: 'TRUE'
+      replace: '1'
+    -
+      plugin: str_replace
+      search: 'FALSE'
+      replace: '0'
+  field_description_a3d: description
+  field_trace_extent:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: trace_extent
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: dimensions_extent
+  field_is_recent:
+    -
+      plugin: str_replace
+      source: is_recent
+      search: 'TRUE'
+      replace: '1'
+    -
+      plugin: str_replace
+      search: 'FALSE'
+      replace: '0'
+  field_location: location
+  field_general_note: note
+  field_segment:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: segment
+    -
+      plugin: explode
+      delimiter: '-'
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: sword_segment
+  field_surface_properties:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: surface
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: surface_properties
+  field_trace_type:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: trace_type
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: trace_type
+destination:
+  plugin: 'entity:node'
+  default_bundle: traceology

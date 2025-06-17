@@ -126,7 +126,7 @@ content:
     region: content
   field_sampled_from:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -134,7 +134,7 @@ content:
     region: content
   field_sampling_type:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }

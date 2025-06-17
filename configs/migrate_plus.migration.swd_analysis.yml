@@ -1,0 +1,105 @@
+uuid: 97F90484-80F2-476C-A700-73D1B3B2EDBC
+langcode: en
+status: true
+id: swd_analysis
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: swd
+label: 'SWD analyses'
+source:
+  plugin: csv
+  path: /data/platform_data/swd/analyses_samples.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - id
+process:
+  uid:
+    -
+      plugin: default_value
+      default_value: havlikova
+    -
+      plugin: entity_lookup
+      entity_type: user
+      value_key: name
+  title: field_artefact_id
+  field_analysis_of:
+    plugin: migration_lookup
+    migration: swd_sample
+    source: sample_id
+  field_analysis_type:
+    -
+      plugin: entity_generate
+      source: field_analysis_type
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: analysis_type
+  list_elements:
+    -
+      source: elements
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: explode
+      delimiter: ' | '
+    -
+      plugin: str_to_assoc
+      key: element
+  field_elements:
+    -
+      plugin: sub_process
+      source: '@list_elements'
+      process:
+        exploded:
+          plugin: explode
+          delimiter: ':'
+          source: elements
+        element:
+          -
+            plugin: extract
+            index:
+              - 0
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: entity_generate
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: element
+        value:
+          -
+            plugin: extract
+            index:
+              - 1
+            source: '@exploded'
+  field_traceology:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_traceology
+    -
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: migration_lookup
+      migration: swd_traceology
+  field_instrument:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: instrument
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: instrument
+  field_note_on_method: note
+destination:
+  plugin: 'entity:node'
+  default_bundle: analysis

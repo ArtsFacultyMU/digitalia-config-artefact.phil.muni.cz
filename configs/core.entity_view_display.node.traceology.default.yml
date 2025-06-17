@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.traceology.field_location
     - field.field.node.traceology.field_segment
     - field.field.node.traceology.field_surface_properties
+    - field.field.node.traceology.field_trace_extent
     - field.field.node.traceology.field_trace_type
     - node.type.traceology
   module:
@@ -61,7 +62,7 @@ content:
     region: content
   field_conservation:
     type: boolean
-    label: above
+    label: inline
     settings:
       format: default
       format_custom_false: ''
@@ -85,7 +86,7 @@ content:
     region: content
   field_is_recent:
     type: boolean
-    label: above
+    label: inline
     settings:
       format: default
       format_custom_false: ''
@@ -95,14 +96,14 @@ content:
     region: content
   field_location:
     type: basic_string
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 104
     region: content
   field_segment:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -110,15 +111,23 @@ content:
     region: content
   field_surface_properties:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 106
     region: content
+  field_trace_extent:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
   field_trace_type:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }

@@ -1,0 +1,60 @@
+uuid: CAD819C9-0A26-4604-B36D-8BD6BD708A2A
+langcode: en
+status: true
+id: swd_sample
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: swd
+label: 'Import samples'
+source:
+  plugin: csv
+  path: /data/platform_data/swd/analyses_sample.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - sample_id
+process:
+  uid:
+    -
+      plugin: default_value
+      default_value: havlikova
+    -
+      plugin: entity_lookup
+      entity_type: user
+      value_key: name
+  title: sample
+  field_sample_id: sample_id
+  field_object_reference:
+    plugin: migration_lookup
+    migration: swd_node_a3d_object
+    source: artefact_id
+  field_sampling_type:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_sampling_type
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: sampling_type
+  field_sampled_from:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: extent
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: dimensions_extent
+  status:
+    -
+      plugin: default_value
+      default_value: 1
+destination:
+  plugin: 'entity:node'
+  default_bundle: sample

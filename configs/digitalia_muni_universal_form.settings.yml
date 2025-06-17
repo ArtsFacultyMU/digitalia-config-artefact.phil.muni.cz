@@ -6,7 +6,6 @@ a3d_object:
   enabled: 1
   groups:
     nef:
-      field_rights_access: 1
       field_2d_asymmetry: 0
       field_3d_shaping: 1
       field_3d_shaping_struct: 1
@@ -49,7 +48,6 @@ a3d_object:
       field_coll_rights: 0
       field_coll_title: 0
       field_colour_paint: 1
-      field_comparison: 0
       field_contract: 0
       field_country: 0
       field_cov_spat: 0
@@ -149,6 +147,7 @@ a3d_object:
       field_relief: 0
       field_reparation_features: 0
       field_retouch: 0
+      field_rights_access: 1
       field_rights_reproduction: 0
       field_rock_fragments: 0
       field_sculpture_subtype: 0
@@ -168,10 +167,8 @@ a3d_object:
       field_subord_dataset: 0
       field_subord_dataset_link: 0
       field_surf_data_pres: 0
-      field_surf_data_pres2: 0
       field_surface_alt: 0
       field_surface_finishing: 0
-      field_test_custom_field: 0
       field_thermic_cracks: 1
       field_tile_type: 0
       field_timespan: 0
@@ -181,8 +178,180 @@ a3d_object:
       field_wgs84_geolocation: 1
       field_wgs84_geolocation_accuracy: 1
       field_wgs84_geolocation_private: 1
-    arf:
+    swd:
+      field_2d_asymmetry: 0
+      field_3d_shaping: 0
+      field_3d_shaping_struct: 0
+      field_3d_traces: 0
+      field_3d_traces_struct: 0
+      field_a_asymmetry: 0
+      field_abs_dat_range: 0
+      field_abs_dat_range_cs: 0
+      field_abs_dat_source: 0
+      field_acquisition_type: 0
+      field_ais_cr: 0
+      field_alteration: 0
+      field_alternative_id: 0
+      field_alternative_ids: 1
+      field_aquamanile_subtype: 0
+      field_aquamanile_type: 0
+      field_archaeological_site: 1
+      field_artefact_category: 1
+      field_artefact_class: 0
+      field_artefact_id: 1
+      field_artefact_id_type: 1
+      field_artefact_subclass: 0
+      field_assess_cond_date: 0
+      field_auth_3d_models: 1
+      field_auth_res_data: 1
+      field_b_asymmetry: 0
+      field_ballistic_profile: 0
+      field_base_curve: 0
+      field_binder_type: 0
+      field_blank_orientation: 0
+      field_circle: 0
+      field_city: 0
+      field_city_code: 0
+      field_clay_colour: 0
+      field_coll_contacts: 0
+      field_coll_id: 0
+      field_coll_keyword: 0
+      field_coll_lang: 0
+      field_coll_org: 0
+      field_coll_rights: 0
+      field_coll_title: 0
+      field_colour_paint: 0
+      field_contract: 0
+      field_country: 0
+      field_cov_spat: 0
+      field_cov_temp: 0
+      field_creation: 0
+      field_culture: 0
+      field_current_location: 0
+      field_decoration: 1
+      field_deposition_cond: 0
+      field_description_a3d: 1
+      field_discoverer: 0
+      field_discovery_date: 0
+      field_doc_creator: 0
+      field_doc_date: 0
+      field_edging: 0
+      field_feature_id: 0
+      field_feature_type: 0
+      field_fhp_type: 0
+      field_field_description_a3d_cs: 0
+      field_finding_context_loc: 0
+      field_finding_context_note: 1
+      field_finding_context_pos: 0
+      field_finding_context_sec: 0
+      field_finding_context_subtype: 0
+      field_finding_context_type: 1
+      field_firing: 0
+      field_fract_nature: 0
+      field_fract_preservation: 0
+      field_fract_preservation_struct: 0
+      field_g_w_practice: 0
+      field_gb_scale: 0
+      field_general_lateral_wear: 0
+      field_general_note: 1
+      field_general_type: 0
+      field_geo_site: 0
+      field_geolocation: 0
+      field_geolocation_original: 0
+      field_geolocation_original_priv: 0
+      field_glue_residues: 0
+      field_grain_type: 0
+      field_handle: 0
+      field_has_a_construction_opening: 0
+      field_has_decoration: 1
+      field_has_ricasso: 1
+      field_holder_type: 0
+      field_ledge_type: 0
+      field_legal_status: 0
+      field_licence_url: 0
+      field_link_to_3d_model: 0
+      field_literature: 0
+      field_longitudinal_profile: 0
+      field_mass_structure_data_pres: 0
+      field_material_colour: 0
+      field_material_inclusions: 0
+      field_measurements: 1
+      field_member_of: 0
+      field_met_note_cz: 0
+      field_metadata_rights: 0
+      field_micro_ct: 0
+      field_microstructure: 0
+      field_mineral_fragments: 0
+      field_mineralogy: 0
+      field_motif: 0
+      field_note_on_preservation: 1
+      field_number_of_instances: 0
+      field_number_of_preserved_parts: 1
+      field_orig_state_pres: 1
+      field_original_location: 0
+      field_ownership: 0
+      field_painting_eye: 0
+      field_painting_microscope: 0
+      field_painting_tool: 0
+      field_pigment: 0
+      field_polished_sec_petrography: 0
+      field_porosity: 0
+      field_posture: 0
+      field_preserved_parts: 0
+      field_preserved_parts_struct: 0
+      field_private_note: 1
+      field_proj_dedication: 0
+      field_proj_id: 0
+      field_provenance: 0
+      field_quality: 0
+      field_quiver_trans_bright_spots: 0
+      field_quiver_trans_lat_rounding: 0
+      field_quiver_trans_tip_rounding: 0
+      field_raw_material: 0
+      field_recent_damage: 0
+      field_recent_damage_note: 0
+      field_recent_damage_type: 0
+      field_recent_damage_type_struct: 0
+      field_record_source: 0
+      field_reg_number: 0
+      field_reineckes_chronology: 1
+      field_relations: 0
+      field_relative_datation: 1
+      field_relief: 0
+      field_reparation_features: 0
+      field_retouch: 0
       field_rights_access: 1
+      field_rights_reproduction: 0
+      field_rock_fragments: 0
+      field_sculpture_subtype: 0
+      field_sculpture_type: 0
+      field_serration: 0
+      field_site: 1
+      field_st_placement_certainty: 0
+      field_st_placement_type1: 0
+      field_st_placement_type2: 0
+      field_st_placement_type3: 0
+      field_st_shape_type1: 0
+      field_st_shape_type2: 0
+      field_standard_chronology: 1
+      field_state: 0
+      field_statement: 0
+      field_stove_tile_shape_certainty: 0
+      field_subord_dataset: 0
+      field_subord_dataset_link: 0
+      field_surf_data_pres: 0
+      field_surface_alt: 0
+      field_surface_finishing: 0
+      field_thermic_cracks: 0
+      field_tile_type: 0
+      field_timespan: 0
+      field_tip_fracture: 0
+      field_wear: 0
+      field_wgs84_accuracy_private: 0
+      field_wgs84_geolocation: 1
+      field_wgs84_geolocation_accuracy: 0
+      field_wgs84_geolocation_private: 0
+    arf:
       field_2d_asymmetry: 0
       field_3d_shaping: 0
       field_3d_shaping_struct: 0
@@ -206,8 +375,8 @@ a3d_object:
       field_artefact_id_type: 0
       field_artefact_subclass: 0
       field_assess_cond_date: 0
-      field_auth_3d_models: 1
-      field_auth_res_data: 1
+      field_auth_3d_models: 0
+      field_auth_res_data: 0
       field_b_asymmetry: 0
       field_ballistic_profile: 0
       field_base_curve: 0
@@ -225,7 +394,6 @@ a3d_object:
       field_coll_rights: 0
       field_coll_title: 0
       field_colour_paint: 0
-      field_comparison: 0
       field_contract: 1
       field_country: 0
       field_cov_spat: 0
@@ -325,6 +493,7 @@ a3d_object:
       field_relief: 0
       field_reparation_features: 0
       field_retouch: 0
+      field_rights_access: 1
       field_rights_reproduction: 0
       field_rock_fragments: 0
       field_sculpture_subtype: 0
@@ -344,10 +513,8 @@ a3d_object:
       field_subord_dataset: 1
       field_subord_dataset_link: 1
       field_surf_data_pres: 1
-      field_surf_data_pres2: 0
       field_surface_alt: 1
       field_surface_finishing: 0
-      field_test_custom_field: 0
       field_thermic_cracks: 0
       field_tile_type: 0
       field_timespan: 0
@@ -357,8 +524,180 @@ a3d_object:
       field_wgs84_geolocation: 1
       field_wgs84_geolocation_accuracy: 1
       field_wgs84_geolocation_private: 1
+    cmb:
+      field_2d_asymmetry: 0
+      field_3d_shaping: 0
+      field_3d_shaping_struct: 0
+      field_3d_traces: 0
+      field_3d_traces_struct: 0
+      field_a_asymmetry: 0
+      field_abs_dat_range: 0
+      field_abs_dat_range_cs: 0
+      field_abs_dat_source: 0
+      field_acquisition_type: 0
+      field_ais_cr: 0
+      field_alteration: 0
+      field_alternative_id: 0
+      field_alternative_ids: 0
+      field_aquamanile_subtype: 0
+      field_aquamanile_type: 0
+      field_archaeological_site: 0
+      field_artefact_category: 0
+      field_artefact_class: 0
+      field_artefact_id: 0
+      field_artefact_id_type: 0
+      field_artefact_subclass: 0
+      field_assess_cond_date: 0
+      field_auth_3d_models: 0
+      field_auth_res_data: 0
+      field_b_asymmetry: 0
+      field_ballistic_profile: 0
+      field_base_curve: 0
+      field_binder_type: 0
+      field_blank_orientation: 0
+      field_circle: 0
+      field_city: 0
+      field_city_code: 0
+      field_clay_colour: 0
+      field_coll_contacts: 0
+      field_coll_id: 0
+      field_coll_keyword: 0
+      field_coll_lang: 0
+      field_coll_org: 0
+      field_coll_rights: 0
+      field_coll_title: 0
+      field_colour_paint: 0
+      field_contract: 0
+      field_country: 0
+      field_cov_spat: 0
+      field_cov_temp: 0
+      field_creation: 0
+      field_culture: 0
+      field_current_location: 0
+      field_decoration: 0
+      field_deposition_cond: 0
+      field_description_a3d: 0
+      field_discoverer: 0
+      field_discovery_date: 0
+      field_doc_creator: 0
+      field_doc_date: 0
+      field_edging: 0
+      field_feature_id: 0
+      field_feature_type: 0
+      field_fhp_type: 0
+      field_field_description_a3d_cs: 0
+      field_finding_context_loc: 0
+      field_finding_context_note: 0
+      field_finding_context_pos: 0
+      field_finding_context_sec: 0
+      field_finding_context_subtype: 0
+      field_finding_context_type: 0
+      field_firing: 0
+      field_fract_nature: 0
+      field_fract_preservation: 0
+      field_fract_preservation_struct: 0
+      field_g_w_practice: 0
+      field_gb_scale: 0
+      field_general_lateral_wear: 0
+      field_general_note: 0
+      field_general_type: 0
+      field_geo_site: 0
+      field_geolocation: 0
+      field_geolocation_original: 0
+      field_geolocation_original_priv: 0
+      field_glue_residues: 0
+      field_grain_type: 0
+      field_handle: 0
+      field_has_a_construction_opening: 0
+      field_has_decoration: 0
+      field_has_ricasso: 0
+      field_holder_type: 0
+      field_ledge_type: 0
+      field_legal_status: 0
+      field_licence_url: 0
+      field_link_to_3d_model: 0
+      field_literature: 0
+      field_longitudinal_profile: 0
+      field_mass_structure_data_pres: 0
+      field_material_colour: 0
+      field_material_inclusions: 0
+      field_measurements: 0
+      field_member_of: 0
+      field_met_note_cz: 0
+      field_metadata_rights: 0
+      field_micro_ct: 0
+      field_microstructure: 0
+      field_mineral_fragments: 0
+      field_mineralogy: 0
+      field_motif: 0
+      field_note_on_preservation: 0
+      field_number_of_instances: 0
+      field_number_of_preserved_parts: 0
+      field_orig_state_pres: 0
+      field_original_location: 0
+      field_ownership: 0
+      field_painting_eye: 0
+      field_painting_microscope: 0
+      field_painting_tool: 0
+      field_pigment: 0
+      field_polished_sec_petrography: 0
+      field_porosity: 0
+      field_posture: 0
+      field_preserved_parts: 0
+      field_preserved_parts_struct: 0
+      field_private_note: 0
+      field_proj_dedication: 0
+      field_proj_id: 0
+      field_provenance: 0
+      field_quality: 0
+      field_quiver_trans_bright_spots: 0
+      field_quiver_trans_lat_rounding: 0
+      field_quiver_trans_tip_rounding: 0
+      field_raw_material: 0
+      field_recent_damage: 0
+      field_recent_damage_note: 0
+      field_recent_damage_type: 0
+      field_recent_damage_type_struct: 0
+      field_record_source: 0
+      field_reg_number: 0
+      field_reineckes_chronology: 0
+      field_relations: 0
+      field_relative_datation: 0
+      field_relief: 0
+      field_reparation_features: 0
+      field_retouch: 0
+      field_rights_access: 0
+      field_rights_reproduction: 0
+      field_rock_fragments: 0
+      field_sculpture_subtype: 0
+      field_sculpture_type: 0
+      field_serration: 0
+      field_site: 0
+      field_st_placement_certainty: 0
+      field_st_placement_type1: 0
+      field_st_placement_type2: 0
+      field_st_placement_type3: 0
+      field_st_shape_type1: 0
+      field_st_shape_type2: 0
+      field_standard_chronology: 0
+      field_state: 0
+      field_statement: 0
+      field_stove_tile_shape_certainty: 0
+      field_subord_dataset: 0
+      field_subord_dataset_link: 0
+      field_surf_data_pres: 0
+      field_surface_alt: 0
+      field_surface_finishing: 0
+      field_thermic_cracks: 0
+      field_tile_type: 0
+      field_timespan: 0
+      field_tip_fracture: 0
+      field_wear: 0
+      field_wgs84_accuracy_private: 0
+      field_wgs84_geolocation: 0
+      field_wgs84_geolocation_accuracy: 0
+      field_wgs84_geolocation_private: 0
     kch:
-      field_rights_access: 1
       field_2d_asymmetry: 0
       field_3d_shaping: 0
       field_3d_shaping_struct: 0
@@ -401,7 +740,6 @@ a3d_object:
       field_coll_rights: 0
       field_coll_title: 0
       field_colour_paint: 0
-      field_comparison: 0
       field_contract: 1
       field_country: 0
       field_cov_spat: 0
@@ -501,6 +839,7 @@ a3d_object:
       field_relief: 1
       field_reparation_features: 0
       field_retouch: 0
+      field_rights_access: 1
       field_rights_reproduction: 0
       field_rock_fragments: 0
       field_sculpture_subtype: 1
@@ -520,10 +859,8 @@ a3d_object:
       field_subord_dataset: 0
       field_subord_dataset_link: 0
       field_surf_data_pres: 0
-      field_surf_data_pres2: 0
       field_surface_alt: 0
       field_surface_finishing: 1
-      field_test_custom_field: 0
       field_thermic_cracks: 0
       field_tile_type: 1
       field_timespan: 1
@@ -533,16 +870,374 @@ a3d_object:
       field_wgs84_geolocation: 1
       field_wgs84_geolocation_accuracy: 1
       field_wgs84_geolocation_private: 1
+    prj:
+      field_2d_asymmetry: 0
+      field_3d_shaping: 0
+      field_3d_shaping_struct: 0
+      field_3d_traces: 0
+      field_3d_traces_struct: 0
+      field_a_asymmetry: 0
+      field_abs_dat_range: 0
+      field_abs_dat_range_cs: 0
+      field_abs_dat_source: 0
+      field_acquisition_type: 0
+      field_ais_cr: 0
+      field_alteration: 0
+      field_alternative_id: 0
+      field_alternative_ids: 0
+      field_aquamanile_subtype: 0
+      field_aquamanile_type: 0
+      field_archaeological_site: 0
+      field_artefact_category: 0
+      field_artefact_class: 0
+      field_artefact_id: 0
+      field_artefact_id_type: 0
+      field_artefact_subclass: 0
+      field_assess_cond_date: 0
+      field_auth_3d_models: 0
+      field_auth_res_data: 0
+      field_b_asymmetry: 0
+      field_ballistic_profile: 0
+      field_base_curve: 0
+      field_binder_type: 0
+      field_blank_orientation: 0
+      field_circle: 0
+      field_city: 0
+      field_city_code: 0
+      field_clay_colour: 0
+      field_coll_contacts: 0
+      field_coll_id: 0
+      field_coll_keyword: 0
+      field_coll_lang: 0
+      field_coll_org: 0
+      field_coll_rights: 0
+      field_coll_title: 0
+      field_colour_paint: 0
+      field_contract: 0
+      field_country: 0
+      field_cov_spat: 0
+      field_cov_temp: 0
+      field_creation: 0
+      field_culture: 0
+      field_current_location: 0
+      field_decoration: 0
+      field_deposition_cond: 0
+      field_description_a3d: 0
+      field_discoverer: 0
+      field_discovery_date: 0
+      field_doc_creator: 0
+      field_doc_date: 0
+      field_edging: 0
+      field_feature_id: 0
+      field_feature_type: 0
+      field_fhp_type: 0
+      field_field_description_a3d_cs: 0
+      field_finding_context_loc: 0
+      field_finding_context_note: 0
+      field_finding_context_pos: 0
+      field_finding_context_sec: 0
+      field_finding_context_subtype: 0
+      field_finding_context_type: 0
+      field_firing: 0
+      field_fract_nature: 0
+      field_fract_preservation: 0
+      field_fract_preservation_struct: 0
+      field_g_w_practice: 0
+      field_gb_scale: 0
+      field_general_lateral_wear: 0
+      field_general_note: 0
+      field_general_type: 0
+      field_geo_site: 0
+      field_geolocation: 0
+      field_geolocation_original: 0
+      field_geolocation_original_priv: 0
+      field_glue_residues: 0
+      field_grain_type: 0
+      field_handle: 0
+      field_has_a_construction_opening: 0
+      field_has_decoration: 0
+      field_has_ricasso: 0
+      field_holder_type: 0
+      field_ledge_type: 0
+      field_legal_status: 0
+      field_licence_url: 0
+      field_link_to_3d_model: 0
+      field_literature: 0
+      field_longitudinal_profile: 0
+      field_mass_structure_data_pres: 0
+      field_material_colour: 0
+      field_material_inclusions: 0
+      field_measurements: 0
+      field_member_of: 0
+      field_met_note_cz: 0
+      field_metadata_rights: 0
+      field_micro_ct: 0
+      field_microstructure: 0
+      field_mineral_fragments: 0
+      field_mineralogy: 0
+      field_motif: 0
+      field_note_on_preservation: 0
+      field_number_of_instances: 0
+      field_number_of_preserved_parts: 0
+      field_orig_state_pres: 0
+      field_original_location: 0
+      field_ownership: 0
+      field_painting_eye: 0
+      field_painting_microscope: 0
+      field_painting_tool: 0
+      field_pigment: 0
+      field_polished_sec_petrography: 0
+      field_porosity: 0
+      field_posture: 0
+      field_preserved_parts: 0
+      field_preserved_parts_struct: 0
+      field_private_note: 0
+      field_proj_dedication: 0
+      field_proj_id: 0
+      field_provenance: 0
+      field_quality: 0
+      field_quiver_trans_bright_spots: 0
+      field_quiver_trans_lat_rounding: 0
+      field_quiver_trans_tip_rounding: 0
+      field_raw_material: 0
+      field_recent_damage: 0
+      field_recent_damage_note: 0
+      field_recent_damage_type: 0
+      field_recent_damage_type_struct: 0
+      field_record_source: 0
+      field_reg_number: 0
+      field_reineckes_chronology: 0
+      field_relations: 0
+      field_relative_datation: 0
+      field_relief: 0
+      field_reparation_features: 0
+      field_retouch: 0
+      field_rights_access: 0
+      field_rights_reproduction: 0
+      field_rock_fragments: 0
+      field_sculpture_subtype: 0
+      field_sculpture_type: 0
+      field_serration: 0
+      field_site: 0
+      field_st_placement_certainty: 0
+      field_st_placement_type1: 0
+      field_st_placement_type2: 0
+      field_st_placement_type3: 0
+      field_st_shape_type1: 0
+      field_st_shape_type2: 0
+      field_standard_chronology: 0
+      field_state: 0
+      field_statement: 0
+      field_stove_tile_shape_certainty: 0
+      field_subord_dataset: 0
+      field_subord_dataset_link: 0
+      field_surf_data_pres: 0
+      field_surface_alt: 0
+      field_surface_finishing: 0
+      field_thermic_cracks: 0
+      field_tile_type: 0
+      field_timespan: 0
+      field_tip_fracture: 0
+      field_wear: 0
+      field_wgs84_accuracy_private: 0
+      field_wgs84_geolocation: 0
+      field_wgs84_geolocation_accuracy: 0
+      field_wgs84_geolocation_private: 0
+    exm:
+      field_2d_asymmetry: 0
+      field_3d_shaping: 0
+      field_3d_shaping_struct: 0
+      field_3d_traces: 0
+      field_3d_traces_struct: 0
+      field_a_asymmetry: 0
+      field_abs_dat_range: 0
+      field_abs_dat_range_cs: 0
+      field_abs_dat_source: 0
+      field_acquisition_type: 0
+      field_ais_cr: 0
+      field_alteration: 0
+      field_alternative_id: 0
+      field_alternative_ids: 0
+      field_aquamanile_subtype: 0
+      field_aquamanile_type: 0
+      field_archaeological_site: 0
+      field_artefact_category: 0
+      field_artefact_class: 0
+      field_artefact_id: 0
+      field_artefact_id_type: 0
+      field_artefact_subclass: 0
+      field_assess_cond_date: 0
+      field_auth_3d_models: 0
+      field_auth_res_data: 0
+      field_b_asymmetry: 0
+      field_ballistic_profile: 0
+      field_base_curve: 0
+      field_binder_type: 0
+      field_blank_orientation: 0
+      field_circle: 0
+      field_city: 0
+      field_city_code: 0
+      field_clay_colour: 0
+      field_coll_contacts: 0
+      field_coll_id: 0
+      field_coll_keyword: 0
+      field_coll_lang: 0
+      field_coll_org: 0
+      field_coll_rights: 0
+      field_coll_title: 0
+      field_colour_paint: 0
+      field_contract: 0
+      field_country: 0
+      field_cov_spat: 0
+      field_cov_temp: 0
+      field_creation: 0
+      field_culture: 0
+      field_current_location: 0
+      field_decoration: 0
+      field_deposition_cond: 0
+      field_description_a3d: 0
+      field_discoverer: 0
+      field_discovery_date: 0
+      field_doc_creator: 0
+      field_doc_date: 0
+      field_edging: 0
+      field_feature_id: 0
+      field_feature_type: 0
+      field_fhp_type: 0
+      field_field_description_a3d_cs: 0
+      field_finding_context_loc: 0
+      field_finding_context_note: 0
+      field_finding_context_pos: 0
+      field_finding_context_sec: 0
+      field_finding_context_subtype: 0
+      field_finding_context_type: 0
+      field_firing: 0
+      field_fract_nature: 0
+      field_fract_preservation: 0
+      field_fract_preservation_struct: 0
+      field_g_w_practice: 0
+      field_gb_scale: 0
+      field_general_lateral_wear: 0
+      field_general_note: 0
+      field_general_type: 0
+      field_geo_site: 0
+      field_geolocation: 0
+      field_geolocation_original: 0
+      field_geolocation_original_priv: 0
+      field_glue_residues: 0
+      field_grain_type: 0
+      field_handle: 0
+      field_has_a_construction_opening: 0
+      field_has_decoration: 0
+      field_has_ricasso: 0
+      field_holder_type: 0
+      field_ledge_type: 0
+      field_legal_status: 0
+      field_licence_url: 0
+      field_link_to_3d_model: 0
+      field_literature: 0
+      field_longitudinal_profile: 0
+      field_mass_structure_data_pres: 0
+      field_material_colour: 0
+      field_material_inclusions: 0
+      field_measurements: 0
+      field_member_of: 0
+      field_met_note_cz: 0
+      field_metadata_rights: 0
+      field_micro_ct: 0
+      field_microstructure: 0
+      field_mineral_fragments: 0
+      field_mineralogy: 0
+      field_motif: 0
+      field_note_on_preservation: 0
+      field_number_of_instances: 0
+      field_number_of_preserved_parts: 0
+      field_orig_state_pres: 0
+      field_original_location: 0
+      field_ownership: 0
+      field_painting_eye: 0
+      field_painting_microscope: 0
+      field_painting_tool: 0
+      field_pigment: 0
+      field_polished_sec_petrography: 0
+      field_porosity: 0
+      field_posture: 0
+      field_preserved_parts: 0
+      field_preserved_parts_struct: 0
+      field_private_note: 0
+      field_proj_dedication: 0
+      field_proj_id: 0
+      field_provenance: 0
+      field_quality: 0
+      field_quiver_trans_bright_spots: 0
+      field_quiver_trans_lat_rounding: 0
+      field_quiver_trans_tip_rounding: 0
+      field_raw_material: 0
+      field_recent_damage: 0
+      field_recent_damage_note: 0
+      field_recent_damage_type: 0
+      field_recent_damage_type_struct: 0
+      field_record_source: 0
+      field_reg_number: 0
+      field_reineckes_chronology: 0
+      field_relations: 0
+      field_relative_datation: 0
+      field_relief: 0
+      field_reparation_features: 0
+      field_retouch: 0
+      field_rights_access: 0
+      field_rights_reproduction: 0
+      field_rock_fragments: 0
+      field_sculpture_subtype: 0
+      field_sculpture_type: 0
+      field_serration: 0
+      field_site: 0
+      field_st_placement_certainty: 0
+      field_st_placement_type1: 0
+      field_st_placement_type2: 0
+      field_st_placement_type3: 0
+      field_st_shape_type1: 0
+      field_st_shape_type2: 0
+      field_standard_chronology: 0
+      field_state: 0
+      field_statement: 0
+      field_stove_tile_shape_certainty: 0
+      field_subord_dataset: 0
+      field_subord_dataset_link: 0
+      field_surf_data_pres: 0
+      field_surface_alt: 0
+      field_surface_finishing: 0
+      field_thermic_cracks: 0
+      field_tile_type: 0
+      field_timespan: 0
+      field_tip_fracture: 0
+      field_wear: 0
+      field_wgs84_accuracy_private: 0
+      field_wgs84_geolocation: 0
+      field_wgs84_geolocation_accuracy: 0
+      field_wgs84_geolocation_private: 0
 article:
   enabled: 0
   groups:
     nef:
       field_image: 0
       field_tags: 0
+    swd:
+      field_image: 0
+      field_tags: 0
     arf:
       field_image: 0
       field_tags: 0
+    cmb:
+      field_image: 0
+      field_tags: 0
     kch:
+      field_image: 0
+      field_tags: 0
+    prj:
+      field_image: 0
+      field_tags: 0
+    exm:
       field_image: 0
       field_tags: 0
 at_project:
@@ -553,12 +1248,32 @@ at_project:
       field_at_citation_text: 0
       field_at_copyright_text: 0
       field_at_intro_text: 0
+    swd:
+      field_at_banner_text: 0
+      field_at_citation_text: 0
+      field_at_copyright_text: 0
+      field_at_intro_text: 0
     arf:
       field_at_banner_text: 0
       field_at_citation_text: 0
       field_at_copyright_text: 0
       field_at_intro_text: 0
+    cmb:
+      field_at_banner_text: 0
+      field_at_citation_text: 0
+      field_at_copyright_text: 0
+      field_at_intro_text: 0
     kch:
+      field_at_banner_text: 0
+      field_at_citation_text: 0
+      field_at_copyright_text: 0
+      field_at_intro_text: 0
+    prj:
+      field_at_banner_text: 0
+      field_at_citation_text: 0
+      field_at_copyright_text: 0
+      field_at_intro_text: 0
+    exm:
       field_at_banner_text: 0
       field_at_citation_text: 0
       field_at_copyright_text: 0
@@ -611,6 +1326,51 @@ islandora_object:
       field_temporal_subject: 0
       field_viewer_override: 0
       field_weight: 0
+    swd:
+      field_abstract: 0
+      field_alt_title: 0
+      field_classification: 0
+      field_coordinates: 0
+      field_coordinates_text: 0
+      field_copyright_date: 0
+      field_date_captured: 0
+      field_date_modified: 0
+      field_date_valid: 0
+      field_description: 0
+      field_dewey_classification: 0
+      field_edition: 0
+      field_edtf_date: 0
+      field_edtf_date_created: 0
+      field_edtf_date_issued: 0
+      field_extent: 0
+      field_frequency: 0
+      field_full_title: 0
+      field_genre: 0
+      field_geographic_subject: 0
+      field_identifier: 0
+      field_isbn: 0
+      field_language: 0
+      field_lcc_classification: 0
+      field_linked_agent: 0
+      field_local_identifier: 0
+      field_member_of: 0
+      field_mode_of_issuance: 0
+      field_model: 0
+      field_note: 0
+      field_oclc_number: 0
+      field_physical_form: 0
+      field_pid: 0
+      field_place_published: 0
+      field_place_published_country: 0
+      field_resource_type: 0
+      field_rights: 0
+      field_subject: 0
+      field_subject_general: 0
+      field_subjects_name: 0
+      field_table_of_contents: 0
+      field_temporal_subject: 0
+      field_viewer_override: 0
+      field_weight: 0
     arf:
       field_abstract: 0
       field_alt_title: 0
@@ -656,7 +1416,142 @@ islandora_object:
       field_temporal_subject: 0
       field_viewer_override: 0
       field_weight: 0
+    cmb:
+      field_abstract: 0
+      field_alt_title: 0
+      field_classification: 0
+      field_coordinates: 0
+      field_coordinates_text: 0
+      field_copyright_date: 0
+      field_date_captured: 0
+      field_date_modified: 0
+      field_date_valid: 0
+      field_description: 0
+      field_dewey_classification: 0
+      field_edition: 0
+      field_edtf_date: 0
+      field_edtf_date_created: 0
+      field_edtf_date_issued: 0
+      field_extent: 0
+      field_frequency: 0
+      field_full_title: 0
+      field_genre: 0
+      field_geographic_subject: 0
+      field_identifier: 0
+      field_isbn: 0
+      field_language: 0
+      field_lcc_classification: 0
+      field_linked_agent: 0
+      field_local_identifier: 0
+      field_member_of: 0
+      field_mode_of_issuance: 0
+      field_model: 0
+      field_note: 0
+      field_oclc_number: 0
+      field_physical_form: 0
+      field_pid: 0
+      field_place_published: 0
+      field_place_published_country: 0
+      field_resource_type: 0
+      field_rights: 0
+      field_subject: 0
+      field_subject_general: 0
+      field_subjects_name: 0
+      field_table_of_contents: 0
+      field_temporal_subject: 0
+      field_viewer_override: 0
+      field_weight: 0
     kch:
+      field_abstract: 0
+      field_alt_title: 0
+      field_classification: 0
+      field_coordinates: 0
+      field_coordinates_text: 0
+      field_copyright_date: 0
+      field_date_captured: 0
+      field_date_modified: 0
+      field_date_valid: 0
+      field_description: 0
+      field_dewey_classification: 0
+      field_edition: 0
+      field_edtf_date: 0
+      field_edtf_date_created: 0
+      field_edtf_date_issued: 0
+      field_extent: 0
+      field_frequency: 0
+      field_full_title: 0
+      field_genre: 0
+      field_geographic_subject: 0
+      field_identifier: 0
+      field_isbn: 0
+      field_language: 0
+      field_lcc_classification: 0
+      field_linked_agent: 0
+      field_local_identifier: 0
+      field_member_of: 0
+      field_mode_of_issuance: 0
+      field_model: 0
+      field_note: 0
+      field_oclc_number: 0
+      field_physical_form: 0
+      field_pid: 0
+      field_place_published: 0
+      field_place_published_country: 0
+      field_resource_type: 0
+      field_rights: 0
+      field_subject: 0
+      field_subject_general: 0
+      field_subjects_name: 0
+      field_table_of_contents: 0
+      field_temporal_subject: 0
+      field_viewer_override: 0
+      field_weight: 0
+    prj:
+      field_abstract: 0
+      field_alt_title: 0
+      field_classification: 0
+      field_coordinates: 0
+      field_coordinates_text: 0
+      field_copyright_date: 0
+      field_date_captured: 0
+      field_date_modified: 0
+      field_date_valid: 0
+      field_description: 0
+      field_dewey_classification: 0
+      field_edition: 0
+      field_edtf_date: 0
+      field_edtf_date_created: 0
+      field_edtf_date_issued: 0
+      field_extent: 0
+      field_frequency: 0
+      field_full_title: 0
+      field_genre: 0
+      field_geographic_subject: 0
+      field_identifier: 0
+      field_isbn: 0
+      field_language: 0
+      field_lcc_classification: 0
+      field_linked_agent: 0
+      field_local_identifier: 0
+      field_member_of: 0
+      field_mode_of_issuance: 0
+      field_model: 0
+      field_note: 0
+      field_oclc_number: 0
+      field_physical_form: 0
+      field_pid: 0
+      field_place_published: 0
+      field_place_published_country: 0
+      field_resource_type: 0
+      field_rights: 0
+      field_subject: 0
+      field_subject_general: 0
+      field_subjects_name: 0
+      field_table_of_contents: 0
+      field_temporal_subject: 0
+      field_viewer_override: 0
+      field_weight: 0
+    exm:
       field_abstract: 0
       field_alt_title: 0
       field_classification: 0
@@ -706,9 +1601,17 @@ page:
   groups:
     nef:
       field_title: 0
+    swd:
+      field_title: 0
     arf:
       field_title: 0
+    cmb:
+      field_title: 0
     kch:
+      field_title: 0
+    prj:
+      field_title: 0
+    exm:
       field_title: 0
 test_a3d:
   enabled: 0
@@ -741,7 +1644,6 @@ test_a3d:
       field_geolocation: 0
       field_has_a_construction_opening: 0
       field_link_to_3d_model: 0
-      field_mass_structure_data_pres: 0
       field_member_of: 0
       field_number_of_instances: 0
       field_ownership: 0
@@ -750,7 +1652,48 @@ test_a3d:
       field_rock_fragments: 0
       field_st_placement_certainty: 0
       field_st_placement_type1: 0
-      field_surf_data_pres: 0
+      field_surface_data_presence: 0
+      field_surface_finishing: 0
+      field_test_geolocation: 0
+      field_timespan: 0
+      field_vessel_body_shape_certaint: 0
+      field_wgs84_geolocation: 0
+    swd:
+      field_2d_asymmetry: 0
+      field_a_asymmetry: 0
+      field_alteration: 0
+      field_alternative_ids: 0
+      field_aquamanile_subtype: 0
+      field_aquamanile_type: 0
+      field_artefact_category: 0
+      field_artefact_class: 0
+      field_artefact_id: 0
+      field_artefact_id_type: 0
+      field_artefact_subclass: 0
+      field_assess_cond_date: 0
+      field_coll_id: 0
+      field_collection_title: 0
+      field_comparison: 0
+      field_dimensions: 0
+      field_discovery_date: 0
+      field_doc_date: 0
+      field_feature_id: 0
+      field_fhp_shape: 0
+      field_fhp_shape_certainty: 0
+      field_fhp_type: 0
+      field_field_description_a3d_cs: 0
+      field_field_st_placement_certain: 0
+      field_geolocation: 0
+      field_has_a_construction_opening: 0
+      field_link_to_3d_model: 0
+      field_member_of: 0
+      field_number_of_instances: 0
+      field_ownership: 0
+      field_porosity: 0
+      field_private_note: 0
+      field_rock_fragments: 0
+      field_st_placement_certainty: 0
+      field_st_placement_type1: 0
       field_surface_data_presence: 0
       field_surface_finishing: 0
       field_test_geolocation: 0
@@ -785,7 +1728,6 @@ test_a3d:
       field_geolocation: 0
       field_has_a_construction_opening: 0
       field_link_to_3d_model: 0
-      field_mass_structure_data_pres: 0
       field_member_of: 0
       field_number_of_instances: 0
       field_ownership: 0
@@ -794,7 +1736,48 @@ test_a3d:
       field_rock_fragments: 0
       field_st_placement_certainty: 0
       field_st_placement_type1: 0
-      field_surf_data_pres: 0
+      field_surface_data_presence: 0
+      field_surface_finishing: 0
+      field_test_geolocation: 0
+      field_timespan: 0
+      field_vessel_body_shape_certaint: 0
+      field_wgs84_geolocation: 0
+    cmb:
+      field_2d_asymmetry: 0
+      field_a_asymmetry: 0
+      field_alteration: 0
+      field_alternative_ids: 0
+      field_aquamanile_subtype: 0
+      field_aquamanile_type: 0
+      field_artefact_category: 0
+      field_artefact_class: 0
+      field_artefact_id: 0
+      field_artefact_id_type: 0
+      field_artefact_subclass: 0
+      field_assess_cond_date: 0
+      field_coll_id: 0
+      field_collection_title: 0
+      field_comparison: 0
+      field_dimensions: 0
+      field_discovery_date: 0
+      field_doc_date: 0
+      field_feature_id: 0
+      field_fhp_shape: 0
+      field_fhp_shape_certainty: 0
+      field_fhp_type: 0
+      field_field_description_a3d_cs: 0
+      field_field_st_placement_certain: 0
+      field_geolocation: 0
+      field_has_a_construction_opening: 0
+      field_link_to_3d_model: 0
+      field_member_of: 0
+      field_number_of_instances: 0
+      field_ownership: 0
+      field_porosity: 0
+      field_private_note: 0
+      field_rock_fragments: 0
+      field_st_placement_certainty: 0
+      field_st_placement_type1: 0
       field_surface_data_presence: 0
       field_surface_finishing: 0
       field_test_geolocation: 0
@@ -829,7 +1812,6 @@ test_a3d:
       field_geolocation: 0
       field_has_a_construction_opening: 0
       field_link_to_3d_model: 0
-      field_mass_structure_data_pres: 0
       field_member_of: 0
       field_number_of_instances: 0
       field_ownership: 0
@@ -838,7 +1820,90 @@ test_a3d:
       field_rock_fragments: 0
       field_st_placement_certainty: 0
       field_st_placement_type1: 0
-      field_surf_data_pres: 0
+      field_surface_data_presence: 0
+      field_surface_finishing: 0
+      field_test_geolocation: 0
+      field_timespan: 0
+      field_vessel_body_shape_certaint: 0
+      field_wgs84_geolocation: 0
+    prj:
+      field_2d_asymmetry: 0
+      field_a_asymmetry: 0
+      field_alteration: 0
+      field_alternative_ids: 0
+      field_aquamanile_subtype: 0
+      field_aquamanile_type: 0
+      field_artefact_category: 0
+      field_artefact_class: 0
+      field_artefact_id: 0
+      field_artefact_id_type: 0
+      field_artefact_subclass: 0
+      field_assess_cond_date: 0
+      field_coll_id: 0
+      field_collection_title: 0
+      field_comparison: 0
+      field_dimensions: 0
+      field_discovery_date: 0
+      field_doc_date: 0
+      field_feature_id: 0
+      field_fhp_shape: 0
+      field_fhp_shape_certainty: 0
+      field_fhp_type: 0
+      field_field_description_a3d_cs: 0
+      field_field_st_placement_certain: 0
+      field_geolocation: 0
+      field_has_a_construction_opening: 0
+      field_link_to_3d_model: 0
+      field_member_of: 0
+      field_number_of_instances: 0
+      field_ownership: 0
+      field_porosity: 0
+      field_private_note: 0
+      field_rock_fragments: 0
+      field_st_placement_certainty: 0
+      field_st_placement_type1: 0
+      field_surface_data_presence: 0
+      field_surface_finishing: 0
+      field_test_geolocation: 0
+      field_timespan: 0
+      field_vessel_body_shape_certaint: 0
+      field_wgs84_geolocation: 0
+    exm:
+      field_2d_asymmetry: 0
+      field_a_asymmetry: 0
+      field_alteration: 0
+      field_alternative_ids: 0
+      field_aquamanile_subtype: 0
+      field_aquamanile_type: 0
+      field_artefact_category: 0
+      field_artefact_class: 0
+      field_artefact_id: 0
+      field_artefact_id_type: 0
+      field_artefact_subclass: 0
+      field_assess_cond_date: 0
+      field_coll_id: 0
+      field_collection_title: 0
+      field_comparison: 0
+      field_dimensions: 0
+      field_discovery_date: 0
+      field_doc_date: 0
+      field_feature_id: 0
+      field_fhp_shape: 0
+      field_fhp_shape_certainty: 0
+      field_fhp_type: 0
+      field_field_description_a3d_cs: 0
+      field_field_st_placement_certain: 0
+      field_geolocation: 0
+      field_has_a_construction_opening: 0
+      field_link_to_3d_model: 0
+      field_member_of: 0
+      field_number_of_instances: 0
+      field_ownership: 0
+      field_porosity: 0
+      field_private_note: 0
+      field_rock_fragments: 0
+      field_st_placement_certainty: 0
+      field_st_placement_type1: 0
       field_surface_data_presence: 0
       field_surface_finishing: 0
       field_test_geolocation: 0
@@ -856,13 +1921,37 @@ a3d_platform_homepage:
       field_copyright_text: 0
       field_homepage_statistics: 0
       field_intro_text: 0
+    swd:
+      field_banner_text: 0
+      field_citation_text: 0
+      field_copyright_text: 0
+      field_homepage_statistics: 0
+      field_intro_text: 0
     arf:
       field_banner_text: 0
       field_citation_text: 0
       field_copyright_text: 0
       field_homepage_statistics: 0
       field_intro_text: 0
+    cmb:
+      field_banner_text: 0
+      field_citation_text: 0
+      field_copyright_text: 0
+      field_homepage_statistics: 0
+      field_intro_text: 0
     kch:
+      field_banner_text: 0
+      field_citation_text: 0
+      field_copyright_text: 0
+      field_homepage_statistics: 0
+      field_intro_text: 0
+    prj:
+      field_banner_text: 0
+      field_citation_text: 0
+      field_copyright_text: 0
+      field_homepage_statistics: 0
+      field_intro_text: 0
+    exm:
       field_banner_text: 0
       field_citation_text: 0
       field_copyright_text: 0
@@ -883,7 +1972,31 @@ sample:
       field_sample_id: 0
       field_sampled_from: 0
       field_sampling_type: 0
+    swd:
+      field_description_a3d: 1
+      field_is_macrosample: 0
+      field_is_powder: 0
+      field_is_thin_section: 0
+      field_member_of: 0
+      field_note: 1
+      field_object_reference: 1
+      field_private_note: 1
+      field_sample_id: 1
+      field_sampled_from: 1
+      field_sampling_type: 1
     arf:
+      field_description_a3d: 0
+      field_is_macrosample: 0
+      field_is_powder: 0
+      field_is_thin_section: 0
+      field_member_of: 0
+      field_note: 0
+      field_object_reference: 0
+      field_private_note: 0
+      field_sample_id: 0
+      field_sampled_from: 0
+      field_sampling_type: 0
+    cmb:
       field_description_a3d: 0
       field_is_macrosample: 0
       field_is_powder: 0
@@ -905,6 +2018,30 @@ sample:
       field_object_reference: 1
       field_private_note: 1
       field_sample_id: 1
+      field_sampled_from: 0
+      field_sampling_type: 0
+    prj:
+      field_description_a3d: 0
+      field_is_macrosample: 0
+      field_is_powder: 0
+      field_is_thin_section: 0
+      field_member_of: 0
+      field_note: 0
+      field_object_reference: 0
+      field_private_note: 0
+      field_sample_id: 0
+      field_sampled_from: 0
+      field_sampling_type: 0
+    exm:
+      field_description_a3d: 0
+      field_is_macrosample: 0
+      field_is_powder: 0
+      field_is_thin_section: 0
+      field_member_of: 0
+      field_note: 0
+      field_object_reference: 0
+      field_private_note: 0
+      field_sample_id: 0
       field_sampled_from: 0
       field_sampling_type: 0
 analysis:
@@ -955,6 +2092,51 @@ analysis:
       field_rock_fragments: 0
       field_traceology: 0
       field_vesicular_pores: 0
+    swd:
+      field_analysed_by: 1
+      field_analysed_day: 0
+      field_analysed_month: 0
+      field_analysed_year: 0
+      field_analysis_date: 0
+      field_analysis_of: 1
+      field_analysis_type: 1
+      field_binder_ratio: 0
+      field_binder_type: 0
+      field_cavity_pores: 0
+      field_chemical_analysis: 1
+      field_colour_inward: 0
+      field_colour_of_core: 0
+      field_colour_outward: 0
+      field_data_pres_value: 0
+      field_date_analysed: 1
+      field_elements: 0
+      field_firing_characteristic: 0
+      field_firing_temperature: 0
+      field_fractured_pores: 0
+      field_fragments: 0
+      field_grain_type: 0
+      field_instrument: 1
+      field_matrix: 0
+      field_matrix_vitrification: 0
+      field_member_of: 0
+      field_microstructure: 0
+      field_mineral_fragments: 0
+      field_minerals: 0
+      field_non_plastic_inclusions: 0
+      field_nonplastic_sort: 0
+      field_note: 1
+      field_note_on_method: 1
+      field_planar_pores: 0
+      field_pore_channels: 0
+      field_porosity: 0
+      field_private_note: 1
+      field_publications: 0
+      field_reduction_core: 0
+      field_reduction_inward: 0
+      field_reduction_outward: 0
+      field_rock_fragments: 0
+      field_traceology: 0
+      field_vesicular_pores: 0
     arf:
       field_analysed_by: 0
       field_analysed_day: 0
@@ -989,6 +2171,51 @@ analysis:
       field_nonplastic_sort: 0
       field_note: 1
       field_note_on_method: 1
+      field_planar_pores: 0
+      field_pore_channels: 0
+      field_porosity: 0
+      field_private_note: 0
+      field_publications: 0
+      field_reduction_core: 0
+      field_reduction_inward: 0
+      field_reduction_outward: 0
+      field_rock_fragments: 0
+      field_traceology: 0
+      field_vesicular_pores: 0
+    cmb:
+      field_analysed_by: 0
+      field_analysed_day: 0
+      field_analysed_month: 0
+      field_analysed_year: 0
+      field_analysis_date: 0
+      field_analysis_of: 0
+      field_analysis_type: 0
+      field_binder_ratio: 0
+      field_binder_type: 0
+      field_cavity_pores: 0
+      field_chemical_analysis: 0
+      field_colour_inward: 0
+      field_colour_of_core: 0
+      field_colour_outward: 0
+      field_data_pres_value: 0
+      field_date_analysed: 0
+      field_elements: 0
+      field_firing_characteristic: 0
+      field_firing_temperature: 0
+      field_fractured_pores: 0
+      field_fragments: 0
+      field_grain_type: 0
+      field_instrument: 0
+      field_matrix: 0
+      field_matrix_vitrification: 0
+      field_member_of: 0
+      field_microstructure: 0
+      field_mineral_fragments: 0
+      field_minerals: 0
+      field_non_plastic_inclusions: 0
+      field_nonplastic_sort: 0
+      field_note: 0
+      field_note_on_method: 0
       field_planar_pores: 0
       field_pore_channels: 0
       field_porosity: 0
@@ -1045,6 +2272,96 @@ analysis:
       field_rock_fragments: 0
       field_traceology: 0
       field_vesicular_pores: 1
+    prj:
+      field_analysed_by: 0
+      field_analysed_day: 0
+      field_analysed_month: 0
+      field_analysed_year: 0
+      field_analysis_date: 0
+      field_analysis_of: 0
+      field_analysis_type: 0
+      field_binder_ratio: 0
+      field_binder_type: 0
+      field_cavity_pores: 0
+      field_chemical_analysis: 0
+      field_colour_inward: 0
+      field_colour_of_core: 0
+      field_colour_outward: 0
+      field_data_pres_value: 0
+      field_date_analysed: 0
+      field_elements: 0
+      field_firing_characteristic: 0
+      field_firing_temperature: 0
+      field_fractured_pores: 0
+      field_fragments: 0
+      field_grain_type: 0
+      field_instrument: 0
+      field_matrix: 0
+      field_matrix_vitrification: 0
+      field_member_of: 0
+      field_microstructure: 0
+      field_mineral_fragments: 0
+      field_minerals: 0
+      field_non_plastic_inclusions: 0
+      field_nonplastic_sort: 0
+      field_note: 0
+      field_note_on_method: 0
+      field_planar_pores: 0
+      field_pore_channels: 0
+      field_porosity: 0
+      field_private_note: 0
+      field_publications: 0
+      field_reduction_core: 0
+      field_reduction_inward: 0
+      field_reduction_outward: 0
+      field_rock_fragments: 0
+      field_traceology: 0
+      field_vesicular_pores: 0
+    exm:
+      field_analysed_by: 0
+      field_analysed_day: 0
+      field_analysed_month: 0
+      field_analysed_year: 0
+      field_analysis_date: 0
+      field_analysis_of: 0
+      field_analysis_type: 0
+      field_binder_ratio: 0
+      field_binder_type: 0
+      field_cavity_pores: 0
+      field_chemical_analysis: 0
+      field_colour_inward: 0
+      field_colour_of_core: 0
+      field_colour_outward: 0
+      field_data_pres_value: 0
+      field_date_analysed: 0
+      field_elements: 0
+      field_firing_characteristic: 0
+      field_firing_temperature: 0
+      field_fractured_pores: 0
+      field_fragments: 0
+      field_grain_type: 0
+      field_instrument: 0
+      field_matrix: 0
+      field_matrix_vitrification: 0
+      field_member_of: 0
+      field_microstructure: 0
+      field_mineral_fragments: 0
+      field_minerals: 0
+      field_non_plastic_inclusions: 0
+      field_nonplastic_sort: 0
+      field_note: 0
+      field_note_on_method: 0
+      field_planar_pores: 0
+      field_pore_channels: 0
+      field_porosity: 0
+      field_private_note: 0
+      field_publications: 0
+      field_reduction_core: 0
+      field_reduction_inward: 0
+      field_reduction_outward: 0
+      field_rock_fragments: 0
+      field_traceology: 0
+      field_vesicular_pores: 0
 contract:
   enabled: 1
   groups:
@@ -1052,7 +2369,13 @@ contract:
       field_contract_number: 0
       field_description: 0
       field_member_of: 0
-      field_objects: 0
+      field_provider: 0
+      field_recipient: 0
+      field_signature_date: 0
+    swd:
+      field_contract_number: 0
+      field_description: 0
+      field_member_of: 0
       field_provider: 0
       field_recipient: 0
       field_signature_date: 0
@@ -1060,18 +2383,37 @@ contract:
       field_contract_number: 1
       field_description: 1
       field_member_of: 0
-      field_objects: 0
       field_provider: 1
       field_recipient: 1
       field_signature_date: 1
+    cmb:
+      field_contract_number: 0
+      field_description: 0
+      field_member_of: 0
+      field_provider: 0
+      field_recipient: 0
+      field_signature_date: 0
     kch:
       field_contract_number: 1
       field_description: 1
       field_member_of: 0
-      field_objects: 0
       field_provider: 1
       field_recipient: 1
       field_signature_date: 1
+    prj:
+      field_contract_number: 0
+      field_description: 0
+      field_member_of: 0
+      field_provider: 0
+      field_recipient: 0
+      field_signature_date: 0
+    exm:
+      field_contract_number: 0
+      field_description: 0
+      field_member_of: 0
+      field_provider: 0
+      field_recipient: 0
+      field_signature_date: 0
 arf_surf_data_pres:
   enabled: 1
   groups:
@@ -1080,12 +2422,32 @@ arf_surf_data_pres:
       field_sdp_note: 0
       field_sdp_spec: 0
       field_sdp_value: 0
+    swd:
+      field_sdp_method: 0
+      field_sdp_note: 0
+      field_sdp_spec: 0
+      field_sdp_value: 0
     arf:
       field_sdp_method: 0
       field_sdp_note: 0
       field_sdp_spec: 0
       field_sdp_value: 0
+    cmb:
+      field_sdp_method: 0
+      field_sdp_note: 0
+      field_sdp_spec: 0
+      field_sdp_value: 0
     kch:
+      field_sdp_method: 0
+      field_sdp_note: 0
+      field_sdp_spec: 0
+      field_sdp_value: 0
+    prj:
+      field_sdp_method: 0
+      field_sdp_note: 0
+      field_sdp_spec: 0
+      field_sdp_value: 0
+    exm:
       field_sdp_method: 0
       field_sdp_note: 0
       field_sdp_spec: 0
@@ -1097,7 +2459,15 @@ non_plastic_inclusion:
       field_estimated_quantity: 0
       field_non_plastic_inclusion: 0
       field_percent: 0
+    swd:
+      field_estimated_quantity: 0
+      field_non_plastic_inclusion: 0
+      field_percent: 0
     arf:
+      field_estimated_quantity: 0
+      field_non_plastic_inclusion: 0
+      field_percent: 0
+    cmb:
       field_estimated_quantity: 0
       field_non_plastic_inclusion: 0
       field_percent: 0
@@ -1105,13 +2475,29 @@ non_plastic_inclusion:
       field_estimated_quantity: 1
       field_non_plastic_inclusion: 1
       field_percent: 1
+    prj:
+      field_estimated_quantity: 0
+      field_non_plastic_inclusion: 0
+      field_percent: 0
+    exm:
+      field_estimated_quantity: 0
+      field_non_plastic_inclusion: 0
+      field_percent: 0
 a3d_ingest_artefact:
   enabled: 0
   groups:
     nef:
       field_artefact_category: 0
       field_artefact_id: 0
-      field_contract: 0
+      field_deposition_cond: 0
+      field_description_a3d: 0
+      field_destruction_analysis: 0
+      field_general_note: 0
+      field_relative_datation: 0
+      field_research_question: 0
+    swd:
+      field_artefact_category: 0
+      field_artefact_id: 0
       field_deposition_cond: 0
       field_description_a3d: 0
       field_destruction_analysis: 0
@@ -1121,17 +2507,42 @@ a3d_ingest_artefact:
     arf:
       field_artefact_category: 1
       field_artefact_id: 1
-      field_contract: 1
       field_deposition_cond: 1
       field_description_a3d: 1
       field_destruction_analysis: 1
       field_general_note: 1
       field_relative_datation: 1
       field_research_question: 1
+    cmb:
+      field_artefact_category: 0
+      field_artefact_id: 0
+      field_deposition_cond: 0
+      field_description_a3d: 0
+      field_destruction_analysis: 0
+      field_general_note: 0
+      field_relative_datation: 0
+      field_research_question: 0
     kch:
       field_artefact_category: 0
       field_artefact_id: 0
-      field_contract: 0
+      field_deposition_cond: 0
+      field_description_a3d: 0
+      field_destruction_analysis: 0
+      field_general_note: 0
+      field_relative_datation: 0
+      field_research_question: 0
+    prj:
+      field_artefact_category: 0
+      field_artefact_id: 0
+      field_deposition_cond: 0
+      field_description_a3d: 0
+      field_destruction_analysis: 0
+      field_general_note: 0
+      field_relative_datation: 0
+      field_research_question: 0
+    exm:
+      field_artefact_category: 0
+      field_artefact_id: 0
       field_deposition_cond: 0
       field_description_a3d: 0
       field_destruction_analysis: 0
@@ -1161,6 +2572,26 @@ a3d_ingest_object:
       field_place_analysis: 0
       field_region: 0
       field_site: 0
+    swd:
+      field_coll_org: 0
+      field_contract: 0
+      field_date_borrowing: 0
+      field_date_return: 0
+      field_finding_context_note: 0
+      field_finding_context_subtype: 0
+      field_finding_documentation: 0
+      field_finding_documentation_note: 0
+      field_finding_label: 0
+      field_finding_report: 0
+      field_finding_year: 0
+      field_finding_year_type: 0
+      field_geolocation: 0
+      field_ingest_artefact: 0
+      field_member_of: 0
+      field_personal_contact: 0
+      field_place_analysis: 0
+      field_region: 0
+      field_site: 0
     arf:
       field_coll_org: 0
       field_contract: 0
@@ -1181,7 +2612,67 @@ a3d_ingest_object:
       field_place_analysis: 0
       field_region: 0
       field_site: 0
+    cmb:
+      field_coll_org: 0
+      field_contract: 0
+      field_date_borrowing: 0
+      field_date_return: 0
+      field_finding_context_note: 0
+      field_finding_context_subtype: 0
+      field_finding_documentation: 0
+      field_finding_documentation_note: 0
+      field_finding_label: 0
+      field_finding_report: 0
+      field_finding_year: 0
+      field_finding_year_type: 0
+      field_geolocation: 0
+      field_ingest_artefact: 0
+      field_member_of: 0
+      field_personal_contact: 0
+      field_place_analysis: 0
+      field_region: 0
+      field_site: 0
     kch:
+      field_coll_org: 0
+      field_contract: 0
+      field_date_borrowing: 0
+      field_date_return: 0
+      field_finding_context_note: 0
+      field_finding_context_subtype: 0
+      field_finding_documentation: 0
+      field_finding_documentation_note: 0
+      field_finding_label: 0
+      field_finding_report: 0
+      field_finding_year: 0
+      field_finding_year_type: 0
+      field_geolocation: 0
+      field_ingest_artefact: 0
+      field_member_of: 0
+      field_personal_contact: 0
+      field_place_analysis: 0
+      field_region: 0
+      field_site: 0
+    prj:
+      field_coll_org: 0
+      field_contract: 0
+      field_date_borrowing: 0
+      field_date_return: 0
+      field_finding_context_note: 0
+      field_finding_context_subtype: 0
+      field_finding_documentation: 0
+      field_finding_documentation_note: 0
+      field_finding_label: 0
+      field_finding_report: 0
+      field_finding_year: 0
+      field_finding_year_type: 0
+      field_geolocation: 0
+      field_ingest_artefact: 0
+      field_member_of: 0
+      field_personal_contact: 0
+      field_place_analysis: 0
+      field_region: 0
+      field_site: 0
+    exm:
       field_coll_org: 0
       field_contract: 0
       field_date_borrowing: 0
@@ -1209,12 +2700,32 @@ a3d_personal_contact:
       field_coll_contacts_person: 0
       field_coll_contacts_phone: 0
       field_coll_contacts_type: 0
+    swd:
+      field_coll_contacts_email: 0
+      field_coll_contacts_person: 0
+      field_coll_contacts_phone: 0
+      field_coll_contacts_type: 0
     arf:
       field_coll_contacts_email: 1
       field_coll_contacts_person: 1
       field_coll_contacts_phone: 1
       field_coll_contacts_type: 1
+    cmb:
+      field_coll_contacts_email: 0
+      field_coll_contacts_person: 0
+      field_coll_contacts_phone: 0
+      field_coll_contacts_type: 0
     kch:
+      field_coll_contacts_email: 0
+      field_coll_contacts_person: 0
+      field_coll_contacts_phone: 0
+      field_coll_contacts_type: 0
+    prj:
+      field_coll_contacts_email: 0
+      field_coll_contacts_person: 0
+      field_coll_contacts_phone: 0
+      field_coll_contacts_type: 0
+    exm:
       field_coll_contacts_email: 0
       field_coll_contacts_person: 0
       field_coll_contacts_phone: 0
@@ -1236,6 +2747,20 @@ a3d_workbench_test_type:
       field_test_date: 0
       field_test_timestamp: 0
       field_wgs84_geolocation: 0
+    swd:
+      field_alle_zusammen: 0
+      field_alternative_ids: 0
+      field_artefact_category: 0
+      field_classification: 0
+      field_geolocation: 0
+      field_site: 0
+      field_test_custom_field: 0
+      field_test_datafield: 0
+      field_test_datafield_2: 0
+      field_test_datafield_3: 0
+      field_test_date: 0
+      field_test_timestamp: 0
+      field_wgs84_geolocation: 0
     arf:
       field_alle_zusammen: 0
       field_alternative_ids: 0
@@ -1250,7 +2775,49 @@ a3d_workbench_test_type:
       field_test_date: 0
       field_test_timestamp: 0
       field_wgs84_geolocation: 0
+    cmb:
+      field_alle_zusammen: 0
+      field_alternative_ids: 0
+      field_artefact_category: 0
+      field_classification: 0
+      field_geolocation: 0
+      field_site: 0
+      field_test_custom_field: 0
+      field_test_datafield: 0
+      field_test_datafield_2: 0
+      field_test_datafield_3: 0
+      field_test_date: 0
+      field_test_timestamp: 0
+      field_wgs84_geolocation: 0
     kch:
+      field_alle_zusammen: 0
+      field_alternative_ids: 0
+      field_artefact_category: 0
+      field_classification: 0
+      field_geolocation: 0
+      field_site: 0
+      field_test_custom_field: 0
+      field_test_datafield: 0
+      field_test_datafield_2: 0
+      field_test_datafield_3: 0
+      field_test_date: 0
+      field_test_timestamp: 0
+      field_wgs84_geolocation: 0
+    prj:
+      field_alle_zusammen: 0
+      field_alternative_ids: 0
+      field_artefact_category: 0
+      field_classification: 0
+      field_geolocation: 0
+      field_site: 0
+      field_test_custom_field: 0
+      field_test_datafield: 0
+      field_test_datafield_2: 0
+      field_test_datafield_3: 0
+      field_test_date: 0
+      field_test_timestamp: 0
+      field_wgs84_geolocation: 0
+    exm:
       field_alle_zusammen: 0
       field_alternative_ids: 0
       field_artefact_category: 0
@@ -1266,6 +2833,49 @@ a3d_workbench_test_type:
       field_wgs84_geolocation: 0
 decoration:
   enabled: 0
+  groups:
+    nef:
+      field_decoration_extent: 0
+      field_decoration_method: 0
+      field_description_a3d: 0
+      field_motif: 0
+      field_swd_segment: 0
+    swd:
+      field_decoration_extent: 0
+      field_decoration_method: 0
+      field_description_a3d: 0
+      field_motif: 0
+      field_swd_segment: 0
+    arf:
+      field_decoration_extent: 0
+      field_decoration_method: 0
+      field_description_a3d: 0
+      field_motif: 0
+      field_swd_segment: 0
+    cmb:
+      field_decoration_extent: 0
+      field_decoration_method: 0
+      field_description_a3d: 0
+      field_motif: 0
+      field_swd_segment: 0
+    kch:
+      field_decoration_extent: 0
+      field_decoration_method: 0
+      field_description_a3d: 0
+      field_motif: 0
+      field_swd_segment: 0
+    prj:
+      field_decoration_extent: 0
+      field_decoration_method: 0
+      field_description_a3d: 0
+      field_motif: 0
+      field_swd_segment: 0
+    exm:
+      field_decoration_extent: 0
+      field_decoration_method: 0
+      field_description_a3d: 0
+      field_motif: 0
+      field_swd_segment: 0
 traceology:
   enabled: 0
   groups:
@@ -1277,6 +2887,17 @@ traceology:
       field_location: 0
       field_segment: 0
       field_surface_properties: 0
+      field_trace_extent: 0
+      field_trace_type: 0
+    swd:
+      field_conservation: 0
+      field_description_a3d: 0
+      field_general_note: 0
+      field_is_recent: 0
+      field_location: 0
+      field_segment: 0
+      field_surface_properties: 0
+      field_trace_extent: 0
       field_trace_type: 0
     arf:
       field_conservation: 0
@@ -1286,6 +2907,17 @@ traceology:
       field_location: 0
       field_segment: 0
       field_surface_properties: 0
+      field_trace_extent: 0
+      field_trace_type: 0
+    cmb:
+      field_conservation: 0
+      field_description_a3d: 0
+      field_general_note: 0
+      field_is_recent: 0
+      field_location: 0
+      field_segment: 0
+      field_surface_properties: 0
+      field_trace_extent: 0
       field_trace_type: 0
     kch:
       field_conservation: 0
@@ -1295,4 +2927,25 @@ traceology:
       field_location: 0
       field_segment: 0
       field_surface_properties: 0
+      field_trace_extent: 0
+      field_trace_type: 0
+    prj:
+      field_conservation: 0
+      field_description_a3d: 0
+      field_general_note: 0
+      field_is_recent: 0
+      field_location: 0
+      field_segment: 0
+      field_surface_properties: 0
+      field_trace_extent: 0
+      field_trace_type: 0
+    exm:
+      field_conservation: 0
+      field_description_a3d: 0
+      field_general_note: 0
+      field_is_recent: 0
+      field_location: 0
+      field_segment: 0
+      field_surface_properties: 0
+      field_trace_extent: 0
       field_trace_type: 0
