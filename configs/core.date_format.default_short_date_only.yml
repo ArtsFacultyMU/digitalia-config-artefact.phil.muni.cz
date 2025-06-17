@@ -5,4 +5,4 @@ dependencies: {  }
 id: default_short_date_only
 label: 'Default short date only'
 locked: false
-pattern: m/d/Y
+pattern: 'j. n. Y'

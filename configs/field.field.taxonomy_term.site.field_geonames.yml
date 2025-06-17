@@ -1,0 +1,23 @@
+uuid: b572dd4d-9f96-4376-84ca-1b718d8bd595
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_geonames
+    - taxonomy.vocabulary.site
+  module:
+    - link
+id: taxonomy_term.site.field_geonames
+field_name: field_geonames
+entity_type: taxonomy_term
+bundle: site
+label: GeoNames
+description: 'Find the place at https://www.geonames.org/ and copy the link to it here. This makes the place unambiguous and increases the interoperability of the data.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

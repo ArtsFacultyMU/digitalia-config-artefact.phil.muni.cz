@@ -1,0 +1,61 @@
+uuid: AED54A12-AF51-4665-B93F-0733044B16D8
+langcode: en
+status: true
+id: swd_decoration
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: swd
+label: 'SWD decoration'
+source:
+  plugin: csv
+  path: /data/platform_data/swd/decoration.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - id
+process:
+  uid:
+    -
+      plugin: default_value
+      default_value: havlikova
+    -
+      plugin: entity_lookup
+      entity_type: user
+      value_key: name
+  title: artefact_id
+  field_decoration_extent:
+    -
+      plugin: entity_generate
+      source: extent
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: dimensions_extent
+  field_motif:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: motif
+    -
+      plugin: explode
+      delimiter: ' | '
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: motif
+  field_decoration_method:
+    -
+      plugin: entity_generate
+      source: method
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: decoration_method
+  field_description_a3d: description
+destination:
+  plugin: 'entity:node'
+  default_bundle: decoration

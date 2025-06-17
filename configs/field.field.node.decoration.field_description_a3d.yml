@@ -1,0 +1,19 @@
+uuid: 3996229b-caf4-43ff-80b7-91d09730df48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_a3d
+    - node.type.decoration
+id: node.decoration.field_description_a3d
+field_name: field_description_a3d
+entity_type: node
+bundle: decoration
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,85 @@
+uuid: 99ea6cab-3855-4344-96f4-2537764dc7a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.meta_display
+    - field.field.node.decoration.field_decoration_extent
+    - field.field.node.decoration.field_decoration_method
+    - field.field.node.decoration.field_description_a3d
+    - field.field.node.decoration.field_motif
+    - field.field.node.decoration.field_swd_segment
+    - node.type.decoration
+  module:
+    - user
+id: node.decoration.meta_display
+targetEntityType: node
+bundle: decoration
+mode: meta_display
+content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_service_file:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_description_a3d:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 69
+    region: content
+  field_motif:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_decoration_extent: true
+  field_decoration_method: true
+  field_swd_segment: true
+  langcode: true
+  search_api_excerpt: true

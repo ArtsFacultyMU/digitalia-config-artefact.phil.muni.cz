@@ -3,6 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.decoration.field_decoration_extent
+    - field.field.node.decoration.field_decoration_method
+    - field.field.node.decoration.field_description_a3d
+    - field.field.node.decoration.field_motif
+    - field.field.node.decoration.field_swd_segment
     - node.type.decoration
   module:
     - user
@@ -11,51 +16,54 @@ targetEntityType: node
 bundle: decoration
 mode: default
 content:
-  a3d_eva_entity_group_relation_entity_view_2:
-    settings: {  }
+  field_decoration_extent:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
     third_party_settings: {  }
-    weight: 10
+    weight: 1
     region: content
-  a3d_eva_entity_group_relation_entity_view_4:
-    settings: {  }
+  field_decoration_method:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 10
+    weight: 4
     region: content
-  a3d_eva_entity_group_relation_entity_view_5:
+  field_description_a3d:
+    type: basic_string
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 0
     region: content
-  display_media_entity_view_1:
-    settings: {  }
+  field_motif:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 10
+    weight: 3
     region: content
-  display_media_entity_view_3:
-    settings: {  }
+  field_swd_segment:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
     third_party_settings: {  }
-    weight: 10
-    region: content
-  display_media_original_download:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  display_media_service_file:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  display_media_thumbnail:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
+    weight: 2
     region: content
 hidden:
+  a3d_eva_entity_group_relation_entity_view_2: true
+  a3d_eva_entity_group_relation_entity_view_4: true
+  a3d_eva_entity_group_relation_entity_view_5: true
+  display_media_entity_view_1: true
+  display_media_entity_view_3: true
+  display_media_original_download: true
+  display_media_service_file: true
+  display_media_thumbnail: true
   langcode: true
+  links: true
   search_api_excerpt: true

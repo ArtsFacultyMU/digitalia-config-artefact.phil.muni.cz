@@ -1,0 +1,29 @@
+uuid: b1633635-ac03-4790-8b83-aaec30ad818d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_decoration_extent
+    - node.type.decoration
+    - taxonomy.vocabulary.dimensions_extent
+id: node.decoration.field_decoration_extent
+field_name: field_decoration_extent
+entity_type: node
+bundle: decoration
+label: Extent
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      dimensions_extent: dimensions_extent
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -143,7 +143,6 @@ content:
     region: content
 hidden:
   a3d_eva_taxonomy_title_entity_view_2: true
-  field_contact_phone: true
   field_tax_hierarchical_depth: true
   field_tax_hierarchical_weight: true
   langcode: true

@@ -18,18 +18,6 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  field_settings:
-    msdp_value:
-      label: 'Mass & structure data presence value'
-      required: false
-      entity_reference_type: taxonomy_term
-      target_bundles: msdp_value
-    msdp_method:
-      label: 'Mass & structure data presence method'
-      required: false
-      entity_reference_type: taxonomy_term
-      target_bundles: msdp_method
-    msdp_note:
-      label: 'Mass & structure data presence note'
-      required: false
+  handler: default
+  handler_settings: {  }
 field_type: data_field

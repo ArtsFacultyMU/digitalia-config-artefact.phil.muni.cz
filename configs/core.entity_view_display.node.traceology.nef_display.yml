@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.traceology.field_location
     - field.field.node.traceology.field_segment
     - field.field.node.traceology.field_surface_properties
+    - field.field.node.traceology.field_trace_extent
     - field.field.node.traceology.field_trace_type
     - node.type.traceology
   module:
@@ -79,6 +80,7 @@ hidden:
   field_location: true
   field_segment: true
   field_surface_properties: true
+  field_trace_extent: true
   field_trace_type: true
   langcode: true
   search_api_excerpt: true

@@ -18,21 +18,6 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  field_settings:
-    sdp_value:
-      label: 'Surface data presence value'
-      required: true
-      entity_reference_type: taxonomy_term
-      target_bundles: sdp_value
-    sdp_method:
-      label: 'Surface data presence method'
-      required: true
-      entity_reference_type: taxonomy_term
-      target_bundles: sdp_method
-    sdp_spec:
-      label: 'Surface data presence specification'
-      required: true
-    sdp_note:
-      label: 'Surface data presence note'
-      required: true
+  handler: default
+  handler_settings: {  }
 field_type: data_field

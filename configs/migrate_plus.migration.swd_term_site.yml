@@ -1,0 +1,48 @@
+uuid: C0C133EF-E0B4-460F-9AC7-1E211E270536
+langcode: en
+status: true
+dependencies: {  }
+id: swd_term_site
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: swd
+label: 'Import admin sites'
+source:
+  plugin: csv
+  path: /data/platform_data/swd/sites.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - name
+process:
+  uid:
+    -
+      plugin: default_value
+      default_value: brejchova
+    -
+      plugin: entity_lookup
+      entity_type: user
+      value_key: name
+  name: name
+  field_site_type:
+    plugin: entity_generate
+    source: Type
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: site_type
+  parent:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: Parent_term
+    -
+      plugin: migration_lookup
+      migration: swd_term_site
+  field_geonames/uri: Geonames
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: site
+migration_dependencies: null

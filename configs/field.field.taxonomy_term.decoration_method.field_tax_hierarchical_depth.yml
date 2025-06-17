@@ -1,0 +1,23 @@
+uuid: 5b07463a-325a-4526-bdd3-136bbc6a74d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tax_hierarchical_depth
+    - taxonomy.vocabulary.decoration_method
+id: taxonomy_term.decoration_method.field_tax_hierarchical_depth
+field_name: field_tax_hierarchical_depth
+entity_type: taxonomy_term
+bundle: decoration_method
+label: 'Hierarchical Depth'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

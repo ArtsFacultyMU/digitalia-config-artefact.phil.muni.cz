@@ -4,6 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.swd
+    - field.field.node.decoration.field_decoration_extent
+    - field.field.node.decoration.field_decoration_method
+    - field.field.node.decoration.field_description_a3d
+    - field.field.node.decoration.field_motif
+    - field.field.node.decoration.field_swd_segment
     - node.type.decoration
   module:
     - path
@@ -70,4 +75,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_decoration_extent: true
+  field_decoration_method: true
+  field_description_a3d: true
+  field_motif: true
+  field_swd_segment: true

@@ -1,0 +1,304 @@
+uuid: 47CDECF3-FCA6-4228-A61B-C69C9FEBF4C9
+langcode: en
+status: true
+dependencies: {  }
+id: swd_node_a3d_object
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: swd
+label: 'A3D object'
+source:
+  plugin: csv
+  path: /data/platform_data/swd/swords.csv
+  delimiter: ;
+  header_row_count: 1
+  ids:
+    - artefact_id
+process:
+  uid:
+    -
+      plugin: default_value
+      default_value: havlikova
+    -
+      plugin: entity_lookup
+      entity_type: user
+      value_key: name
+  title: field_artefact_id
+  field_auth_res_data:
+    -
+      plugin: default_value
+      default_value: 'Markéta Havlíková'
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: author
+  field_artefact_category:
+    -
+      plugin: default_value
+      default_value: sword
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: artefact_category
+  field_artefact_id: artefact_id
+  field_artefact_id_type:
+    -
+      plugin: default_value
+      default_value: 'Constructed by researcher'
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: identifier_type
+  field_alternative_ids/id: field_alternative_id
+  field_alternative_ids/type:
+    -
+      plugin: default_value
+      default_value: 'Inventory number'
+    -
+      plugin: entity_lookup
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: identifier_type
+      ignore_case: true
+  field_note_on_preservation: field_note_on_preservation
+  field_number_of_preserved_parts: field_number_of_preserved_parts
+  field_has_decoration:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_has_decoration
+    -
+      plugin: str_replace
+      search: 'TRUE'
+      replace: '1'
+    -
+      plugin: str_replace
+      search: 'FALSE'
+      replace: '0'
+  field_decoration:
+    -
+      source: field_decoration
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: explode
+      delimiter: ' | '
+    -
+      plugin: migration_lookup
+      migration: swd_decoration
+  field_has_ricasso:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_has_ricasso
+    -
+      plugin: str_replace
+      search: 'TRUE'
+      replace: '1'
+    -
+      plugin: str_replace
+      search: 'FALSE'
+      replace: '0'
+  field_finding_context_type:
+    plugin: entity_generate
+    source: field_finding_context_type
+    entity_type: taxonomy_term
+    value_key: name
+    bundle_key: vid
+    bundle: finding_context_type
+  field_finding_context_note: field_finding_context_note
+  field_site:
+    plugin: migration_lookup
+    migration: swd_term_site
+    source: field_site
+  field_archaeological_site:
+    -
+      plugin: entity_generate
+      source: field_archaeological_site
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: archaeological_site
+  field_geo_site:
+    -
+      plugin: entity_generate
+      source: field_geo_site
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: geo_location
+  field_ownership:
+    -
+      plugin: entity_generate
+      source: field_ownership
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: actor
+  field_reineckes_chronology:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_reineckes_chronology
+    -
+      plugin: explode
+      delimiter: /
+    -
+      plugin: migration_lookup
+      migration: swd_reineckes_chronology
+  field_standard_chronology:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: field_standard_chronology
+    -
+      plugin: explode
+      delimiter: /
+    -
+      plugin: migration_lookup
+      migration: swd_standard_chronology
+  list_measurements:
+    -
+      source: field_measurements
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: explode
+      delimiter: ' | '
+    -
+      plugin: str_to_assoc
+      key: measurement
+  field_measurements:
+    -
+      plugin: sub_process
+      source: '@list_measurements'
+      process:
+        exploded:
+          plugin: explode
+          delimiter: ':'
+          source: measurement
+        dimensions_type:
+          -
+            plugin: extract
+            index:
+              - 0
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: entity_generate
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: measurement_type
+        dimensions_value:
+          -
+            plugin: extract
+            index:
+              - 1
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+        dimensions_unit:
+          -
+            plugin: extract
+            index:
+              - 2
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: entity_generate
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: units
+        dimensions_extent:
+          -
+            plugin: extract
+            index:
+              - 3
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: entity_generate
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: dimensions_extent
+        dimensions_qualifier:
+          -
+            plugin: extract
+            index:
+              - 5
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: entity_generate
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: dimensions_qualifier
+        shape:
+          -
+            plugin: extract
+            index:
+              - 7
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: entity_generate
+            entity_type: taxonomy_term
+            value_key: name
+            bundle_key: vid
+            bundle: shape
+        remarks:
+          -
+            plugin: extract
+            index:
+              - 9
+            source: '@exploded'
+          -
+            plugin: skip_on_empty
+            method: process
+  field_general_note: field_general_note
+  field_rights_access:
+    -
+      plugin: default_value
+      default_value: 'CC BY-NC-SA 4.0'
+    -
+      plugin: entity_lookup
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: rights_access
+  status:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:node'
+  default_bundle: a3d_object
+migration_dependencies:
+  required:
+    - swd_decoration
+    - swd_term_site
+    - swd_reineckes_chronology
+    - swd_standard_chronology

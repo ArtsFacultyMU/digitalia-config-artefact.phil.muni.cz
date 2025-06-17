@@ -1615,6 +1615,7 @@ field_settings:
 
 
 
+
       fields: {  }
   aggregated_field_artefact_category:
     label: 'A3D Aggregated Artefact category'

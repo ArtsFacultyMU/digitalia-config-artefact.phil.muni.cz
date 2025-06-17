@@ -592,10 +592,10 @@ display:
         type: normal
         title: Posture
         description: ''
-        weight: -49
+        weight: 0
         expanded: false
         menu_name: nef-main-menu
-        parent: 'menu_link_content:bc8bbcd6-62ad-4b86-b3a6-8df698b892bf'
+        parent: 'menu_link_content:c5491f5f-e441-4bc3-95ce-8408a12a3943'
         context: '0'
     cache_metadata:
       max-age: -1
@@ -731,10 +731,10 @@ display:
         type: normal
         title: 'Preserved body parts'
         description: ''
-        weight: -48
+        weight: 0
         expanded: false
         menu_name: nef-main-menu
-        parent: 'menu_link_content:bc8bbcd6-62ad-4b86-b3a6-8df698b892bf'
+        parent: 'menu_link_content:c5491f5f-e441-4bc3-95ce-8408a12a3943'
         context: '0'
     cache_metadata:
       max-age: -1
@@ -870,10 +870,10 @@ display:
         type: normal
         title: 'Recent damage type'
         description: ''
-        weight: -47
+        weight: 0
         expanded: false
         menu_name: nef-main-menu
-        parent: 'menu_link_content:bc8bbcd6-62ad-4b86-b3a6-8df698b892bf'
+        parent: 'menu_link_content:c5491f5f-e441-4bc3-95ce-8408a12a3943'
         context: '0'
     cache_metadata:
       max-age: -1

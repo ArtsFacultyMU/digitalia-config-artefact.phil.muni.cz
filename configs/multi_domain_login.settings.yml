@@ -3,7 +3,7 @@ domains:
   - 'https://artefact-devel.phil.muni.cz'
   - 'https://neofig-devel.phil.muni.cz'
   - 'https://pottery-analyses-devel.phil.muni.cz'
-  - 'https://archaeo3data-devel.phil.muni.cz'
+  - 'https://archaeodata-devel.phil.muni.cz'
   - 'https://swords-devel.phil.muni.cz'
   - 'https://combs-devel.phil.muni.cz'
 redirect_success: ''

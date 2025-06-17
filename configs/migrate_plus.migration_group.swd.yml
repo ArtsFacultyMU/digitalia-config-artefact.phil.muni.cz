@@ -1,0 +1,10 @@
+uuid: de2d2e4c-bf87-41d5-9fef-18820396d190
+langcode: en
+status: true
+dependencies: {  }
+id: swd
+label: Swords
+description: 'Migration of Swords dataset'
+source_type: CSV
+module: null
+shared_configuration: null

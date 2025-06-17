@@ -9,6 +9,7 @@ dependencies:
     - field.field.taxonomy_term.site.field_city_text
     - field.field.taxonomy_term.site.field_country
     - field.field.taxonomy_term.site.field_geo_geolocation
+    - field.field.taxonomy_term.site.field_geonames
     - field.field.taxonomy_term.site.field_plot_number
     - field.field.taxonomy_term.site.field_site_type
     - field.field.taxonomy_term.site.field_state
@@ -20,6 +21,7 @@ dependencies:
   module:
     - chosen_field
     - geolocation
+    - link
     - path
     - text
 id: taxonomy_term.site.default
@@ -62,6 +64,14 @@ content:
     weight: 2
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_geonames:
+    type: link_default
+    weight: 26
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_plot_number:
     type: string_textfield

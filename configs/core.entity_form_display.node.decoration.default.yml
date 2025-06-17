@@ -3,6 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.decoration.field_decoration_extent
+    - field.field.node.decoration.field_decoration_method
+    - field.field.node.decoration.field_description_a3d
+    - field.field.node.decoration.field_motif
+    - field.field.node.decoration.field_swd_segment
     - node.type.decoration
   module:
     - path
@@ -16,6 +21,54 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_decoration_extent:
+    type: entity_reference_autocomplete
+    weight: 121
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_decoration_method:
+    type: entity_reference_autocomplete
+    weight: 122
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_description_a3d:
+    type: string_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_motif:
+    type: entity_reference_autocomplete
+    weight: 89
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_swd_segment:
+    type: entity_reference_autocomplete
+    weight: 123
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select

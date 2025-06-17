@@ -1132,15 +1132,15 @@ display:
                 value:
                   value: kch
               4:
-                title: ' '
+                title: Swords
                 operator: '='
                 value:
-                  value: 'PLACEHOLDER must have at least'
+                  value: swd
               5:
-                title: ' '
+                title: Combs
                 operator: '='
                 value:
-                  value: 'PLACEHOLDER 5 options to display correctly'
+                  value: cmb
         facets_field_artefact_category:
           id: facets_field_artefact_category
           table: search_api_index_a3d_object_index

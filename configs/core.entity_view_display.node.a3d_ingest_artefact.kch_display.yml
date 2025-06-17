@@ -104,7 +104,6 @@ content:
     weight: 100
     region: content
 hidden:
-  field_contract: true
   field_deposition_cond: true
   field_destruction_analysis: true
   field_research_question: true

@@ -1,0 +1,11 @@
+uuid: e2d6c345-df03-4800-9cd9-bb0bfe35fc13
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.decoration_method
+id: taxonomy_term.decoration_method
+target_entity_type_id: taxonomy_term
+target_bundle: decoration_method
+default_langcode: site_default
+language_alterable: false

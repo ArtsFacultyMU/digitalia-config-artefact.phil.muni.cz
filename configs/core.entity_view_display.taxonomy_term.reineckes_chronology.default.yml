@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.reineckes_chronology.field_alternate_name
     - field.field.taxonomy_term.reineckes_chronology.field_relative_datation
     - field.field.taxonomy_term.reineckes_chronology.field_tax_hierarchical_depth
     - field.field.taxonomy_term.reineckes_chronology.field_tax_hierarchical_weight
@@ -25,6 +26,14 @@ content:
     type: text_default
     label: hidden
     settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_alternate_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 1
     region: content

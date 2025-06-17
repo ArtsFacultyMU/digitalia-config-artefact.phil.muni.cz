@@ -1,0 +1,37 @@
+uuid: ab5da3cc-7923-4153-a923-e45a63aa2ac2
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.nef_footer_logos
+  module:
+    - block_class
+    - context
+    - islandora
+    - simple_block
+  theme:
+    - islandora_muni
+third_party_settings:
+  block_class:
+    classes: platform-specific-logos
+id: islandora_muni_nef_footer_logos
+theme: islandora_muni
+region: footer_first
+weight: -40
+provider: null
+plugin: 'simple_block:nef_footer_logos'
+settings:
+  id: 'simple_block:nef_footer_logos'
+  label: nef_footer_logos
+  label_display: '0'
+  provider: simple_block
+visibility:
+  request_domain:
+    id: request_domain
+    negate: false
+    domains: "neofig-devel.phil.muni.cz\r\nneofig.phil.muni.cz"
+  media_source_mimetype:
+    id: media_source_mimetype
+    negate: false
+    context_mapping: {  }
+    mimetype: ''

@@ -10,6 +10,7 @@ dependencies:
     - field.field.taxonomy_term.site.field_city_text
     - field.field.taxonomy_term.site.field_country
     - field.field.taxonomy_term.site.field_geo_geolocation
+    - field.field.taxonomy_term.site.field_geonames
     - field.field.taxonomy_term.site.field_plot_number
     - field.field.taxonomy_term.site.field_site_type
     - field.field.taxonomy_term.site.field_state
@@ -101,6 +102,7 @@ hidden:
   field_city_code_text: true
   field_city_text: true
   field_geo_geolocation: true
+  field_geonames: true
   field_state: true
   field_tax_hierarchical_depth: true
   field_tax_hierarchical_weight: true

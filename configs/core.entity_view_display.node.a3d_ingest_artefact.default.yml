@@ -129,6 +129,5 @@ content:
     weight: 8
     region: content
 hidden:
-  field_contract: true
   langcode: true
   search_api_excerpt: true

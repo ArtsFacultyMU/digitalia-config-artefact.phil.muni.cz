@@ -1,0 +1,49 @@
+uuid: F2833BE7-6650-4563-A277-09EDCB16D6FA
+langcode: en
+status: true
+dependencies: {  }
+id: swd_files
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: swd
+label: files
+source:
+  plugin: csv
+  path: /data/platform_data/swd/media.csv
+  delimiter: ','
+  header_row_count: 1
+  ids:
+    - id
+  constants:
+    FEDORA: 'fedora://'
+    IMAGE_URI: /data/platform_data/swd/media
+process:
+  image_source_path:
+    plugin: concat
+    delimiter: /
+    source:
+      - constants/IMAGE_URI
+      - object_id
+      - filename
+  image_destination_path:
+    plugin: concat
+    delimiter: /
+    source:
+      - constants/FEDORA
+      - platform
+      - object_id
+      - filename
+  uri:
+    plugin: file_copy
+    source:
+      - '@image_source_path'
+      - '@image_destination_path'
+    file_exists: replace
+    move: false
+destination:
+  plugin: 'entity:file'
+migration_dependencies:
+  required: {  }
+  optional: {  }

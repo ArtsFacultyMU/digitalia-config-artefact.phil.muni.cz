@@ -46,7 +46,6 @@ dependencies:
     - field.field.node.a3d_object.field_coll_rights
     - field.field.node.a3d_object.field_coll_title
     - field.field.node.a3d_object.field_colour_paint
-    - field.field.node.a3d_object.field_comparison
     - field.field.node.a3d_object.field_contract
     - field.field.node.a3d_object.field_country
     - field.field.node.a3d_object.field_cov_spat
@@ -166,10 +165,8 @@ dependencies:
     - field.field.node.a3d_object.field_subord_dataset
     - field.field.node.a3d_object.field_subord_dataset_link
     - field.field.node.a3d_object.field_surf_data_pres
-    - field.field.node.a3d_object.field_surf_data_pres2
     - field.field.node.a3d_object.field_surface_alt
     - field.field.node.a3d_object.field_surface_finishing
-    - field.field.node.a3d_object.field_test_custom_field
     - field.field.node.a3d_object.field_thermic_cracks
     - field.field.node.a3d_object.field_tile_type
     - field.field.node.a3d_object.field_timespan
@@ -272,7 +269,6 @@ hidden:
   field_coll_rights: true
   field_coll_title: true
   field_colour_paint: true
-  field_comparison: true
   field_contract: true
   field_country: true
   field_cov_spat: true
@@ -392,10 +388,8 @@ hidden:
   field_subord_dataset: true
   field_subord_dataset_link: true
   field_surf_data_pres: true
-  field_surf_data_pres2: true
   field_surface_alt: true
   field_surface_finishing: true
-  field_test_custom_field: true
   field_thermic_cracks: true
   field_tile_type: true
   field_timespan: true

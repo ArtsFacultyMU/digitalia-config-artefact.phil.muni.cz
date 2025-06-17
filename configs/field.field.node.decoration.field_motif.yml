@@ -1,0 +1,29 @@
+uuid: f0bebd81-f5a3-4b50-9d9f-42642ab11833
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_motif
+    - node.type.decoration
+    - taxonomy.vocabulary.motif
+id: node.decoration.field_motif
+field_name: field_motif
+entity_type: node
+bundle: decoration
+label: Motif
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      motif: motif
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

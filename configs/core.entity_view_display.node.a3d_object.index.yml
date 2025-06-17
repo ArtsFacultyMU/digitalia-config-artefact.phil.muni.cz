@@ -1312,7 +1312,6 @@ hidden:
   field_coll_contacts: true
   field_coll_id: true
   field_coll_org: true
-  field_comparison: true
   field_contract: true
   field_country: true
   field_field_description_a3d_cs: true
@@ -1347,9 +1346,7 @@ hidden:
   field_st_shape_type1: true
   field_st_shape_type2: true
   field_stove_tile_shape_certainty: true
-  field_surf_data_pres2: true
   field_surface_finishing: true
-  field_test_custom_field: true
   field_tile_type: true
   field_wgs84_accuracy_private: true
   field_wgs84_geolocation_private: true

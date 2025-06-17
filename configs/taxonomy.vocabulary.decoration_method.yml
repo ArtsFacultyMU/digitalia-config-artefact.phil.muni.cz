@@ -1,0 +1,9 @@
+uuid: e1174602-089c-40fe-abd3-3ced5bb0103f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Decoration method'
+vid: decoration_method
+description: null
+weight: 0
+new_revision: false

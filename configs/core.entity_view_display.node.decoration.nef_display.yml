@@ -1,0 +1,78 @@
+uuid: af81aeb8-523c-40d9-a8c4-5c139c0e51c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.nef_display
+    - field.field.node.decoration.field_decoration_extent
+    - field.field.node.decoration.field_decoration_method
+    - field.field.node.decoration.field_description_a3d
+    - field.field.node.decoration.field_motif
+    - field.field.node.decoration.field_swd_segment
+    - node.type.decoration
+  module:
+    - user
+id: node.decoration.nef_display
+targetEntityType: node
+bundle: decoration
+mode: nef_display
+content:
+  a3d_eva_entity_group_relation_entity_view_2:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_4:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  a3d_eva_entity_group_relation_entity_view_5:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_entity_view_3:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_original_download:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_service_file:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_description_a3d:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_decoration_extent: true
+  field_decoration_method: true
+  field_motif: true
+  field_swd_segment: true
+  langcode: true
+  search_api_excerpt: true

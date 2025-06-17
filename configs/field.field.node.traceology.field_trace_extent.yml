@@ -1,0 +1,29 @@
+uuid: 938e9a31-fa21-43ec-87cf-9b994234fdd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trace_extent
+    - node.type.traceology
+    - taxonomy.vocabulary.dimensions_extent
+id: node.traceology.field_trace_extent
+field_name: field_trace_extent
+entity_type: node
+bundle: traceology
+label: Extent
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: unpublished_taxonomy_term
+  handler_settings:
+    target_bundles:
+      dimensions_extent: dimensions_extent
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: ''
+field_type: entity_reference

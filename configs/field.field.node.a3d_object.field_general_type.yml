@@ -7,7 +7,7 @@ dependencies:
     - node.type.a3d_object
     - taxonomy.vocabulary.general_type
   content:
-    - 'taxonomy_term:general_type:18fc539e-bf7b-4982-a63d-cf3cb124a6b3'
+    - 'taxonomy_term:general_type:734abeea-d499-46bd-974e-db42d4d14555'
 id: node.a3d_object.field_general_type
 field_name: field_general_type
 entity_type: node
@@ -18,16 +18,16 @@ required: true
 translatable: false
 default_value:
   -
-    target_uuid: 18fc539e-bf7b-4982-a63d-cf3cb124a6b3
+    target_uuid: 734abeea-d499-46bd-974e-db42d4d14555
 default_value_callback: ''
 settings:
-  handler: unpublished_taxonomy_term
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       general_type: general_type
     sort:
       field: name
       direction: asc
-    auto_create: 1
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

@@ -1604,7 +1604,6 @@ hidden:
   field_abs_dat_range_cs: true
   field_archaeological_site: true
   field_colour_paint: true
-  field_comparison: true
   field_contract: true
   field_country: true
   field_decoration: true
@@ -1632,8 +1631,6 @@ hidden:
   field_standard_chronology: true
   field_subord_dataset_link: true
   field_surf_data_pres: true
-  field_surf_data_pres2: true
-  field_test_custom_field: true
   field_wgs84_accuracy_private: true
   field_wgs84_geolocation_private: true
   langcode: true

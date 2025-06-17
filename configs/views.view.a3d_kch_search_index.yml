@@ -15,11 +15,11 @@ dependencies:
     - system.menu.kch-main-menu
     - taxonomy.vocabulary.artefact_category
   content:
-    - 'taxonomy_term:artefact_category:6f03f270-e374-484c-b722-a5ebb6423c9d'
-    - 'taxonomy_term:artefact_category:9d53b16d-bd1e-4e98-a845-f321ecaf0542'
-    - 'taxonomy_term:artefact_category:cade4b33-03ff-4427-b6f1-dfaf0e641db8'
-    - 'taxonomy_term:artefact_category:eeaa5ea5-7e53-40ae-8e2a-e9891266a35e'
-    - 'taxonomy_term:artefact_category:f26a752f-c4e6-4c02-8727-661e25a77e96'
+    - 'taxonomy_term:artefact_category:77112d62-5917-4d8f-b3c1-98b881dc7f45'
+    - 'taxonomy_term:artefact_category:87e4e39f-b847-453f-a2cf-c0c4632f73b1'
+    - 'taxonomy_term:artefact_category:8fdfc173-9e25-469b-a709-9335128ab74b'
+    - 'taxonomy_term:artefact_category:a48922b9-32c2-46a9-b126-8181102c63b8'
+    - 'taxonomy_term:artefact_category:c9d690a9-0600-4adc-afc4-e3c5832bd98c'
   module:
     - better_exposed_filters
     - facets_exposed_filters
@@ -3023,11 +3023,11 @@ display:
           plugin_id: search_api_term
           operator: or
           value:
-            561: 561
-            563: 563
-            565: 565
-            562: 562
-            564: 564
+            533: 533
+            535: 535
+            537: 537
+            534: 534
+            536: 536
           group: 1
           exposed: true
           expose:
@@ -3112,7 +3112,7 @@ display:
         enabled: true
         expanded: false
         menu_name: kch-main-menu
-        parent: 'menu_link_content:f3c7fd46-dc47-4248-a3ed-e0250896ea99'
+        parent: 'menu_link_content:64a53119-d4aa-4a32-8e3c-f3d3296bae20'
         context: '0'
     cache_metadata:
       max-age: -1
