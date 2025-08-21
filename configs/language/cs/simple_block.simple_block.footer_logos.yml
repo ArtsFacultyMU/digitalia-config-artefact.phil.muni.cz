@@ -1,0 +1,3 @@
+content:
+  value: '<p><a href="https://digitalia.phil.muni.cz/o-nas/lindatclariah-cz" target="_blank"><img class="footer-icon lindat-logo" src="/themes/custom/islandora_muni/images/LINDAT-CLARIAH-cz-small.png" alt="LINDAT CLARIAH" width="87" height="50"></a> <a href="https://archeo-muzeo.phil.muni.cz/" target="_blank"><img class="footer-icon ics-logo" src="/themes/custom/islandora_muni/platform_specific/images/ARTS-UAM-cs.png" alt="MUNI ARTS Ústav archeologie a muzeologie"></a></p>'
+  format: full_html
